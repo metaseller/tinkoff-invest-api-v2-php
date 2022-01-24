@@ -24,7 +24,8 @@
     "autoload": {
         "psr-4": {
             "GPBMetadata\\": "src/models/GPBMetadata",
-            "Tinkoff\\": "src/models/Tinkoff"
+            "Tinkoff\\": "src/models/Tinkoff",
+            "Metaseller\\TinkoffInvestApi2": "src"
         }
     }
 }
