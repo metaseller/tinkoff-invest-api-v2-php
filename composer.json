@@ -2,7 +2,7 @@
     "name": "metaseller/tinkoff-invest-api-v2-php",
     "description": "Unofficial PHP SDK for Tinkoff Invest API v2",
     "type": "library",
-    "license": "Apache License, Version 2.0",
+    "license": "Apache-2.0",
     "keywords": [
         "php",
         "tinkoff",
