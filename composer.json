@@ -3,6 +3,12 @@
     "description": "Unofficial PHP SDK for Tinkoff Invest API v2",
     "type": "library",
     "license": "Apache License, Version 2.0",
+    "keywords": [
+        "php",
+        "tinkoff",
+        "invest api"
+    ],
+    "homepage": "https://github.com/metaseller/tinkoff-invest-api-v2-php",
     "authors": [
         {
             "name": "Igor Frolenkov",
@@ -10,5 +16,15 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "php": ">=7.1.0",
+        "ext-grpc": "^1.43",
+        "grpc/grpc": "^1.42"
+    },
+    "autoload": {
+        "psr-4": {
+            "GPBMetadata\\": "src/models/GPBMetadata",
+            "Tinkoff\\": "src/models/Tinkoff"
+        }
+    }
 }
