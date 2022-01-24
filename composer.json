@@ -1,0 +1,14 @@
+{
+    "name": "metaseller/tinkoff-invest-api-v2-php",
+    "description": "Unofficial PHP SDK for Tinkoff Invest API v2",
+    "type": "library",
+    "license": "Apache License, Version 2.0",
+    "authors": [
+        {
+            "name": "Igor Frolenkov",
+            "email": "igor@frolenkov.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
