@@ -1,2 +1,2 @@
 # tinkoff-invest-api-v2-php
-Unofficial PHP SDK fot Tinkoff Invest API v2
+Unofficial PHP SDK for Tinkoff Invest API v2
