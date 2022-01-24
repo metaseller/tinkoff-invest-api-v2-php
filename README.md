@@ -3,7 +3,7 @@ Unofficial PHP SDK for Tinkoff Invest API v2
 
 Документация Tinkoff Invest Api для разработчиков доступна по ссылке: https://tinkoff.github.io/investAPI/
 
-#Введение
+# Введение
 
 Поскольку Tinkoff Invest API v2 в настоящее время позиционируется как gRPC-интерфейс для взаимодействия с торговой платформой 
 Тинькофф Инвестиции, то первое, что нам понадобится - это документация по gRPC:
@@ -11,7 +11,7 @@ Unofficial PHP SDK for Tinkoff Invest API v2
 1) Quick start with PHP -> https://grpc.io/docs/languages/php/quickstart/ 
 2) Basic tutorials -> https://grpc.io/docs/languages/php/basics/
 
-#Структура текущего репозитория: 
+# Структура текущего репозитория: 
 
 ```
 etc - Директория, которая содержит сертификаты для подключения к сервису с использованием SSL
@@ -21,7 +21,7 @@ library/src/docs/contracts - Директория, которая содержи
 src/models - Директория, которая содержит сгенерированные через protoc модели
 ```
 
-#Требования для установки
+# Требования для установки
 
 Для начала работы нам потребуется: 
  * PHP 7.1 или новее (я делал и тестировал на php 7.4 / Ubuntu 18.04.5)
@@ -61,12 +61,12 @@ sudo touch /var/log/grpc.log
 sudo chmod 666 /var/log/grpc.log
 ```
 
-#Устанавливаем через composer
+# Устанавливаем через composer
 
 ```
 composer require metaseller/tinkoff-invest-api-v2-php 
 ```
-или 
+ну или 
 ```
 git clone git@github.com:metaseller/tinkoff-invest-api-v2-php.git .
 composer update
@@ -91,7 +91,7 @@ $token = 't.ZEbUT................................................7dA';
 php examples/example.php
 ```
 
-#Тестовый пример
+# Тестовый пример
 
 Выглядит примерно так: 
 
