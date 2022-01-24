@@ -34,7 +34,7 @@ class ClientConnection
      */
     public static function getOptions(string $api_token): array
     {
-        $certificate_path = dirname(__FILE__) . '/../../etc/tinkoff-ru.pem';
+        $certificate_path = dirname(__FILE__) . '/../etc/tinkoff-ru.pem';
 
         $cert = file_get_contents($certificate_path);
 
