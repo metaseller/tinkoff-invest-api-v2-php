@@ -2,7 +2,7 @@
 
 namespace Metaseller\TinkoffInvestApi2;
 
-use Grpc\ChannelCredentials;
+use \Grpc\ChannelCredentials;
 
 /**
  * Модель получения настроек соединения с сервисом Tinkoff Invest API 2
