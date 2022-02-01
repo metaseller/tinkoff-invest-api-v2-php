@@ -30,9 +30,9 @@ class AccruedInterest extends \Google\Protobuf\Internal\Message
     /**
      *Величина выплаты в процентах от номинала.
      *
-     * Generated from protobuf field <code>float value_percent = 3;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation value_percent = 3;</code>
      */
-    protected $value_percent = 0.0;
+    protected $value_percent = null;
     /**
      *Номинал облигации.
      *
@@ -50,7 +50,7 @@ class AccruedInterest extends \Google\Protobuf\Internal\Message
      *          Дата и время выплаты в часовом поясе UTC.
      *     @type \Tinkoff\Invest\V1\Quotation $value
      *          Величина выплаты.
-     *     @type float $value_percent
+     *     @type \Tinkoff\Invest\V1\Quotation $value_percent
      *          Величина выплаты в процентах от номинала.
      *     @type \Tinkoff\Invest\V1\Quotation $nominal
      *          Номинал облигации.
@@ -136,24 +136,34 @@ class AccruedInterest extends \Google\Protobuf\Internal\Message
     /**
      *Величина выплаты в процентах от номинала.
      *
-     * Generated from protobuf field <code>float value_percent = 3;</code>
-     * @return float
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation value_percent = 3;</code>
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getValuePercent()
     {
-        return $this->value_percent;
+        return isset($this->value_percent) ? $this->value_percent : null;
+    }
+
+    public function hasValuePercent()
+    {
+        return isset($this->value_percent);
+    }
+
+    public function clearValuePercent()
+    {
+        unset($this->value_percent);
     }
 
     /**
      *Величина выплаты в процентах от номинала.
      *
-     * Generated from protobuf field <code>float value_percent = 3;</code>
-     * @param float $var
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation value_percent = 3;</code>
+     * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
     public function setValuePercent($var)
     {
-        GPBUtil::checkFloat($var);
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->value_percent = $var;
 
         return $this;

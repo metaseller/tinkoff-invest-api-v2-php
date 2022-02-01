@@ -30,9 +30,9 @@ class GetFuturesMarginResponse extends \Google\Protobuf\Internal\Message
     /**
      *Шаг цены.
      *
-     * Generated from protobuf field <code>float min_price_increment = 3;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation min_price_increment = 3;</code>
      */
-    protected $min_price_increment = 0.0;
+    protected $min_price_increment = null;
     /**
      *Стоимость шага цены.
      *
@@ -50,7 +50,7 @@ class GetFuturesMarginResponse extends \Google\Protobuf\Internal\Message
      *          Гарантийное обеспечение при покупке.
      *     @type \Tinkoff\Invest\V1\MoneyValue $initial_margin_on_sell
      *          Гарантийное обеспечение при продаже.
-     *     @type float $min_price_increment
+     *     @type \Tinkoff\Invest\V1\Quotation $min_price_increment
      *          Шаг цены.
      *     @type \Tinkoff\Invest\V1\Quotation $min_price_increment_amount
      *          Стоимость шага цены.
@@ -136,24 +136,34 @@ class GetFuturesMarginResponse extends \Google\Protobuf\Internal\Message
     /**
      *Шаг цены.
      *
-     * Generated from protobuf field <code>float min_price_increment = 3;</code>
-     * @return float
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation min_price_increment = 3;</code>
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getMinPriceIncrement()
     {
-        return $this->min_price_increment;
+        return isset($this->min_price_increment) ? $this->min_price_increment : null;
+    }
+
+    public function hasMinPriceIncrement()
+    {
+        return isset($this->min_price_increment);
+    }
+
+    public function clearMinPriceIncrement()
+    {
+        unset($this->min_price_increment);
     }
 
     /**
      *Шаг цены.
      *
-     * Generated from protobuf field <code>float min_price_increment = 3;</code>
-     * @param float $var
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation min_price_increment = 3;</code>
+     * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
     public function setMinPriceIncrement($var)
     {
-        GPBUtil::checkFloat($var);
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->min_price_increment = $var;
 
         return $this;

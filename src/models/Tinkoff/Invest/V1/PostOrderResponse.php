@@ -70,7 +70,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      */
     protected $executed_commission = null;
     /**
-     *Значение НКД (накопленного купонного дохода) на дату. Подробнее: [НКД при выставлении торговых поручений](/investAPI/head-orders#coupon)
+     *Значение НКД (накопленного купонного дохода) на дату. Подробнее: [НКД при выставлении торговых поручений](https://tinkoff.github.io/investAPI/head-orders#coupon)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue aci_value = 10;</code>
      */
@@ -137,7 +137,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\MoneyValue $executed_commission
      *          Фактическая комиссия по итогам исполнения заявки.
      *     @type \Tinkoff\Invest\V1\MoneyValue $aci_value
-     *          Значение НКД (накопленного купонного дохода) на дату. Подробнее: [НКД при выставлении торговых поручений](/investAPI/head-orders#coupon)
+     *          Значение НКД (накопленного купонного дохода) на дату. Подробнее: [НКД при выставлении торговых поручений](https://tinkoff.github.io/investAPI/head-orders#coupon)
      *     @type string $figi
      *           Figi-идентификатор инструмента.
      *     @type int $direction
@@ -442,7 +442,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Значение НКД (накопленного купонного дохода) на дату. Подробнее: [НКД при выставлении торговых поручений](/investAPI/head-orders#coupon)
+     *Значение НКД (накопленного купонного дохода) на дату. Подробнее: [НКД при выставлении торговых поручений](https://tinkoff.github.io/investAPI/head-orders#coupon)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue aci_value = 10;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -463,7 +463,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Значение НКД (накопленного купонного дохода) на дату. Подробнее: [НКД при выставлении торговых поручений](/investAPI/head-orders#coupon)
+     *Значение НКД (накопленного купонного дохода) на дату. Подробнее: [НКД при выставлении торговых поручений](https://tinkoff.github.io/investAPI/head-orders#coupon)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue aci_value = 10;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var

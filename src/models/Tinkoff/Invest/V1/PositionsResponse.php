@@ -39,6 +39,12 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool limits_loading_in_progress = 4;</code>
      */
     protected $limits_loading_in_progress = false;
+    /**
+     *Список фьючерсов портфеля
+     *
+     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.PositionsFutures futures = 5;</code>
+     */
+    private $futures;
 
     /**
      * Constructor.
@@ -54,6 +60,8 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
      *          Список ценно-бумажных позиций портфеля
      *     @type bool $limits_loading_in_progress
      *          Признак идущей в данный момент выгрузки лимитов
+     *     @type \Tinkoff\Invest\V1\PositionsFutures[]|\Google\Protobuf\Internal\RepeatedField $futures
+     *          Список фьючерсов портфеля
      * }
      */
     public function __construct($data = NULL) {
@@ -161,6 +169,32 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->limits_loading_in_progress = $var;
+
+        return $this;
+    }
+
+    /**
+     *Список фьючерсов портфеля
+     *
+     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.PositionsFutures futures = 5;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getFutures()
+    {
+        return $this->futures;
+    }
+
+    /**
+     *Список фьючерсов портфеля
+     *
+     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.PositionsFutures futures = 5;</code>
+     * @param \Tinkoff\Invest\V1\PositionsFutures[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setFutures($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\PositionsFutures::class);
+        $this->futures = $arr;
 
         return $this;
     }

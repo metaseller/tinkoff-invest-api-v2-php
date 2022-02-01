@@ -40,7 +40,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      */
     protected $total_amount_currencies = null;
     /**
-     *Общая стоимость валют в портфеле в рублях
+     *Общая стоимость фьючерсов в портфеле в рублях
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue total_amount_futures = 5;</code>
      */
@@ -48,9 +48,9 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
     /**
      *Текущая доходность портфеля
      *
-     * Generated from protobuf field <code>float expected_yield = 6;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation expected_yield = 6;</code>
      */
-    protected $expected_yield = 0.0;
+    protected $expected_yield = null;
     /**
      *Список позиций портфеля
      *
@@ -73,8 +73,8 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\MoneyValue $total_amount_currencies
      *          Общая стоимость валют в портфеле в рублях
      *     @type \Tinkoff\Invest\V1\MoneyValue $total_amount_futures
-     *          Общая стоимость валют в портфеле в рублях
-     *     @type float $expected_yield
+     *          Общая стоимость фьючерсов в портфеле в рублях
+     *     @type \Tinkoff\Invest\V1\Quotation $expected_yield
      *          Текущая доходность портфеля
      *     @type \Tinkoff\Invest\V1\PortfolioPosition[]|\Google\Protobuf\Internal\RepeatedField $positions
      *          Список позиций портфеля
@@ -230,7 +230,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Общая стоимость валют в портфеле в рублях
+     *Общая стоимость фьючерсов в портфеле в рублях
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue total_amount_futures = 5;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -251,7 +251,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Общая стоимость валют в портфеле в рублях
+     *Общая стоимость фьючерсов в портфеле в рублях
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue total_amount_futures = 5;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -268,24 +268,34 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
     /**
      *Текущая доходность портфеля
      *
-     * Generated from protobuf field <code>float expected_yield = 6;</code>
-     * @return float
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation expected_yield = 6;</code>
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getExpectedYield()
     {
-        return $this->expected_yield;
+        return isset($this->expected_yield) ? $this->expected_yield : null;
+    }
+
+    public function hasExpectedYield()
+    {
+        return isset($this->expected_yield);
+    }
+
+    public function clearExpectedYield()
+    {
+        unset($this->expected_yield);
     }
 
     /**
      *Текущая доходность портфеля
      *
-     * Generated from protobuf field <code>float expected_yield = 6;</code>
-     * @param float $var
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation expected_yield = 6;</code>
+     * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
     public function setExpectedYield($var)
     {
-        GPBUtil::checkFloat($var);
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->expected_yield = $var;
 
         return $this;

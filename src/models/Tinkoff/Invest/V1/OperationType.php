@@ -124,9 +124,9 @@ class OperationType
     /**
      *Продажа в результате Margin-call
      *
-     * Generated from protobuf enum <code>OPERATION_TYPE_SELL_MARJIN = 18;</code>
+     * Generated from protobuf enum <code>OPERATION_TYPE_SELL_MARGIN = 18;</code>
      */
-    const OPERATION_TYPE_SELL_MARJIN = 18;
+    const OPERATION_TYPE_SELL_MARGIN = 18;
     /**
      *Удержание комиссии за операцию
      *
@@ -172,15 +172,15 @@ class OperationType
     /**
      *Зачисление вариационной маржи
      *
-     * Generated from protobuf enum <code>OPERATION_TYPE_ACCRUING_VARMARJIN = 26;</code>
+     * Generated from protobuf enum <code>OPERATION_TYPE_ACCRUING_VARMARGIN = 26;</code>
      */
-    const OPERATION_TYPE_ACCRUING_VARMARJIN = 26;
+    const OPERATION_TYPE_ACCRUING_VARMARGIN = 26;
     /**
      *Списание вариационной маржи
      *
-     * Generated from protobuf enum <code>OPERATION_TYPE_WRITING_OFF_VARMARJIN = 27;</code>
+     * Generated from protobuf enum <code>OPERATION_TYPE_WRITING_OFF_VARMARGIN = 27;</code>
      */
-    const OPERATION_TYPE_WRITING_OFF_VARMARJIN = 27;
+    const OPERATION_TYPE_WRITING_OFF_VARMARGIN = 27;
     /**
      *Покупка в рамках экспирации фьючерсного контракта
      *
@@ -297,7 +297,7 @@ class OperationType
         self::OPERATION_TYPE_BUY => 'OPERATION_TYPE_BUY',
         self::OPERATION_TYPE_BUY_CARD => 'OPERATION_TYPE_BUY_CARD',
         self::OPERATION_TYPE_INPUT_SECURITIES => 'OPERATION_TYPE_INPUT_SECURITIES',
-        self::OPERATION_TYPE_SELL_MARJIN => 'OPERATION_TYPE_SELL_MARJIN',
+        self::OPERATION_TYPE_SELL_MARGIN => 'OPERATION_TYPE_SELL_MARGIN',
         self::OPERATION_TYPE_BROKER_FEE => 'OPERATION_TYPE_BROKER_FEE',
         self::OPERATION_TYPE_BUY_MARGIN => 'OPERATION_TYPE_BUY_MARGIN',
         self::OPERATION_TYPE_DIVIDEND => 'OPERATION_TYPE_DIVIDEND',
@@ -305,8 +305,8 @@ class OperationType
         self::OPERATION_TYPE_COUPON => 'OPERATION_TYPE_COUPON',
         self::OPERATION_TYPE_SUCCESS_FEE => 'OPERATION_TYPE_SUCCESS_FEE',
         self::OPERATION_TYPE_DIVIDEND_TRANSFER => 'OPERATION_TYPE_DIVIDEND_TRANSFER',
-        self::OPERATION_TYPE_ACCRUING_VARMARJIN => 'OPERATION_TYPE_ACCRUING_VARMARJIN',
-        self::OPERATION_TYPE_WRITING_OFF_VARMARJIN => 'OPERATION_TYPE_WRITING_OFF_VARMARJIN',
+        self::OPERATION_TYPE_ACCRUING_VARMARGIN => 'OPERATION_TYPE_ACCRUING_VARMARGIN',
+        self::OPERATION_TYPE_WRITING_OFF_VARMARGIN => 'OPERATION_TYPE_WRITING_OFF_VARMARGIN',
         self::OPERATION_TYPE_DELIVERY_BUY => 'OPERATION_TYPE_DELIVERY_BUY',
         self::OPERATION_TYPE_DELIVERY_SELL => 'OPERATION_TYPE_DELIVERY_SELL',
         self::OPERATION_TYPE_TRACK_MFEE => 'OPERATION_TYPE_TRACK_MFEE',

@@ -27,6 +27,12 @@ class TradingStatus extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SecurityTradingStatus trading_status = 2;</code>
      */
     protected $trading_status = 0;
+    /**
+     *Время изменения торгового статуса в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp time = 3;</code>
+     */
+    protected $time = null;
 
     /**
      * Constructor.
@@ -38,6 +44,8 @@ class TradingStatus extends \Google\Protobuf\Internal\Message
      *          Figi-идентификатор инструмента.
      *     @type int $trading_status
      *          Статус торговли инструментом.
+     *     @type \Google\Protobuf\Timestamp $time
+     *          Время изменения торгового статуса в часовом поясе UTC.
      * }
      */
     public function __construct($data = NULL) {
@@ -93,6 +101,42 @@ class TradingStatus extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\SecurityTradingStatus::class);
         $this->trading_status = $var;
+
+        return $this;
+    }
+
+    /**
+     *Время изменения торгового статуса в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp time = 3;</code>
+     * @return \Google\Protobuf\Timestamp|null
+     */
+    public function getTime()
+    {
+        return isset($this->time) ? $this->time : null;
+    }
+
+    public function hasTime()
+    {
+        return isset($this->time);
+    }
+
+    public function clearTime()
+    {
+        unset($this->time);
+    }
+
+    /**
+     *Время изменения торгового статуса в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp time = 3;</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setTime($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        $this->time = $var;
 
         return $this;
     }

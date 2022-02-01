@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class InstrumentRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Тип идентификатора инструмента. Возможные значения: figi, ticker, isin. Подробнее об идентификации инструментов: [Идентификация инструментов](/investAPI/faq_identification/)
+     * Тип идентификатора инструмента. Возможные значения: figi, ticker, isin. Подробнее об идентификации инструментов: [Идентификация инструментов](https://tinkoff.github.io/investAPI/faq_identification/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentIdType id_type = 1;</code>
      */
@@ -41,7 +41,7 @@ class InstrumentRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $id_type
-     *           Тип идентификатора инструмента. Возможные значения: figi, ticker, isin. Подробнее об идентификации инструментов: [Идентификация инструментов](/investAPI/faq_identification/)
+     *           Тип идентификатора инструмента. Возможные значения: figi, ticker, isin. Подробнее об идентификации инструментов: [Идентификация инструментов](https://tinkoff.github.io/investAPI/faq_identification/)
      *     @type string $class_code
      *           Идентификатор class_code. Обязателен при id_type = ticker.
      *     @type string $id
@@ -54,7 +54,7 @@ class InstrumentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Тип идентификатора инструмента. Возможные значения: figi, ticker, isin. Подробнее об идентификации инструментов: [Идентификация инструментов](/investAPI/faq_identification/)
+     * Тип идентификатора инструмента. Возможные значения: figi, ticker, isin. Подробнее об идентификации инструментов: [Идентификация инструментов](https://tinkoff.github.io/investAPI/faq_identification/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentIdType id_type = 1;</code>
      * @return int
@@ -65,7 +65,7 @@ class InstrumentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Тип идентификатора инструмента. Возможные значения: figi, ticker, isin. Подробнее об идентификации инструментов: [Идентификация инструментов](/investAPI/faq_identification/)
+     * Тип идентификатора инструмента. Возможные значения: figi, ticker, isin. Подробнее об идентификации инструментов: [Идентификация инструментов](https://tinkoff.github.io/investAPI/faq_identification/)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentIdType id_type = 1;</code>
      * @param int $var

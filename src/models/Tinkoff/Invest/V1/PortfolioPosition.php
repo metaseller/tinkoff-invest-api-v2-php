@@ -28,11 +28,11 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     protected $instrument_type = '';
     /**
-     *Количество лотов в портфеле
+     *Количество инструмента в портфеле в штуках
      *
-     * Generated from protobuf field <code>float quantity = 3;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation quantity = 3;</code>
      */
-    protected $quantity = 0.0;
+    protected $quantity = null;
     /**
      *Средняя цена лота в позиции
      *
@@ -42,9 +42,9 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     /**
      *Текущая рассчитанная доходность
      *
-     * Generated from protobuf field <code>float expected_yield = 5;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation expected_yield = 5;</code>
      */
-    protected $expected_yield = 0.0;
+    protected $expected_yield = null;
     /**
      * Текущий НКД
      *
@@ -57,6 +57,12 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation average_position_price_pt = 7;</code>
      */
     protected $average_position_price_pt = null;
+    /**
+     *Текущая цена инструмента
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue current_price = 8;</code>
+     */
+    protected $current_price = null;
 
     /**
      * Constructor.
@@ -68,16 +74,18 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      *          Figi-идентификатора инструмента
      *     @type string $instrument_type
      *          Тип инструмента
-     *     @type float $quantity
-     *          Количество лотов в портфеле
+     *     @type \Tinkoff\Invest\V1\Quotation $quantity
+     *          Количество инструмента в портфеле в штуках
      *     @type \Tinkoff\Invest\V1\MoneyValue $average_position_price
      *          Средняя цена лота в позиции
-     *     @type float $expected_yield
+     *     @type \Tinkoff\Invest\V1\Quotation $expected_yield
      *          Текущая рассчитанная доходность
      *     @type \Tinkoff\Invest\V1\MoneyValue $current_nkd
      *           Текущий НКД
      *     @type \Tinkoff\Invest\V1\Quotation $average_position_price_pt
      *          Средняя цена лота в позиции в пунктах (для фьючерсов)
+     *     @type \Tinkoff\Invest\V1\MoneyValue $current_price
+     *          Текущая цена инструмента
      * }
      */
     public function __construct($data = NULL) {
@@ -138,26 +146,36 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество лотов в портфеле
+     *Количество инструмента в портфеле в штуках
      *
-     * Generated from protobuf field <code>float quantity = 3;</code>
-     * @return float
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation quantity = 3;</code>
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getQuantity()
     {
-        return $this->quantity;
+        return isset($this->quantity) ? $this->quantity : null;
+    }
+
+    public function hasQuantity()
+    {
+        return isset($this->quantity);
+    }
+
+    public function clearQuantity()
+    {
+        unset($this->quantity);
     }
 
     /**
-     *Количество лотов в портфеле
+     *Количество инструмента в портфеле в штуках
      *
-     * Generated from protobuf field <code>float quantity = 3;</code>
-     * @param float $var
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation quantity = 3;</code>
+     * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
     public function setQuantity($var)
     {
-        GPBUtil::checkFloat($var);
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->quantity = $var;
 
         return $this;
@@ -202,24 +220,34 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     /**
      *Текущая рассчитанная доходность
      *
-     * Generated from protobuf field <code>float expected_yield = 5;</code>
-     * @return float
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation expected_yield = 5;</code>
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getExpectedYield()
     {
-        return $this->expected_yield;
+        return isset($this->expected_yield) ? $this->expected_yield : null;
+    }
+
+    public function hasExpectedYield()
+    {
+        return isset($this->expected_yield);
+    }
+
+    public function clearExpectedYield()
+    {
+        unset($this->expected_yield);
     }
 
     /**
      *Текущая рассчитанная доходность
      *
-     * Generated from protobuf field <code>float expected_yield = 5;</code>
-     * @param float $var
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation expected_yield = 5;</code>
+     * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
     public function setExpectedYield($var)
     {
-        GPBUtil::checkFloat($var);
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->expected_yield = $var;
 
         return $this;
@@ -293,6 +321,42 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->average_position_price_pt = $var;
+
+        return $this;
+    }
+
+    /**
+     *Текущая цена инструмента
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue current_price = 8;</code>
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
+     */
+    public function getCurrentPrice()
+    {
+        return isset($this->current_price) ? $this->current_price : null;
+    }
+
+    public function hasCurrentPrice()
+    {
+        return isset($this->current_price);
+    }
+
+    public function clearCurrentPrice()
+    {
+        unset($this->current_price);
+    }
+
+    /**
+     *Текущая цена инструмента
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue current_price = 8;</code>
+     * @param \Tinkoff\Invest\V1\MoneyValue $var
+     * @return $this
+     */
+    public function setCurrentPrice($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
+        $this->current_price = $var;
 
         return $this;
     }

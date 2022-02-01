@@ -18,7 +18,7 @@ class Instruments
         \GPBMetadata\Common::initOnce();
         $pool->internalAddGeneratedFile(
             '
-ðR
+že
 instruments.proto%tinkoff.public.invest.api.contract.v1common.proto"}
 TradingSchedulesRequest
 exchange (	(
@@ -70,7 +70,7 @@ instrument (2-.tinkoff.public.invest.api.contract.v1.Future"U
 
 instrument (2,.tinkoff.public.invest.api.contract.v1.Share"S
 SharesResponseA
-instruments (2,.tinkoff.public.invest.api.contract.v1.Share"Ò
+instruments (2,.tinkoff.public.invest.api.contract.v1.Share"°
 Bond
 figi (	
 ticker (	
@@ -78,15 +78,15 @@ instrument (2,.tinkoff.public.invest.api.contract.v1.Share"S
 class_code (	
 isin (	
 lot (
-currency (	
-klong (
-kshort (
-dlong	 (
+currency (	?
+klong (20.tinkoff.public.invest.api.contract.v1.Quotation@
+kshort (20.tinkoff.public.invest.api.contract.v1.Quotation?
+dlong	 (20.tinkoff.public.invest.api.contract.v1.Quotation@
 dshort
- (
-	dlong_min (
+ (20.tinkoff.public.invest.api.contract.v1.QuotationC
+	dlong_min (20.tinkoff.public.invest.api.contract.v1.QuotationD
 
-dshort_min (
+dshort_min (20.tinkoff.public.invest.api.contract.v1.Quotation
 short_enabled_flag (
 name (	
 exchange (	 
@@ -111,9 +111,9 @@ issue_size (
 sell_available_flag" (
 floating_coupon_flag# (
 perpetual_flag$ (
-amortization_flag% (
-min_price_increment& ( 
-api_trade_available_flag\' ("€
+amortization_flag% (M
+min_price_increment& (20.tinkoff.public.invest.api.contract.v1.Quotation 
+api_trade_available_flag\' ("Þ
 Currency
 figi (	
 ticker (	
@@ -121,15 +121,15 @@ issue_size (
 class_code (	
 isin (	
 lot (
-currency (	
-klong (
-kshort (
-dlong	 (
+currency (	?
+klong (20.tinkoff.public.invest.api.contract.v1.Quotation@
+kshort (20.tinkoff.public.invest.api.contract.v1.Quotation?
+dlong	 (20.tinkoff.public.invest.api.contract.v1.Quotation@
 dshort
- (
-	dlong_min (
+ (20.tinkoff.public.invest.api.contract.v1.QuotationC
+	dlong_min (20.tinkoff.public.invest.api.contract.v1.QuotationD
 
-dshort_min (
+dshort_min (20.tinkoff.public.invest.api.contract.v1.Quotation
 short_enabled_flag (
 name (	
 exchange (	B
@@ -140,9 +140,9 @@ dshort_min (
 otc_flag (
 buy_available_flag (
 sell_available_flag (
-iso_currency_name (	
-min_price_increment ( 
-api_trade_available_flag ("»
+iso_currency_name (	M
+min_price_increment (20.tinkoff.public.invest.api.contract.v1.Quotation 
+api_trade_available_flag ("ý
 Etf
 figi (	
 ticker (	
@@ -150,24 +150,24 @@ dshort_min (
 class_code (	
 isin (	
 lot (
-currency (	
-klong (
-kshort (
-dlong	 (
+currency (	?
+klong (20.tinkoff.public.invest.api.contract.v1.Quotation@
+kshort (20.tinkoff.public.invest.api.contract.v1.Quotation?
+dlong	 (20.tinkoff.public.invest.api.contract.v1.Quotation@
 dshort
- (
-	dlong_min (
+ (20.tinkoff.public.invest.api.contract.v1.QuotationC
+	dlong_min (20.tinkoff.public.invest.api.contract.v1.QuotationD
 
-dshort_min (
+dshort_min (20.tinkoff.public.invest.api.contract.v1.Quotation
 short_enabled_flag (
 name (	
-exchange (	
-fixed_commission (
+exchange (	J
+fixed_commission (20.tinkoff.public.invest.api.contract.v1.Quotation
 
 focus_type (	1
-released_date (2.google.protobuf.Timestamp
+released_date (2.google.protobuf.TimestampD
 
-num_shares (
+num_shares (20.tinkoff.public.invest.api.contract.v1.Quotation
 country_of_risk (	
 country_of_risk_name (	
 sector (	
@@ -175,24 +175,24 @@ num_shares (
 trading_status (2<.tinkoff.public.invest.api.contract.v1.SecurityTradingStatus
 otc_flag (
 buy_available_flag (
-sell_available_flag (
-min_price_increment ( 
-api_trade_available_flag ("š
+sell_available_flag (M
+min_price_increment (20.tinkoff.public.invest.api.contract.v1.Quotation 
+api_trade_available_flag ("ª	
 Future
 figi (	
 ticker (	
 
 class_code (	
 lot (
-currency (	
-klong (
-kshort (
-dlong (
-dshort	 (
+currency (	?
+klong (20.tinkoff.public.invest.api.contract.v1.Quotation@
+kshort (20.tinkoff.public.invest.api.contract.v1.Quotation?
+dlong (20.tinkoff.public.invest.api.contract.v1.Quotation@
+dshort	 (20.tinkoff.public.invest.api.contract.v1.QuotationC
 	dlong_min
- (
+ (20.tinkoff.public.invest.api.contract.v1.QuotationD
 
-dshort_min (
+dshort_min (20.tinkoff.public.invest.api.contract.v1.Quotation
 short_enabled_flag (
 name (	
 exchange (	4
@@ -201,8 +201,8 @@ dshort_min (
 futures_type (	
 
 asset_type (	
-basic_asset (	
-basic_asset_size (
+basic_asset (	J
+basic_asset_size (20.tinkoff.public.invest.api.contract.v1.Quotation
 country_of_risk (	
 country_of_risk_name (	
 sector (	3
@@ -210,9 +210,9 @@ asset_type (	
 trading_status (2<.tinkoff.public.invest.api.contract.v1.SecurityTradingStatus
 otc_flag (
 buy_available_flag (
-sell_available_flag (
-min_price_increment ( 
-api_trade_available_flag ("«
+sell_available_flag (M
+min_price_increment (20.tinkoff.public.invest.api.contract.v1.Quotation 
+api_trade_available_flag ("‰	
 Share
 figi (	
 ticker (	
@@ -220,15 +220,15 @@ asset_type (	
 class_code (	
 isin (	
 lot (
-currency (	
-klong (
-kshort (
-dlong	 (
+currency (	?
+klong (20.tinkoff.public.invest.api.contract.v1.Quotation@
+kshort (20.tinkoff.public.invest.api.contract.v1.Quotation?
+dlong	 (20.tinkoff.public.invest.api.contract.v1.Quotation@
 dshort
- (
-	dlong_min (
+ (20.tinkoff.public.invest.api.contract.v1.QuotationC
+	dlong_min (20.tinkoff.public.invest.api.contract.v1.QuotationD
 
-dshort_min (
+dshort_min (20.tinkoff.public.invest.api.contract.v1.Quotation
 short_enabled_flag (
 name (	
 exchange (	,
@@ -246,30 +246,30 @@ issue_size (
 sell_available_flag (
 div_yield_flag (D
 
-share_type (20.tinkoff.public.invest.api.contract.v1.ShareType
-min_price_increment ( 
+share_type (20.tinkoff.public.invest.api.contract.v1.ShareTypeM
+min_price_increment (20.tinkoff.public.invest.api.contract.v1.Quotation 
 api_trade_available_flag  ("|
 GetAccruedInterestsRequest
 figi (	(
 from (2.google.protobuf.Timestamp&
 to (2.google.protobuf.Timestamp"p
 GetAccruedInterestsResponseQ
-accrued_interests (26.tinkoff.public.invest.api.contract.v1.AccruedInterest"Ö
+accrued_interests (26.tinkoff.public.invest.api.contract.v1.AccruedInterest"ˆ
 AccruedInterest(
 date (2.google.protobuf.Timestamp?
-value (20.tinkoff.public.invest.api.contract.v1.Quotation
-value_percent (A
+value (20.tinkoff.public.invest.api.contract.v1.QuotationG
+value_percent (20.tinkoff.public.invest.api.contract.v1.QuotationA
 nominal (20.tinkoff.public.invest.api.contract.v1.Quotation"\'
 GetFuturesMarginRequest
-figi (	"²
+figi (	"ä
 GetFuturesMarginResponseP
 initial_margin_on_buy (21.tinkoff.public.invest.api.contract.v1.MoneyValueQ
-initial_margin_on_sell (21.tinkoff.public.invest.api.contract.v1.MoneyValue
-min_price_increment (T
+initial_margin_on_sell (21.tinkoff.public.invest.api.contract.v1.MoneyValueM
+min_price_increment (20.tinkoff.public.invest.api.contract.v1.QuotationT
 min_price_increment_amount (20.tinkoff.public.invest.api.contract.v1.Quotation"[
 InstrumentResponseE
 
-instrument (21.tinkoff.public.invest.api.contract.v1.Instrument"¼
+instrument (21.tinkoff.public.invest.api.contract.v1.Instrument"š
 
 Instrument
 figi (	
@@ -278,15 +278,15 @@ Instrument
 class_code (	
 isin (	
 lot (
-currency (	
-klong (
-kshort (
-dlong	 (
+currency (	?
+klong (20.tinkoff.public.invest.api.contract.v1.Quotation@
+kshort (20.tinkoff.public.invest.api.contract.v1.Quotation?
+dlong	 (20.tinkoff.public.invest.api.contract.v1.Quotation@
 dshort
- (
-	dlong_min (
+ (20.tinkoff.public.invest.api.contract.v1.QuotationC
+	dlong_min (20.tinkoff.public.invest.api.contract.v1.QuotationD
 
-dshort_min (
+dshort_min (20.tinkoff.public.invest.api.contract.v1.Quotation
 short_enabled_flag (
 name (	
 exchange (	
@@ -296,8 +296,8 @@ dshort_min (
 trading_status (2<.tinkoff.public.invest.api.contract.v1.SecurityTradingStatus
 otc_flag (
 buy_available_flag (
-sell_available_flag (
-min_price_increment ( 
+sell_available_flag (M
+min_price_increment (20.tinkoff.public.invest.api.contract.v1.Quotation 
 api_trade_available_flag ("u
 GetDividendsRequest
 figi (	(

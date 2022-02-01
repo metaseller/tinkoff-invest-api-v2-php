@@ -20,7 +20,7 @@ class InstrumentStatus
      */
     const INSTRUMENT_STATUS_UNSPECIFIED = 0;
     /**
-     *Базовый список инструментов (по умолчанию).
+     *Базовый список инструментов (по умолчанию). Инструменты доступные для торговли через TINKOFF INVEST API.
      *
      * Generated from protobuf enum <code>INSTRUMENT_STATUS_BASE = 1;</code>
      */

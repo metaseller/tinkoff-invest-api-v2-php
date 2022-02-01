@@ -32,7 +32,7 @@ class SubscriptionStatus
      */
     const SUBSCRIPTION_STATUS_INSTRUMENT_NOT_FOUND = 2;
     /**
-     *Некорректный статус подписки, список возможных значений: [SubscriptionAction](/investAPI/marketdata#subscriptionaction)
+     *Некорректный статус подписки, список возможных значений: [SubscriptionAction](https://tinkoff.github.io/investAPI/marketdata#subscriptionaction)
      *
      * Generated from protobuf enum <code>SUBSCRIPTION_STATUS_SUBSCRIPTION_ACTION_IS_INVALID = 3;</code>
      */
@@ -44,13 +44,13 @@ class SubscriptionStatus
      */
     const SUBSCRIPTION_STATUS_DEPTH_IS_INVALID = 4;
     /**
-     *Некорректный интервал свечей, список возможных значений: [SubscriptionInterval](/investAPI/marketdata#subscriptioninterval)
+     *Некорректный интервал свечей, список возможных значений: [SubscriptionInterval](https://tinkoff.github.io/investAPI/marketdata#subscriptioninterval)
      *
      * Generated from protobuf enum <code>SUBSCRIPTION_STATUS_INTERVAL_IS_INVALID = 5;</code>
      */
     const SUBSCRIPTION_STATUS_INTERVAL_IS_INVALID = 5;
     /**
-     *Превышен лимит подписок в рамках стрима, подробнее: [Лимитная политика](/investAPI/limits/)
+     *Превышен лимит подписок в рамках стрима, подробнее: [Лимитная политика](https://tinkoff.github.io/investAPI/limits/)
      *
      * Generated from protobuf enum <code>SUBSCRIPTION_STATUS_LIMIT_IS_EXCEEDED = 6;</code>
      */

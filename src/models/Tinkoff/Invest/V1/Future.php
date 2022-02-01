@@ -34,7 +34,7 @@ class Future extends \Google\Protobuf\Internal\Message
      */
     protected $class_code = '';
     /**
-     *Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](/investAPI/glossary#lot)
+     *Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://tinkoff.github.io/investAPI/glossary#lot)
      *
      * Generated from protobuf field <code>int32 lot = 4;</code>
      */
@@ -48,39 +48,39 @@ class Future extends \Google\Protobuf\Internal\Message
     /**
      *Коэффициент ставки риска длинной позиции по клиенту.
      *
-     * Generated from protobuf field <code>double klong = 6;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation klong = 6;</code>
      */
-    protected $klong = 0.0;
+    protected $klong = null;
     /**
      *Коэффициент ставки риска короткой позиции по клиенту.
      *
-     * Generated from protobuf field <code>double kshort = 7;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation kshort = 7;</code>
      */
-    protected $kshort = 0.0;
+    protected $kshort = null;
     /**
      *Ставка риска минимальной маржи в лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
      *
-     * Generated from protobuf field <code>double dlong = 8;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong = 8;</code>
      */
-    protected $dlong = 0.0;
+    protected $dlong = null;
     /**
      *Ставка риска минимальной маржи в шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
      *
-     * Generated from protobuf field <code>double dshort = 9;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort = 9;</code>
      */
-    protected $dshort = 0.0;
+    protected $dshort = null;
     /**
      *Ставка риска начальной маржи в лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
      *
-     * Generated from protobuf field <code>double dlong_min = 10;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_min = 10;</code>
      */
-    protected $dlong_min = 0.0;
+    protected $dlong_min = null;
     /**
      *Ставка риска начальной маржи в шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
      *
-     * Generated from protobuf field <code>double dshort_min = 11;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_min = 11;</code>
      */
-    protected $dshort_min = 0.0;
+    protected $dshort_min = null;
     /**
      *Признак доступности для операций шорт.
      *
@@ -132,9 +132,9 @@ class Future extends \Google\Protobuf\Internal\Message
     /**
      *Размер основного актива.
      *
-     * Generated from protobuf field <code>double basic_asset_size = 20;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation basic_asset_size = 20;</code>
      */
-    protected $basic_asset_size = 0.0;
+    protected $basic_asset_size = null;
     /**
      *Код страны эмитента.
      *
@@ -186,9 +186,9 @@ class Future extends \Google\Protobuf\Internal\Message
     /**
      *Шаг цены.
      *
-     * Generated from protobuf field <code>float min_price_increment = 29;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation min_price_increment = 29;</code>
      */
-    protected $min_price_increment = 0.0;
+    protected $min_price_increment = null;
     /**
      *Признак доступности торгов через API.
      *
@@ -209,20 +209,20 @@ class Future extends \Google\Protobuf\Internal\Message
      *     @type string $class_code
      *          Класс-код (секция торгов).
      *     @type int $lot
-     *          Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](/investAPI/glossary#lot)
+     *          Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://tinkoff.github.io/investAPI/glossary#lot)
      *     @type string $currency
      *          Валюта расчётов.
-     *     @type float $klong
+     *     @type \Tinkoff\Invest\V1\Quotation $klong
      *          Коэффициент ставки риска длинной позиции по клиенту.
-     *     @type float $kshort
+     *     @type \Tinkoff\Invest\V1\Quotation $kshort
      *          Коэффициент ставки риска короткой позиции по клиенту.
-     *     @type float $dlong
+     *     @type \Tinkoff\Invest\V1\Quotation $dlong
      *          Ставка риска минимальной маржи в лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
-     *     @type float $dshort
+     *     @type \Tinkoff\Invest\V1\Quotation $dshort
      *          Ставка риска минимальной маржи в шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
-     *     @type float $dlong_min
+     *     @type \Tinkoff\Invest\V1\Quotation $dlong_min
      *          Ставка риска начальной маржи в лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
-     *     @type float $dshort_min
+     *     @type \Tinkoff\Invest\V1\Quotation $dshort_min
      *          Ставка риска начальной маржи в шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
      *     @type bool $short_enabled_flag
      *          Признак доступности для операций шорт.
@@ -240,7 +240,7 @@ class Future extends \Google\Protobuf\Internal\Message
      *          Тип актива. Возможные значения: </br>**commodity** — товар; </br>**currency** — валюта; </br>**security** — ценная бумага; </br>**index** — индекс.
      *     @type string $basic_asset
      *          Основной актив.
-     *     @type float $basic_asset_size
+     *     @type \Tinkoff\Invest\V1\Quotation $basic_asset_size
      *          Размер основного актива.
      *     @type string $country_of_risk
      *          Код страны эмитента.
@@ -258,7 +258,7 @@ class Future extends \Google\Protobuf\Internal\Message
      *          Признак доступности для покупки.
      *     @type bool $sell_available_flag
      *          Признак доступности для продажи.
-     *     @type float $min_price_increment
+     *     @type \Tinkoff\Invest\V1\Quotation $min_price_increment
      *          Шаг цены.
      *     @type bool $api_trade_available_flag
      *          Признак доступности торгов через API.
@@ -348,7 +348,7 @@ class Future extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](/investAPI/glossary#lot)
+     *Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://tinkoff.github.io/investAPI/glossary#lot)
      *
      * Generated from protobuf field <code>int32 lot = 4;</code>
      * @return int
@@ -359,7 +359,7 @@ class Future extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](/investAPI/glossary#lot)
+     *Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://tinkoff.github.io/investAPI/glossary#lot)
      *
      * Generated from protobuf field <code>int32 lot = 4;</code>
      * @param int $var
@@ -402,24 +402,34 @@ class Future extends \Google\Protobuf\Internal\Message
     /**
      *Коэффициент ставки риска длинной позиции по клиенту.
      *
-     * Generated from protobuf field <code>double klong = 6;</code>
-     * @return float
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation klong = 6;</code>
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getKlong()
     {
-        return $this->klong;
+        return isset($this->klong) ? $this->klong : null;
+    }
+
+    public function hasKlong()
+    {
+        return isset($this->klong);
+    }
+
+    public function clearKlong()
+    {
+        unset($this->klong);
     }
 
     /**
      *Коэффициент ставки риска длинной позиции по клиенту.
      *
-     * Generated from protobuf field <code>double klong = 6;</code>
-     * @param float $var
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation klong = 6;</code>
+     * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
     public function setKlong($var)
     {
-        GPBUtil::checkDouble($var);
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->klong = $var;
 
         return $this;
@@ -428,24 +438,34 @@ class Future extends \Google\Protobuf\Internal\Message
     /**
      *Коэффициент ставки риска короткой позиции по клиенту.
      *
-     * Generated from protobuf field <code>double kshort = 7;</code>
-     * @return float
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation kshort = 7;</code>
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getKshort()
     {
-        return $this->kshort;
+        return isset($this->kshort) ? $this->kshort : null;
+    }
+
+    public function hasKshort()
+    {
+        return isset($this->kshort);
+    }
+
+    public function clearKshort()
+    {
+        unset($this->kshort);
     }
 
     /**
      *Коэффициент ставки риска короткой позиции по клиенту.
      *
-     * Generated from protobuf field <code>double kshort = 7;</code>
-     * @param float $var
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation kshort = 7;</code>
+     * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
     public function setKshort($var)
     {
-        GPBUtil::checkDouble($var);
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->kshort = $var;
 
         return $this;
@@ -454,24 +474,34 @@ class Future extends \Google\Protobuf\Internal\Message
     /**
      *Ставка риска минимальной маржи в лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
      *
-     * Generated from protobuf field <code>double dlong = 8;</code>
-     * @return float
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong = 8;</code>
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getDlong()
     {
-        return $this->dlong;
+        return isset($this->dlong) ? $this->dlong : null;
+    }
+
+    public function hasDlong()
+    {
+        return isset($this->dlong);
+    }
+
+    public function clearDlong()
+    {
+        unset($this->dlong);
     }
 
     /**
      *Ставка риска минимальной маржи в лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
      *
-     * Generated from protobuf field <code>double dlong = 8;</code>
-     * @param float $var
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong = 8;</code>
+     * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
     public function setDlong($var)
     {
-        GPBUtil::checkDouble($var);
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->dlong = $var;
 
         return $this;
@@ -480,24 +510,34 @@ class Future extends \Google\Protobuf\Internal\Message
     /**
      *Ставка риска минимальной маржи в шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
      *
-     * Generated from protobuf field <code>double dshort = 9;</code>
-     * @return float
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort = 9;</code>
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getDshort()
     {
-        return $this->dshort;
+        return isset($this->dshort) ? $this->dshort : null;
+    }
+
+    public function hasDshort()
+    {
+        return isset($this->dshort);
+    }
+
+    public function clearDshort()
+    {
+        unset($this->dshort);
     }
 
     /**
      *Ставка риска минимальной маржи в шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
      *
-     * Generated from protobuf field <code>double dshort = 9;</code>
-     * @param float $var
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort = 9;</code>
+     * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
     public function setDshort($var)
     {
-        GPBUtil::checkDouble($var);
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->dshort = $var;
 
         return $this;
@@ -506,24 +546,34 @@ class Future extends \Google\Protobuf\Internal\Message
     /**
      *Ставка риска начальной маржи в лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
      *
-     * Generated from protobuf field <code>double dlong_min = 10;</code>
-     * @return float
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_min = 10;</code>
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getDlongMin()
     {
-        return $this->dlong_min;
+        return isset($this->dlong_min) ? $this->dlong_min : null;
+    }
+
+    public function hasDlongMin()
+    {
+        return isset($this->dlong_min);
+    }
+
+    public function clearDlongMin()
+    {
+        unset($this->dlong_min);
     }
 
     /**
      *Ставка риска начальной маржи в лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
      *
-     * Generated from protobuf field <code>double dlong_min = 10;</code>
-     * @param float $var
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_min = 10;</code>
+     * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
     public function setDlongMin($var)
     {
-        GPBUtil::checkDouble($var);
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->dlong_min = $var;
 
         return $this;
@@ -532,24 +582,34 @@ class Future extends \Google\Protobuf\Internal\Message
     /**
      *Ставка риска начальной маржи в шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
      *
-     * Generated from protobuf field <code>double dshort_min = 11;</code>
-     * @return float
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_min = 11;</code>
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getDshortMin()
     {
-        return $this->dshort_min;
+        return isset($this->dshort_min) ? $this->dshort_min : null;
+    }
+
+    public function hasDshortMin()
+    {
+        return isset($this->dshort_min);
+    }
+
+    public function clearDshortMin()
+    {
+        unset($this->dshort_min);
     }
 
     /**
      *Ставка риска начальной маржи в шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
      *
-     * Generated from protobuf field <code>double dshort_min = 11;</code>
-     * @param float $var
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_min = 11;</code>
+     * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
     public function setDshortMin($var)
     {
-        GPBUtil::checkDouble($var);
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->dshort_min = $var;
 
         return $this;
@@ -786,24 +846,34 @@ class Future extends \Google\Protobuf\Internal\Message
     /**
      *Размер основного актива.
      *
-     * Generated from protobuf field <code>double basic_asset_size = 20;</code>
-     * @return float
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation basic_asset_size = 20;</code>
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getBasicAssetSize()
     {
-        return $this->basic_asset_size;
+        return isset($this->basic_asset_size) ? $this->basic_asset_size : null;
+    }
+
+    public function hasBasicAssetSize()
+    {
+        return isset($this->basic_asset_size);
+    }
+
+    public function clearBasicAssetSize()
+    {
+        unset($this->basic_asset_size);
     }
 
     /**
      *Размер основного актива.
      *
-     * Generated from protobuf field <code>double basic_asset_size = 20;</code>
-     * @param float $var
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation basic_asset_size = 20;</code>
+     * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
     public function setBasicAssetSize($var)
     {
-        GPBUtil::checkDouble($var);
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->basic_asset_size = $var;
 
         return $this;
@@ -1030,24 +1100,34 @@ class Future extends \Google\Protobuf\Internal\Message
     /**
      *Шаг цены.
      *
-     * Generated from protobuf field <code>float min_price_increment = 29;</code>
-     * @return float
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation min_price_increment = 29;</code>
+     * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getMinPriceIncrement()
     {
-        return $this->min_price_increment;
+        return isset($this->min_price_increment) ? $this->min_price_increment : null;
+    }
+
+    public function hasMinPriceIncrement()
+    {
+        return isset($this->min_price_increment);
+    }
+
+    public function clearMinPriceIncrement()
+    {
+        unset($this->min_price_increment);
     }
 
     /**
      *Шаг цены.
      *
-     * Generated from protobuf field <code>float min_price_increment = 29;</code>
-     * @param float $var
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation min_price_increment = 29;</code>
+     * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
     public function setMinPriceIncrement($var)
     {
-        GPBUtil::checkFloat($var);
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->min_price_increment = $var;
 
         return $this;
