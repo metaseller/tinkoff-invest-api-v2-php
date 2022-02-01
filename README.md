@@ -3,6 +3,8 @@ Unofficial PHP SDK for Tinkoff Invest API v2
 
 Документация Tinkoff Invest Api для разработчиков доступна по ссылке: https://tinkoff.github.io/investAPI/
 
+Коммьюнити разработчиков в Telegram: https://t.me/joinchat/VaW05CDzcSdsPULM 
+
 # Введение
 
 Поскольку Tinkoff Invest API v2 в настоящее время позиционируется как gRPC-интерфейс для взаимодействия с торговой платформой 
