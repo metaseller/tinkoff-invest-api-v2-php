@@ -18,7 +18,7 @@ trait ModelTrait
      */
     public function __get($name)
     {
-        $method_getter = 'get' . $name;
+	    $method_getter = 'get' . ucfirst($name);
 
         if (method_exists($this, $method_getter)) {
             return $this->$method_getter();
@@ -34,7 +34,7 @@ trait ModelTrait
      */
     public function __set($name, $value)
     {
-        $method_setter = 'set' . $name;
+        $method_setter = 'set' . ucfirst($name);
 
         if (method_exists($this, $method_setter)) {
             return $this->$method_setter($value);
