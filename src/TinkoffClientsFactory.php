@@ -444,6 +444,18 @@ class TinkoffClientsFactory
     }
 
     /**
+     * Метод создания экземпляра Фабрики
+     *
+     * @param string|null $api_token Токен доступа к Tinkoff Invest API 2
+     *
+     * @return static Текущий экземпляр Фабрики клиентов
+     */
+    public static function create(?string $api_token): self
+    {
+        return new static($api_token);
+    }
+
+    /**
      * Метод сброса созданных моделей клиентов в рамках экземпляра фабрики
      */
     protected function resetClients(): void

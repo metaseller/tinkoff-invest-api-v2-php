@@ -3,6 +3,7 @@
 require(__DIR__ . '/../vendor/autoload.php');
 
 use Metaseller\TinkoffInvestApi2\ClientConnection;
+use Metaseller\TinkoffInvestApi2\TinkoffClientsFactory;
 use Tinkoff\Invest\V1\Account;
 use Tinkoff\Invest\V1\GetAccountsRequest;
 use Tinkoff\Invest\V1\GetAccountsResponse;
@@ -17,10 +18,9 @@ use Tinkoff\Invest\V1\UsersServiceClient;
  */
 $token = '<Your Tinkoff Invest Account Token>';
 
-/**
- * Создаем экземпляр подключения к сервису, используя {@link UsersServiceClient}
- */
-$user_service_client = new UsersServiceClient(ClientConnection::getHostname(), ClientConnection::getOptions($token));
+/** ВЕРСИЯ 1 (Инициализация клиента через фабрику клиентов) */
+
+$tinkoff_api = TinkoffClientsFactory::create($token);
 
 /**
  * Создаем экземпляр запроса информации об аккаунте к сервису
@@ -34,7 +34,7 @@ $request = new GetInfoRequest();
 /**
  * @var GetInfoResponse $response - Получаем ответ, содержащий информацию о пользователе
  */
-list($response, $status) = $user_service_client->GetInfo($request)->wait();
+list($response, $status) = $tinkoff_api->usersServiceClient->GetInfo($request)->wait();
 
 /** Выводим полученную информацию */
 var_dump(['user_info' => [
@@ -44,12 +44,13 @@ var_dump(['user_info' => [
 ]]);
 
 /**
- * @var GetAccountsResponse $response - Получаем ответ, содержащий информацию об аккаунтах
+ * @var GetInfoResponse $response - Получаем ответ, содержащий информацию о пользователе
  */
-list($response, $status) = $user_service_client->GetAccounts(new GetAccountsRequest())->wait();
+list($response, $status) = $tinkoff_api->usersServiceClient->GetInfo($request)->wait();
 
 /** Выводим полученную информацию */
-/** @var Account $account */
-foreach ($response->getAccounts() as $account) {
-    echo $account->getName() . ' => ' . $account->getId() . PHP_EOL;
-}
+var_dump(['user_info' => [
+    'prem_status' => $response->getPremStatus(),
+    'qual_status' => $response->getQualStatus(),
+    'qualified_for_work_with' => $response->getQualifiedForWorkWith(),
+]]);
