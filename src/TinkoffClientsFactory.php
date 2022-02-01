@@ -15,12 +15,24 @@ use Tinkoff\Invest\V1\UsersServiceClient;
 use Grpc\Channel as GrpcChannel;
 
 /**
- * Фабрика создания клиентов доступа к сервису Tinkoff Invest API 2
+ * Фабрика клиентов доступа к сервису Tinkoff Invest API 2
+ *
+ * @property-read InstrumentsServiceClient $instrumentsServiceClient Клиент с настройками по-умолчанию к сервису инструментов
+ * @property-read MarketDataStreamServiceClient $marketDataStreamServiceClient Клиент с настройками по-умолчанию к Bidirectional-stream методам сервиса котировок
+ * @property-read MarketDataServiceClient $marketDataServiceClient Клиент с настройками по-умолчанию к Unary методам сервиса котировок
+ * @property-read OperationsServiceClient $operationsServiceClient Клиент с настройками по-умолчанию к сервису операций
+ * @property-read OrdersServiceClient $ordersServiceClient Клиент с настройками по-умолчанию к сервису торговых поручений
+ * @property-read OrdersStreamServiceClient $ordersStreamServiceClient Клиент с настройками по-умолчанию к Stream сервису торговых поручений
+ * @property-read SandboxServiceClient $sandboxServiceClient Клиент с настройками по-умолчанию к песочнице
+ * @property-read StopOrdersServiceClient $stopOrdersServiceClient Клиент с настройками по-умолчанию к сервису стоп-заявок
+ * @property-read UsersServiceClient $usersServiceClient Клиент с настройками по-умолчанию к сервису аккаунтов
  *
  * @package Metaseller\TinkoffInvestApi2
  */
 class TinkoffClientsFactory
 {
+    use ModelTrait;
+
     /**
      * @var string|null Токен доступа к Tinkoff Invest API 2
      */
