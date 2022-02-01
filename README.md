@@ -91,9 +91,9 @@ $token = 't.ZEbUT................................................7dA';
 php examples/example.php
 ```
 
-# Тестовый пример
+# Тестовые примеры
 
-Выглядит примерно так: 
+Можно использовать фабрику создания клиентов доступа к сервисам Tinkoff Invest Api V2
 
 ```phpt
 /**
@@ -101,7 +101,53 @@ php examples/example.php
  *
  * @see https://tinkoff.github.io/investAPI/token/
  */
-$token = 't.ZEbUT................................................7dA';
+$token = '<Your Tinkoff Invest Account Token>';
+$tinkoff_api = TinkoffClientsFactory::create($token);
+
+/**
+ * Создаем экземпляр запроса информации об аккаунте к сервису
+ *
+ * Запрос не принимает никаких параметров на вход
+ *
+ * @see https://tinkoff.github.io/investAPI/users/#getinforequest
+ */
+$request = new GetInfoRequest();
+
+/**
+ * @var GetInfoResponse $response - Получаем ответ, содержащий информацию о пользователе
+ */
+list($response, $status) = $tinkoff_api->usersServiceClient->GetInfo($request)->wait();
+
+/** Выводим полученную информацию */
+var_dump(['user_info' => [
+    'prem_status' => $response->getPremStatus(),
+    'qual_status' => $response->getQualStatus(),
+    'qualified_for_work_with' => $response->getQualifiedForWorkWith(),
+]]);
+
+/**
+ * @var GetInfoResponse $response - Получаем ответ, содержащий информацию о пользователе
+ */
+list($response, $status) = $tinkoff_api->usersServiceClient->GetInfo($request)->wait();
+
+/** Выводим полученную информацию */
+var_dump(['user_info' => [
+    'prem_status' => $response->getPremStatus(),
+    'qual_status' => $response->getQualStatus(),
+    'qualified_for_work_with' => $response->getQualifiedForWorkWith(),
+]]);
+
+```
+
+Либо создавать клиенты доступа к сервисам напрямую: 
+
+```phpt
+/**
+ * Ваш токен доступа к API
+ *
+ * @see https://tinkoff.github.io/investAPI/token/
+ */
+$token = '<Your Tinkoff Invest Account Token>';
 
 /**
  * Создаем экземпляр подключения к сервису, используя {@link UsersServiceClient}
