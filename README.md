@@ -65,18 +65,22 @@ sudo chmod 666 /var/log/grpc.log
 
 # Устанавливаем через composer
 
+PS: Если вы планируете использовать в проекте, разработанном на Yii2 Framework, то можно воспользоваться оберткой [metaseller/tinkoff-invest-api-v2-yii2](https://packagist.org/packages/metaseller/tinkoff-invest-api-v2-yii2).
+
+Ну либо устанавливаем SDK через [composer](http://getcomposer.org/download/)
+
 ```
-composer require metaseller/tinkoff-invest-api-v2-php 
+$ composer require metaseller/tinkoff-invest-api-v2-php 
 ```
 ну или 
 ```
-git clone git@github.com:metaseller/tinkoff-invest-api-v2-php.git .
+$ git clone git@github.com:metaseller/tinkoff-invest-api-v2-php.git .
 composer update
 ```
 
 прописываем свой Tinkoff Invest API v2 token
 ```
-vim examples/example.php
+$ vim examples/example.php
 ```
 
 ```phpt
@@ -90,7 +94,7 @@ $token = 't.ZEbUT................................................7dA';
 
 и тестируем: 
 ```
-php examples/example.php
+$ php examples/example.php
 ```
 
 # Тестовые примеры
