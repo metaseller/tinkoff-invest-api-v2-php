@@ -3,7 +3,6 @@
 require(__DIR__ . '/../vendor/autoload.php');
 
 use Metaseller\TinkoffInvestApi2\ClientConnection;
-use Metaseller\TinkoffInvestApi2\TinkoffClientsFactory;
 use Tinkoff\Invest\V1\Account;
 use Tinkoff\Invest\V1\GetAccountsRequest;
 use Tinkoff\Invest\V1\GetAccountsResponse;

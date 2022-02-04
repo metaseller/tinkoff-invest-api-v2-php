@@ -2,14 +2,9 @@
 
 require(__DIR__ . '/../vendor/autoload.php');
 
-use Metaseller\TinkoffInvestApi2\ClientConnection;
 use Metaseller\TinkoffInvestApi2\TinkoffClientsFactory;
-use Tinkoff\Invest\V1\Account;
-use Tinkoff\Invest\V1\GetAccountsRequest;
-use Tinkoff\Invest\V1\GetAccountsResponse;
 use Tinkoff\Invest\V1\GetInfoRequest;
 use Tinkoff\Invest\V1\GetInfoResponse;
-use Tinkoff\Invest\V1\UsersServiceClient;
 
 /**
  * Ваш токен доступа к API
