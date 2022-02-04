@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class OrderTrade extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Дата и время совершения сделки по времени биржи
+     *Дата и время совершения сделки в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp date_time = 1;</code>
      */
@@ -41,7 +41,7 @@ class OrderTrade extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Google\Protobuf\Timestamp $date_time
-     *          Дата и время совершения сделки по времени биржи
+     *          Дата и время совершения сделки в часовом поясе UTC.
      *     @type \Tinkoff\Invest\V1\Quotation $price
      *          Цена, по которой совершена сделка
      *     @type int|string $quantity
@@ -54,7 +54,7 @@ class OrderTrade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время совершения сделки по времени биржи
+     *Дата и время совершения сделки в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp date_time = 1;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -75,7 +75,7 @@ class OrderTrade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время совершения сделки по времени биржи
+     *Дата и время совершения сделки в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp date_time = 1;</code>
      * @param \Google\Protobuf\Timestamp $var

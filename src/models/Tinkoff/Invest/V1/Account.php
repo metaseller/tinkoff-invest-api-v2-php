@@ -51,6 +51,12 @@ class Account extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.google.protobuf.Timestamp closed_date = 6;</code>
      */
     protected $closed_date = null;
+    /**
+     * Уровень доступа к текущему счёту (определяется токеном).
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AccessLevel access_level = 7;</code>
+     */
+    protected $access_level = 0;
 
     /**
      * Constructor.
@@ -70,6 +76,8 @@ class Account extends \Google\Protobuf\Internal\Message
      *           Дата открытия счёта в часовом поясе UTC.
      *     @type \Google\Protobuf\Timestamp $closed_date
      *           Дата закрытия счёта в часовом поясе UTC.
+     *     @type int $access_level
+     *           Уровень доступа к текущему счёту (определяется токеном).
      * }
      */
     public function __construct($data = NULL) {
@@ -249,6 +257,32 @@ class Account extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->closed_date = $var;
+
+        return $this;
+    }
+
+    /**
+     * Уровень доступа к текущему счёту (определяется токеном).
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AccessLevel access_level = 7;</code>
+     * @return int
+     */
+    public function getAccessLevel()
+    {
+        return $this->access_level;
+    }
+
+    /**
+     * Уровень доступа к текущему счёту (определяется токеном).
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AccessLevel access_level = 7;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setAccessLevel($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\AccessLevel::class);
+        $this->access_level = $var;
 
         return $this;
     }

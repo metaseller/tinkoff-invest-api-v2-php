@@ -52,19 +52,19 @@ class StopOrder extends \Google\Protobuf\Internal\Message
      */
     protected $order_type = 0;
     /**
-     *Дата и время выставления заявки в часовом поясе UTC
+     *Дата и время выставления заявки в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp create_date = 7;</code>
      */
     protected $create_date = null;
     /**
-     *Дата и время конвертации стоп-заявки в биржевую в часовом поясе UTC
+     *Дата и время конвертации стоп-заявки в биржевую в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp activation_date_time = 8;</code>
      */
     protected $activation_date_time = null;
     /**
-     *Дата и время снятия заявки в часовом поясе UTC
+     *Дата и время снятия заявки в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp expiration_time = 9;</code>
      */
@@ -101,11 +101,11 @@ class StopOrder extends \Google\Protobuf\Internal\Message
      *     @type int $order_type
      *          Тип стоп-заявки
      *     @type \Google\Protobuf\Timestamp $create_date
-     *          Дата и время выставления заявки в часовом поясе UTC
+     *          Дата и время выставления заявки в часовом поясе UTC.
      *     @type \Google\Protobuf\Timestamp $activation_date_time
-     *          Дата и время конвертации стоп-заявки в биржевую в часовом поясе UTC
+     *          Дата и время конвертации стоп-заявки в биржевую в часовом поясе UTC.
      *     @type \Google\Protobuf\Timestamp $expiration_time
-     *          Дата и время снятия заявки в часовом поясе UTC
+     *          Дата и время снятия заявки в часовом поясе UTC.
      *     @type \Tinkoff\Invest\V1\MoneyValue $price
      *          Цена заявки
      *     @type \Tinkoff\Invest\V1\MoneyValue $stop_price
@@ -274,7 +274,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время выставления заявки в часовом поясе UTC
+     *Дата и время выставления заявки в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp create_date = 7;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -295,7 +295,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время выставления заявки в часовом поясе UTC
+     *Дата и время выставления заявки в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp create_date = 7;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -310,7 +310,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время конвертации стоп-заявки в биржевую в часовом поясе UTC
+     *Дата и время конвертации стоп-заявки в биржевую в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp activation_date_time = 8;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -331,7 +331,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время конвертации стоп-заявки в биржевую в часовом поясе UTC
+     *Дата и время конвертации стоп-заявки в биржевую в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp activation_date_time = 8;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -346,7 +346,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время снятия заявки в часовом поясе UTC
+     *Дата и время снятия заявки в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp expiration_time = 9;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -367,7 +367,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время снятия заявки в часовом поясе UTC
+     *Дата и время снятия заявки в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp expiration_time = 9;</code>
      * @param \Google\Protobuf\Timestamp $var

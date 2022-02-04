@@ -154,7 +154,7 @@ class Future extends \Google\Protobuf\Internal\Message
      */
     protected $sector = '';
     /**
-     *Дата истечения срока.
+     *Дата истечения срока в часов поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp expiration_date = 24;</code>
      */
@@ -249,7 +249,7 @@ class Future extends \Google\Protobuf\Internal\Message
      *     @type string $sector
      *          Сектор экономики.
      *     @type \Google\Protobuf\Timestamp $expiration_date
-     *          Дата истечения срока.
+     *          Дата истечения срока в часов поясе UTC.
      *     @type int $trading_status
      *          Текущий режим торгов инструмента.
      *     @type bool $otc_flag
@@ -958,7 +958,7 @@ class Future extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата истечения срока.
+     *Дата истечения срока в часов поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp expiration_date = 24;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -979,7 +979,7 @@ class Future extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата истечения срока.
+     *Дата истечения срока в часов поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp expiration_date = 24;</code>
      * @param \Google\Protobuf\Timestamp $var

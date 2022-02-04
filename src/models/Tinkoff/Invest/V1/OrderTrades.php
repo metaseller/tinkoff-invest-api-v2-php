@@ -22,7 +22,7 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
      */
     protected $order_id = '';
     /**
-     *Дата и время создания сообщения
+     *Дата и время создания сообщения в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp created_at = 2;</code>
      */
@@ -55,7 +55,7 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
      *     @type string $order_id
      *          Идентификатор торгового поручения
      *     @type \Google\Protobuf\Timestamp $created_at
-     *          Дата и время создания сообщения
+     *          Дата и время создания сообщения в часовом поясе UTC.
      *     @type int $direction
      *          Направление сделки (возможные значения)
      *     @type string $figi
@@ -96,7 +96,7 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время создания сообщения
+     *Дата и время создания сообщения в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp created_at = 2;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -117,7 +117,7 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время создания сообщения
+     *Дата и время создания сообщения в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp created_at = 2;</code>
      * @param \Google\Protobuf\Timestamp $var

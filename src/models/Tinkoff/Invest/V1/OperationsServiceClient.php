@@ -76,4 +76,18 @@ class OperationsServiceClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * @param \Tinkoff\Invest\V1\BrokerReportRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetBrokerReport(\Tinkoff\Invest\V1\BrokerReportRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.OperationsService/GetBrokerReport',
+        $argument,
+        ['\Tinkoff\Invest\V1\BrokerReportResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }

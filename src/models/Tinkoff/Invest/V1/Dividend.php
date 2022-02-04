@@ -22,19 +22,19 @@ class Dividend extends \Google\Protobuf\Internal\Message
      */
     protected $dividend_net = null;
     /**
-     *Дата фактических выплат.
+     *Дата фактических выплат в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp payment_date = 2;</code>
      */
     protected $payment_date = null;
     /**
-     *Дата объявления дивидендов.
+     *Дата объявления дивидендов в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp declared_date = 3;</code>
      */
     protected $declared_date = null;
     /**
-     *Последний день (включительно) покупки для получения выплаты.
+     *Последний день (включительно) покупки для получения выплаты в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp last_buy_date = 4;</code>
      */
@@ -46,7 +46,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
      */
     protected $dividend_type = '';
     /**
-     *Дата фиксации реестра
+     *Дата фиксации реестра в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp record_date = 6;</code>
      */
@@ -70,7 +70,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
      */
     protected $yield_value = null;
     /**
-     *Дата и время создания записи.
+     *Дата и время создания записи в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp created_at = 10;</code>
      */
@@ -85,15 +85,15 @@ class Dividend extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\MoneyValue $dividend_net
      *          Величина дивиденда на 1 ценную бумагу (включая валюту).
      *     @type \Google\Protobuf\Timestamp $payment_date
-     *          Дата фактических выплат.
+     *          Дата фактических выплат в часовом поясе UTC.
      *     @type \Google\Protobuf\Timestamp $declared_date
-     *          Дата объявления дивидендов.
+     *          Дата объявления дивидендов в часовом поясе UTC.
      *     @type \Google\Protobuf\Timestamp $last_buy_date
-     *          Последний день (включительно) покупки для получения выплаты.
+     *          Последний день (включительно) покупки для получения выплаты в часовом поясе UTC.
      *     @type string $dividend_type
      *          Тип выплаты. Возможные значения: Regular Cash – регулярные выплаты, Cancelled – выплата отменена, Daily Accrual – ежедневное начисление, Return of Capital – возврат капитала, прочие типы выплат.
      *     @type \Google\Protobuf\Timestamp $record_date
-     *          Дата фиксации реестра
+     *          Дата фиксации реестра в часовом поясе UTC.
      *     @type string $regularity
      *          Регулярность выплаты. Возможные значения: Annual – ежегодная, Semi-Anl – каждые полгода, прочие типы выплат.
      *     @type \Tinkoff\Invest\V1\MoneyValue $close_price
@@ -101,7 +101,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\Quotation $yield_value
      *          Величина доходности.
      *     @type \Google\Protobuf\Timestamp $created_at
-     *          Дата и время создания записи.
+     *          Дата и время создания записи в часовом поясе UTC.
      * }
      */
     public function __construct($data = NULL) {
@@ -146,7 +146,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата фактических выплат.
+     *Дата фактических выплат в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp payment_date = 2;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -167,7 +167,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата фактических выплат.
+     *Дата фактических выплат в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp payment_date = 2;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -182,7 +182,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата объявления дивидендов.
+     *Дата объявления дивидендов в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp declared_date = 3;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -203,7 +203,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата объявления дивидендов.
+     *Дата объявления дивидендов в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp declared_date = 3;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -218,7 +218,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Последний день (включительно) покупки для получения выплаты.
+     *Последний день (включительно) покупки для получения выплаты в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp last_buy_date = 4;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -239,7 +239,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Последний день (включительно) покупки для получения выплаты.
+     *Последний день (включительно) покупки для получения выплаты в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp last_buy_date = 4;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -280,7 +280,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата фиксации реестра
+     *Дата фиксации реестра в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp record_date = 6;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -301,7 +301,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата фиксации реестра
+     *Дата фиксации реестра в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp record_date = 6;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -414,7 +414,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время создания записи.
+     *Дата и время создания записи в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp created_at = 10;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -435,7 +435,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время создания записи.
+     *Дата и время создания записи в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp created_at = 10;</code>
      * @param \Google\Protobuf\Timestamp $var

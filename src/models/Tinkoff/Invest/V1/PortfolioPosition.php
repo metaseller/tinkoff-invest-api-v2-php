@@ -34,7 +34,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     protected $quantity = null;
     /**
-     *Средняя цена лота в позиции
+     *Средневзвешенная цена позиции
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price = 4;</code>
      */
@@ -63,6 +63,18 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue current_price = 8;</code>
      */
     protected $current_price = null;
+    /**
+     *Средняя цена лота в позиции по методу FIFO
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price_fifo = 9;</code>
+     */
+    protected $average_position_price_fifo = null;
+    /**
+     *Количество лотов в портфеле
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation quantity_lots = 10;</code>
+     */
+    protected $quantity_lots = null;
 
     /**
      * Constructor.
@@ -77,7 +89,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\Quotation $quantity
      *          Количество инструмента в портфеле в штуках
      *     @type \Tinkoff\Invest\V1\MoneyValue $average_position_price
-     *          Средняя цена лота в позиции
+     *          Средневзвешенная цена позиции
      *     @type \Tinkoff\Invest\V1\Quotation $expected_yield
      *          Текущая рассчитанная доходность
      *     @type \Tinkoff\Invest\V1\MoneyValue $current_nkd
@@ -86,6 +98,10 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      *          Средняя цена лота в позиции в пунктах (для фьючерсов)
      *     @type \Tinkoff\Invest\V1\MoneyValue $current_price
      *          Текущая цена инструмента
+     *     @type \Tinkoff\Invest\V1\MoneyValue $average_position_price_fifo
+     *          Средняя цена лота в позиции по методу FIFO
+     *     @type \Tinkoff\Invest\V1\Quotation $quantity_lots
+     *          Количество лотов в портфеле
      * }
      */
     public function __construct($data = NULL) {
@@ -182,7 +198,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средняя цена лота в позиции
+     *Средневзвешенная цена позиции
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price = 4;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -203,7 +219,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средняя цена лота в позиции
+     *Средневзвешенная цена позиции
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price = 4;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -357,6 +373,78 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->current_price = $var;
+
+        return $this;
+    }
+
+    /**
+     *Средняя цена лота в позиции по методу FIFO
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price_fifo = 9;</code>
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
+     */
+    public function getAveragePositionPriceFifo()
+    {
+        return isset($this->average_position_price_fifo) ? $this->average_position_price_fifo : null;
+    }
+
+    public function hasAveragePositionPriceFifo()
+    {
+        return isset($this->average_position_price_fifo);
+    }
+
+    public function clearAveragePositionPriceFifo()
+    {
+        unset($this->average_position_price_fifo);
+    }
+
+    /**
+     *Средняя цена лота в позиции по методу FIFO
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price_fifo = 9;</code>
+     * @param \Tinkoff\Invest\V1\MoneyValue $var
+     * @return $this
+     */
+    public function setAveragePositionPriceFifo($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
+        $this->average_position_price_fifo = $var;
+
+        return $this;
+    }
+
+    /**
+     *Количество лотов в портфеле
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation quantity_lots = 10;</code>
+     * @return \Tinkoff\Invest\V1\Quotation|null
+     */
+    public function getQuantityLots()
+    {
+        return isset($this->quantity_lots) ? $this->quantity_lots : null;
+    }
+
+    public function hasQuantityLots()
+    {
+        return isset($this->quantity_lots);
+    }
+
+    public function clearQuantityLots()
+    {
+        unset($this->quantity_lots);
+    }
+
+    /**
+     *Количество лотов в портфеле
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation quantity_lots = 10;</code>
+     * @param \Tinkoff\Invest\V1\Quotation $var
+     * @return $this
+     */
+    public function setQuantityLots($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
+        $this->quantity_lots = $var;
 
         return $this;
     }
