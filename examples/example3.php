@@ -1,6 +1,7 @@
 <?php
 
 use Metaseller\TinkoffInvestApi2\TinkoffClientsFactory;
+use Metaseller\TinkoffInvestApi2\providers\InstrumentsProvider;
 use Tinkoff\Invest\V1\Instrument;
 use Tinkoff\Invest\V1\InstrumentsRequest;
 use Tinkoff\Invest\V1\InstrumentStatus;
@@ -33,6 +34,8 @@ $factory = TinkoffClientsFactory::create($token);
  *
  * @see https://tinkoff.github.io/investAPI/instruments/#getinstrumentby
  * @see https://tinkoff.github.io/investAPI/instruments/#instrumentrequest
+ *
+ * ну или через {@link \Metaseller\TinkoffInvestApi2\providers\InstrumentsProvider}
  */
 
 $instruments_request = new InstrumentsRequest();
@@ -45,16 +48,34 @@ list($response, $status) = $factory->instrumentsServiceClient->Shares($instrumen
 /** @var Instrument[] $instruments_dict */
 $instruments_dict = $response->getInstruments();
 
-/**
- * Находим в справочнике (коль он у нас весь есть) нужный нам инструмент
- */
-foreach ($instruments_dict as $instrument) {
-    if ($instrument->getTicker() === 'FB') {
-        $meta_instrument = $instrument;
 
-        break;
-    }
-}
+/**
+ * Пример получения инструмента через провайдер данных
+ */
+
+$instruments_provider = new InstrumentsProvider($factory);
+
+echo 'Get SBERP by Figi:' . PHP_EOL;
+var_dump($instruments_provider->shareByFigi('BBG0047315Y7', true)->serializeToJsonString());
+
+echo PHP_EOL . 'Get SBERP by Ticker with class_name:' . PHP_EOL;
+var_dump($instruments_provider->shareByTicker('SBERP', 'TQBR', true)->serializeToJsonString());
+
+echo PHP_EOL . 'Get SBERP by Ticker without class_name:' . PHP_EOL;
+var_dump($instruments_provider->shareByTicker('SBERP')->serializeToJsonString());
+
+echo PHP_EOL . 'Get TMOS by Ticker without class_name:' . PHP_EOL;
+var_dump($instruments_provider->etfByTicker('TMOS')->serializeToJsonString());
+
+
+/**
+ * Берем нужный нам инструмент FB
+ */
+
+$meta_instrument = $instruments_provider->shareByTicker('FB');
+
+echo PHP_EOL . 'Get FB by Ticker without class_name:' . PHP_EOL;
+var_dump($meta_instrument->serializeToJsonString());
 
 if (empty($meta_instrument)) {
     echo('Instrument not found');
@@ -107,6 +128,12 @@ while ($market_data_response = $stream->read()) {
         }
 
         echo 'Orderbook response finished' . PHP_EOL . PHP_EOL;
+    } else {
+        echo 'No orderbook data' . PHP_EOL;
+    }
+
+    if ($ping = $market_data_response->getPing()) {
+        echo 'Ping? Pong!' . PHP_EOL;
     }
 }
 
