@@ -1,6 +1,6 @@
 {
     "name": "metaseller/tinkoff-invest-api-v2-php",
-    "version": "0.2.2",
+    "version": "0.3.1",
     "description": "Unofficial PHP SDK for Tinkoff Invest API v2",
     "type": "library",
     "license": "Apache-2.0",
@@ -18,7 +18,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": ">=7.1.0",
+        "php": ">=7.4.0",
         "ext-grpc": "^1.43",
         "grpc/grpc": "^1.42",
         "google/protobuf": "^3.19"
@@ -27,7 +27,8 @@
         "psr-4": {
             "GPBMetadata\\": "src/models/GPBMetadata",
             "Tinkoff\\": "src/models/Tinkoff",
-            "Metaseller\\TinkoffInvestApi2\\": "src"
+            "Metaseller\\TinkoffInvestApi2\\": "src",
+            "Metaseller\\TinkoffInvestApi2\\providers\\": "src/providers"
         }
     }
 }
