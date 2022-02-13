@@ -2,6 +2,7 @@
 
 require(__DIR__ . '/../vendor/autoload.php');
 
+use Metaseller\TinkoffInvestApi2\providers\InstrumentsProvider;
 use Metaseller\TinkoffInvestApi2\TinkoffClientsFactory;
 use Tinkoff\Invest\V1\PortfolioRequest;
 use Tinkoff\Invest\V1\PortfolioResponse;
@@ -46,9 +47,15 @@ $positions = $response->getPositions();
 
 echo 'Available portfolio positions:' . PHP_EOL;
 
+$instruments_provider = new InstrumentsProvider($tinkoff_api);
+
 /** @var \Tinkoff\Invest\V1\PortfolioPosition $position */
 foreach ($positions as $position) {
     $quantity = $position->getQuantity();
 
-    echo $position->getInstrumentType() . ' ' . $position->getFigi() . ' ' . ($quantity->getUnits() + $quantity->getNano() / pow(10, 9)) . ' шт.' . PHP_EOL;
+    /** Это просто для демонстрации, для продакшена это не пойдет - слишком много API запросов, на каждый инструмент */
+    $dictionary_instrument = $instruments_provider->instrumentByFigi($position->getFigi());
+
+    echo $position->getInstrumentType() . ' ' . $position->getFigi() . ' ' . $dictionary_instrument->getName() . ' ' .
+        ($quantity->getUnits() + $quantity->getNano() / pow(10, 9)) . ' шт.' . PHP_EOL;
 }
