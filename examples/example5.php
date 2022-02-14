@@ -4,6 +4,7 @@ require(__DIR__ . '/../vendor/autoload.php');
 
 use Metaseller\TinkoffInvestApi2\providers\InstrumentsProvider;
 use Metaseller\TinkoffInvestApi2\TinkoffClientsFactory;
+use Tinkoff\Invest\V1\PortfolioPosition;
 use Tinkoff\Invest\V1\PortfolioRequest;
 use Tinkoff\Invest\V1\PortfolioResponse;
 
@@ -49,7 +50,7 @@ echo 'Available portfolio positions:' . PHP_EOL;
 
 $instruments_provider = new InstrumentsProvider($tinkoff_api);
 
-/** @var \Tinkoff\Invest\V1\PortfolioPosition $position */
+/** @var PortfolioPosition $position */
 foreach ($positions as $position) {
     $quantity = $position->getQuantity();
 
