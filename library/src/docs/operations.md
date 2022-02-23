@@ -197,12 +197,12 @@
 | figi |  [string](#string) | Figi-идентификатора инструмента |
 | instrument_type |  [string](#string) | Тип инструмента |
 | quantity |  [Quotation](#quotation) | Количество инструмента в портфеле в штуках |
-| average_position_price |  [MoneyValue](#moneyvalue) | Средневзвешенная цена позиции |
+| average_position_price |  [MoneyValue](#moneyvalue) | Средневзвешенная цена позиции. **Возможна задержка до секунды для пересчёта**. |
 | expected_yield |  [Quotation](#quotation) | Текущая рассчитанная доходность |
 | current_nkd |  [MoneyValue](#moneyvalue) | Текущий НКД |
-| average_position_price_pt |  [Quotation](#quotation) | Средняя цена лота в позиции в пунктах (для фьючерсов) |
+| average_position_price_pt |  [Quotation](#quotation) | Средняя цена лота в позиции в пунктах (для фьючерсов). **Возможна задержка до секунды для пересчёта**. |
 | current_price |  [MoneyValue](#moneyvalue) | Текущая цена инструмента |
-| average_position_price_fifo |  [MoneyValue](#moneyvalue) | Средняя цена лота в позиции по методу FIFO |
+| average_position_price_fifo |  [MoneyValue](#moneyvalue) | Средняя цена лота в позиции по методу FIFO. **Возможна задержка до секунды для пересчёта**. |
 | quantity_lots |  [Quotation](#quotation) | Количество лотов в портфеле |
  <!-- end Fields -->
  <!-- end HasFields -->
@@ -430,6 +430,12 @@
 | SECURITY_TRADING_STATUS_DISCRETE_AUCTION | 8 | Дискретный аукцион |
 | SECURITY_TRADING_STATUS_OPENING_AUCTION_PERIOD | 9 | Аукцион открытия |
 | SECURITY_TRADING_STATUS_TRADING_AT_CLOSING_AUCTION_PRICE | 10 | Период торгов по цене аукциона закрытия |
+| SECURITY_TRADING_STATUS_SESSION_ASSIGNED | 11 | Сессия назначена |
+| SECURITY_TRADING_STATUS_SESSION_CLOSE | 12 | Сессия закрыта |
+| SECURITY_TRADING_STATUS_SESSION_OPEN | 13 | Сессия открыта |
+| SECURITY_TRADING_STATUS_DEALER_NORMAL_TRADING | 14 |Доступна торговля в режиме внутренней ликвидности брокера |
+| SECURITY_TRADING_STATUS_DEALER_BREAK_IN_TRADING | 15 |Перерыв торговли в режиме внутренней ликвидности брокера |
+| SECURITY_TRADING_STATUS_DEALER_NOT_AVAILABLE_FOR_TRADING | 16 |Недоступна торговля в режиме внутренней ликвидности брокера |
 
 ### Нестандартные типы данных
 

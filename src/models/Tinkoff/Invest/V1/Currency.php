@@ -112,13 +112,13 @@ class Currency extends \Google\Protobuf\Internal\Message
      */
     protected $nominal = null;
     /**
-     *Код страны эмитента.
+     *Код страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *
      * Generated from protobuf field <code>string country_of_risk = 18;</code>
      */
     protected $country_of_risk = '';
     /**
-     *Наименование страны эмитента.
+     *Наименование страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *
      * Generated from protobuf field <code>string country_of_risk_name = 19;</code>
      */
@@ -205,9 +205,9 @@ class Currency extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\MoneyValue $nominal
      *          Номинал.
      *     @type string $country_of_risk
-     *          Код страны эмитента.
+     *          Код страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *     @type string $country_of_risk_name
-     *          Наименование страны эмитента.
+     *          Наименование страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *     @type int $trading_status
      *          Текущий режим торгов инструмента.
      *     @type bool $otc_flag
@@ -716,7 +716,7 @@ class Currency extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Код страны эмитента.
+     *Код страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *
      * Generated from protobuf field <code>string country_of_risk = 18;</code>
      * @return string
@@ -727,7 +727,7 @@ class Currency extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Код страны эмитента.
+     *Код страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *
      * Generated from protobuf field <code>string country_of_risk = 18;</code>
      * @param string $var
@@ -742,7 +742,7 @@ class Currency extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Наименование страны эмитента.
+     *Наименование страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *
      * Generated from protobuf field <code>string country_of_risk_name = 19;</code>
      * @return string
@@ -753,7 +753,7 @@ class Currency extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Наименование страны эмитента.
+     *Наименование страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *
      * Generated from protobuf field <code>string country_of_risk_name = 19;</code>
      * @param string $var

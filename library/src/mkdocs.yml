@@ -15,21 +15,18 @@ nav:
   - "Протокол взаимодействия": grpc.md
   - "Лимитная политика": limits.md
   - "Токен доступа": token.md
+  - "Идентификация торговых инструментов": faq_identification.md
+  - "Нестандартные типы данных": faq_custom_types.md
   - "Алгоритмический трейдинг": algorithmic_trading.md
   - "Индикаторы технического анализа": tech_indicators.md
   - "Торговые площадки и режимы торгов": markets.md
   - "Порядок работы с историческими данными": load_history.md
   - "Работа с торговыми поручениями": faq_orders.md
-  - "Инструменты и котировки": faq_marketdata.md
   - "Квалифицированный инвестор": accredited_investor.md
 - FAQ:
   - Глоссарий: glossary.md
-  - "Условия использования": faq_rules.md
-  - "Идентификация торговых инструментов": faq_identification.md
-  - Песочница: faq_sandbox.md
-  - Мультисчета: faq_multiaccounts.md
+  - "Часто задаваемые вопросы": faq.md
   - "Правила обработки корпоративных действий": faq_corp_action.md
-  - "Нестандартные типы данных": faq_custom_types.md
 - Сервис аккаунтов:
   - Описание: head-users.md
   - Методы: users.md

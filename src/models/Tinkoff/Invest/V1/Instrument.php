@@ -106,13 +106,13 @@ class Instrument extends \Google\Protobuf\Internal\Message
      */
     protected $exchange = '';
     /**
-     *Код страны эмитента.
+     *Код страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *
      * Generated from protobuf field <code>string country_of_risk = 16;</code>
      */
     protected $country_of_risk = '';
     /**
-     *Наименование страны эмитента.
+     *Наименование страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *
      * Generated from protobuf field <code>string country_of_risk_name = 17;</code>
      */
@@ -197,9 +197,9 @@ class Instrument extends \Google\Protobuf\Internal\Message
      *     @type string $exchange
      *          Торговая площадка.
      *     @type string $country_of_risk
-     *          Код страны эмитента.
+     *          Код страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *     @type string $country_of_risk_name
-     *          Наименование страны эмитента.
+     *          Наименование страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *     @type string $instrument_type
      *          Тип инструмента.
      *     @type int $trading_status
@@ -672,7 +672,7 @@ class Instrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Код страны эмитента.
+     *Код страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *
      * Generated from protobuf field <code>string country_of_risk = 16;</code>
      * @return string
@@ -683,7 +683,7 @@ class Instrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Код страны эмитента.
+     *Код страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *
      * Generated from protobuf field <code>string country_of_risk = 16;</code>
      * @param string $var
@@ -698,7 +698,7 @@ class Instrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Наименование страны эмитента.
+     *Наименование страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *
      * Generated from protobuf field <code>string country_of_risk_name = 17;</code>
      * @return string
@@ -709,7 +709,7 @@ class Instrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Наименование страны эмитента.
+     *Наименование страны риска, т.е. страны, в которой компания ведёт основной бизнес.
      *
      * Generated from protobuf field <code>string country_of_risk_name = 17;</code>
      * @param string $var

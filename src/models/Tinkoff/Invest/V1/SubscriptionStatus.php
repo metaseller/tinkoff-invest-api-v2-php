@@ -38,7 +38,7 @@ class SubscriptionStatus
      */
     const SUBSCRIPTION_STATUS_SUBSCRIPTION_ACTION_IS_INVALID = 3;
     /**
-     *Некорректная глубина стакана, доступные значения: 10, 20, 30, 40, 50.
+     *Некорректная глубина стакана, доступные значения: 1, 10, 20, 30, 40, 50.
      *
      * Generated from protobuf enum <code>SUBSCRIPTION_STATUS_DEPTH_IS_INVALID = 4;</code>
      */

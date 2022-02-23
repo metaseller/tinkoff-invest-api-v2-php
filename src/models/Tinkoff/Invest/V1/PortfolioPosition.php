@@ -34,7 +34,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     protected $quantity = null;
     /**
-     *Средневзвешенная цена позиции
+     *Средневзвешенная цена позиции. **Возможна задержка до секунды для пересчёта**.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price = 4;</code>
      */
@@ -52,7 +52,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     protected $current_nkd = null;
     /**
-     *Средняя цена лота в позиции в пунктах (для фьючерсов)
+     *Средняя цена лота в позиции в пунктах (для фьючерсов). **Возможна задержка до секунды для пересчёта**.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation average_position_price_pt = 7;</code>
      */
@@ -64,7 +64,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     protected $current_price = null;
     /**
-     *Средняя цена лота в позиции по методу FIFO
+     *Средняя цена лота в позиции по методу FIFO. **Возможна задержка до секунды для пересчёта**.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price_fifo = 9;</code>
      */
@@ -89,17 +89,17 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\Quotation $quantity
      *          Количество инструмента в портфеле в штуках
      *     @type \Tinkoff\Invest\V1\MoneyValue $average_position_price
-     *          Средневзвешенная цена позиции
+     *          Средневзвешенная цена позиции. **Возможна задержка до секунды для пересчёта**.
      *     @type \Tinkoff\Invest\V1\Quotation $expected_yield
      *          Текущая рассчитанная доходность
      *     @type \Tinkoff\Invest\V1\MoneyValue $current_nkd
      *           Текущий НКД
      *     @type \Tinkoff\Invest\V1\Quotation $average_position_price_pt
-     *          Средняя цена лота в позиции в пунктах (для фьючерсов)
+     *          Средняя цена лота в позиции в пунктах (для фьючерсов). **Возможна задержка до секунды для пересчёта**.
      *     @type \Tinkoff\Invest\V1\MoneyValue $current_price
      *          Текущая цена инструмента
      *     @type \Tinkoff\Invest\V1\MoneyValue $average_position_price_fifo
-     *          Средняя цена лота в позиции по методу FIFO
+     *          Средняя цена лота в позиции по методу FIFO. **Возможна задержка до секунды для пересчёта**.
      *     @type \Tinkoff\Invest\V1\Quotation $quantity_lots
      *          Количество лотов в портфеле
      * }
@@ -198,7 +198,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средневзвешенная цена позиции
+     *Средневзвешенная цена позиции. **Возможна задержка до секунды для пересчёта**.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price = 4;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -219,7 +219,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средневзвешенная цена позиции
+     *Средневзвешенная цена позиции. **Возможна задержка до секунды для пересчёта**.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price = 4;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -306,7 +306,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средняя цена лота в позиции в пунктах (для фьючерсов)
+     *Средняя цена лота в позиции в пунктах (для фьючерсов). **Возможна задержка до секунды для пересчёта**.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation average_position_price_pt = 7;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -327,7 +327,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средняя цена лота в позиции в пунктах (для фьючерсов)
+     *Средняя цена лота в позиции в пунктах (для фьючерсов). **Возможна задержка до секунды для пересчёта**.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation average_position_price_pt = 7;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -378,7 +378,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средняя цена лота в позиции по методу FIFO
+     *Средняя цена лота в позиции по методу FIFO. **Возможна задержка до секунды для пересчёта**.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price_fifo = 9;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -399,7 +399,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средняя цена лота в позиции по методу FIFO
+     *Средняя цена лота в позиции по методу FIFO. **Возможна задержка до секунды для пересчёта**.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price_fifo = 9;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var

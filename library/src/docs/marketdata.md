@@ -530,7 +530,7 @@ subscribeCandles | Изменения статуса подписки на св�
 | SUBSCRIPTION_STATUS_SUCCESS | 1 | Успешно. |
 | SUBSCRIPTION_STATUS_INSTRUMENT_NOT_FOUND | 2 | Инструмент не найден. |
 | SUBSCRIPTION_STATUS_SUBSCRIPTION_ACTION_IS_INVALID | 3 | Некорректный статус подписки, список возможных значений: [SubscriptionAction](https://tinkoff.github.io/investAPI/marketdata#subscriptionaction) |
-| SUBSCRIPTION_STATUS_DEPTH_IS_INVALID | 4 | Некорректная глубина стакана, доступные значения: 10, 20, 30, 40, 50. |
+| SUBSCRIPTION_STATUS_DEPTH_IS_INVALID | 4 | Некорректная глубина стакана, доступные значения: 1, 10, 20, 30, 40, 50. |
 | SUBSCRIPTION_STATUS_INTERVAL_IS_INVALID | 5 | Некорректный интервал свечей, список возможных значений: [SubscriptionInterval](https://tinkoff.github.io/investAPI/marketdata#subscriptioninterval) |
 | SUBSCRIPTION_STATUS_LIMIT_IS_EXCEEDED | 6 | Превышен лимит подписок в рамках стрима, подробнее: [Лимитная политика](https://tinkoff.github.io/investAPI/limits/) |
 | SUBSCRIPTION_STATUS_INTERNAL_ERROR | 7 | Внутренняя ошибка сервиса. |
@@ -582,6 +582,12 @@ subscribeCandles | Изменения статуса подписки на св�
 | SECURITY_TRADING_STATUS_DISCRETE_AUCTION | 8 | Дискретный аукцион |
 | SECURITY_TRADING_STATUS_OPENING_AUCTION_PERIOD | 9 | Аукцион открытия |
 | SECURITY_TRADING_STATUS_TRADING_AT_CLOSING_AUCTION_PRICE | 10 | Период торгов по цене аукциона закрытия |
+| SECURITY_TRADING_STATUS_SESSION_ASSIGNED | 11 | Сессия назначена |
+| SECURITY_TRADING_STATUS_SESSION_CLOSE | 12 | Сессия закрыта |
+| SECURITY_TRADING_STATUS_SESSION_OPEN | 13 | Сессия открыта |
+| SECURITY_TRADING_STATUS_DEALER_NORMAL_TRADING | 14 |Доступна торговля в режиме внутренней ликвидности брокера |
+| SECURITY_TRADING_STATUS_DEALER_BREAK_IN_TRADING | 15 |Перерыв торговли в режиме внутренней ликвидности брокера |
+| SECURITY_TRADING_STATUS_DEALER_NOT_AVAILABLE_FOR_TRADING | 16 |Недоступна торговля в режиме внутренней ликвидности брокера |
 
 ### Нестандартные типы данных
 
