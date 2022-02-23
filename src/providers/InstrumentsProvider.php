@@ -145,9 +145,9 @@ class InstrumentsProvider extends BaseDataProvider
      */
     public static function create(
         TinkoffClientsFactory $model = null,
-        bool $preload_shares = true,
+        bool $preload_shares = false,
         bool $preload_etfs = true,
-        bool $preload_currencies = true,
+        bool $preload_currencies = false,
         bool $preload_bonds = false,
         bool $preload_futures = false
     ): self
@@ -1030,11 +1030,11 @@ class InstrumentsProvider extends BaseDataProvider
     /**
      * Метод запрашивает через запрос к API справочник всех облигаций и кеширует загруженный список в текущий экземпляр провайдера
      *
-     * @return Bond[] Массив загруженных инструментов
+     * @return Bond[]|RepeatedField Массив загруженных инструментов
      *
      * @throws Exception
      */
-    protected function loadAllBonds(): array
+    protected function loadAllBonds()
     {
         $instruments_request = new InstrumentsRequest();
         $instruments_request->setInstrumentStatus(InstrumentStatus::INSTRUMENT_STATUS_ALL);
@@ -1046,7 +1046,7 @@ class InstrumentsProvider extends BaseDataProvider
             ->wait()
         ;
 
-        /** @var Bond[] $instruments */
+        /** @var Bond[]|RepeatedField $instruments */
         $instruments = $response->getInstruments();
         $this->cacheToDictionary($instruments);
 
@@ -1058,11 +1058,11 @@ class InstrumentsProvider extends BaseDataProvider
     /**
      * Метод запрашивает через запрос к API справочник всех валют и кеширует загруженный список в текущий экземпляр провайдера
      *
-     * @return Currency[] Массив загруженных инструментов
+     * @return Currency[]|RepeatedField Массив загруженных инструментов
      *
      * @throws Exception
      */
-    protected function loadAllCurrencies(): array
+    protected function loadAllCurrencies()
     {
         $instruments_request = new InstrumentsRequest();
         $instruments_request->setInstrumentStatus(InstrumentStatus::INSTRUMENT_STATUS_ALL);
@@ -1074,7 +1074,7 @@ class InstrumentsProvider extends BaseDataProvider
             ->wait()
         ;
 
-        /** @var Currency[] $instruments */
+        /** @var Currency[]|RepeatedField $instruments */
         $instruments = $response->getInstruments();
         $this->cacheToDictionary($instruments);
 
@@ -1086,11 +1086,11 @@ class InstrumentsProvider extends BaseDataProvider
     /**
      * Метод запрашивает через запрос к API справочник всех фондов и кеширует загруженный список в текущий экземпляр провайдера
      *
-     * @return Etf[] Массив загруженных инструментов
+     * @return Etf[]|RepeatedField Массив загруженных инструментов
      *
      * @throws Exception
      */
-    protected function loadAllEtfs(): array
+    protected function loadAllEtfs()
     {
         $instruments_request = new InstrumentsRequest();
         $instruments_request->setInstrumentStatus(InstrumentStatus::INSTRUMENT_STATUS_ALL);
@@ -1102,7 +1102,7 @@ class InstrumentsProvider extends BaseDataProvider
             ->wait()
         ;
 
-        /** @var Etf[] $instruments */
+        /** @var Etf[]|RepeatedField $instruments */
         $instruments = $response->getInstruments();
         $this->cacheToDictionary($instruments);
 
@@ -1114,11 +1114,11 @@ class InstrumentsProvider extends BaseDataProvider
     /**
      * Метод запрашивает через запрос к API справочник всех акций и кеширует загруженный список в текущий экземпляр провайдера
      *
-     * @return Share[] Массив загруженных инструментов
+     * @return Share[]|RepeatedField Массив загруженных инструментов
      *
      * @throws Exception
      */
-    protected function loadAllShares(): array
+    protected function loadAllShares()
     {
         $instruments_request = new InstrumentsRequest();
         $instruments_request->setInstrumentStatus(InstrumentStatus::INSTRUMENT_STATUS_ALL);
@@ -1130,7 +1130,7 @@ class InstrumentsProvider extends BaseDataProvider
             ->wait()
         ;
 
-        /** @var Share[] $instruments */
+        /** @var Share[]|RepeatedField $instruments */
         $instruments = $response->getInstruments();
         $this->cacheToDictionary($instruments);
 
@@ -1142,11 +1142,11 @@ class InstrumentsProvider extends BaseDataProvider
     /**
      * Метод запрашивает через запрос к API справочник всех фьючерсов и кеширует загруженный список в текущий экземпляр провайдера
      *
-     * @return Etf[] Массив загруженных инструментов
+     * @return Future[]|RepeatedField Массив загруженных инструментов
      *
      * @throws Exception
      */
-    protected function loadAllFutures(): array
+    protected function loadAllFutures()
     {
         $instruments_request = new InstrumentsRequest();
         $instruments_request->setInstrumentStatus(InstrumentStatus::INSTRUMENT_STATUS_ALL);
@@ -1158,7 +1158,7 @@ class InstrumentsProvider extends BaseDataProvider
             ->wait()
         ;
 
-        /** @var Future[] $instruments */
+        /** @var Future[]|RepeatedField $instruments */
         $instruments = $response->getInstruments();
         $this->cacheToDictionary($instruments);
 
