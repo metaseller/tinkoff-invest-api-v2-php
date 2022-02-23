@@ -1,12 +1,18 @@
 <?php
 
-require(__DIR__ . '/../vendor/autoload.php');
-
-use Metaseller\TinkoffInvestApi2\providers\InstrumentsProvider;
 use Metaseller\TinkoffInvestApi2\TinkoffClientsFactory;
-use Tinkoff\Invest\V1\PortfolioPosition;
-use Tinkoff\Invest\V1\PortfolioRequest;
-use Tinkoff\Invest\V1\PortfolioResponse;
+use Tinkoff\Invest\V1\Instrument;
+use Tinkoff\Invest\V1\InstrumentsRequest;
+use Tinkoff\Invest\V1\InstrumentStatus;
+use Tinkoff\Invest\V1\MarketDataRequest;
+use Tinkoff\Invest\V1\MarketDataResponse;
+use Tinkoff\Invest\V1\OrderBookInstrument;
+use Tinkoff\Invest\V1\SharesResponse;
+use Tinkoff\Invest\V1\SubscribeOrderBookRequest;
+use Tinkoff\Invest\V1\SubscriptionAction;
+use Tinkoff\Invest\V1\MarketDataStreamServiceClient;
+
+require(__DIR__ . '/../vendor/autoload.php');
 
 /**
  * Ваш токен доступа к API
@@ -14,49 +20,97 @@ use Tinkoff\Invest\V1\PortfolioResponse;
  * @see https://tinkoff.github.io/investAPI/token/
  */
 $token = '<Your Tinkoff Invest Account Token>';
-$account_id = '<Your Tinkoff Invest Account Id>';
+
+/** Пример получения обновляемого через Stream ({@link MarketDataStreamServiceClient}) стакана по тикеру FB */
+
+$factory = TinkoffClientsFactory::create($token);
 
 /**
- * Пример получения информации о портфеле аккаунта
- */
-
-$tinkoff_api = TinkoffClientsFactory::create($token);
-
-/**
- * Создаем экземпляр запроса информации о текущем портфеле
+ * Пример получения справочника всех Shares инструментов
  *
- * @see https://tinkoff.github.io/investAPI/operations/#portfoliorequest
+ * PS: Само собой, если вам нужен только один инструмент, разумнее использовать метод GetInstrumentBy
+ *
+ * @see https://tinkoff.github.io/investAPI/instruments/#getinstrumentby
+ * @see https://tinkoff.github.io/investAPI/instruments/#instrumentrequest
  */
-$request = new PortfolioRequest();
-$request->setAccountId($account_id);
+
+$instruments_request = new InstrumentsRequest();
+$instruments_request->setInstrumentStatus(InstrumentStatus::INSTRUMENT_STATUS_ALL);
+
+/** @var SharesResponse $response */
+list($response, $status) = $factory->instrumentsServiceClient->Shares($instruments_request)
+    ->wait();
+
+/** @var Instrument[] $instruments_dict */
+$instruments_dict = $response->getInstruments();
 
 /**
- * @var PortfolioResponse $response - Получаем ответ, содержащий информацию о портфеле
+ * Находим в справочнике (коль он у нас весь есть) нужный нам инструмент
  */
-list($response, $status) = $tinkoff_api->operationsServiceClient->GetPortfolio($request)->wait();
+foreach ($instruments_dict as $instrument) {
+    if ($instrument->getTicker() === 'FB') {
+        $meta_instrument = $instrument;
 
-/** Выводим полученную информацию */
-var_dump(['portfolio_info' => [
-    'total_amount_shares' => $response->getTotalAmountShares()->serializeToJsonString(),
-    'total_amount_bonds' => $response->getTotalAmountBonds()->serializeToJsonString(),
-    'total_amount_etf' => $response->getTotalAmountEtf()->serializeToJsonString(),
-    'total_amount_futures' => $response->getTotalAmountFutures()->serializeToJsonString(),
-    'total_amount_currencies' => $response->getTotalAmountCurrencies()->serializeToJsonString(),
-]]);
-
-$positions = $response->getPositions();
-
-echo 'Available portfolio positions:' . PHP_EOL;
-
-$instruments_provider = new InstrumentsProvider($tinkoff_api);
-
-/** @var PortfolioPosition $position */
-foreach ($positions as $position) {
-    $quantity = $position->getQuantity();
-
-    /** Это просто для демонстрации, для продакшена это не пойдет - слишком много API запросов, на каждый инструмент */
-    $dictionary_instrument = $instruments_provider->instrumentByFigi($position->getFigi());
-
-    echo $position->getInstrumentType() . ' ' . $position->getFigi() . ' ' . $dictionary_instrument->getName() . ' ' .
-        ($quantity->getUnits() + $quantity->getNano() / pow(10, 9)) . ' шт.' . PHP_EOL;
+        break;
+    }
 }
+
+if (empty($meta_instrument)) {
+    echo('Instrument not found');
+
+    die();
+}
+
+/** Создаем подписку на данные {@link MarketDataRequest}, конкретно по {@link SubscribeOrderBookRequest} по FIGI инструмента META/FB */
+$subscription = (new MarketDataRequest())
+    ->setSubscribeOrderBookRequest(
+        (new SubscribeOrderBookRequest())
+            ->setSubscriptionAction(SubscriptionAction::SUBSCRIPTION_ACTION_SUBSCRIBE)
+            ->setInstruments([
+                (new OrderBookInstrument())
+                    ->setFigi($meta_instrument->getFigi())
+                    ->setDepth(10)
+            ])
+    );
+
+$stream = $factory->marketDataStreamServiceClient->MarketDataStream();
+$stream->write($subscription);
+
+$connection_lost_timeout = null;
+
+/** @var MarketDataResponse $market_data_response */
+while ($market_data_response = $stream->read()) {
+    if ($orderbook = $market_data_response->getOrderbook()) {
+        echo 'Есть данные' . PHP_EOL;
+
+        $connection_lost_timeout = null;
+    } elseif ($market_data_response->hasPing()) {
+        echo 'Есть пинг' . PHP_EOL;
+
+        $connection_lost_timeout = null;
+    } elseif (!$connection_lost_timeout) {
+        echo 'Таймер старт' . PHP_EOL;
+
+        $connection_lost_timeout = time();
+    }
+
+    if ($connection_lost_timeout) {
+        if ($connection_lost_timeout - time() > 4 * 60) {
+            echo 'Отключились по таймауту' . PHP_EOL;
+
+            $stream->cancel();
+
+            break;
+        } else {
+            echo 'Разрыв случился. Ждем таймаут' . PHP_EOL;
+        }
+    }
+}
+
+if (!empty($connection_lost_timeout)) {
+    echo 'Вышли из цикла по прерыванию' . PHP_EOL;
+} else {
+    echo 'Вышли из цикла по нарушению условия' . PHP_EOL;
+}
+
+$stream->cancel();
