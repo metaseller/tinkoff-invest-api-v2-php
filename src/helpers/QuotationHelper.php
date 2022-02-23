@@ -14,7 +14,7 @@ use Tinkoff\Invest\V1\Quotation;
 use Tinkoff\Invest\V1\Share;
 
 /**
- * Хелпер для работы с представлением цен в TinkoffApi
+ * Хелпер для работы с представлением котировок, количеств, стоимостей в Tinkoff Invest API v2
  *
  * @package Metaseller\TinkoffInvestApi2
  */
