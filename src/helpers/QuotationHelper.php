@@ -18,7 +18,7 @@ use Tinkoff\Invest\V1\Share;
  *
  * @package Metaseller\TinkoffInvestApi2
  */
-class ValueHelper
+class QuotationHelper
 {
     /**
      * Метод проверяет корректность значения цены для переданного инструмента
@@ -49,7 +49,7 @@ class ValueHelper
     /**
      * Преобразование котировки ценной бумаги в число с плавающей запятой, без учета типа инструмента
      *
-     * В логике API, если вы хотите получить стоимость позиции в валюте - вам необходимо использовать метод {@link ValueHelper::toDecimalCurrency}
+     * В логике API, если вы хотите получить стоимость позиции в валюте - вам необходимо использовать метод {@link QuotationHelper::toDecimalCurrency}
      *
      * @param float|Quotation|MoneyValue $price Котировка ценной бумаги
      *

@@ -2,7 +2,7 @@
 
 require(__DIR__ . '/../vendor/autoload.php');
 
-use Metaseller\TinkoffInvestApi2\helpers\ValueHelper;
+use Metaseller\TinkoffInvestApi2\helpers\QuotationHelper;
 use Metaseller\TinkoffInvestApi2\providers\InstrumentsProvider;
 use Metaseller\TinkoffInvestApi2\TinkoffClientsFactory;
 use Tinkoff\Invest\V1\GetLastPricesRequest;
@@ -60,14 +60,14 @@ foreach ($positions as $position) {
     $futures_data = $dictionary_instrument->getInstrumentType() === 'futures' ? $instruments_provider->getFuturesData($dictionary_instrument) : null;
 
     $quantity = $position->getQuantity();
-    $quantity_value = $quantity ? ValueHelper::toDecimal($quantity) : 'ERR';
+    $quantity_value = $quantity ? QuotationHelper::toDecimal($quantity) : 'ERR';
 
     $average_price = $position->getAveragePositionPrice();
-    $average_price_value = $average_price ? ValueHelper::toCurrency($average_price, $dictionary_instrument, $futures_data) : 'ERR';
+    $average_price_value = $average_price ? QuotationHelper::toCurrency($average_price, $dictionary_instrument, $futures_data) : 'ERR';
     $currency = $average_price ? $average_price->getCurrency() : '';
 
     $expected_yield = $position->getExpectedYield();
-    $expected_yield_value = $expected_yield ? ValueHelper::toCurrency($expected_yield, $dictionary_instrument, $futures_data) : 'ERR';
+    $expected_yield_value = $expected_yield ? QuotationHelper::toCurrency($expected_yield, $dictionary_instrument, $futures_data) : 'ERR';
 
     $display = '[' . $position->getInstrumentType() . '][' . $position->getFigi() . '][' . $dictionary_instrument->getTicker() . '] ' . $dictionary_instrument->getName();
     $display .= $quantity_value . ' шт.';
@@ -103,8 +103,8 @@ if ($response) {
 
     $price = $last_price->getPrice();
 
-    $price_in_points = $price ? ValueHelper::toDecimal($price) : 'ERR';
-    $price_in_currency = $price ? ValueHelper::toCurrency($price, $test_futures, $test_futures_data) : 'ERR';
+    $price_in_points = $price ? QuotationHelper::toDecimal($price) : 'ERR';
+    $price_in_currency = $price ? QuotationHelper::toCurrency($price, $test_futures, $test_futures_data) : 'ERR';
 
     $display = 'Последняя цена по инструменту [' . $test_futures->getFigi() . '][' . $test_futures->getTicker() . ']';
     $display .= ' ' . $price_in_points . ' пт. = ' . $price_in_currency . ' ' . $test_futures->getCurrency();
