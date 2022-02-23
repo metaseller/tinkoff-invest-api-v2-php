@@ -28,7 +28,8 @@
             "GPBMetadata\\": "src/models/GPBMetadata",
             "Tinkoff\\": "src/models/Tinkoff",
             "Metaseller\\TinkoffInvestApi2\\": "src",
-            "Metaseller\\TinkoffInvestApi2\\providers\\": "src/providers"
+            "Metaseller\\TinkoffInvestApi2\\providers\\": "src/providers",
+            "Metaseller\\TinkoffInvestApi2\\exceptions\\\\": "src/exceptions"
         }
     }
 }
