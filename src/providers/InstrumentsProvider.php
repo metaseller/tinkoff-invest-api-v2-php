@@ -4,10 +4,10 @@ namespace Metaseller\TinkoffInvestApi2\providers;
 
 use Exception;
 use Google\Protobuf\Internal\RepeatedField;
+use Metaseller\TinkoffInvestApi2\TinkoffClientsFactory;
 use Tinkoff\Invest\V1\Bond;
 use Tinkoff\Invest\V1\BondResponse;
 use Tinkoff\Invest\V1\BondsResponse;
-use Tinkoff\Invest\V1\CurrenciesResponse;
 use Tinkoff\Invest\V1\Currency;
 use Tinkoff\Invest\V1\CurrencyResponse;
 use Tinkoff\Invest\V1\Etf;
@@ -37,6 +37,154 @@ class InstrumentsProvider extends BaseDataProvider
      * @var array Кеш справочников инструментов
      */
     protected $_dictionary = [];
+
+    /**
+     * @var bool Флаг, необходимости предзагрузки справочника облигаций в кэш
+     *
+     * Это происходит либо в конструкторе, если сразу определена модель фабрики клиентов или позднее, как только провайдер будет готов
+     */
+    protected $_need_preload_bonds = false;
+
+    /**
+     * @var bool Флаг, означающий, что полный справочник облигаций был загружен в кэш
+     */
+    protected $_is_bonds_loaded = false;
+
+    /**
+     * @var bool Флаг, необходимости предзагрузки справочника валют в кэш
+     *
+     * Это происходит либо в конструкторе, если сразу определена модель фабрики клиентов или позднее, как только провайдер будет готов
+     */
+    protected $_need_preload_currencies = false;
+
+    /**
+     * @var bool Флаг, означающий, что полный справочник валют был загружен в кэш
+     */
+    protected $_is_currencies_loaded = false;
+
+    /**
+     * @var bool Флаг, необходимости предзагрузки справочника фондов в кэш
+     *
+     * Это происходит либо в конструкторе, если сразу определена модель фабрики клиентов или позднее, как только провайдер будет готов
+     */
+    protected $_need_preload_etfs = false;
+
+    /**
+     * @var bool Флаг, означающий, что полный справочник фондов был загружен в кэш
+     */
+    protected $_is_etfs_loaded = false;
+
+    /**
+     * @var bool Флаг, необходимости предзагрузки справочника акций в кэш
+     *
+     * Это происходит либо в конструкторе, если сразу определена модель фабрики клиентов или позднее, как только провайдер будет готов
+     */
+    protected $_need_preload_shares = false;
+
+    /**
+     * @var bool Флаг, означающий, что полный справочник акций был загружен в кэш
+     */
+    protected $_is_shares_loaded = false;
+
+    /**
+     * @var bool Флаг, необходимости предзагрузки справочника фьючерсов в кэш
+     *
+     * Это происходит либо в конструкторе, если сразу определена модель фабрики клиентов или позднее, как только провайдер будет готов
+     */
+    protected $_need_preload_futures = false;
+
+    /**
+     * @var bool Флаг, означающий, что полный справочник фьючерсов был загружен в кэш
+     */
+    protected $_is_futures_loaded = false;
+
+    /**
+     * Конструктор класса
+     *
+     * @param TinkoffClientsFactory|null $model Экземпляр фабрики клиентов доступа к сервису Tinkoff Invest API 2 или <code>null</code>, если инициализация планируется позднее
+     * @param bool $preload_shares Флаг необходимости инициализировать кеш акций, путем загрузки полного справочника через API запрос. По умолчанию равно <code>false</code>
+     * @param bool $preload_etfs Флаг необходимости инициализировать кеш фондов, путем загрузки полного справочника через API запрос. По умолчанию равно <code>false</code>
+     * @param bool $preload_currencies Флаг необходимости инициализировать кеш валют, путем загрузки полного справочника через API запрос. По умолчанию равно <code>false</code>
+     * @param bool $preload_bonds Флаг необходимости инициализировать кеш облигаций, путем загрузки полного справочника через API запрос. По умолчанию равно <code>false</code>
+     * @param bool $preload_futures Флаг необходимости инициализировать кеш фьючерсов, путем загрузки полного справочника через API запрос. По умолчанию равно <code>false</code>
+     *
+     * @throws Exception
+     */
+    public function __construct(
+        TinkoffClientsFactory $model = null,
+        bool $preload_shares = false,
+        bool $preload_etfs = false,
+        bool $preload_currencies = false,
+        bool $preload_bonds = false,
+        bool $preload_futures = false
+    )
+    {
+        $this->_need_preload_shares = $preload_shares;
+        $this->_need_preload_etfs = $preload_etfs;
+        $this->_need_preload_currencies = $preload_currencies;
+        $this->_need_preload_bonds = $preload_bonds;
+        $this->_need_preload_futures = $preload_futures;
+
+        parent::__construct($model);
+    }
+
+    /**
+     * Метод создания нового экземпляра провайдера
+     *
+     * @param TinkoffClientsFactory|null $model Экземпляр фабрики клиентов доступа к сервису Tinkoff Invest API 2 или <code>null</code>, если инициализация планируется позднее
+     * @param bool $preload_shares Флаг необходимости инициализировать кеш акций, путем загрузки полного справочника через API запрос. По умолчанию равно <code>false</code>
+     * @param bool $preload_etfs Флаг необходимости инициализировать кеш фондов, путем загрузки полного справочника через API запрос. По умолчанию равно <code>false</code>
+     * @param bool $preload_currencies Флаг необходимости инициализировать кеш валют, путем загрузки полного справочника через API запрос. По умолчанию равно <code>false</code>
+     * @param bool $preload_bonds Флаг необходимости инициализировать кеш облигаций, путем загрузки полного справочника через API запрос. По умолчанию равно <code>false</code>
+     * @param bool $preload_futures Флаг необходимости инициализировать кеш фьючерсов, путем загрузки полного справочника через API запрос. По умолчанию равно <code>false</code>
+     *
+     * @return static Созданный экземпляр провайдера
+     *
+     * @throws Exception
+     */
+    public static function create(
+        TinkoffClientsFactory $model = null,
+        bool $preload_shares = true,
+        bool $preload_etfs = true,
+        bool $preload_currencies = true,
+        bool $preload_bonds = false,
+        bool $preload_futures = false
+    ): self
+    {
+        return new static($model, $preload_shares, $preload_etfs, $preload_currencies, $preload_bonds, $preload_futures);
+    }
+
+    /**
+     * @inheritDoc
+     *
+     * @throws Exception
+     */
+    public function setClientsFactory(TinkoffClientsFactory $model): self
+    {
+        parent::setClientsFactory($model);
+
+        if ($this->_need_preload_bonds) {
+            $this->loadAllBonds();
+        }
+
+        if ($this->_need_preload_currencies) {
+            $this->loadAllCurrencies();
+        }
+
+        if ($this->_need_preload_etfs) {
+            $this->loadAllEtfs();
+        }
+
+        if ($this->_need_preload_shares) {
+            $this->loadAllShares();
+        }
+
+        if ($this->_need_preload_futures) {
+            $this->loadAllFutures();
+        }
+
+        return $this;
+    }
 
     /**
      * Метод получения инструмента типа {@link Bond} по тикеру
@@ -74,7 +222,7 @@ class InstrumentsProvider extends BaseDataProvider
             ;
 
             if (!$response || !($instrument = $response->getInstrument())) {
-                throw new Exception('Instrument not found');
+                throw new Exception('Instrument is not found');
             }
 
             $this->cacheToDictionary([$instrument]);
@@ -82,27 +230,17 @@ class InstrumentsProvider extends BaseDataProvider
             return $instrument;
         }
 
-        $instruments_request = new InstrumentsRequest();
-        $instruments_request->setInstrumentStatus(InstrumentStatus::INSTRUMENT_STATUS_ALL);
+        if (!$this->_is_bonds_loaded || $refresh) {
+            $instruments = $this->loadAllBonds();
 
-        /** @var BondsResponse $response */
-        list($response, $status) = $this->_clients_factory_model
-            ->instrumentsServiceClient
-            ->Bonds($instruments_request)
-            ->wait()
-        ;
-
-        /** @var Bond[] $instruments */
-        $instruments = $response->getInstruments();
-        $this->cacheToDictionary($instruments);
-
-        foreach ($instruments as $instrument) {
-            if ($instrument->getTicker() === $ticker) {
-                return $instrument;
+            foreach ($instruments as $instrument) {
+                if ($instrument->getTicker() === $ticker) {
+                    return $instrument;
+                }
             }
         }
 
-        throw new Exception('Instrument not found');
+        throw new Exception('Instrument is not found');
     }
 
     /**
@@ -125,27 +263,17 @@ class InstrumentsProvider extends BaseDataProvider
             }
         }
 
-        $instruments_request = new InstrumentsRequest();
-        $instruments_request->setInstrumentStatus(InstrumentStatus::INSTRUMENT_STATUS_ALL);
+        if (!$this->_is_bonds_loaded || $refresh) {
+            $instruments = $this->loadAllBonds();
 
-        /** @var BondsResponse $response */
-        list($response, $status) = $this->_clients_factory_model
-            ->instrumentsServiceClient
-            ->Bonds($instruments_request)
-            ->wait()
-        ;
-
-        /** @var Bond[] $instruments */
-        $instruments = $response->getInstruments();
-        $this->cacheToDictionary($instruments);
-
-        foreach ($instruments as $instrument) {
-            if ($instrument->getFigi() === $figi) {
-                return $instrument;
+            foreach ($instruments as $instrument) {
+                if ($instrument->getFigi() === $figi) {
+                    return $instrument;
+                }
             }
         }
 
-        throw new Exception('Instrument not found');
+        throw new Exception('Instrument is not found');
     }
 
     /**
@@ -184,7 +312,7 @@ class InstrumentsProvider extends BaseDataProvider
             ;
 
             if (!$response || !($instrument = $response->getInstrument())) {
-                throw new Exception('Instrument not found');
+                throw new Exception('Instrument is not found');
             }
 
             $this->cacheToDictionary([$instrument]);
@@ -192,27 +320,17 @@ class InstrumentsProvider extends BaseDataProvider
             return $instrument;
         }
 
-        $instruments_request = new InstrumentsRequest();
-        $instruments_request->setInstrumentStatus(InstrumentStatus::INSTRUMENT_STATUS_ALL);
+        if (!$this->_is_currencies_loaded || $refresh) {
+            $instruments = $this->loadAllCurrencies();
 
-        /** @var CurrenciesResponse $response */
-        list($response, $status) = $this->_clients_factory_model
-            ->instrumentsServiceClient
-            ->Currencies($instruments_request)
-            ->wait()
-        ;
-
-        /** @var Currency[] $instruments */
-        $instruments = $response->getInstruments();
-        $this->cacheToDictionary($instruments);
-
-        foreach ($instruments as $instrument) {
-            if ($instrument->getTicker() === $ticker) {
-                return $instrument;
+            foreach ($instruments as $instrument) {
+                if ($instrument->getTicker() === $ticker) {
+                    return $instrument;
+                }
             }
         }
 
-        throw new Exception('Instrument not found');
+        throw new Exception('Instrument is not found');
     }
 
     /**
@@ -235,27 +353,17 @@ class InstrumentsProvider extends BaseDataProvider
             }
         }
 
-        $instruments_request = new InstrumentsRequest();
-        $instruments_request->setInstrumentStatus(InstrumentStatus::INSTRUMENT_STATUS_ALL);
+        if (!$this->_is_currencies_loaded || $refresh) {
+            $instruments = $this->loadAllCurrencies();
 
-        /** @var BondsResponse $response */
-        list($response, $status) = $this->_clients_factory_model
-            ->instrumentsServiceClient
-            ->Currencies($instruments_request)
-            ->wait()
-        ;
-
-        /** @var Currency[] $instruments */
-        $instruments = $response->getInstruments();
-        $this->cacheToDictionary($instruments);
-
-        foreach ($instruments as $instrument) {
-            if ($instrument->getFigi() === $figi) {
-                return $instrument;
+            foreach ($instruments as $instrument) {
+                if ($instrument->getFigi() === $figi) {
+                    return $instrument;
+                }
             }
         }
 
-        throw new Exception('Instrument not found');
+        throw new Exception('Instrument is not found');
     }
 
     /**
@@ -294,7 +402,7 @@ class InstrumentsProvider extends BaseDataProvider
             ;
 
             if (!$response || !($instrument = $response->getInstrument())) {
-                throw new Exception('Instrument not found');
+                throw new Exception('Instrument is not found');
             }
 
             $this->cacheToDictionary([$instrument]);
@@ -302,27 +410,17 @@ class InstrumentsProvider extends BaseDataProvider
             return $instrument;
         }
 
-        $instruments_request = new InstrumentsRequest();
-        $instruments_request->setInstrumentStatus(InstrumentStatus::INSTRUMENT_STATUS_ALL);
+        if (!$this->_is_etfs_loaded || $refresh) {
+            $instruments = $this->loadAllEtfs();
 
-        /** @var EtfsResponse $response */
-        list($response, $status) = $this->_clients_factory_model
-            ->instrumentsServiceClient
-            ->Etfs($instruments_request)
-            ->wait()
-        ;
-
-        /** @var Etf[] $instruments */
-        $instruments = $response->getInstruments();
-        $this->cacheToDictionary($instruments);
-
-        foreach ($instruments as $instrument) {
-            if ($instrument->getTicker() === $ticker) {
-                return $instrument;
+            foreach ($instruments as $instrument) {
+                if ($instrument->getTicker() === $ticker) {
+                    return $instrument;
+                }
             }
         }
 
-        throw new Exception('Instrument not found');
+        throw new Exception('Instrument is not found');
     }
 
     /**
@@ -345,27 +443,17 @@ class InstrumentsProvider extends BaseDataProvider
             }
         }
 
-        $instruments_request = new InstrumentsRequest();
-        $instruments_request->setInstrumentStatus(InstrumentStatus::INSTRUMENT_STATUS_ALL);
+        if (!$this->_is_etfs_loaded || $refresh) {
+            $instruments = $this->loadAllEtfs();
 
-        /** @var EtfsResponse $response */
-        list($response, $status) = $this->_clients_factory_model
-            ->instrumentsServiceClient
-            ->Etfs($instruments_request)
-            ->wait()
-        ;
-
-        /** @var Etf[] $instruments */
-        $instruments = $response->getInstruments();
-        $this->cacheToDictionary($instruments);
-
-        foreach ($instruments as $instrument) {
-            if ($instrument->getFigi() === $figi) {
-                return $instrument;
+            foreach ($instruments as $instrument) {
+                if ($instrument->getFigi() === $figi) {
+                    return $instrument;
+                }
             }
         }
 
-        throw new Exception('Instrument not found');
+        throw new Exception('Instrument is not found');
     }
 
     /**
@@ -404,7 +492,7 @@ class InstrumentsProvider extends BaseDataProvider
             ;
 
             if (!$response || !($instrument = $response->getInstrument())) {
-                throw new Exception('Instrument not found');
+                throw new Exception('Instrument is not found');
             }
 
             $this->cacheToDictionary([$instrument]);
@@ -412,27 +500,17 @@ class InstrumentsProvider extends BaseDataProvider
             return $instrument;
         }
 
-        $instruments_request = new InstrumentsRequest();
-        $instruments_request->setInstrumentStatus(InstrumentStatus::INSTRUMENT_STATUS_ALL);
+        if (!$this->_is_futures_loaded || $refresh) {
+            $instruments = $this->loadAllFutures();
 
-        /** @var FuturesResponse $response */
-        list($response, $status) = $this->_clients_factory_model
-            ->instrumentsServiceClient
-            ->Futures($instruments_request)
-            ->wait()
-        ;
-
-        /** @var Future[] $instruments */
-        $instruments = $response->getInstruments();
-        $this->cacheToDictionary($instruments);
-
-        foreach ($instruments as $instrument) {
-            if ($instrument->getTicker() === $ticker) {
-                return $instrument;
+            foreach ($instruments as $instrument) {
+                if ($instrument->getTicker() === $ticker) {
+                    return $instrument;
+                }
             }
         }
 
-        throw new Exception('Instrument not found');
+        throw new Exception('Instrument is not found');
     }
 
     /**
@@ -455,23 +533,13 @@ class InstrumentsProvider extends BaseDataProvider
             }
         }
 
-        $instruments_request = new InstrumentsRequest();
-        $instruments_request->setInstrumentStatus(InstrumentStatus::INSTRUMENT_STATUS_ALL);
+        if (!$this->_is_futures_loaded || $refresh) {
+            $instruments = $this->loadAllFutures();
 
-        /** @var FuturesResponse $response */
-        list($response, $status) = $this->_clients_factory_model
-            ->instrumentsServiceClient
-            ->Futures($instruments_request)
-            ->wait()
-        ;
-
-        /** @var Future[] $instruments */
-        $instruments = $response->getInstruments();
-        $this->cacheToDictionary($instruments);
-
-        foreach ($instruments as $instrument) {
-            if ($instrument->getFigi() === $figi) {
-                return $instrument;
+            foreach ($instruments as $instrument) {
+                if ($instrument->getFigi() === $figi) {
+                    return $instrument;
+                }
             }
         }
 
@@ -514,7 +582,7 @@ class InstrumentsProvider extends BaseDataProvider
             ;
 
             if (!$response || !($instrument = $response->getInstrument())) {
-                throw new Exception('Instrument not found');
+                throw new Exception('Instrument is not found');
             }
 
             $this->cacheToDictionary([$instrument]);
@@ -522,27 +590,17 @@ class InstrumentsProvider extends BaseDataProvider
             return $instrument;
         }
 
-        $instruments_request = new InstrumentsRequest();
-        $instruments_request->setInstrumentStatus(InstrumentStatus::INSTRUMENT_STATUS_ALL);
+        if (!$this->_is_shares_loaded || $refresh) {
+            $instruments = $this->loadAllShares();
 
-        /** @var SharesResponse $response */
-        list($response, $status) = $this->_clients_factory_model
-            ->instrumentsServiceClient
-            ->Shares($instruments_request)
-            ->wait()
-        ;
-
-        /** @var Share[] $instruments */
-        $instruments = $response->getInstruments();
-        $this->cacheToDictionary($instruments);
-
-        foreach ($instruments as $instrument) {
-            if ($instrument->getTicker() === $ticker) {
-                return $instrument;
+            foreach ($instruments as $instrument) {
+                if ($instrument->getTicker() === $ticker) {
+                    return $instrument;
+                }
             }
         }
 
-        throw new Exception('Instrument not found');
+        throw new Exception('Instrument is not found');
     }
 
     /**
@@ -565,27 +623,17 @@ class InstrumentsProvider extends BaseDataProvider
             }
         }
 
-        $instruments_request = new InstrumentsRequest();
-        $instruments_request->setInstrumentStatus(InstrumentStatus::INSTRUMENT_STATUS_ALL);
+        if (!$this->_is_shares_loaded || $refresh) {
+            $instruments = $this->loadAllShares();
 
-        /** @var SharesResponse $response */
-        list($response, $status) = $this->_clients_factory_model
-            ->instrumentsServiceClient
-            ->Shares($instruments_request)
-            ->wait()
-        ;
-
-        /** @var Share[] $instruments */
-        $instruments = $response->getInstruments();
-        $this->cacheToDictionary($instruments);
-
-        foreach ($instruments as $instrument) {
-            if ($instrument->getFigi() === $figi) {
-                return $instrument;
+            foreach ($instruments as $instrument) {
+                if ($instrument->getFigi() === $figi) {
+                    return $instrument;
+                }
             }
         }
 
-        throw new Exception('Instrument not found');
+        throw new Exception('Instrument is not found');
     }
 
     /**
@@ -626,7 +674,7 @@ class InstrumentsProvider extends BaseDataProvider
             ;
 
             if (!$response || !($instrument = $response->getInstrument())) {
-                throw new Exception('Instrument not found');
+                throw new Exception('Instrument is not found');
             }
 
             $this->cacheToDictionary([$instrument]);
@@ -671,7 +719,7 @@ class InstrumentsProvider extends BaseDataProvider
             ->wait();
 
         if (!$response || !($instrument = $response->getInstrument())) {
-            throw new Exception('Instrument not found');
+            throw new Exception('Instrument is not found');
         }
 
         $this->cacheToDictionary([$instrument]);
@@ -686,7 +734,153 @@ class InstrumentsProvider extends BaseDataProvider
     {
         $this->_dictionary = [];
 
+        $this->_is_bonds_loaded = false;
+        $this->_is_currencies_loaded = false;
+        $this->_is_etfs_loaded = false;
+        $this->_is_futures_loaded = false;
+        $this->_is_shares_loaded = false;
+
         return $this;
+    }
+
+    /**
+     * Метод запрашивает через запрос к API справочник всех облигаций и кеширует загруженный список в текущий экземпляр провайдера
+     *
+     * @return Bond[] Массив загруженных инструментов
+     *
+     * @throws Exception
+     */
+    protected function loadAllBonds(): array
+    {
+        $instruments_request = new InstrumentsRequest();
+        $instruments_request->setInstrumentStatus(InstrumentStatus::INSTRUMENT_STATUS_ALL);
+
+        /** @var BondsResponse $response */
+        list($response, $status) = $this->_clients_factory_model
+            ->instrumentsServiceClient
+            ->Bonds($instruments_request)
+            ->wait()
+        ;
+
+        /** @var Bond[] $instruments */
+        $instruments = $response->getInstruments();
+        $this->cacheToDictionary($instruments);
+
+        $this->_is_bonds_loaded = false;
+
+        return $instruments;
+    }
+
+    /**
+     * Метод запрашивает через запрос к API справочник всех валют и кеширует загруженный список в текущий экземпляр провайдера
+     *
+     * @return Currency[] Массив загруженных инструментов
+     *
+     * @throws Exception
+     */
+    protected function loadAllCurrencies(): array
+    {
+        $instruments_request = new InstrumentsRequest();
+        $instruments_request->setInstrumentStatus(InstrumentStatus::INSTRUMENT_STATUS_ALL);
+
+        /** @var BondsResponse $response */
+        list($response, $status) = $this->_clients_factory_model
+            ->instrumentsServiceClient
+            ->Currencies($instruments_request)
+            ->wait()
+        ;
+
+        /** @var Currency[] $instruments */
+        $instruments = $response->getInstruments();
+        $this->cacheToDictionary($instruments);
+
+        $this->_is_currencies_loaded = true;
+
+        return $instruments;
+    }
+
+    /**
+     * Метод запрашивает через запрос к API справочник всех фондов и кеширует загруженный список в текущий экземпляр провайдера
+     *
+     * @return Etf[] Массив загруженных инструментов
+     *
+     * @throws Exception
+     */
+    protected function loadAllEtfs(): array
+    {
+        $instruments_request = new InstrumentsRequest();
+        $instruments_request->setInstrumentStatus(InstrumentStatus::INSTRUMENT_STATUS_ALL);
+
+        /** @var EtfsResponse $response */
+        list($response, $status) = $this->_clients_factory_model
+            ->instrumentsServiceClient
+            ->Etfs($instruments_request)
+            ->wait()
+        ;
+
+        /** @var Etf[] $instruments */
+        $instruments = $response->getInstruments();
+        $this->cacheToDictionary($instruments);
+
+        $this->_is_etfs_loaded = true;
+
+        return $instruments;
+    }
+
+    /**
+     * Метод запрашивает через запрос к API справочник всех акций и кеширует загруженный список в текущий экземпляр провайдера
+     *
+     * @return Share[] Массив загруженных инструментов
+     *
+     * @throws Exception
+     */
+    protected function loadAllShares(): array
+    {
+        $instruments_request = new InstrumentsRequest();
+        $instruments_request->setInstrumentStatus(InstrumentStatus::INSTRUMENT_STATUS_ALL);
+
+        /** @var SharesResponse $response */
+        list($response, $status) = $this->_clients_factory_model
+            ->instrumentsServiceClient
+            ->Shares($instruments_request)
+            ->wait()
+        ;
+
+        /** @var Share[] $instruments */
+        $instruments = $response->getInstruments();
+        $this->cacheToDictionary($instruments);
+
+        $this->_is_shares_loaded = true;
+
+        return $instruments;
+    }
+
+    /**
+     * Метод запрашивает через запрос к API справочник всех фьючерсов и кеширует загруженный список в текущий экземпляр провайдера
+     *
+     * @return Etf[] Массив загруженных инструментов
+     *
+     * @throws Exception
+     */
+    protected function loadAllFutures(): array
+    {
+        $instruments_request = new InstrumentsRequest();
+        $instruments_request->setInstrumentStatus(InstrumentStatus::INSTRUMENT_STATUS_ALL);
+
+        /** @var FuturesResponse $response */
+        list($response, $status) = $this->_clients_factory_model
+            ->instrumentsServiceClient
+            ->Futures($instruments_request)
+            ->wait()
+        ;
+
+        /** @var Future[] $instruments */
+        $instruments = $response->getInstruments();
+        $this->cacheToDictionary($instruments);
+
+        $this->_is_futures_loaded = true;
+
+        return $instruments;
     }
 
     /**

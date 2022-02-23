@@ -37,8 +37,9 @@ abstract class BaseDataProvider
     public function setClientsFactory(TinkoffClientsFactory $model): self
     {
         $this->_clients_factory_model = $model;
+        $this->resetCachedProviderData();
 
-        return $this->resetCachedProviderData();
+        return $this;
     }
 
     /**
@@ -49,5 +50,17 @@ abstract class BaseDataProvider
     public function resetCachedProviderData(): self
     {
         return $this;
+    }
+
+    /**
+     * Метод создания нового экземпляра провайдера
+     *
+     * @param TinkoffClientsFactory|null $model Экземпляр фабрики клиентов доступа к сервису Tinkoff Invest API 2 или <code>null</code>,
+     *
+     * @return static Созданный экземпляр провайдера
+     */
+    public static function create(TinkoffClientsFactory $model = null): self
+    {
+        return new static($model);
     }
 }
