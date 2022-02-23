@@ -2,8 +2,6 @@
 
 namespace Metaseller\TinkoffInvestApi2\exceptions;
 
-use Exception;
-
 /**
  * Модель исключения 'Инструмент не найден'
  *

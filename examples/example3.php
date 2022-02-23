@@ -62,7 +62,11 @@ var_dump($instruments_provider->searchByFigi('fake figi', false));
 echo PHP_EOL . 'По предзагруженному кешу инструмент получаем быстро, без обращения к API' . PHP_EOL;
 var_dump($instruments_provider->shareByTicker('FB')->serializeToJsonString());
 
+echo PHP_EOL . 'Получение общего инструмента' . PHP_EOL;
+var_dump($instruments_provider->instrumentByFigi('BBG00N8J90K7')->serializeToJsonString());
 
+echo PHP_EOL . 'Получение фьючерса' . PHP_EOL;
+var_dump($instruments_provider->futureByFigi('FUTAFKS03220', true)->serializeToJsonString());
 
 /**
  * Пример получения справочника всех Shares инструментов, без использования провайдера

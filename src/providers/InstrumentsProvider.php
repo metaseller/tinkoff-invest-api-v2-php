@@ -5,6 +5,7 @@ namespace Metaseller\TinkoffInvestApi2\providers;
 use Exception;
 use Google\Protobuf\Internal\RepeatedField;
 use Metaseller\TinkoffInvestApi2\exceptions\InstrumentNotFoundException;
+use Metaseller\TinkoffInvestApi2\exceptions\ValidateException;
 use Metaseller\TinkoffInvestApi2\TinkoffClientsFactory;
 use Tinkoff\Invest\V1\Bond;
 use Tinkoff\Invest\V1\BondResponse;
@@ -17,6 +18,8 @@ use Tinkoff\Invest\V1\EtfsResponse;
 use Tinkoff\Invest\V1\Future;
 use Tinkoff\Invest\V1\FutureResponse;
 use Tinkoff\Invest\V1\FuturesResponse;
+use Tinkoff\Invest\V1\GetFuturesMarginRequest;
+use Tinkoff\Invest\V1\GetFuturesMarginResponse;
 use Tinkoff\Invest\V1\Instrument;
 use Tinkoff\Invest\V1\InstrumentIdType;
 use Tinkoff\Invest\V1\InstrumentRequest;
@@ -108,8 +111,6 @@ class InstrumentsProvider extends BaseDataProvider
      * @param bool $preload_currencies Флаг необходимости инициализировать кеш валют, путем загрузки полного справочника через API запрос. По умолчанию равно <code>false</code>
      * @param bool $preload_bonds Флаг необходимости инициализировать кеш облигаций, путем загрузки полного справочника через API запрос. По умолчанию равно <code>false</code>
      * @param bool $preload_futures Флаг необходимости инициализировать кеш фьючерсов, путем загрузки полного справочника через API запрос. По умолчанию равно <code>false</code>
-     *
-     * @throws Exception
      */
     public function __construct(
         TinkoffClientsFactory $model = null,
@@ -140,8 +141,6 @@ class InstrumentsProvider extends BaseDataProvider
      * @param bool $preload_futures Флаг необходимости инициализировать кеш фьючерсов, путем загрузки полного справочника через API запрос. По умолчанию равно <code>false</code>
      *
      * @return static Созданный экземпляр провайдера
-     *
-     * @throws Exception
      */
     public static function create(
         TinkoffClientsFactory $model = null,
@@ -1009,6 +1008,40 @@ class InstrumentsProvider extends BaseDataProvider
 
             return null;
         }
+    }
+
+    /**
+     * Метод получения спец. информации о фьючерсе
+     *
+     * @param Future|Instrument $instrument Инструмент типа фьючерс
+     *
+     * @return GetFuturesMarginResponse Спец. информация о фьючерсе
+     *
+     * @throws InstrumentNotFoundException
+     * @throws ValidateException
+     *
+     * @see https://tinkoff.github.io/investAPI/instruments/#getfuturesmargin
+     */
+    public function getFuturesData($instrument): GetFuturesMarginResponse
+    {
+        if ($instrument instanceof Future || (($instrument instanceof Instrument) && $instrument->getInstrumentType() === 'futures')) {
+            $futures_data_request = new GetFuturesMarginRequest();
+            $futures_data_request->setFigi($instrument->getFigi());
+
+            /** @var GetFuturesMarginResponse $response */
+            list($response, $status) = $this->_clients_factory_model->instrumentsServiceClient
+                ->GetFuturesMargin($futures_data_request)
+                ->wait()
+            ;
+
+                if (!$response) {
+                    throw new InstrumentNotFoundException('Futures data is not found');
+                }
+
+                return $response;
+        }
+
+        throw new ValidateException('Instrument should be Future type');
     }
 
     /**
