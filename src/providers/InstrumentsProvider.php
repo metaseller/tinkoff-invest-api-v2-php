@@ -4,6 +4,7 @@ namespace Metaseller\TinkoffInvestApi2\providers;
 
 use Exception;
 use Google\Protobuf\Internal\RepeatedField;
+use Metaseller\TinkoffInvestApi2\exceptions\InstrumentNotFoundException;
 use Metaseller\TinkoffInvestApi2\TinkoffClientsFactory;
 use Tinkoff\Invest\V1\Bond;
 use Tinkoff\Invest\V1\BondResponse;
@@ -192,55 +193,63 @@ class InstrumentsProvider extends BaseDataProvider
      * @param string $ticker Тикер инструмента
      * @param string|null $class_name Режим торгов или <code>null</code>, тогда будет возвращен первый найденный
      * @param bool $refresh Признак необходимости получить новые данные из API Tinkoff Invest и обновить кэш. По умолчанию равно <code>false</code>
+     * @param bool $raise Признак необходимость бросить исключение, если инструмент не найден. По умолчанию равно <code>true</code>
      *
-     * @return Bond Экземпляр инструмента типа 'Облигация'
+     * @return Bond|null Экземпляр инструмента или <code>null</code>, если инструмент не найден и не требуется бросок исключения
      *
-     * @throws Exception
+     * @throws InstrumentNotFoundException
      */
-    public function bondByTicker(string $ticker, string $class_name = null, bool $refresh = false): Bond
+    public function bondByTicker(string $ticker, string $class_name = null, bool $refresh = false, bool $raise = true): ?Bond
     {
-        $instrument_type = 'bond';
-        $instrument_id_type = InstrumentIdType::INSTRUMENT_ID_TYPE_TICKER;
+        try {
+            $instrument_type = 'bond';
+            $instrument_id_type = InstrumentIdType::INSTRUMENT_ID_TYPE_TICKER;
 
-        if (!$refresh) {
-            if ($instrument = $this->getCachedInstrumentByTicker($instrument_type, $ticker, $class_name)) {
-                return $instrument;
-            }
-        }
-
-        if ($class_name) {
-            $instruments_request = new InstrumentRequest();
-            $instruments_request->setId($ticker);
-            $instruments_request->setIdType($instrument_id_type);
-            $instruments_request->setClassCode($class_name);
-
-            /** @var BondResponse $response */
-            list($response, $status) = $this->_clients_factory_model
-                ->instrumentsServiceClient
-                ->BondBy($instruments_request)
-                ->wait()
-            ;
-
-            if (!$response || !($instrument = $response->getInstrument())) {
-                throw new Exception('Instrument is not found');
-            }
-
-            $this->cacheToDictionary([$instrument]);
-
-            return $instrument;
-        }
-
-        if (!$this->_is_bonds_loaded || $refresh) {
-            $instruments = $this->loadAllBonds();
-
-            foreach ($instruments as $instrument) {
-                if ($instrument->getTicker() === $ticker) {
+            if (!$refresh) {
+                if ($instrument = $this->getCachedInstrumentByTicker($instrument_type, $ticker, $class_name)) {
                     return $instrument;
                 }
             }
-        }
 
-        throw new Exception('Instrument is not found');
+            if ($class_name) {
+                $instruments_request = new InstrumentRequest();
+                $instruments_request->setId($ticker);
+                $instruments_request->setIdType($instrument_id_type);
+                $instruments_request->setClassCode($class_name);
+
+                /** @var BondResponse $response */
+                list($response, $status) = $this->_clients_factory_model
+                    ->instrumentsServiceClient
+                    ->BondBy($instruments_request)
+                    ->wait();
+
+                if (!$response || !($instrument = $response->getInstrument())) {
+                    throw new InstrumentNotFoundException('Instrument is not found');
+                }
+
+                $this->cacheToDictionary([$instrument]);
+
+                return $instrument;
+            }
+
+            if (!$this->_is_bonds_loaded || $refresh) {
+                $instruments = $this->loadAllBonds();
+
+                foreach ($instruments as $instrument) {
+                    if ($instrument->getTicker() === $ticker) {
+                        return $instrument;
+                    }
+                }
+            }
+
+            throw new InstrumentNotFoundException('Instrument is not found');
+        } catch (InstrumentNotFoundException $e) {
+            if ($raise) {
+                throw  $e;
+            }
+
+            return null;
+        }
     }
 
     /**
@@ -248,32 +257,41 @@ class InstrumentsProvider extends BaseDataProvider
      *
      * @param string $figi FIGI инструмента
      * @param bool $refresh Признак необходимости получить новые данные из API Tinkoff Invest и обновить кэш. По умолчанию равно <code>false</code>
+     * @param bool $raise Признак необходимость бросить исключение, если инструмент не найден. По умолчанию равно <code>true</code>
      *
-     * @return Bond Экземпляр инструмента типа 'Облигация'
+     * @return Bond|null Экземпляр инструмента или <code>null</code>, если инструмент не найден и не требуется бросок исключения
      *
-     * @throws Exception
+     * @throws InstrumentNotFoundException
      */
-    public function bondByFigi(string $figi, bool $refresh = false): Bond
+    public function bondByFigi(string $figi, bool $refresh = false, bool $raise = true): ?Bond
     {
-        $instrument_type = 'bond';
+        try {
+            $instrument_type = 'bond';
 
-        if (!$refresh) {
-            if ($instrument = $this->getCachedInstrumentByFigi($instrument_type, $figi)) {
-                return $instrument;
-            }
-        }
-
-        if (!$this->_is_bonds_loaded || $refresh) {
-            $instruments = $this->loadAllBonds();
-
-            foreach ($instruments as $instrument) {
-                if ($instrument->getFigi() === $figi) {
+            if (!$refresh) {
+                if ($instrument = $this->getCachedInstrumentByFigi($instrument_type, $figi)) {
                     return $instrument;
                 }
             }
-        }
 
-        throw new Exception('Instrument is not found');
+            if (!$this->_is_bonds_loaded || $refresh) {
+                $instruments = $this->loadAllBonds();
+
+                foreach ($instruments as $instrument) {
+                    if ($instrument->getFigi() === $figi) {
+                        return $instrument;
+                    }
+                }
+            }
+
+            throw new InstrumentNotFoundException('Instrument is not found');
+        } catch (InstrumentNotFoundException $e) {
+            if ($raise) {
+                throw  $e;
+            }
+
+            return null;
+        }
     }
 
     /**
@@ -282,55 +300,63 @@ class InstrumentsProvider extends BaseDataProvider
      * @param string $ticker Тикер инструмента
      * @param string|null $class_name Режим торгов или <code>null</code>, тогда будет возвращен первый найденный
      * @param bool $refresh Признак необходимости получить новые данные из API Tinkoff Invest и обновить кэш. По умолчанию равно <code>false</code>
+     * @param bool $raise Признак необходимость бросить исключение, если инструмент не найден. По умолчанию равно <code>true</code>
      *
-     * @return Currency Экземпляр инструмента типа 'Валюта'
+     * @return Currency|null Экземпляр инструмента или <code>null</code>, если инструмент не найден и не требуется бросок исключения
      *
-     * @throws Exception
+     * @throws InstrumentNotFoundException
      */
-    public function currencyByTicker(string $ticker, string $class_name = null, bool $refresh = false): Currency
+    public function currencyByTicker(string $ticker, string $class_name = null, bool $refresh = false, bool $raise = true): ?Currency
     {
-        $instrument_type = 'currency';
-        $instrument_id_type = InstrumentIdType::INSTRUMENT_ID_TYPE_TICKER;
+        try {
+            $instrument_type = 'currency';
+            $instrument_id_type = InstrumentIdType::INSTRUMENT_ID_TYPE_TICKER;
 
-        if (!$refresh) {
-            if ($instrument = $this->getCachedInstrumentByTicker($instrument_type, $ticker, $class_name)) {
-                return $instrument;
-            }
-        }
-
-        if ($class_name) {
-            $instruments_request = new InstrumentRequest();
-            $instruments_request->setId($ticker);
-            $instruments_request->setIdType($instrument_id_type);
-            $instruments_request->setClassCode($class_name);
-
-            /** @var CurrencyResponse $response */
-            list($response, $status) = $this->_clients_factory_model
-                ->instrumentsServiceClient
-                ->CurrencyBy($instruments_request)
-                ->wait()
-            ;
-
-            if (!$response || !($instrument = $response->getInstrument())) {
-                throw new Exception('Instrument is not found');
-            }
-
-            $this->cacheToDictionary([$instrument]);
-
-            return $instrument;
-        }
-
-        if (!$this->_is_currencies_loaded || $refresh) {
-            $instruments = $this->loadAllCurrencies();
-
-            foreach ($instruments as $instrument) {
-                if ($instrument->getTicker() === $ticker) {
+            if (!$refresh) {
+                if ($instrument = $this->getCachedInstrumentByTicker($instrument_type, $ticker, $class_name)) {
                     return $instrument;
                 }
             }
-        }
 
-        throw new Exception('Instrument is not found');
+            if ($class_name) {
+                $instruments_request = new InstrumentRequest();
+                $instruments_request->setId($ticker);
+                $instruments_request->setIdType($instrument_id_type);
+                $instruments_request->setClassCode($class_name);
+
+                /** @var CurrencyResponse $response */
+                list($response, $status) = $this->_clients_factory_model
+                    ->instrumentsServiceClient
+                    ->CurrencyBy($instruments_request)
+                    ->wait();
+
+                if (!$response || !($instrument = $response->getInstrument())) {
+                    throw new InstrumentNotFoundException('Instrument is not found');
+                }
+
+                $this->cacheToDictionary([$instrument]);
+
+                return $instrument;
+            }
+
+            if (!$this->_is_currencies_loaded || $refresh) {
+                $instruments = $this->loadAllCurrencies();
+
+                foreach ($instruments as $instrument) {
+                    if ($instrument->getTicker() === $ticker) {
+                        return $instrument;
+                    }
+                }
+            }
+
+            throw new InstrumentNotFoundException('Instrument is not found');
+        } catch (InstrumentNotFoundException $e) {
+            if ($raise) {
+                throw  $e;
+            }
+
+            return null;
+        }
     }
 
     /**
@@ -338,32 +364,41 @@ class InstrumentsProvider extends BaseDataProvider
      *
      * @param string $figi FIGI инструмента
      * @param bool $refresh Признак необходимости получить новые данные из API Tinkoff Invest и обновить кэш. По умолчанию равно <code>false</code>
+     * @param bool $raise Признак необходимость бросить исключение, если инструмент не найден. По умолчанию равно <code>true</code>
      *
-     * @return Currency Экземпляр инструмента типа 'Валюта'
+     * @return Currency|null Экземпляр инструмента или <code>null</code>, если инструмент не найден и не требуется бросок исключения
      *
-     * @throws Exception
+     * @throws InstrumentNotFoundException
      */
-    public function currencyByFigi(string $figi, bool $refresh = false): Currency
+    public function currencyByFigi(string $figi, bool $refresh = false, bool $raise = true): ?Currency
     {
-        $instrument_type = 'currency';
+        try {
+            $instrument_type = 'currency';
 
-        if (!$refresh) {
-            if ($instrument = $this->getCachedInstrumentByFigi($instrument_type, $figi)) {
-                return $instrument;
-            }
-        }
-
-        if (!$this->_is_currencies_loaded || $refresh) {
-            $instruments = $this->loadAllCurrencies();
-
-            foreach ($instruments as $instrument) {
-                if ($instrument->getFigi() === $figi) {
+            if (!$refresh) {
+                if ($instrument = $this->getCachedInstrumentByFigi($instrument_type, $figi)) {
                     return $instrument;
                 }
             }
-        }
 
-        throw new Exception('Instrument is not found');
+            if (!$this->_is_currencies_loaded || $refresh) {
+                $instruments = $this->loadAllCurrencies();
+
+                foreach ($instruments as $instrument) {
+                    if ($instrument->getFigi() === $figi) {
+                        return $instrument;
+                    }
+                }
+            }
+
+            throw new InstrumentNotFoundException('Instrument is not found');
+        } catch (InstrumentNotFoundException $e) {
+            if ($raise) {
+                throw  $e;
+            }
+
+            return null;
+        }
     }
 
     /**
@@ -372,55 +407,63 @@ class InstrumentsProvider extends BaseDataProvider
      * @param string $ticker Тикер инструмента
      * @param string|null $class_name Режим торгов или <code>null</code>, тогда будет возвращен первый найденный
      * @param bool $refresh Признак необходимости получить новые данные из API Tinkoff Invest и обновить кэш. По умолчанию равно <code>false</code>
+     * @param bool $raise Признак необходимость бросить исключение, если инструмент не найден. По умолчанию равно <code>true</code>
      *
-     * @return Etf Экземпляр инструмента типа 'Фонд'
+     * @return Etf|null Экземпляр инструмента или <code>null</code>, если инструмент не найден и не требуется бросок исключения
      *
-     * @throws Exception
+     * @throws InstrumentNotFoundException
      */
-    public function etfByTicker(string $ticker, string $class_name = null, bool $refresh = false): Etf
+    public function etfByTicker(string $ticker, string $class_name = null, bool $refresh = false, bool $raise = true): ?Etf
     {
-        $instrument_type = 'etf';
-        $instrument_id_type = InstrumentIdType::INSTRUMENT_ID_TYPE_TICKER;
+        try {
+            $instrument_type = 'etf';
+            $instrument_id_type = InstrumentIdType::INSTRUMENT_ID_TYPE_TICKER;
 
-        if (!$refresh) {
-            if ($instrument = $this->getCachedInstrumentByTicker($instrument_type, $ticker, $class_name)) {
-                return $instrument;
-            }
-        }
-
-        if ($class_name) {
-            $instruments_request = new InstrumentRequest();
-            $instruments_request->setId($ticker);
-            $instruments_request->setIdType($instrument_id_type);
-            $instruments_request->setClassCode($class_name);
-
-            /** @var EtfResponse $response */
-            list($response, $status) = $this->_clients_factory_model
-                ->instrumentsServiceClient
-                ->EtfBy($instruments_request)
-                ->wait()
-            ;
-
-            if (!$response || !($instrument = $response->getInstrument())) {
-                throw new Exception('Instrument is not found');
-            }
-
-            $this->cacheToDictionary([$instrument]);
-
-            return $instrument;
-        }
-
-        if (!$this->_is_etfs_loaded || $refresh) {
-            $instruments = $this->loadAllEtfs();
-
-            foreach ($instruments as $instrument) {
-                if ($instrument->getTicker() === $ticker) {
+            if (!$refresh) {
+                if ($instrument = $this->getCachedInstrumentByTicker($instrument_type, $ticker, $class_name)) {
                     return $instrument;
                 }
             }
-        }
 
-        throw new Exception('Instrument is not found');
+            if ($class_name) {
+                $instruments_request = new InstrumentRequest();
+                $instruments_request->setId($ticker);
+                $instruments_request->setIdType($instrument_id_type);
+                $instruments_request->setClassCode($class_name);
+
+                /** @var EtfResponse $response */
+                list($response, $status) = $this->_clients_factory_model
+                    ->instrumentsServiceClient
+                    ->EtfBy($instruments_request)
+                    ->wait();
+
+                if (!$response || !($instrument = $response->getInstrument())) {
+                    throw new InstrumentNotFoundException('Instrument is not found');
+                }
+
+                $this->cacheToDictionary([$instrument]);
+
+                return $instrument;
+            }
+
+            if (!$this->_is_etfs_loaded || $refresh) {
+                $instruments = $this->loadAllEtfs();
+
+                foreach ($instruments as $instrument) {
+                    if ($instrument->getTicker() === $ticker) {
+                        return $instrument;
+                    }
+                }
+            }
+
+            throw new InstrumentNotFoundException('Instrument is not found');
+        } catch (InstrumentNotFoundException $e) {
+            if ($raise) {
+                throw  $e;
+            }
+
+            return null;
+        }
     }
 
     /**
@@ -428,32 +471,41 @@ class InstrumentsProvider extends BaseDataProvider
      *
      * @param string $figi FIGI инструмента
      * @param bool $refresh Признак необходимости получить новые данные из API Tinkoff Invest и обновить кэш. По умолчанию равно <code>false</code>
+     * @param bool $raise Признак необходимость бросить исключение, если инструмент не найден. По умолчанию равно <code>true</code>
      *
-     * @return Etf Экземпляр инструмента типа 'Фонд'
+     * @return Etf|null Экземпляр инструмента или <code>null</code>, если инструмент не найден и не требуется бросок исключения
      *
-     * @throws Exception
+     * @throws InstrumentNotFoundException
      */
-    public function etfByFigi(string $figi, bool $refresh = false): Etf
+    public function etfByFigi(string $figi, bool $refresh = false, bool $raise = true): ?Etf
     {
-        $instrument_type = 'etf';
+        try {
+            $instrument_type = 'etf';
 
-        if (!$refresh) {
-            if ($instrument = $this->getCachedInstrumentByFigi($instrument_type, $figi)) {
-                return $instrument;
-            }
-        }
-
-        if (!$this->_is_etfs_loaded || $refresh) {
-            $instruments = $this->loadAllEtfs();
-
-            foreach ($instruments as $instrument) {
-                if ($instrument->getFigi() === $figi) {
+            if (!$refresh) {
+                if ($instrument = $this->getCachedInstrumentByFigi($instrument_type, $figi)) {
                     return $instrument;
                 }
             }
-        }
 
-        throw new Exception('Instrument is not found');
+            if (!$this->_is_etfs_loaded || $refresh) {
+                $instruments = $this->loadAllEtfs();
+
+                foreach ($instruments as $instrument) {
+                    if ($instrument->getFigi() === $figi) {
+                        return $instrument;
+                    }
+                }
+            }
+
+            throw new InstrumentNotFoundException('Instrument is not found');
+        } catch (InstrumentNotFoundException $e) {
+            if ($raise) {
+                throw  $e;
+            }
+
+            return null;
+        }
     }
 
     /**
@@ -462,55 +514,63 @@ class InstrumentsProvider extends BaseDataProvider
      * @param string $ticker Тикер инструмента
      * @param string|null $class_name Режим торгов или <code>null</code>, тогда будет возвращен первый найденный
      * @param bool $refresh Признак необходимости получить новые данные из API Tinkoff Invest и обновить кэш. По умолчанию равно <code>false</code>
+     * @param bool $raise Признак необходимость бросить исключение, если инструмент не найден. По умолчанию равно <code>true</code>
      *
-     * @return Future Экземпляр инструмента типа 'Фьючерс'
+     * @return Future|null Экземпляр инструмента или <code>null</code>, если инструмент не найден и не требуется бросок исключения
      *
-     * @throws Exception
+     * @throws InstrumentNotFoundException
      */
-    public function futureByTicker(string $ticker, string $class_name = null, bool $refresh = false): Future
+    public function futureByTicker(string $ticker, string $class_name = null, bool $refresh = false, bool $raise = true): ?Future
     {
-        $instrument_type = 'future';
-        $instrument_id_type = InstrumentIdType::INSTRUMENT_ID_TYPE_TICKER;
+        try {
+            $instrument_type = 'future';
+            $instrument_id_type = InstrumentIdType::INSTRUMENT_ID_TYPE_TICKER;
 
-        if (!$refresh) {
-            if ($instrument = $this->getCachedInstrumentByTicker($instrument_type, $ticker, $class_name)) {
-                return $instrument;
-            }
-        }
-
-        if ($class_name) {
-            $instruments_request = new InstrumentRequest();
-            $instruments_request->setId($ticker);
-            $instruments_request->setIdType($instrument_id_type);
-            $instruments_request->setClassCode($class_name);
-
-            /** @var FutureResponse $response */
-            list($response, $status) = $this->_clients_factory_model
-                ->instrumentsServiceClient
-                ->FutureBy($instruments_request)
-                ->wait()
-            ;
-
-            if (!$response || !($instrument = $response->getInstrument())) {
-                throw new Exception('Instrument is not found');
-            }
-
-            $this->cacheToDictionary([$instrument]);
-
-            return $instrument;
-        }
-
-        if (!$this->_is_futures_loaded || $refresh) {
-            $instruments = $this->loadAllFutures();
-
-            foreach ($instruments as $instrument) {
-                if ($instrument->getTicker() === $ticker) {
+            if (!$refresh) {
+                if ($instrument = $this->getCachedInstrumentByTicker($instrument_type, $ticker, $class_name)) {
                     return $instrument;
                 }
             }
-        }
 
-        throw new Exception('Instrument is not found');
+            if ($class_name) {
+                $instruments_request = new InstrumentRequest();
+                $instruments_request->setId($ticker);
+                $instruments_request->setIdType($instrument_id_type);
+                $instruments_request->setClassCode($class_name);
+
+                /** @var FutureResponse $response */
+                list($response, $status) = $this->_clients_factory_model
+                    ->instrumentsServiceClient
+                    ->FutureBy($instruments_request)
+                    ->wait();
+
+                if (!$response || !($instrument = $response->getInstrument())) {
+                    throw new InstrumentNotFoundException('Instrument is not found');
+                }
+
+                $this->cacheToDictionary([$instrument]);
+
+                return $instrument;
+            }
+
+            if (!$this->_is_futures_loaded || $refresh) {
+                $instruments = $this->loadAllFutures();
+
+                foreach ($instruments as $instrument) {
+                    if ($instrument->getTicker() === $ticker) {
+                        return $instrument;
+                    }
+                }
+            }
+
+            throw new InstrumentNotFoundException('Instrument is not found');
+        } catch (InstrumentNotFoundException $e) {
+            if ($raise) {
+                throw  $e;
+            }
+
+            return null;
+        }
     }
 
     /**
@@ -518,32 +578,41 @@ class InstrumentsProvider extends BaseDataProvider
      *
      * @param string $figi FIGI инструмента
      * @param bool $refresh Признак необходимости получить новые данные из API Tinkoff Invest и обновить кэш. По умолчанию равно <code>false</code>
+     * @param bool $raise Признак необходимость бросить исключение, если инструмент не найден. По умолчанию равно <code>true</code>
      *
-     * @return Future Экземпляр инструмента типа 'Фьючерс'
+     * @return Future|null Экземпляр инструмента или <code>null</code>, если инструмент не найден и не требуется бросок исключения
      *
-     * @throws Exception
+     * @throws InstrumentNotFoundException
      */
-    public function futureByFigi(string $figi, bool $refresh = false): Future
+    public function futureByFigi(string $figi, bool $refresh = false, bool $raise = true): ?Future
     {
-        $instrument_type = 'future';
+        try {
+            $instrument_type = 'future';
 
-        if (!$refresh) {
-            if ($instrument = $this->getCachedInstrumentByFigi($instrument_type, $figi)) {
-                return $instrument;
-            }
-        }
-
-        if (!$this->_is_futures_loaded || $refresh) {
-            $instruments = $this->loadAllFutures();
-
-            foreach ($instruments as $instrument) {
-                if ($instrument->getFigi() === $figi) {
+            if (!$refresh) {
+                if ($instrument = $this->getCachedInstrumentByFigi($instrument_type, $figi)) {
                     return $instrument;
                 }
             }
-        }
 
-        throw new Exception('Instrument not found');
+            if (!$this->_is_futures_loaded || $refresh) {
+                $instruments = $this->loadAllFutures();
+
+                foreach ($instruments as $instrument) {
+                    if ($instrument->getFigi() === $figi) {
+                        return $instrument;
+                    }
+                }
+            }
+
+            throw new InstrumentNotFoundException('Instrument not found');
+        } catch (InstrumentNotFoundException $e) {
+            if ($raise) {
+                throw  $e;
+            }
+
+            return null;
+        }
     }
 
     /**
@@ -552,55 +621,63 @@ class InstrumentsProvider extends BaseDataProvider
      * @param string $ticker Тикер инструмента
      * @param string|null $class_name Режим торгов или <code>null</code>, тогда будет возвращен первый найденный
      * @param bool $refresh Признак необходимости получить новые данные из API Tinkoff Invest и обновить кэш. По умолчанию равно <code>false</code>
+     * @param bool $raise Признак необходимость бросить исключение, если инструмент не найден. По умолчанию равно <code>true</code>
      *
-     * @return Share Экземпляр инструмента типа 'Акция'
+     * @return Share|null Экземпляр инструмента или <code>null</code>, если инструмент не найден и не требуется бросок исключения
      *
-     * @throws Exception
+     * @throws InstrumentNotFoundException
      */
-    public function shareByTicker(string $ticker, string $class_name = null, bool $refresh = false): Share
+    public function shareByTicker(string $ticker, string $class_name = null, bool $refresh = false, bool $raise = true): ?Share
     {
-        $instrument_type = 'share';
-        $instrument_id_type = InstrumentIdType::INSTRUMENT_ID_TYPE_TICKER;
+        try {
+            $instrument_type = 'share';
+            $instrument_id_type = InstrumentIdType::INSTRUMENT_ID_TYPE_TICKER;
 
-        if (!$refresh) {
-            if ($instrument = $this->getCachedInstrumentByTicker($instrument_type, $ticker, $class_name)) {
-                return $instrument;
-            }
-        }
-
-        if ($class_name) {
-            $instruments_request = new InstrumentRequest();
-            $instruments_request->setId($ticker);
-            $instruments_request->setIdType($instrument_id_type);
-            $instruments_request->setClassCode($class_name);
-
-            /** @var ShareResponse $response */
-            list($response, $status) = $this->_clients_factory_model
-                ->instrumentsServiceClient
-                ->ShareBy($instruments_request)
-                ->wait()
-            ;
-
-            if (!$response || !($instrument = $response->getInstrument())) {
-                throw new Exception('Instrument is not found');
-            }
-
-            $this->cacheToDictionary([$instrument]);
-
-            return $instrument;
-        }
-
-        if (!$this->_is_shares_loaded || $refresh) {
-            $instruments = $this->loadAllShares();
-
-            foreach ($instruments as $instrument) {
-                if ($instrument->getTicker() === $ticker) {
+            if (!$refresh) {
+                if ($instrument = $this->getCachedInstrumentByTicker($instrument_type, $ticker, $class_name)) {
                     return $instrument;
                 }
             }
-        }
 
-        throw new Exception('Instrument is not found');
+            if ($class_name) {
+                $instruments_request = new InstrumentRequest();
+                $instruments_request->setId($ticker);
+                $instruments_request->setIdType($instrument_id_type);
+                $instruments_request->setClassCode($class_name);
+
+                /** @var ShareResponse $response */
+                list($response, $status) = $this->_clients_factory_model
+                    ->instrumentsServiceClient
+                    ->ShareBy($instruments_request)
+                    ->wait();
+
+                if (!$response || !($instrument = $response->getInstrument())) {
+                    throw new InstrumentNotFoundException('Instrument is not found');
+                }
+
+                $this->cacheToDictionary([$instrument]);
+
+                return $instrument;
+            }
+
+            if (!$this->_is_shares_loaded || $refresh) {
+                $instruments = $this->loadAllShares();
+
+                foreach ($instruments as $instrument) {
+                    if ($instrument->getTicker() === $ticker) {
+                        return $instrument;
+                    }
+                }
+            }
+
+            throw new InstrumentNotFoundException('Instrument is not found');
+        } catch (InstrumentNotFoundException $e) {
+            if ($raise) {
+                throw  $e;
+            }
+
+            return null;
+        }
     }
 
     /**
@@ -608,32 +685,222 @@ class InstrumentsProvider extends BaseDataProvider
      *
      * @param string $figi FIGI инструмента
      * @param bool $refresh Признак необходимости получить новые данные из API Tinkoff Invest и обновить кэш. По умолчанию равно <code>false</code>
+     * @param bool $raise Признак необходимость бросить исключение, если инструмент не найден. По умолчанию равно <code>true</code>
      *
-     * @return Share Экземпляр инструмента типа 'Акция'
+     * @return Share|null Экземпляр инструмента или <code>null</code>, если инструмент не найден и не требуется бросок исключения
      *
-     * @throws Exception
+     * @throws InstrumentNotFoundException
      */
-    public function shareByFigi(string $figi, bool $refresh = false): Share
+    public function shareByFigi(string $figi, bool $refresh = false, bool $raise = true): ?Share
     {
-        $instrument_type = 'share';
+        try {
+            $instrument_type = 'share';
 
-        if (!$refresh) {
-            if ($instrument = $this->getCachedInstrumentByFigi($instrument_type, $figi)) {
-                return $instrument;
-            }
-        }
-
-        if (!$this->_is_shares_loaded || $refresh) {
-            $instruments = $this->loadAllShares();
-
-            foreach ($instruments as $instrument) {
-                if ($instrument->getFigi() === $figi) {
+            if (!$refresh) {
+                if ($instrument = $this->getCachedInstrumentByFigi($instrument_type, $figi)) {
                     return $instrument;
                 }
             }
-        }
 
-        throw new Exception('Instrument is not found');
+            if (!$this->_is_shares_loaded || $refresh) {
+                $instruments = $this->loadAllShares();
+
+                foreach ($instruments as $instrument) {
+                    if ($instrument->getFigi() === $figi) {
+                        return $instrument;
+                    }
+                }
+            }
+
+            throw new InstrumentNotFoundException('Instrument is not found');
+        } catch (InstrumentNotFoundException $e) {
+            if ($raise) {
+                throw  $e;
+            }
+
+            return null;
+        }
+    }
+
+    /**
+     * Метод поиска инструмента по FIGI
+     *
+     * @param string $figi FIGI инструмента
+     *
+     * @param bool $raise Признак необходимость бросить исключение, если инструмент не найден. По умолчанию равно <code>true</code>
+     *
+     * @return Bond|Currency|Etf|Future|Instrument|Share|null Найденный экземпляр инструмента или <code>null</code>
+     *
+     * @throws InstrumentNotFoundException
+     */
+    public function searchByFigi(string $figi, bool $raise = true)
+    {
+        try {
+            for ($i = 1; $i <= 3; $i++) {
+                if ($i === 1) {
+                    /** В первый раунд поиска ищем по доступному кэшу среди типизированных экземпляров инструментов */
+                    if ($instrument = $this->getCachedInstrumentByFigi('share', $figi)) {
+                        return $instrument;
+                    }
+
+                    if ($instrument = $this->getCachedInstrumentByFigi('etf', $figi)) {
+                        return $instrument;
+                    }
+
+                    if ($instrument = $this->getCachedInstrumentByFigi('currency', $figi)) {
+                        return $instrument;
+                    }
+
+                    if ($instrument = $this->getCachedInstrumentByFigi('bond', $figi)) {
+                        return $instrument;
+                    }
+
+                    if ($instrument = $this->getCachedInstrumentByFigi('future', $figi)) {
+                        return $instrument;
+                    }
+                } elseif ($i === 2) {
+                    /** Во второй раунд поиска дозагружаем справочники через API и ищем по ним среди типизированных экземпляров инструментов */
+                    if (!$this->_is_shares_loaded) {
+                        $instruments = $this->loadAllShares();
+
+                        foreach ($instruments as $instrument) {
+                            if ($instrument->getFigi() === $figi) {
+                                return $instrument;
+                            }
+                        }
+                    }
+
+                    if (!$this->_is_etfs_loaded) {
+                        $instruments = $this->loadAllEtfs();
+
+                        foreach ($instruments as $instrument) {
+                            if ($instrument->getFigi() === $figi) {
+                                return $instrument;
+                            }
+                        }
+                    }
+
+                    if (!$this->_is_currencies_loaded) {
+                        $instruments = $this->loadAllCurrencies();
+
+                        foreach ($instruments as $instrument) {
+                            if ($instrument->getFigi() === $figi) {
+                                return $instrument;
+                            }
+                        }
+                    }
+
+                    if (!$this->_is_bonds_loaded) {
+                        $instruments = $this->loadAllBonds();
+
+                        foreach ($instruments as $instrument) {
+                            if ($instrument->getFigi() === $figi) {
+                                return $instrument;
+                            }
+                        }
+                    }
+
+                    if (!$this->_is_futures_loaded) {
+                        $instruments = $this->loadAllFutures();
+
+                        foreach ($instruments as $instrument) {
+                            if ($instrument->getFigi() === $figi) {
+                                return $instrument;
+                            }
+                        }
+                    }
+                } elseif ($i === 3) {
+                    /** В третий раунд поиска ищем не типизированный экземпляр инструмента */
+                    if ($instrument = $this->instrumentByFigi($figi, false, false)) {
+                        return $instrument;
+                    }
+                }
+            }
+
+            throw new InstrumentNotFoundException('Instrument is not found');
+        } catch (InstrumentNotFoundException $e) {
+            if ($raise) {
+                throw  $e;
+            }
+
+            return null;
+        }
+    }
+
+    /**
+     * Метод поиска инструмента по тикеру
+     *
+     * @param string $ticker Тикер инструмента
+     * @param string|null $class_name Режим торгов или <code>null</code>, тогда будет возвращен первый найденный
+     *
+     * @param bool $raise Признак необходимость бросить исключение, если инструмент не найден. По умолчанию равно <code>true</code>
+     *
+     * @return Bond|Currency|Etf|Future|Instrument|Share|null Найденный экземпляр инструмента или <code>null</code>
+     *
+     * @throws InstrumentNotFoundException
+     */
+    public function searchByTicker(string $ticker, string $class_name = null, bool $raise = true)
+    {
+        try {
+            for ($i = 1; $i <= 2; $i++) {
+                if ($i === 1) {
+                    /** В первый раунд поиска ищем по доступному кэшу среди типизированных экземпляров инструментов */
+                    if ($instrument = $this->getCachedInstrumentByTicker('share', $ticker, $class_name)) {
+                        return $instrument;
+                    }
+
+                    if ($instrument = $this->getCachedInstrumentByTicker('etf', $ticker, $class_name)) {
+                        return $instrument;
+                    }
+
+                    if ($instrument = $this->getCachedInstrumentByTicker('currency', $ticker, $class_name)) {
+                        return $instrument;
+                    }
+
+                    if ($instrument = $this->getCachedInstrumentByTicker('bond', $ticker, $class_name)) {
+                        return $instrument;
+                    }
+
+                    if ($instrument = $this->getCachedInstrumentByTicker('future', $ticker, $class_name)) {
+                        return $instrument;
+                    }
+                } elseif ($i === 2) {
+                    /** Во второй раунд поиска ищем через методы получения типизированных экземпляров инструментов */
+
+                    if ($instrument = $this->shareByTicker($ticker, $class_name, false, false)) {
+                        return $instrument;
+                    }
+
+                    if ($instrument = $this->etfByTicker($ticker, $class_name, false, false)) {
+                        return $instrument;
+                    }
+
+                    if ($instrument = $this->currencyByTicker($ticker, $class_name, false, false)) {
+                        return $instrument;
+                    }
+
+                    if ($instrument = $this->bondByTicker($ticker, $class_name, false, false)) {
+                        return $instrument;
+                    }
+
+                    if ($instrument = $this->futureByTicker($ticker, $class_name, false, false)) {
+                        return $instrument;
+                    }
+
+                    if ($instrument = $this->instrumentByTicker($ticker, $class_name, false, false)) {
+                        return $instrument;
+                    }
+                }
+            }
+
+            throw new InstrumentNotFoundException('Instrument is not found');
+        } catch (InstrumentNotFoundException $e) {
+            if ($raise) {
+                throw  $e;
+            }
+
+            return null;
+        }
     }
 
     /**
@@ -644,45 +911,53 @@ class InstrumentsProvider extends BaseDataProvider
      * @param string $ticker Тикер инструмента
      * @param string|null $class_name Режим торгов или <code>null</code>, тогда будет возвращен первый найденный
      * @param bool $refresh Признак необходимости получить новые данные из API Tinkoff Invest и обновить кэш. По умолчанию равно <code>false</code>
+     * @param bool $raise Признак необходимость бросить исключение, если инструмент не найден. По умолчанию равно <code>true</code>
      *
-     * @return Instrument Экземпляр инструмента
+     * @return Instrument|null Экземпляр инструмента или <code>null</code>, если инструмент не найден и не требуется бросок исключения
      *
      * @throws Exception
      */
-    public function instrumentByTicker(string $ticker, string $class_name = null, bool $refresh = false): Instrument
+    public function instrumentByTicker(string $ticker, string $class_name = null, bool $refresh = false, bool $raise = true): ?Instrument
     {
-        $instrument_type = 'instrument';
-        $instrument_id_type = InstrumentIdType::INSTRUMENT_ID_TYPE_TICKER;
+        try {
+            $instrument_type = 'instrument';
+            $instrument_id_type = InstrumentIdType::INSTRUMENT_ID_TYPE_TICKER;
 
-        if (!$refresh) {
-            if ($instrument = $this->getCachedInstrumentByTicker($instrument_type, $ticker, $class_name)) {
+            if (!$refresh) {
+                if ($instrument = $this->getCachedInstrumentByTicker($instrument_type, $ticker, $class_name)) {
+                    return $instrument;
+                }
+            }
+
+            if ($class_name) {
+                $instruments_request = new InstrumentRequest();
+                $instruments_request->setId($ticker);
+                $instruments_request->setIdType($instrument_id_type);
+                $instruments_request->setClassCode($class_name);
+
+                /** @var InstrumentResponse $response */
+                list($response, $status) = $this->_clients_factory_model
+                    ->instrumentsServiceClient
+                    ->GetInstrumentBy($instruments_request)
+                    ->wait();
+
+                if (!$response || !($instrument = $response->getInstrument())) {
+                    throw new InstrumentNotFoundException('Instrument is not found');
+                }
+
+                $this->cacheToDictionary([$instrument]);
+
                 return $instrument;
             }
-        }
 
-        if ($class_name) {
-            $instruments_request = new InstrumentRequest();
-            $instruments_request->setId($ticker);
-            $instruments_request->setIdType($instrument_id_type);
-            $instruments_request->setClassCode($class_name);
-
-            /** @var InstrumentResponse $response */
-            list($response, $status) = $this->_clients_factory_model
-                ->instrumentsServiceClient
-                ->GetInstrumentBy($instruments_request)
-                ->wait()
-            ;
-
-            if (!$response || !($instrument = $response->getInstrument())) {
-                throw new Exception('Instrument is not found');
+            throw new InstrumentNotFoundException('Instrument is not found');
+        } catch (InstrumentNotFoundException $e) {
+            if ($raise) {
+                throw  $e;
             }
 
-            $this->cacheToDictionary([$instrument]);
-
-            return $instrument;
+            return null;
         }
-
-        throw new Exception('Instrument not found');
     }
 
     /**
@@ -692,39 +967,48 @@ class InstrumentsProvider extends BaseDataProvider
      *
      * @param string $figi FIGI инструмента
      * @param bool $refresh Признак необходимости получить новые данные из API Tinkoff Invest и обновить кэш. По умолчанию равно <code>false</code>
+     * @param bool $raise Признак необходимость бросить исключение, если инструмент не найден. По умолчанию равно <code>true</code>
      *
-     * @return Instrument Экземпляр инструмента
+     * @return Instrument|null Экземпляр инструмента или <code>null</code>, если инструмент не найден и не требуется бросок исключения
      *
-     * @throws Exception
+     * @throws InstrumentNotFoundException
      */
-    public function instrumentByFigi(string $figi, bool $refresh = false): Instrument
+    public function instrumentByFigi(string $figi, bool $refresh = false, bool $raise = true): ?Instrument
     {
-        $instrument_type = 'instrument';
-        $instrument_id_type = InstrumentIdType::INSTRUMENT_ID_TYPE_FIGI;
+        try {
+            $instrument_type = 'instrument';
+            $instrument_id_type = InstrumentIdType::INSTRUMENT_ID_TYPE_FIGI;
 
-        if (!$refresh) {
-            if ($instrument = $this->getCachedInstrumentByFigi($instrument_type, $figi)) {
-                return $instrument;
+            if (!$refresh) {
+                if ($instrument = $this->getCachedInstrumentByFigi($instrument_type, $figi)) {
+                    return $instrument;
+                }
             }
+
+            $instruments_request = new InstrumentRequest();
+            $instruments_request->setId($figi);
+            $instruments_request->setIdType($instrument_id_type);
+
+            /** @var InstrumentResponse $response */
+            list($response, $status) = $this->_clients_factory_model
+                ->instrumentsServiceClient
+                ->GetInstrumentBy($instruments_request)
+                ->wait();
+
+            if (!$response || !($instrument = $response->getInstrument())) {
+                throw new InstrumentNotFoundException('Instrument is not found');
+            }
+
+            $this->cacheToDictionary([$instrument]);
+
+            return $instrument;
+        } catch (InstrumentNotFoundException $e) {
+            if ($raise) {
+                throw  $e;
+            }
+
+            return null;
         }
-
-        $instruments_request = new InstrumentRequest();
-        $instruments_request->setId($figi);
-        $instruments_request->setIdType($instrument_id_type);
-
-        /** @var InstrumentResponse $response */
-        list($response, $status) = $this->_clients_factory_model
-            ->instrumentsServiceClient
-            ->GetInstrumentBy($instruments_request)
-            ->wait();
-
-        if (!$response || !($instrument = $response->getInstrument())) {
-            throw new Exception('Instrument is not found');
-        }
-
-        $this->cacheToDictionary([$instrument]);
-
-        return $instrument;
     }
 
     /**
