@@ -51,6 +51,18 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation close_price = 6;</code>
      */
     protected $close_price = null;
+    /**
+     *Верхний лимит цены.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_up = 7;</code>
+     */
+    protected $limit_up = null;
+    /**
+     *Нижний лимит цены.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_down = 8;</code>
+     */
+    protected $limit_down = null;
 
     /**
      * Constructor.
@@ -70,6 +82,10 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      *          Цена последней сделки.
      *     @type \Tinkoff\Invest\V1\Quotation $close_price
      *          Цена закрытия.
+     *     @type \Tinkoff\Invest\V1\Quotation $limit_up
+     *          Верхний лимит цены.
+     *     @type \Tinkoff\Invest\V1\Quotation $limit_down
+     *          Нижний лимит цены.
      * }
      */
     public function __construct($data = NULL) {
@@ -249,6 +265,78 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->close_price = $var;
+
+        return $this;
+    }
+
+    /**
+     *Верхний лимит цены.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_up = 7;</code>
+     * @return \Tinkoff\Invest\V1\Quotation|null
+     */
+    public function getLimitUp()
+    {
+        return isset($this->limit_up) ? $this->limit_up : null;
+    }
+
+    public function hasLimitUp()
+    {
+        return isset($this->limit_up);
+    }
+
+    public function clearLimitUp()
+    {
+        unset($this->limit_up);
+    }
+
+    /**
+     *Верхний лимит цены.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_up = 7;</code>
+     * @param \Tinkoff\Invest\V1\Quotation $var
+     * @return $this
+     */
+    public function setLimitUp($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
+        $this->limit_up = $var;
+
+        return $this;
+    }
+
+    /**
+     *Нижний лимит цены.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_down = 8;</code>
+     * @return \Tinkoff\Invest\V1\Quotation|null
+     */
+    public function getLimitDown()
+    {
+        return isset($this->limit_down) ? $this->limit_down : null;
+    }
+
+    public function hasLimitDown()
+    {
+        return isset($this->limit_down);
+    }
+
+    public function clearLimitDown()
+    {
+        unset($this->limit_down);
+    }
+
+    /**
+     *Нижний лимит цены.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_down = 8;</code>
+     * @param \Tinkoff\Invest\V1\Quotation $var
+     * @return $this
+     */
+    public function setLimitDown($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
+        $this->limit_down = $var;
 
         return $this;
     }

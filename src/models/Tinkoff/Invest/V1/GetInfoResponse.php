@@ -33,6 +33,12 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated string qualified_for_work_with = 3;</code>
      */
     private $qualified_for_work_with;
+    /**
+     *Наименование тарифа пользователя.
+     *
+     * Generated from protobuf field <code>string tariff = 4;</code>
+     */
+    protected $tariff = '';
 
     /**
      * Constructor.
@@ -46,6 +52,8 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
      *          Признак квалифицированного инвестора.
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $qualified_for_work_with
      *          Набор требующих тестирования инструментов и возможностей, с которыми может работать пользователь.
+     *     @type string $tariff
+     *          Наименование тарифа пользователя.
      * }
      */
     public function __construct($data = NULL) {
@@ -127,6 +135,32 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->qualified_for_work_with = $arr;
+
+        return $this;
+    }
+
+    /**
+     *Наименование тарифа пользователя.
+     *
+     * Generated from protobuf field <code>string tariff = 4;</code>
+     * @return string
+     */
+    public function getTariff()
+    {
+        return $this->tariff;
+    }
+
+    /**
+     *Наименование тарифа пользователя.
+     *
+     * Generated from protobuf field <code>string tariff = 4;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTariff($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->tariff = $var;
 
         return $this;
     }

@@ -77,6 +77,7 @@ class OperationsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Метод получения брокерского отчёта.
      * @param \Tinkoff\Invest\V1\BrokerReportRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -87,6 +88,21 @@ class OperationsServiceClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.OperationsService/GetBrokerReport',
         $argument,
         ['\Tinkoff\Invest\V1\BrokerReportResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Метод получения отчёта "Справка о доходах за пределами РФ".
+     * @param \Tinkoff\Invest\V1\GetDividendsForeignIssuerRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetDividendsForeignIssuer(\Tinkoff\Invest\V1\GetDividendsForeignIssuerRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.OperationsService/GetDividendsForeignIssuer',
+        $argument,
+        ['\Tinkoff\Invest\V1\GetDividendsForeignIssuerResponse', 'decode'],
         $metadata, $options);
     }
 

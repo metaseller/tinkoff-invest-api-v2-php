@@ -11,7 +11,8 @@ theme:
 
 nav:
 - Начало работы: index.md
-- Введение:
+- Полезная информация:
+  - Глоссарий: glossary.md
   - "Протокол взаимодействия": grpc.md
   - "Лимитная политика": limits.md
   - "Токен доступа": token.md
@@ -20,13 +21,23 @@ nav:
   - "Алгоритмический трейдинг": algorithmic_trading.md
   - "Индикаторы технического анализа": tech_indicators.md
   - "Торговые площадки и режимы торгов": markets.md
+  - "Торговые статусы инструментов и расписание торгов": faq_trading_status.md
   - "Порядок работы с историческими данными": load_history.md
-  - "Работа с торговыми поручениями": faq_orders.md
+  - "Работа с торговыми поручениями": orders_details.md
   - "Квалифицированный инвестор": accredited_investor.md
-- FAQ:
-  - Глоссарий: glossary.md
-  - "Часто задаваемые вопросы": faq.md
   - "Правила обработки корпоративных действий": faq_corp_action.md
+- Ответы на частые вопросы:
+  - "Часто задаваемые вопросы": faq.md
+  - "FAQ Сервиса инструментов": faq_instruments.md
+  - "FAQ Сервис торговых поручений": faq_orders.md
+  - "FAQ Сервис котировок": faq_marketdata.md
+  - "FAQ Сервиса операций": faq_operations.md
+  - "FAQ Сервиса аккаунтов": faq_users.md
+  - "FAQ Песочница": faq_sandbox.md
+- Языки программирования:
+  - Python: faq_python.md
+  - Java: faq_java.md
+  - С#: faq_csharp.md
 - Сервис аккаунтов:
   - Описание: head-users.md
   - Методы: users.md

@@ -93,6 +93,12 @@ class Operation extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OperationType operation_type = 13;</code>
      */
     protected $operation_type = 0;
+    /**
+     *Массив сделок
+     *
+     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OperationTrade trades = 14;</code>
+     */
+    private $trades;
 
     /**
      * Constructor.
@@ -126,6 +132,8 @@ class Operation extends \Google\Protobuf\Internal\Message
      *          Текстовое описание типа операции
      *     @type int $operation_type
      *          Тип операции
+     *     @type \Tinkoff\Invest\V1\OperationTrade[]|\Google\Protobuf\Internal\RepeatedField $trades
+     *          Массив сделок
      * }
      */
     public function __construct($data = NULL) {
@@ -497,6 +505,32 @@ class Operation extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\OperationType::class);
         $this->operation_type = $var;
+
+        return $this;
+    }
+
+    /**
+     *Массив сделок
+     *
+     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OperationTrade trades = 14;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getTrades()
+    {
+        return $this->trades;
+    }
+
+    /**
+     *Массив сделок
+     *
+     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OperationTrade trades = 14;</code>
+     * @param \Tinkoff\Invest\V1\OperationTrade[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setTrades($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\OperationTrade::class);
+        $this->trades = $arr;
 
         return $this;
     }

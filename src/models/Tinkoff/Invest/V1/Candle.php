@@ -63,6 +63,12 @@ class Candle extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.google.protobuf.Timestamp time = 8;</code>
      */
     protected $time = null;
+    /**
+     *Время последней сделки, вошедшей в свечу в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp last_trade_ts = 9;</code>
+     */
+    protected $last_trade_ts = null;
 
     /**
      * Constructor.
@@ -86,6 +92,8 @@ class Candle extends \Google\Protobuf\Internal\Message
      *          Объём сделок в лотах.
      *     @type \Google\Protobuf\Timestamp $time
      *          Время свечи в часовом поясе UTC.
+     *     @type \Google\Protobuf\Timestamp $last_trade_ts
+     *          Время последней сделки, вошедшей в свечу в часовом поясе UTC.
      * }
      */
     public function __construct($data = NULL) {
@@ -347,6 +355,42 @@ class Candle extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->time = $var;
+
+        return $this;
+    }
+
+    /**
+     *Время последней сделки, вошедшей в свечу в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp last_trade_ts = 9;</code>
+     * @return \Google\Protobuf\Timestamp|null
+     */
+    public function getLastTradeTs()
+    {
+        return isset($this->last_trade_ts) ? $this->last_trade_ts : null;
+    }
+
+    public function hasLastTradeTs()
+    {
+        return isset($this->last_trade_ts);
+    }
+
+    public function clearLastTradeTs()
+    {
+        unset($this->last_trade_ts);
+    }
+
+    /**
+     *Время последней сделки, вошедшей в свечу в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp last_trade_ts = 9;</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setLastTradeTs($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        $this->last_trade_ts = $var;
 
         return $this;
     }

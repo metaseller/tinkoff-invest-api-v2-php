@@ -31,6 +31,8 @@ class MarketDataRequest extends \Google\Protobuf\Internal\Message
      *          Запрос подписки на ленту обезличенных сделок.
      *     @type \Tinkoff\Invest\V1\SubscribeInfoRequest $subscribe_info_request
      *          Запрос подписки на торговые статусы инструментов.
+     *     @type \Tinkoff\Invest\V1\SubscribeLastPriceRequest $subscribe_last_price_request
+     *          Запрос подписки на последние цены.
      * }
      */
     public function __construct($data = NULL) {
@@ -158,6 +160,37 @@ class MarketDataRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\SubscribeInfoRequest::class);
         $this->writeOneof(4, $var);
+
+        return $this;
+    }
+
+    /**
+     *Запрос подписки на последние цены.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscribeLastPriceRequest subscribe_last_price_request = 5;</code>
+     * @return \Tinkoff\Invest\V1\SubscribeLastPriceRequest|null
+     */
+    public function getSubscribeLastPriceRequest()
+    {
+        return $this->readOneof(5);
+    }
+
+    public function hasSubscribeLastPriceRequest()
+    {
+        return $this->hasOneof(5);
+    }
+
+    /**
+     *Запрос подписки на последние цены.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscribeLastPriceRequest subscribe_last_price_request = 5;</code>
+     * @param \Tinkoff\Invest\V1\SubscribeLastPriceRequest $var
+     * @return $this
+     */
+    public function setSubscribeLastPriceRequest($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\SubscribeLastPriceRequest::class);
+        $this->writeOneof(5, $var);
 
         return $this;
     }

@@ -41,6 +41,10 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
      *          Торговый статус.
      *     @type \Tinkoff\Invest\V1\Ping $ping
      *          Проверка активности стрима.
+     *     @type \Tinkoff\Invest\V1\SubscribeLastPriceResponse $subscribe_last_price_response
+     *          Результат подписки на последние цены инструментов.
+     *     @type \Tinkoff\Invest\V1\LastPrice $last_price
+     *          Последняя цена.
      * }
      */
     public function __construct($data = NULL) {
@@ -323,6 +327,68 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Ping::class);
         $this->writeOneof(9, $var);
+
+        return $this;
+    }
+
+    /**
+     *Результат подписки на последние цены инструментов.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscribeLastPriceResponse subscribe_last_price_response = 10;</code>
+     * @return \Tinkoff\Invest\V1\SubscribeLastPriceResponse|null
+     */
+    public function getSubscribeLastPriceResponse()
+    {
+        return $this->readOneof(10);
+    }
+
+    public function hasSubscribeLastPriceResponse()
+    {
+        return $this->hasOneof(10);
+    }
+
+    /**
+     *Результат подписки на последние цены инструментов.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscribeLastPriceResponse subscribe_last_price_response = 10;</code>
+     * @param \Tinkoff\Invest\V1\SubscribeLastPriceResponse $var
+     * @return $this
+     */
+    public function setSubscribeLastPriceResponse($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\SubscribeLastPriceResponse::class);
+        $this->writeOneof(10, $var);
+
+        return $this;
+    }
+
+    /**
+     *Последняя цена.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.LastPrice last_price = 11;</code>
+     * @return \Tinkoff\Invest\V1\LastPrice|null
+     */
+    public function getLastPrice()
+    {
+        return $this->readOneof(11);
+    }
+
+    public function hasLastPrice()
+    {
+        return $this->hasOneof(11);
+    }
+
+    /**
+     *Последняя цена.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.LastPrice last_price = 11;</code>
+     * @param \Tinkoff\Invest\V1\LastPrice $var
+     * @return $this
+     */
+    public function setLastPrice($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\LastPrice::class);
+        $this->writeOneof(11, $var);
 
         return $this;
     }

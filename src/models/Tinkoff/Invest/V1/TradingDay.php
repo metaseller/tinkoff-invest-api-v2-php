@@ -40,17 +40,59 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      */
     protected $end_time = null;
     /**
-     * Время начала подачи заявки по часовому поясу UTC.
+     * Время начала аукциона открытия в часовом поясе UTC.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp market_order_start_time = 5;</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp opening_auction_start_time = 7;</code>
      */
-    protected $market_order_start_time = null;
+    protected $opening_auction_start_time = null;
     /**
-     * Время окончания подачи заявки по часовому поясу UTC.
+     * Время окончания аукциона закрытия в часовом поясе UTC.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp market_order_end_time = 6;</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp closing_auction_end_time = 8;</code>
      */
-    protected $market_order_end_time = null;
+    protected $closing_auction_end_time = null;
+    /**
+     * Время начала аукциона открытия вечерней сессии в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp evening_opening_auction_start_time = 9;</code>
+     */
+    protected $evening_opening_auction_start_time = null;
+    /**
+     * Время начала вечерней сессии в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp evening_start_time = 10;</code>
+     */
+    protected $evening_start_time = null;
+    /**
+     * Время окончания вечерней сессии в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp evening_end_time = 11;</code>
+     */
+    protected $evening_end_time = null;
+    /**
+     * Время начала основного клиринга в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp clearing_start_time = 12;</code>
+     */
+    protected $clearing_start_time = null;
+    /**
+     * Время окончания основного клиринга в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp clearing_end_time = 13;</code>
+     */
+    protected $clearing_end_time = null;
+    /**
+     * Время начала премаркета в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp premarket_start_time = 14;</code>
+     */
+    protected $premarket_start_time = null;
+    /**
+     * Время окончания премаркета в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp premarket_end_time = 15;</code>
+     */
+    protected $premarket_end_time = null;
 
     /**
      * Constructor.
@@ -66,10 +108,24 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      *           Время начала торгов по часовому поясу UTC.
      *     @type \Google\Protobuf\Timestamp $end_time
      *           Время окончания торгов по часовому поясу UTC.
-     *     @type \Google\Protobuf\Timestamp $market_order_start_time
-     *           Время начала подачи заявки по часовому поясу UTC.
-     *     @type \Google\Protobuf\Timestamp $market_order_end_time
-     *           Время окончания подачи заявки по часовому поясу UTC.
+     *     @type \Google\Protobuf\Timestamp $opening_auction_start_time
+     *           Время начала аукциона открытия в часовом поясе UTC.
+     *     @type \Google\Protobuf\Timestamp $closing_auction_end_time
+     *           Время окончания аукциона закрытия в часовом поясе UTC.
+     *     @type \Google\Protobuf\Timestamp $evening_opening_auction_start_time
+     *           Время начала аукциона открытия вечерней сессии в часовом поясе UTC.
+     *     @type \Google\Protobuf\Timestamp $evening_start_time
+     *           Время начала вечерней сессии в часовом поясе UTC.
+     *     @type \Google\Protobuf\Timestamp $evening_end_time
+     *           Время окончания вечерней сессии в часовом поясе UTC.
+     *     @type \Google\Protobuf\Timestamp $clearing_start_time
+     *           Время начала основного клиринга в часовом поясе UTC.
+     *     @type \Google\Protobuf\Timestamp $clearing_end_time
+     *           Время окончания основного клиринга в часовом поясе UTC.
+     *     @type \Google\Protobuf\Timestamp $premarket_start_time
+     *           Время начала премаркета в часовом поясе UTC.
+     *     @type \Google\Protobuf\Timestamp $premarket_end_time
+     *           Время окончания премаркета в часовом поясе UTC.
      * }
      */
     public function __construct($data = NULL) {
@@ -212,73 +268,325 @@ class TradingDay extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Время начала подачи заявки по часовому поясу UTC.
+     * Время начала аукциона открытия в часовом поясе UTC.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp market_order_start_time = 5;</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp opening_auction_start_time = 7;</code>
      * @return \Google\Protobuf\Timestamp|null
      */
-    public function getMarketOrderStartTime()
+    public function getOpeningAuctionStartTime()
     {
-        return isset($this->market_order_start_time) ? $this->market_order_start_time : null;
+        return isset($this->opening_auction_start_time) ? $this->opening_auction_start_time : null;
     }
 
-    public function hasMarketOrderStartTime()
+    public function hasOpeningAuctionStartTime()
     {
-        return isset($this->market_order_start_time);
+        return isset($this->opening_auction_start_time);
     }
 
-    public function clearMarketOrderStartTime()
+    public function clearOpeningAuctionStartTime()
     {
-        unset($this->market_order_start_time);
+        unset($this->opening_auction_start_time);
     }
 
     /**
-     * Время начала подачи заявки по часовому поясу UTC.
+     * Время начала аукциона открытия в часовом поясе UTC.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp market_order_start_time = 5;</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp opening_auction_start_time = 7;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setMarketOrderStartTime($var)
+    public function setOpeningAuctionStartTime($var)
     {
         GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
-        $this->market_order_start_time = $var;
+        $this->opening_auction_start_time = $var;
 
         return $this;
     }
 
     /**
-     * Время окончания подачи заявки по часовому поясу UTC.
+     * Время окончания аукциона закрытия в часовом поясе UTC.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp market_order_end_time = 6;</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp closing_auction_end_time = 8;</code>
      * @return \Google\Protobuf\Timestamp|null
      */
-    public function getMarketOrderEndTime()
+    public function getClosingAuctionEndTime()
     {
-        return isset($this->market_order_end_time) ? $this->market_order_end_time : null;
+        return isset($this->closing_auction_end_time) ? $this->closing_auction_end_time : null;
     }
 
-    public function hasMarketOrderEndTime()
+    public function hasClosingAuctionEndTime()
     {
-        return isset($this->market_order_end_time);
+        return isset($this->closing_auction_end_time);
     }
 
-    public function clearMarketOrderEndTime()
+    public function clearClosingAuctionEndTime()
     {
-        unset($this->market_order_end_time);
+        unset($this->closing_auction_end_time);
     }
 
     /**
-     * Время окончания подачи заявки по часовому поясу UTC.
+     * Время окончания аукциона закрытия в часовом поясе UTC.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp market_order_end_time = 6;</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp closing_auction_end_time = 8;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setMarketOrderEndTime($var)
+    public function setClosingAuctionEndTime($var)
     {
         GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
-        $this->market_order_end_time = $var;
+        $this->closing_auction_end_time = $var;
+
+        return $this;
+    }
+
+    /**
+     * Время начала аукциона открытия вечерней сессии в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp evening_opening_auction_start_time = 9;</code>
+     * @return \Google\Protobuf\Timestamp|null
+     */
+    public function getEveningOpeningAuctionStartTime()
+    {
+        return isset($this->evening_opening_auction_start_time) ? $this->evening_opening_auction_start_time : null;
+    }
+
+    public function hasEveningOpeningAuctionStartTime()
+    {
+        return isset($this->evening_opening_auction_start_time);
+    }
+
+    public function clearEveningOpeningAuctionStartTime()
+    {
+        unset($this->evening_opening_auction_start_time);
+    }
+
+    /**
+     * Время начала аукциона открытия вечерней сессии в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp evening_opening_auction_start_time = 9;</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setEveningOpeningAuctionStartTime($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        $this->evening_opening_auction_start_time = $var;
+
+        return $this;
+    }
+
+    /**
+     * Время начала вечерней сессии в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp evening_start_time = 10;</code>
+     * @return \Google\Protobuf\Timestamp|null
+     */
+    public function getEveningStartTime()
+    {
+        return isset($this->evening_start_time) ? $this->evening_start_time : null;
+    }
+
+    public function hasEveningStartTime()
+    {
+        return isset($this->evening_start_time);
+    }
+
+    public function clearEveningStartTime()
+    {
+        unset($this->evening_start_time);
+    }
+
+    /**
+     * Время начала вечерней сессии в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp evening_start_time = 10;</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setEveningStartTime($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        $this->evening_start_time = $var;
+
+        return $this;
+    }
+
+    /**
+     * Время окончания вечерней сессии в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp evening_end_time = 11;</code>
+     * @return \Google\Protobuf\Timestamp|null
+     */
+    public function getEveningEndTime()
+    {
+        return isset($this->evening_end_time) ? $this->evening_end_time : null;
+    }
+
+    public function hasEveningEndTime()
+    {
+        return isset($this->evening_end_time);
+    }
+
+    public function clearEveningEndTime()
+    {
+        unset($this->evening_end_time);
+    }
+
+    /**
+     * Время окончания вечерней сессии в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp evening_end_time = 11;</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setEveningEndTime($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        $this->evening_end_time = $var;
+
+        return $this;
+    }
+
+    /**
+     * Время начала основного клиринга в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp clearing_start_time = 12;</code>
+     * @return \Google\Protobuf\Timestamp|null
+     */
+    public function getClearingStartTime()
+    {
+        return isset($this->clearing_start_time) ? $this->clearing_start_time : null;
+    }
+
+    public function hasClearingStartTime()
+    {
+        return isset($this->clearing_start_time);
+    }
+
+    public function clearClearingStartTime()
+    {
+        unset($this->clearing_start_time);
+    }
+
+    /**
+     * Время начала основного клиринга в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp clearing_start_time = 12;</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setClearingStartTime($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        $this->clearing_start_time = $var;
+
+        return $this;
+    }
+
+    /**
+     * Время окончания основного клиринга в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp clearing_end_time = 13;</code>
+     * @return \Google\Protobuf\Timestamp|null
+     */
+    public function getClearingEndTime()
+    {
+        return isset($this->clearing_end_time) ? $this->clearing_end_time : null;
+    }
+
+    public function hasClearingEndTime()
+    {
+        return isset($this->clearing_end_time);
+    }
+
+    public function clearClearingEndTime()
+    {
+        unset($this->clearing_end_time);
+    }
+
+    /**
+     * Время окончания основного клиринга в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp clearing_end_time = 13;</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setClearingEndTime($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        $this->clearing_end_time = $var;
+
+        return $this;
+    }
+
+    /**
+     * Время начала премаркета в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp premarket_start_time = 14;</code>
+     * @return \Google\Protobuf\Timestamp|null
+     */
+    public function getPremarketStartTime()
+    {
+        return isset($this->premarket_start_time) ? $this->premarket_start_time : null;
+    }
+
+    public function hasPremarketStartTime()
+    {
+        return isset($this->premarket_start_time);
+    }
+
+    public function clearPremarketStartTime()
+    {
+        unset($this->premarket_start_time);
+    }
+
+    /**
+     * Время начала премаркета в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp premarket_start_time = 14;</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setPremarketStartTime($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        $this->premarket_start_time = $var;
+
+        return $this;
+    }
+
+    /**
+     * Время окончания премаркета в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp premarket_end_time = 15;</code>
+     * @return \Google\Protobuf\Timestamp|null
+     */
+    public function getPremarketEndTime()
+    {
+        return isset($this->premarket_end_time) ? $this->premarket_end_time : null;
+    }
+
+    public function hasPremarketEndTime()
+    {
+        return isset($this->premarket_end_time);
+    }
+
+    public function clearPremarketEndTime()
+    {
+        unset($this->premarket_end_time);
+    }
+
+    /**
+     * Время окончания премаркета в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp premarket_end_time = 15;</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setPremarketEndTime($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        $this->premarket_end_time = $var;
 
         return $this;
     }

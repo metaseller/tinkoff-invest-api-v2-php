@@ -277,6 +277,12 @@ class OperationType
      * Generated from protobuf enum <code>OPERATION_TYPE_DIV_EXT = 43;</code>
      */
     const OPERATION_TYPE_DIV_EXT = 43;
+    /**
+     *Корректировка налога по купонам
+     *
+     * Generated from protobuf enum <code>OPERATION_TYPE_TAX_CORRECTION_COUPON = 44;</code>
+     */
+    const OPERATION_TYPE_TAX_CORRECTION_COUPON = 44;
 
     private static $valueToName = [
         self::OPERATION_TYPE_UNSPECIFIED => 'OPERATION_TYPE_UNSPECIFIED',
@@ -323,6 +329,7 @@ class OperationType
         self::OPERATION_TYPE_TAX_REPO_HOLD_PROGRESSIVE => 'OPERATION_TYPE_TAX_REPO_HOLD_PROGRESSIVE',
         self::OPERATION_TYPE_TAX_REPO_REFUND_PROGRESSIVE => 'OPERATION_TYPE_TAX_REPO_REFUND_PROGRESSIVE',
         self::OPERATION_TYPE_DIV_EXT => 'OPERATION_TYPE_DIV_EXT',
+        self::OPERATION_TYPE_TAX_CORRECTION_COUPON => 'OPERATION_TYPE_TAX_CORRECTION_COUPON',
     ];
 
     public static function name($value)

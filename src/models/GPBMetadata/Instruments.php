@@ -18,7 +18,7 @@ class Instruments
         \GPBMetadata\Common::initOnce();
         $pool->internalAddGeneratedFile(
             '
-ûe
+ßp
 instruments.proto%tinkoff.public.invest.api.contract.v1common.proto"}
 TradingSchedulesRequest
 exchange (	(
@@ -28,16 +28,24 @@ class Instruments
 	exchanges (26.tinkoff.public.invest.api.contract.v1.TradingSchedule"d
 TradingSchedule
 exchange (	?
-days (21.tinkoff.public.invest.api.contract.v1.TradingDay"§
+days (21.tinkoff.public.invest.api.contract.v1.TradingDay"Œ
 
 TradingDay(
 date (2.google.protobuf.Timestamp
 is_trading_day (.
 
 start_time (2.google.protobuf.Timestamp,
-end_time (2.google.protobuf.Timestamp;
-market_order_start_time (2.google.protobuf.Timestamp9
-market_order_end_time (2.google.protobuf.Timestamp"}
+end_time (2.google.protobuf.Timestamp>
+opening_auction_start_time (2.google.protobuf.Timestamp<
+closing_auction_end_time (2.google.protobuf.TimestampF
+"evening_opening_auction_start_time	 (2.google.protobuf.Timestamp6
+evening_start_time
+ (2.google.protobuf.Timestamp4
+evening_end_time (2.google.protobuf.Timestamp7
+clearing_start_time (2.google.protobuf.Timestamp5
+clearing_end_time (2.google.protobuf.Timestamp8
+premarket_start_time (2.google.protobuf.Timestamp6
+premarket_end_time (2.google.protobuf.TimestampJJ"}
 InstrumentRequestH
 id_type (27.tinkoff.public.invest.api.contract.v1.InstrumentIdType
 
@@ -50,7 +58,23 @@ class_code (	
 
 instrument (2+.tinkoff.public.invest.api.contract.v1.Bond"Q
 BondsResponse@
-instruments (2+.tinkoff.public.invest.api.contract.v1.Bond"W
+instruments (2+.tinkoff.public.invest.api.contract.v1.Bond"w
+GetBondCouponsRequest
+figi (	(
+from (2.google.protobuf.Timestamp&
+to (2.google.protobuf.Timestamp"W
+GetBondCouponsResponse=
+events (2-.tinkoff.public.invest.api.contract.v1.Coupon"†
+Coupon
+figi (	/
+coupon_date (2.google.protobuf.Timestamp
+coupon_number (,
+fix_date (2.google.protobuf.TimestampG
+pay_one_bond (21.tinkoff.public.invest.api.contract.v1.MoneyValueF
+coupon_type (21.tinkoff.public.invest.api.contract.v1.CouponType5
+coupon_start_date (2.google.protobuf.Timestamp3
+coupon_end_date (2.google.protobuf.Timestamp
+coupon_period	 ("W
 CurrencyResponseC
 
 instrument (2/.tinkoff.public.invest.api.contract.v1.Currency"Z
@@ -318,7 +342,17 @@ regularity (	F
 yield_value	 (20.tinkoff.public.invest.api.contract.v1.Quotation.
 
 created_at
- (2.google.protobuf.Timestamp*m
+ (2.google.protobuf.Timestamp*◊
+
+CouponType
+COUPON_TYPE_UNSPECIFIED 
+COUPON_TYPE_CONSTANT
+COUPON_TYPE_FLOATING
+COUPON_TYPE_DISCOUNT
+COUPON_TYPE_MORTGAGE
+COUPON_TYPE_FIX
+COUPON_TYPE_VARIABLE
+COUPON_TYPE_OTHER*m
 InstrumentIdType
 INSTRUMENT_ID_UNSPECIFIED 
 INSTRUMENT_ID_TYPE_FIGI
@@ -336,11 +370,12 @@ created_at
 SHARE_TYPE_MLP
 SHARE_TYPE_NY_REG_SHRS
 SHARE_TYPE_CLOSED_END_FUND
-SHARE_TYPE_REIT2Ã
+SHARE_TYPE_REIT2‹
 InstrumentsServiceì
 TradingSchedules>.tinkoff.public.invest.api.contract.v1.TradingSchedulesRequest?.tinkoff.public.invest.api.contract.v1.TradingSchedulesResponsew
 BondBy8.tinkoff.public.invest.api.contract.v1.InstrumentRequest3.tinkoff.public.invest.api.contract.v1.BondResponsex
-Bonds9.tinkoff.public.invest.api.contract.v1.InstrumentsRequest4.tinkoff.public.invest.api.contract.v1.BondsResponse
+Bonds9.tinkoff.public.invest.api.contract.v1.InstrumentsRequest4.tinkoff.public.invest.api.contract.v1.BondsResponseç
+GetBondCoupons<.tinkoff.public.invest.api.contract.v1.GetBondCouponsRequest=.tinkoff.public.invest.api.contract.v1.GetBondCouponsResponse
 
 CurrencyBy8.tinkoff.public.invest.api.contract.v1.InstrumentRequest7.tinkoff.public.invest.api.contract.v1.CurrencyResponseÇ
 

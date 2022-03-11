@@ -62,6 +62,21 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Метод получения графика выплат купонов по облигации
+     * @param \Tinkoff\Invest\V1\GetBondCouponsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetBondCoupons(\Tinkoff\Invest\V1\GetBondCouponsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetBondCoupons',
+        $argument,
+        ['\Tinkoff\Invest\V1\GetBondCouponsResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * Метод получения валюты по её идентификатору.
      * @param \Tinkoff\Invest\V1\InstrumentRequest $argument input argument
      * @param array $metadata metadata
