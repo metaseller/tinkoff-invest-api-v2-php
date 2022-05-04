@@ -18,7 +18,7 @@ class Instruments
         \GPBMetadata\Common::initOnce();
         $pool->internalAddGeneratedFile(
             '
-§p
+ž®
 instruments.proto%tinkoff.public.invest.api.contract.v1common.proto"}
 TradingSchedulesRequest
 exchange (	(
@@ -94,7 +94,7 @@ instrument (2-.tinkoff.public.invest.api.contract.v1.Future"U
 
 instrument (2,.tinkoff.public.invest.api.contract.v1.Share"S
 SharesResponseA
-instruments (2,.tinkoff.public.invest.api.contract.v1.Share"°
+instruments (2,.tinkoff.public.invest.api.contract.v1.Share"‰
 Bond
 figi (	
 ticker (	
@@ -137,7 +137,9 @@ issue_size (
 perpetual_flag$ (
 amortization_flag% (M
 min_price_increment& (20.tinkoff.public.invest.api.contract.v1.Quotation 
-api_trade_available_flag\' ("Þ
+api_trade_available_flag\' (
+uid( (	J
+real_exchange) (23.tinkoff.public.invest.api.contract.v1.RealExchange"·
 Currency
 figi (	
 ticker (	
@@ -166,7 +168,9 @@ dshort_min (20.tinkoff.public.invest.api.contract.v1.Quotation
 sell_available_flag (
 iso_currency_name (	M
 min_price_increment (20.tinkoff.public.invest.api.contract.v1.Quotation 
-api_trade_available_flag ("ý
+api_trade_available_flag (
+uid (	J
+real_exchange (23.tinkoff.public.invest.api.contract.v1.RealExchange"Ö	
 Etf
 figi (	
 ticker (	
@@ -201,7 +205,10 @@ num_shares (20.tinkoff.public.invest.api.contract.v1.Quotation
 buy_available_flag (
 sell_available_flag (M
 min_price_increment (20.tinkoff.public.invest.api.contract.v1.Quotation 
-api_trade_available_flag ("ª	
+api_trade_available_flag (
+uid (	J
+real_exchange  (23.tinkoff.public.invest.api.contract.v1.RealExchange"ƒ
+
 Future
 figi (	
 ticker (	
@@ -236,7 +243,9 @@ asset_type (	
 buy_available_flag (
 sell_available_flag (M
 min_price_increment (20.tinkoff.public.invest.api.contract.v1.Quotation 
-api_trade_available_flag ("‰	
+api_trade_available_flag (
+uid (	J
+real_exchange  (23.tinkoff.public.invest.api.contract.v1.RealExchange"â	
 Share
 figi (	
 ticker (	
@@ -272,7 +281,9 @@ issue_size (
 
 share_type (20.tinkoff.public.invest.api.contract.v1.ShareTypeM
 min_price_increment (20.tinkoff.public.invest.api.contract.v1.Quotation 
-api_trade_available_flag  ("|
+api_trade_available_flag  (
+uid! (	J
+real_exchange" (23.tinkoff.public.invest.api.contract.v1.RealExchange"|
 GetAccruedInterestsRequest
 figi (	(
 from (2.google.protobuf.Timestamp&
@@ -293,7 +304,7 @@ share_type (20.tinkoff.public.invest.api.contract.v1.ShareTypeM
 min_price_increment_amount (20.tinkoff.public.invest.api.contract.v1.Quotation"[
 InstrumentResponseE
 
-instrument (21.tinkoff.public.invest.api.contract.v1.Instrument"š
+instrument (21.tinkoff.public.invest.api.contract.v1.Instrument"ó
 
 Instrument
 figi (	
@@ -322,7 +333,9 @@ dshort_min (20.tinkoff.public.invest.api.contract.v1.Quotation
 buy_available_flag (
 sell_available_flag (M
 min_price_increment (20.tinkoff.public.invest.api.contract.v1.Quotation 
-api_trade_available_flag ("u
+api_trade_available_flag (
+uid (	J
+real_exchange (23.tinkoff.public.invest.api.contract.v1.RealExchange"u
 GetDividendsRequest
 figi (	(
 from (2.google.protobuf.Timestamp&
@@ -342,7 +355,197 @@ regularity (	F
 yield_value	 (20.tinkoff.public.invest.api.contract.v1.Quotation.
 
 created_at
- (2.google.protobuf.Timestamp*×
+ (2.google.protobuf.Timestamp"
+AssetRequest
+
+id (	"P
+AssetResponse?
+asset (20.tinkoff.public.invest.api.contract.v1.AssetFull"
+AssetsRequest"N
+AssetsResponse<
+assets (2,.tinkoff.public.invest.api.contract.v1.Asset"˜
+	AssetFull
+uid (	>
+type (20.tinkoff.public.invest.api.contract.v1.AssetType
+name (	
+
+name_brief (	
+description (	.
+
+deleted_at (2.google.protobuf.Timestamp
+required_tests (	H
+currency (24.tinkoff.public.invest.api.contract.v1.AssetCurrencyH H
+security	 (24.tinkoff.public.invest.api.contract.v1.AssetSecurityH 
+gos_reg_code
+ (	
+cfi (	
+code_nsd (	
+status (	;
+brand (2,.tinkoff.public.invest.api.contract.v1.Brand.
+
+updated_at (2.google.protobuf.Timestamp
+br_code (	
+br_code_name (	K
+instruments (26.tinkoff.public.invest.api.contract.v1.AssetInstrumentB
+ext"¯
+Asset
+uid (	>
+type (20.tinkoff.public.invest.api.contract.v1.AssetType
+name (	K
+instruments (26.tinkoff.public.invest.api.contract.v1.AssetInstrument"&
+AssetCurrency
+base_currency (	"¦
+AssetSecurity
+isin (	
+type (	B
+share (21.tinkoff.public.invest.api.contract.v1.AssetShareH @
+bond (20.tinkoff.public.invest.api.contract.v1.AssetBondH K
+sp (2=.tinkoff.public.invest.api.contract.v1.AssetStructuredProductH >
+etf (2/.tinkoff.public.invest.api.contract.v1.AssetEtfH _
+clearing_certificate (2?.tinkoff.public.invest.api.contract.v1.AssetClearingCertificateH B
+ext"Õ
+
+AssetShare>
+type (20.tinkoff.public.invest.api.contract.v1.ShareTypeD
+
+issue_size (20.tinkoff.public.invest.api.contract.v1.QuotationA
+nominal (20.tinkoff.public.invest.api.contract.v1.Quotation
+nominal_currency (	
+primary_index (	G
+dividend_rate (20.tinkoff.public.invest.api.contract.v1.Quotation
+preferred_share_type (	,
+ipo_date (2.google.protobuf.Timestamp1
+registry_date	 (2.google.protobuf.Timestamp
+div_yield_flag
+ (
+
+issue_kind (	2
+placement_date (2.google.protobuf.Timestamp
+repres_isin (	I
+issue_size_plan (20.tinkoff.public.invest.api.contract.v1.QuotationE
+total_float (20.tinkoff.public.invest.api.contract.v1.Quotation"à
+	AssetBondI
+current_nominal (20.tinkoff.public.invest.api.contract.v1.Quotation
+borrow_name (	D
+
+issue_size (20.tinkoff.public.invest.api.contract.v1.QuotationA
+nominal (20.tinkoff.public.invest.api.contract.v1.Quotation
+nominal_currency (	
+
+issue_kind (	
+interest_kind (	 
+coupon_quantity_per_year (
+indexed_nominal_flag	 (
+subordinated_flag
+ (
+collateral_flag (
+tax_free_flag (
+amortization_flag (
+floating_coupon_flag (
+perpetual_flag (1
+maturity_date (2.google.protobuf.Timestamp
+return_condition (	2
+state_reg_date (2.google.protobuf.Timestamp2
+placement_date (2.google.protobuf.TimestampI
+placement_price (20.tinkoff.public.invest.api.contract.v1.QuotationI
+issue_size_plan (20.tinkoff.public.invest.api.contract.v1.Quotation" 
+AssetStructuredProduct
+borrow_name (	A
+nominal (20.tinkoff.public.invest.api.contract.v1.Quotation
+nominal_currency (	J
+type (2<.tinkoff.public.invest.api.contract.v1.StructuredProductType
+logic_portfolio (	D
+
+asset_type (20.tinkoff.public.invest.api.contract.v1.AssetType
+basic_asset (	H
+safety_barrier (20.tinkoff.public.invest.api.contract.v1.Quotation1
+maturity_date	 (2.google.protobuf.TimestampI
+issue_size_plan
+ (20.tinkoff.public.invest.api.contract.v1.QuotationD
+
+issue_size (20.tinkoff.public.invest.api.contract.v1.Quotation2
+placement_date (2.google.protobuf.Timestamp
+
+issue_kind (	"Ø
+
+AssetEtfG
+total_expense (20.tinkoff.public.invest.api.contract.v1.QuotationE
+hurdle_rate (20.tinkoff.public.invest.api.contract.v1.QuotationI
+performance_fee (20.tinkoff.public.invest.api.contract.v1.QuotationJ
+fixed_commission (20.tinkoff.public.invest.api.contract.v1.Quotation
+payment_type (	
+watermark_flag (E
+buy_premium (20.tinkoff.public.invest.api.contract.v1.QuotationG
+sell_discount (20.tinkoff.public.invest.api.contract.v1.Quotation
+rebalancing_flag	 (
+rebalancing_freq
+ (	
+management_type (	
+primary_index (	
+
+focus_type (	
+leveraged_flag (C
+	num_share (20.tinkoff.public.invest.api.contract.v1.Quotation
+
+ucits_flag (1
+released_date (2.google.protobuf.Timestamp
+description (	!
+primary_index_description (	
+primary_index_company (	O
+index_recovery_period (20.tinkoff.public.invest.api.contract.v1.Quotation
+	inav_code (	
+div_yield_flag (L
+expense_commission (20.tinkoff.public.invest.api.contract.v1.QuotationV
+primary_index_tracking_error (20.tinkoff.public.invest.api.contract.v1.Quotation
+rebalancing_plan (	
+tax_rate (	5
+rebalancing_dates (2.google.protobuf.Timestamp
+
+issue_kind (	A
+nominal (20.tinkoff.public.invest.api.contract.v1.Quotation
+nominal_currency (	"w
+AssetClearingCertificateA
+nominal (20.tinkoff.public.invest.api.contract.v1.Quotation
+nominal_currency (	"
+Brand
+uid (	
+name (	
+description (	
+info (	
+company (	
+sector (	
+country_of_risk (	
+country_of_risk_name (	"¯
+AssetInstrument
+uid (	
+figi (	
+instrument_type (	
+ticker (	
+
+class_code (	D
+links (25.tinkoff.public.invest.api.contract.v1.InstrumentLink"6
+InstrumentLink
+type (	
+instrument_uid (	"
+GetFavoritesRequest"o
+GetFavoritesResponseW
+favorite_instruments (29.tinkoff.public.invest.api.contract.v1.FavoriteInstrument"¡
+FavoriteInstrument
+figi (	
+ticker (	
+
+class_code (	
+isin (	
+instrument_type (	
+otc_flag ( 
+api_trade_available_flag ("Ç
+EditFavoritesRequestZ
+instruments (2E.tinkoff.public.invest.api.contract.v1.EditFavoritesRequestInstrumentS
+action_type (2>.tinkoff.public.invest.api.contract.v1.EditFavoritesActionType".
+EditFavoritesRequestInstrument
+figi (	"p
+EditFavoritesResponseW
+favorite_instruments (29.tinkoff.public.invest.api.contract.v1.FavoriteInstrument*×
 
 CouponType
 COUPON_TYPE_UNSPECIFIED 
@@ -352,11 +555,12 @@ CouponType
 COUPON_TYPE_MORTGAGE
 COUPON_TYPE_FIX
 COUPON_TYPE_VARIABLE
-COUPON_TYPE_OTHER*m
+COUPON_TYPE_OTHER*‰
 InstrumentIdType
 INSTRUMENT_ID_UNSPECIFIED 
 INSTRUMENT_ID_TYPE_FIGI
-INSTRUMENT_ID_TYPE_TICKER*l
+INSTRUMENT_ID_TYPE_TICKER
+INSTRUMENT_ID_TYPE_UID*l
 InstrumentStatus!
 INSTRUMENT_STATUS_UNSPECIFIED 
 INSTRUMENT_STATUS_BASE
@@ -370,7 +574,26 @@ CouponType
 SHARE_TYPE_MLP
 SHARE_TYPE_NY_REG_SHRS
 SHARE_TYPE_CLOSED_END_FUND
-SHARE_TYPE_REIT2Ü
+SHARE_TYPE_REIT*‰
+	AssetType
+ASSET_TYPE_UNSPECIFIED 
+ASSET_TYPE_CURRENCY
+ASSET_TYPE_COMMODITY
+ASSET_TYPE_INDEX
+ASSET_TYPE_SECURITY*f
+StructuredProductType
+SP_TYPE_UNSPECIFIED 
+SP_TYPE_DELIVERABLE
+SP_TYPE_NON_DELIVERABLE*
+EditFavoritesActionType*
+&EDIT_FAVORITES_ACTION_TYPE_UNSPECIFIED "
+EDIT_FAVORITES_ACTION_TYPE_ADD"
+EDIT_FAVORITES_ACTION_TYPE_DEL*s
+RealExchange
+REAL_EXCHANGE_UNSPECIFIED 
+REAL_EXCHANGE_MOEX
+REAL_EXCHANGE_RTS
+REAL_EXCHANGE_OTC2æ
 InstrumentsService“
 TradingSchedules>.tinkoff.public.invest.api.contract.v1.TradingSchedulesRequest?.tinkoff.public.invest.api.contract.v1.TradingSchedulesResponsew
 BondBy8.tinkoff.public.invest.api.contract.v1.InstrumentRequest3.tinkoff.public.invest.api.contract.v1.BondResponsex
@@ -389,7 +612,12 @@ Currencies9.tinkoff.public.invest.api.contract.v1.InstrumentsRequest9.tinkoff.
 GetAccruedInterestsA.tinkoff.public.invest.api.contract.v1.GetAccruedInterestsRequestB.tinkoff.public.invest.api.contract.v1.GetAccruedInterestsResponse“
 GetFuturesMargin>.tinkoff.public.invest.api.contract.v1.GetFuturesMarginRequest?.tinkoff.public.invest.api.contract.v1.GetFuturesMarginResponse†
 GetInstrumentBy8.tinkoff.public.invest.api.contract.v1.InstrumentRequest9.tinkoff.public.invest.api.contract.v1.InstrumentResponse‡
-GetDividends:.tinkoff.public.invest.api.contract.v1.GetDividendsRequest;.tinkoff.public.invest.api.contract.v1.GetDividendsResponseBa
+GetDividends:.tinkoff.public.invest.api.contract.v1.GetDividendsRequest;.tinkoff.public.invest.api.contract.v1.GetDividendsResponsew
+
+GetAssetBy3.tinkoff.public.invest.api.contract.v1.AssetRequest4.tinkoff.public.invest.api.contract.v1.AssetResponsex
+	GetAssets4.tinkoff.public.invest.api.contract.v1.AssetsRequest5.tinkoff.public.invest.api.contract.v1.AssetsResponse‡
+GetFavorites:.tinkoff.public.invest.api.contract.v1.GetFavoritesRequest;.tinkoff.public.invest.api.contract.v1.GetFavoritesResponseŠ
+EditFavorites;.tinkoff.public.invest.api.contract.v1.EditFavoritesRequest<.tinkoff.public.invest.api.contract.v1.EditFavoritesResponseBa
 ru.tinkoff.piapi.contract.v1PZ./;investapi¢TIAPIªTinkoff.InvestApi.V1ÊTinkoff\\Invest\\V1bproto3'
         , true);
 

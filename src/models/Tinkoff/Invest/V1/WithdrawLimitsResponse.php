@@ -16,19 +16,19 @@ use Google\Protobuf\Internal\GPBUtil;
 class WithdrawLimitsResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Массив валютных позиций портфеля
+     *Массив валютных позиций портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.MoneyValue money = 1;</code>
      */
     private $money;
     /**
-     *Массив заблокированных валютных позиций портфеля
+     *Массив заблокированных валютных позиций портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.MoneyValue blocked = 2;</code>
      */
     private $blocked;
     /**
-     *Заблокировано под гарантийное обеспечение фьючерсов
+     *Заблокировано под гарантийное обеспечение фьючерсов.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.MoneyValue blocked_guarantee = 3;</code>
      */
@@ -41,11 +41,11 @@ class WithdrawLimitsResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Tinkoff\Invest\V1\MoneyValue[]|\Google\Protobuf\Internal\RepeatedField $money
-     *          Массив валютных позиций портфеля
+     *          Массив валютных позиций портфеля.
      *     @type \Tinkoff\Invest\V1\MoneyValue[]|\Google\Protobuf\Internal\RepeatedField $blocked
-     *          Массив заблокированных валютных позиций портфеля
+     *          Массив заблокированных валютных позиций портфеля.
      *     @type \Tinkoff\Invest\V1\MoneyValue[]|\Google\Protobuf\Internal\RepeatedField $blocked_guarantee
-     *          Заблокировано под гарантийное обеспечение фьючерсов
+     *          Заблокировано под гарантийное обеспечение фьючерсов.
      * }
      */
     public function __construct($data = NULL) {
@@ -54,7 +54,7 @@ class WithdrawLimitsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив валютных позиций портфеля
+     *Массив валютных позиций портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.MoneyValue money = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -65,7 +65,7 @@ class WithdrawLimitsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив валютных позиций портфеля
+     *Массив валютных позиций портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.MoneyValue money = 1;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue[]|\Google\Protobuf\Internal\RepeatedField $var
@@ -80,7 +80,7 @@ class WithdrawLimitsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив заблокированных валютных позиций портфеля
+     *Массив заблокированных валютных позиций портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.MoneyValue blocked = 2;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -91,7 +91,7 @@ class WithdrawLimitsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив заблокированных валютных позиций портфеля
+     *Массив заблокированных валютных позиций портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.MoneyValue blocked = 2;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue[]|\Google\Protobuf\Internal\RepeatedField $var
@@ -106,7 +106,7 @@ class WithdrawLimitsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Заблокировано под гарантийное обеспечение фьючерсов
+     *Заблокировано под гарантийное обеспечение фьючерсов.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.MoneyValue blocked_guarantee = 3;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -117,7 +117,7 @@ class WithdrawLimitsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Заблокировано под гарантийное обеспечение фьючерсов
+     *Заблокировано под гарантийное обеспечение фьючерсов.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.MoneyValue blocked_guarantee = 3;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue[]|\Google\Protobuf\Internal\RepeatedField $var

@@ -22,7 +22,7 @@ class GetDividendsForeignIssuerReportRequest extends \Google\Protobuf\Internal\M
      */
     protected $task_id = '';
     /**
-     *Номер страницы отчета (начинается с 0), значение по умолчанию: 0
+     *Номер страницы отчета (начинается с 0), значение по умолчанию: 0.
      *
      * Generated from protobuf field <code>int32 page = 2;</code>
      */
@@ -37,7 +37,7 @@ class GetDividendsForeignIssuerReportRequest extends \Google\Protobuf\Internal\M
      *     @type string $task_id
      *          Идентификатор задачи формирования отчёта.
      *     @type int $page
-     *          Номер страницы отчета (начинается с 0), значение по умолчанию: 0
+     *          Номер страницы отчета (начинается с 0), значение по умолчанию: 0.
      * }
      */
     public function __construct($data = NULL) {
@@ -72,7 +72,7 @@ class GetDividendsForeignIssuerReportRequest extends \Google\Protobuf\Internal\M
     }
 
     /**
-     *Номер страницы отчета (начинается с 0), значение по умолчанию: 0
+     *Номер страницы отчета (начинается с 0), значение по умолчанию: 0.
      *
      * Generated from protobuf field <code>int32 page = 2;</code>
      * @return int
@@ -83,7 +83,7 @@ class GetDividendsForeignIssuerReportRequest extends \Google\Protobuf\Internal\M
     }
 
     /**
-     *Номер страницы отчета (начинается с 0), значение по умолчанию: 0
+     *Номер страницы отчета (начинается с 0), значение по умолчанию: 0.
      *
      * Generated from protobuf field <code>int32 page = 2;</code>
      * @param int $var

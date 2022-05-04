@@ -40,25 +40,25 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      */
     private $asks;
     /**
-     *Цена последней сделки.
+     *Цена последней сделки за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation last_price = 5;</code>
      */
     protected $last_price = null;
     /**
-     *Цена закрытия.
+     *Цена закрытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation close_price = 6;</code>
      */
     protected $close_price = null;
     /**
-     *Верхний лимит цены.
+     *Верхний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_up = 7;</code>
      */
     protected $limit_up = null;
     /**
-     *Нижний лимит цены.
+     *Нижний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_down = 8;</code>
      */
@@ -79,13 +79,13 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\Order[]|\Google\Protobuf\Internal\RepeatedField $asks
      *          Множество пар значений на продажу.
      *     @type \Tinkoff\Invest\V1\Quotation $last_price
-     *          Цена последней сделки.
+     *          Цена последней сделки за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *     @type \Tinkoff\Invest\V1\Quotation $close_price
-     *          Цена закрытия.
+     *          Цена закрытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *     @type \Tinkoff\Invest\V1\Quotation $limit_up
-     *          Верхний лимит цены.
+     *          Верхний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *     @type \Tinkoff\Invest\V1\Quotation $limit_down
-     *          Нижний лимит цены.
+     *          Нижний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      * }
      */
     public function __construct($data = NULL) {
@@ -198,7 +198,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена последней сделки.
+     *Цена последней сделки за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation last_price = 5;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -219,7 +219,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена последней сделки.
+     *Цена последней сделки за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation last_price = 5;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -234,7 +234,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена закрытия.
+     *Цена закрытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation close_price = 6;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -255,7 +255,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена закрытия.
+     *Цена закрытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation close_price = 6;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -270,7 +270,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Верхний лимит цены.
+     *Верхний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_up = 7;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -291,7 +291,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Верхний лимит цены.
+     *Верхний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_up = 7;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -306,7 +306,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Нижний лимит цены.
+     *Нижний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_down = 8;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -327,7 +327,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Нижний лимит цены.
+     *Нижний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation limit_down = 8;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var

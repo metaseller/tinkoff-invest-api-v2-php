@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class CancelStopOrderRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Идентификатор счёта клиента
+     *Идентификатор счёта клиента.
      *
      * Generated from protobuf field <code>string account_id = 1;</code>
      */
@@ -35,7 +35,7 @@ class CancelStopOrderRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $account_id
-     *          Идентификатор счёта клиента
+     *          Идентификатор счёта клиента.
      *     @type string $stop_order_id
      *          Уникальный идентификатор стоп-заявки.
      * }
@@ -46,7 +46,7 @@ class CancelStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор счёта клиента
+     *Идентификатор счёта клиента.
      *
      * Generated from protobuf field <code>string account_id = 1;</code>
      * @return string
@@ -57,7 +57,7 @@ class CancelStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор счёта клиента
+     *Идентификатор счёта клиента.
      *
      * Generated from protobuf field <code>string account_id = 1;</code>
      * @param string $var

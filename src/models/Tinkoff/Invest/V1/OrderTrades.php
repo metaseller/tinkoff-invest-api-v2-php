@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class OrderTrades extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Идентификатор торгового поручения
+     *Идентификатор торгового поручения.
      *
      * Generated from protobuf field <code>string order_id = 1;</code>
      */
@@ -28,23 +28,29 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
      */
     protected $created_at = null;
     /**
-     *Направление сделки (возможные значения)
+     *Направление сделки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderDirection direction = 3;</code>
      */
     protected $direction = 0;
     /**
-     *Figi-идентификатор инструмента
+     *Figi-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 4;</code>
      */
     protected $figi = '';
     /**
-     *Массив сделок
+     *Массив сделок.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OrderTrade trades = 5;</code>
      */
     private $trades;
+    /**
+     *Идентификатор счёта.
+     *
+     * Generated from protobuf field <code>string account_id = 6;</code>
+     */
+    protected $account_id = '';
 
     /**
      * Constructor.
@@ -53,15 +59,17 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $order_id
-     *          Идентификатор торгового поручения
+     *          Идентификатор торгового поручения.
      *     @type \Google\Protobuf\Timestamp $created_at
      *          Дата и время создания сообщения в часовом поясе UTC.
      *     @type int $direction
-     *          Направление сделки (возможные значения)
+     *          Направление сделки.
      *     @type string $figi
-     *          Figi-идентификатор инструмента
+     *          Figi-идентификатор инструмента.
      *     @type \Tinkoff\Invest\V1\OrderTrade[]|\Google\Protobuf\Internal\RepeatedField $trades
-     *          Массив сделок
+     *          Массив сделок.
+     *     @type string $account_id
+     *          Идентификатор счёта.
      * }
      */
     public function __construct($data = NULL) {
@@ -70,7 +78,7 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор торгового поручения
+     *Идентификатор торгового поручения.
      *
      * Generated from protobuf field <code>string order_id = 1;</code>
      * @return string
@@ -81,7 +89,7 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор торгового поручения
+     *Идентификатор торгового поручения.
      *
      * Generated from protobuf field <code>string order_id = 1;</code>
      * @param string $var
@@ -132,7 +140,7 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Направление сделки (возможные значения)
+     *Направление сделки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderDirection direction = 3;</code>
      * @return int
@@ -143,7 +151,7 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Направление сделки (возможные значения)
+     *Направление сделки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderDirection direction = 3;</code>
      * @param int $var
@@ -158,7 +166,7 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента
+     *Figi-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 4;</code>
      * @return string
@@ -169,7 +177,7 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента
+     *Figi-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 4;</code>
      * @param string $var
@@ -184,7 +192,7 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив сделок
+     *Массив сделок.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OrderTrade trades = 5;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -195,7 +203,7 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив сделок
+     *Массив сделок.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OrderTrade trades = 5;</code>
      * @param \Tinkoff\Invest\V1\OrderTrade[]|\Google\Protobuf\Internal\RepeatedField $var
@@ -205,6 +213,32 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\OrderTrade::class);
         $this->trades = $arr;
+
+        return $this;
+    }
+
+    /**
+     *Идентификатор счёта.
+     *
+     * Generated from protobuf field <code>string account_id = 6;</code>
+     * @return string
+     */
+    public function getAccountId()
+    {
+        return $this->account_id;
+    }
+
+    /**
+     *Идентификатор счёта.
+     *
+     * Generated from protobuf field <code>string account_id = 6;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setAccountId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->account_id = $var;
 
         return $this;
     }

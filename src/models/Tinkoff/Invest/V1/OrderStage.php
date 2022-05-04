@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class OrderStage extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Цена.
+     *Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента..
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue price = 1;</code>
      */
@@ -41,7 +41,7 @@ class OrderStage extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Tinkoff\Invest\V1\MoneyValue $price
-     *          Цена.
+     *          Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента..
      *     @type int|string $quantity
      *          Количество лотов.
      *     @type string $trade_id
@@ -54,7 +54,7 @@ class OrderStage extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена.
+     *Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента..
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue price = 1;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -75,7 +75,7 @@ class OrderStage extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена.
+     *Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента..
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue price = 1;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var

@@ -16,19 +16,19 @@ use Google\Protobuf\Internal\GPBUtil;
 class PortfolioPosition extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Figi-идентификатора инструмента
+     *Figi-идентификатора инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      */
     protected $figi = '';
     /**
-     *Тип инструмента
+     *Тип инструмента.
      *
      * Generated from protobuf field <code>string instrument_type = 2;</code>
      */
     protected $instrument_type = '';
     /**
-     *Количество инструмента в портфеле в штуках
+     *Количество инструмента в портфеле в штуках.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation quantity = 3;</code>
      */
@@ -40,13 +40,13 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     protected $average_position_price = null;
     /**
-     *Текущая рассчитанная доходность
+     *Текущая рассчитанная относительная доходность позиции, в %.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation expected_yield = 5;</code>
      */
     protected $expected_yield = null;
     /**
-     * Текущий НКД
+     * Текущий НКД.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue current_nkd = 6;</code>
      */
@@ -58,7 +58,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     protected $average_position_price_pt = null;
     /**
-     *Текущая цена инструмента
+     *Текущая цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента..
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue current_price = 8;</code>
      */
@@ -70,7 +70,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     protected $average_position_price_fifo = null;
     /**
-     *Количество лотов в портфеле
+     *Количество лотов в портфеле.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation quantity_lots = 10;</code>
      */
@@ -83,25 +83,25 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $figi
-     *          Figi-идентификатора инструмента
+     *          Figi-идентификатора инструмента.
      *     @type string $instrument_type
-     *          Тип инструмента
+     *          Тип инструмента.
      *     @type \Tinkoff\Invest\V1\Quotation $quantity
-     *          Количество инструмента в портфеле в штуках
+     *          Количество инструмента в портфеле в штуках.
      *     @type \Tinkoff\Invest\V1\MoneyValue $average_position_price
      *          Средневзвешенная цена позиции. **Возможна задержка до секунды для пересчёта**.
      *     @type \Tinkoff\Invest\V1\Quotation $expected_yield
-     *          Текущая рассчитанная доходность
+     *          Текущая рассчитанная относительная доходность позиции, в %.
      *     @type \Tinkoff\Invest\V1\MoneyValue $current_nkd
-     *           Текущий НКД
+     *           Текущий НКД.
      *     @type \Tinkoff\Invest\V1\Quotation $average_position_price_pt
      *          Средняя цена лота в позиции в пунктах (для фьючерсов). **Возможна задержка до секунды для пересчёта**.
      *     @type \Tinkoff\Invest\V1\MoneyValue $current_price
-     *          Текущая цена инструмента
+     *          Текущая цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента..
      *     @type \Tinkoff\Invest\V1\MoneyValue $average_position_price_fifo
      *          Средняя цена лота в позиции по методу FIFO. **Возможна задержка до секунды для пересчёта**.
      *     @type \Tinkoff\Invest\V1\Quotation $quantity_lots
-     *          Количество лотов в портфеле
+     *          Количество лотов в портфеле.
      * }
      */
     public function __construct($data = NULL) {
@@ -110,7 +110,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатора инструмента
+     *Figi-идентификатора инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @return string
@@ -121,7 +121,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатора инструмента
+     *Figi-идентификатора инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @param string $var
@@ -136,7 +136,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип инструмента
+     *Тип инструмента.
      *
      * Generated from protobuf field <code>string instrument_type = 2;</code>
      * @return string
@@ -147,7 +147,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип инструмента
+     *Тип инструмента.
      *
      * Generated from protobuf field <code>string instrument_type = 2;</code>
      * @param string $var
@@ -162,7 +162,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество инструмента в портфеле в штуках
+     *Количество инструмента в портфеле в штуках.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation quantity = 3;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -183,7 +183,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество инструмента в портфеле в штуках
+     *Количество инструмента в портфеле в штуках.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation quantity = 3;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -234,7 +234,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Текущая рассчитанная доходность
+     *Текущая рассчитанная относительная доходность позиции, в %.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation expected_yield = 5;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -255,7 +255,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Текущая рассчитанная доходность
+     *Текущая рассчитанная относительная доходность позиции, в %.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation expected_yield = 5;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -270,7 +270,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Текущий НКД
+     * Текущий НКД.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue current_nkd = 6;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -291,7 +291,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Текущий НКД
+     * Текущий НКД.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue current_nkd = 6;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -342,7 +342,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Текущая цена инструмента
+     *Текущая цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента..
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue current_price = 8;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -363,7 +363,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Текущая цена инструмента
+     *Текущая цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента..
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue current_price = 8;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -414,7 +414,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество лотов в портфеле
+     *Количество лотов в портфеле.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation quantity_lots = 10;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -435,7 +435,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество лотов в портфеле
+     *Количество лотов в портфеле.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation quantity_lots = 10;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var

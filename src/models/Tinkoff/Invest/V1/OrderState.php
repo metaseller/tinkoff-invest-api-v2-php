@@ -88,7 +88,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
      */
     protected $direction = 0;
     /**
-     *Начальная цена инструмента. Цена инструмента на момент выставления заявки.
+     *Начальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue initial_security_price = 13;</code>
      */
@@ -155,7 +155,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
      *     @type int $direction
      *          Направление заявки.
      *     @type \Tinkoff\Invest\V1\MoneyValue $initial_security_price
-     *          Начальная цена инструмента. Цена инструмента на момент выставления заявки.
+     *          Начальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *     @type \Tinkoff\Invest\V1\OrderStage[]|\Google\Protobuf\Internal\RepeatedField $stages
      *          Стадии выполнения заявки.
      *     @type \Tinkoff\Invest\V1\MoneyValue $service_commission
@@ -546,7 +546,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Начальная цена инструмента. Цена инструмента на момент выставления заявки.
+     *Начальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue initial_security_price = 13;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -567,7 +567,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Начальная цена инструмента. Цена инструмента на момент выставления заявки.
+     *Начальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue initial_security_price = 13;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var

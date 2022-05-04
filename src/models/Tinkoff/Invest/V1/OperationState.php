@@ -7,7 +7,7 @@ namespace Tinkoff\Invest\V1;
 use UnexpectedValueException;
 
 /**
- *Статус запрашиваемых операций
+ *Статус запрашиваемых операций.
  *
  * Protobuf type <code>tinkoff.public.invest.api.contract.v1.OperationState</code>
  */
@@ -20,13 +20,13 @@ class OperationState
      */
     const OPERATION_STATE_UNSPECIFIED = 0;
     /**
-     *Исполнена
+     *Исполнена.
      *
      * Generated from protobuf enum <code>OPERATION_STATE_EXECUTED = 1;</code>
      */
     const OPERATION_STATE_EXECUTED = 1;
     /**
-     *Отменена
+     *Отменена.
      *
      * Generated from protobuf enum <code>OPERATION_STATE_CANCELED = 2;</code>
      */

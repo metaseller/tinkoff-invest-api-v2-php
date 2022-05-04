@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetCandlesRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Figi-идентификатор инструмента
+     *Figi-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      */
@@ -47,7 +47,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $figi
-     *          Figi-идентификатор инструмента
+     *          Figi-идентификатор инструмента.
      *     @type \Google\Protobuf\Timestamp $from
      *          Начало запрашиваемого периода в часовом поясе UTC.
      *     @type \Google\Protobuf\Timestamp $to
@@ -62,7 +62,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента
+     *Figi-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @return string
@@ -73,7 +73,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента
+     *Figi-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @param string $var

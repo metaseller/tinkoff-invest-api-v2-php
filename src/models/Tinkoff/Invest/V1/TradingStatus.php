@@ -33,6 +33,18 @@ class TradingStatus extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.google.protobuf.Timestamp time = 3;</code>
      */
     protected $time = null;
+    /**
+     *Признак доступности выставления лимитной заявки по инструменту.
+     *
+     * Generated from protobuf field <code>bool limit_order_available_flag = 4;</code>
+     */
+    protected $limit_order_available_flag = false;
+    /**
+     *Признак доступности выставления рыночной заявки по инструменту.
+     *
+     * Generated from protobuf field <code>bool market_order_available_flag = 5;</code>
+     */
+    protected $market_order_available_flag = false;
 
     /**
      * Constructor.
@@ -46,6 +58,10 @@ class TradingStatus extends \Google\Protobuf\Internal\Message
      *          Статус торговли инструментом.
      *     @type \Google\Protobuf\Timestamp $time
      *          Время изменения торгового статуса в часовом поясе UTC.
+     *     @type bool $limit_order_available_flag
+     *          Признак доступности выставления лимитной заявки по инструменту.
+     *     @type bool $market_order_available_flag
+     *          Признак доступности выставления рыночной заявки по инструменту.
      * }
      */
     public function __construct($data = NULL) {
@@ -137,6 +153,58 @@ class TradingStatus extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->time = $var;
+
+        return $this;
+    }
+
+    /**
+     *Признак доступности выставления лимитной заявки по инструменту.
+     *
+     * Generated from protobuf field <code>bool limit_order_available_flag = 4;</code>
+     * @return bool
+     */
+    public function getLimitOrderAvailableFlag()
+    {
+        return $this->limit_order_available_flag;
+    }
+
+    /**
+     *Признак доступности выставления лимитной заявки по инструменту.
+     *
+     * Generated from protobuf field <code>bool limit_order_available_flag = 4;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setLimitOrderAvailableFlag($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->limit_order_available_flag = $var;
+
+        return $this;
+    }
+
+    /**
+     *Признак доступности выставления рыночной заявки по инструменту.
+     *
+     * Generated from protobuf field <code>bool market_order_available_flag = 5;</code>
+     * @return bool
+     */
+    public function getMarketOrderAvailableFlag()
+    {
+        return $this->market_order_available_flag;
+    }
+
+    /**
+     *Признак доступности выставления рыночной заявки по инструменту.
+     *
+     * Generated from protobuf field <code>bool market_order_available_flag = 5;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setMarketOrderAvailableFlag($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->market_order_available_flag = $var;
 
         return $this;
     }

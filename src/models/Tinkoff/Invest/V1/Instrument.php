@@ -159,6 +159,18 @@ class Instrument extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool api_trade_available_flag = 24;</code>
      */
     protected $api_trade_available_flag = false;
+    /**
+     *Уникальный идентификатор инструмента.
+     *
+     * Generated from protobuf field <code>string uid = 25;</code>
+     */
+    protected $uid = '';
+    /**
+     *Реальная площадка исполнения расчётов.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.RealExchange real_exchange = 26;</code>
+     */
+    protected $real_exchange = 0;
 
     /**
      * Constructor.
@@ -214,6 +226,10 @@ class Instrument extends \Google\Protobuf\Internal\Message
      *          Шаг цены.
      *     @type bool $api_trade_available_flag
      *          Признак доступности торгов через API.
+     *     @type string $uid
+     *          Уникальный идентификатор инструмента.
+     *     @type int $real_exchange
+     *          Реальная площадка исполнения расчётов.
      * }
      */
     public function __construct($data = NULL) {
@@ -911,6 +927,58 @@ class Instrument extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->api_trade_available_flag = $var;
+
+        return $this;
+    }
+
+    /**
+     *Уникальный идентификатор инструмента.
+     *
+     * Generated from protobuf field <code>string uid = 25;</code>
+     * @return string
+     */
+    public function getUid()
+    {
+        return $this->uid;
+    }
+
+    /**
+     *Уникальный идентификатор инструмента.
+     *
+     * Generated from protobuf field <code>string uid = 25;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->uid = $var;
+
+        return $this;
+    }
+
+    /**
+     *Реальная площадка исполнения расчётов.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.RealExchange real_exchange = 26;</code>
+     * @return int
+     */
+    public function getRealExchange()
+    {
+        return $this->real_exchange;
+    }
+
+    /**
+     *Реальная площадка исполнения расчётов.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.RealExchange real_exchange = 26;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setRealExchange($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\RealExchange::class);
+        $this->real_exchange = $var;
 
         return $this;
     }

@@ -22,7 +22,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
      */
     protected $figi = '';
     /**
-     *Дата события
+     *Дата выплаты купона
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp coupon_date = 2;</code>
      */
@@ -79,7 +79,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
      *     @type string $figi
      *          Figi-идентификатор инструмента.
      *     @type \Google\Protobuf\Timestamp $coupon_date
-     *          Дата события
+     *          Дата выплаты купона
      *     @type int|string $coupon_number
      *          Номер купона
      *     @type \Google\Protobuf\Timestamp $fix_date
@@ -128,7 +128,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата события
+     *Дата выплаты купона
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp coupon_date = 2;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -149,7 +149,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата события
+     *Дата выплаты купона
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp coupon_date = 2;</code>
      * @param \Google\Protobuf\Timestamp $var

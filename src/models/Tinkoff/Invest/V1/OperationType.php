@@ -7,278 +7,278 @@ namespace Tinkoff\Invest\V1;
 use UnexpectedValueException;
 
 /**
- *Тип операции
+ *Тип операции.
  *
  * Protobuf type <code>tinkoff.public.invest.api.contract.v1.OperationType</code>
  */
 class OperationType
 {
     /**
-     *Тип операции не определён
+     *Тип операции не определён.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_UNSPECIFIED = 0;</code>
      */
     const OPERATION_TYPE_UNSPECIFIED = 0;
     /**
-     *Завод денежных средств
+     *Пополнение брокерского счёта.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_INPUT = 1;</code>
      */
     const OPERATION_TYPE_INPUT = 1;
     /**
-     *Удержание налога по купонам
+     *Удержание НДФЛ по купонам.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_BOND_TAX = 2;</code>
      */
     const OPERATION_TYPE_BOND_TAX = 2;
     /**
-     *Вывод ЦБ
+     *Вывод ЦБ.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_OUTPUT_SECURITIES = 3;</code>
      */
     const OPERATION_TYPE_OUTPUT_SECURITIES = 3;
     /**
-     *Доход по сделке РЕПО овернайт
+     *Доход по сделке РЕПО овернайт.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_OVERNIGHT = 4;</code>
      */
     const OPERATION_TYPE_OVERNIGHT = 4;
     /**
-     *Удержание налога
+     *Удержание налога.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_TAX = 5;</code>
      */
     const OPERATION_TYPE_TAX = 5;
     /**
-     *Полное погашение облигаций
+     *Полное погашение облигаций.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_BOND_REPAYMENT_FULL = 6;</code>
      */
     const OPERATION_TYPE_BOND_REPAYMENT_FULL = 6;
     /**
-     *Продажа ЦБ с карты
+     *Продажа ЦБ с карты.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_SELL_CARD = 7;</code>
      */
     const OPERATION_TYPE_SELL_CARD = 7;
     /**
-     *Удержание налога по дивидендам
+     *Удержание налога по дивидендам.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_DIVIDEND_TAX = 8;</code>
      */
     const OPERATION_TYPE_DIVIDEND_TAX = 8;
     /**
-     *Вывод денежных средств
+     *Вывод денежных средств.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_OUTPUT = 9;</code>
      */
     const OPERATION_TYPE_OUTPUT = 9;
     /**
-     *Частичное погашение облигаций
+     *Частичное погашение облигаций.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_BOND_REPAYMENT = 10;</code>
      */
     const OPERATION_TYPE_BOND_REPAYMENT = 10;
     /**
-     *Корректировка налога
+     *Корректировка налога.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_TAX_CORRECTION = 11;</code>
      */
     const OPERATION_TYPE_TAX_CORRECTION = 11;
     /**
-     *Удержание комиссии за обслуживание брокерского счёта
+     *Удержание комиссии за обслуживание брокерского счёта.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_SERVICE_FEE = 12;</code>
      */
     const OPERATION_TYPE_SERVICE_FEE = 12;
     /**
-     *Удержание налога за материальную выгоду
+     *Удержание налога за материальную выгоду.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_BENEFIT_TAX = 13;</code>
      */
     const OPERATION_TYPE_BENEFIT_TAX = 13;
     /**
-     *Удержание комиссии за непокрытую позицию
+     *Удержание комиссии за непокрытую позицию.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_MARGIN_FEE = 14;</code>
      */
     const OPERATION_TYPE_MARGIN_FEE = 14;
     /**
-     *Покупка ЦБ
+     *Покупка ЦБ.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_BUY = 15;</code>
      */
     const OPERATION_TYPE_BUY = 15;
     /**
-     *Покупка ЦБ с карты
+     *Покупка ЦБ с карты.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_BUY_CARD = 16;</code>
      */
     const OPERATION_TYPE_BUY_CARD = 16;
     /**
-     *Завод ЦБ
+     *Завод ценных бумаг из другого депозитария.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_INPUT_SECURITIES = 17;</code>
      */
     const OPERATION_TYPE_INPUT_SECURITIES = 17;
     /**
-     *Продажа в результате Margin-call
+     *Продажа в результате Margin-call.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_SELL_MARGIN = 18;</code>
      */
     const OPERATION_TYPE_SELL_MARGIN = 18;
     /**
-     *Удержание комиссии за операцию
+     *Удержание комиссии за операцию.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_BROKER_FEE = 19;</code>
      */
     const OPERATION_TYPE_BROKER_FEE = 19;
     /**
-     *Покупка в результате Margin-call
+     *Покупка в результате Margin-call.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_BUY_MARGIN = 20;</code>
      */
     const OPERATION_TYPE_BUY_MARGIN = 20;
     /**
-     *Выплата дивидендов
+     *Выплата дивидендов.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_DIVIDEND = 21;</code>
      */
     const OPERATION_TYPE_DIVIDEND = 21;
     /**
-     *Продажа ЦБ
+     *Продажа ЦБ.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_SELL = 22;</code>
      */
     const OPERATION_TYPE_SELL = 22;
     /**
-     *Выплата купонов
+     *Выплата купонов.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_COUPON = 23;</code>
      */
     const OPERATION_TYPE_COUPON = 23;
     /**
-     *Удержание комиссии SuccessFee
+     *Удержание комиссии SuccessFee.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_SUCCESS_FEE = 24;</code>
      */
     const OPERATION_TYPE_SUCCESS_FEE = 24;
     /**
-     *Передача дивидендного дохода
+     *Передача дивидендного дохода.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_DIVIDEND_TRANSFER = 25;</code>
      */
     const OPERATION_TYPE_DIVIDEND_TRANSFER = 25;
     /**
-     *Зачисление вариационной маржи
+     *Зачисление вариационной маржи.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_ACCRUING_VARMARGIN = 26;</code>
      */
     const OPERATION_TYPE_ACCRUING_VARMARGIN = 26;
     /**
-     *Списание вариационной маржи
+     *Списание вариационной маржи.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_WRITING_OFF_VARMARGIN = 27;</code>
      */
     const OPERATION_TYPE_WRITING_OFF_VARMARGIN = 27;
     /**
-     *Покупка в рамках экспирации фьючерсного контракта
+     *Покупка в рамках экспирации фьючерсного контракта.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_DELIVERY_BUY = 28;</code>
      */
     const OPERATION_TYPE_DELIVERY_BUY = 28;
     /**
-     *Продажа в рамках экспирации фьючерсного контракта
+     *Продажа в рамках экспирации фьючерсного контракта.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_DELIVERY_SELL = 29;</code>
      */
     const OPERATION_TYPE_DELIVERY_SELL = 29;
     /**
-     *Комиссия за управление по счёту автоследования
+     *Комиссия за управление по счёту автоследования.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_TRACK_MFEE = 30;</code>
      */
     const OPERATION_TYPE_TRACK_MFEE = 30;
     /**
-     *Комиссия за результат по счёту автоследования
+     *Комиссия за результат по счёту автоследования.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_TRACK_PFEE = 31;</code>
      */
     const OPERATION_TYPE_TRACK_PFEE = 31;
     /**
-     *Удержание налога по ставке 15%
+     *Удержание налога по ставке 15%.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_TAX_PROGRESSIVE = 32;</code>
      */
     const OPERATION_TYPE_TAX_PROGRESSIVE = 32;
     /**
-     *Удержание налога по купонам по ставке 15%
+     *Удержание налога по купонам по ставке 15%.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_BOND_TAX_PROGRESSIVE = 33;</code>
      */
     const OPERATION_TYPE_BOND_TAX_PROGRESSIVE = 33;
     /**
-     *Удержание налога по дивидендам по ставке 15%
+     *Удержание налога по дивидендам по ставке 15%.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_DIVIDEND_TAX_PROGRESSIVE = 34;</code>
      */
     const OPERATION_TYPE_DIVIDEND_TAX_PROGRESSIVE = 34;
     /**
-     *Удержание налога за материальную выгоду по ставке 15%
+     *Удержание налога за материальную выгоду по ставке 15%.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_BENEFIT_TAX_PROGRESSIVE = 35;</code>
      */
     const OPERATION_TYPE_BENEFIT_TAX_PROGRESSIVE = 35;
     /**
-     *Корректировка налога по ставке 15%
+     *Корректировка налога по ставке 15%.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_TAX_CORRECTION_PROGRESSIVE = 36;</code>
      */
     const OPERATION_TYPE_TAX_CORRECTION_PROGRESSIVE = 36;
     /**
-     *Удержание налога за возмещение по сделкам РЕПО по ставке 15%
+     *Удержание налога за возмещение по сделкам РЕПО по ставке 15%.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_TAX_REPO_PROGRESSIVE = 37;</code>
      */
     const OPERATION_TYPE_TAX_REPO_PROGRESSIVE = 37;
     /**
-     *Удержание налога за возмещение по сделкам РЕПО
+     *Удержание налога за возмещение по сделкам РЕПО.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_TAX_REPO = 38;</code>
      */
     const OPERATION_TYPE_TAX_REPO = 38;
     /**
-     *Удержание налога по сделкам РЕПО
+     *Удержание налога по сделкам РЕПО.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_TAX_REPO_HOLD = 39;</code>
      */
     const OPERATION_TYPE_TAX_REPO_HOLD = 39;
     /**
-     *Возврат налога по сделкам РЕПО
+     *Возврат налога по сделкам РЕПО.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_TAX_REPO_REFUND = 40;</code>
      */
     const OPERATION_TYPE_TAX_REPO_REFUND = 40;
     /**
-     *Удержание налога по сделкам РЕПО по ставке 15%
+     *Удержание налога по сделкам РЕПО по ставке 15%.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_TAX_REPO_HOLD_PROGRESSIVE = 41;</code>
      */
     const OPERATION_TYPE_TAX_REPO_HOLD_PROGRESSIVE = 41;
     /**
-     *Возврат налога по сделкам РЕПО по ставке 15%
+     *Возврат налога по сделкам РЕПО по ставке 15%.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_TAX_REPO_REFUND_PROGRESSIVE = 42;</code>
      */
     const OPERATION_TYPE_TAX_REPO_REFUND_PROGRESSIVE = 42;
     /**
-     *Выплата дивидендов на карту
+     *Выплата дивидендов на карту.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_DIV_EXT = 43;</code>
      */
     const OPERATION_TYPE_DIV_EXT = 43;
     /**
-     *Корректировка налога по купонам
+     *Корректировка налога по купонам.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_TAX_CORRECTION_COUPON = 44;</code>
      */

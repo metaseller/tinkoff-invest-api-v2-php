@@ -14,25 +14,25 @@ use Google\Protobuf\Internal\GPBUtil;
 class BrokerReport extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Номер сделки
+     *Номер сделки.
      *
      * Generated from protobuf field <code>string trade_id = 1;</code>
      */
     protected $trade_id = '';
     /**
-     *Номер поручения
+     *Номер поручения.
      *
      * Generated from protobuf field <code>string order_id = 2;</code>
      */
     protected $order_id = '';
     /**
-     *Figi-идентификатор инструмента
+     *Figi-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 3;</code>
      */
     protected $figi = '';
     /**
-     *Признак исполнения
+     *Признак исполнения.
      *
      * Generated from protobuf field <code>string execute_sign = 4;</code>
      */
@@ -44,91 +44,91 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      */
     protected $trade_datetime = null;
     /**
-     *Торговая площадка
+     *Торговая площадка.
      *
      * Generated from protobuf field <code>string exchange = 6;</code>
      */
     protected $exchange = '';
     /**
-     *Режим торгов
+     *Режим торгов.
      *
      * Generated from protobuf field <code>string class_code = 7;</code>
      */
     protected $class_code = '';
     /**
-     *Вид сделки
+     *Вид сделки.
      *
      * Generated from protobuf field <code>string direction = 8;</code>
      */
     protected $direction = '';
     /**
-     *Сокращённое наименование актива
+     *Сокращённое наименование актива.
      *
      * Generated from protobuf field <code>string name = 9;</code>
      */
     protected $name = '';
     /**
-     *Код актива
+     *Код актива.
      *
      * Generated from protobuf field <code>string ticker = 10;</code>
      */
     protected $ticker = '';
     /**
-     *Цена за единицу
+     *Цена за единицу.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue price = 11;</code>
      */
     protected $price = null;
     /**
-     *Количество
+     *Количество.
      *
      * Generated from protobuf field <code>int64 quantity = 12;</code>
      */
     protected $quantity = 0;
     /**
-     *Сумма (без НКД)
+     *Сумма (без НКД).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue order_amount = 13;</code>
      */
     protected $order_amount = null;
     /**
-     *НКД
+     *НКД.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation aci_value = 14;</code>
      */
     protected $aci_value = null;
     /**
-     *Сумма сделки
+     *Сумма сделки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue total_order_amount = 15;</code>
      */
     protected $total_order_amount = null;
     /**
-     *Комиссия брокера
+     *Комиссия брокера.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue broker_commission = 16;</code>
      */
     protected $broker_commission = null;
     /**
-     *Комиссия биржи
+     *Комиссия биржи.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue exchange_commission = 17;</code>
      */
     protected $exchange_commission = null;
     /**
-     *Комиссия клир. центра
+     *Комиссия клир. центра.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue exchange_clearing_commission = 18;</code>
      */
     protected $exchange_clearing_commission = null;
     /**
-     *Ставка РЕПО (%)
+     *Ставка РЕПО (%).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation repo_rate = 19;</code>
      */
     protected $repo_rate = null;
     /**
-     *Контрагент/Брокер
+     *Контрагент/Брокер.
      *
      * Generated from protobuf field <code>string party = 20;</code>
      */
@@ -146,7 +146,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      */
     protected $sec_value_date = null;
     /**
-     *Статус брокера
+     *Статус брокера.
      *
      * Generated from protobuf field <code>string broker_status = 23;</code>
      */
@@ -170,7 +170,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      */
     protected $separate_agreement_date = '';
     /**
-     *Тип расчёта по сделке
+     *Тип расчёта по сделке.
      *
      * Generated from protobuf field <code>string delivery_type = 27;</code>
      */
@@ -183,51 +183,51 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $trade_id
-     *          Номер сделки
+     *          Номер сделки.
      *     @type string $order_id
-     *          Номер поручения
+     *          Номер поручения.
      *     @type string $figi
-     *          Figi-идентификатор инструмента
+     *          Figi-идентификатор инструмента.
      *     @type string $execute_sign
-     *          Признак исполнения
+     *          Признак исполнения.
      *     @type \Google\Protobuf\Timestamp $trade_datetime
      *          Дата и время заключения в часовом поясе UTC.
      *     @type string $exchange
-     *          Торговая площадка
+     *          Торговая площадка.
      *     @type string $class_code
-     *          Режим торгов
+     *          Режим торгов.
      *     @type string $direction
-     *          Вид сделки
+     *          Вид сделки.
      *     @type string $name
-     *          Сокращённое наименование актива
+     *          Сокращённое наименование актива.
      *     @type string $ticker
-     *          Код актива
+     *          Код актива.
      *     @type \Tinkoff\Invest\V1\MoneyValue $price
-     *          Цена за единицу
+     *          Цена за единицу.
      *     @type int|string $quantity
-     *          Количество
+     *          Количество.
      *     @type \Tinkoff\Invest\V1\MoneyValue $order_amount
-     *          Сумма (без НКД)
+     *          Сумма (без НКД).
      *     @type \Tinkoff\Invest\V1\Quotation $aci_value
-     *          НКД
+     *          НКД.
      *     @type \Tinkoff\Invest\V1\MoneyValue $total_order_amount
-     *          Сумма сделки
+     *          Сумма сделки.
      *     @type \Tinkoff\Invest\V1\MoneyValue $broker_commission
-     *          Комиссия брокера
+     *          Комиссия брокера.
      *     @type \Tinkoff\Invest\V1\MoneyValue $exchange_commission
-     *          Комиссия биржи
+     *          Комиссия биржи.
      *     @type \Tinkoff\Invest\V1\MoneyValue $exchange_clearing_commission
-     *          Комиссия клир. центра
+     *          Комиссия клир. центра.
      *     @type \Tinkoff\Invest\V1\Quotation $repo_rate
-     *          Ставка РЕПО (%)
+     *          Ставка РЕПО (%).
      *     @type string $party
-     *          Контрагент/Брокер
+     *          Контрагент/Брокер.
      *     @type \Google\Protobuf\Timestamp $clear_value_date
      *          Дата расчётов в часовом поясе UTC.
      *     @type \Google\Protobuf\Timestamp $sec_value_date
      *          Дата поставки в часовом поясе UTC.
      *     @type string $broker_status
-     *          Статус брокера
+     *          Статус брокера.
      *     @type string $separate_agreement_type
      *          Тип дог.
      *     @type string $separate_agreement_number
@@ -235,7 +235,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      *     @type string $separate_agreement_date
      *          Дата дог.
      *     @type string $delivery_type
-     *          Тип расчёта по сделке
+     *          Тип расчёта по сделке.
      * }
      */
     public function __construct($data = NULL) {
@@ -244,7 +244,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер сделки
+     *Номер сделки.
      *
      * Generated from protobuf field <code>string trade_id = 1;</code>
      * @return string
@@ -255,7 +255,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер сделки
+     *Номер сделки.
      *
      * Generated from protobuf field <code>string trade_id = 1;</code>
      * @param string $var
@@ -270,7 +270,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер поручения
+     *Номер поручения.
      *
      * Generated from protobuf field <code>string order_id = 2;</code>
      * @return string
@@ -281,7 +281,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер поручения
+     *Номер поручения.
      *
      * Generated from protobuf field <code>string order_id = 2;</code>
      * @param string $var
@@ -296,7 +296,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента
+     *Figi-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 3;</code>
      * @return string
@@ -307,7 +307,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента
+     *Figi-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 3;</code>
      * @param string $var
@@ -322,7 +322,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Признак исполнения
+     *Признак исполнения.
      *
      * Generated from protobuf field <code>string execute_sign = 4;</code>
      * @return string
@@ -333,7 +333,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Признак исполнения
+     *Признак исполнения.
      *
      * Generated from protobuf field <code>string execute_sign = 4;</code>
      * @param string $var
@@ -384,7 +384,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Торговая площадка
+     *Торговая площадка.
      *
      * Generated from protobuf field <code>string exchange = 6;</code>
      * @return string
@@ -395,7 +395,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Торговая площадка
+     *Торговая площадка.
      *
      * Generated from protobuf field <code>string exchange = 6;</code>
      * @param string $var
@@ -410,7 +410,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Режим торгов
+     *Режим торгов.
      *
      * Generated from protobuf field <code>string class_code = 7;</code>
      * @return string
@@ -421,7 +421,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Режим торгов
+     *Режим торгов.
      *
      * Generated from protobuf field <code>string class_code = 7;</code>
      * @param string $var
@@ -436,7 +436,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Вид сделки
+     *Вид сделки.
      *
      * Generated from protobuf field <code>string direction = 8;</code>
      * @return string
@@ -447,7 +447,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Вид сделки
+     *Вид сделки.
      *
      * Generated from protobuf field <code>string direction = 8;</code>
      * @param string $var
@@ -462,7 +462,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Сокращённое наименование актива
+     *Сокращённое наименование актива.
      *
      * Generated from protobuf field <code>string name = 9;</code>
      * @return string
@@ -473,7 +473,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Сокращённое наименование актива
+     *Сокращённое наименование актива.
      *
      * Generated from protobuf field <code>string name = 9;</code>
      * @param string $var
@@ -488,7 +488,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Код актива
+     *Код актива.
      *
      * Generated from protobuf field <code>string ticker = 10;</code>
      * @return string
@@ -499,7 +499,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Код актива
+     *Код актива.
      *
      * Generated from protobuf field <code>string ticker = 10;</code>
      * @param string $var
@@ -514,7 +514,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена за единицу
+     *Цена за единицу.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue price = 11;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -535,7 +535,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена за единицу
+     *Цена за единицу.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue price = 11;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -550,7 +550,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество
+     *Количество.
      *
      * Generated from protobuf field <code>int64 quantity = 12;</code>
      * @return int|string
@@ -561,7 +561,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество
+     *Количество.
      *
      * Generated from protobuf field <code>int64 quantity = 12;</code>
      * @param int|string $var
@@ -576,7 +576,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Сумма (без НКД)
+     *Сумма (без НКД).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue order_amount = 13;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -597,7 +597,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Сумма (без НКД)
+     *Сумма (без НКД).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue order_amount = 13;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -612,7 +612,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *НКД
+     *НКД.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation aci_value = 14;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -633,7 +633,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *НКД
+     *НКД.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation aci_value = 14;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -648,7 +648,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Сумма сделки
+     *Сумма сделки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue total_order_amount = 15;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -669,7 +669,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Сумма сделки
+     *Сумма сделки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue total_order_amount = 15;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -684,7 +684,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Комиссия брокера
+     *Комиссия брокера.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue broker_commission = 16;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -705,7 +705,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Комиссия брокера
+     *Комиссия брокера.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue broker_commission = 16;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -720,7 +720,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Комиссия биржи
+     *Комиссия биржи.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue exchange_commission = 17;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -741,7 +741,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Комиссия биржи
+     *Комиссия биржи.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue exchange_commission = 17;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -756,7 +756,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Комиссия клир. центра
+     *Комиссия клир. центра.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue exchange_clearing_commission = 18;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -777,7 +777,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Комиссия клир. центра
+     *Комиссия клир. центра.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue exchange_clearing_commission = 18;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -792,7 +792,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Ставка РЕПО (%)
+     *Ставка РЕПО (%).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation repo_rate = 19;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -813,7 +813,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Ставка РЕПО (%)
+     *Ставка РЕПО (%).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation repo_rate = 19;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -828,7 +828,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Контрагент/Брокер
+     *Контрагент/Брокер.
      *
      * Generated from protobuf field <code>string party = 20;</code>
      * @return string
@@ -839,7 +839,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Контрагент/Брокер
+     *Контрагент/Брокер.
      *
      * Generated from protobuf field <code>string party = 20;</code>
      * @param string $var
@@ -926,7 +926,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Статус брокера
+     *Статус брокера.
      *
      * Generated from protobuf field <code>string broker_status = 23;</code>
      * @return string
@@ -937,7 +937,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Статус брокера
+     *Статус брокера.
      *
      * Generated from protobuf field <code>string broker_status = 23;</code>
      * @param string $var
@@ -1030,7 +1030,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип расчёта по сделке
+     *Тип расчёта по сделке.
      *
      * Generated from protobuf field <code>string delivery_type = 27;</code>
      * @return string
@@ -1041,7 +1041,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип расчёта по сделке
+     *Тип расчёта по сделке.
      *
      * Generated from protobuf field <code>string delivery_type = 27;</code>
      * @param string $var

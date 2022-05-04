@@ -22,7 +22,7 @@ class LastPrice extends \Google\Protobuf\Internal\Message
      */
     protected $figi = '';
     /**
-     *Последняя цена за 1 лот.
+     *Последняя цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 2;</code>
      */
@@ -43,7 +43,7 @@ class LastPrice extends \Google\Protobuf\Internal\Message
      *     @type string $figi
      *          Идентификатор инструмента.
      *     @type \Tinkoff\Invest\V1\Quotation $price
-     *          Последняя цена за 1 лот.
+     *          Последняя цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *     @type \Google\Protobuf\Timestamp $time
      *          Время получения последней цены в часовом поясе UTC по времени биржи.
      * }
@@ -80,7 +80,7 @@ class LastPrice extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Последняя цена за 1 лот.
+     *Последняя цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 2;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -101,7 +101,7 @@ class LastPrice extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Последняя цена за 1 лот.
+     *Последняя цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 2;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var

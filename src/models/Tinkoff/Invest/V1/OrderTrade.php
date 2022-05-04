@@ -22,13 +22,13 @@ class OrderTrade extends \Google\Protobuf\Internal\Message
      */
     protected $date_time = null;
     /**
-     *Цена, по которой совершена сделка
+     *Цена одного инструмента, по которой совершена сделка.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 2;</code>
      */
     protected $price = null;
     /**
-     *Количество лотов в сделке
+     *Количество лотов в сделке.
      *
      * Generated from protobuf field <code>int64 quantity = 3;</code>
      */
@@ -43,9 +43,9 @@ class OrderTrade extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $date_time
      *          Дата и время совершения сделки в часовом поясе UTC.
      *     @type \Tinkoff\Invest\V1\Quotation $price
-     *          Цена, по которой совершена сделка
+     *          Цена одного инструмента, по которой совершена сделка.
      *     @type int|string $quantity
-     *          Количество лотов в сделке
+     *          Количество лотов в сделке.
      * }
      */
     public function __construct($data = NULL) {
@@ -90,7 +90,7 @@ class OrderTrade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена, по которой совершена сделка
+     *Цена одного инструмента, по которой совершена сделка.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 2;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -111,7 +111,7 @@ class OrderTrade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена, по которой совершена сделка
+     *Цена одного инструмента, по которой совершена сделка.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 2;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -126,7 +126,7 @@ class OrderTrade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество лотов в сделке
+     *Количество лотов в сделке.
      *
      * Generated from protobuf field <code>int64 quantity = 3;</code>
      * @return int|string
@@ -137,7 +137,7 @@ class OrderTrade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество лотов в сделке
+     *Количество лотов в сделке.
      *
      * Generated from protobuf field <code>int64 quantity = 3;</code>
      * @param int|string $var

@@ -31,11 +31,18 @@ class InstrumentIdType
      * Generated from protobuf enum <code>INSTRUMENT_ID_TYPE_TICKER = 2;</code>
      */
     const INSTRUMENT_ID_TYPE_TICKER = 2;
+    /**
+     *Уникальный идентификатор.
+     *
+     * Generated from protobuf enum <code>INSTRUMENT_ID_TYPE_UID = 3;</code>
+     */
+    const INSTRUMENT_ID_TYPE_UID = 3;
 
     private static $valueToName = [
         self::INSTRUMENT_ID_UNSPECIFIED => 'INSTRUMENT_ID_UNSPECIFIED',
         self::INSTRUMENT_ID_TYPE_FIGI => 'INSTRUMENT_ID_TYPE_FIGI',
         self::INSTRUMENT_ID_TYPE_TICKER => 'INSTRUMENT_ID_TYPE_TICKER',
+        self::INSTRUMENT_ID_TYPE_UID => 'INSTRUMENT_ID_TYPE_UID',
     ];
 
     public static function name($value)

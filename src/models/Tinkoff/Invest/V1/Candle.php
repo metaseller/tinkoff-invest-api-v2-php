@@ -28,25 +28,25 @@ class Candle extends \Google\Protobuf\Internal\Message
      */
     protected $interval = 0;
     /**
-     *Цена открытия за 1 лот.
+     *Цена открытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation open = 3;</code>
      */
     protected $open = null;
     /**
-     *Максимальная цена за 1 лот.
+     *Максимальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation high = 4;</code>
      */
     protected $high = null;
     /**
-     *Минимальная цена за 1 лот.
+     *Минимальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation low = 5;</code>
      */
     protected $low = null;
     /**
-     *Цена закрытия за 1 лот.
+     *Цена закрытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation close = 6;</code>
      */
@@ -58,7 +58,7 @@ class Candle extends \Google\Protobuf\Internal\Message
      */
     protected $volume = 0;
     /**
-     *Время свечи в часовом поясе UTC.
+     *Время начала интервала свечи в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp time = 8;</code>
      */
@@ -81,17 +81,17 @@ class Candle extends \Google\Protobuf\Internal\Message
      *     @type int $interval
      *          Интервал свечи.
      *     @type \Tinkoff\Invest\V1\Quotation $open
-     *          Цена открытия за 1 лот.
+     *          Цена открытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *     @type \Tinkoff\Invest\V1\Quotation $high
-     *          Максимальная цена за 1 лот.
+     *          Максимальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *     @type \Tinkoff\Invest\V1\Quotation $low
-     *          Минимальная цена за 1 лот.
+     *          Минимальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *     @type \Tinkoff\Invest\V1\Quotation $close
-     *          Цена закрытия за 1 лот.
+     *          Цена закрытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *     @type int|string $volume
      *          Объём сделок в лотах.
      *     @type \Google\Protobuf\Timestamp $time
-     *          Время свечи в часовом поясе UTC.
+     *          Время начала интервала свечи в часовом поясе UTC.
      *     @type \Google\Protobuf\Timestamp $last_trade_ts
      *          Время последней сделки, вошедшей в свечу в часовом поясе UTC.
      * }
@@ -154,7 +154,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена открытия за 1 лот.
+     *Цена открытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation open = 3;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -175,7 +175,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена открытия за 1 лот.
+     *Цена открытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation open = 3;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -190,7 +190,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Максимальная цена за 1 лот.
+     *Максимальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation high = 4;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -211,7 +211,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Максимальная цена за 1 лот.
+     *Максимальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation high = 4;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -226,7 +226,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Минимальная цена за 1 лот.
+     *Минимальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation low = 5;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -247,7 +247,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Минимальная цена за 1 лот.
+     *Минимальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation low = 5;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -262,7 +262,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена закрытия за 1 лот.
+     *Цена закрытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation close = 6;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -283,7 +283,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена закрытия за 1 лот.
+     *Цена закрытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation close = 6;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -324,7 +324,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Время свечи в часовом поясе UTC.
+     *Время начала интервала свечи в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp time = 8;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -345,7 +345,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Время свечи в часовом поясе UTC.
+     *Время начала интервала свечи в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp time = 8;</code>
      * @param \Google\Protobuf\Timestamp $var

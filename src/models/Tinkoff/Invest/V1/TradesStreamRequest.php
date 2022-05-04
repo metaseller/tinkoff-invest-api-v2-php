@@ -15,6 +15,12 @@ use Google\Protobuf\Internal\GPBUtil;
  */
 class TradesStreamRequest extends \Google\Protobuf\Internal\Message
 {
+    /**
+     *Идентификаторы счетов.
+     *
+     * Generated from protobuf field <code>repeated string accounts = 1;</code>
+     */
+    private $accounts;
 
     /**
      * Constructor.
@@ -22,11 +28,39 @@ class TradesStreamRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $accounts
+     *          Идентификаторы счетов.
      * }
      */
     public function __construct($data = NULL) {
         \GPBMetadata\Orders::initOnce();
         parent::__construct($data);
+    }
+
+    /**
+     *Идентификаторы счетов.
+     *
+     * Generated from protobuf field <code>repeated string accounts = 1;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getAccounts()
+    {
+        return $this->accounts;
+    }
+
+    /**
+     *Идентификаторы счетов.
+     *
+     * Generated from protobuf field <code>repeated string accounts = 1;</code>
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setAccounts($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->accounts = $arr;
+
+        return $this;
     }
 
 }

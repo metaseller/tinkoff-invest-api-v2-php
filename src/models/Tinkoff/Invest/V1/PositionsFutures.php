@@ -16,19 +16,19 @@ use Google\Protobuf\Internal\GPBUtil;
 class PositionsFutures extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Figi-идентификатор фьючерса
+     *Figi-идентификатор фьючерса.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      */
     protected $figi = '';
     /**
-     *Заблокировано
+     *Заблокировано.
      *
      * Generated from protobuf field <code>int64 blocked = 2;</code>
      */
     protected $blocked = 0;
     /**
-     *Текущий баланс
+     *Текущий незаблокированный баланс.
      *
      * Generated from protobuf field <code>int64 balance = 3;</code>
      */
@@ -41,11 +41,11 @@ class PositionsFutures extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $figi
-     *          Figi-идентификатор фьючерса
+     *          Figi-идентификатор фьючерса.
      *     @type int|string $blocked
-     *          Заблокировано
+     *          Заблокировано.
      *     @type int|string $balance
-     *          Текущий баланс
+     *          Текущий незаблокированный баланс.
      * }
      */
     public function __construct($data = NULL) {
@@ -54,7 +54,7 @@ class PositionsFutures extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор фьючерса
+     *Figi-идентификатор фьючерса.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @return string
@@ -65,7 +65,7 @@ class PositionsFutures extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор фьючерса
+     *Figi-идентификатор фьючерса.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @param string $var
@@ -80,7 +80,7 @@ class PositionsFutures extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Заблокировано
+     *Заблокировано.
      *
      * Generated from protobuf field <code>int64 blocked = 2;</code>
      * @return int|string
@@ -91,7 +91,7 @@ class PositionsFutures extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Заблокировано
+     *Заблокировано.
      *
      * Generated from protobuf field <code>int64 blocked = 2;</code>
      * @param int|string $var
@@ -106,7 +106,7 @@ class PositionsFutures extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Текущий баланс
+     *Текущий незаблокированный баланс.
      *
      * Generated from protobuf field <code>int64 balance = 3;</code>
      * @return int|string
@@ -117,7 +117,7 @@ class PositionsFutures extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Текущий баланс
+     *Текущий незаблокированный баланс.
      *
      * Generated from protobuf field <code>int64 balance = 3;</code>
      * @param int|string $var

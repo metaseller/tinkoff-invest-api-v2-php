@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class OperationsResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Массив операций
+     *Массив операций.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.Operation operations = 1;</code>
      */
@@ -29,7 +29,7 @@ class OperationsResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Tinkoff\Invest\V1\Operation[]|\Google\Protobuf\Internal\RepeatedField $operations
-     *          Массив операций
+     *          Массив операций.
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +38,7 @@ class OperationsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив операций
+     *Массив операций.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.Operation operations = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -49,7 +49,7 @@ class OperationsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив операций
+     *Массив операций.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.Operation operations = 1;</code>
      * @param \Tinkoff\Invest\V1\Operation[]|\Google\Protobuf\Internal\RepeatedField $var

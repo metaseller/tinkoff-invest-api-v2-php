@@ -18,19 +18,19 @@ class GetBrokerReportResponse extends \Google\Protobuf\Internal\Message
      */
     private $broker_report;
     /**
-     *Количество записей в отчете
+     *Количество записей в отчете.
      *
      * Generated from protobuf field <code>int32 itemsCount = 2;</code>
      */
     protected $itemsCount = 0;
     /**
-     *Количество страниц с данными отчета (начинается с 0)
+     *Количество страниц с данными отчета (начинается с 0).
      *
      * Generated from protobuf field <code>int32 pagesCount = 3;</code>
      */
     protected $pagesCount = 0;
     /**
-     *Текущая страница (начинается с 0)
+     *Текущая страница (начинается с 0).
      *
      * Generated from protobuf field <code>int32 page = 4;</code>
      */
@@ -44,11 +44,11 @@ class GetBrokerReportResponse extends \Google\Protobuf\Internal\Message
      *
      *     @type \Tinkoff\Invest\V1\BrokerReport[]|\Google\Protobuf\Internal\RepeatedField $broker_report
      *     @type int $itemsCount
-     *          Количество записей в отчете
+     *          Количество записей в отчете.
      *     @type int $pagesCount
-     *          Количество страниц с данными отчета (начинается с 0)
+     *          Количество страниц с данными отчета (начинается с 0).
      *     @type int $page
-     *          Текущая страница (начинается с 0)
+     *          Текущая страница (начинается с 0).
      * }
      */
     public function __construct($data = NULL) {
@@ -79,7 +79,7 @@ class GetBrokerReportResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество записей в отчете
+     *Количество записей в отчете.
      *
      * Generated from protobuf field <code>int32 itemsCount = 2;</code>
      * @return int
@@ -90,7 +90,7 @@ class GetBrokerReportResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество записей в отчете
+     *Количество записей в отчете.
      *
      * Generated from protobuf field <code>int32 itemsCount = 2;</code>
      * @param int $var
@@ -105,7 +105,7 @@ class GetBrokerReportResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество страниц с данными отчета (начинается с 0)
+     *Количество страниц с данными отчета (начинается с 0).
      *
      * Generated from protobuf field <code>int32 pagesCount = 3;</code>
      * @return int
@@ -116,7 +116,7 @@ class GetBrokerReportResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество страниц с данными отчета (начинается с 0)
+     *Количество страниц с данными отчета (начинается с 0).
      *
      * Generated from protobuf field <code>int32 pagesCount = 3;</code>
      * @param int $var
@@ -131,7 +131,7 @@ class GetBrokerReportResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Текущая страница (начинается с 0)
+     *Текущая страница (начинается с 0).
      *
      * Generated from protobuf field <code>int32 page = 4;</code>
      * @return int
@@ -142,7 +142,7 @@ class GetBrokerReportResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Текущая страница (начинается с 0)
+     *Текущая страница (начинается с 0).
      *
      * Generated from protobuf field <code>int32 page = 4;</code>
      * @param int $var

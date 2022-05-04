@@ -16,37 +16,37 @@ use Google\Protobuf\Internal\GPBUtil;
 class StopOrder extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Идентификатор-идентификатор стоп-заявки
+     *Идентификатор-идентификатор стоп-заявки.
      *
      * Generated from protobuf field <code>string stop_order_id = 1;</code>
      */
     protected $stop_order_id = '';
     /**
-     *Запрошено лотов
+     *Запрошено лотов.
      *
      * Generated from protobuf field <code>int64 lots_requested = 2;</code>
      */
     protected $lots_requested = 0;
     /**
-     *Figi-идентификатор инструмента
+     *Figi-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 3;</code>
      */
     protected $figi = '';
     /**
-     *Направление операции
+     *Направление операции.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderDirection direction = 4;</code>
      */
     protected $direction = 0;
     /**
-     *Валюта стоп-заявки
+     *Валюта стоп-заявки.
      *
      * Generated from protobuf field <code>string currency = 5;</code>
      */
     protected $currency = '';
     /**
-     *Тип стоп-заявки
+     *Тип стоп-заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderType order_type = 6;</code>
      */
@@ -70,13 +70,13 @@ class StopOrder extends \Google\Protobuf\Internal\Message
      */
     protected $expiration_time = null;
     /**
-     *Цена заявки
+     *Цена заявки за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue price = 10;</code>
      */
     protected $price = null;
     /**
-     *Цена активации стоп-заявки
+     *Цена активации стоп-заявки за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue stop_price = 11;</code>
      */
@@ -89,17 +89,17 @@ class StopOrder extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $stop_order_id
-     *          Идентификатор-идентификатор стоп-заявки
+     *          Идентификатор-идентификатор стоп-заявки.
      *     @type int|string $lots_requested
-     *          Запрошено лотов
+     *          Запрошено лотов.
      *     @type string $figi
-     *          Figi-идентификатор инструмента
+     *          Figi-идентификатор инструмента.
      *     @type int $direction
-     *          Направление операции
+     *          Направление операции.
      *     @type string $currency
-     *          Валюта стоп-заявки
+     *          Валюта стоп-заявки.
      *     @type int $order_type
-     *          Тип стоп-заявки
+     *          Тип стоп-заявки.
      *     @type \Google\Protobuf\Timestamp $create_date
      *          Дата и время выставления заявки в часовом поясе UTC.
      *     @type \Google\Protobuf\Timestamp $activation_date_time
@@ -107,9 +107,9 @@ class StopOrder extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $expiration_time
      *          Дата и время снятия заявки в часовом поясе UTC.
      *     @type \Tinkoff\Invest\V1\MoneyValue $price
-     *          Цена заявки
+     *          Цена заявки за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *     @type \Tinkoff\Invest\V1\MoneyValue $stop_price
-     *          Цена активации стоп-заявки
+     *          Цена активации стоп-заявки за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      * }
      */
     public function __construct($data = NULL) {
@@ -118,7 +118,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор-идентификатор стоп-заявки
+     *Идентификатор-идентификатор стоп-заявки.
      *
      * Generated from protobuf field <code>string stop_order_id = 1;</code>
      * @return string
@@ -129,7 +129,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор-идентификатор стоп-заявки
+     *Идентификатор-идентификатор стоп-заявки.
      *
      * Generated from protobuf field <code>string stop_order_id = 1;</code>
      * @param string $var
@@ -144,7 +144,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Запрошено лотов
+     *Запрошено лотов.
      *
      * Generated from protobuf field <code>int64 lots_requested = 2;</code>
      * @return int|string
@@ -155,7 +155,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Запрошено лотов
+     *Запрошено лотов.
      *
      * Generated from protobuf field <code>int64 lots_requested = 2;</code>
      * @param int|string $var
@@ -170,7 +170,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента
+     *Figi-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 3;</code>
      * @return string
@@ -181,7 +181,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента
+     *Figi-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 3;</code>
      * @param string $var
@@ -196,7 +196,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Направление операции
+     *Направление операции.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderDirection direction = 4;</code>
      * @return int
@@ -207,7 +207,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Направление операции
+     *Направление операции.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderDirection direction = 4;</code>
      * @param int $var
@@ -222,7 +222,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Валюта стоп-заявки
+     *Валюта стоп-заявки.
      *
      * Generated from protobuf field <code>string currency = 5;</code>
      * @return string
@@ -233,7 +233,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Валюта стоп-заявки
+     *Валюта стоп-заявки.
      *
      * Generated from protobuf field <code>string currency = 5;</code>
      * @param string $var
@@ -248,7 +248,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип стоп-заявки
+     *Тип стоп-заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderType order_type = 6;</code>
      * @return int
@@ -259,7 +259,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип стоп-заявки
+     *Тип стоп-заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderType order_type = 6;</code>
      * @param int $var
@@ -382,7 +382,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена заявки
+     *Цена заявки за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue price = 10;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -403,7 +403,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена заявки
+     *Цена заявки за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue price = 10;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -418,7 +418,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена активации стоп-заявки
+     *Цена активации стоп-заявки за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue stop_price = 11;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -439,7 +439,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена активации стоп-заявки
+     *Цена активации стоп-заявки за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue stop_price = 11;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var

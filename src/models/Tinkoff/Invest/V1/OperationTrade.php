@@ -16,25 +16,25 @@ use Google\Protobuf\Internal\GPBUtil;
 class OperationTrade extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Идентификатор сделки
+     *Идентификатор сделки.
      *
      * Generated from protobuf field <code>string trade_id = 1;</code>
      */
     protected $trade_id = '';
     /**
-     *Дата и время сделки в часовом поясе UTC
+     *Дата и время сделки в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp date_time = 2;</code>
      */
     protected $date_time = null;
     /**
-     *Количество инструментов
+     *Количество инструментов.
      *
      * Generated from protobuf field <code>int64 quantity = 3;</code>
      */
     protected $quantity = 0;
     /**
-     *Цена
+     *Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue price = 4;</code>
      */
@@ -47,13 +47,13 @@ class OperationTrade extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $trade_id
-     *          Идентификатор сделки
+     *          Идентификатор сделки.
      *     @type \Google\Protobuf\Timestamp $date_time
-     *          Дата и время сделки в часовом поясе UTC
+     *          Дата и время сделки в часовом поясе UTC.
      *     @type int|string $quantity
-     *          Количество инструментов
+     *          Количество инструментов.
      *     @type \Tinkoff\Invest\V1\MoneyValue $price
-     *          Цена
+     *          Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      * }
      */
     public function __construct($data = NULL) {
@@ -62,7 +62,7 @@ class OperationTrade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор сделки
+     *Идентификатор сделки.
      *
      * Generated from protobuf field <code>string trade_id = 1;</code>
      * @return string
@@ -73,7 +73,7 @@ class OperationTrade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор сделки
+     *Идентификатор сделки.
      *
      * Generated from protobuf field <code>string trade_id = 1;</code>
      * @param string $var
@@ -88,7 +88,7 @@ class OperationTrade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время сделки в часовом поясе UTC
+     *Дата и время сделки в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp date_time = 2;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -109,7 +109,7 @@ class OperationTrade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время сделки в часовом поясе UTC
+     *Дата и время сделки в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp date_time = 2;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -124,7 +124,7 @@ class OperationTrade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество инструментов
+     *Количество инструментов.
      *
      * Generated from protobuf field <code>int64 quantity = 3;</code>
      * @return int|string
@@ -135,7 +135,7 @@ class OperationTrade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество инструментов
+     *Количество инструментов.
      *
      * Generated from protobuf field <code>int64 quantity = 3;</code>
      * @param int|string $var
@@ -150,7 +150,7 @@ class OperationTrade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена
+     *Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue price = 4;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -171,7 +171,7 @@ class OperationTrade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена
+     *Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue price = 4;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var

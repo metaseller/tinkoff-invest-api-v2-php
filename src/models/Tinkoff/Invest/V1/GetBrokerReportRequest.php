@@ -14,13 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetBrokerReportRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Идентификатор задачи формирования брокерского отчёта
+     *Идентификатор задачи формирования брокерского отчёта.
      *
      * Generated from protobuf field <code>string task_id = 1;</code>
      */
     protected $task_id = '';
     /**
-     *Номер страницы отчета (начинается с 1), значение по умолчанию: 0
+     *Номер страницы отчета (начинается с 1), значение по умолчанию: 0.
      *
      * Generated from protobuf field <code>int32 page = 2;</code>
      */
@@ -33,9 +33,9 @@ class GetBrokerReportRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $task_id
-     *          Идентификатор задачи формирования брокерского отчёта
+     *          Идентификатор задачи формирования брокерского отчёта.
      *     @type int $page
-     *          Номер страницы отчета (начинается с 1), значение по умолчанию: 0
+     *          Номер страницы отчета (начинается с 1), значение по умолчанию: 0.
      * }
      */
     public function __construct($data = NULL) {
@@ -44,7 +44,7 @@ class GetBrokerReportRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор задачи формирования брокерского отчёта
+     *Идентификатор задачи формирования брокерского отчёта.
      *
      * Generated from protobuf field <code>string task_id = 1;</code>
      * @return string
@@ -55,7 +55,7 @@ class GetBrokerReportRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор задачи формирования брокерского отчёта
+     *Идентификатор задачи формирования брокерского отчёта.
      *
      * Generated from protobuf field <code>string task_id = 1;</code>
      * @param string $var
@@ -70,7 +70,7 @@ class GetBrokerReportRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер страницы отчета (начинается с 1), значение по умолчанию: 0
+     *Номер страницы отчета (начинается с 1), значение по умолчанию: 0.
      *
      * Generated from protobuf field <code>int32 page = 2;</code>
      * @return int
@@ -81,7 +81,7 @@ class GetBrokerReportRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер страницы отчета (начинается с 1), значение по умолчанию: 0
+     *Номер страницы отчета (начинается с 1), значение по умолчанию: 0.
      *
      * Generated from protobuf field <code>int32 page = 2;</code>
      * @param int $var

@@ -76,4 +76,19 @@ class MarketDataServiceClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * Метод запроса последних обезличенных сделок по инструменту.
+     * @param \Tinkoff\Invest\V1\GetLastTradesRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetLastTrades(\Tinkoff\Invest\V1\GetLastTradesRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.MarketDataService/GetLastTrades',
+        $argument,
+        ['\Tinkoff\Invest\V1\GetLastTradesResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }

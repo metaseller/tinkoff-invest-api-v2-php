@@ -16,55 +16,55 @@ use Google\Protobuf\Internal\GPBUtil;
 class Operation extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Идентификатор операции
+     *Идентификатор операции.
      *
      * Generated from protobuf field <code>string id = 1;</code>
      */
     protected $id = '';
     /**
-     *Идентификатор родительской операции
+     *Идентификатор родительской операции.
      *
      * Generated from protobuf field <code>string parent_operation_id = 2;</code>
      */
     protected $parent_operation_id = '';
     /**
-     *Валюта операции
+     *Валюта операции.
      *
      * Generated from protobuf field <code>string currency = 3;</code>
      */
     protected $currency = '';
     /**
-     *Сумма операции
+     *Сумма операции.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue payment = 4;</code>
      */
     protected $payment = null;
     /**
-     *Цена операции
+     *Цена операции за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue price = 5;</code>
      */
     protected $price = null;
     /**
-     *Статус операции
+     *Статус операции.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OperationState state = 6;</code>
      */
     protected $state = 0;
     /**
-     *Количество лотов инструмента
+     *Количество лотов инструмента.
      *
      * Generated from protobuf field <code>int64 quantity = 7;</code>
      */
     protected $quantity = 0;
     /**
-     *Неисполненный остаток по сделке
+     *Неисполненный остаток по сделке.
      *
      * Generated from protobuf field <code>int64 quantity_rest = 8;</code>
      */
     protected $quantity_rest = 0;
     /**
-     *Figi-идентификатор инструмента, связанного с операцией
+     *Figi-идентификатор инструмента, связанного с операцией.
      *
      * Generated from protobuf field <code>string figi = 9;</code>
      */
@@ -76,25 +76,25 @@ class Operation extends \Google\Protobuf\Internal\Message
      */
     protected $instrument_type = '';
     /**
-     *Дата и время операции в формате часовом поясе UTC
+     *Дата и время операции в формате часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp date = 11;</code>
      */
     protected $date = null;
     /**
-     *Текстовое описание типа операции
+     *Текстовое описание типа операции.
      *
      * Generated from protobuf field <code>string type = 12;</code>
      */
     protected $type = '';
     /**
-     *Тип операции
+     *Тип операции.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OperationType operation_type = 13;</code>
      */
     protected $operation_type = 0;
     /**
-     *Массив сделок
+     *Массив сделок.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OperationTrade trades = 14;</code>
      */
@@ -107,33 +107,33 @@ class Operation extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $id
-     *          Идентификатор операции
+     *          Идентификатор операции.
      *     @type string $parent_operation_id
-     *          Идентификатор родительской операции
+     *          Идентификатор родительской операции.
      *     @type string $currency
-     *          Валюта операции
+     *          Валюта операции.
      *     @type \Tinkoff\Invest\V1\MoneyValue $payment
-     *          Сумма операции
+     *          Сумма операции.
      *     @type \Tinkoff\Invest\V1\MoneyValue $price
-     *          Цена операции
+     *          Цена операции за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *     @type int $state
-     *          Статус операции
+     *          Статус операции.
      *     @type int|string $quantity
-     *          Количество лотов инструмента
+     *          Количество лотов инструмента.
      *     @type int|string $quantity_rest
-     *          Неисполненный остаток по сделке
+     *          Неисполненный остаток по сделке.
      *     @type string $figi
-     *          Figi-идентификатор инструмента, связанного с операцией
+     *          Figi-идентификатор инструмента, связанного с операцией.
      *     @type string $instrument_type
      *          Тип инструмента. Возможные значения: </br>**bond** — облигация; </br>**share** — акция; </br>**currency** — валюта; </br>**etf** — фонд; </br>**futures** — фьючерс.
      *     @type \Google\Protobuf\Timestamp $date
-     *          Дата и время операции в формате часовом поясе UTC
+     *          Дата и время операции в формате часовом поясе UTC.
      *     @type string $type
-     *          Текстовое описание типа операции
+     *          Текстовое описание типа операции.
      *     @type int $operation_type
-     *          Тип операции
+     *          Тип операции.
      *     @type \Tinkoff\Invest\V1\OperationTrade[]|\Google\Protobuf\Internal\RepeatedField $trades
-     *          Массив сделок
+     *          Массив сделок.
      * }
      */
     public function __construct($data = NULL) {
@@ -142,7 +142,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор операции
+     *Идентификатор операции.
      *
      * Generated from protobuf field <code>string id = 1;</code>
      * @return string
@@ -153,7 +153,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор операции
+     *Идентификатор операции.
      *
      * Generated from protobuf field <code>string id = 1;</code>
      * @param string $var
@@ -168,7 +168,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор родительской операции
+     *Идентификатор родительской операции.
      *
      * Generated from protobuf field <code>string parent_operation_id = 2;</code>
      * @return string
@@ -179,7 +179,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор родительской операции
+     *Идентификатор родительской операции.
      *
      * Generated from protobuf field <code>string parent_operation_id = 2;</code>
      * @param string $var
@@ -194,7 +194,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Валюта операции
+     *Валюта операции.
      *
      * Generated from protobuf field <code>string currency = 3;</code>
      * @return string
@@ -205,7 +205,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Валюта операции
+     *Валюта операции.
      *
      * Generated from protobuf field <code>string currency = 3;</code>
      * @param string $var
@@ -220,7 +220,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Сумма операции
+     *Сумма операции.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue payment = 4;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -241,7 +241,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Сумма операции
+     *Сумма операции.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue payment = 4;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -256,7 +256,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена операции
+     *Цена операции за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue price = 5;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -277,7 +277,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена операции
+     *Цена операции за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue price = 5;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -292,7 +292,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Статус операции
+     *Статус операции.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OperationState state = 6;</code>
      * @return int
@@ -303,7 +303,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Статус операции
+     *Статус операции.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OperationState state = 6;</code>
      * @param int $var
@@ -318,7 +318,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество лотов инструмента
+     *Количество лотов инструмента.
      *
      * Generated from protobuf field <code>int64 quantity = 7;</code>
      * @return int|string
@@ -329,7 +329,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество лотов инструмента
+     *Количество лотов инструмента.
      *
      * Generated from protobuf field <code>int64 quantity = 7;</code>
      * @param int|string $var
@@ -344,7 +344,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Неисполненный остаток по сделке
+     *Неисполненный остаток по сделке.
      *
      * Generated from protobuf field <code>int64 quantity_rest = 8;</code>
      * @return int|string
@@ -355,7 +355,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Неисполненный остаток по сделке
+     *Неисполненный остаток по сделке.
      *
      * Generated from protobuf field <code>int64 quantity_rest = 8;</code>
      * @param int|string $var
@@ -370,7 +370,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента, связанного с операцией
+     *Figi-идентификатор инструмента, связанного с операцией.
      *
      * Generated from protobuf field <code>string figi = 9;</code>
      * @return string
@@ -381,7 +381,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента, связанного с операцией
+     *Figi-идентификатор инструмента, связанного с операцией.
      *
      * Generated from protobuf field <code>string figi = 9;</code>
      * @param string $var
@@ -422,7 +422,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время операции в формате часовом поясе UTC
+     *Дата и время операции в формате часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp date = 11;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -443,7 +443,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время операции в формате часовом поясе UTC
+     *Дата и время операции в формате часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp date = 11;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -458,7 +458,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Текстовое описание типа операции
+     *Текстовое описание типа операции.
      *
      * Generated from protobuf field <code>string type = 12;</code>
      * @return string
@@ -469,7 +469,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Текстовое описание типа операции
+     *Текстовое описание типа операции.
      *
      * Generated from protobuf field <code>string type = 12;</code>
      * @param string $var
@@ -484,7 +484,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип операции
+     *Тип операции.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OperationType operation_type = 13;</code>
      * @return int
@@ -495,7 +495,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип операции
+     *Тип операции.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OperationType operation_type = 13;</code>
      * @param int $var
@@ -510,7 +510,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив сделок
+     *Массив сделок.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OperationTrade trades = 14;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -521,7 +521,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив сделок
+     *Массив сделок.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OperationTrade trades = 14;</code>
      * @param \Tinkoff\Invest\V1\OperationTrade[]|\Google\Protobuf\Internal\RepeatedField $var

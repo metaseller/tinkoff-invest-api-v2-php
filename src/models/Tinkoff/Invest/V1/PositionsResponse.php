@@ -16,31 +16,31 @@ use Google\Protobuf\Internal\GPBUtil;
 class PositionsResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Массив валютных позиций портфеля
+     *Массив валютных позиций портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.MoneyValue money = 1;</code>
      */
     private $money;
     /**
-     *Массив заблокированных валютных позиций портфеля
+     *Массив заблокированных валютных позиций портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.MoneyValue blocked = 2;</code>
      */
     private $blocked;
     /**
-     *Список ценно-бумажных позиций портфеля
+     *Список ценно-бумажных позиций портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.PositionsSecurities securities = 3;</code>
      */
     private $securities;
     /**
-     *Признак идущей в данный момент выгрузки лимитов
+     *Признак идущей в данный момент выгрузки лимитов.
      *
      * Generated from protobuf field <code>bool limits_loading_in_progress = 4;</code>
      */
     protected $limits_loading_in_progress = false;
     /**
-     *Список фьючерсов портфеля
+     *Список фьючерсов портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.PositionsFutures futures = 5;</code>
      */
@@ -53,15 +53,15 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Tinkoff\Invest\V1\MoneyValue[]|\Google\Protobuf\Internal\RepeatedField $money
-     *          Массив валютных позиций портфеля
+     *          Массив валютных позиций портфеля.
      *     @type \Tinkoff\Invest\V1\MoneyValue[]|\Google\Protobuf\Internal\RepeatedField $blocked
-     *          Массив заблокированных валютных позиций портфеля
+     *          Массив заблокированных валютных позиций портфеля.
      *     @type \Tinkoff\Invest\V1\PositionsSecurities[]|\Google\Protobuf\Internal\RepeatedField $securities
-     *          Список ценно-бумажных позиций портфеля
+     *          Список ценно-бумажных позиций портфеля.
      *     @type bool $limits_loading_in_progress
-     *          Признак идущей в данный момент выгрузки лимитов
+     *          Признак идущей в данный момент выгрузки лимитов.
      *     @type \Tinkoff\Invest\V1\PositionsFutures[]|\Google\Protobuf\Internal\RepeatedField $futures
-     *          Список фьючерсов портфеля
+     *          Список фьючерсов портфеля.
      * }
      */
     public function __construct($data = NULL) {
@@ -70,7 +70,7 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив валютных позиций портфеля
+     *Массив валютных позиций портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.MoneyValue money = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -81,7 +81,7 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив валютных позиций портфеля
+     *Массив валютных позиций портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.MoneyValue money = 1;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue[]|\Google\Protobuf\Internal\RepeatedField $var
@@ -96,7 +96,7 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив заблокированных валютных позиций портфеля
+     *Массив заблокированных валютных позиций портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.MoneyValue blocked = 2;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -107,7 +107,7 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив заблокированных валютных позиций портфеля
+     *Массив заблокированных валютных позиций портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.MoneyValue blocked = 2;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue[]|\Google\Protobuf\Internal\RepeatedField $var
@@ -122,7 +122,7 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Список ценно-бумажных позиций портфеля
+     *Список ценно-бумажных позиций портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.PositionsSecurities securities = 3;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -133,7 +133,7 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Список ценно-бумажных позиций портфеля
+     *Список ценно-бумажных позиций портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.PositionsSecurities securities = 3;</code>
      * @param \Tinkoff\Invest\V1\PositionsSecurities[]|\Google\Protobuf\Internal\RepeatedField $var
@@ -148,7 +148,7 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Признак идущей в данный момент выгрузки лимитов
+     *Признак идущей в данный момент выгрузки лимитов.
      *
      * Generated from protobuf field <code>bool limits_loading_in_progress = 4;</code>
      * @return bool
@@ -159,7 +159,7 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Признак идущей в данный момент выгрузки лимитов
+     *Признак идущей в данный момент выгрузки лимитов.
      *
      * Generated from protobuf field <code>bool limits_loading_in_progress = 4;</code>
      * @param bool $var
@@ -174,7 +174,7 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Список фьючерсов портфеля
+     *Список фьючерсов портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.PositionsFutures futures = 5;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -185,7 +185,7 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Список фьючерсов портфеля
+     *Список фьючерсов портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.PositionsFutures futures = 5;</code>
      * @param \Tinkoff\Invest\V1\PositionsFutures[]|\Google\Protobuf\Internal\RepeatedField $var

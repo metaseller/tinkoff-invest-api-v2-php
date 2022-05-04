@@ -22,13 +22,13 @@ class GetBondCouponsRequest extends \Google\Protobuf\Internal\Message
      */
     protected $figi = '';
     /**
-     *Начало запрашиваемого периода в часовом поясе UTC.
+     *Начало запрашиваемого периода в часовом поясе UTC. Фильтрация по coupon_date (дата выплаты купона)
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2;</code>
      */
     protected $from = null;
     /**
-     *Окончание запрашиваемого периода в часовом поясе UTC.
+     *Окончание запрашиваемого периода в часовом поясе UTC. Фильтрация по coupon_date (дата выплаты купона)
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3;</code>
      */
@@ -43,9 +43,9 @@ class GetBondCouponsRequest extends \Google\Protobuf\Internal\Message
      *     @type string $figi
      *          Figi-идентификатор инструмента.
      *     @type \Google\Protobuf\Timestamp $from
-     *          Начало запрашиваемого периода в часовом поясе UTC.
+     *          Начало запрашиваемого периода в часовом поясе UTC. Фильтрация по coupon_date (дата выплаты купона)
      *     @type \Google\Protobuf\Timestamp $to
-     *          Окончание запрашиваемого периода в часовом поясе UTC.
+     *          Окончание запрашиваемого периода в часовом поясе UTC. Фильтрация по coupon_date (дата выплаты купона)
      * }
      */
     public function __construct($data = NULL) {
@@ -80,7 +80,7 @@ class GetBondCouponsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Начало запрашиваемого периода в часовом поясе UTC.
+     *Начало запрашиваемого периода в часовом поясе UTC. Фильтрация по coupon_date (дата выплаты купона)
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -101,7 +101,7 @@ class GetBondCouponsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Начало запрашиваемого периода в часовом поясе UTC.
+     *Начало запрашиваемого периода в часовом поясе UTC. Фильтрация по coupon_date (дата выплаты купона)
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -116,7 +116,7 @@ class GetBondCouponsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Окончание запрашиваемого периода в часовом поясе UTC.
+     *Окончание запрашиваемого периода в часовом поясе UTC. Фильтрация по coupon_date (дата выплаты купона)
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -137,7 +137,7 @@ class GetBondCouponsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Окончание запрашиваемого периода в часовом поясе UTC.
+     *Окончание запрашиваемого периода в часовом поясе UTC. Фильтрация по coupon_date (дата выплаты купона)
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3;</code>
      * @param \Google\Protobuf\Timestamp $var
