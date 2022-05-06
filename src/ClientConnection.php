@@ -29,10 +29,11 @@ class ClientConnection
      * Метод получения опций соединения с сервисом Tinkoff Invest API 2
      *
      * @param string $api_token Токен доступа к Tinkoff Invest API 2
+     * @param string|null $app_name Значение AppName для запросов к Tinkoff Invest API 2
      *
      * @return array Массив опций соединения с сервисом Tinkoff Invest API 2
      */
-    public static function getOptions(string $api_token): array
+    public static function getOptions(string $api_token, string $app_name): array
     {
         $certificate_path = dirname(__FILE__) . '/../etc/tinkoff-ru.pem';
 
@@ -42,8 +43,9 @@ class ClientConnection
             'credentials' => ChannelCredentials::createSsl($cert),
             'grpc.enable_http_proxy' => 0,
             'grpc.ssl_target_name_override' => static::TINKOFF_INVEST_API2_HOSTNAME,
-            'update_metadata' => function($meta_data) use ($api_token) {
+            'update_metadata' => function($meta_data) use ($api_token, $app_name) {
                 $meta_data['authorization'] = ['Bearer ' . $api_token];
+                $meta_data['x-app-name'] = [$app_name];
 
                 return $meta_data;
             }

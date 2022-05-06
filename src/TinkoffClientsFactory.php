@@ -34,6 +34,18 @@ class TinkoffClientsFactory
     use ModelTrait;
 
     /**
+     * @var string AppName запросов по-умолчанию
+     *
+     * @see https://tinkoff.github.io/investAPI/grpc/#appname
+     */
+    public const DEFAULT_APP_NAME = 'metaseller.tinkoff-invest-api-v2-php';
+
+    /**
+     * @var string|null Передаваемое AppName запросов
+     */
+    protected $_app_name;
+
+    /**
      * @var string|null Токен доступа к Tinkoff Invest API 2
      */
     protected $_api_token;
@@ -105,11 +117,13 @@ class TinkoffClientsFactory
      * Конструктор класса
      *
      * @param string|null $api_token Токен доступа к Tinkoff Invest API 2
+     * @param string|null $app_name Значение AppName для запросов к Tinkoff Invest API 2. Если установлено <code>null</code>,
+     * то будет использовано значение {@link TinkoffClientsFactory::DEFAULT_APP_NAME}
      */
-    public function __construct(string $api_token = null)
+    public function __construct(string $api_token = null, string $app_name = null)
     {
         if ($api_token) {
-            $this->setApiToken($api_token);
+            $this->setApiToken($api_token)->setAppName($app_name ?: TinkoffClientsFactory::DEFAULT_APP_NAME);
         }
     }
 
@@ -123,6 +137,21 @@ class TinkoffClientsFactory
     public function setApiToken(string $api_token): self
     {
         $this->_api_token = $api_token;
+        $this->resetClients();
+
+        return $this;
+    }
+
+    /**
+     * Метод сеттер значения AppName для запросов к Tinkoff Invest API 2
+     *
+     * @param string $app_name AppName для запросов к Tinkoff Invest API 2
+     *
+     * @return $this Текущий экземпляр модели
+     */
+    public function setAppName(string $app_name): self
+    {
+        $this->_app_name = $app_name;
         $this->resetClients();
 
         return $this;
