@@ -29,11 +29,11 @@ class ClientConnection
      * Метод получения опций соединения с сервисом Tinkoff Invest API 2
      *
      * @param string $api_token Токен доступа к Tinkoff Invest API 2
-     * @param string|null $app_name Значение AppName для запросов к Tinkoff Invest API 2
+     * @param string $app_name Значение AppName для запросов к Tinkoff Invest API 2. По умолчанию равно {@link TinkoffClientsFactory::DEFAULT_APP_NAME}
      *
      * @return array Массив опций соединения с сервисом Tinkoff Invest API 2
      */
-    public static function getOptions(string $api_token, string $app_name): array
+    public static function getOptions(string $api_token, string $app_name = TinkoffClientsFactory::DEFAULT_APP_NAME): array
     {
         $certificate_path = dirname(__FILE__) . '/../etc/tinkoff-ru.pem';
 
