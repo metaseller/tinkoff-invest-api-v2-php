@@ -28,4 +28,19 @@ class MarketDataStreamServiceClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * Server-side стрим предоставления биржевой информации.
+     * @param \Tinkoff\Invest\V1\MarketDataServerSideStreamRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
+     */
+    public function MarketDataServerSideStream(\Tinkoff\Invest\V1\MarketDataServerSideStreamRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_serverStreamRequest('/tinkoff.public.invest.api.contract.v1.MarketDataStreamService/MarketDataServerSideStream',
+        $argument,
+        ['\Tinkoff\Invest\V1\MarketDataResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }

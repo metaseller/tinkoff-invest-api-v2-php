@@ -116,7 +116,7 @@ class OperationType
      */
     const OPERATION_TYPE_BUY_CARD = 16;
     /**
-     *Завод ценных бумаг из другого депозитария.
+     *Перевод ценных бумаг из другого депозитария.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_INPUT_SECURITIES = 17;</code>
      */

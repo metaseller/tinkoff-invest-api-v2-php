@@ -76,4 +76,19 @@ class OrdersServiceClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * Метод изменения выставленной заявки.
+     * @param \Tinkoff\Invest\V1\ReplaceOrderRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function ReplaceOrder(\Tinkoff\Invest\V1\ReplaceOrderRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.OrdersService/ReplaceOrder',
+        $argument,
+        ['\Tinkoff\Invest\V1\PostOrderResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }

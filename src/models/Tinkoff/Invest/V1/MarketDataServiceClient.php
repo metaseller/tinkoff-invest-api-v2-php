@@ -77,7 +77,7 @@ class MarketDataServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод запроса последних обезличенных сделок по инструменту.
+     * Метод запроса обезличенных сделок за последний час.
      * @param \Tinkoff\Invest\V1\GetLastTradesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Избранный инструмент.
+ *Массив избранных инструментов.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.FavoriteInstrument</code>
  */

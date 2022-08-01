@@ -207,6 +207,36 @@ class Future extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.RealExchange real_exchange = 32;</code>
      */
     protected $real_exchange = 0;
+    /**
+     *Уникальный идентификатор позиции инструмента.
+     *
+     * Generated from protobuf field <code>string position_uid = 33;</code>
+     */
+    protected $position_uid = '';
+    /**
+     *Уникальный идентификатор позиции основного инструмента.
+     *
+     * Generated from protobuf field <code>string basic_asset_position_uid = 34;</code>
+     */
+    protected $basic_asset_position_uid = '';
+    /**
+     *Признак доступности для ИИС.
+     *
+     * Generated from protobuf field <code>bool for_iis_flag = 41;</code>
+     */
+    protected $for_iis_flag = false;
+    /**
+     *Дата первой минутной свечи.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp first_1min_candle_date = 56;</code>
+     */
+    protected $first_1min_candle_date = null;
+    /**
+     *Дата первой дневной свечи.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp first_1day_candle_date = 57;</code>
+     */
+    protected $first_1day_candle_date = null;
 
     /**
      * Constructor.
@@ -278,6 +308,16 @@ class Future extends \Google\Protobuf\Internal\Message
      *          Уникальный идентификатор инструмента.
      *     @type int $real_exchange
      *          Реальная площадка исполнения расчётов.
+     *     @type string $position_uid
+     *          Уникальный идентификатор позиции инструмента.
+     *     @type string $basic_asset_position_uid
+     *          Уникальный идентификатор позиции основного инструмента.
+     *     @type bool $for_iis_flag
+     *          Признак доступности для ИИС.
+     *     @type \Google\Protobuf\Timestamp $first_1min_candle_date
+     *          Дата первой минутной свечи.
+     *     @type \Google\Protobuf\Timestamp $first_1day_candle_date
+     *          Дата первой дневной свечи.
      * }
      */
     public function __construct($data = NULL) {
@@ -1223,6 +1263,156 @@ class Future extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\RealExchange::class);
         $this->real_exchange = $var;
+
+        return $this;
+    }
+
+    /**
+     *Уникальный идентификатор позиции инструмента.
+     *
+     * Generated from protobuf field <code>string position_uid = 33;</code>
+     * @return string
+     */
+    public function getPositionUid()
+    {
+        return $this->position_uid;
+    }
+
+    /**
+     *Уникальный идентификатор позиции инструмента.
+     *
+     * Generated from protobuf field <code>string position_uid = 33;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPositionUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->position_uid = $var;
+
+        return $this;
+    }
+
+    /**
+     *Уникальный идентификатор позиции основного инструмента.
+     *
+     * Generated from protobuf field <code>string basic_asset_position_uid = 34;</code>
+     * @return string
+     */
+    public function getBasicAssetPositionUid()
+    {
+        return $this->basic_asset_position_uid;
+    }
+
+    /**
+     *Уникальный идентификатор позиции основного инструмента.
+     *
+     * Generated from protobuf field <code>string basic_asset_position_uid = 34;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setBasicAssetPositionUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->basic_asset_position_uid = $var;
+
+        return $this;
+    }
+
+    /**
+     *Признак доступности для ИИС.
+     *
+     * Generated from protobuf field <code>bool for_iis_flag = 41;</code>
+     * @return bool
+     */
+    public function getForIisFlag()
+    {
+        return $this->for_iis_flag;
+    }
+
+    /**
+     *Признак доступности для ИИС.
+     *
+     * Generated from protobuf field <code>bool for_iis_flag = 41;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setForIisFlag($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->for_iis_flag = $var;
+
+        return $this;
+    }
+
+    /**
+     *Дата первой минутной свечи.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp first_1min_candle_date = 56;</code>
+     * @return \Google\Protobuf\Timestamp|null
+     */
+    public function getFirst1MinCandleDate()
+    {
+        return isset($this->first_1min_candle_date) ? $this->first_1min_candle_date : null;
+    }
+
+    public function hasFirst1MinCandleDate()
+    {
+        return isset($this->first_1min_candle_date);
+    }
+
+    public function clearFirst1MinCandleDate()
+    {
+        unset($this->first_1min_candle_date);
+    }
+
+    /**
+     *Дата первой минутной свечи.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp first_1min_candle_date = 56;</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setFirst1MinCandleDate($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        $this->first_1min_candle_date = $var;
+
+        return $this;
+    }
+
+    /**
+     *Дата первой дневной свечи.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp first_1day_candle_date = 57;</code>
+     * @return \Google\Protobuf\Timestamp|null
+     */
+    public function getFirst1DayCandleDate()
+    {
+        return isset($this->first_1day_candle_date) ? $this->first_1day_candle_date : null;
+    }
+
+    public function hasFirst1DayCandleDate()
+    {
+        return isset($this->first_1day_candle_date);
+    }
+
+    public function clearFirst1DayCandleDate()
+    {
+        unset($this->first_1day_candle_date);
+    }
+
+    /**
+     *Дата первой дневной свечи.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp first_1day_candle_date = 57;</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setFirst1DayCandleDate($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        $this->first_1day_candle_date = $var;
 
         return $this;
     }

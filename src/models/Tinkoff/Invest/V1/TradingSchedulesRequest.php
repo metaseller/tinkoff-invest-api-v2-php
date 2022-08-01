@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Запрос расписания торгов
+ *Запрос расписания торгов.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.TradingSchedulesRequest</code>
  */

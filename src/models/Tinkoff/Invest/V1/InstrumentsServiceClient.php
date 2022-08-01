@@ -62,7 +62,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения графика выплат купонов по облигации
+     * Метод получения графика выплат купонов по облигации.
      * @param \Tinkoff\Invest\V1\GetBondCouponsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -287,7 +287,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения избранных инструментов.
+     * Метод получения списка избранных инструментов.
      * @param \Tinkoff\Invest\V1\GetFavoritesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -302,7 +302,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод редактирования избранных инструментов.
+     * Метод редактирования списка избранных инструментов.
      * @param \Tinkoff\Invest\V1\EditFavoritesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -313,6 +313,66 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/EditFavorites',
         $argument,
         ['\Tinkoff\Invest\V1\EditFavoritesResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Метод получения списка стран.
+     * @param \Tinkoff\Invest\V1\GetCountriesRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetCountries(\Tinkoff\Invest\V1\GetCountriesRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetCountries',
+        $argument,
+        ['\Tinkoff\Invest\V1\GetCountriesResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Метод поиска инструмента.
+     * @param \Tinkoff\Invest\V1\FindInstrumentRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function FindInstrument(\Tinkoff\Invest\V1\FindInstrumentRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/FindInstrument',
+        $argument,
+        ['\Tinkoff\Invest\V1\FindInstrumentResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Метод получения списка брендов.
+     * @param \Tinkoff\Invest\V1\GetBrandsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetBrands(\Tinkoff\Invest\V1\GetBrandsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetBrands',
+        $argument,
+        ['\Tinkoff\Invest\V1\GetBrandsResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Метод получения бренда по его идентификатору.
+     * @param \Tinkoff\Invest\V1\GetBrandRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetBrandBy(\Tinkoff\Invest\V1\GetBrandRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetBrandBy',
+        $argument,
+        ['\Tinkoff\Invest\V1\Brand', 'decode'],
         $metadata, $options);
     }
 

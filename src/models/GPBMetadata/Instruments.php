@@ -18,7 +18,7 @@ class Instruments
         \GPBMetadata\Common::initOnce();
         $pool->internalAddGeneratedFile(
             '
-ž®
+ÞÀ
 instruments.proto%tinkoff.public.invest.api.contract.v1common.proto"}
 TradingSchedulesRequest
 exchange (	(
@@ -94,7 +94,7 @@ instrument (2-.tinkoff.public.invest.api.contract.v1.Future"U
 
 instrument (2,.tinkoff.public.invest.api.contract.v1.Share"S
 SharesResponseA
-instruments (2,.tinkoff.public.invest.api.contract.v1.Share"‰
+instruments (2,.tinkoff.public.invest.api.contract.v1.Share"­
 Bond
 figi (	
 ticker (	
@@ -139,7 +139,11 @@ issue_size (
 min_price_increment& (20.tinkoff.public.invest.api.contract.v1.Quotation 
 api_trade_available_flag\' (
 uid( (	J
-real_exchange) (23.tinkoff.public.invest.api.contract.v1.RealExchange"·
+real_exchange) (23.tinkoff.public.invest.api.contract.v1.RealExchange
+position_uid* (	
+for_iis_flag3 (:
+first_1min_candle_date= (2.google.protobuf.Timestamp:
+first_1day_candle_date> (2.google.protobuf.Timestamp"Û	
 Currency
 figi (	
 ticker (	
@@ -170,7 +174,12 @@ dshort_min (20.tinkoff.public.invest.api.contract.v1.Quotation
 min_price_increment (20.tinkoff.public.invest.api.contract.v1.Quotation 
 api_trade_available_flag (
 uid (	J
-real_exchange (23.tinkoff.public.invest.api.contract.v1.RealExchange"Ö	
+real_exchange (23.tinkoff.public.invest.api.contract.v1.RealExchange
+position_uid (	
+for_iis_flag) (:
+first_1min_candle_date8 (2.google.protobuf.Timestamp:
+first_1day_candle_date9 (2.google.protobuf.Timestamp"ú
+
 Etf
 figi (	
 ticker (	
@@ -207,8 +216,11 @@ num_shares (20.tinkoff.public.invest.api.contract.v1.Quotation
 min_price_increment (20.tinkoff.public.invest.api.contract.v1.Quotation 
 api_trade_available_flag (
 uid (	J
-real_exchange  (23.tinkoff.public.invest.api.contract.v1.RealExchange"ƒ
-
+real_exchange  (23.tinkoff.public.invest.api.contract.v1.RealExchange
+position_uid! (	
+for_iis_flag) (:
+first_1min_candle_date8 (2.google.protobuf.Timestamp:
+first_1day_candle_date9 (2.google.protobuf.Timestamp"É
 Future
 figi (	
 ticker (	
@@ -245,7 +257,12 @@ asset_type (	
 min_price_increment (20.tinkoff.public.invest.api.contract.v1.Quotation 
 api_trade_available_flag (
 uid (	J
-real_exchange  (23.tinkoff.public.invest.api.contract.v1.RealExchange"â	
+real_exchange  (23.tinkoff.public.invest.api.contract.v1.RealExchange
+position_uid! (	 
+basic_asset_position_uid" (	
+for_iis_flag) (:
+first_1min_candle_date8 (2.google.protobuf.Timestamp:
+first_1day_candle_date9 (2.google.protobuf.Timestamp"†
 Share
 figi (	
 ticker (	
@@ -283,7 +300,11 @@ share_type (20.tinkoff.public.invest.api.contract.v1.ShareTypeM
 min_price_increment (20.tinkoff.public.invest.api.contract.v1.Quotation 
 api_trade_available_flag  (
 uid! (	J
-real_exchange" (23.tinkoff.public.invest.api.contract.v1.RealExchange"|
+real_exchange" (23.tinkoff.public.invest.api.contract.v1.RealExchange
+position_uid# (	
+for_iis_flag. (:
+first_1min_candle_date8 (2.google.protobuf.Timestamp:
+first_1day_candle_date9 (2.google.protobuf.Timestamp"|
 GetAccruedInterestsRequest
 figi (	(
 from (2.google.protobuf.Timestamp&
@@ -304,7 +325,7 @@ share_type (20.tinkoff.public.invest.api.contract.v1.ShareTypeM
 min_price_increment_amount (20.tinkoff.public.invest.api.contract.v1.Quotation"[
 InstrumentResponseE
 
-instrument (21.tinkoff.public.invest.api.contract.v1.Instrument"ó
+instrument (21.tinkoff.public.invest.api.contract.v1.Instrument"—	
 
 Instrument
 figi (	
@@ -335,7 +356,11 @@ dshort_min (20.tinkoff.public.invest.api.contract.v1.Quotation
 min_price_increment (20.tinkoff.public.invest.api.contract.v1.Quotation 
 api_trade_available_flag (
 uid (	J
-real_exchange (23.tinkoff.public.invest.api.contract.v1.RealExchange"u
+real_exchange (23.tinkoff.public.invest.api.contract.v1.RealExchange
+position_uid (	
+for_iis_flag$ (:
+first_1min_candle_date8 (2.google.protobuf.Timestamp:
+first_1day_candle_date9 (2.google.protobuf.Timestamp"u
 GetDividendsRequest
 figi (	(
 from (2.google.protobuf.Timestamp&
@@ -545,7 +570,41 @@ class_code (	
 EditFavoritesRequestInstrument
 figi (	"p
 EditFavoritesResponseW
-favorite_instruments (29.tinkoff.public.invest.api.contract.v1.FavoriteInstrument*×
+favorite_instruments (29.tinkoff.public.invest.api.contract.v1.FavoriteInstrument"
+GetCountriesRequest"a
+GetCountriesResponseI
+	countries (26.tinkoff.public.invest.api.contract.v1.CountryResponse"Y
+CountryResponse
+alfa_two (	
+
+alfa_three (	
+name (	
+
+name_brief (	"&
+FindInstrumentRequest
+query (	"e
+FindInstrumentResponseK
+instruments (26.tinkoff.public.invest.api.contract.v1.InstrumentShort"Ë
+InstrumentShort
+isin (	
+figi (	
+ticker (	
+
+class_code (	
+instrument_type (	
+name (	
+uid (	
+position_uid (	 
+api_trade_available_flag (
+for_iis_flag (:
+first_1min_candle_date (2.google.protobuf.Timestamp:
+first_1day_candle_date (2.google.protobuf.Timestamp"
+GetBrandsRequest"
+GetBrandRequest
+
+id (	"Q
+GetBrandsResponse<
+brands (2,.tinkoff.public.invest.api.contract.v1.Brand*×
 
 CouponType
 COUPON_TYPE_UNSPECIFIED 
@@ -593,7 +652,7 @@ CouponType
 REAL_EXCHANGE_UNSPECIFIED 
 REAL_EXCHANGE_MOEX
 REAL_EXCHANGE_RTS
-REAL_EXCHANGE_OTC2æ
+REAL_EXCHANGE_OTC2ô
 InstrumentsService“
 TradingSchedules>.tinkoff.public.invest.api.contract.v1.TradingSchedulesRequest?.tinkoff.public.invest.api.contract.v1.TradingSchedulesResponsew
 BondBy8.tinkoff.public.invest.api.contract.v1.InstrumentRequest3.tinkoff.public.invest.api.contract.v1.BondResponsex
@@ -617,7 +676,12 @@ Currencies9.tinkoff.public.invest.api.contract.v1.InstrumentsRequest9.tinkoff.
 GetAssetBy3.tinkoff.public.invest.api.contract.v1.AssetRequest4.tinkoff.public.invest.api.contract.v1.AssetResponsex
 	GetAssets4.tinkoff.public.invest.api.contract.v1.AssetsRequest5.tinkoff.public.invest.api.contract.v1.AssetsResponse‡
 GetFavorites:.tinkoff.public.invest.api.contract.v1.GetFavoritesRequest;.tinkoff.public.invest.api.contract.v1.GetFavoritesResponseŠ
-EditFavorites;.tinkoff.public.invest.api.contract.v1.EditFavoritesRequest<.tinkoff.public.invest.api.contract.v1.EditFavoritesResponseBa
+EditFavorites;.tinkoff.public.invest.api.contract.v1.EditFavoritesRequest<.tinkoff.public.invest.api.contract.v1.EditFavoritesResponse‡
+GetCountries:.tinkoff.public.invest.api.contract.v1.GetCountriesRequest;.tinkoff.public.invest.api.contract.v1.GetCountriesResponse
+FindInstrument<.tinkoff.public.invest.api.contract.v1.FindInstrumentRequest=.tinkoff.public.invest.api.contract.v1.FindInstrumentResponse~
+	GetBrands7.tinkoff.public.invest.api.contract.v1.GetBrandsRequest8.tinkoff.public.invest.api.contract.v1.GetBrandsResponser
+
+GetBrandBy6.tinkoff.public.invest.api.contract.v1.GetBrandRequest,.tinkoff.public.invest.api.contract.v1.BrandBa
 ru.tinkoff.piapi.contract.v1PZ./;investapi¢TIAPIªTinkoff.InvestApi.V1ÊTinkoff\\Invest\\V1bproto3'
         , true);
 

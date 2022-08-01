@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Запрос избранных инструментов.
+ *Запрос списка избранных инструментов, входные параметры не требуются.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.GetFavoritesRequest</code>
  */

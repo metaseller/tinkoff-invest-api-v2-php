@@ -27,6 +27,12 @@ class SubscribeCandlesRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.CandleInstrument instruments = 2;</code>
      */
     private $instruments;
+    /**
+     *Флаг ожидания закрытия временного интервала для отправки свечи, применяется только для минутных свечей.
+     *
+     * Generated from protobuf field <code>bool waiting_close = 3;</code>
+     */
+    protected $waiting_close = false;
 
     /**
      * Constructor.
@@ -38,6 +44,8 @@ class SubscribeCandlesRequest extends \Google\Protobuf\Internal\Message
      *          Изменение статуса подписки.
      *     @type \Tinkoff\Invest\V1\CandleInstrument[]|\Google\Protobuf\Internal\RepeatedField $instruments
      *          Массив инструментов для подписки на свечи.
+     *     @type bool $waiting_close
+     *          Флаг ожидания закрытия временного интервала для отправки свечи, применяется только для минутных свечей.
      * }
      */
     public function __construct($data = NULL) {
@@ -93,6 +101,32 @@ class SubscribeCandlesRequest extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\CandleInstrument::class);
         $this->instruments = $arr;
+
+        return $this;
+    }
+
+    /**
+     *Флаг ожидания закрытия временного интервала для отправки свечи, применяется только для минутных свечей.
+     *
+     * Generated from protobuf field <code>bool waiting_close = 3;</code>
+     * @return bool
+     */
+    public function getWaitingClose()
+    {
+        return $this->waiting_close;
+    }
+
+    /**
+     *Флаг ожидания закрытия временного интервала для отправки свечи, применяется только для минутных свечей.
+     *
+     * Generated from protobuf field <code>bool waiting_close = 3;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setWaitingClose($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->waiting_close = $var;
 
         return $this;
     }

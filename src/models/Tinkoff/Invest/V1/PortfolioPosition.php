@@ -40,7 +40,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     protected $average_position_price = null;
     /**
-     *Текущая рассчитанная относительная доходность позиции, в %.
+     *Текущая рассчитанная доходность позиции.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation expected_yield = 5;</code>
      */
@@ -75,6 +75,12 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation quantity_lots = 10;</code>
      */
     protected $quantity_lots = null;
+    /**
+     *Заблокировано.
+     *
+     * Generated from protobuf field <code>bool blocked = 21;</code>
+     */
+    protected $blocked = false;
 
     /**
      * Constructor.
@@ -91,7 +97,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\MoneyValue $average_position_price
      *          Средневзвешенная цена позиции. **Возможна задержка до секунды для пересчёта**.
      *     @type \Tinkoff\Invest\V1\Quotation $expected_yield
-     *          Текущая рассчитанная относительная доходность позиции, в %.
+     *          Текущая рассчитанная доходность позиции.
      *     @type \Tinkoff\Invest\V1\MoneyValue $current_nkd
      *           Текущий НКД.
      *     @type \Tinkoff\Invest\V1\Quotation $average_position_price_pt
@@ -102,6 +108,8 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      *          Средняя цена лота в позиции по методу FIFO. **Возможна задержка до секунды для пересчёта**.
      *     @type \Tinkoff\Invest\V1\Quotation $quantity_lots
      *          Количество лотов в портфеле.
+     *     @type bool $blocked
+     *          Заблокировано.
      * }
      */
     public function __construct($data = NULL) {
@@ -234,7 +242,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Текущая рассчитанная относительная доходность позиции, в %.
+     *Текущая рассчитанная доходность позиции.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation expected_yield = 5;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -255,7 +263,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Текущая рассчитанная относительная доходность позиции, в %.
+     *Текущая рассчитанная доходность позиции.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation expected_yield = 5;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -445,6 +453,32 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->quantity_lots = $var;
+
+        return $this;
+    }
+
+    /**
+     *Заблокировано.
+     *
+     * Generated from protobuf field <code>bool blocked = 21;</code>
+     * @return bool
+     */
+    public function getBlocked()
+    {
+        return $this->blocked;
+    }
+
+    /**
+     *Заблокировано.
+     *
+     * Generated from protobuf field <code>bool blocked = 21;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setBlocked($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->blocked = $var;
 
         return $this;
     }

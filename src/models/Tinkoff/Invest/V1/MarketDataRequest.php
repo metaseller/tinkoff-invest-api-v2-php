@@ -33,6 +33,8 @@ class MarketDataRequest extends \Google\Protobuf\Internal\Message
      *          Запрос подписки на торговые статусы инструментов.
      *     @type \Tinkoff\Invest\V1\SubscribeLastPriceRequest $subscribe_last_price_request
      *          Запрос подписки на последние цены.
+     *     @type \Tinkoff\Invest\V1\GetMySubscriptions $get_my_subscriptions
+     *          Запрос своих подписок.
      * }
      */
     public function __construct($data = NULL) {
@@ -191,6 +193,37 @@ class MarketDataRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\SubscribeLastPriceRequest::class);
         $this->writeOneof(5, $var);
+
+        return $this;
+    }
+
+    /**
+     *Запрос своих подписок.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetMySubscriptions get_my_subscriptions = 6;</code>
+     * @return \Tinkoff\Invest\V1\GetMySubscriptions|null
+     */
+    public function getGetMySubscriptions()
+    {
+        return $this->readOneof(6);
+    }
+
+    public function hasGetMySubscriptions()
+    {
+        return $this->hasOneof(6);
+    }
+
+    /**
+     *Запрос своих подписок.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetMySubscriptions get_my_subscriptions = 6;</code>
+     * @param \Tinkoff\Invest\V1\GetMySubscriptions $var
+     * @return $this
+     */
+    public function setGetMySubscriptions($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\GetMySubscriptions::class);
+        $this->writeOneof(6, $var);
 
         return $this;
     }

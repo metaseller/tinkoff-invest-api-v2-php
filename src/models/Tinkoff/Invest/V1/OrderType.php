@@ -7,7 +7,7 @@ namespace Tinkoff\Invest\V1;
 use UnexpectedValueException;
 
 /**
- *Тип заявки
+ *Тип заявки.
  *
  * Protobuf type <code>tinkoff.public.invest.api.contract.v1.OrderType</code>
  */

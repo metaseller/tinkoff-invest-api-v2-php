@@ -52,7 +52,7 @@ class Operation extends \Google\Protobuf\Internal\Message
      */
     protected $state = 0;
     /**
-     *Количество лотов инструмента.
+     *Количество единиц инструмента.
      *
      * Generated from protobuf field <code>int64 quantity = 7;</code>
      */
@@ -119,7 +119,7 @@ class Operation extends \Google\Protobuf\Internal\Message
      *     @type int $state
      *          Статус операции.
      *     @type int|string $quantity
-     *          Количество лотов инструмента.
+     *          Количество единиц инструмента.
      *     @type int|string $quantity_rest
      *          Неисполненный остаток по сделке.
      *     @type string $figi
@@ -318,7 +318,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество лотов инструмента.
+     *Количество единиц инструмента.
      *
      * Generated from protobuf field <code>int64 quantity = 7;</code>
      * @return int|string
@@ -329,7 +329,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество лотов инструмента.
+     *Количество единиц инструмента.
      *
      * Generated from protobuf field <code>int64 quantity = 7;</code>
      * @param int|string $var

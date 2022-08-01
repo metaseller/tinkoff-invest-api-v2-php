@@ -7,7 +7,7 @@ namespace Tinkoff\Invest\V1;
 use UnexpectedValueException;
 
 /**
- *Направление операции
+ *Направление операции.
  *
  * Protobuf type <code>tinkoff.public.invest.api.contract.v1.OrderDirection</code>
  */

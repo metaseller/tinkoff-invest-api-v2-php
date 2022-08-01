@@ -33,6 +33,18 @@ class PositionsSecurities extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int64 balance = 3;</code>
      */
     protected $balance = 0;
+    /**
+     *Заблокировано на бирже.
+     *
+     * Generated from protobuf field <code>bool exchange_blocked = 11;</code>
+     */
+    protected $exchange_blocked = false;
+    /**
+     *Тип инструмента.
+     *
+     * Generated from protobuf field <code>string instrument_type = 16;</code>
+     */
+    protected $instrument_type = '';
 
     /**
      * Constructor.
@@ -46,6 +58,10 @@ class PositionsSecurities extends \Google\Protobuf\Internal\Message
      *          Заблокировано.
      *     @type int|string $balance
      *          Текущий незаблокированный баланс.
+     *     @type bool $exchange_blocked
+     *          Заблокировано на бирже.
+     *     @type string $instrument_type
+     *          Тип инструмента.
      * }
      */
     public function __construct($data = NULL) {
@@ -127,6 +143,58 @@ class PositionsSecurities extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt64($var);
         $this->balance = $var;
+
+        return $this;
+    }
+
+    /**
+     *Заблокировано на бирже.
+     *
+     * Generated from protobuf field <code>bool exchange_blocked = 11;</code>
+     * @return bool
+     */
+    public function getExchangeBlocked()
+    {
+        return $this->exchange_blocked;
+    }
+
+    /**
+     *Заблокировано на бирже.
+     *
+     * Generated from protobuf field <code>bool exchange_blocked = 11;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setExchangeBlocked($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->exchange_blocked = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тип инструмента.
+     *
+     * Generated from protobuf field <code>string instrument_type = 16;</code>
+     * @return string
+     */
+    public function getInstrumentType()
+    {
+        return $this->instrument_type;
+    }
+
+    /**
+     *Тип инструмента.
+     *
+     * Generated from protobuf field <code>string instrument_type = 16;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setInstrumentType($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->instrument_type = $var;
 
         return $this;
     }

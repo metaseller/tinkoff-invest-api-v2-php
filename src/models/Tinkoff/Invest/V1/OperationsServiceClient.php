@@ -106,4 +106,19 @@ class OperationsServiceClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * Метод получения списка операций по счёту с пагинацией.
+     * @param \Tinkoff\Invest\V1\GetOperationsByCursorRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetOperationsByCursor(\Tinkoff\Invest\V1\GetOperationsByCursorRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.OperationsService/GetOperationsByCursor',
+        $argument,
+        ['\Tinkoff\Invest\V1\GetOperationsByCursorResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }

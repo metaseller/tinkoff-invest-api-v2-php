@@ -22,31 +22,31 @@ class Coupon extends \Google\Protobuf\Internal\Message
      */
     protected $figi = '';
     /**
-     *Дата выплаты купона
+     *Дата выплаты купона.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp coupon_date = 2;</code>
      */
     protected $coupon_date = null;
     /**
-     *Номер купона
+     *Номер купона.
      *
      * Generated from protobuf field <code>int64 coupon_number = 3;</code>
      */
     protected $coupon_number = 0;
     /**
-     *(Опционально) Дата фиксации реестра для выплаты купона
+     *(Опционально) Дата фиксации реестра для выплаты купона.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp fix_date = 4;</code>
      */
     protected $fix_date = null;
     /**
-     *Выплата на одну облигацию
+     *Выплата на одну облигацию.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue pay_one_bond = 5;</code>
      */
     protected $pay_one_bond = null;
     /**
-     *Тип купона
+     *Тип купона.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.CouponType coupon_type = 6;</code>
      */
@@ -79,15 +79,15 @@ class Coupon extends \Google\Protobuf\Internal\Message
      *     @type string $figi
      *          Figi-идентификатор инструмента.
      *     @type \Google\Protobuf\Timestamp $coupon_date
-     *          Дата выплаты купона
+     *          Дата выплаты купона.
      *     @type int|string $coupon_number
-     *          Номер купона
+     *          Номер купона.
      *     @type \Google\Protobuf\Timestamp $fix_date
-     *          (Опционально) Дата фиксации реестра для выплаты купона
+     *          (Опционально) Дата фиксации реестра для выплаты купона.
      *     @type \Tinkoff\Invest\V1\MoneyValue $pay_one_bond
-     *          Выплата на одну облигацию
+     *          Выплата на одну облигацию.
      *     @type int $coupon_type
-     *          Тип купона
+     *          Тип купона.
      *     @type \Google\Protobuf\Timestamp $coupon_start_date
      *          Начало купонного периода.
      *     @type \Google\Protobuf\Timestamp $coupon_end_date
@@ -128,7 +128,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата выплаты купона
+     *Дата выплаты купона.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp coupon_date = 2;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -149,7 +149,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата выплаты купона
+     *Дата выплаты купона.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp coupon_date = 2;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -164,7 +164,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер купона
+     *Номер купона.
      *
      * Generated from protobuf field <code>int64 coupon_number = 3;</code>
      * @return int|string
@@ -175,7 +175,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер купона
+     *Номер купона.
      *
      * Generated from protobuf field <code>int64 coupon_number = 3;</code>
      * @param int|string $var
@@ -190,7 +190,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *(Опционально) Дата фиксации реестра для выплаты купона
+     *(Опционально) Дата фиксации реестра для выплаты купона.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp fix_date = 4;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -211,7 +211,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *(Опционально) Дата фиксации реестра для выплаты купона
+     *(Опционально) Дата фиксации реестра для выплаты купона.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp fix_date = 4;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -226,7 +226,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Выплата на одну облигацию
+     *Выплата на одну облигацию.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue pay_one_bond = 5;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -247,7 +247,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Выплата на одну облигацию
+     *Выплата на одну облигацию.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue pay_one_bond = 5;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -262,7 +262,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип купона
+     *Тип купона.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.CouponType coupon_type = 6;</code>
      * @return int
@@ -273,7 +273,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип купона
+     *Тип купона.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.CouponType coupon_type = 6;</code>
      * @param int $var

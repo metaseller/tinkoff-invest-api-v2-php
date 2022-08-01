@@ -10,6 +10,8 @@ Tinkoff Invest API — это интерфейс для взаимодейств
 
 Через API можно загрузить как исторические котировки, так и котировки в режиме реального времени по всем бумагам
 
+Для загрузки всех исторических котировок (по всем годам и бумагам) рекомендуем использовать [скрипт](https://github.com/Tinkoff/investAPI/blob/main/src/marketdata/download_md.sh) 
+
 ### Сигналы на покупку или продажу
 
 Торговлю по алгоритму можно автоматизировать, запрограммировав выставление сигналов
@@ -59,11 +61,15 @@ API реализован на быстром, удобном и функцион
 * [csharp](https://github.com/Tinkoff/invest-api-csharp-sdk)
 
 ## Неофициальные
+* [golang](https://github.com/ssummers02/invest-api-go-sdk)
 * [nodejs](https://github.com/betslus1/unofficial-tinkoff-invest-api_v2-lazy-sdk-NODEJS)
+* [golang](https://github.com/vodolaz095/go-investAPI)
 * [php](https://github.com/metaseller/tinkoff-invest-api-v2-php)
 * [php YII2](https://packagist.org/packages/metaseller/tinkoff-invest-api-v2-yii2)
 * [swift](https://github.com/JohnReeze/TinkoffInvestSwiftSDK)
+* [ruby](https://github.com/blackchestnut/invest_tinkoff)
 * [rust](https://github.com/ovr/tinkoff-invest-rust)
+* [c++](https://github.com/samoilovv/TinkoffInvestSDK)
 
 SDK на других языках в процессе разработки.
 

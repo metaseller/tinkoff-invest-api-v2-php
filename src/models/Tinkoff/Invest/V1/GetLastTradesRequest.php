@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Запрос последних обезличенных сделок по инструменту.
+ *Запрос обезличенных сделок за последний час.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.GetLastTradesRequest</code>
  */

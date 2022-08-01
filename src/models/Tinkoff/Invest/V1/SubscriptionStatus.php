@@ -50,7 +50,7 @@ class SubscriptionStatus
      */
     const SUBSCRIPTION_STATUS_INTERVAL_IS_INVALID = 5;
     /**
-     *Превышен лимит подписок в рамках стрима, подробнее: [Лимитная политика](https://tinkoff.github.io/investAPI/limits/).
+     *Превышен лимит на общее количество подписок в рамках стрима, подробнее: [Лимитная политика](https://tinkoff.github.io/investAPI/limits/).
      *
      * Generated from protobuf enum <code>SUBSCRIPTION_STATUS_LIMIT_IS_EXCEEDED = 6;</code>
      */
@@ -61,6 +61,12 @@ class SubscriptionStatus
      * Generated from protobuf enum <code>SUBSCRIPTION_STATUS_INTERNAL_ERROR = 7;</code>
      */
     const SUBSCRIPTION_STATUS_INTERNAL_ERROR = 7;
+    /**
+     *Превышен лимит на количество запросов на подписки в течение установленного отрезка времени
+     *
+     * Generated from protobuf enum <code>SUBSCRIPTION_STATUS_TOO_MANY_REQUESTS = 8;</code>
+     */
+    const SUBSCRIPTION_STATUS_TOO_MANY_REQUESTS = 8;
 
     private static $valueToName = [
         self::SUBSCRIPTION_STATUS_UNSPECIFIED => 'SUBSCRIPTION_STATUS_UNSPECIFIED',
@@ -71,6 +77,7 @@ class SubscriptionStatus
         self::SUBSCRIPTION_STATUS_INTERVAL_IS_INVALID => 'SUBSCRIPTION_STATUS_INTERVAL_IS_INVALID',
         self::SUBSCRIPTION_STATUS_LIMIT_IS_EXCEEDED => 'SUBSCRIPTION_STATUS_LIMIT_IS_EXCEEDED',
         self::SUBSCRIPTION_STATUS_INTERNAL_ERROR => 'SUBSCRIPTION_STATUS_INTERNAL_ERROR',
+        self::SUBSCRIPTION_STATUS_TOO_MANY_REQUESTS => 'SUBSCRIPTION_STATUS_TOO_MANY_REQUESTS',
     ];
 
     public static function name($value)
