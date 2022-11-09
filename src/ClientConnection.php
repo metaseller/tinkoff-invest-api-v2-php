@@ -19,6 +19,13 @@ class ClientConnection
     public const TINKOFF_INVEST_API2_HOSTNAME = 'invest-public-api.tinkoff.ru';
 
     /**
+     * @var string Адрес домена сервиса Tinkoff Invest API 2 (песочница)
+     *
+     * @see https://tinkoff.github.io/investAPI/
+     */
+    public const TINKOFF_INVEST_API2_HOSTNAME_SANDBOX = 'sandbox-invest-public-api.tinkoff.ru';
+
+    /**
      * @var int Порт сервиса Tinkoff Invest API 2
      *
      * @see https://tinkoff.github.io/investAPI/
@@ -59,6 +66,9 @@ class ClientConnection
      */
     public static function getHostname(): string
     {
-        return static::TINKOFF_INVEST_API2_HOSTNAME . ':' . static::TINKOFF_INVEST_API2_PORT;
+        $host = getenv('TINKOFF_API2_SANDBOX_MODE') == 'true'
+            ? static::TINKOFF_INVEST_API2_HOSTNAME_SANDBOX
+            : static::TINKOFF_INVEST_API2_HOSTNAME;
+        return $host . ':' . static::TINKOFF_INVEST_API2_PORT;
     }
 }
