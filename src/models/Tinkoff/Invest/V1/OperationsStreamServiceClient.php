@@ -31,4 +31,19 @@ class OperationsStreamServiceClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * Server-side stream обновлений информации по изменению позиций портфеля
+     * @param \Tinkoff\Invest\V1\PositionsStreamRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
+     */
+    public function PositionsStream(\Tinkoff\Invest\V1\PositionsStreamRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_serverStreamRequest('/tinkoff.public.invest.api.contract.v1.OperationsStreamService/PositionsStream',
+        $argument,
+        ['\Tinkoff\Invest\V1\PositionsStreamResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }

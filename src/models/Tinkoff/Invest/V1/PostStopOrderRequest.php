@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Figi-идентификатор инструмента.
+     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      */
@@ -69,6 +69,12 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.google.protobuf.Timestamp expire_date = 9;</code>
      */
     protected $expire_date = null;
+    /**
+     *Идентификатор инструмента, принимает значения Figi или instrument_uid.
+     *
+     * Generated from protobuf field <code>string instrument_id = 10;</code>
+     */
+    protected $instrument_id = '';
 
     /**
      * Constructor.
@@ -77,7 +83,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $figi
-     *          Figi-идентификатор инструмента.
+     *          Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *     @type int|string $quantity
      *          Количество лотов.
      *     @type \Tinkoff\Invest\V1\Quotation $price
@@ -94,6 +100,8 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
      *          Тип заявки.
      *     @type \Google\Protobuf\Timestamp $expire_date
      *          Дата и время окончания действия стоп-заявки в часовом поясе UTC. **Для ExpirationType = GoodTillDate заполнение обязательно**.
+     *     @type string $instrument_id
+     *          Идентификатор инструмента, принимает значения Figi или instrument_uid.
      * }
      */
     public function __construct($data = NULL) {
@@ -102,7 +110,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента.
+     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @return string
@@ -113,7 +121,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента.
+     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @param string $var
@@ -361,6 +369,32 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->expire_date = $var;
+
+        return $this;
+    }
+
+    /**
+     *Идентификатор инструмента, принимает значения Figi или instrument_uid.
+     *
+     * Generated from protobuf field <code>string instrument_id = 10;</code>
+     * @return string
+     */
+    public function getInstrumentId()
+    {
+        return $this->instrument_id;
+    }
+
+    /**
+     *Идентификатор инструмента, принимает значения Figi или instrument_uid.
+     *
+     * Generated from protobuf field <code>string instrument_id = 10;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setInstrumentId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->instrument_id = $var;
 
         return $this;
     }

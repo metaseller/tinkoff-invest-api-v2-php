@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class CandleInstrument extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Figi-идентификатор инструмента.
+     * Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      */
@@ -27,6 +27,12 @@ class CandleInstrument extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionInterval interval = 2;</code>
      */
     protected $interval = 0;
+    /**
+     *Идентификатор инструмента, принимает значение figi или instrument_uid
+     *
+     * Generated from protobuf field <code>string instrument_id = 3;</code>
+     */
+    protected $instrument_id = '';
 
     /**
      * Constructor.
@@ -35,9 +41,11 @@ class CandleInstrument extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $figi
-     *          Figi-идентификатор инструмента.
+     *           Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *     @type int $interval
      *          Интервал свечей.
+     *     @type string $instrument_id
+     *          Идентификатор инструмента, принимает значение figi или instrument_uid
      * }
      */
     public function __construct($data = NULL) {
@@ -46,7 +54,7 @@ class CandleInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента.
+     * Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @return string
@@ -57,7 +65,7 @@ class CandleInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента.
+     * Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @param string $var
@@ -93,6 +101,32 @@ class CandleInstrument extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\SubscriptionInterval::class);
         $this->interval = $var;
+
+        return $this;
+    }
+
+    /**
+     *Идентификатор инструмента, принимает значение figi или instrument_uid
+     *
+     * Generated from protobuf field <code>string instrument_id = 3;</code>
+     * @return string
+     */
+    public function getInstrumentId()
+    {
+        return $this->instrument_id;
+    }
+
+    /**
+     *Идентификатор инструмента, принимает значение figi или instrument_uid
+     *
+     * Generated from protobuf field <code>string instrument_id = 3;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setInstrumentId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->instrument_id = $var;
 
         return $this;
     }

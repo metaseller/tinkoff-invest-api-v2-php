@@ -16,13 +16,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetUserTariffResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Массив лимитов пользователя по unary-запросам
+     *Массив лимитов пользователя по unary-запросам.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.UnaryLimit unary_limits = 1;</code>
      */
     private $unary_limits;
     /**
-     *Массив лимитов пользователей для stream-соединений
+     *Массив лимитов пользователей для stream-соединений.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.StreamLimit stream_limits = 2;</code>
      */
@@ -35,9 +35,9 @@ class GetUserTariffResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Tinkoff\Invest\V1\UnaryLimit[]|\Google\Protobuf\Internal\RepeatedField $unary_limits
-     *          Массив лимитов пользователя по unary-запросам
+     *          Массив лимитов пользователя по unary-запросам.
      *     @type \Tinkoff\Invest\V1\StreamLimit[]|\Google\Protobuf\Internal\RepeatedField $stream_limits
-     *          Массив лимитов пользователей для stream-соединений
+     *          Массив лимитов пользователей для stream-соединений.
      * }
      */
     public function __construct($data = NULL) {
@@ -46,7 +46,7 @@ class GetUserTariffResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив лимитов пользователя по unary-запросам
+     *Массив лимитов пользователя по unary-запросам.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.UnaryLimit unary_limits = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -57,7 +57,7 @@ class GetUserTariffResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив лимитов пользователя по unary-запросам
+     *Массив лимитов пользователя по unary-запросам.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.UnaryLimit unary_limits = 1;</code>
      * @param \Tinkoff\Invest\V1\UnaryLimit[]|\Google\Protobuf\Internal\RepeatedField $var
@@ -72,7 +72,7 @@ class GetUserTariffResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив лимитов пользователей для stream-соединений
+     *Массив лимитов пользователей для stream-соединений.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.StreamLimit stream_limits = 2;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -83,7 +83,7 @@ class GetUserTariffResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив лимитов пользователей для stream-соединений
+     *Массив лимитов пользователей для stream-соединений.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.StreamLimit stream_limits = 2;</code>
      * @param \Tinkoff\Invest\V1\StreamLimit[]|\Google\Protobuf\Internal\RepeatedField $var

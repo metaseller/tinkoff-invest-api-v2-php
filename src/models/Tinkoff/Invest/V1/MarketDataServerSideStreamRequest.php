@@ -38,7 +38,7 @@ class MarketDataServerSideStreamRequest extends \Google\Protobuf\Internal\Messag
      */
     protected $subscribe_info_request = null;
     /**
-     *Запрос подписки на последние цены.
+     *Запрос подписки на цены последних сделок.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscribeLastPriceRequest subscribe_last_price_request = 5;</code>
      */
@@ -59,7 +59,7 @@ class MarketDataServerSideStreamRequest extends \Google\Protobuf\Internal\Messag
      *     @type \Tinkoff\Invest\V1\SubscribeInfoRequest $subscribe_info_request
      *          Запрос подписки на торговые статусы инструментов.
      *     @type \Tinkoff\Invest\V1\SubscribeLastPriceRequest $subscribe_last_price_request
-     *          Запрос подписки на последние цены.
+     *          Запрос подписки на цены последних сделок.
      * }
      */
     public function __construct($data = NULL) {
@@ -212,7 +212,7 @@ class MarketDataServerSideStreamRequest extends \Google\Protobuf\Internal\Messag
     }
 
     /**
-     *Запрос подписки на последние цены.
+     *Запрос подписки на цены последних сделок.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscribeLastPriceRequest subscribe_last_price_request = 5;</code>
      * @return \Tinkoff\Invest\V1\SubscribeLastPriceRequest|null
@@ -233,7 +233,7 @@ class MarketDataServerSideStreamRequest extends \Google\Protobuf\Internal\Messag
     }
 
     /**
-     *Запрос подписки на последние цены.
+     *Запрос подписки на цены последних сделок.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscribeLastPriceRequest subscribe_last_price_request = 5;</code>
      * @param \Tinkoff\Invest\V1\SubscribeLastPriceRequest $var

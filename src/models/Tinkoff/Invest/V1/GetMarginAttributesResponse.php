@@ -45,6 +45,12 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue amount_of_missing_funds = 5;</code>
      */
     protected $amount_of_missing_funds = null;
+    /**
+     * Скорректированная маржа.Начальная маржа, в которой плановые позиции рассчитываются с учётом активных заявок на покупку позиций лонг или продажу позиций шорт.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue corrected_margin = 6;</code>
+     */
+    protected $corrected_margin = null;
 
     /**
      * Constructor.
@@ -62,6 +68,8 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
      *           Уровень достаточности средств. Соотношение стоимости ликвидного портфеля к начальной марже.
      *     @type \Tinkoff\Invest\V1\MoneyValue $amount_of_missing_funds
      *           Объем недостающих средств. Разница между стартовой маржой и ликвидной стоимости портфеля.
+     *     @type \Tinkoff\Invest\V1\MoneyValue $corrected_margin
+     *           Скорректированная маржа.Начальная маржа, в которой плановые позиции рассчитываются с учётом активных заявок на покупку позиций лонг или продажу позиций шорт.
      * }
      */
     public function __construct($data = NULL) {
@@ -245,6 +253,42 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->amount_of_missing_funds = $var;
+
+        return $this;
+    }
+
+    /**
+     * Скорректированная маржа.Начальная маржа, в которой плановые позиции рассчитываются с учётом активных заявок на покупку позиций лонг или продажу позиций шорт.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue corrected_margin = 6;</code>
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
+     */
+    public function getCorrectedMargin()
+    {
+        return isset($this->corrected_margin) ? $this->corrected_margin : null;
+    }
+
+    public function hasCorrectedMargin()
+    {
+        return isset($this->corrected_margin);
+    }
+
+    public function clearCorrectedMargin()
+    {
+        unset($this->corrected_margin);
+    }
+
+    /**
+     * Скорректированная маржа.Начальная маржа, в которой плановые позиции рассчитываются с учётом активных заявок на покупку позиций лонг или продажу позиций шорт.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue corrected_margin = 6;</code>
+     * @param \Tinkoff\Invest\V1\MoneyValue $var
+     * @return $this
+     */
+    public function setCorrectedMargin($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
+        $this->corrected_margin = $var;
 
         return $this;
     }

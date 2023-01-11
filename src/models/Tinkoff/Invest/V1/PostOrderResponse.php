@@ -46,7 +46,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      */
     protected $initial_order_price = null;
     /**
-     *Исполненная цена заявки. Произведение средней цены покупки на количество лотов.
+     *Исполненная средняя цена 1 одного инструмента в заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue executed_order_price = 6;</code>
      */
@@ -111,6 +111,12 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation initial_order_price_pt = 16;</code>
      */
     protected $initial_order_price_pt = null;
+    /**
+     *UID идентификатор инструмента.
+     *
+     * Generated from protobuf field <code>string instrument_uid = 17;</code>
+     */
+    protected $instrument_uid = '';
 
     /**
      * Constructor.
@@ -129,7 +135,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\MoneyValue $initial_order_price
      *          Начальная цена заявки. Произведение количества запрошенных лотов на цену.
      *     @type \Tinkoff\Invest\V1\MoneyValue $executed_order_price
-     *          Исполненная цена заявки. Произведение средней цены покупки на количество лотов.
+     *          Исполненная средняя цена 1 одного инструмента в заявки.
      *     @type \Tinkoff\Invest\V1\MoneyValue $total_order_amount
      *          Итоговая стоимость заявки, включающая все комиссии.
      *     @type \Tinkoff\Invest\V1\MoneyValue $initial_commission
@@ -150,6 +156,8 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      *          Дополнительные данные об исполнении заявки.
      *     @type \Tinkoff\Invest\V1\Quotation $initial_order_price_pt
      *          Начальная цена заявки в пунктах (для фьючерсов).
+     *     @type string $instrument_uid
+     *          UID идентификатор инструмента.
      * }
      */
     public function __construct($data = NULL) {
@@ -298,7 +306,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Исполненная цена заявки. Произведение средней цены покупки на количество лотов.
+     *Исполненная средняя цена 1 одного инструмента в заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue executed_order_price = 6;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -319,7 +327,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Исполненная цена заявки. Произведение средней цены покупки на количество лотов.
+     *Исполненная средняя цена 1 одного инструмента в заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue executed_order_price = 6;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -649,6 +657,32 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->initial_order_price_pt = $var;
+
+        return $this;
+    }
+
+    /**
+     *UID идентификатор инструмента.
+     *
+     * Generated from protobuf field <code>string instrument_uid = 17;</code>
+     * @return string
+     */
+    public function getInstrumentUid()
+    {
+        return $this->instrument_uid;
+    }
+
+    /**
+     *UID идентификатор инструмента.
+     *
+     * Generated from protobuf field <code>string instrument_uid = 17;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setInstrumentUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->instrument_uid = $var;
 
         return $this;
     }

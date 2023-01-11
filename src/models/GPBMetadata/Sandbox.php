@@ -20,7 +20,7 @@ class Sandbox
         \GPBMetadata\Users::initOnce();
         $pool->internalAddGeneratedFile(
             '
-é
+½
 sandbox.proto%tinkoff.public.invest.api.contract.v1orders.protooperations.protousers.proto"
 OpenSandboxAccountRequest"0
 OpenSandboxAccountResponse
@@ -35,19 +35,22 @@ account_id (	"
 account_id (	A
 amount (21.tinkoff.public.invest.api.contract.v1.MoneyValue"Z
 SandboxPayInResponseB
-balance (21.tinkoff.public.invest.api.contract.v1.MoneyValue2®
+balance (21.tinkoff.public.invest.api.contract.v1.MoneyValue2‚
 SandboxService™
 OpenSandboxAccount@.tinkoff.public.invest.api.contract.v1.OpenSandboxAccountRequestA.tinkoff.public.invest.api.contract.v1.OpenSandboxAccountResponse‹
 GetSandboxAccounts9.tinkoff.public.invest.api.contract.v1.GetAccountsRequest:.tinkoff.public.invest.api.contract.v1.GetAccountsResponseœ
 CloseSandboxAccountA.tinkoff.public.invest.api.contract.v1.CloseSandboxAccountRequestB.tinkoff.public.invest.api.contract.v1.CloseSandboxAccountResponse…
-PostSandboxOrder7.tinkoff.public.invest.api.contract.v1.PostOrderRequest8.tinkoff.public.invest.api.contract.v1.PostOrderResponse…
+PostSandboxOrder7.tinkoff.public.invest.api.contract.v1.PostOrderRequest8.tinkoff.public.invest.api.contract.v1.PostOrderResponse‹
+ReplaceSandboxOrder:.tinkoff.public.invest.api.contract.v1.ReplaceOrderRequest8.tinkoff.public.invest.api.contract.v1.PostOrderResponse…
 GetSandboxOrders7.tinkoff.public.invest.api.contract.v1.GetOrdersRequest8.tinkoff.public.invest.api.contract.v1.GetOrdersResponse‹
 CancelSandboxOrder9.tinkoff.public.invest.api.contract.v1.CancelOrderRequest:.tinkoff.public.invest.api.contract.v1.CancelOrderResponse†
 GetSandboxOrderState;.tinkoff.public.invest.api.contract.v1.GetOrderStateRequest1.tinkoff.public.invest.api.contract.v1.OrderStateˆ
 GetSandboxPositions7.tinkoff.public.invest.api.contract.v1.PositionsRequest8.tinkoff.public.invest.api.contract.v1.PositionsResponse‹
-GetSandboxOperations8.tinkoff.public.invest.api.contract.v1.OperationsRequest9.tinkoff.public.invest.api.contract.v1.OperationsResponseˆ
+GetSandboxOperations8.tinkoff.public.invest.api.contract.v1.OperationsRequest9.tinkoff.public.invest.api.contract.v1.OperationsResponse©
+GetSandboxOperationsByCursorC.tinkoff.public.invest.api.contract.v1.GetOperationsByCursorRequestD.tinkoff.public.invest.api.contract.v1.GetOperationsByCursorResponseˆ
 GetSandboxPortfolio7.tinkoff.public.invest.api.contract.v1.PortfolioRequest8.tinkoff.public.invest.api.contract.v1.PortfolioResponse‡
-SandboxPayIn:.tinkoff.public.invest.api.contract.v1.SandboxPayInRequest;.tinkoff.public.invest.api.contract.v1.SandboxPayInResponseBa
+SandboxPayIn:.tinkoff.public.invest.api.contract.v1.SandboxPayInRequest;.tinkoff.public.invest.api.contract.v1.SandboxPayInResponse—
+GetSandboxWithdrawLimits<.tinkoff.public.invest.api.contract.v1.WithdrawLimitsRequest=.tinkoff.public.invest.api.contract.v1.WithdrawLimitsResponseBa
 ru.tinkoff.piapi.contract.v1PZ./;investapi¢TIAPIªTinkoff.InvestApi.V1ÊTinkoff\\Invest\\V1bproto3'
         , true);
 

@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Изменение статуса подписки на последнюю цену инструмента.
+ *Изменение статуса подписки на цену последней сделки по инструменту.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.SubscribeLastPriceRequest</code>
  */
@@ -22,7 +22,7 @@ class SubscribeLastPriceRequest extends \Google\Protobuf\Internal\Message
      */
     protected $subscription_action = 0;
     /**
-     *Массив инструментов для подписки на последнюю цену.
+     *Массив инструментов для подписки на цену последней сделки.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.LastPriceInstrument instruments = 2;</code>
      */
@@ -37,7 +37,7 @@ class SubscribeLastPriceRequest extends \Google\Protobuf\Internal\Message
      *     @type int $subscription_action
      *          Изменение статуса подписки.
      *     @type \Tinkoff\Invest\V1\LastPriceInstrument[]|\Google\Protobuf\Internal\RepeatedField $instruments
-     *          Массив инструментов для подписки на последнюю цену.
+     *          Массив инструментов для подписки на цену последней сделки.
      * }
      */
     public function __construct($data = NULL) {
@@ -72,7 +72,7 @@ class SubscribeLastPriceRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив инструментов для подписки на последнюю цену.
+     *Массив инструментов для подписки на цену последней сделки.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.LastPriceInstrument instruments = 2;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -83,7 +83,7 @@ class SubscribeLastPriceRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив инструментов для подписки на последнюю цену.
+     *Массив инструментов для подписки на цену последней сделки.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.LastPriceInstrument instruments = 2;</code>
      * @param \Tinkoff\Invest\V1\LastPriceInstrument[]|\Google\Protobuf\Internal\RepeatedField $var

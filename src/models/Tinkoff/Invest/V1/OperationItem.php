@@ -28,13 +28,13 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      */
     protected $broker_account_id = '';
     /**
-     *Номер поручения.
+     *Идентификатор операции, может меняться с течением времени.
      *
      * Generated from protobuf field <code>string id = 16;</code>
      */
     protected $id = '';
     /**
-     *Номер родительского поручения.
+     *Идентификатор родительской операции, может измениться, если изменился id родительской операции.
      *
      * Generated from protobuf field <code>string parent_operation_id = 17;</code>
      */
@@ -165,6 +165,12 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OperationItemTrades trades_info = 61;</code>
      */
     protected $trades_info = null;
+    /**
+     *Идентификатор актива
+     *
+     * Generated from protobuf field <code>string asset_uid = 64;</code>
+     */
+    protected $asset_uid = '';
 
     /**
      * Constructor.
@@ -177,9 +183,9 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      *     @type string $broker_account_id
      *          Номер счета клиента.
      *     @type string $id
-     *          Номер поручения.
+     *          Идентификатор операции, может меняться с течением времени.
      *     @type string $parent_operation_id
-     *          Номер родительского поручения.
+     *          Идентификатор родительской операции, может измениться, если изменился id родительской операции.
      *     @type string $name
      *          Название операции.
      *     @type \Google\Protobuf\Timestamp $date
@@ -222,6 +228,8 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      *          Причина отмены операции.
      *     @type \Tinkoff\Invest\V1\OperationItemTrades $trades_info
      *          Массив сделок.
+     *     @type string $asset_uid
+     *          Идентификатор актива
      * }
      */
     public function __construct($data = NULL) {
@@ -282,7 +290,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер поручения.
+     *Идентификатор операции, может меняться с течением времени.
      *
      * Generated from protobuf field <code>string id = 16;</code>
      * @return string
@@ -293,7 +301,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер поручения.
+     *Идентификатор операции, может меняться с течением времени.
      *
      * Generated from protobuf field <code>string id = 16;</code>
      * @param string $var
@@ -308,7 +316,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер родительского поручения.
+     *Идентификатор родительской операции, может измениться, если изменился id родительской операции.
      *
      * Generated from protobuf field <code>string parent_operation_id = 17;</code>
      * @return string
@@ -319,7 +327,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер родительского поручения.
+     *Идентификатор родительской операции, может измениться, если изменился id родительской операции.
      *
      * Generated from protobuf field <code>string parent_operation_id = 17;</code>
      * @param string $var
@@ -965,6 +973,32 @@ class OperationItem extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\OperationItemTrades::class);
         $this->trades_info = $var;
+
+        return $this;
+    }
+
+    /**
+     *Идентификатор актива
+     *
+     * Generated from protobuf field <code>string asset_uid = 64;</code>
+     * @return string
+     */
+    public function getAssetUid()
+    {
+        return $this->asset_uid;
+    }
+
+    /**
+     *Идентификатор актива
+     *
+     * Generated from protobuf field <code>string asset_uid = 64;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setAssetUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->asset_uid = $var;
 
         return $this;
     }

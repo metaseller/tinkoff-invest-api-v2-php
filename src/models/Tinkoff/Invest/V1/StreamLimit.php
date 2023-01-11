@@ -16,13 +16,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class StreamLimit extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Максимальное количество stream-соединений
+     *Максимальное количество stream-соединений.
      *
      * Generated from protobuf field <code>int32 limit = 1;</code>
      */
     protected $limit = 0;
     /**
-     *Названия stream-методов
+     *Названия stream-методов.
      *
      * Generated from protobuf field <code>repeated string streams = 2;</code>
      */
@@ -35,9 +35,9 @@ class StreamLimit extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $limit
-     *          Максимальное количество stream-соединений
+     *          Максимальное количество stream-соединений.
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $streams
-     *          Названия stream-методов
+     *          Названия stream-методов.
      * }
      */
     public function __construct($data = NULL) {
@@ -46,7 +46,7 @@ class StreamLimit extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Максимальное количество stream-соединений
+     *Максимальное количество stream-соединений.
      *
      * Generated from protobuf field <code>int32 limit = 1;</code>
      * @return int
@@ -57,7 +57,7 @@ class StreamLimit extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Максимальное количество stream-соединений
+     *Максимальное количество stream-соединений.
      *
      * Generated from protobuf field <code>int32 limit = 1;</code>
      * @param int $var
@@ -72,7 +72,7 @@ class StreamLimit extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Названия stream-методов
+     *Названия stream-методов.
      *
      * Generated from protobuf field <code>repeated string streams = 2;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -83,7 +83,7 @@ class StreamLimit extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Названия stream-методов
+     *Названия stream-методов.
      *
      * Generated from protobuf field <code>repeated string streams = 2;</code>
      * @param string[]|\Google\Protobuf\Internal\RepeatedField $var

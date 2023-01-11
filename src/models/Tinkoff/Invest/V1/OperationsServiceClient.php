@@ -17,7 +17,8 @@ class OperationsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения списка операций по счёту.
+     * Метод получения списка операций по счёту.При работе с данным методом необходимо учитывать
+     * [особенности взаимодействия](/investAPI/operations_problems) с данным методом.
      * @param \Tinkoff\Invest\V1\OperationsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -107,7 +108,8 @@ class OperationsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения списка операций по счёту с пагинацией.
+     * Метод получения списка операций по счёту с пагинацией. При работе с данным методом необходимо учитывать
+     * [особенности взаимодействия](/investAPI/operations_problems) с данным методом.
      * @param \Tinkoff\Invest\V1\GetOperationsByCursorRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

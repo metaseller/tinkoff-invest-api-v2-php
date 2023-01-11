@@ -32,7 +32,7 @@ class MarketDataServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод запроса последних цен по инструментам.
+     * Метод запроса цен последних сделок по инструментам.
      * @param \Tinkoff\Invest\V1\GetLastPricesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -88,6 +88,21 @@ class MarketDataServiceClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.MarketDataService/GetLastTrades',
         $argument,
         ['\Tinkoff\Invest\V1\GetLastTradesResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Метод запроса цен закрытия торговой сессии по инструментам.
+     * @param \Tinkoff\Invest\V1\GetClosePricesRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetClosePrices(\Tinkoff\Invest\V1\GetClosePricesRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.MarketDataService/GetClosePrices',
+        $argument,
+        ['\Tinkoff\Invest\V1\GetClosePricesResponse', 'decode'],
         $metadata, $options);
     }
 

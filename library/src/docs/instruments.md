@@ -1,8 +1,5 @@
 
 
- <!-- range HasServices -->
-
-
 
 
 
@@ -93,6 +90,22 @@
 - Тело запроса — [InstrumentsRequest](#instrumentsrequest)
 
 - Тело ответа — [FuturesResponse](#futuresresponse)
+
+
+#### OptionBy
+Метод получения опциона по его идентификатору.
+
+- Тело запроса — [InstrumentRequest](#instrumentrequest)
+
+- Тело ответа — [OptionResponse](#optionresponse)
+
+
+#### Options
+Метод получения списка опционов.
+
+- Тело запроса — [InstrumentsRequest](#instrumentsrequest)
+
+- Тело ответа — [OptionsResponse](#optionsresponse)
 
 
 #### ShareBy
@@ -508,6 +521,7 @@
 | coupon_quantity_per_year |  [int32](#int32) | Количество выплат по купонам в год. |
 | maturity_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата погашения облигации в часовом поясе UTC. |
 | nominal |  [MoneyValue](#moneyvalue) | Номинал облигации. |
+| initial_nominal |  [MoneyValue](#moneyvalue) | Первоначальный номинал облигации. |
 | state_reg_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата выпуска облигации в часовом поясе UTC. |
 | placement_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата размещения в часовом поясе UTC. |
 | placement_price |  [MoneyValue](#moneyvalue) | Цена размещения. |
@@ -526,11 +540,14 @@
 | perpetual_flag |  [bool](#bool) | Признак бессрочной облигации. |
 | amortization_flag |  [bool](#bool) | Признак облигации с амортизацией долга. |
 | min_price_increment |  [Quotation](#quotation) | Шаг цены. |
-| api_trade_available_flag |  [bool](#bool) | Признак доступности торгов через API. |
+| api_trade_available_flag |  [bool](#bool) | Параметр указывает на возможность торговать инструментом через API. |
 | uid |  [string](#string) | Уникальный идентификатор инструмента. |
 | real_exchange |  [RealExchange](#realexchange) | Реальная площадка исполнения расчётов. |
 | position_uid |  [string](#string) | Уникальный идентификатор позиции инструмента. |
 | for_iis_flag |  [bool](#bool) | Признак доступности для ИИС. |
+| for_qual_investor_flag |  [bool](#bool) | Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов. |
+| weekend_flag |  [bool](#bool) | Флаг отображающий доступность торговли инструментом по выходным. |
+| blocked_tca_flag |  [bool](#bool) | Флаг заблокированного ТКС. |
 | first_1min_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой минутной свечи. |
 | first_1day_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой дневной свечи. |
  <!-- end Fields -->
@@ -651,11 +668,14 @@
 | sell_available_flag |  [bool](#bool) | Признак доступности для продажи. |
 | iso_currency_name |  [string](#string) | Строковый ISO-код валюты. |
 | min_price_increment |  [Quotation](#quotation) | Шаг цены. |
-| api_trade_available_flag |  [bool](#bool) | Признак доступности торгов через API. |
+| api_trade_available_flag |  [bool](#bool) | Параметр указывает на возможность торговать инструментом через API. |
 | uid |  [string](#string) | Уникальный идентификатор инструмента. |
 | real_exchange |  [RealExchange](#realexchange) | Реальная площадка исполнения расчётов. |
 | position_uid |  [string](#string) | Уникальный идентификатор позиции инструмента. |
 | for_iis_flag |  [bool](#bool) | Признак доступности для ИИС. |
+| for_qual_investor_flag |  [bool](#bool) | Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов. |
+| weekend_flag |  [bool](#bool) | Флаг отображающий доступность торговли инструментом по выходным. |
+| blocked_tca_flag |  [bool](#bool) | Флаг заблокированного ТКС. |
 | first_1min_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой минутной свечи. |
 | first_1day_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой дневной свечи. |
  <!-- end Fields -->
@@ -761,11 +781,14 @@
 | buy_available_flag |  [bool](#bool) | Признак доступности для покупки. |
 | sell_available_flag |  [bool](#bool) | Признак доступности для продажи. |
 | min_price_increment |  [Quotation](#quotation) | Шаг цены. |
-| api_trade_available_flag |  [bool](#bool) | Признак доступности торгов через API. |
+| api_trade_available_flag |  [bool](#bool) | Параметр указывает на возможность торговать инструментом через API. |
 | uid |  [string](#string) | Уникальный идентификатор инструмента. |
 | real_exchange |  [RealExchange](#realexchange) | Реальная площадка исполнения расчётов. |
 | position_uid |  [string](#string) | Уникальный идентификатор позиции инструмента. |
 | for_iis_flag |  [bool](#bool) | Признак доступности для ИИС. |
+| for_qual_investor_flag |  [bool](#bool) | Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов. |
+| weekend_flag |  [bool](#bool) | Флаг отображающий доступность торговли инструментом по выходным. |
+| blocked_tca_flag |  [bool](#bool) | Флаг заблокированного ТКС. |
 | first_1min_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой минутной свечи. |
 | first_1day_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой дневной свечи. |
  <!-- end Fields -->
@@ -806,7 +829,7 @@
 | isin |  [string](#string) | Isin-идентификатор инструмента. |
 | instrument_type |  [string](#string) | Тип инструмента. |
 | otc_flag |  [bool](#bool) | Признак внебиржевой ценной бумаги. |
-| api_trade_available_flag |  [bool](#bool) | Признак доступности торгов через API. |
+| api_trade_available_flag |  [bool](#bool) | Параметр указывает на возможность торговать инструментом через API. |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -868,12 +891,15 @@
 | buy_available_flag |  [bool](#bool) | Признак доступности для покупки. |
 | sell_available_flag |  [bool](#bool) | Признак доступности для продажи. |
 | min_price_increment |  [Quotation](#quotation) | Шаг цены. |
-| api_trade_available_flag |  [bool](#bool) | Признак доступности торгов через API. |
+| api_trade_available_flag |  [bool](#bool) | Параметр указывает на возможность торговать инструментом через API. |
 | uid |  [string](#string) | Уникальный идентификатор инструмента. |
 | real_exchange |  [RealExchange](#realexchange) | Реальная площадка исполнения расчётов. |
 | position_uid |  [string](#string) | Уникальный идентификатор позиции инструмента. |
 | basic_asset_position_uid |  [string](#string) | Уникальный идентификатор позиции основного инструмента. |
 | for_iis_flag |  [bool](#bool) | Признак доступности для ИИС. |
+| for_qual_investor_flag |  [bool](#bool) | Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов. |
+| weekend_flag |  [bool](#bool) | Флаг отображающий доступность торговли инструментом по выходным. |
+| blocked_tca_flag |  [bool](#bool) | Флаг заблокированного ТКС. |
 | first_1min_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой минутной свечи. |
 | first_1day_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой дневной свечи. |
  <!-- end Fields -->
@@ -1090,11 +1116,14 @@
 | buy_available_flag |  [bool](#bool) | Признак доступности для покупки. |
 | sell_available_flag |  [bool](#bool) | Признак доступности для продажи. |
 | min_price_increment |  [Quotation](#quotation) | Шаг цены. |
-| api_trade_available_flag |  [bool](#bool) | Признак доступности торгов через API. |
+| api_trade_available_flag |  [bool](#bool) | Параметр указывает на возможность торговать инструментом через API. |
 | uid |  [string](#string) | Уникальный идентификатор инструмента. |
 | real_exchange |  [RealExchange](#realexchange) | Реальная площадка исполнения расчётов. |
 | position_uid |  [string](#string) | Уникальный идентификатор позиции инструмента. |
 | for_iis_flag |  [bool](#bool) | Признак доступности для ИИС. |
+| for_qual_investor_flag |  [bool](#bool) | Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов. |
+| weekend_flag |  [bool](#bool) | Флаг отображающий доступность торговли инструментом по выходным |
+| blocked_tca_flag |  [bool](#bool) | Флаг заблокированного ТКС |
 | first_1min_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой минутной свечи. |
 | first_1day_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой дневной свечи. |
  <!-- end Fields -->
@@ -1151,10 +1180,13 @@
 | name |  [string](#string) | Название инструмента. |
 | uid |  [string](#string) | Уникальный идентификатор инструмента. |
 | position_uid |  [string](#string) | Уникальный идентификатор позиции инструмента. |
-| api_trade_available_flag |  [bool](#bool) | Признак доступности торгов через API. |
+| api_trade_available_flag |  [bool](#bool) | Параметр указывает на возможность торговать инструментом через API. |
 | for_iis_flag |  [bool](#bool) | Признак доступности для ИИС. |
 | first_1min_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой минутной свечи. |
 | first_1day_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой дневной свечи. |
+| for_qual_investor_flag |  [bool](#bool) | Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов. |
+| weekend_flag |  [bool](#bool) | Флаг отображающий доступность торговли инструментом по выходным |
+| blocked_tca_flag |  [bool](#bool) | Флаг заблокированного ТКС |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -1166,6 +1198,82 @@
 | Field | Type | Description |
 | ----- | ---- | ----------- |
 | instrument_status |  [InstrumentStatus](#instrumentstatus) | Статус запрашиваемых инструментов. Возможные значения: [InstrumentStatus](#instrumentstatus) |
+ <!-- end Fields -->
+ <!-- end HasFields -->
+
+
+#### Option
+Опцион.
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| uid |  [string](#string) | Уникальный идентификатор инструмента. |
+| position_uid |  [string](#string) | Уникальный идентификатор позиции. |
+| ticker |  [string](#string) | Тикер инструмента. |
+| class_code |  [string](#string) | Класс-код. |
+| basic_asset_position_uid |  [string](#string) | Уникальный идентификатор позиции основного инструмента. |
+| trading_status |  [SecurityTradingStatus](#securitytradingstatus) | Текущий режим торгов инструмента. |
+| real_exchange |  [RealExchange](#realexchange) | Реальная площадка исполнения расчётов. Допустимые значения: [REAL_EXCHANGE_MOEX, REAL_EXCHANGE_RTS] |
+| direction |  [OptionDirection](#optiondirection) | Направление опциона. |
+| payment_type |  [OptionPaymentType](#optionpaymenttype) | Тип расчетов по опциону. |
+| style |  [OptionStyle](#optionstyle) | Стиль опциона. |
+| settlement_type |  [OptionSettlementType](#optionsettlementtype) | Способ исполнения опциона. |
+| name |  [string](#string) | Название инструмента. |
+| currency |  [string](#string) | Валюта. |
+| settlement_currency |  [string](#string) | Валюта, в которой оценивается контракт. |
+| asset_type |  [string](#string) | Тип актива. |
+| basic_asset |  [string](#string) | Основной актив. |
+| exchange |  [string](#string) | Биржа. |
+| country_of_risk |  [string](#string) | Код страны рисков. |
+| country_of_risk_name |  [string](#string) | Наименование страны рисков. |
+| sector |  [string](#string) | Сектор экономики. |
+| lot |  [int32](#int32) | Количество бумаг в лоте. |
+| basic_asset_size |  [Quotation](#quotation) | Размер основного актива. |
+| klong |  [Quotation](#quotation) | Коэффициент ставки риска длинной позиции по клиенту. |
+| kshort |  [Quotation](#quotation) | Коэффициент ставки риска короткой позиции по клиенту. |
+| dlong |  [Quotation](#quotation) | Ставка риска минимальной маржи лонг. |
+| dshort |  [Quotation](#quotation) | Ставка риска минимальной маржи шорт. |
+| dlong_min |  [Quotation](#quotation) | Ставка риска начальной маржи лонг. |
+| dshort_min |  [Quotation](#quotation) | Ставка риска начальной маржи шорт. |
+| min_price_increment |  [Quotation](#quotation) | Минимальный шаг цены. |
+| strike_price |  [MoneyValue](#moneyvalue) | Цена страйка. |
+| expiration_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата истечения срока в формате UTC. |
+| first_trade_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата начала обращения контракта в формате UTC. |
+| last_trade_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата исполнения в формате UTC. |
+| first_1min_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой минутной свечи в формате UTC. |
+| first_1day_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой дневной свечи в формате UTC. |
+| short_enabled_flag |  [bool](#bool) | Признак доступности для операций шорт. |
+| for_iis_flag |  [bool](#bool) | Возможность покупки/продажи на ИИС. |
+| otc_flag |  [bool](#bool) | Признак внебиржевой ценной бумаги. |
+| buy_available_flag |  [bool](#bool) | Признак доступности для покупки. |
+| sell_available_flag |  [bool](#bool) | Признак доступности для продажи. |
+| for_qual_investor_flag |  [bool](#bool) | Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов. |
+| weekend_flag |  [bool](#bool) | Флаг отображающий доступность торговли инструментом по выходным. |
+| blocked_tca_flag |  [bool](#bool) | Флаг заблокированного ТКС. |
+| api_trade_available_flag |  [bool](#bool) | Параметр указывает на возможность торговать инструментом через API. |
+ <!-- end Fields -->
+ <!-- end HasFields -->
+
+
+#### OptionResponse
+Данные по опциону.
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| instrument |  [Option](#option) | Информация по опциону. |
+ <!-- end Fields -->
+ <!-- end HasFields -->
+
+
+#### OptionsResponse
+Данные по опционам.
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| instruments | Массив объектов [Option](#option) | Массив данных по опциону. |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -1205,11 +1313,14 @@
 | div_yield_flag |  [bool](#bool) | Признак наличия дивидендной доходности. |
 | share_type |  [ShareType](#sharetype) | Тип акции. Возможные значения: [ShareType](https://tinkoff.github.io/investAPI/instruments#sharetype) |
 | min_price_increment |  [Quotation](#quotation) | Шаг цены. |
-| api_trade_available_flag |  [bool](#bool) | Признак доступности торгов через API. |
+| api_trade_available_flag |  [bool](#bool) | Параметр указывает на возможность торговать инструментом через API. |
 | uid |  [string](#string) | Уникальный идентификатор инструмента. |
 | real_exchange |  [RealExchange](#realexchange) | Реальная площадка исполнения расчётов. |
 | position_uid |  [string](#string) | Уникальный идентификатор позиции инструмента. |
 | for_iis_flag |  [bool](#bool) | Признак доступности для ИИС. |
+| for_qual_investor_flag |  [bool](#bool) | Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов. |
+| weekend_flag |  [bool](#bool) | Флаг отображающий доступность торговли инструментом по выходным |
+| blocked_tca_flag |  [bool](#bool) | Флаг заблокированного ТКС |
 | first_1min_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой минутной свечи. |
 | first_1day_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой дневной свечи. |
  <!-- end Fields -->
@@ -1352,6 +1463,7 @@
 | INSTRUMENT_ID_TYPE_FIGI | 1 | Figi. |
 | INSTRUMENT_ID_TYPE_TICKER | 2 | Ticker. |
 | INSTRUMENT_ID_TYPE_UID | 3 | Уникальный идентификатор. |
+| INSTRUMENT_ID_TYPE_POSITION_UID | 4 | Идентификатор позиции. |
 
 
 
@@ -1364,6 +1476,54 @@
 | INSTRUMENT_STATUS_UNSPECIFIED | 0 | Значение не определено. |
 | INSTRUMENT_STATUS_BASE | 1 | Базовый список инструментов (по умолчанию). Инструменты доступные для торговли через TINKOFF INVEST API. |
 | INSTRUMENT_STATUS_ALL | 2 | Список всех инструментов. |
+
+
+
+
+#### OptionDirection
+Тип опциона по направлению сделки.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| OPTION_DIRECTION_UNSPECIFIED | 0 | Тип не определен. |
+| OPTION_DIRECTION_PUT | 1 | Опцион на продажу. |
+| OPTION_DIRECTION_CALL | 2 | Опцион на покупку. |
+
+
+
+
+#### OptionPaymentType
+Тип расчетов по опциону.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| OPTION_PAYMENT_TYPE_UNSPECIFIED | 0 | Тип не определен. |
+| OPTION_PAYMENT_TYPE_PREMIUM | 1 | Опционы с использованием премии в расчетах. |
+| OPTION_PAYMENT_TYPE_MARGINAL | 2 | Маржируемые опционы. |
+
+
+
+
+#### OptionSettlementType
+Тип опциона по способу исполнения.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| OPTION_EXECUTION_TYPE_UNSPECIFIED | 0 | Тип не определен. |
+| OPTION_EXECUTION_TYPE_PHYSICAL_DELIVERY | 1 | Поставочный тип опциона. |
+| OPTION_EXECUTION_TYPE_CASH_SETTLEMENT | 2 | Расчетный тип опциона. |
+
+
+
+
+#### OptionStyle
+Тип опциона по стилю.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| OPTION_STYLE_UNSPECIFIED | 0 | Тип не определен. |
+| OPTION_STYLE_AMERICAN | 1 | Американский опцион. |
+| OPTION_STYLE_EUROPEAN | 2 | Европейский опцион. |
 
 
 

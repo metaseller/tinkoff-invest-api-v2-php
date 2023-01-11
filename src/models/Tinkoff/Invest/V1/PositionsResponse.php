@@ -45,6 +45,12 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.PositionsFutures futures = 5;</code>
      */
     private $futures;
+    /**
+     *Список опционов портфеля.
+     *
+     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.PositionsOptions options = 6;</code>
+     */
+    private $options;
 
     /**
      * Constructor.
@@ -62,6 +68,8 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
      *          Признак идущей в данный момент выгрузки лимитов.
      *     @type \Tinkoff\Invest\V1\PositionsFutures[]|\Google\Protobuf\Internal\RepeatedField $futures
      *          Список фьючерсов портфеля.
+     *     @type \Tinkoff\Invest\V1\PositionsOptions[]|\Google\Protobuf\Internal\RepeatedField $options
+     *          Список опционов портфеля.
      * }
      */
     public function __construct($data = NULL) {
@@ -195,6 +203,32 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\PositionsFutures::class);
         $this->futures = $arr;
+
+        return $this;
+    }
+
+    /**
+     *Список опционов портфеля.
+     *
+     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.PositionsOptions options = 6;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getOptions()
+    {
+        return $this->options;
+    }
+
+    /**
+     *Список опционов портфеля.
+     *
+     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.PositionsOptions options = 6;</code>
+     * @param \Tinkoff\Invest\V1\PositionsOptions[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setOptions($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\PositionsOptions::class);
+        $this->options = $arr;
 
         return $this;
     }

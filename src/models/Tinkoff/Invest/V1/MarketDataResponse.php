@@ -42,9 +42,9 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\Ping $ping
      *          Проверка активности стрима.
      *     @type \Tinkoff\Invest\V1\SubscribeLastPriceResponse $subscribe_last_price_response
-     *          Результат подписки на последние цены инструментов.
+     *          Результат подписки на цены последние сделок по инструментам.
      *     @type \Tinkoff\Invest\V1\LastPrice $last_price
-     *          Последняя цена.
+     *          Цена последней сделки.
      * }
      */
     public function __construct($data = NULL) {
@@ -332,7 +332,7 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Результат подписки на последние цены инструментов.
+     *Результат подписки на цены последние сделок по инструментам.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscribeLastPriceResponse subscribe_last_price_response = 10;</code>
      * @return \Tinkoff\Invest\V1\SubscribeLastPriceResponse|null
@@ -348,7 +348,7 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Результат подписки на последние цены инструментов.
+     *Результат подписки на цены последние сделок по инструментам.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscribeLastPriceResponse subscribe_last_price_response = 10;</code>
      * @param \Tinkoff\Invest\V1\SubscribeLastPriceResponse $var
@@ -363,7 +363,7 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Последняя цена.
+     *Цена последней сделки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.LastPrice last_price = 11;</code>
      * @return \Tinkoff\Invest\V1\LastPrice|null
@@ -379,7 +379,7 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Последняя цена.
+     *Цена последней сделки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.LastPrice last_price = 11;</code>
      * @param \Tinkoff\Invest\V1\LastPrice $var

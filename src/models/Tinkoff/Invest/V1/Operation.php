@@ -99,6 +99,12 @@ class Operation extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OperationTrade trades = 14;</code>
      */
     private $trades;
+    /**
+     *Идентификатор актива
+     *
+     * Generated from protobuf field <code>string asset_uid = 16;</code>
+     */
+    protected $asset_uid = '';
 
     /**
      * Constructor.
@@ -134,6 +140,8 @@ class Operation extends \Google\Protobuf\Internal\Message
      *          Тип операции.
      *     @type \Tinkoff\Invest\V1\OperationTrade[]|\Google\Protobuf\Internal\RepeatedField $trades
      *          Массив сделок.
+     *     @type string $asset_uid
+     *          Идентификатор актива
      * }
      */
     public function __construct($data = NULL) {
@@ -531,6 +539,32 @@ class Operation extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\OperationTrade::class);
         $this->trades = $arr;
+
+        return $this;
+    }
+
+    /**
+     *Идентификатор актива
+     *
+     * Generated from protobuf field <code>string asset_uid = 16;</code>
+     * @return string
+     */
+    public function getAssetUid()
+    {
+        return $this->asset_uid;
+    }
+
+    /**
+     *Идентификатор актива
+     *
+     * Generated from protobuf field <code>string asset_uid = 16;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setAssetUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->asset_uid = $var;
 
         return $this;
     }

@@ -81,6 +81,12 @@ class StopOrder extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue stop_price = 11;</code>
      */
     protected $stop_price = null;
+    /**
+     *instrument_uid идентификатор инструмента.
+     *
+     * Generated from protobuf field <code>string instrument_uid = 12;</code>
+     */
+    protected $instrument_uid = '';
 
     /**
      * Constructor.
@@ -110,6 +116,8 @@ class StopOrder extends \Google\Protobuf\Internal\Message
      *          Цена заявки за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *     @type \Tinkoff\Invest\V1\MoneyValue $stop_price
      *          Цена активации стоп-заявки за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
+     *     @type string $instrument_uid
+     *          instrument_uid идентификатор инструмента.
      * }
      */
     public function __construct($data = NULL) {
@@ -449,6 +457,32 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->stop_price = $var;
+
+        return $this;
+    }
+
+    /**
+     *instrument_uid идентификатор инструмента.
+     *
+     * Generated from protobuf field <code>string instrument_uid = 12;</code>
+     * @return string
+     */
+    public function getInstrumentUid()
+    {
+        return $this->instrument_uid;
+    }
+
+    /**
+     *instrument_uid идентификатор инструмента.
+     *
+     * Generated from protobuf field <code>string instrument_uid = 12;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setInstrumentUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->instrument_uid = $var;
 
         return $this;
     }

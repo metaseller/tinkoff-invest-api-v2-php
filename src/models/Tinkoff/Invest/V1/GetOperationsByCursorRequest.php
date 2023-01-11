@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Идентификатор счёта клиента.
+     *Идентификатор счёта клиента. Обязательный параметр для данного метода, остальные параметры опциональны.
      *
      * Generated from protobuf field <code>string account_id = 1;</code>
      */
@@ -46,7 +46,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      */
     protected $cursor = '';
     /**
-     *Лимит количества операций.
+     *Лимит количества операций. По умолчанию устанавливается значение **100**, максимальное значение 1000.
      *
      * Generated from protobuf field <code>int32 limit = 12;</code>
      */
@@ -70,7 +70,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      */
     protected $without_commissions = false;
     /**
-     *Флаг ответ без сделок.
+     *Флаг получения ответа без массива сделок.
      *
      * Generated from protobuf field <code>bool without_trades = 16;</code>
      */
@@ -89,7 +89,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $account_id
-     *          Идентификатор счёта клиента.
+     *          Идентификатор счёта клиента. Обязательный параметр для данного метода, остальные параметры опциональны.
      *     @type string $instrument_id
      *          Идентификатор инструмента (Figi инструмента или uid инструмента)
      *     @type \Google\Protobuf\Timestamp $from
@@ -99,7 +99,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      *     @type string $cursor
      *          Идентификатор элемента, с которого начать формировать ответ.
      *     @type int $limit
-     *          Лимит количества операций.
+     *          Лимит количества операций. По умолчанию устанавливается значение **100**, максимальное значение 1000.
      *     @type int[]|\Google\Protobuf\Internal\RepeatedField $operation_types
      *          Тип операции. Принимает значение из списка OperationType.
      *     @type int $state
@@ -107,7 +107,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      *     @type bool $without_commissions
      *          Флаг возвращать ли комиссии, по умолчанию false
      *     @type bool $without_trades
-     *          Флаг ответ без сделок.
+     *          Флаг получения ответа без массива сделок.
      *     @type bool $without_overnights
      *          Флаг не показывать overnight операций.
      * }
@@ -118,7 +118,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор счёта клиента.
+     *Идентификатор счёта клиента. Обязательный параметр для данного метода, остальные параметры опциональны.
      *
      * Generated from protobuf field <code>string account_id = 1;</code>
      * @return string
@@ -129,7 +129,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор счёта клиента.
+     *Идентификатор счёта клиента. Обязательный параметр для данного метода, остальные параметры опциональны.
      *
      * Generated from protobuf field <code>string account_id = 1;</code>
      * @param string $var
@@ -268,7 +268,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Лимит количества операций.
+     *Лимит количества операций. По умолчанию устанавливается значение **100**, максимальное значение 1000.
      *
      * Generated from protobuf field <code>int32 limit = 12;</code>
      * @return int
@@ -279,7 +279,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Лимит количества операций.
+     *Лимит количества операций. По умолчанию устанавливается значение **100**, максимальное значение 1000.
      *
      * Generated from protobuf field <code>int32 limit = 12;</code>
      * @param int $var
@@ -372,7 +372,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг ответ без сделок.
+     *Флаг получения ответа без массива сделок.
      *
      * Generated from protobuf field <code>bool without_trades = 16;</code>
      * @return bool
@@ -383,7 +383,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг ответ без сделок.
+     *Флаг получения ответа без массива сделок.
      *
      * Generated from protobuf field <code>bool without_trades = 16;</code>
      * @param bool $var

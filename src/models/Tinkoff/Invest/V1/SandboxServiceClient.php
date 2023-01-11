@@ -77,6 +77,21 @@ class SandboxServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Метод изменения выставленной заявки.
+     * @param \Tinkoff\Invest\V1\ReplaceOrderRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function ReplaceSandboxOrder(\Tinkoff\Invest\V1\ReplaceOrderRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.SandboxService/ReplaceSandboxOrder',
+        $argument,
+        ['\Tinkoff\Invest\V1\PostOrderResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * Метод получения списка активных заявок по счёту в песочнице.
      * @param \Tinkoff\Invest\V1\GetOrdersRequest $argument input argument
      * @param array $metadata metadata
@@ -152,6 +167,21 @@ class SandboxServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Метод получения операций в песочнице по номеру счета с пагинацией.
+     * @param \Tinkoff\Invest\V1\GetOperationsByCursorRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetSandboxOperationsByCursor(\Tinkoff\Invest\V1\GetOperationsByCursorRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.SandboxService/GetSandboxOperationsByCursor',
+        $argument,
+        ['\Tinkoff\Invest\V1\GetOperationsByCursorResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * Метод получения портфолио в песочнице.
      * @param \Tinkoff\Invest\V1\PortfolioRequest $argument input argument
      * @param array $metadata metadata
@@ -178,6 +208,21 @@ class SandboxServiceClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.SandboxService/SandboxPayIn',
         $argument,
         ['\Tinkoff\Invest\V1\SandboxPayInResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Метод получения доступного остатка для вывода средств в песочнице.
+     * @param \Tinkoff\Invest\V1\WithdrawLimitsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetSandboxWithdrawLimits(\Tinkoff\Invest\V1\WithdrawLimitsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.SandboxService/GetSandboxWithdrawLimits',
+        $argument,
+        ['\Tinkoff\Invest\V1\WithdrawLimitsResponse', 'decode'],
         $metadata, $options);
     }
 

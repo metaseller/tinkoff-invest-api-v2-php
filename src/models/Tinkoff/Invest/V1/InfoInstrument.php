@@ -16,11 +16,17 @@ use Google\Protobuf\Internal\GPBUtil;
 class InfoInstrument extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Figi-идентификатор инструмента.
+     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      */
     protected $figi = '';
+    /**
+     *Идентификатор инструмента, принимает значение figi или instrument_uid
+     *
+     * Generated from protobuf field <code>string instrument_id = 2;</code>
+     */
+    protected $instrument_id = '';
 
     /**
      * Constructor.
@@ -29,7 +35,9 @@ class InfoInstrument extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $figi
-     *          Figi-идентификатор инструмента.
+     *          Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
+     *     @type string $instrument_id
+     *          Идентификатор инструмента, принимает значение figi или instrument_uid
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +46,7 @@ class InfoInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента.
+     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @return string
@@ -49,7 +57,7 @@ class InfoInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента.
+     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @param string $var
@@ -59,6 +67,32 @@ class InfoInstrument extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->figi = $var;
+
+        return $this;
+    }
+
+    /**
+     *Идентификатор инструмента, принимает значение figi или instrument_uid
+     *
+     * Generated from protobuf field <code>string instrument_id = 2;</code>
+     * @return string
+     */
+    public function getInstrumentId()
+    {
+        return $this->instrument_id;
+    }
+
+    /**
+     *Идентификатор инструмента, принимает значение figi или instrument_uid
+     *
+     * Generated from protobuf field <code>string instrument_id = 2;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setInstrumentId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->instrument_id = $var;
 
         return $this;
     }

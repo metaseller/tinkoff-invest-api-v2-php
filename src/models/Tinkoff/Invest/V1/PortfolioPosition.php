@@ -52,35 +52,59 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     protected $current_nkd = null;
     /**
-     *Средняя цена лота в позиции в пунктах (для фьючерсов). **Возможна задержка до секунды для пересчёта**.
+     * Deprecated Средняя цена позиции в пунктах (для фьючерсов). **Возможна задержка до секунды для пересчёта**.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation average_position_price_pt = 7;</code>
      */
     protected $average_position_price_pt = null;
     /**
-     *Текущая цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента..
+     *Текущая цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue current_price = 8;</code>
      */
     protected $current_price = null;
     /**
-     *Средняя цена лота в позиции по методу FIFO. **Возможна задержка до секунды для пересчёта**.
+     *Средняя цена позиции по методу FIFO. **Возможна задержка до секунды для пересчёта**.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price_fifo = 9;</code>
      */
     protected $average_position_price_fifo = null;
     /**
-     *Количество лотов в портфеле.
+     *Deprecated Количество лотов в портфеле.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation quantity_lots = 10;</code>
      */
     protected $quantity_lots = null;
     /**
-     *Заблокировано.
+     *Заблокировано на бирже.
      *
      * Generated from protobuf field <code>bool blocked = 21;</code>
      */
     protected $blocked = false;
+    /**
+     *position_uid-идентификатора инструмента
+     *
+     * Generated from protobuf field <code>string position_uid = 24;</code>
+     */
+    protected $position_uid = '';
+    /**
+     *instrument_uid-идентификатора инструмента
+     *
+     * Generated from protobuf field <code>string instrument_uid = 25;</code>
+     */
+    protected $instrument_uid = '';
+    /**
+     *Вариационная маржа
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue var_margin = 26;</code>
+     */
+    protected $var_margin = null;
+    /**
+     *Текущая рассчитанная доходность позиции.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation expected_yield_fifo = 27;</code>
+     */
+    protected $expected_yield_fifo = null;
 
     /**
      * Constructor.
@@ -101,15 +125,23 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\MoneyValue $current_nkd
      *           Текущий НКД.
      *     @type \Tinkoff\Invest\V1\Quotation $average_position_price_pt
-     *          Средняя цена лота в позиции в пунктах (для фьючерсов). **Возможна задержка до секунды для пересчёта**.
+     *           Deprecated Средняя цена позиции в пунктах (для фьючерсов). **Возможна задержка до секунды для пересчёта**.
      *     @type \Tinkoff\Invest\V1\MoneyValue $current_price
-     *          Текущая цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента..
+     *          Текущая цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *     @type \Tinkoff\Invest\V1\MoneyValue $average_position_price_fifo
-     *          Средняя цена лота в позиции по методу FIFO. **Возможна задержка до секунды для пересчёта**.
+     *          Средняя цена позиции по методу FIFO. **Возможна задержка до секунды для пересчёта**.
      *     @type \Tinkoff\Invest\V1\Quotation $quantity_lots
-     *          Количество лотов в портфеле.
+     *          Deprecated Количество лотов в портфеле.
      *     @type bool $blocked
-     *          Заблокировано.
+     *          Заблокировано на бирже.
+     *     @type string $position_uid
+     *          position_uid-идентификатора инструмента
+     *     @type string $instrument_uid
+     *          instrument_uid-идентификатора инструмента
+     *     @type \Tinkoff\Invest\V1\MoneyValue $var_margin
+     *          Вариационная маржа
+     *     @type \Tinkoff\Invest\V1\Quotation $expected_yield_fifo
+     *          Текущая рассчитанная доходность позиции.
      * }
      */
     public function __construct($data = NULL) {
@@ -314,7 +346,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средняя цена лота в позиции в пунктах (для фьючерсов). **Возможна задержка до секунды для пересчёта**.
+     * Deprecated Средняя цена позиции в пунктах (для фьючерсов). **Возможна задержка до секунды для пересчёта**.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation average_position_price_pt = 7;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -335,7 +367,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средняя цена лота в позиции в пунктах (для фьючерсов). **Возможна задержка до секунды для пересчёта**.
+     * Deprecated Средняя цена позиции в пунктах (для фьючерсов). **Возможна задержка до секунды для пересчёта**.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation average_position_price_pt = 7;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -350,7 +382,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Текущая цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента..
+     *Текущая цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue current_price = 8;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -371,7 +403,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Текущая цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента..
+     *Текущая цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue current_price = 8;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -386,7 +418,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средняя цена лота в позиции по методу FIFO. **Возможна задержка до секунды для пересчёта**.
+     *Средняя цена позиции по методу FIFO. **Возможна задержка до секунды для пересчёта**.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price_fifo = 9;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -407,7 +439,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средняя цена лота в позиции по методу FIFO. **Возможна задержка до секунды для пересчёта**.
+     *Средняя цена позиции по методу FIFO. **Возможна задержка до секунды для пересчёта**.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price_fifo = 9;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -422,7 +454,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество лотов в портфеле.
+     *Deprecated Количество лотов в портфеле.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation quantity_lots = 10;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -443,7 +475,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество лотов в портфеле.
+     *Deprecated Количество лотов в портфеле.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation quantity_lots = 10;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -458,7 +490,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Заблокировано.
+     *Заблокировано на бирже.
      *
      * Generated from protobuf field <code>bool blocked = 21;</code>
      * @return bool
@@ -469,7 +501,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Заблокировано.
+     *Заблокировано на бирже.
      *
      * Generated from protobuf field <code>bool blocked = 21;</code>
      * @param bool $var
@@ -479,6 +511,130 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->blocked = $var;
+
+        return $this;
+    }
+
+    /**
+     *position_uid-идентификатора инструмента
+     *
+     * Generated from protobuf field <code>string position_uid = 24;</code>
+     * @return string
+     */
+    public function getPositionUid()
+    {
+        return $this->position_uid;
+    }
+
+    /**
+     *position_uid-идентификатора инструмента
+     *
+     * Generated from protobuf field <code>string position_uid = 24;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPositionUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->position_uid = $var;
+
+        return $this;
+    }
+
+    /**
+     *instrument_uid-идентификатора инструмента
+     *
+     * Generated from protobuf field <code>string instrument_uid = 25;</code>
+     * @return string
+     */
+    public function getInstrumentUid()
+    {
+        return $this->instrument_uid;
+    }
+
+    /**
+     *instrument_uid-идентификатора инструмента
+     *
+     * Generated from protobuf field <code>string instrument_uid = 25;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setInstrumentUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->instrument_uid = $var;
+
+        return $this;
+    }
+
+    /**
+     *Вариационная маржа
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue var_margin = 26;</code>
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
+     */
+    public function getVarMargin()
+    {
+        return isset($this->var_margin) ? $this->var_margin : null;
+    }
+
+    public function hasVarMargin()
+    {
+        return isset($this->var_margin);
+    }
+
+    public function clearVarMargin()
+    {
+        unset($this->var_margin);
+    }
+
+    /**
+     *Вариационная маржа
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue var_margin = 26;</code>
+     * @param \Tinkoff\Invest\V1\MoneyValue $var
+     * @return $this
+     */
+    public function setVarMargin($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
+        $this->var_margin = $var;
+
+        return $this;
+    }
+
+    /**
+     *Текущая рассчитанная доходность позиции.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation expected_yield_fifo = 27;</code>
+     * @return \Tinkoff\Invest\V1\Quotation|null
+     */
+    public function getExpectedYieldFifo()
+    {
+        return isset($this->expected_yield_fifo) ? $this->expected_yield_fifo : null;
+    }
+
+    public function hasExpectedYieldFifo()
+    {
+        return isset($this->expected_yield_fifo);
+    }
+
+    public function clearExpectedYieldFifo()
+    {
+        unset($this->expected_yield_fifo);
+    }
+
+    /**
+     *Текущая рассчитанная доходность позиции.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation expected_yield_fifo = 27;</code>
+     * @param \Tinkoff\Invest\V1\Quotation $var
+     * @return $this
+     */
+    public function setExpectedYieldFifo($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
+        $this->expected_yield_fifo = $var;
 
         return $this;
     }
