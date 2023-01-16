@@ -1,8 +1,5 @@
 
 
- <!-- range HasServices -->
-
-
 
 
 
@@ -140,9 +137,9 @@ Stream сделок пользователя
 
 | Field | Type | Description |
 | ----- | ---- | ----------- |
-| price |  [MoneyValue](#moneyvalue) | Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.. |
+| price |  [MoneyValue](#moneyvalue) | Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. |
 | quantity |  [int64](#int64) | Количество лотов. |
-| trade_id |  [string](#string) | Идентификатор торговой операции. |
+| trade_id |  [string](#string) | Идентификатор сделки. |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -171,6 +168,7 @@ Stream сделок пользователя
 | currency |  [string](#string) | Валюта заявки. |
 | order_type |  [OrderType](#ordertype) | Тип заявки. |
 | order_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата и время выставления заявки в часовом поясе UTC. |
+| instrument_uid |  [string](#string) | UID идентификатор инструмента. |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -182,8 +180,9 @@ Stream сделок пользователя
 | Field | Type | Description |
 | ----- | ---- | ----------- |
 | date_time |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата и время совершения сделки в часовом поясе UTC. |
-| price |  [Quotation](#quotation) | Цена одного инструмента, по которой совершена сделка. |
-| quantity |  [int64](#int64) | Количество лотов в сделке. |
+| price |  [Quotation](#quotation) | Цена за 1 инструмент, по которой совершена сделка. |
+| quantity |  [int64](#int64) | Количество штук в сделке. |
+| trade_id |  [string](#string) | Идентификатор сделки. |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -200,6 +199,7 @@ Stream сделок пользователя
 | figi |  [string](#string) | Figi-идентификатор инструмента. |
 | trades | Массив объектов [OrderTrade](#ordertrade) | Массив сделок. |
 | account_id |  [string](#string) | Идентификатор счёта. |
+| instrument_uid |  [string](#string) | UID идентификатор инструмента. |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -210,13 +210,14 @@ Stream сделок пользователя
 
 | Field | Type | Description |
 | ----- | ---- | ----------- |
-| figi |  [string](#string) | Figi-идентификатор инструмента. |
+| figi |  [string](#string) | Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id. |
 | quantity |  [int64](#int64) | Количество лотов. |
-| price |  [Quotation](#quotation) | Цена одного инструмента. Для получения стоимости лота требуется умножить на лотность инструмента. Игнорируется для рыночных поручений. |
+| price |  [Quotation](#quotation) | Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Игнорируется для рыночных поручений. |
 | direction |  [OrderDirection](#orderdirection) | Направление операции. |
 | account_id |  [string](#string) | Номер счёта. |
 | order_type |  [OrderType](#ordertype) | Тип заявки. |
 | order_id |  [string](#string) | Идентификатор запроса выставления поручения для целей идемпотентности. Максимальная длина 36 символов. |
+| instrument_id |  [string](#string) | Идентификатор инструмента, принимает значения Figi или Instrument_uid. |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -232,7 +233,7 @@ Stream сделок пользователя
 | lots_requested |  [int64](#int64) | Запрошено лотов. |
 | lots_executed |  [int64](#int64) | Исполнено лотов. |
 | initial_order_price |  [MoneyValue](#moneyvalue) | Начальная цена заявки. Произведение количества запрошенных лотов на цену. |
-| executed_order_price |  [MoneyValue](#moneyvalue) | Исполненная цена заявки. Произведение средней цены покупки на количество лотов. |
+| executed_order_price |  [MoneyValue](#moneyvalue) | Исполненная средняя цена 1 одного инструмента в заявки. |
 | total_order_amount |  [MoneyValue](#moneyvalue) | Итоговая стоимость заявки, включающая все комиссии. |
 | initial_commission |  [MoneyValue](#moneyvalue) | Начальная комиссия. Комиссия рассчитанная при выставлении заявки. |
 | executed_commission |  [MoneyValue](#moneyvalue) | Фактическая комиссия по итогам исполнения заявки. |
@@ -243,6 +244,7 @@ Stream сделок пользователя
 | order_type |  [OrderType](#ordertype) | Тип заявки. |
 | message |  [string](#string) | Дополнительные данные об исполнении заявки. |
 | initial_order_price_pt |  [Quotation](#quotation) | Начальная цена заявки в пунктах (для фьючерсов). |
+| instrument_uid |  [string](#string) | UID идентификатор инструмента. |
  <!-- end Fields -->
  <!-- end HasFields -->
 

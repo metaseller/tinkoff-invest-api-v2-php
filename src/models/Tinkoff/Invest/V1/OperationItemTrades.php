@@ -16,10 +16,6 @@ use Google\Protobuf\Internal\GPBUtil;
 class OperationItemTrades extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>int32 trades_size = 1;</code>
-     */
-    protected $trades_size = 0;
-    /**
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OperationItemTrade trades = 6;</code>
      */
     private $trades;
@@ -30,35 +26,12 @@ class OperationItemTrades extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int $trades_size
      *     @type \Tinkoff\Invest\V1\OperationItemTrade[]|\Google\Protobuf\Internal\RepeatedField $trades
      * }
      */
     public function __construct($data = NULL) {
         \GPBMetadata\Operations::initOnce();
         parent::__construct($data);
-    }
-
-    /**
-     * Generated from protobuf field <code>int32 trades_size = 1;</code>
-     * @return int
-     */
-    public function getTradesSize()
-    {
-        return $this->trades_size;
-    }
-
-    /**
-     * Generated from protobuf field <code>int32 trades_size = 1;</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setTradesSize($var)
-    {
-        GPBUtil::checkInt32($var);
-        $this->trades_size = $var;
-
-        return $this;
     }
 
     /**

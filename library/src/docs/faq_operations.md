@@ -38,10 +38,20 @@
 
 Для получения информации об операциях в TINKOFF INVEST API предусмотрен метод [getOperationsByCursor](/investAPI/operations#getoperationsbycursor).
 Данный метод имеет широкие возможности фильтрации, а так же возвращает постраничную информацию об операциях.
+Для вызова метода во входных параметрах достаточно указать только **`account_id`**.
 
 Так же в TINKOFF INVEST API для получения списка операций существует метод [getOperations](/investAPI/operations#getoperations), являющийся более старой версией метода [getOperationsByCursor](/investAPI/operations#getoperationsbycursor).
 Однако, метод [getOperationsByCursor](/investAPI/operations#getoperationsbycursor) является более **предпочтительным** для использования.
+Для вызова метода [getOperations](/investAPI/operations#getoperations) во входных параметрах достаточно указать только **`account_id`**.
+
+**Важно!!!** Метод [getOperations](/investAPI/operations#getoperations) возвращает только последнюю тысячу операций.
+
 
 ###Как понять какие бумаги в портфеле заблокированы по решению ЦБ?
 
 В методах [getPortfolio](/investAPI/operations#getportfolio) и  [getPositions](/investAPI/operations#getpositions) добавлены специальные булевы параметры, означающие что данный инструмент заблокирован депозитарием.
+
+###Что за значения приходят в positions.expectedYield в методе [getPortfolio](/investAPI/operations#getportfolio)?
+
+В методе [getPortfolio](/investAPI/operations#getportfolio) в параметрах positions.expectedYield и positions.expectedYieldFifo
+возвращается значение текущей рассчитанной доходность позиции, это значение в валюте инструмента.

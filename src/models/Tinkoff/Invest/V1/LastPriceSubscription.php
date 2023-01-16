@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Статус подписки на последнюю цену.
+ *Статус подписки на цену последней сделки.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.LastPriceSubscription</code>
  */
@@ -27,6 +27,12 @@ class LastPriceSubscription extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionStatus subscription_status = 2;</code>
      */
     protected $subscription_status = 0;
+    /**
+     *Uid инструмента
+     *
+     * Generated from protobuf field <code>string instrument_uid = 3;</code>
+     */
+    protected $instrument_uid = '';
 
     /**
      * Constructor.
@@ -38,6 +44,8 @@ class LastPriceSubscription extends \Google\Protobuf\Internal\Message
      *          Figi-идентификатор инструмента.
      *     @type int $subscription_status
      *          Статус подписки.
+     *     @type string $instrument_uid
+     *          Uid инструмента
      * }
      */
     public function __construct($data = NULL) {
@@ -93,6 +101,32 @@ class LastPriceSubscription extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\SubscriptionStatus::class);
         $this->subscription_status = $var;
+
+        return $this;
+    }
+
+    /**
+     *Uid инструмента
+     *
+     * Generated from protobuf field <code>string instrument_uid = 3;</code>
+     * @return string
+     */
+    public function getInstrumentUid()
+    {
+        return $this->instrument_uid;
+    }
+
+    /**
+     *Uid инструмента
+     *
+     * Generated from protobuf field <code>string instrument_uid = 3;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setInstrumentUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->instrument_uid = $var;
 
         return $this;
     }

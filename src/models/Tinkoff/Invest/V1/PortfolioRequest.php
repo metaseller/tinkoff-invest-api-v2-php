@@ -21,6 +21,12 @@ class PortfolioRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string account_id = 1;</code>
      */
     protected $account_id = '';
+    /**
+     *Валюта, в которой требуется рассчитать портфель
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PortfolioRequest.CurrencyRequest currency = 2;</code>
+     */
+    protected $currency = 0;
 
     /**
      * Constructor.
@@ -30,6 +36,8 @@ class PortfolioRequest extends \Google\Protobuf\Internal\Message
      *
      *     @type string $account_id
      *          Идентификатор счёта пользователя.
+     *     @type int $currency
+     *          Валюта, в которой требуется рассчитать портфель
      * }
      */
     public function __construct($data = NULL) {
@@ -59,6 +67,32 @@ class PortfolioRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->account_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *Валюта, в которой требуется рассчитать портфель
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PortfolioRequest.CurrencyRequest currency = 2;</code>
+     * @return int
+     */
+    public function getCurrency()
+    {
+        return $this->currency;
+    }
+
+    /**
+     *Валюта, в которой требуется рассчитать портфель
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PortfolioRequest.CurrencyRequest currency = 2;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setCurrency($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\PortfolioRequest\CurrencyRequest::class);
+        $this->currency = $var;
 
         return $this;
     }

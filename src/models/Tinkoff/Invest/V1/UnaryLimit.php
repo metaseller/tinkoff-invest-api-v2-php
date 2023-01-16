@@ -16,13 +16,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class UnaryLimit extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Количество unary-запросов в минуту
+     *Количество unary-запросов в минуту.
      *
      * Generated from protobuf field <code>int32 limit_per_minute = 1;</code>
      */
     protected $limit_per_minute = 0;
     /**
-     *Названия методов
+     *Названия методов.
      *
      * Generated from protobuf field <code>repeated string methods = 2;</code>
      */
@@ -35,9 +35,9 @@ class UnaryLimit extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $limit_per_minute
-     *          Количество unary-запросов в минуту
+     *          Количество unary-запросов в минуту.
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $methods
-     *          Названия методов
+     *          Названия методов.
      * }
      */
     public function __construct($data = NULL) {
@@ -46,7 +46,7 @@ class UnaryLimit extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество unary-запросов в минуту
+     *Количество unary-запросов в минуту.
      *
      * Generated from protobuf field <code>int32 limit_per_minute = 1;</code>
      * @return int
@@ -57,7 +57,7 @@ class UnaryLimit extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество unary-запросов в минуту
+     *Количество unary-запросов в минуту.
      *
      * Generated from protobuf field <code>int32 limit_per_minute = 1;</code>
      * @param int $var
@@ -72,7 +72,7 @@ class UnaryLimit extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Названия методов
+     *Названия методов.
      *
      * Generated from protobuf field <code>repeated string methods = 2;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -83,7 +83,7 @@ class UnaryLimit extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Названия методов
+     *Названия методов.
      *
      * Generated from protobuf field <code>repeated string methods = 2;</code>
      * @param string[]|\Google\Protobuf\Internal\RepeatedField $var

@@ -45,6 +45,12 @@ class GetTradingStatusResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool api_trade_available_flag = 5;</code>
      */
     protected $api_trade_available_flag = false;
+    /**
+     *Uid инструмента.
+     *
+     * Generated from protobuf field <code>string instrument_uid = 6;</code>
+     */
+    protected $instrument_uid = '';
 
     /**
      * Constructor.
@@ -62,6 +68,8 @@ class GetTradingStatusResponse extends \Google\Protobuf\Internal\Message
      *          Признак доступности выставления рыночной заявки по инструменту.
      *     @type bool $api_trade_available_flag
      *          Признак доступности торгов через API.
+     *     @type string $instrument_uid
+     *          Uid инструмента.
      * }
      */
     public function __construct($data = NULL) {
@@ -195,6 +203,32 @@ class GetTradingStatusResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->api_trade_available_flag = $var;
+
+        return $this;
+    }
+
+    /**
+     *Uid инструмента.
+     *
+     * Generated from protobuf field <code>string instrument_uid = 6;</code>
+     * @return string
+     */
+    public function getInstrumentUid()
+    {
+        return $this->instrument_uid;
+    }
+
+    /**
+     *Uid инструмента.
+     *
+     * Generated from protobuf field <code>string instrument_uid = 6;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setInstrumentUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->instrument_uid = $var;
 
         return $this;
     }

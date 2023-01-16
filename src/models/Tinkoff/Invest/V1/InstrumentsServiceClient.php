@@ -167,6 +167,36 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Метод получения опциона по его идентификатору.
+     * @param \Tinkoff\Invest\V1\InstrumentRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function OptionBy(\Tinkoff\Invest\V1\InstrumentRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/OptionBy',
+        $argument,
+        ['\Tinkoff\Invest\V1\OptionResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Метод получения списка опционов.
+     * @param \Tinkoff\Invest\V1\InstrumentsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function Options(\Tinkoff\Invest\V1\InstrumentsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/Options',
+        $argument,
+        ['\Tinkoff\Invest\V1\OptionsResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * Метод получения акции по её идентификатору.
      * @param \Tinkoff\Invest\V1\InstrumentRequest $argument input argument
      * @param array $metadata metadata

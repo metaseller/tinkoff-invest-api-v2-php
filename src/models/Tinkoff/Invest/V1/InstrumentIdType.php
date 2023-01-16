@@ -37,12 +37,19 @@ class InstrumentIdType
      * Generated from protobuf enum <code>INSTRUMENT_ID_TYPE_UID = 3;</code>
      */
     const INSTRUMENT_ID_TYPE_UID = 3;
+    /**
+     *Идентификатор позиции.
+     *
+     * Generated from protobuf enum <code>INSTRUMENT_ID_TYPE_POSITION_UID = 4;</code>
+     */
+    const INSTRUMENT_ID_TYPE_POSITION_UID = 4;
 
     private static $valueToName = [
         self::INSTRUMENT_ID_UNSPECIFIED => 'INSTRUMENT_ID_UNSPECIFIED',
         self::INSTRUMENT_ID_TYPE_FIGI => 'INSTRUMENT_ID_TYPE_FIGI',
         self::INSTRUMENT_ID_TYPE_TICKER => 'INSTRUMENT_ID_TYPE_TICKER',
         self::INSTRUMENT_ID_TYPE_UID => 'INSTRUMENT_ID_TYPE_UID',
+        self::INSTRUMENT_ID_TYPE_POSITION_UID => 'INSTRUMENT_ID_TYPE_POSITION_UID',
     ];
 
     public static function name($value)

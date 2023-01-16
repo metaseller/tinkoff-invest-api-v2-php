@@ -32,7 +32,7 @@ class MarketDataRequest extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\SubscribeInfoRequest $subscribe_info_request
      *          Запрос подписки на торговые статусы инструментов.
      *     @type \Tinkoff\Invest\V1\SubscribeLastPriceRequest $subscribe_last_price_request
-     *          Запрос подписки на последние цены.
+     *          Запрос подписки на цены последних сделок.
      *     @type \Tinkoff\Invest\V1\GetMySubscriptions $get_my_subscriptions
      *          Запрос своих подписок.
      * }
@@ -167,7 +167,7 @@ class MarketDataRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Запрос подписки на последние цены.
+     *Запрос подписки на цены последних сделок.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscribeLastPriceRequest subscribe_last_price_request = 5;</code>
      * @return \Tinkoff\Invest\V1\SubscribeLastPriceRequest|null
@@ -183,7 +183,7 @@ class MarketDataRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Запрос подписки на последние цены.
+     *Запрос подписки на цены последних сделок.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscribeLastPriceRequest subscribe_last_price_request = 5;</code>
      * @param \Tinkoff\Invest\V1\SubscribeLastPriceRequest $var

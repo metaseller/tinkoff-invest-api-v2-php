@@ -160,7 +160,7 @@ class Currency extends \Google\Protobuf\Internal\Message
      */
     protected $min_price_increment = null;
     /**
-     *Признак доступности торгов через API.
+     *Параметр указывает на возможность торговать инструментом через API.
      *
      * Generated from protobuf field <code>bool api_trade_available_flag = 26;</code>
      */
@@ -189,6 +189,24 @@ class Currency extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool for_iis_flag = 41;</code>
      */
     protected $for_iis_flag = false;
+    /**
+     *Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов.
+     *
+     * Generated from protobuf field <code>bool for_qual_investor_flag = 52;</code>
+     */
+    protected $for_qual_investor_flag = false;
+    /**
+     *Флаг отображающий доступность торговли инструментом по выходным.
+     *
+     * Generated from protobuf field <code>bool weekend_flag = 53;</code>
+     */
+    protected $weekend_flag = false;
+    /**
+     *Флаг заблокированного ТКС.
+     *
+     * Generated from protobuf field <code>bool blocked_tca_flag = 54;</code>
+     */
+    protected $blocked_tca_flag = false;
     /**
      *Дата первой минутной свечи.
      *
@@ -257,7 +275,7 @@ class Currency extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\Quotation $min_price_increment
      *          Шаг цены.
      *     @type bool $api_trade_available_flag
-     *          Признак доступности торгов через API.
+     *          Параметр указывает на возможность торговать инструментом через API.
      *     @type string $uid
      *          Уникальный идентификатор инструмента.
      *     @type int $real_exchange
@@ -266,6 +284,12 @@ class Currency extends \Google\Protobuf\Internal\Message
      *          Уникальный идентификатор позиции инструмента.
      *     @type bool $for_iis_flag
      *          Признак доступности для ИИС.
+     *     @type bool $for_qual_investor_flag
+     *          Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов.
+     *     @type bool $weekend_flag
+     *          Флаг отображающий доступность торговли инструментом по выходным.
+     *     @type bool $blocked_tca_flag
+     *          Флаг заблокированного ТКС.
      *     @type \Google\Protobuf\Timestamp $first_1min_candle_date
      *          Дата первой минутной свечи.
      *     @type \Google\Protobuf\Timestamp $first_1day_candle_date
@@ -982,7 +1006,7 @@ class Currency extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Признак доступности торгов через API.
+     *Параметр указывает на возможность торговать инструментом через API.
      *
      * Generated from protobuf field <code>bool api_trade_available_flag = 26;</code>
      * @return bool
@@ -993,7 +1017,7 @@ class Currency extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Признак доступности торгов через API.
+     *Параметр указывает на возможность торговать инструментом через API.
      *
      * Generated from protobuf field <code>bool api_trade_available_flag = 26;</code>
      * @param bool $var
@@ -1107,6 +1131,84 @@ class Currency extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->for_iis_flag = $var;
+
+        return $this;
+    }
+
+    /**
+     *Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов.
+     *
+     * Generated from protobuf field <code>bool for_qual_investor_flag = 52;</code>
+     * @return bool
+     */
+    public function getForQualInvestorFlag()
+    {
+        return $this->for_qual_investor_flag;
+    }
+
+    /**
+     *Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов.
+     *
+     * Generated from protobuf field <code>bool for_qual_investor_flag = 52;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setForQualInvestorFlag($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->for_qual_investor_flag = $var;
+
+        return $this;
+    }
+
+    /**
+     *Флаг отображающий доступность торговли инструментом по выходным.
+     *
+     * Generated from protobuf field <code>bool weekend_flag = 53;</code>
+     * @return bool
+     */
+    public function getWeekendFlag()
+    {
+        return $this->weekend_flag;
+    }
+
+    /**
+     *Флаг отображающий доступность торговли инструментом по выходным.
+     *
+     * Generated from protobuf field <code>bool weekend_flag = 53;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setWeekendFlag($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->weekend_flag = $var;
+
+        return $this;
+    }
+
+    /**
+     *Флаг заблокированного ТКС.
+     *
+     * Generated from protobuf field <code>bool blocked_tca_flag = 54;</code>
+     * @return bool
+     */
+    public function getBlockedTcaFlag()
+    {
+        return $this->blocked_tca_flag;
+    }
+
+    /**
+     *Флаг заблокированного ТКС.
+     *
+     * Generated from protobuf field <code>bool blocked_tca_flag = 54;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setBlockedTcaFlag($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->blocked_tca_flag = $var;
 
         return $this;
     }

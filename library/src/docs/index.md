@@ -15,13 +15,21 @@ unary-запросами;
 
 Для использования TINKOFF INVEST API требуется: 
 
+* изучить полезную информацию
+* **изучить термины и параметры используемые в методах TINKOFF INVEST API** - [Голоссарий](https://tinkoff.github.io/investAPI/glossary/)
+* посмотреть описание сервисов TINKOFF INVEST API и ответы на часто задаваемые вопросы в раздела FAQ каждого сервиса
 * быть клиентом [Тинькофф Инвестиций](https://www.tinkoff.ru/invest/);
 * получить [токен доступа](/investAPI/token).
 
 [Подробнее о протоколе взаимодействия](/investAPI/grpc/)
 
 ##Адреса сервиса TINKOFF INVEST API
-Все вызовы сервиса выполняются по адресу **invest-public-api.tinkoff.ru:443** 
+
+Все вызовы продового сервиса выполняются по адресу **`invest-public-api.tinkoff.ru:443`**.
+
+Все вызовы сервиса песочницы выполняются по адресу **`sandbox-invest-public-api.tinkoff.ru:443`**.
+
+Различия работы контуров описаны на [странице](/investAPI/url_difference/).
 
 ##Protobuf-файлы сервиса
 

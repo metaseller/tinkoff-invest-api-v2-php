@@ -51,6 +51,12 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string account_id = 6;</code>
      */
     protected $account_id = '';
+    /**
+     *UID идентификатор инструмента.
+     *
+     * Generated from protobuf field <code>string instrument_uid = 7;</code>
+     */
+    protected $instrument_uid = '';
 
     /**
      * Constructor.
@@ -70,6 +76,8 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
      *          Массив сделок.
      *     @type string $account_id
      *          Идентификатор счёта.
+     *     @type string $instrument_uid
+     *          UID идентификатор инструмента.
      * }
      */
     public function __construct($data = NULL) {
@@ -239,6 +247,32 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->account_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *UID идентификатор инструмента.
+     *
+     * Generated from protobuf field <code>string instrument_uid = 7;</code>
+     * @return string
+     */
+    public function getInstrumentUid()
+    {
+        return $this->instrument_uid;
+    }
+
+    /**
+     *UID идентификатор инструмента.
+     *
+     * Generated from protobuf field <code>string instrument_uid = 7;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setInstrumentUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->instrument_uid = $var;
 
         return $this;
     }

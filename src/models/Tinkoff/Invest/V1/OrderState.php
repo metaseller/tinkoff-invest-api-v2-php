@@ -123,6 +123,12 @@ class OrderState extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.google.protobuf.Timestamp order_date = 18;</code>
      */
     protected $order_date = null;
+    /**
+     *UID идентификатор инструмента.
+     *
+     * Generated from protobuf field <code>string instrument_uid = 19;</code>
+     */
+    protected $instrument_uid = '';
 
     /**
      * Constructor.
@@ -166,6 +172,8 @@ class OrderState extends \Google\Protobuf\Internal\Message
      *          Тип заявки.
      *     @type \Google\Protobuf\Timestamp $order_date
      *          Дата и время выставления заявки в часовом поясе UTC.
+     *     @type string $instrument_uid
+     *          UID идентификатор инструмента.
      * }
      */
     public function __construct($data = NULL) {
@@ -727,6 +735,32 @@ class OrderState extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->order_date = $var;
+
+        return $this;
+    }
+
+    /**
+     *UID идентификатор инструмента.
+     *
+     * Generated from protobuf field <code>string instrument_uid = 19;</code>
+     * @return string
+     */
+    public function getInstrumentUid()
+    {
+        return $this->instrument_uid;
+    }
+
+    /**
+     *UID идентификатор инструмента.
+     *
+     * Generated from protobuf field <code>string instrument_uid = 19;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setInstrumentUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->instrument_uid = $var;
 
         return $this;
     }

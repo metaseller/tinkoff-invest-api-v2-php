@@ -22,7 +22,7 @@ class PositionsFutures extends \Google\Protobuf\Internal\Message
      */
     protected $figi = '';
     /**
-     *Заблокировано.
+     *Количество бумаг заблокированных выставленными заявками.
      *
      * Generated from protobuf field <code>int64 blocked = 2;</code>
      */
@@ -33,6 +33,18 @@ class PositionsFutures extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int64 balance = 3;</code>
      */
     protected $balance = 0;
+    /**
+     *Уникальный идентификатор позиции.
+     *
+     * Generated from protobuf field <code>string position_uid = 4;</code>
+     */
+    protected $position_uid = '';
+    /**
+     *Уникальный идентификатор  инструмента.
+     *
+     * Generated from protobuf field <code>string instrument_uid = 5;</code>
+     */
+    protected $instrument_uid = '';
 
     /**
      * Constructor.
@@ -43,9 +55,13 @@ class PositionsFutures extends \Google\Protobuf\Internal\Message
      *     @type string $figi
      *          Figi-идентификатор фьючерса.
      *     @type int|string $blocked
-     *          Заблокировано.
+     *          Количество бумаг заблокированных выставленными заявками.
      *     @type int|string $balance
      *          Текущий незаблокированный баланс.
+     *     @type string $position_uid
+     *          Уникальный идентификатор позиции.
+     *     @type string $instrument_uid
+     *          Уникальный идентификатор  инструмента.
      * }
      */
     public function __construct($data = NULL) {
@@ -80,7 +96,7 @@ class PositionsFutures extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Заблокировано.
+     *Количество бумаг заблокированных выставленными заявками.
      *
      * Generated from protobuf field <code>int64 blocked = 2;</code>
      * @return int|string
@@ -91,7 +107,7 @@ class PositionsFutures extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Заблокировано.
+     *Количество бумаг заблокированных выставленными заявками.
      *
      * Generated from protobuf field <code>int64 blocked = 2;</code>
      * @param int|string $var
@@ -127,6 +143,58 @@ class PositionsFutures extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt64($var);
         $this->balance = $var;
+
+        return $this;
+    }
+
+    /**
+     *Уникальный идентификатор позиции.
+     *
+     * Generated from protobuf field <code>string position_uid = 4;</code>
+     * @return string
+     */
+    public function getPositionUid()
+    {
+        return $this->position_uid;
+    }
+
+    /**
+     *Уникальный идентификатор позиции.
+     *
+     * Generated from protobuf field <code>string position_uid = 4;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPositionUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->position_uid = $var;
+
+        return $this;
+    }
+
+    /**
+     *Уникальный идентификатор  инструмента.
+     *
+     * Generated from protobuf field <code>string instrument_uid = 5;</code>
+     * @return string
+     */
+    public function getInstrumentUid()
+    {
+        return $this->instrument_uid;
+    }
+
+    /**
+     *Уникальный идентификатор  инструмента.
+     *
+     * Generated from protobuf field <code>string instrument_uid = 5;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setInstrumentUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->instrument_uid = $var;
 
         return $this;
     }

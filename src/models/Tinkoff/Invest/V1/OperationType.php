@@ -283,6 +283,108 @@ class OperationType
      * Generated from protobuf enum <code>OPERATION_TYPE_TAX_CORRECTION_COUPON = 44;</code>
      */
     const OPERATION_TYPE_TAX_CORRECTION_COUPON = 44;
+    /**
+     *Комиссия за валютный остаток.
+     *
+     * Generated from protobuf enum <code>OPERATION_TYPE_CASH_FEE = 45;</code>
+     */
+    const OPERATION_TYPE_CASH_FEE = 45;
+    /**
+     *Комиссия за вывод валюты с брокерского счета.
+     *
+     * Generated from protobuf enum <code>OPERATION_TYPE_OUT_FEE = 46;</code>
+     */
+    const OPERATION_TYPE_OUT_FEE = 46;
+    /**
+     *Гербовый сбор.
+     *
+     * Generated from protobuf enum <code>OPERATION_TYPE_OUT_STAMP_DUTY = 47;</code>
+     */
+    const OPERATION_TYPE_OUT_STAMP_DUTY = 47;
+    /**
+     *	SWIFT-перевод
+     *
+     * Generated from protobuf enum <code>OPERATION_TYPE_OUTPUT_SWIFT = 50;</code>
+     */
+    const OPERATION_TYPE_OUTPUT_SWIFT = 50;
+    /**
+     *	SWIFT-перевод
+     *
+     * Generated from protobuf enum <code>OPERATION_TYPE_INPUT_SWIFT = 51;</code>
+     */
+    const OPERATION_TYPE_INPUT_SWIFT = 51;
+    /**
+     *  Перевод на карту
+     *
+     * Generated from protobuf enum <code>OPERATION_TYPE_OUTPUT_ACQUIRING = 53;</code>
+     */
+    const OPERATION_TYPE_OUTPUT_ACQUIRING = 53;
+    /**
+     *	Перевод с карты
+     *
+     * Generated from protobuf enum <code>OPERATION_TYPE_INPUT_ACQUIRING = 54;</code>
+     */
+    const OPERATION_TYPE_INPUT_ACQUIRING = 54;
+    /**
+     *	Комиссия за вывод средств
+     *
+     * Generated from protobuf enum <code>OPERATION_TYPE_OUTPUT_PENALTY = 55;</code>
+     */
+    const OPERATION_TYPE_OUTPUT_PENALTY = 55;
+    /**
+     *	Списание оплаты за сервис Советов
+     *
+     * Generated from protobuf enum <code>OPERATION_TYPE_ADVICE_FEE = 56;</code>
+     */
+    const OPERATION_TYPE_ADVICE_FEE = 56;
+    /**
+     *  Перевод ценных бумаг с ИИС на Брокерский счет
+     *
+     * Generated from protobuf enum <code>OPERATION_TYPE_TRANS_IIS_BS = 57;</code>
+     */
+    const OPERATION_TYPE_TRANS_IIS_BS = 57;
+    /**
+     *  Перевод ценных бумаг с одного брокерского счета на другой
+     *
+     * Generated from protobuf enum <code>OPERATION_TYPE_TRANS_BS_BS = 58;</code>
+     */
+    const OPERATION_TYPE_TRANS_BS_BS = 58;
+    /**
+     *  Вывод денежных средств со счета
+     *
+     * Generated from protobuf enum <code>OPERATION_TYPE_OUT_MULTI = 59;</code>
+     */
+    const OPERATION_TYPE_OUT_MULTI = 59;
+    /**
+     *  Пополнение денежных средств со счета
+     *
+     * Generated from protobuf enum <code>OPERATION_TYPE_INP_MULTI = 60;</code>
+     */
+    const OPERATION_TYPE_INP_MULTI = 60;
+    /**
+     *  Размещение биржевого овернайта
+     *
+     * Generated from protobuf enum <code>OPERATION_TYPE_OVER_PLACEMENT = 61;</code>
+     */
+    const OPERATION_TYPE_OVER_PLACEMENT = 61;
+    /**
+     *  Списание комиссии
+     *
+     * Generated from protobuf enum <code>OPERATION_TYPE_OVER_COM = 62;</code>
+     */
+    const OPERATION_TYPE_OVER_COM = 62;
+    /**
+     *  Доход от оверанайта
+     *
+     * Generated from protobuf enum <code>OPERATION_TYPE_OVER_INCOME = 63;</code>
+     */
+    const OPERATION_TYPE_OVER_INCOME = 63;
+    /**
+     * Экспирация
+     *
+     * Generated from protobuf enum <code>OPERATION_TYPE_OPTION_EXPIRATION = 64;</code>
+     */
+    const OPERATION_TYPE_OPTION_EXPIRATION = 64;
 
     private static $valueToName = [
         self::OPERATION_TYPE_UNSPECIFIED => 'OPERATION_TYPE_UNSPECIFIED',
@@ -330,6 +432,23 @@ class OperationType
         self::OPERATION_TYPE_TAX_REPO_REFUND_PROGRESSIVE => 'OPERATION_TYPE_TAX_REPO_REFUND_PROGRESSIVE',
         self::OPERATION_TYPE_DIV_EXT => 'OPERATION_TYPE_DIV_EXT',
         self::OPERATION_TYPE_TAX_CORRECTION_COUPON => 'OPERATION_TYPE_TAX_CORRECTION_COUPON',
+        self::OPERATION_TYPE_CASH_FEE => 'OPERATION_TYPE_CASH_FEE',
+        self::OPERATION_TYPE_OUT_FEE => 'OPERATION_TYPE_OUT_FEE',
+        self::OPERATION_TYPE_OUT_STAMP_DUTY => 'OPERATION_TYPE_OUT_STAMP_DUTY',
+        self::OPERATION_TYPE_OUTPUT_SWIFT => 'OPERATION_TYPE_OUTPUT_SWIFT',
+        self::OPERATION_TYPE_INPUT_SWIFT => 'OPERATION_TYPE_INPUT_SWIFT',
+        self::OPERATION_TYPE_OUTPUT_ACQUIRING => 'OPERATION_TYPE_OUTPUT_ACQUIRING',
+        self::OPERATION_TYPE_INPUT_ACQUIRING => 'OPERATION_TYPE_INPUT_ACQUIRING',
+        self::OPERATION_TYPE_OUTPUT_PENALTY => 'OPERATION_TYPE_OUTPUT_PENALTY',
+        self::OPERATION_TYPE_ADVICE_FEE => 'OPERATION_TYPE_ADVICE_FEE',
+        self::OPERATION_TYPE_TRANS_IIS_BS => 'OPERATION_TYPE_TRANS_IIS_BS',
+        self::OPERATION_TYPE_TRANS_BS_BS => 'OPERATION_TYPE_TRANS_BS_BS',
+        self::OPERATION_TYPE_OUT_MULTI => 'OPERATION_TYPE_OUT_MULTI',
+        self::OPERATION_TYPE_INP_MULTI => 'OPERATION_TYPE_INP_MULTI',
+        self::OPERATION_TYPE_OVER_PLACEMENT => 'OPERATION_TYPE_OVER_PLACEMENT',
+        self::OPERATION_TYPE_OVER_COM => 'OPERATION_TYPE_OVER_COM',
+        self::OPERATION_TYPE_OVER_INCOME => 'OPERATION_TYPE_OVER_INCOME',
+        self::OPERATION_TYPE_OPTION_EXPIRATION => 'OPERATION_TYPE_OPTION_EXPIRATION',
     ];
 
     public static function name($value)

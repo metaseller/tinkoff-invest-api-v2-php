@@ -17,12 +17,21 @@ bidirectional-stream [сервиса котировок](/investAPI/head-marketd
 каждого запроса.
 
 Формат заголовка: 
-`Authorization: Bearer [токен доступ]`
+`Authorization: Bearer [токен доступа]`
 
 Например:
 `Authorization: Bearer t.QtEo8ahkNFX4RTpbqp0u4z4GDZq27HzUp6AotJASBx7_DVqmqZMHfM2Cy7JmUjS80boI9eVg`
 
 <a name="tracking"></a>
+
+##Адреса сервиса TINKOFF INVEST API
+
+Все вызовы продового сервиса выполняются по адресу **`invest-public-api.tinkoff.ru:443`**.
+
+Все вызовы сервиса песочницы выполняются по адресу **`sandbox-invest-public-api.tinkoff.ru:443`**.
+
+Различия работы контуров описаны на [странице](/investAPI/url_difference/).
+
 ##tracking-id запросов
 
 Во все ответы unary-методов TINKOFF INVEST API добавляется заголовок **x-tracking-id**. 
@@ -32,6 +41,14 @@ bidirectional-stream [сервиса котировок](/investAPI/head-marketd
 
 *Для сообщений управления статусом подписки в рамках stream-соединений **tracking-id** передаётся явно в
 виде выходного параметра.*
+
+##Полный текст ошибки
+
+В случае ошибки при исполнении методов в TINKOFF INVEST API ответа добавляется заголовок **message**.
+В данном заголовке приходит полный текст описания ошибки. 
+
+В Kreya вы можете посмотреть текст ошибки на вкладке **Header**, в поле **message**.
+
 
 ##Appname запросов
 
@@ -81,7 +98,7 @@ Kreya позволяет увидеть служебные заголовки о
 Интерфейс утилиты достаточно прост, для старта работы требуется указать домен сервиса и импортировать
 все proto-файлы. 
 
-1. Импортируйте скаченные poroto-контракты сервиса.
+1. Импортируйте скаченные proto-контракты сервиса.
 ![Интерфейс BloomRPC](/investAPI/img/Bloom-1.png "Интерфейс BloomRPC")
 2. Укажите адрес сервера invest-public-api.tinkoff.ru:443 и заполните поле metadata значением (подставьте своё значение [токена доступа](/investAPI/token/)).
 

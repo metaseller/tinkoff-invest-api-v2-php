@@ -9,14 +9,14 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Список последних цен.
+ *Список цен последних сделок.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.GetLastPricesResponse</code>
  */
 class GetLastPricesResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Массив последних цен.
+     *Массив цен последних сделок.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.LastPrice last_prices = 1;</code>
      */
@@ -29,7 +29,7 @@ class GetLastPricesResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Tinkoff\Invest\V1\LastPrice[]|\Google\Protobuf\Internal\RepeatedField $last_prices
-     *          Массив последних цен.
+     *          Массив цен последних сделок.
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +38,7 @@ class GetLastPricesResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив последних цен.
+     *Массив цен последних сделок.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.LastPrice last_prices = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -49,7 +49,7 @@ class GetLastPricesResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив последних цен.
+     *Массив цен последних сделок.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.LastPrice last_prices = 1;</code>
      * @param \Tinkoff\Invest\V1\LastPrice[]|\Google\Protobuf\Internal\RepeatedField $var
