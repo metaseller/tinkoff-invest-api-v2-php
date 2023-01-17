@@ -49,9 +49,7 @@ class ClientConnection
         return [
             'credentials' => ChannelCredentials::createSsl($cert),
             'grpc.enable_http_proxy' => 0,
-            'grpc.ssl_target_name_override' => getenv('TINKOFF_API2_SANDBOX_MODE') == 'true'
-                ? static::TINKOFF_INVEST_API2_HOSTNAME_SANDBOX
-                : static::TINKOFF_INVEST_API2_HOSTNAME,
+            'grpc.ssl_target_name_override' => static::getApiDomain(),
             'update_metadata' => function($meta_data) use ($api_token, $app_name) {
                 $meta_data['authorization'] = ['Bearer ' . $api_token];
                 $meta_data['x-app-name'] = [$app_name];
@@ -68,9 +66,31 @@ class ClientConnection
      */
     public static function getHostname(): string
     {
-        $host = getenv('TINKOFF_API2_SANDBOX_MODE') == 'true'
+        return static::getApiDomain() . ':' . static::TINKOFF_INVEST_API2_PORT;
+    }
+
+    /**
+     * Метод получения домена сервиса Tinkoff Invest API 2
+     *
+     * @return string Домен сервиса Tinkoff Invest API 2
+     */
+    public static function getApiDomain(): string
+    {
+        return static::isSandboxModeEnabled()
             ? static::TINKOFF_INVEST_API2_HOSTNAME_SANDBOX
-            : static::TINKOFF_INVEST_API2_HOSTNAME;
-        return $host . ':' . static::TINKOFF_INVEST_API2_PORT;
+            : static::TINKOFF_INVEST_API2_HOSTNAME
+        ;
+    }
+
+    /**
+     * Метод определения режима работы API из значения переменной окружения <code>getenv('TINKOFF_API2_SANDBOX_MODE')</code>
+     *
+     * @return bool Флаг активности режима "Песочницы"
+     */
+    public static function isSandboxModeEnabled(): bool
+    {
+        $env_value = getenv('TINKOFF_API2_SANDBOX_MODE');
+
+        return $env_value !== 'false' && ((bool) $env_value !== false);
     }
 }
