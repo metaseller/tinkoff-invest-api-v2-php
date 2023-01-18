@@ -43,13 +43,15 @@ class QuotationHelper
             throw new ValidateException('Instrument min price increment value is not available');
         }
 
-        return static::toDecimal($price) % static::toDecimal($min_price_increment) == 0;
+        $precision = pow(10,9);
+
+        return ($precision * static::toDecimal($price)) % ($precision * static::toDecimal($min_price_increment)) == 0;
     }
 
     /**
      * Преобразование котировки ценной бумаги в число с плавающей запятой, без учета типа инструмента
      *
-     * В логике API, если вы хотите получить стоимость позиции в валюте - вам необходимо использовать метод {@link QuotationHelper::toDecimalCurrency}
+     * В логике API, если вы хотите получить стоимость позиции в валюте - вам необходимо использовать метод {@link QuotationHelper::toCurrency}
      *
      * @param float|Quotation|MoneyValue $price Котировка ценной бумаги
      *
@@ -124,6 +126,26 @@ class QuotationHelper
         }
 
         return $decimal_price;
+    }
+
+    /**
+     * Преобразование числа с плавающей запятой, без учета типа инструмента в {@link Quotation}
+     *
+     * @param float $price Число с плавающей запятой
+     *
+     * @return Quotation Значение типа {@link Quotation}
+     */
+    public static function toQuotation(float $price): Quotation
+    {
+        $quotation = new Quotation();
+
+        $units = (int) floor($price);
+        $nano = (int) (($price - $units) * pow(10, 9));
+
+        $quotation->setUnits($units);
+        $quotation->setNano($nano);
+
+        return $quotation;
     }
 
     /**
