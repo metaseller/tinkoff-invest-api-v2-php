@@ -26,6 +26,7 @@ use Tinkoff\Invest\V1\InstrumentRequest;
 use Tinkoff\Invest\V1\InstrumentResponse;
 use Tinkoff\Invest\V1\InstrumentsRequest;
 use Tinkoff\Invest\V1\InstrumentStatus;
+use Tinkoff\Invest\V1\SecurityTradingStatus;
 use Tinkoff\Invest\V1\Share;
 use Tinkoff\Invest\V1\ShareResponse;
 use Tinkoff\Invest\V1\SharesResponse;
@@ -189,6 +190,10 @@ class InstrumentsProvider extends BaseDataProvider
     /**
      * Метод получения инструмента типа {@link Bond} по тикеру
      *
+     * ВАЖНО: Использование тикера для поиска инструментов идея "так себе", потому что одному тикеру может соответствовать несколько
+     * инструментов с разным FIGI. В методе сделана доработка, чтобы он пытался найти инструмент, у которого "tradingStatus":"SECURITY_TRADING_STATUS_NORMAL_TRADING".
+     * Метод вернет первый найденный инструмент с таким tradingStatus, если такового не обнаружится, то метод вернет ПОСЛЕДНИЙ в списке инструмент с указанным тикером
+     *
      * @param string $ticker Тикер инструмента
      * @param string|null $class_name Режим торгов или <code>null</code>, тогда будет возвращен первый найденный
      * @param bool $refresh Признак необходимости получить новые данные из API Tinkoff Invest и обновить кэш. По умолчанию равно <code>false</code>
@@ -201,6 +206,8 @@ class InstrumentsProvider extends BaseDataProvider
     public function bondByTicker(string $ticker, string $class_name = null, bool $refresh = false, bool $raise = true): ?Bond
     {
         try {
+            $found_instrument = null;
+
             $instrument_type = 'bond';
             $instrument_id_type = InstrumentIdType::INSTRUMENT_ID_TYPE_TICKER;
 
@@ -236,9 +243,17 @@ class InstrumentsProvider extends BaseDataProvider
 
                 foreach ($instruments as $instrument) {
                     if ($instrument->getTicker() === $ticker) {
-                        return $instrument;
+                        $found_instrument = $instrument;
+
+                        if ($found_instrument->getTradingStatus() === SecurityTradingStatus::SECURITY_TRADING_STATUS_NORMAL_TRADING) {
+                            return $instrument;
+                        }
                     }
                 }
+            }
+
+            if ($found_instrument) {
+                return $found_instrument;
             }
 
             throw new InstrumentNotFoundException('Instrument is not found');
@@ -403,6 +418,10 @@ class InstrumentsProvider extends BaseDataProvider
     /**
      * Метод получения инструмента типа {@link Etf} по тикеру
      *
+     * ВАЖНО: Использование тикера для поиска инструментов идея "так себе", потому что одному тикеру может соответствовать несколько
+     * инструментов с разным FIGI. В методе сделана доработка, чтобы он пытался найти инструмент, у которого "tradingStatus":"SECURITY_TRADING_STATUS_NORMAL_TRADING".
+     * Метод вернет первый найденный инструмент с таким tradingStatus, если такового не обнаружится, то метод вернет ПОСЛЕДНИЙ в списке инструмент с указанным тикером
+     *
      * @param string $ticker Тикер инструмента
      * @param string|null $class_name Режим торгов или <code>null</code>, тогда будет возвращен первый найденный
      * @param bool $refresh Признак необходимости получить новые данные из API Tinkoff Invest и обновить кэш. По умолчанию равно <code>false</code>
@@ -415,6 +434,8 @@ class InstrumentsProvider extends BaseDataProvider
     public function etfByTicker(string $ticker, string $class_name = null, bool $refresh = false, bool $raise = true): ?Etf
     {
         try {
+            $found_instrument = null;
+
             $instrument_type = 'etf';
             $instrument_id_type = InstrumentIdType::INSTRUMENT_ID_TYPE_TICKER;
 
@@ -450,9 +471,17 @@ class InstrumentsProvider extends BaseDataProvider
 
                 foreach ($instruments as $instrument) {
                     if ($instrument->getTicker() === $ticker) {
-                        return $instrument;
+                        $found_instrument = $instrument;
+
+                        if ($found_instrument->getTradingStatus() === SecurityTradingStatus::SECURITY_TRADING_STATUS_NORMAL_TRADING) {
+                            return $instrument;
+                        }
                     }
                 }
+            }
+
+            if ($found_instrument) {
+                return $found_instrument;
             }
 
             throw new InstrumentNotFoundException('Instrument is not found');
@@ -617,6 +646,10 @@ class InstrumentsProvider extends BaseDataProvider
     /**
      * Метод получения инструмента типа {@link Share} по тикеру
      *
+     * ВАЖНО: Использование тикера для поиска инструментов идея "так себе", потому что одному тикеру может соответствовать несколько
+     * инструментов с разным FIGI. В методе сделана доработка, чтобы он пытался найти инструмент, у которого "tradingStatus":"SECURITY_TRADING_STATUS_NORMAL_TRADING".
+     * Метод вернет первый найденный инструмент с таким tradingStatus, если такового не обнаружится, то метод вернет ПОСЛЕДНИЙ в списке инструмент с указанным тикером
+     *
      * @param string $ticker Тикер инструмента
      * @param string|null $class_name Режим торгов или <code>null</code>, тогда будет возвращен первый найденный
      * @param bool $refresh Признак необходимости получить новые данные из API Tinkoff Invest и обновить кэш. По умолчанию равно <code>false</code>
@@ -629,6 +662,8 @@ class InstrumentsProvider extends BaseDataProvider
     public function shareByTicker(string $ticker, string $class_name = null, bool $refresh = false, bool $raise = true): ?Share
     {
         try {
+            $found_instrument = null;
+
             $instrument_type = 'share';
             $instrument_id_type = InstrumentIdType::INSTRUMENT_ID_TYPE_TICKER;
 
@@ -664,9 +699,17 @@ class InstrumentsProvider extends BaseDataProvider
 
                 foreach ($instruments as $instrument) {
                     if ($instrument->getTicker() === $ticker) {
-                        return $instrument;
+                        $found_instrument = $instrument;
+
+                        if ($found_instrument->getTradingStatus() === SecurityTradingStatus::SECURITY_TRADING_STATUS_NORMAL_TRADING) {
+                            return $instrument;
+                        }
                     }
                 }
+            }
+
+            if ($found_instrument) {
+                return $found_instrument;
             }
 
             throw new InstrumentNotFoundException('Instrument is not found');
@@ -905,7 +948,10 @@ class InstrumentsProvider extends BaseDataProvider
     /**
      * Метод получения инструмента типа {@link Instrument} по тикеру
      *
-     * Модель, содержащая основную информацию об инструменте
+     * Модель, содержащая основную информацию об инструменте.
+     *
+     * ВАЖНО: Использование тикера для поиска инструментов идея "так себе", потому что одному тикеру может соответствовать несколько
+     * инструментов с разным FIGI.
      *
      * @param string $ticker Тикер инструмента
      * @param string|null $class_name Режим торгов или <code>null</code>, тогда будет возвращен первый найденный
