@@ -140,7 +140,7 @@ class QuotationHelper
         $quotation = new Quotation();
 
         $units = (int) floor($price);
-        $nano = (int) (($price - $units) * pow(10, 9));
+        $nano = (int) ($price * pow(10, 9)) - (int) ($units * pow(10, 9));
 
         $quotation->setUnits($units);
         $quotation->setNano($nano);
