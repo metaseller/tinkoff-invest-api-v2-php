@@ -49,6 +49,54 @@ class CandleInterval
      * Generated from protobuf enum <code>CANDLE_INTERVAL_DAY = 5;</code>
      */
     const CANDLE_INTERVAL_DAY = 5;
+    /**
+     *2 минуты.
+     *
+     * Generated from protobuf enum <code>CANDLE_INTERVAL_2_MIN = 6;</code>
+     */
+    const CANDLE_INTERVAL_2_MIN = 6;
+    /**
+     *3 минуты.
+     *
+     * Generated from protobuf enum <code>CANDLE_INTERVAL_3_MIN = 7;</code>
+     */
+    const CANDLE_INTERVAL_3_MIN = 7;
+    /**
+     *10 минут.
+     *
+     * Generated from protobuf enum <code>CANDLE_INTERVAL_10_MIN = 8;</code>
+     */
+    const CANDLE_INTERVAL_10_MIN = 8;
+    /**
+     *30 минут.
+     *
+     * Generated from protobuf enum <code>CANDLE_INTERVAL_30_MIN = 9;</code>
+     */
+    const CANDLE_INTERVAL_30_MIN = 9;
+    /**
+     *2 часа.
+     *
+     * Generated from protobuf enum <code>CANDLE_INTERVAL_2_HOUR = 10;</code>
+     */
+    const CANDLE_INTERVAL_2_HOUR = 10;
+    /**
+     *4 часа.
+     *
+     * Generated from protobuf enum <code>CANDLE_INTERVAL_4_HOUR = 11;</code>
+     */
+    const CANDLE_INTERVAL_4_HOUR = 11;
+    /**
+     *1 неделя.
+     *
+     * Generated from protobuf enum <code>CANDLE_INTERVAL_WEEK = 12;</code>
+     */
+    const CANDLE_INTERVAL_WEEK = 12;
+    /**
+     *1 месяц.
+     *
+     * Generated from protobuf enum <code>CANDLE_INTERVAL_MONTH = 13;</code>
+     */
+    const CANDLE_INTERVAL_MONTH = 13;
 
     private static $valueToName = [
         self::CANDLE_INTERVAL_UNSPECIFIED => 'CANDLE_INTERVAL_UNSPECIFIED',
@@ -57,6 +105,14 @@ class CandleInterval
         self::CANDLE_INTERVAL_15_MIN => 'CANDLE_INTERVAL_15_MIN',
         self::CANDLE_INTERVAL_HOUR => 'CANDLE_INTERVAL_HOUR',
         self::CANDLE_INTERVAL_DAY => 'CANDLE_INTERVAL_DAY',
+        self::CANDLE_INTERVAL_2_MIN => 'CANDLE_INTERVAL_2_MIN',
+        self::CANDLE_INTERVAL_3_MIN => 'CANDLE_INTERVAL_3_MIN',
+        self::CANDLE_INTERVAL_10_MIN => 'CANDLE_INTERVAL_10_MIN',
+        self::CANDLE_INTERVAL_30_MIN => 'CANDLE_INTERVAL_30_MIN',
+        self::CANDLE_INTERVAL_2_HOUR => 'CANDLE_INTERVAL_2_HOUR',
+        self::CANDLE_INTERVAL_4_HOUR => 'CANDLE_INTERVAL_4_HOUR',
+        self::CANDLE_INTERVAL_WEEK => 'CANDLE_INTERVAL_WEEK',
+        self::CANDLE_INTERVAL_MONTH => 'CANDLE_INTERVAL_MONTH',
     ];
 
     public static function name($value)

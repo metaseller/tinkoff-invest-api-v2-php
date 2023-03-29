@@ -64,6 +64,12 @@ class InstrumentShort extends \Google\Protobuf\Internal\Message
      */
     protected $position_uid = '';
     /**
+     *Тип инструмента.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 10;</code>
+     */
+    protected $instrument_kind = 0;
+    /**
      *Параметр указывает на возможность торговать инструментом через API.
      *
      * Generated from protobuf field <code>bool api_trade_available_flag = 11;</code>
@@ -128,6 +134,8 @@ class InstrumentShort extends \Google\Protobuf\Internal\Message
      *          Уникальный идентификатор инструмента.
      *     @type string $position_uid
      *          Уникальный идентификатор позиции инструмента.
+     *     @type int $instrument_kind
+     *          Тип инструмента.
      *     @type bool $api_trade_available_flag
      *          Параметр указывает на возможность торговать инструментом через API.
      *     @type bool $for_iis_flag
@@ -353,6 +361,32 @@ class InstrumentShort extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->position_uid = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тип инструмента.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 10;</code>
+     * @return int
+     */
+    public function getInstrumentKind()
+    {
+        return $this->instrument_kind;
+    }
+
+    /**
+     *Тип инструмента.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 10;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setInstrumentKind($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\InstrumentType::class);
+        $this->instrument_kind = $var;
 
         return $this;
     }

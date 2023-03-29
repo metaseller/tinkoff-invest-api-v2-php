@@ -27,6 +27,12 @@ class AssetSecurity extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string type = 2;</code>
      */
     protected $type = '';
+    /**
+     *Тип инструмента.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 10;</code>
+     */
+    protected $instrument_kind = 0;
     protected $ext;
 
     /**
@@ -39,6 +45,8 @@ class AssetSecurity extends \Google\Protobuf\Internal\Message
      *          ISIN-идентификатор ценной бумаги.
      *     @type string $type
      *          Тип ценной бумаги.
+     *     @type int $instrument_kind
+     *          Тип инструмента.
      *     @type \Tinkoff\Invest\V1\AssetShare $share
      *          Акция. Заполняется только для акций (тип актива asset.type = "ASSET_TYPE_SECURITY" и security.type = share).
      *     @type \Tinkoff\Invest\V1\AssetBond $bond
@@ -104,6 +112,32 @@ class AssetSecurity extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->type = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тип инструмента.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 10;</code>
+     * @return int
+     */
+    public function getInstrumentKind()
+    {
+        return $this->instrument_kind;
+    }
+
+    /**
+     *Тип инструмента.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 10;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setInstrumentKind($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\InstrumentType::class);
+        $this->instrument_kind = $var;
 
         return $this;
     }

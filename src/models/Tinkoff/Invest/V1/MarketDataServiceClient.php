@@ -77,6 +77,21 @@ class MarketDataServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Метод запроса статуса торгов по инструментам.
+     * @param \Tinkoff\Invest\V1\GetTradingStatusesRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetTradingStatuses(\Tinkoff\Invest\V1\GetTradingStatusesRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.MarketDataService/GetTradingStatuses',
+        $argument,
+        ['\Tinkoff\Invest\V1\GetTradingStatusesResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * Метод запроса обезличенных сделок за последний час.
      * @param \Tinkoff\Invest\V1\GetLastTradesRequest $argument input argument
      * @param array $metadata metadata

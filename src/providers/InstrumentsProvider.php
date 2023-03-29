@@ -202,11 +202,13 @@ class InstrumentsProvider extends BaseDataProvider
      * @return Bond|null Экземпляр инструмента или <code>null</code>, если инструмент не найден и не требуется бросок исключения
      *
      * @throws InstrumentNotFoundException
+     * @throws Exception
      */
     public function bondByTicker(string $ticker, string $class_name = null, bool $refresh = false, bool $raise = true): ?Bond
     {
         try {
-            $found_instrument = null;
+            $found_instrument_candidate_1 = null;
+            $found_instrument_candidate_2 = null;
 
             $instrument_type = 'bond';
             $instrument_id_type = InstrumentIdType::INSTRUMENT_ID_TYPE_TICKER;
@@ -243,17 +245,25 @@ class InstrumentsProvider extends BaseDataProvider
 
                 foreach ($instruments as $instrument) {
                     if ($instrument->getTicker() === $ticker) {
-                        $found_instrument = $instrument;
+                        $found_instrument_candidate_1 = $instrument;
 
-                        if ($found_instrument->getTradingStatus() === SecurityTradingStatus::SECURITY_TRADING_STATUS_NORMAL_TRADING) {
+                        if ($instrument->getTradingStatus() === SecurityTradingStatus::SECURITY_TRADING_STATUS_NORMAL_TRADING) {
+                            $found_instrument_candidate_2 = $instrument;
+                        }
+
+                        if ($instrument->getTradingStatus() === SecurityTradingStatus::SECURITY_TRADING_STATUS_NORMAL_TRADING && $instrument->getApiTradeAvailableFlag()) {
                             return $instrument;
                         }
                     }
                 }
             }
 
-            if ($found_instrument) {
-                return $found_instrument;
+            if ($found_instrument_candidate_2) {
+                return $found_instrument_candidate_2;
+            }
+
+            if ($found_instrument_candidate_1) {
+                return $found_instrument_candidate_1;
             }
 
             throw new InstrumentNotFoundException('Instrument is not found');
@@ -319,6 +329,7 @@ class InstrumentsProvider extends BaseDataProvider
      * @return Currency|null Экземпляр инструмента или <code>null</code>, если инструмент не найден и не требуется бросок исключения
      *
      * @throws InstrumentNotFoundException
+     * @throws Exception
      */
     public function currencyByTicker(string $ticker, string $class_name = null, bool $refresh = false, bool $raise = true): ?Currency
     {
@@ -430,11 +441,13 @@ class InstrumentsProvider extends BaseDataProvider
      * @return Etf|null Экземпляр инструмента или <code>null</code>, если инструмент не найден и не требуется бросок исключения
      *
      * @throws InstrumentNotFoundException
+     * @throws Exception
      */
     public function etfByTicker(string $ticker, string $class_name = null, bool $refresh = false, bool $raise = true): ?Etf
     {
         try {
-            $found_instrument = null;
+            $found_instrument_candidate_1 = null;
+            $found_instrument_candidate_2 = null;
 
             $instrument_type = 'etf';
             $instrument_id_type = InstrumentIdType::INSTRUMENT_ID_TYPE_TICKER;
@@ -471,17 +484,25 @@ class InstrumentsProvider extends BaseDataProvider
 
                 foreach ($instruments as $instrument) {
                     if ($instrument->getTicker() === $ticker) {
-                        $found_instrument = $instrument;
+                        $found_instrument_candidate_1 = $instrument;
 
-                        if ($found_instrument->getTradingStatus() === SecurityTradingStatus::SECURITY_TRADING_STATUS_NORMAL_TRADING) {
+                        if ($instrument->getTradingStatus() === SecurityTradingStatus::SECURITY_TRADING_STATUS_NORMAL_TRADING) {
+                            $found_instrument_candidate_2 = $instrument;
+                        }
+
+                        if ($instrument->getTradingStatus() === SecurityTradingStatus::SECURITY_TRADING_STATUS_NORMAL_TRADING && $instrument->getApiTradeAvailableFlag()) {
                             return $instrument;
                         }
                     }
                 }
             }
 
-            if ($found_instrument) {
-                return $found_instrument;
+            if ($found_instrument_candidate_2) {
+                return $found_instrument_candidate_2;
+            }
+
+            if ($found_instrument_candidate_1) {
+                return $found_instrument_candidate_1;
             }
 
             throw new InstrumentNotFoundException('Instrument is not found');
@@ -658,11 +679,13 @@ class InstrumentsProvider extends BaseDataProvider
      * @return Share|null Экземпляр инструмента или <code>null</code>, если инструмент не найден и не требуется бросок исключения
      *
      * @throws InstrumentNotFoundException
+     * @throws Exception
      */
     public function shareByTicker(string $ticker, string $class_name = null, bool $refresh = false, bool $raise = true): ?Share
     {
         try {
-            $found_instrument = null;
+            $found_instrument_candidate_1 = null;
+            $found_instrument_candidate_2 = null;
 
             $instrument_type = 'share';
             $instrument_id_type = InstrumentIdType::INSTRUMENT_ID_TYPE_TICKER;
@@ -699,17 +722,25 @@ class InstrumentsProvider extends BaseDataProvider
 
                 foreach ($instruments as $instrument) {
                     if ($instrument->getTicker() === $ticker) {
-                        $found_instrument = $instrument;
+                        $found_instrument_candidate_1 = $instrument;
 
-                        if ($found_instrument->getTradingStatus() === SecurityTradingStatus::SECURITY_TRADING_STATUS_NORMAL_TRADING) {
+                        if ($instrument->getTradingStatus() === SecurityTradingStatus::SECURITY_TRADING_STATUS_NORMAL_TRADING) {
+                            $found_instrument_candidate_2 = $instrument;
+                        }
+
+                        if ($instrument->getTradingStatus() === SecurityTradingStatus::SECURITY_TRADING_STATUS_NORMAL_TRADING && $instrument->getApiTradeAvailableFlag()) {
                             return $instrument;
                         }
                     }
                 }
             }
 
-            if ($found_instrument) {
-                return $found_instrument;
+            if ($found_instrument_candidate_2) {
+                return $found_instrument_candidate_2;
+            }
+
+            if ($found_instrument_candidate_1) {
+                return $found_instrument_candidate_1;
             }
 
             throw new InstrumentNotFoundException('Instrument is not found');
@@ -732,6 +763,7 @@ class InstrumentsProvider extends BaseDataProvider
      * @return Share|null Экземпляр инструмента или <code>null</code>, если инструмент не найден и не требуется бросок исключения
      *
      * @throws InstrumentNotFoundException
+     * @throws Exception
      */
     public function shareByFigi(string $figi, bool $refresh = false, bool $raise = true): ?Share
     {
@@ -774,6 +806,7 @@ class InstrumentsProvider extends BaseDataProvider
      * @return Bond|Currency|Etf|Future|Instrument|Share|null Найденный экземпляр инструмента или <code>null</code>
      *
      * @throws InstrumentNotFoundException
+     * @throws Exception
      */
     public function searchByFigi(string $figi, bool $raise = true)
     {
@@ -880,6 +913,7 @@ class InstrumentsProvider extends BaseDataProvider
      * @return Bond|Currency|Etf|Future|Instrument|Share|null Найденный экземпляр инструмента или <code>null</code>
      *
      * @throws InstrumentNotFoundException
+     * @throws Exception
      */
     public function searchByTicker(string $ticker, string $class_name = null, bool $raise = true)
     {
@@ -1017,6 +1051,7 @@ class InstrumentsProvider extends BaseDataProvider
      * @return Instrument|null Экземпляр инструмента или <code>null</code>, если инструмент не найден и не требуется бросок исключения
      *
      * @throws InstrumentNotFoundException
+     * @throws Exception
      */
     public function instrumentByFigi(string $figi, bool $refresh = false, bool $raise = true): ?Instrument
     {

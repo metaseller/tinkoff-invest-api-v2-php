@@ -18,7 +18,7 @@ class Instruments
         \GPBMetadata\Common::initOnce();
         $pool->internalAddGeneratedFile(
             '
-¸Ü
+’â
 instruments.proto%tinkoff.public.invest.api.contract.v1common.proto"}
 TradingSchedulesRequest
 exchange (	(
@@ -28,7 +28,7 @@ class Instruments
 	exchanges (26.tinkoff.public.invest.api.contract.v1.TradingSchedule"d
 TradingSchedule
 exchange (	?
-days (21.tinkoff.public.invest.api.contract.v1.TradingDay"Î
+days (21.tinkoff.public.invest.api.contract.v1.TradingDay"Ì
 
 TradingDay(
 date (2.google.protobuf.Timestamp
@@ -45,7 +45,9 @@ start_time (2.google.protobuf.Timestamp,
 clearing_start_time (2.google.protobuf.Timestamp5
 clearing_end_time (2.google.protobuf.Timestamp8
 premarket_start_time (2.google.protobuf.Timestamp6
-premarket_end_time (2.google.protobuf.TimestampJJ"}
+premarket_end_time (2.google.protobuf.Timestamp>
+closing_auction_start_time (2.google.protobuf.Timestamp<
+opening_auction_end_time (2.google.protobuf.TimestampJJ"}
 InstrumentRequestH
 id_type (27.tinkoff.public.invest.api.contract.v1.InstrumentIdType
 
@@ -147,7 +149,7 @@ dshort_minâ (20.tinkoff.public.invest.api.contract.v1.QuotationN
 
 instrument (2,.tinkoff.public.invest.api.contract.v1.Share"S
 SharesResponseA
-instruments (2,.tinkoff.public.invest.api.contract.v1.Share"É
+instruments (2,.tinkoff.public.invest.api.contract.v1.Share"ª
 Bond
 figi (	
 ticker (	
@@ -198,9 +200,12 @@ issue_size (
 for_iis_flag3 (
 for_qual_investor_flag4 (
 weekend_flag5 (
-blocked_tca_flag6 (:
+blocked_tca_flag6 (
+subordinated_flag7 (:
 first_1min_candle_date= (2.google.protobuf.Timestamp:
-first_1day_candle_date> (2.google.protobuf.Timestamp"«
+first_1day_candle_date> (2.google.protobuf.TimestampD
+
+risk_level? (20.tinkoff.public.invest.api.contract.v1.RiskLevel"«
 
 Currency
 figi (	
@@ -394,7 +399,8 @@ share_type (20.tinkoff.public.invest.api.contract.v1.ShareTypeM
 min_price_increment_amount (20.tinkoff.public.invest.api.contract.v1.Quotation"[
 InstrumentResponseE
 
-instrument (21.tinkoff.public.invest.api.contract.v1.Instrument"ç	
+instrument (21.tinkoff.public.invest.api.contract.v1.Instrument"·
+
 
 Instrument
 figi (	
@@ -430,7 +436,8 @@ dshort_min (20.tinkoff.public.invest.api.contract.v1.Quotation
 for_iis_flag$ (
 for_qual_investor_flag% (
 weekend_flag& (
-blocked_tca_flag\' (:
+blocked_tca_flag\' (N
+instrument_kind( (25.tinkoff.public.invest.api.contract.v1.InstrumentType:
 first_1min_candle_date8 (2.google.protobuf.Timestamp:
 first_1day_candle_date9 (2.google.protobuf.Timestamp"u
 GetDividendsRequest
@@ -491,10 +498,12 @@ updated_at (2.google.protobuf.Timestamp
 name (	K
 instruments (26.tinkoff.public.invest.api.contract.v1.AssetInstrument"&
 AssetCurrency
-base_currency (	"¦
+base_currency (	"ö
 AssetSecurity
 isin (	
-type (	B
+type (	N
+instrument_kind
+ (25.tinkoff.public.invest.api.contract.v1.InstrumentTypeB
 share (21.tinkoff.public.invest.api.contract.v1.AssetShareH @
 bond (20.tinkoff.public.invest.api.contract.v1.AssetBondH K
 sp (2=.tinkoff.public.invest.api.contract.v1.AssetStructuredProductH >
@@ -612,7 +621,7 @@ issue_kind (	A
 company (	
 sector (	
 country_of_risk (	
-country_of_risk_name (	"¯
+country_of_risk_name (	"ÿ
 AssetInstrument
 uid (	
 figi (	
@@ -620,13 +629,15 @@ issue_kind (	A
 ticker (	
 
 class_code (	D
-links (25.tinkoff.public.invest.api.contract.v1.InstrumentLink"6
+links (25.tinkoff.public.invest.api.contract.v1.InstrumentLinkN
+instrument_kind
+ (25.tinkoff.public.invest.api.contract.v1.InstrumentType"6
 InstrumentLink
 type (	
 instrument_uid (	"
 GetFavoritesRequest"o
 GetFavoritesResponseW
-favorite_instruments (29.tinkoff.public.invest.api.contract.v1.FavoriteInstrument"¡
+favorite_instruments (29.tinkoff.public.invest.api.contract.v1.FavoriteInstrument"ñ
 FavoriteInstrument
 figi (	
 ticker (	
@@ -635,7 +646,8 @@ class_code (	
 isin (	
 instrument_type (	
 otc_flag ( 
-api_trade_available_flag ("Ç
+api_trade_available_flag (N
+instrument_kind (25.tinkoff.public.invest.api.contract.v1.InstrumentType"Ç
 EditFavoritesRequestZ
 instruments (2E.tinkoff.public.invest.api.contract.v1.EditFavoritesRequestInstrumentS
 action_type (2>.tinkoff.public.invest.api.contract.v1.EditFavoritesActionType".
@@ -656,7 +668,7 @@ name_brief (	"&
 FindInstrumentRequest
 query (	"e
 FindInstrumentResponseK
-instruments (26.tinkoff.public.invest.api.contract.v1.InstrumentShort"›
+instruments (26.tinkoff.public.invest.api.contract.v1.InstrumentShort"ë
 InstrumentShort
 isin (	
 figi (	
@@ -666,7 +678,9 @@ class_code (	
 instrument_type (	
 name (	
 uid (	
-position_uid (	 
+position_uid (	N
+instrument_kind
+ (25.tinkoff.public.invest.api.contract.v1.InstrumentType 
 api_trade_available_flag (
 for_iis_flag (:
 first_1min_candle_date (2.google.protobuf.Timestamp:
@@ -744,7 +758,12 @@ CouponType
 REAL_EXCHANGE_UNSPECIFIED 
 REAL_EXCHANGE_MOEX
 REAL_EXCHANGE_RTS
-REAL_EXCHANGE_OTC2ï
+REAL_EXCHANGE_OTC*i
+	RiskLevel
+RISK_LEVEL_UNSPECIFIED 
+RISK_LEVEL_LOW
+RISK_LEVEL_MODERATE
+RISK_LEVEL_HIGH2ï
 InstrumentsService“
 TradingSchedules>.tinkoff.public.invest.api.contract.v1.TradingSchedulesRequest?.tinkoff.public.invest.api.contract.v1.TradingSchedulesResponsew
 BondBy8.tinkoff.public.invest.api.contract.v1.InstrumentRequest3.tinkoff.public.invest.api.contract.v1.BondResponsex

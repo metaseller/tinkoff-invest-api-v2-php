@@ -78,6 +78,8 @@ message Operation {
   OperationType operation_type = 13; //Тип операции.
   repeated OperationTrade trades = 14; //Массив сделок.
   string asset_uid = 16;	//Идентификатор актива
+  string position_uid	= 17; //position_uid-идентификатора инструмента.
+  string instrument_uid	= 18; //Уникальный идентификатор инструмента.
 }
 
 //Сделка по операции.
@@ -156,6 +158,7 @@ message PortfolioPosition {
   MoneyValue average_position_price_fifo = 9; //Средняя цена позиции по методу FIFO. **Возможна задержка до секунды для пересчёта**.
   Quotation quantity_lots = 10; //Deprecated Количество лотов в портфеле.
   bool blocked = 21; //Заблокировано на бирже.
+  Quotation blocked_lots = 22; //Количество бумаг, заблокированных выставленными заявками.
   string position_uid = 24; //position_uid-идентификатора инструмента
   string instrument_uid = 25; //instrument_uid-идентификатора инструмента
   MoneyValue var_margin = 26; //Вариационная маржа
@@ -469,6 +472,7 @@ message OperationItem {
   string figi = 32; //Figi.
   string instrument_type = 33; //Тип инструмента.
   InstrumentType instrument_kind	= 34; //Тип инструмента.
+  string position_uid	= 35; //position_uid-идентификатора инструмента.
   MoneyValue payment = 41; //Сумма операции.
   MoneyValue price = 42; //Цена операции за 1 инструмент.
   MoneyValue commission = 43; //Комиссия.
@@ -497,18 +501,6 @@ message OperationItemTrade {
   MoneyValue price = 16; //Цена.
   MoneyValue yield = 21; //Доходность.
   Quotation yield_relative = 22; //Относительная доходность.
-}
-
-//Тип инструмента.
-enum InstrumentType {
-  INSTRUMENT_TYPE_UNSPECIFIED = 0;
-  INSTRUMENT_TYPE_BOND = 1; //Облигация.
-  INSTRUMENT_TYPE_SHARE	= 2; //Акция.
-  INSTRUMENT_TYPE_CURRENCY = 3; //Валюта.
-  INSTRUMENT_TYPE_ETF = 4; //Exchange-traded fund. Фонд.
-  INSTRUMENT_TYPE_FUTURES = 5; //Фьючерс.
-  INSTRUMENT_TYPE_SP = 6; //Структурная нота.
-  INSTRUMENT_TYPE_OPTION = 7; //Опцион.
 }
 
 //Запрос установки stream-соединения позиций.

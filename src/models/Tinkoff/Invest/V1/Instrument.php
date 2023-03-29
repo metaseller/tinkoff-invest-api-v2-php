@@ -202,6 +202,12 @@ class Instrument extends \Google\Protobuf\Internal\Message
      */
     protected $blocked_tca_flag = false;
     /**
+     *Тип инструмента.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 40;</code>
+     */
+    protected $instrument_kind = 0;
+    /**
      *Дата первой минутной свечи.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp first_1min_candle_date = 56;</code>
@@ -282,6 +288,8 @@ class Instrument extends \Google\Protobuf\Internal\Message
      *          Флаг отображающий доступность торговли инструментом по выходным
      *     @type bool $blocked_tca_flag
      *          Флаг заблокированного ТКС
+     *     @type int $instrument_kind
+     *          Тип инструмента.
      *     @type \Google\Protobuf\Timestamp $first_1min_candle_date
      *          Дата первой минутной свечи.
      *     @type \Google\Protobuf\Timestamp $first_1day_candle_date
@@ -1165,6 +1173,32 @@ class Instrument extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->blocked_tca_flag = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тип инструмента.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 40;</code>
+     * @return int
+     */
+    public function getInstrumentKind()
+    {
+        return $this->instrument_kind;
+    }
+
+    /**
+     *Тип инструмента.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 40;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setInstrumentKind($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\InstrumentType::class);
+        $this->instrument_kind = $var;
 
         return $this;
     }

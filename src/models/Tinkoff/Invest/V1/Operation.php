@@ -105,6 +105,18 @@ class Operation extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string asset_uid = 16;</code>
      */
     protected $asset_uid = '';
+    /**
+     *position_uid-идентификатора инструмента.
+     *
+     * Generated from protobuf field <code>string position_uid = 17;</code>
+     */
+    protected $position_uid = '';
+    /**
+     *Уникальный идентификатор инструмента.
+     *
+     * Generated from protobuf field <code>string instrument_uid = 18;</code>
+     */
+    protected $instrument_uid = '';
 
     /**
      * Constructor.
@@ -142,6 +154,10 @@ class Operation extends \Google\Protobuf\Internal\Message
      *          Массив сделок.
      *     @type string $asset_uid
      *          Идентификатор актива
+     *     @type string $position_uid
+     *          position_uid-идентификатора инструмента.
+     *     @type string $instrument_uid
+     *          Уникальный идентификатор инструмента.
      * }
      */
     public function __construct($data = NULL) {
@@ -565,6 +581,58 @@ class Operation extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->asset_uid = $var;
+
+        return $this;
+    }
+
+    /**
+     *position_uid-идентификатора инструмента.
+     *
+     * Generated from protobuf field <code>string position_uid = 17;</code>
+     * @return string
+     */
+    public function getPositionUid()
+    {
+        return $this->position_uid;
+    }
+
+    /**
+     *position_uid-идентификатора инструмента.
+     *
+     * Generated from protobuf field <code>string position_uid = 17;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPositionUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->position_uid = $var;
+
+        return $this;
+    }
+
+    /**
+     *Уникальный идентификатор инструмента.
+     *
+     * Generated from protobuf field <code>string instrument_uid = 18;</code>
+     * @return string
+     */
+    public function getInstrumentUid()
+    {
+        return $this->instrument_uid;
+    }
+
+    /**
+     *Уникальный идентификатор инструмента.
+     *
+     * Generated from protobuf field <code>string instrument_uid = 18;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setInstrumentUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->instrument_uid = $var;
 
         return $this;
     }

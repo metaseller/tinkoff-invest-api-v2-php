@@ -274,17 +274,23 @@ class Bond extends \Google\Protobuf\Internal\Message
      */
     protected $for_qual_investor_flag = false;
     /**
-     *Флаг отображающий доступность торговли инструментом по выходным.
+     *Флаг отображающий доступность торговли инструментом по выходным
      *
      * Generated from protobuf field <code>bool weekend_flag = 53;</code>
      */
     protected $weekend_flag = false;
     /**
-     *Флаг заблокированного ТКС.
+     *Флаг заблокированного ТКС
      *
      * Generated from protobuf field <code>bool blocked_tca_flag = 54;</code>
      */
     protected $blocked_tca_flag = false;
+    /**
+     *Признак субординированной облигации.
+     *
+     * Generated from protobuf field <code>bool subordinated_flag = 55;</code>
+     */
+    protected $subordinated_flag = false;
     /**
      *Дата первой минутной свечи.
      *
@@ -297,6 +303,12 @@ class Bond extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.google.protobuf.Timestamp first_1day_candle_date = 62;</code>
      */
     protected $first_1day_candle_date = null;
+    /**
+     *Уровень риска.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.RiskLevel risk_level = 63;</code>
+     */
+    protected $risk_level = 0;
 
     /**
      * Constructor.
@@ -391,13 +403,17 @@ class Bond extends \Google\Protobuf\Internal\Message
      *     @type bool $for_qual_investor_flag
      *          Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов.
      *     @type bool $weekend_flag
-     *          Флаг отображающий доступность торговли инструментом по выходным.
+     *          Флаг отображающий доступность торговли инструментом по выходным
      *     @type bool $blocked_tca_flag
-     *          Флаг заблокированного ТКС.
+     *          Флаг заблокированного ТКС
+     *     @type bool $subordinated_flag
+     *          Признак субординированной облигации.
      *     @type \Google\Protobuf\Timestamp $first_1min_candle_date
      *          Дата первой минутной свечи.
      *     @type \Google\Protobuf\Timestamp $first_1day_candle_date
      *          Дата первой дневной свечи.
+     *     @type int $risk_level
+     *          Уровень риска.
      * }
      */
     public function __construct($data = NULL) {
@@ -1664,7 +1680,7 @@ class Bond extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг отображающий доступность торговли инструментом по выходным.
+     *Флаг отображающий доступность торговли инструментом по выходным
      *
      * Generated from protobuf field <code>bool weekend_flag = 53;</code>
      * @return bool
@@ -1675,7 +1691,7 @@ class Bond extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг отображающий доступность торговли инструментом по выходным.
+     *Флаг отображающий доступность торговли инструментом по выходным
      *
      * Generated from protobuf field <code>bool weekend_flag = 53;</code>
      * @param bool $var
@@ -1690,7 +1706,7 @@ class Bond extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг заблокированного ТКС.
+     *Флаг заблокированного ТКС
      *
      * Generated from protobuf field <code>bool blocked_tca_flag = 54;</code>
      * @return bool
@@ -1701,7 +1717,7 @@ class Bond extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг заблокированного ТКС.
+     *Флаг заблокированного ТКС
      *
      * Generated from protobuf field <code>bool blocked_tca_flag = 54;</code>
      * @param bool $var
@@ -1711,6 +1727,32 @@ class Bond extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->blocked_tca_flag = $var;
+
+        return $this;
+    }
+
+    /**
+     *Признак субординированной облигации.
+     *
+     * Generated from protobuf field <code>bool subordinated_flag = 55;</code>
+     * @return bool
+     */
+    public function getSubordinatedFlag()
+    {
+        return $this->subordinated_flag;
+    }
+
+    /**
+     *Признак субординированной облигации.
+     *
+     * Generated from protobuf field <code>bool subordinated_flag = 55;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setSubordinatedFlag($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->subordinated_flag = $var;
 
         return $this;
     }
@@ -1783,6 +1825,32 @@ class Bond extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->first_1day_candle_date = $var;
+
+        return $this;
+    }
+
+    /**
+     *Уровень риска.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.RiskLevel risk_level = 63;</code>
+     * @return int
+     */
+    public function getRiskLevel()
+    {
+        return $this->risk_level;
+    }
+
+    /**
+     *Уровень риска.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.RiskLevel risk_level = 63;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setRiskLevel($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\RiskLevel::class);
+        $this->risk_level = $var;
 
         return $this;
     }

@@ -94,6 +94,12 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      */
     protected $instrument_kind = 0;
     /**
+     *position_uid-идентификатора инструмента.
+     *
+     * Generated from protobuf field <code>string position_uid = 35;</code>
+     */
+    protected $position_uid = '';
+    /**
      *Сумма операции.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue payment = 41;</code>
@@ -204,6 +210,8 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      *          Тип инструмента.
      *     @type int $instrument_kind
      *          Тип инструмента.
+     *     @type string $position_uid
+     *          position_uid-идентификатора инструмента.
      *     @type \Tinkoff\Invest\V1\MoneyValue $payment
      *          Сумма операции.
      *     @type \Tinkoff\Invest\V1\MoneyValue $price
@@ -581,6 +589,32 @@ class OperationItem extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\InstrumentType::class);
         $this->instrument_kind = $var;
+
+        return $this;
+    }
+
+    /**
+     *position_uid-идентификатора инструмента.
+     *
+     * Generated from protobuf field <code>string position_uid = 35;</code>
+     * @return string
+     */
+    public function getPositionUid()
+    {
+        return $this->position_uid;
+    }
+
+    /**
+     *position_uid-идентификатора инструмента.
+     *
+     * Generated from protobuf field <code>string position_uid = 35;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPositionUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->position_uid = $var;
 
         return $this;
     }

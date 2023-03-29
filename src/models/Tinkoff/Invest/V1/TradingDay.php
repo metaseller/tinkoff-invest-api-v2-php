@@ -93,6 +93,18 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.google.protobuf.Timestamp premarket_end_time = 15;</code>
      */
     protected $premarket_end_time = null;
+    /**
+     * Время начала аукциона закрытия в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp closing_auction_start_time = 16;</code>
+     */
+    protected $closing_auction_start_time = null;
+    /**
+     * Время окончания аукциона открытия в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp opening_auction_end_time = 17;</code>
+     */
+    protected $opening_auction_end_time = null;
 
     /**
      * Constructor.
@@ -126,6 +138,10 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      *           Время начала премаркета в часовом поясе UTC.
      *     @type \Google\Protobuf\Timestamp $premarket_end_time
      *           Время окончания премаркета в часовом поясе UTC.
+     *     @type \Google\Protobuf\Timestamp $closing_auction_start_time
+     *           Время начала аукциона закрытия в часовом поясе UTC.
+     *     @type \Google\Protobuf\Timestamp $opening_auction_end_time
+     *           Время окончания аукциона открытия в часовом поясе UTC.
      * }
      */
     public function __construct($data = NULL) {
@@ -587,6 +603,78 @@ class TradingDay extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->premarket_end_time = $var;
+
+        return $this;
+    }
+
+    /**
+     * Время начала аукциона закрытия в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp closing_auction_start_time = 16;</code>
+     * @return \Google\Protobuf\Timestamp|null
+     */
+    public function getClosingAuctionStartTime()
+    {
+        return isset($this->closing_auction_start_time) ? $this->closing_auction_start_time : null;
+    }
+
+    public function hasClosingAuctionStartTime()
+    {
+        return isset($this->closing_auction_start_time);
+    }
+
+    public function clearClosingAuctionStartTime()
+    {
+        unset($this->closing_auction_start_time);
+    }
+
+    /**
+     * Время начала аукциона закрытия в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp closing_auction_start_time = 16;</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setClosingAuctionStartTime($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        $this->closing_auction_start_time = $var;
+
+        return $this;
+    }
+
+    /**
+     * Время окончания аукциона открытия в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp opening_auction_end_time = 17;</code>
+     * @return \Google\Protobuf\Timestamp|null
+     */
+    public function getOpeningAuctionEndTime()
+    {
+        return isset($this->opening_auction_end_time) ? $this->opening_auction_end_time : null;
+    }
+
+    public function hasOpeningAuctionEndTime()
+    {
+        return isset($this->opening_auction_end_time);
+    }
+
+    public function clearOpeningAuctionEndTime()
+    {
+        unset($this->opening_auction_end_time);
+    }
+
+    /**
+     * Время окончания аукциона открытия в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp opening_auction_end_time = 17;</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setOpeningAuctionEndTime($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        $this->opening_auction_end_time = $var;
 
         return $this;
     }

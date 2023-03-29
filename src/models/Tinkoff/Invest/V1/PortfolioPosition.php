@@ -82,6 +82,12 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     protected $blocked = false;
     /**
+     *Количество бумаг, заблокированных выставленными заявками.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation blocked_lots = 22;</code>
+     */
+    protected $blocked_lots = null;
+    /**
      *position_uid-идентификатора инструмента
      *
      * Generated from protobuf field <code>string position_uid = 24;</code>
@@ -134,6 +140,8 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      *          Deprecated Количество лотов в портфеле.
      *     @type bool $blocked
      *          Заблокировано на бирже.
+     *     @type \Tinkoff\Invest\V1\Quotation $blocked_lots
+     *          Количество бумаг, заблокированных выставленными заявками.
      *     @type string $position_uid
      *          position_uid-идентификатора инструмента
      *     @type string $instrument_uid
@@ -511,6 +519,42 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->blocked = $var;
+
+        return $this;
+    }
+
+    /**
+     *Количество бумаг, заблокированных выставленными заявками.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation blocked_lots = 22;</code>
+     * @return \Tinkoff\Invest\V1\Quotation|null
+     */
+    public function getBlockedLots()
+    {
+        return isset($this->blocked_lots) ? $this->blocked_lots : null;
+    }
+
+    public function hasBlockedLots()
+    {
+        return isset($this->blocked_lots);
+    }
+
+    public function clearBlockedLots()
+    {
+        unset($this->blocked_lots);
+    }
+
+    /**
+     *Количество бумаг, заблокированных выставленными заявками.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation blocked_lots = 22;</code>
+     * @param \Tinkoff\Invest\V1\Quotation $var
+     * @return $this
+     */
+    public function setBlockedLots($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
+        $this->blocked_lots = $var;
 
         return $this;
     }

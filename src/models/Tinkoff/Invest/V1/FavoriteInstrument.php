@@ -57,6 +57,12 @@ class FavoriteInstrument extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool api_trade_available_flag = 17;</code>
      */
     protected $api_trade_available_flag = false;
+    /**
+     *Тип инструмента.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 18;</code>
+     */
+    protected $instrument_kind = 0;
 
     /**
      * Constructor.
@@ -78,6 +84,8 @@ class FavoriteInstrument extends \Google\Protobuf\Internal\Message
      *          Признак внебиржевой ценной бумаги.
      *     @type bool $api_trade_available_flag
      *          Параметр указывает на возможность торговать инструментом через API.
+     *     @type int $instrument_kind
+     *          Тип инструмента.
      * }
      */
     public function __construct($data = NULL) {
@@ -263,6 +271,32 @@ class FavoriteInstrument extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->api_trade_available_flag = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тип инструмента.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 18;</code>
+     * @return int
+     */
+    public function getInstrumentKind()
+    {
+        return $this->instrument_kind;
+    }
+
+    /**
+     *Тип инструмента.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 18;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setInstrumentKind($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\InstrumentType::class);
+        $this->instrument_kind = $var;
 
         return $this;
     }
