@@ -122,7 +122,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения статуса заявки в песочнице.
+     * Метод получения статуса заявки в песочнице. Заявки хранятся в таблице 7 дней.
      * @param \Tinkoff\Invest\V1\GetOrderStateRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

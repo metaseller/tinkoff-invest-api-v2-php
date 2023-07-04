@@ -18,7 +18,7 @@ class Instruments
         \GPBMetadata\Common::initOnce();
         $pool->internalAddGeneratedFile(
             '
-í‚
+èÊ
 instruments.proto%tinkoff.public.invest.api.contract.v1common.proto"}
 TradingSchedulesRequest
 exchange (	(
@@ -55,7 +55,10 @@ class_code (	
 
 id (	"h
 InstrumentsRequestR
-instrument_status (27.tinkoff.public.invest.api.contract.v1.InstrumentStatus"O
+instrument_status (27.tinkoff.public.invest.api.contract.v1.InstrumentStatus"Q
+FilterOptionsRequest
+basic_asset_uid (	 
+basic_asset_position_uid (	"O
 BondResponse?
 
 instrument (2+.tinkoff.public.invest.api.contract.v1.Bond"Q
@@ -149,7 +152,7 @@ dshort_min‚ (20.tinkoff.public.invest.api.contract.v1.QuotationN
 
 instrument (2,.tinkoff.public.invest.api.contract.v1.Share"S
 SharesResponseA
-instruments (2,.tinkoff.public.invest.api.contract.v1.Share"™
+instruments (2,.tinkoff.public.invest.api.contract.v1.Share"¬
 Bond
 figi (	
 ticker (	
@@ -201,7 +204,8 @@ issue_size (
 for_qual_investor_flag4 (
 weekend_flag5 (
 blocked_tca_flag6 (
-subordinated_flag7 (:
+subordinated_flag7 (
+liquidity_flag8 (:
 first_1min_candle_date= (2.google.protobuf.Timestamp:
 first_1day_candle_date> (2.google.protobuf.TimestampD
 
@@ -244,7 +248,7 @@ dshort_min (20.tinkoff.public.invest.api.contract.v1.Quotation
 weekend_flag5 (
 blocked_tca_flag6 (:
 first_1min_candle_date8 (2.google.protobuf.Timestamp:
-first_1day_candle_date9 (2.google.protobuf.Timestamp" 
+first_1day_candle_date9 (2.google.protobuf.Timestamp"‚
 Etf
 figi (	
 ticker (	
@@ -286,7 +290,8 @@ num_shares (20.tinkoff.public.invest.api.contract.v1.Quotation
 for_iis_flag) (
 for_qual_investor_flag* (
 weekend_flag+ (
-blocked_tca_flag, (:
+blocked_tca_flag, (
+liquidity_flag- (:
 first_1min_candle_date8 (2.google.protobuf.Timestamp:
 first_1day_candle_date9 (2.google.protobuf.Timestamp"ô
 Future
@@ -333,7 +338,7 @@ asset_type (	
 weekend_flag+ (
 blocked_tca_flag, (:
 first_1min_candle_date8 (2.google.protobuf.Timestamp:
-first_1day_candle_date9 (2.google.protobuf.Timestamp"÷
+first_1day_candle_date9 (2.google.protobuf.Timestamp"Ó
 Share
 figi (	
 ticker (	
@@ -376,7 +381,8 @@ share_type (20.tinkoff.public.invest.api.contract.v1.ShareTypeM
 for_iis_flag. (
 for_qual_investor_flag/ (
 weekend_flag0 (
-blocked_tca_flag1 (:
+blocked_tca_flag1 (
+liquidity_flag2 (:
 first_1min_candle_date8 (2.google.protobuf.Timestamp:
 first_1day_candle_date9 (2.google.protobuf.Timestamp"|
 GetAccruedInterestsRequest
@@ -464,8 +470,9 @@ created_at
 
 id (	"P
 AssetResponse?
-asset (20.tinkoff.public.invest.api.contract.v1.AssetFull"
-AssetsRequest"N
+asset (20.tinkoff.public.invest.api.contract.v1.AssetFull"_
+AssetsRequestN
+instrument_type (25.tinkoff.public.invest.api.contract.v1.InstrumentType"N
 AssetsResponse<
 assets (2,.tinkoff.public.invest.api.contract.v1.Asset"ò
 	AssetFull
@@ -621,7 +628,7 @@ issue_kind (	A
 company (	
 sector (	
 country_of_risk (	
-country_of_risk_name (	"ˇ
+country_of_risk_name (	"ï
 AssetInstrument
 uid (	
 figi (	
@@ -631,7 +638,8 @@ issue_kind (	A
 class_code (	D
 links (25.tinkoff.public.invest.api.contract.v1.InstrumentLinkN
 instrument_kind
- (25.tinkoff.public.invest.api.contract.v1.InstrumentType"6
+ (25.tinkoff.public.invest.api.contract.v1.InstrumentType
+position_uid (	"6
 InstrumentLink
 type (	
 instrument_uid (	"
@@ -664,9 +672,11 @@ class_code (	
 alfa_three (	
 name (	
 
-name_brief (	"&
+name_brief (	"ò
 FindInstrumentRequest
-query (	"e
+query (	N
+instrument_kind (25.tinkoff.public.invest.api.contract.v1.InstrumentType 
+api_trade_available_flag ("e
 FindInstrumentResponseK
 instruments (26.tinkoff.public.invest.api.contract.v1.InstrumentShort"Î
 InstrumentShort
@@ -763,7 +773,7 @@ CouponType
 RISK_LEVEL_UNSPECIFIED 
 RISK_LEVEL_LOW
 RISK_LEVEL_MODERATE
-RISK_LEVEL_HIGH2Ô
+RISK_LEVEL_HIGH2¯
 InstrumentsServiceì
 TradingSchedules>.tinkoff.public.invest.api.contract.v1.TradingSchedulesRequest?.tinkoff.public.invest.api.contract.v1.TradingSchedulesResponsew
 BondBy8.tinkoff.public.invest.api.contract.v1.InstrumentRequest3.tinkoff.public.invest.api.contract.v1.BondResponsex
@@ -777,8 +787,9 @@ Currencies9.tinkoff.public.invest.api.contract.v1.InstrumentsRequest9.tinkoff.
 Etfs9.tinkoff.public.invest.api.contract.v1.InstrumentsRequest3.tinkoff.public.invest.api.contract.v1.EtfsResponse{
 FutureBy8.tinkoff.public.invest.api.contract.v1.InstrumentRequest5.tinkoff.public.invest.api.contract.v1.FutureResponse|
 Futures9.tinkoff.public.invest.api.contract.v1.InstrumentsRequest6.tinkoff.public.invest.api.contract.v1.FuturesResponse{
-OptionBy8.tinkoff.public.invest.api.contract.v1.InstrumentRequest5.tinkoff.public.invest.api.contract.v1.OptionResponse|
-Options9.tinkoff.public.invest.api.contract.v1.InstrumentsRequest6.tinkoff.public.invest.api.contract.v1.OptionsResponsey
+OptionBy8.tinkoff.public.invest.api.contract.v1.InstrumentRequest5.tinkoff.public.invest.api.contract.v1.OptionResponseÅ
+Options9.tinkoff.public.invest.api.contract.v1.InstrumentsRequest6.tinkoff.public.invest.api.contract.v1.OptionsResponse"àÄ
+	OptionsBy;.tinkoff.public.invest.api.contract.v1.FilterOptionsRequest6.tinkoff.public.invest.api.contract.v1.OptionsResponsey
 ShareBy8.tinkoff.public.invest.api.contract.v1.InstrumentRequest4.tinkoff.public.invest.api.contract.v1.ShareResponsez
 Shares9.tinkoff.public.invest.api.contract.v1.InstrumentsRequest5.tinkoff.public.invest.api.contract.v1.SharesResponseú
 GetAccruedInterestsA.tinkoff.public.invest.api.contract.v1.GetAccruedInterestsRequestB.tinkoff.public.invest.api.contract.v1.GetAccruedInterestsResponseì

@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class OrderState extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Идентификатор заявки.
+     *Биржевой идентификатор заявки.
      *
      * Generated from protobuf field <code>string order_id = 1;</code>
      */
@@ -129,6 +129,12 @@ class OrderState extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string instrument_uid = 19;</code>
      */
     protected $instrument_uid = '';
+    /**
+     *Идентификатор ключа идемпотентности, переданный клиентом, в формате UID. Максимальная длина 36 символов.
+     *
+     * Generated from protobuf field <code>string order_request_id = 20;</code>
+     */
+    protected $order_request_id = '';
 
     /**
      * Constructor.
@@ -137,7 +143,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $order_id
-     *          Идентификатор заявки.
+     *          Биржевой идентификатор заявки.
      *     @type int $execution_report_status
      *          Текущий статус заявки.
      *     @type int|string $lots_requested
@@ -174,6 +180,8 @@ class OrderState extends \Google\Protobuf\Internal\Message
      *          Дата и время выставления заявки в часовом поясе UTC.
      *     @type string $instrument_uid
      *          UID идентификатор инструмента.
+     *     @type string $order_request_id
+     *          Идентификатор ключа идемпотентности, переданный клиентом, в формате UID. Максимальная длина 36 символов.
      * }
      */
     public function __construct($data = NULL) {
@@ -182,7 +190,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор заявки.
+     *Биржевой идентификатор заявки.
      *
      * Generated from protobuf field <code>string order_id = 1;</code>
      * @return string
@@ -193,7 +201,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор заявки.
+     *Биржевой идентификатор заявки.
      *
      * Generated from protobuf field <code>string order_id = 1;</code>
      * @param string $var
@@ -761,6 +769,32 @@ class OrderState extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->instrument_uid = $var;
+
+        return $this;
+    }
+
+    /**
+     *Идентификатор ключа идемпотентности, переданный клиентом, в формате UID. Максимальная длина 36 символов.
+     *
+     * Generated from protobuf field <code>string order_request_id = 20;</code>
+     * @return string
+     */
+    public function getOrderRequestId()
+    {
+        return $this->order_request_id;
+    }
+
+    /**
+     *Идентификатор ключа идемпотентности, переданный клиентом, в формате UID. Максимальная длина 36 символов.
+     *
+     * Generated from protobuf field <code>string order_request_id = 20;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setOrderRequestId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->order_request_id = $var;
 
         return $this;
     }

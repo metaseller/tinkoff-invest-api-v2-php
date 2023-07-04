@@ -20,79 +20,79 @@ class CandleInterval
      */
     const CANDLE_INTERVAL_UNSPECIFIED = 0;
     /**
-     *1 минута.
+     *от 1 минуты до 1 дня.
      *
      * Generated from protobuf enum <code>CANDLE_INTERVAL_1_MIN = 1;</code>
      */
     const CANDLE_INTERVAL_1_MIN = 1;
     /**
-     *5 минут.
+     *от 5 минут до 1 дня.
      *
      * Generated from protobuf enum <code>CANDLE_INTERVAL_5_MIN = 2;</code>
      */
     const CANDLE_INTERVAL_5_MIN = 2;
     /**
-     *15 минут.
+     *от 15 минут до 1 дня.
      *
      * Generated from protobuf enum <code>CANDLE_INTERVAL_15_MIN = 3;</code>
      */
     const CANDLE_INTERVAL_15_MIN = 3;
     /**
-     *1 час.
+     *от 1 часа до 1 недели.
      *
      * Generated from protobuf enum <code>CANDLE_INTERVAL_HOUR = 4;</code>
      */
     const CANDLE_INTERVAL_HOUR = 4;
     /**
-     *1 день.
+     *от 1 дня до 1 года.
      *
      * Generated from protobuf enum <code>CANDLE_INTERVAL_DAY = 5;</code>
      */
     const CANDLE_INTERVAL_DAY = 5;
     /**
-     *2 минуты.
+     *от 2 минут до 1 дня.
      *
      * Generated from protobuf enum <code>CANDLE_INTERVAL_2_MIN = 6;</code>
      */
     const CANDLE_INTERVAL_2_MIN = 6;
     /**
-     *3 минуты.
+     *от 3 минут до 1 дня.
      *
      * Generated from protobuf enum <code>CANDLE_INTERVAL_3_MIN = 7;</code>
      */
     const CANDLE_INTERVAL_3_MIN = 7;
     /**
-     *10 минут.
+     *от 10 минут до 1 дня.
      *
      * Generated from protobuf enum <code>CANDLE_INTERVAL_10_MIN = 8;</code>
      */
     const CANDLE_INTERVAL_10_MIN = 8;
     /**
-     *30 минут.
+     *от 30 минут до 2 дней.
      *
      * Generated from protobuf enum <code>CANDLE_INTERVAL_30_MIN = 9;</code>
      */
     const CANDLE_INTERVAL_30_MIN = 9;
     /**
-     *2 часа.
+     *от 2 часов до 1 месяца.
      *
      * Generated from protobuf enum <code>CANDLE_INTERVAL_2_HOUR = 10;</code>
      */
     const CANDLE_INTERVAL_2_HOUR = 10;
     /**
-     *4 часа.
+     *от 4 часов до 1 месяца.
      *
      * Generated from protobuf enum <code>CANDLE_INTERVAL_4_HOUR = 11;</code>
      */
     const CANDLE_INTERVAL_4_HOUR = 11;
     /**
-     *1 неделя.
+     *от 1 недели до 2 лет.
      *
      * Generated from protobuf enum <code>CANDLE_INTERVAL_WEEK = 12;</code>
      */
     const CANDLE_INTERVAL_WEEK = 12;
     /**
-     *1 месяц.
+     *от 1 месяца до 10 лет.
      *
      * Generated from protobuf enum <code>CANDLE_INTERVAL_MONTH = 13;</code>
      */

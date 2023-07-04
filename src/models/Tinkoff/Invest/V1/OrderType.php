@@ -31,11 +31,18 @@ class OrderType
      * Generated from protobuf enum <code>ORDER_TYPE_MARKET = 2;</code>
      */
     const ORDER_TYPE_MARKET = 2;
+    /**
+     *Лучшая цена
+     *
+     * Generated from protobuf enum <code>ORDER_TYPE_BESTPRICE = 3;</code>
+     */
+    const ORDER_TYPE_BESTPRICE = 3;
 
     private static $valueToName = [
         self::ORDER_TYPE_UNSPECIFIED => 'ORDER_TYPE_UNSPECIFIED',
         self::ORDER_TYPE_LIMIT => 'ORDER_TYPE_LIMIT',
         self::ORDER_TYPE_MARKET => 'ORDER_TYPE_MARKET',
+        self::ORDER_TYPE_BESTPRICE => 'ORDER_TYPE_BESTPRICE',
     ];
 
     public static function name($value)

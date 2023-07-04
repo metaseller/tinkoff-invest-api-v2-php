@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class PostOrderResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Идентификатор заявки.
+     *Биржевой идентификатор заявки.
      *
      * Generated from protobuf field <code>string order_id = 1;</code>
      */
@@ -125,7 +125,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $order_id
-     *          Идентификатор заявки.
+     *          Биржевой идентификатор заявки.
      *     @type int $execution_report_status
      *          Текущий статус заявки.
      *     @type int|string $lots_requested
@@ -166,7 +166,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор заявки.
+     *Биржевой идентификатор заявки.
      *
      * Generated from protobuf field <code>string order_id = 1;</code>
      * @return string
@@ -177,7 +177,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор заявки.
+     *Биржевой идентификатор заявки.
      *
      * Generated from protobuf field <code>string order_id = 1;</code>
      * @param string $var

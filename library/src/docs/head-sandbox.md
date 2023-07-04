@@ -22,8 +22,7 @@
 * [CloseSandboxAccount](/investAPI/sandbox#closesandboxaccount) — метод закрытия счёта в песочнице.
 
 
-Обратите внимание, что пополнение счёта песочницы возможно только в рублях. Для
-выполнения операций с другой валютой расчётов, следует эту валюту сперва купить.
+Обратите внимание, что пополнение счёта песочницы возможно только в рублях. Для выполнения операций с другой валютой расчётов, следует эту валюту сперва купить c помощью метода [PostOrder](/investAPI/orders#postorder).
 
 Для получения списка своих счетов в песочнице используется метод [getAccount](/investAPI/sandbox#getaccounts).
 
@@ -31,7 +30,7 @@
 момент времени. Если созданный ранее счёт не найден, создайте, пожалуйста, новый. 
 Счета хранятся 3 месяца с даты последнего использования.
 
-**Важно!** В песочнице отсутствуют стоп-ордера, маржинальные показатели, а также не производится расчёт дополнительных показателей счёта,
+**Важно!** В песочнице отсутствуют стоп-заявки, маржинальные показатели, а также не производится расчёт дополнительных показателей счёта,
 ставок риска и размер гарантийного обеспечения, ликвидности портфеля.
 
 ##Методы получения состояния портфеля в песочнице
@@ -54,6 +53,43 @@
 * [getSandboxOrderState](/investAPI/sandbox#getsandboxorderstate) — получение статуса торгового поручения;
 * [cancelSandboxOrder](/investAPI/sandbox#cancelsandboxorder) — отмена выставленного торгового поручения;
 * [getSandboxOrders](/investAPI/sandbox#getsandboxorders) — получение списка торговых поручений по счёту;
+
+
+##Методы сервиса операций в песочнице
+* [GetDividendsForeignIssuer](/investAPI/sandbox#getdividendsforeignissuer) - получение отчёта "Справка о доходах за пределами РФ";  
+Обращаем ваше внимание, что в данном методе песочницы будет возвращать:
+```
+"div_foreign_issuer_report": {     
+        "dividends_foreign_issuer_report": [],
+        "itemsCount": 0,     
+        "pagesCount": 0,     
+        "page": 0   
+},
+"payload": "div_foreign_issuer_report"
+```
+* [GetBrokerReport](/investAPI/sandbox#getbrokerreport) - получение брокерского отчёта;  
+Обращаем ваше внимание, что в данном методе песочницы будет возвращать:
+```
+"get_broker_report_response": {
+    "broker_report": [],
+    "itemsCount": 0,     
+    "pagesCount": 0,     
+    "page": 0
+},
+"payload": "get_broker_report_response"
+```
+* [PortfolioStream](/investAPI/sandbox#portfoliostream) - server-side stream обновлений портфеля;
+* [PositionsStream](/investAPI/sandbox#positionsstream) - server-side stream обновлений информации по изменению позиций портфеля;
+* [GetPortfolio](/investAPI/sandbox#getportfolio) - получение портфеля по счёту.
+
+##Методы сервиса ордеров в песочнице
+* [TradesStream](/investAPI/sandbox#tradesstream) - получение портфеля по счёту.
+
+##Методы сервиса cчетов в песочнице
+* [GetMarginAttributes](/investAPI/sandbox#getmarginattributes) - получение портфеля по счёту. Обращаем ваше внимание, что в данном методе песочницы будут возвращены: 
+  * значение параметра liquid_portfolio (ликвидной стоимости портфеля) = стоимости портфеля. 
+  * starting_margin  = corrected_margin = minimal_margin = amount_of_missing_funds = 0
+  * funds_sufficiency_level = 2
 
 <a name="orderexecute"></a>
 ###Алгоритм исполнения торговых поручений в песочнице

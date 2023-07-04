@@ -21,6 +21,18 @@ class FindInstrumentRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string query = 1;</code>
      */
     protected $query = '';
+    /**
+     *Фильтр по типу инструмента.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 2;</code>
+     */
+    protected $instrument_kind = 0;
+    /**
+     *Фильтр для отображения только торговых инструментов.
+     *
+     * Generated from protobuf field <code>bool api_trade_available_flag = 3;</code>
+     */
+    protected $api_trade_available_flag = false;
 
     /**
      * Constructor.
@@ -30,6 +42,10 @@ class FindInstrumentRequest extends \Google\Protobuf\Internal\Message
      *
      *     @type string $query
      *          Строка поиска.
+     *     @type int $instrument_kind
+     *          Фильтр по типу инструмента.
+     *     @type bool $api_trade_available_flag
+     *          Фильтр для отображения только торговых инструментов.
      * }
      */
     public function __construct($data = NULL) {
@@ -59,6 +75,58 @@ class FindInstrumentRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->query = $var;
+
+        return $this;
+    }
+
+    /**
+     *Фильтр по типу инструмента.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 2;</code>
+     * @return int
+     */
+    public function getInstrumentKind()
+    {
+        return $this->instrument_kind;
+    }
+
+    /**
+     *Фильтр по типу инструмента.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 2;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setInstrumentKind($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\InstrumentType::class);
+        $this->instrument_kind = $var;
+
+        return $this;
+    }
+
+    /**
+     *Фильтр для отображения только торговых инструментов.
+     *
+     * Generated from protobuf field <code>bool api_trade_available_flag = 3;</code>
+     * @return bool
+     */
+    public function getApiTradeAvailableFlag()
+    {
+        return $this->api_trade_available_flag;
+    }
+
+    /**
+     *Фильтр для отображения только торговых инструментов.
+     *
+     * Generated from protobuf field <code>bool api_trade_available_flag = 3;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setApiTradeAvailableFlag($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->api_trade_available_flag = $var;
 
         return $this;
     }

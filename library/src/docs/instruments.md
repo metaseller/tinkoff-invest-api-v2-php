@@ -101,9 +101,17 @@
 
 
 #### Options
-Метод получения списка опционов.
+Deprecated Метод получения списка опционов.
 
 - Тело запроса — [InstrumentsRequest](#instrumentsrequest)
+
+- Тело ответа — [OptionsResponse](#optionsresponse)
+
+
+#### OptionsBy
+Метод получения списка опционов.
+
+- Тело запроса — [FilterOptionsRequest](#filteroptionsrequest)
 
 - Тело ответа — [OptionsResponse](#optionsresponse)
 
@@ -165,7 +173,7 @@
 
 
 #### GetAssets
-Метод получения списка активов.
+Метод получения списка активов. Метод работает для всех инструментов, за исключением срочных - опционов и фьючерсов.
 
 - Тело запроса — [AssetsRequest](#assetsrequest)
 
@@ -307,6 +315,18 @@
 | Field | Type | Description |
 | ----- | ---- | ----------- |
 | instrument_status |  [InstrumentStatus](#instrumentstatus) | Статус запрашиваемых инструментов. Возможные значения: [InstrumentStatus](#instrumentstatus) |
+ <!-- end Fields -->
+ <!-- end HasFields -->
+
+
+#### FilterOptionsRequest
+Параметры фильтрации опционов
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| basic_asset_uid |  [string](#string) | Идентификатор базового актива опциона.  Обязательный параметр. |
+| basic_asset_position_uid |  [string](#string) | Идентификатор позиции базового актива опциона |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -476,7 +496,7 @@
 | class_code |  [string](#string) | Класс-код. |
 | basic_asset_position_uid |  [string](#string) | Уникальный идентификатор позиции основного инструмента. |
 | trading_status |  [SecurityTradingStatus](#securitytradingstatus) | Текущий режим торгов инструмента. |
-| real_exchange |  [RealExchange](#realexchange) | Реальная площадка исполнения расчётов. Допустимые значения: [REAL_EXCHANGE_MOEX, REAL_EXCHANGE_RTS] |
+| real_exchange |  [RealExchange](#realexchange) | Реальная площадка исполнения расчётов (биржа). Допустимые значения: [REAL_EXCHANGE_MOEX, REAL_EXCHANGE_RTS] |
 | direction |  [OptionDirection](#optiondirection) | Направление опциона. |
 | payment_type |  [OptionPaymentType](#optionpaymenttype) | Тип расчетов по опциону. |
 | style |  [OptionStyle](#optionstyle) | Стиль опциона. |
@@ -486,18 +506,18 @@
 | settlement_currency |  [string](#string) | Валюта, в которой оценивается контракт. |
 | asset_type |  [string](#string) | Тип актива. |
 | basic_asset |  [string](#string) | Основной актив. |
-| exchange |  [string](#string) | Биржа. |
+| exchange |  [string](#string) | Tорговая площадка (секция биржи). |
 | country_of_risk |  [string](#string) | Код страны рисков. |
 | country_of_risk_name |  [string](#string) | Наименование страны рисков. |
 | sector |  [string](#string) | Сектор экономики. |
 | lot |  [int32](#int32) | Количество бумаг в лоте. |
 | basic_asset_size |  [Quotation](#quotation) | Размер основного актива. |
-| klong |  [Quotation](#quotation) | Коэффициент ставки риска длинной позиции по клиенту. |
-| kshort |  [Quotation](#quotation) | Коэффициент ставки риска короткой позиции по клиенту. |
-| dlong |  [Quotation](#quotation) | Ставка риска минимальной маржи лонг. |
-| dshort |  [Quotation](#quotation) | Ставка риска минимальной маржи шорт. |
-| dlong_min |  [Quotation](#quotation) | Ставка риска начальной маржи лонг. |
-| dshort_min |  [Quotation](#quotation) | Ставка риска начальной маржи шорт. |
+| klong |  [Quotation](#quotation) | Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР) |
+| kshort |  [Quotation](#quotation) | Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР) |
+| dlong |  [Quotation](#quotation) | Ставка риска начальной маржи для КСУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/) |
+| dshort |  [Quotation](#quotation) | Ставка риска начальной маржи для КСУР шорт.  Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/) |
+| dlong_min |  [Quotation](#quotation) | Ставка риска начальной маржи для КПУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/) |
+| dshort_min |  [Quotation](#quotation) | Ставка риска начальной маржи для КПУР шорт.  Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/) |
 | min_price_increment |  [Quotation](#quotation) | Минимальный шаг цены. |
 | strike_price |  [MoneyValue](#moneyvalue) | Цена страйка. |
 | expiration_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата истечения срока в формате UTC. |
@@ -552,15 +572,15 @@
 | isin |  [string](#string) | Isin-идентификатор инструмента. |
 | lot |  [int32](#int32) | Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://tinkoff.github.io/investAPI/glossary#lot) |
 | currency |  [string](#string) | Валюта расчётов. |
-| klong |  [Quotation](#quotation) | Коэффициент ставки риска длинной позиции по инструменту. |
-| kshort |  [Quotation](#quotation) | Коэффициент ставки риска короткой позиции по инструменту. |
-| dlong |  [Quotation](#quotation) | Ставка риска минимальной маржи в лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/) |
-| dshort |  [Quotation](#quotation) | Ставка риска минимальной маржи в шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/) |
-| dlong_min |  [Quotation](#quotation) | Ставка риска начальной маржи в лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/) |
-| dshort_min |  [Quotation](#quotation) | Ставка риска начальной маржи в шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/) |
+| klong |  [Quotation](#quotation) | Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР) |
+| kshort |  [Quotation](#quotation) | Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР) |
+| dlong |  [Quotation](#quotation) | Ставка риска начальной маржи для КСУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/) |
+| dshort |  [Quotation](#quotation) | Ставка риска начальной маржи для КСУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/) |
+| dlong_min |  [Quotation](#quotation) | Ставка риска начальной маржи для КПУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/) |
+| dshort_min |  [Quotation](#quotation) | Ставка риска начальной маржи для КПУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/) |
 | short_enabled_flag |  [bool](#bool) | Признак доступности для операций в шорт. |
 | name |  [string](#string) | Название инструмента. |
-| exchange |  [string](#string) | Торговая площадка. |
+| exchange |  [string](#string) | Tорговая площадка (секция биржи). |
 | coupon_quantity_per_year |  [int32](#int32) | Количество выплат по купонам в год. |
 | maturity_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата погашения облигации в часовом поясе UTC. |
 | nominal |  [MoneyValue](#moneyvalue) | Номинал облигации. |
@@ -585,13 +605,14 @@
 | min_price_increment |  [Quotation](#quotation) | Шаг цены. |
 | api_trade_available_flag |  [bool](#bool) | Параметр указывает на возможность торговать инструментом через API. |
 | uid |  [string](#string) | Уникальный идентификатор инструмента. |
-| real_exchange |  [RealExchange](#realexchange) | Реальная площадка исполнения расчётов. |
+| real_exchange |  [RealExchange](#realexchange) | Реальная площадка исполнения расчётов. (биржа) |
 | position_uid |  [string](#string) | Уникальный идентификатор позиции инструмента. |
 | for_iis_flag |  [bool](#bool) | Признак доступности для ИИС. |
 | for_qual_investor_flag |  [bool](#bool) | Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов. |
 | weekend_flag |  [bool](#bool) | Флаг отображающий доступность торговли инструментом по выходным |
 | blocked_tca_flag |  [bool](#bool) | Флаг заблокированного ТКС |
 | subordinated_flag |  [bool](#bool) | Признак субординированной облигации. |
+| liquidity_flag |  [bool](#bool) | Флаг достаточной ликвидности |
 | first_1min_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой минутной свечи. |
 | first_1day_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой дневной свечи. |
 | risk_level |  [RiskLevel](#risklevel) | Уровень риска. |
@@ -611,15 +632,15 @@
 | isin |  [string](#string) | Isin-идентификатор инструмента. |
 | lot |  [int32](#int32) | Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://tinkoff.github.io/investAPI/glossary#lot) |
 | currency |  [string](#string) | Валюта расчётов. |
-| klong |  [Quotation](#quotation) | Коэффициент ставки риска длинной позиции по инструменту. |
-| kshort |  [Quotation](#quotation) | Коэффициент ставки риска короткой позиции по инструменту. |
-| dlong |  [Quotation](#quotation) | Ставка риска минимальной маржи в лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/) |
-| dshort |  [Quotation](#quotation) | Ставка риска минимальной маржи в шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/) |
-| dlong_min |  [Quotation](#quotation) | Ставка риска начальной маржи в лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/) |
-| dshort_min |  [Quotation](#quotation) | Ставка риска начальной маржи в шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/) |
+| klong |  [Quotation](#quotation) | Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР) |
+| kshort |  [Quotation](#quotation) | Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР) |
+| dlong |  [Quotation](#quotation) | Ставка риска начальной маржи для КСУР лонг.Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/) |
+| dshort |  [Quotation](#quotation) | Ставка риска начальной маржи для КСУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/) |
+| dlong_min |  [Quotation](#quotation) | Ставка риска начальной маржи для КПУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/) |
+| dshort_min |  [Quotation](#quotation) | Ставка риска начальной маржи для КПУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/) |
 | short_enabled_flag |  [bool](#bool) | Признак доступности для операций в шорт. |
 | name |  [string](#string) | Название инструмента. |
-| exchange |  [string](#string) | Торговая площадка. |
+| exchange |  [string](#string) | Tорговая площадка (секция биржи) |
 | nominal |  [MoneyValue](#moneyvalue) | Номинал. |
 | country_of_risk |  [string](#string) | Код страны риска, т.е. страны, в которой компания ведёт основной бизнес. |
 | country_of_risk_name |  [string](#string) | Наименование страны риска, т.е. страны, в которой компания ведёт основной бизнес. |
@@ -631,7 +652,7 @@
 | min_price_increment |  [Quotation](#quotation) | Шаг цены. |
 | api_trade_available_flag |  [bool](#bool) | Параметр указывает на возможность торговать инструментом через API. |
 | uid |  [string](#string) | Уникальный идентификатор инструмента. |
-| real_exchange |  [RealExchange](#realexchange) | Реальная площадка исполнения расчётов. |
+| real_exchange |  [RealExchange](#realexchange) | Реальная площадка исполнения расчётов (биржа). |
 | position_uid |  [string](#string) | Уникальный идентификатор позиции инструмента. |
 | for_iis_flag |  [bool](#bool) | Признак доступности для ИИС. |
 | for_qual_investor_flag |  [bool](#bool) | Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов. |
@@ -655,15 +676,15 @@
 | isin |  [string](#string) | Isin-идентификатор инструмента. |
 | lot |  [int32](#int32) | Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://tinkoff.github.io/investAPI/glossary#lot) |
 | currency |  [string](#string) | Валюта расчётов. |
-| klong |  [Quotation](#quotation) | Коэффициент ставки риска длинной позиции по инструменту. |
-| kshort |  [Quotation](#quotation) | Коэффициент ставки риска короткой позиции по инструменту. |
-| dlong |  [Quotation](#quotation) | Ставка риска минимальной маржи в лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/) |
-| dshort |  [Quotation](#quotation) | Ставка риска минимальной маржи в шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/) |
-| dlong_min |  [Quotation](#quotation) | Ставка риска начальной маржи в лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/) |
-| dshort_min |  [Quotation](#quotation) | Ставка риска начальной маржи в шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/) |
+| klong |  [Quotation](#quotation) | Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР) |
+| kshort |  [Quotation](#quotation) | Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР) |
+| dlong |  [Quotation](#quotation) | Ставка риска начальной маржи для КСУР лонг.Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/) |
+| dshort |  [Quotation](#quotation) | Ставка риска начальной маржи для КСУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/) |
+| dlong_min |  [Quotation](#quotation) | Ставка риска начальной маржи для КПУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/) |
+| dshort_min |  [Quotation](#quotation) | Ставка риска начальной маржи для КПУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/) |
 | short_enabled_flag |  [bool](#bool) | Признак доступности для операций в шорт. |
 | name |  [string](#string) | Название инструмента. |
-| exchange |  [string](#string) | Торговая площадка. |
+| exchange |  [string](#string) | Tорговая площадка (секция биржи). |
 | fixed_commission |  [Quotation](#quotation) | Размер фиксированной комиссии фонда. |
 | focus_type |  [string](#string) | Возможные значения: </br>**equity** — акции;</br>**fixed_income** — облигации;</br>**mixed_allocation** — смешанный;</br>**money_market** — денежный рынок;</br>**real_estate** — недвижимость;</br>**commodity** — товары;</br>**specialty** — специальный;</br>**private_equity** — private equity;</br>**alternative_investment** — альтернативные инвестиции. |
 | released_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата выпуска в часовом поясе UTC. |
@@ -679,12 +700,13 @@
 | min_price_increment |  [Quotation](#quotation) | Шаг цены. |
 | api_trade_available_flag |  [bool](#bool) | Параметр указывает на возможность торговать инструментом через API. |
 | uid |  [string](#string) | Уникальный идентификатор инструмента. |
-| real_exchange |  [RealExchange](#realexchange) | Реальная площадка исполнения расчётов. |
+| real_exchange |  [RealExchange](#realexchange) | Реальная площадка исполнения расчётов (биржа). |
 | position_uid |  [string](#string) | Уникальный идентификатор позиции инструмента. |
 | for_iis_flag |  [bool](#bool) | Признак доступности для ИИС. |
 | for_qual_investor_flag |  [bool](#bool) | Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов. |
 | weekend_flag |  [bool](#bool) | Флаг отображающий доступность торговли инструментом по выходным. |
 | blocked_tca_flag |  [bool](#bool) | Флаг заблокированного ТКС. |
+| liquidity_flag |  [bool](#bool) | Флаг достаточной ликвидности |
 | first_1min_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой минутной свечи. |
 | first_1day_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой дневной свечи. |
  <!-- end Fields -->
@@ -702,15 +724,15 @@
 | class_code |  [string](#string) | Класс-код (секция торгов). |
 | lot |  [int32](#int32) | Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://tinkoff.github.io/investAPI/glossary#lot) |
 | currency |  [string](#string) | Валюта расчётов. |
-| klong |  [Quotation](#quotation) | Коэффициент ставки риска длинной позиции по клиенту. |
-| kshort |  [Quotation](#quotation) | Коэффициент ставки риска короткой позиции по клиенту. |
-| dlong |  [Quotation](#quotation) | Ставка риска минимальной маржи в лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/) |
-| dshort |  [Quotation](#quotation) | Ставка риска минимальной маржи в шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/) |
-| dlong_min |  [Quotation](#quotation) | Ставка риска начальной маржи в лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/) |
-| dshort_min |  [Quotation](#quotation) | Ставка риска начальной маржи в шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/) |
+| klong |  [Quotation](#quotation) | Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР) |
+| kshort |  [Quotation](#quotation) | Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР) |
+| dlong |  [Quotation](#quotation) | Ставка риска начальной маржи для КСУР лонг.Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/) |
+| dshort |  [Quotation](#quotation) | Ставка риска начальной маржи для КСУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/) |
+| dlong_min |  [Quotation](#quotation) | Ставка риска начальной маржи для КПУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/) |
+| dshort_min |  [Quotation](#quotation) | Ставка риска начальной маржи для КПУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/) |
 | short_enabled_flag |  [bool](#bool) | Признак доступности для операций шорт. |
 | name |  [string](#string) | Название инструмента. |
-| exchange |  [string](#string) | Торговая площадка. |
+| exchange |  [string](#string) | Tорговая площадка (секция биржи). |
 | first_trade_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата начала обращения контракта в часовом поясе UTC. |
 | last_trade_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата в часовом поясе UTC, до которой возможно проведение операций с фьючерсом. |
 | futures_type |  [string](#string) | Тип фьючерса. Возможные значения: </br>**physical_delivery** — физические поставки; </br>**cash_settlement** — денежный эквивалент. |
@@ -728,7 +750,7 @@
 | min_price_increment |  [Quotation](#quotation) | Шаг цены. |
 | api_trade_available_flag |  [bool](#bool) | Параметр указывает на возможность торговать инструментом через API. |
 | uid |  [string](#string) | Уникальный идентификатор инструмента. |
-| real_exchange |  [RealExchange](#realexchange) | Реальная площадка исполнения расчётов. |
+| real_exchange |  [RealExchange](#realexchange) | Реальная площадка исполнения расчётов (биржа). |
 | position_uid |  [string](#string) | Уникальный идентификатор позиции инструмента. |
 | basic_asset_position_uid |  [string](#string) | Уникальный идентификатор позиции основного инструмента. |
 | for_iis_flag |  [bool](#bool) | Признак доступности для ИИС. |
@@ -753,15 +775,15 @@
 | isin |  [string](#string) | Isin-идентификатор инструмента. |
 | lot |  [int32](#int32) | Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://tinkoff.github.io/investAPI/glossary#lot) |
 | currency |  [string](#string) | Валюта расчётов. |
-| klong |  [Quotation](#quotation) | Коэффициент ставки риска длинной позиции по инструменту. |
-| kshort |  [Quotation](#quotation) | Коэффициент ставки риска короткой позиции по инструменту. |
-| dlong |  [Quotation](#quotation) | Ставка риска минимальной маржи в лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/) |
-| dshort |  [Quotation](#quotation) | Ставка риска минимальной маржи в шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/) |
-| dlong_min |  [Quotation](#quotation) | Ставка риска начальной маржи в лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/) |
-| dshort_min |  [Quotation](#quotation) | Ставка риска начальной маржи в шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/) |
+| klong |  [Quotation](#quotation) | Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР) |
+| kshort |  [Quotation](#quotation) | Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР) |
+| dlong |  [Quotation](#quotation) | Ставка риска начальной маржи для КСУР лонг.Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/) |
+| dshort |  [Quotation](#quotation) | Ставка риска начальной маржи для КСУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/) |
+| dlong_min |  [Quotation](#quotation) | Ставка риска начальной маржи для КПУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/) |
+| dshort_min |  [Quotation](#quotation) | Ставка риска начальной маржи для КПУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/) |
 | short_enabled_flag |  [bool](#bool) | Признак доступности для операций в шорт. |
 | name |  [string](#string) | Название инструмента. |
-| exchange |  [string](#string) | Торговая площадка. |
+| exchange |  [string](#string) | Tорговая площадка (секция биржи). |
 | ipo_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата IPO акции в часовом поясе UTC. |
 | issue_size |  [int64](#int64) | Размер выпуска. |
 | country_of_risk |  [string](#string) | Код страны риска, т.е. страны, в которой компания ведёт основной бизнес. |
@@ -778,12 +800,13 @@
 | min_price_increment |  [Quotation](#quotation) | Шаг цены. |
 | api_trade_available_flag |  [bool](#bool) | Параметр указывает на возможность торговать инструментом через API. |
 | uid |  [string](#string) | Уникальный идентификатор инструмента. |
-| real_exchange |  [RealExchange](#realexchange) | Реальная площадка исполнения расчётов. |
+| real_exchange |  [RealExchange](#realexchange) | Реальная площадка исполнения расчётов (биржа). |
 | position_uid |  [string](#string) | Уникальный идентификатор позиции инструмента. |
 | for_iis_flag |  [bool](#bool) | Признак доступности для ИИС. |
 | for_qual_investor_flag |  [bool](#bool) | Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов. |
 | weekend_flag |  [bool](#bool) | Флаг отображающий доступность торговли инструментом по выходным |
 | blocked_tca_flag |  [bool](#bool) | Флаг заблокированного ТКС |
+| liquidity_flag |  [bool](#bool) | Флаг достаточной ликвидности |
 | first_1min_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой минутной свечи. |
 | first_1day_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой дневной свечи. |
  <!-- end Fields -->
@@ -876,15 +899,15 @@
 | isin |  [string](#string) | Isin-идентификатор инструмента. |
 | lot |  [int32](#int32) | Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://tinkoff.github.io/investAPI/glossary#lot) |
 | currency |  [string](#string) | Валюта расчётов. |
-| klong |  [Quotation](#quotation) | Коэффициент ставки риска длинной позиции по инструменту. |
-| kshort |  [Quotation](#quotation) | Коэффициент ставки риска короткой позиции по инструменту. |
-| dlong |  [Quotation](#quotation) | Ставка риска минимальной маржи в лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/) |
-| dshort |  [Quotation](#quotation) | Ставка риска минимальной маржи в шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/) |
-| dlong_min |  [Quotation](#quotation) | Ставка риска начальной маржи в лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/) |
-| dshort_min |  [Quotation](#quotation) | Ставка риска начальной маржи в шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/) |
+| klong |  [Quotation](#quotation) | Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР) |
+| kshort |  [Quotation](#quotation) | Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР) |
+| dlong |  [Quotation](#quotation) | ССтавка риска начальной маржи для КСУР лонг.Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/) |
+| dshort |  [Quotation](#quotation) | Ставка риска начальной маржи для КСУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/) |
+| dlong_min |  [Quotation](#quotation) | Ставка риска начальной маржи для КПУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/) |
+| dshort_min |  [Quotation](#quotation) | Ставка риска начальной маржи для КПУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/) |
 | short_enabled_flag |  [bool](#bool) | Признак доступности для операций в шорт. |
 | name |  [string](#string) | Название инструмента. |
-| exchange |  [string](#string) | Торговая площадка. |
+| exchange |  [string](#string) | Tорговая площадка (секция биржи). |
 | country_of_risk |  [string](#string) | Код страны риска, т.е. страны, в которой компания ведёт основной бизнес. |
 | country_of_risk_name |  [string](#string) | Наименование страны риска, т.е. страны, в которой компания ведёт основной бизнес. |
 | instrument_type |  [string](#string) | Тип инструмента. |
@@ -895,7 +918,7 @@
 | min_price_increment |  [Quotation](#quotation) | Шаг цены. |
 | api_trade_available_flag |  [bool](#bool) | Параметр указывает на возможность торговать инструментом через API. |
 | uid |  [string](#string) | Уникальный идентификатор инструмента. |
-| real_exchange |  [RealExchange](#realexchange) | Реальная площадка исполнения расчётов. |
+| real_exchange |  [RealExchange](#realexchange) | Реальная площадка исполнения расчётов (биржа). |
 | position_uid |  [string](#string) | Уникальный идентификатор позиции инструмента. |
 | for_iis_flag |  [bool](#bool) | Признак доступности для ИИС. |
 | for_qual_investor_flag |  [bool](#bool) | Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов. |
@@ -977,6 +1000,11 @@
 #### AssetsRequest
 Запрос списка активов.
 
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| instrument_type |  [InstrumentType](#instrumenttype) |  |
+ <!-- end Fields -->
  <!-- end HasFields -->
 
 
@@ -1225,6 +1253,7 @@
 | class_code |  [string](#string) | Класс-код (секция торгов). |
 | links | Массив объектов [InstrumentLink](#instrumentlink) | Массив связанных инструментов. |
 | instrument_kind |  [InstrumentType](#instrumenttype) | Тип инструмента. |
+| position_uid |  [string](#string) | id позиции. |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -1348,6 +1377,8 @@
 | Field | Type | Description |
 | ----- | ---- | ----------- |
 | query |  [string](#string) | Строка поиска. |
+| instrument_kind |  [InstrumentType](#instrumenttype) | Фильтр по типу инструмента. |
+| api_trade_available_flag |  [bool](#bool) | Фильтр для отображения только торговых инструментов. |
  <!-- end Fields -->
  <!-- end HasFields -->
 

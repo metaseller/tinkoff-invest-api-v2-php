@@ -182,7 +182,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения списка опционов.
+     * Deprecated Метод получения списка опционов.
      * @param \Tinkoff\Invest\V1\InstrumentsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -191,6 +191,21 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     public function Options(\Tinkoff\Invest\V1\InstrumentsRequest $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/Options',
+        $argument,
+        ['\Tinkoff\Invest\V1\OptionsResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Метод получения списка опционов.
+     * @param \Tinkoff\Invest\V1\FilterOptionsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function OptionsBy(\Tinkoff\Invest\V1\FilterOptionsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/OptionsBy',
         $argument,
         ['\Tinkoff\Invest\V1\OptionsResponse', 'decode'],
         $metadata, $options);
@@ -302,7 +317,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения списка активов.
+     * Метод получения списка активов. Метод работает для всех инструментов, за исключением срочных - опционов и фьючерсов.
      * @param \Tinkoff\Invest\V1\AssetsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

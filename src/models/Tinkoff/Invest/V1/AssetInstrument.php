@@ -57,6 +57,12 @@ class AssetInstrument extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 10;</code>
      */
     protected $instrument_kind = 0;
+    /**
+     *id позиции.
+     *
+     * Generated from protobuf field <code>string position_uid = 11;</code>
+     */
+    protected $position_uid = '';
 
     /**
      * Constructor.
@@ -78,6 +84,8 @@ class AssetInstrument extends \Google\Protobuf\Internal\Message
      *          Массив связанных инструментов.
      *     @type int $instrument_kind
      *          Тип инструмента.
+     *     @type string $position_uid
+     *          id позиции.
      * }
      */
     public function __construct($data = NULL) {
@@ -263,6 +271,32 @@ class AssetInstrument extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\InstrumentType::class);
         $this->instrument_kind = $var;
+
+        return $this;
+    }
+
+    /**
+     *id позиции.
+     *
+     * Generated from protobuf field <code>string position_uid = 11;</code>
+     * @return string
+     */
+    public function getPositionUid()
+    {
+        return $this->position_uid;
+    }
+
+    /**
+     *id позиции.
+     *
+     * Generated from protobuf field <code>string position_uid = 11;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPositionUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->position_uid = $var;
 
         return $this;
     }

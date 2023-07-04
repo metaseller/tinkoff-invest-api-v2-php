@@ -54,7 +54,8 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     /**
      * Deprecated Средняя цена позиции в пунктах (для фьючерсов). **Возможна задержка до секунды для пересчёта**.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation average_position_price_pt = 7;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation average_position_price_pt = 7 [deprecated = true];</code>
+     * @deprecated
      */
     protected $average_position_price_pt = null;
     /**
@@ -72,7 +73,8 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     /**
      *Deprecated Количество лотов в портфеле.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation quantity_lots = 10;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation quantity_lots = 10 [deprecated = true];</code>
+     * @deprecated
      */
     protected $quantity_lots = null;
     /**
@@ -356,33 +358,39 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     /**
      * Deprecated Средняя цена позиции в пунктах (для фьючерсов). **Возможна задержка до секунды для пересчёта**.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation average_position_price_pt = 7;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation average_position_price_pt = 7 [deprecated = true];</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
+     * @deprecated
      */
     public function getAveragePositionPricePt()
     {
+        @trigger_error('average_position_price_pt is deprecated.', E_USER_DEPRECATED);
         return isset($this->average_position_price_pt) ? $this->average_position_price_pt : null;
     }
 
     public function hasAveragePositionPricePt()
     {
+        @trigger_error('average_position_price_pt is deprecated.', E_USER_DEPRECATED);
         return isset($this->average_position_price_pt);
     }
 
     public function clearAveragePositionPricePt()
     {
+        @trigger_error('average_position_price_pt is deprecated.', E_USER_DEPRECATED);
         unset($this->average_position_price_pt);
     }
 
     /**
      * Deprecated Средняя цена позиции в пунктах (для фьючерсов). **Возможна задержка до секунды для пересчёта**.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation average_position_price_pt = 7;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation average_position_price_pt = 7 [deprecated = true];</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
+     * @deprecated
      */
     public function setAveragePositionPricePt($var)
     {
+        @trigger_error('average_position_price_pt is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->average_position_price_pt = $var;
 
@@ -464,33 +472,39 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     /**
      *Deprecated Количество лотов в портфеле.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation quantity_lots = 10;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation quantity_lots = 10 [deprecated = true];</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
+     * @deprecated
      */
     public function getQuantityLots()
     {
+        @trigger_error('quantity_lots is deprecated.', E_USER_DEPRECATED);
         return isset($this->quantity_lots) ? $this->quantity_lots : null;
     }
 
     public function hasQuantityLots()
     {
+        @trigger_error('quantity_lots is deprecated.', E_USER_DEPRECATED);
         return isset($this->quantity_lots);
     }
 
     public function clearQuantityLots()
     {
+        @trigger_error('quantity_lots is deprecated.', E_USER_DEPRECATED);
         unset($this->quantity_lots);
     }
 
     /**
      *Deprecated Количество лотов в портфеле.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation quantity_lots = 10;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation quantity_lots = 10 [deprecated = true];</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
+     * @deprecated
      */
     public function setQuantityLots($var)
     {
+        @trigger_error('quantity_lots is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->quantity_lots = $var;
 
