@@ -18,7 +18,7 @@ class Instruments
         \GPBMetadata\Common::initOnce();
         $pool->internalAddGeneratedFile(
             '
-ζ
+σε
 instruments.proto%tinkoff.public.invest.api.contract.v1common.proto"}
 TradingSchedulesRequest
 exchange (	(
@@ -768,12 +768,11 @@ CouponType
 REAL_EXCHANGE_UNSPECIFIED 
 REAL_EXCHANGE_MOEX
 REAL_EXCHANGE_RTS
-REAL_EXCHANGE_OTC*i
-	RiskLevel
-RISK_LEVEL_UNSPECIFIED 
-RISK_LEVEL_LOW
-RISK_LEVEL_MODERATE
-RISK_LEVEL_HIGH2ψ
+REAL_EXCHANGE_OTC*M
+	RiskLevel
+RISK_LEVEL_HIGH 
+RISK_LEVEL_MODERATE
+RISK_LEVEL_LOW2ψ
 InstrumentsService“
 TradingSchedules>.tinkoff.public.invest.api.contract.v1.TradingSchedulesRequest?.tinkoff.public.invest.api.contract.v1.TradingSchedulesResponsew
 BondBy8.tinkoff.public.invest.api.contract.v1.InstrumentRequest3.tinkoff.public.invest.api.contract.v1.BondResponsex

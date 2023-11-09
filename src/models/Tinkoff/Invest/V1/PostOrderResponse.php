@@ -46,7 +46,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      */
     protected $initial_order_price = null;
     /**
-     *Исполненная средняя цена 1 одного инструмента в заявки.
+     *Исполненная средняя цена одного инструмента в заявке.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue executed_order_price = 6;</code>
      */
@@ -135,7 +135,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\MoneyValue $initial_order_price
      *          Начальная цена заявки. Произведение количества запрошенных лотов на цену.
      *     @type \Tinkoff\Invest\V1\MoneyValue $executed_order_price
-     *          Исполненная средняя цена 1 одного инструмента в заявки.
+     *          Исполненная средняя цена одного инструмента в заявке.
      *     @type \Tinkoff\Invest\V1\MoneyValue $total_order_amount
      *          Итоговая стоимость заявки, включающая все комиссии.
      *     @type \Tinkoff\Invest\V1\MoneyValue $initial_commission
@@ -306,7 +306,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Исполненная средняя цена 1 одного инструмента в заявки.
+     *Исполненная средняя цена одного инструмента в заявке.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue executed_order_price = 6;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -327,7 +327,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Исполненная средняя цена 1 одного инструмента в заявки.
+     *Исполненная средняя цена одного инструмента в заявке.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue executed_order_price = 6;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var

@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Котировка - денежная сумма без указания валюты
+ *Котировка — денежная сумма без указания валюты
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.Quotation</code>
  */
