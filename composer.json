@@ -27,6 +27,7 @@
     "autoload": {
         "psr-4": {
             "GPBMetadata\\": "src/models/GPBMetadata",
+            "Google\\": "src/models/Google",
             "Tinkoff\\": "src/models/Tinkoff",
             "Metaseller\\TinkoffInvestApi2\\": "src",
             "Metaseller\\TinkoffInvestApi2\\providers\\": "src/providers",
