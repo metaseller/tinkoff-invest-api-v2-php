@@ -18,25 +18,25 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Номер счета.
      *
-     * Generated from protobuf field <code>string account_id = 1;</code>
+     * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $account_id = '';
     /**
      *Идентификатор заявки на бирже.
      *
-     * Generated from protobuf field <code>string order_id = 6;</code>
+     * Generated from protobuf field <code>string order_id = 6 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $order_id = '';
     /**
      *Новый идентификатор запроса выставления поручения для целей идемпотентности. Максимальная длина 36 символов. Перезатирает старый ключ.
      *
-     * Generated from protobuf field <code>string idempotency_key = 7;</code>
+     * Generated from protobuf field <code>string idempotency_key = 7 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $idempotency_key = '';
     /**
      *Количество лотов.
      *
-     * Generated from protobuf field <code>int64 quantity = 11;</code>
+     * Generated from protobuf field <code>int64 quantity = 11 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $quantity = 0;
     /**
@@ -50,7 +50,7 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PriceType price_type = 13;</code>
      */
-    protected $price_type = 0;
+    protected $price_type = null;
 
     /**
      * Constructor.
@@ -80,7 +80,7 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Номер счета.
      *
-     * Generated from protobuf field <code>string account_id = 1;</code>
+     * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getAccountId()
@@ -91,7 +91,7 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Номер счета.
      *
-     * Generated from protobuf field <code>string account_id = 1;</code>
+     * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */
@@ -106,7 +106,7 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор заявки на бирже.
      *
-     * Generated from protobuf field <code>string order_id = 6;</code>
+     * Generated from protobuf field <code>string order_id = 6 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getOrderId()
@@ -117,7 +117,7 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор заявки на бирже.
      *
-     * Generated from protobuf field <code>string order_id = 6;</code>
+     * Generated from protobuf field <code>string order_id = 6 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */
@@ -132,7 +132,7 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Новый идентификатор запроса выставления поручения для целей идемпотентности. Максимальная длина 36 символов. Перезатирает старый ключ.
      *
-     * Generated from protobuf field <code>string idempotency_key = 7;</code>
+     * Generated from protobuf field <code>string idempotency_key = 7 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getIdempotencyKey()
@@ -143,7 +143,7 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Новый идентификатор запроса выставления поручения для целей идемпотентности. Максимальная длина 36 символов. Перезатирает старый ключ.
      *
-     * Generated from protobuf field <code>string idempotency_key = 7;</code>
+     * Generated from protobuf field <code>string idempotency_key = 7 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */
@@ -158,7 +158,7 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Количество лотов.
      *
-     * Generated from protobuf field <code>int64 quantity = 11;</code>
+     * Generated from protobuf field <code>int64 quantity = 11 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return int|string
      */
     public function getQuantity()
@@ -169,7 +169,7 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Количество лотов.
      *
-     * Generated from protobuf field <code>int64 quantity = 11;</code>
+     * Generated from protobuf field <code>int64 quantity = 11 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param int|string $var
      * @return $this
      */
@@ -225,7 +225,17 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
      */
     public function getPriceType()
     {
-        return $this->price_type;
+        return isset($this->price_type) ? $this->price_type : 0;
+    }
+
+    public function hasPriceType()
+    {
+        return isset($this->price_type);
+    }
+
+    public function clearPriceType()
+    {
+        unset($this->price_type);
     }
 
     /**

@@ -20,13 +20,13 @@ class FilterOptionsRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string basic_asset_uid = 1;</code>
      */
-    protected $basic_asset_uid = '';
+    protected $basic_asset_uid = null;
     /**
      *Идентификатор позиции базового актива опциона
      *
      * Generated from protobuf field <code>string basic_asset_position_uid = 2;</code>
      */
-    protected $basic_asset_position_uid = '';
+    protected $basic_asset_position_uid = null;
 
     /**
      * Constructor.
@@ -53,7 +53,17 @@ class FilterOptionsRequest extends \Google\Protobuf\Internal\Message
      */
     public function getBasicAssetUid()
     {
-        return $this->basic_asset_uid;
+        return isset($this->basic_asset_uid) ? $this->basic_asset_uid : '';
+    }
+
+    public function hasBasicAssetUid()
+    {
+        return isset($this->basic_asset_uid);
+    }
+
+    public function clearBasicAssetUid()
+    {
+        unset($this->basic_asset_uid);
     }
 
     /**
@@ -79,7 +89,17 @@ class FilterOptionsRequest extends \Google\Protobuf\Internal\Message
      */
     public function getBasicAssetPositionUid()
     {
-        return $this->basic_asset_position_uid;
+        return isset($this->basic_asset_position_uid) ? $this->basic_asset_position_uid : '';
+    }
+
+    public function hasBasicAssetPositionUid()
+    {
+        return isset($this->basic_asset_position_uid);
+    }
+
+    public function clearBasicAssetPositionUid()
+    {
+        unset($this->basic_asset_position_uid);
     }
 
     /**

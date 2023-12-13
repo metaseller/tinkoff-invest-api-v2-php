@@ -67,13 +67,29 @@ Stream сделок пользователя
 
 - Тело ответа — [PostOrderResponse](#postorderresponse)
 
+
+#### GetMaxLots
+расчет количества доступных для покупки/продажи лотов
+
+- Тело запроса — [GetMaxLotsRequest](#getmaxlotsrequest)
+
+- Тело ответа — [GetMaxLotsResponse](#getmaxlotsresponse)
+
+
+#### GetOrderPrice
+Метод получения предварительной стоимости для лимитной заявки
+
+- Тело запроса — [GetOrderPriceRequest](#getorderpricerequest)
+
+- Тело ответа — [GetOrderPriceResponse](#getorderpriceresponse)
+
  <!-- range .Methods -->
  <!-- range .Services -->
 
 ###Сообщения методов
 
 
-
+ 
 #### TradesStreamRequest
 Запрос установки соединения.
 
@@ -84,7 +100,7 @@ Stream сделок пользователя
  <!-- end Fields -->
  <!-- end HasFields -->
 
-
+ 
 #### TradesStreamResponse
 Информация о торговых поручениях.
 
@@ -96,7 +112,7 @@ Stream сделок пользователя
  <!-- end Fields -->
  <!-- end HasFields -->
 
-
+ 
 #### OrderTrades
 Информация об исполнении торгового поручения.
 
@@ -113,7 +129,7 @@ Stream сделок пользователя
  <!-- end Fields -->
  <!-- end HasFields -->
 
-
+ 
 #### OrderTrade
 Информация о сделке.
 
@@ -127,7 +143,7 @@ Stream сделок пользователя
  <!-- end Fields -->
  <!-- end HasFields -->
 
-
+ 
 #### PostOrderRequest
 Запрос выставления торгового поручения.
 
@@ -142,10 +158,12 @@ Stream сделок пользователя
 | order_type |  [OrderType](#ordertype) | Тип заявки. |
 | order_id |  [string](#string) | Идентификатор запроса выставления поручения для целей идемпотентности в формате UID. Максимальная длина 36 символов. |
 | instrument_id |  [string](#string) | Идентификатор инструмента, принимает значения Figi или Instrument_uid. |
+| time_in_force |  [TimeInForceType](#timeinforcetype) | Алгоритм исполнения поручения, применяется только к лимитной заявке. |
+| price_type |  [PriceType](#pricetype) | Тип цены. |
  <!-- end Fields -->
  <!-- end HasFields -->
 
-
+ 
 #### PostOrderResponse
 Информация о выставлении поручения.
 
@@ -161,7 +179,7 @@ Stream сделок пользователя
 | total_order_amount |  [MoneyValue](#moneyvalue) | Итоговая стоимость заявки, включающая все комиссии. |
 | initial_commission |  [MoneyValue](#moneyvalue) | Начальная комиссия. Комиссия рассчитанная при выставлении заявки. |
 | executed_commission |  [MoneyValue](#moneyvalue) | Фактическая комиссия по итогам исполнения заявки. |
-| aci_value |  [MoneyValue](#moneyvalue) | Значение НКД (накопленного купонного дохода) на дату. Подробнее: [НКД при выставлении торговых поручений](https://tinkoff.github.io/investAPI/head-orders#coupon) |
+| aci_value |  [MoneyValue](#moneyvalue) | Значение НКД (накопленного купонного дохода) на дату. Подробнее: [НКД при выставлении торговых поручений](https://russianinvestments.github.io/investAPI/head-orders#coupon) |
 | figi |  [string](#string) | Figi-идентификатор инструмента. |
 | direction |  [OrderDirection](#orderdirection) | Направление сделки. |
 | initial_security_price |  [MoneyValue](#moneyvalue) | Начальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. |
@@ -169,10 +187,11 @@ Stream сделок пользователя
 | message |  [string](#string) | Дополнительные данные об исполнении заявки. |
 | initial_order_price_pt |  [Quotation](#quotation) | Начальная цена заявки в пунктах (для фьючерсов). |
 | instrument_uid |  [string](#string) | UID идентификатор инструмента. |
+| order_request_id |  [string](#string) | Идентификатор ключа идемпотентности, переданный клиентом, в формате UID. Максимальная длина 36 символов. |
  <!-- end Fields -->
  <!-- end HasFields -->
 
-
+ 
 #### CancelOrderRequest
 Запрос отмены торгового поручения.
 
@@ -184,7 +203,7 @@ Stream сделок пользователя
  <!-- end Fields -->
  <!-- end HasFields -->
 
-
+ 
 #### CancelOrderResponse
 Результат отмены торгового поручения.
 
@@ -195,7 +214,7 @@ Stream сделок пользователя
  <!-- end Fields -->
  <!-- end HasFields -->
 
-
+ 
 #### GetOrderStateRequest
 Запрос получения статуса торгового поручения.
 
@@ -204,10 +223,11 @@ Stream сделок пользователя
 | ----- | ---- | ----------- |
 | account_id |  [string](#string) | Номер счёта. |
 | order_id |  [string](#string) | Идентификатор заявки. |
+| price_type |  [PriceType](#pricetype) | Тип цены. |
  <!-- end Fields -->
  <!-- end HasFields -->
 
-
+ 
 #### GetOrdersRequest
 Запрос получения списка активных торговых поручений.
 
@@ -218,7 +238,7 @@ Stream сделок пользователя
  <!-- end Fields -->
  <!-- end HasFields -->
 
-
+ 
 #### GetOrdersResponse
 Список активных торговых поручений.
 
@@ -229,7 +249,7 @@ Stream сделок пользователя
  <!-- end Fields -->
  <!-- end HasFields -->
 
-
+ 
 #### OrderState
 Информация о торговом поручении.
 
@@ -259,7 +279,7 @@ Stream сделок пользователя
  <!-- end Fields -->
  <!-- end HasFields -->
 
-
+ 
 #### OrderStage
 Сделки в рамках торгового поручения.
 
@@ -272,7 +292,7 @@ Stream сделок пользователя
  <!-- end Fields -->
  <!-- end HasFields -->
 
-
+ 
 #### ReplaceOrderRequest
 Запрос изменения выставленной заявки.
 
@@ -285,6 +305,115 @@ Stream сделок пользователя
 | quantity |  [int64](#int64) | Количество лотов. |
 | price |  [Quotation](#quotation) | Цена за 1 инструмент. |
 | price_type |  [PriceType](#pricetype) | Тип цены. |
+ <!-- end Fields -->
+ <!-- end HasFields -->
+
+ 
+#### GetMaxLotsRequest
+Запрос на расчет количества доступных для покупки/продажи лотов. Если не указывать цену инструмента, то расчет произведется по текущум ценам в стакане: по лучшему предложению для покупки и по лучшему спросу для продажи.
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| account_id |  [string](#string) | Номер счета |
+| instrument_id |  [string](#string) | Идентификатор инструмента, принимает значения Figi или instrument_uid |
+| price |  [Quotation](#quotation) | Цена инструмента |
+ <!-- end Fields -->
+ <!-- end HasFields -->
+
+ 
+#### GetMaxLotsResponse
+Результат количество доступных для покупки/продажи лотов
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| currency |  [string](#string) | Валюта инструмента |
+| buy_limits |  [GetMaxLotsResponse.BuyLimitsView](#getmaxlotsresponsebuylimitsview) | Лимиты для покупок на собственные деньги |
+| buy_margin_limits |  [GetMaxLotsResponse.BuyLimitsView](#getmaxlotsresponsebuylimitsview) | Лимиты для покупок с учетом маржинального кредитования |
+| sell_limits |  [GetMaxLotsResponse.SellLimitsView](#getmaxlotsresponseselllimitsview) | Лимиты для продаж по собственной позиции |
+| sell_margin_limits |  [GetMaxLotsResponse.SellLimitsView](#getmaxlotsresponseselllimitsview) | Лимиты для продаж с учетом маржинального кредитования |
+ <!-- end Fields -->
+ <!-- end HasFields -->
+
+ 
+#### GetMaxLotsResponse.BuyLimitsView
+
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| buy_money_amount |  [Quotation](#quotation) | Количество доступной валюты для покупки |
+| buy_max_lots |  [int64](#int64) | Максимальное доступное количество лотов для покупки |
+| buy_max_market_lots |  [int64](#int64) | Максимальное доступное количество лотов для покупки для заявки по рыночной цене на текущий момент |
+ <!-- end Fields -->
+ <!-- end HasFields -->
+
+ 
+#### GetMaxLotsResponse.SellLimitsView
+
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| sell_max_lots |  [int64](#int64) | Максимальное доступное количество лотов для продажи |
+ <!-- end Fields -->
+ <!-- end HasFields -->
+
+ 
+#### GetOrderPriceRequest
+
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| account_id |  [string](#string) | Номер счета |
+| instrument_id |  [string](#string) | Идентификатор инструмента, принимает значения Figi или instrument_uid |
+| price |  [Quotation](#quotation) | Цена инструмента |
+| direction |  [OrderDirection](#orderdirection) | Направление заявки |
+| quantity |  [int64](#int64) | Количество лотов |
+ <!-- end Fields -->
+ <!-- end HasFields -->
+
+ 
+#### GetOrderPriceResponse
+
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| total_order_amount |  [MoneyValue](#moneyvalue) | Итоговая стоимость заявки |
+| initial_order_amount |  [MoneyValue](#moneyvalue) | Стоимость заявки без комиссий, НКД, ГО (для фьючерсов — стоимость контрактов) |
+| lots_requested |  [int64](#int64) | Запрошено лотов |
+| executed_commission |  [MoneyValue](#moneyvalue) | Общая комиссия |
+| executed_commission_rub |  [MoneyValue](#moneyvalue) | Общая комиссия в рублях |
+| service_commission |  [MoneyValue](#moneyvalue) | Сервисная комиссия |
+| deal_commission |  [MoneyValue](#moneyvalue) | Комиссия за проведение сделки |
+| extra_bond |  [GetOrderPriceResponse.ExtraBond](#getorderpriceresponseextrabond) | Дополнительная информация по облигациям |
+| extra_future |  [GetOrderPriceResponse.ExtraFuture](#getorderpriceresponseextrafuture) | Дополнительная информация по фьючерсам |
+ <!-- end Fields -->
+ <!-- end HasFields -->
+
+ 
+#### GetOrderPriceResponse.ExtraBond
+
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| aci_value |  [MoneyValue](#moneyvalue) | Значение НКД (накопленного купонного дохода) на дату |
+| nominal_conversion_rate |  [Quotation](#quotation) | Курс конвертации для замещающих облигаций |
+ <!-- end Fields -->
+ <!-- end HasFields -->
+
+ 
+#### GetOrderPriceResponse.ExtraFuture
+
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| initial_margin |  [MoneyValue](#moneyvalue) | Гарантийное обеспечение для фьючерса |
  <!-- end Fields -->
  <!-- end HasFields -->
  <!-- end messages -->
@@ -332,41 +461,34 @@ Stream сделок пользователя
 
 
 
-#### PriceType
-Тип цены.
+#### TimeInForceType
+
 
 | Name | Number | Description |
 | ---- | ------ | ----------- |
-| PRICE_TYPE_UNSPECIFIED | 0 | Значение не определено. |
-| PRICE_TYPE_POINT | 1 | Цена в пунктах (только для фьючерсов и облигаций). |
-| PRICE_TYPE_CURRENCY | 2 | Цена в валюте расчётов по инструменту. |
+| TIME_IN_FORCE_UNSPECIFIED | 0 | Значение не определено см. TIME_IN_FORCE_DAY |
+| TIME_IN_FORCE_DAY | 1 | Заявка действует до конца торгового дня. значение по умолчанию |
+| TIME_IN_FORCE_FILL_AND_KILL | 2 | Заявка исполнена(возможно частично) и уничтожена |
+| TIME_IN_FORCE_FILL_OR_KILL | 3 | Заявка исполнена полностью или уничтожена, недоступно для срочного рынка |
 
 
  <!-- range .Enums -->
  <!-- range HasServices -->
  <!-- range .Files -->
 
-#### SecurityTradingStatus
+#### PriceType
 
 | Name | Number | Description |
 | ---- | ------ | ----------- |
-| SECURITY_TRADING_STATUS_UNSPECIFIED | 0 | Торговый статус не определён |
-| SECURITY_TRADING_STATUS_NOT_AVAILABLE_FOR_TRADING | 1 | Недоступен для торгов |
-| SECURITY_TRADING_STATUS_OPENING_PERIOD | 2 | Период открытия торгов |
-| SECURITY_TRADING_STATUS_CLOSING_PERIOD | 3 | Период закрытия торгов |
-| SECURITY_TRADING_STATUS_BREAK_IN_TRADING | 4 | Перерыв в торговле |
-| SECURITY_TRADING_STATUS_NORMAL_TRADING | 5 | Нормальная торговля |
-| SECURITY_TRADING_STATUS_CLOSING_AUCTION | 6 | Аукцион закрытия |
-| SECURITY_TRADING_STATUS_DARK_POOL_AUCTION | 7 | Аукцион крупных пакетов |
-| SECURITY_TRADING_STATUS_DISCRETE_AUCTION | 8 | Дискретный аукцион |
-| SECURITY_TRADING_STATUS_OPENING_AUCTION_PERIOD | 9 | Аукцион открытия |
-| SECURITY_TRADING_STATUS_TRADING_AT_CLOSING_AUCTION_PRICE | 10 | Период торгов по цене аукциона закрытия |
-| SECURITY_TRADING_STATUS_SESSION_ASSIGNED | 11 | Сессия назначена |
-| SECURITY_TRADING_STATUS_SESSION_CLOSE | 12 | Сессия закрыта |
-| SECURITY_TRADING_STATUS_SESSION_OPEN | 13 | Сессия открыта |
-| SECURITY_TRADING_STATUS_DEALER_NORMAL_TRADING | 14 |Доступна торговля в режиме внутренней ликвидности брокера |
-| SECURITY_TRADING_STATUS_DEALER_BREAK_IN_TRADING | 15 |Перерыв торговли в режиме внутренней ликвидности брокера |
-| SECURITY_TRADING_STATUS_DEALER_NOT_AVAILABLE_FOR_TRADING | 16 |Недоступна торговля в режиме внутренней ликвидности брокера |
+| PRICE_TYPE_UNSPECIFIED | 0 | Значение не определено |
+| PRICE_TYPE_POINT | 1 | Цена в пунктах (только для фьючерсов и облигаций) |
+| PRICE_TYPE_CURRENCY | 2 | Цена в валюте расчётов по инструменту |
+
+### Про тип цены
+
+В TINKOFF INVEST API ответ в методах для фьючерсов и облигаций может возвращаться как в валюте расчетов, так и в пунктах цены.
+Стоимость пункта может меняться в зависимости от курсовой разницы.
+Про конвертацию пунктов в валюту можно почитать [тут](https://russianinvestments.github.io/investAPI/points/)
 
 ### Нестандартные типы данных
 
@@ -388,3 +510,21 @@ Stream сделок пользователя
 | units |  [int64](#int64) | Целая часть суммы, может быть отрицательным числом |
 | nano |  [int32](#int32) | Дробная часть суммы, может быть отрицательным числом |
 
+
+
+####Числа с плавающей точкой(запятой)
+
+В программировании часто используют типы данных с плавающей точкой, например float или double. Такие типы данных - компромисc между скоростью, диапазоном значений и точностью. 
+Число с плавающей точкой имеет фиксированную относительную точность и изменяющуюся абсолютную. Поэтому мы используем тыпы данных MoneyValue и  Quotation.
+
+Для всех заявок и котировок на бирже устанавливается [шаг цены](https://russianinvestments.github.io/investAPI/faq_marketdata/#2.1). В случае использовании чисел с плавающей точкой необходимо проверять, что переданное в запросе значение соответствует шагу цены инструмента.
+
+#####Пример
+
+Шаг цены для инструмента = `0.1`. Хотим выставить заявку по цене `256.8`, что соответствует шагу цены. Если представить число `256.8` в формате типа данных float, то значение будет [`256.79998779296875`](https://baseconvert.com/ieee-754-floating-point).
+
+При выставлении заявки по этой цене на стороне брокера будет выполнено округление таким образом, чтобы не ухудшить поручение клиента:
+
+-`256.7` в случае покупки
+
+-`256.8` в случае продажи

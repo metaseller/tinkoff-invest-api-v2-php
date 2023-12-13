@@ -18,13 +18,13 @@ class CancelOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Номер счёта.
      *
-     * Generated from protobuf field <code>string account_id = 1;</code>
+     * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $account_id = '';
     /**
      *Идентификатор заявки.
      *
-     * Generated from protobuf field <code>string order_id = 2;</code>
+     * Generated from protobuf field <code>string order_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $order_id = '';
 
@@ -48,7 +48,7 @@ class CancelOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Номер счёта.
      *
-     * Generated from protobuf field <code>string account_id = 1;</code>
+     * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getAccountId()
@@ -59,7 +59,7 @@ class CancelOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Номер счёта.
      *
-     * Generated from protobuf field <code>string account_id = 1;</code>
+     * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */
@@ -74,7 +74,7 @@ class CancelOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор заявки.
      *
-     * Generated from protobuf field <code>string order_id = 2;</code>
+     * Generated from protobuf field <code>string order_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getOrderId()
@@ -85,7 +85,7 @@ class CancelOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор заявки.
      *
-     * Generated from protobuf field <code>string order_id = 2;</code>
+     * Generated from protobuf field <code>string order_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */

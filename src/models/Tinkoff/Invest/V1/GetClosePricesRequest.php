@@ -18,7 +18,7 @@ class GetClosePricesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Массив по инструментам.
      *
-     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.InstrumentClosePriceRequest instruments = 1;</code>
+     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.InstrumentClosePriceRequest instruments = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     private $instruments;
 
@@ -40,7 +40,7 @@ class GetClosePricesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Массив по инструментам.
      *
-     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.InstrumentClosePriceRequest instruments = 1;</code>
+     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.InstrumentClosePriceRequest instruments = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getInstruments()
@@ -51,7 +51,7 @@ class GetClosePricesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Массив по инструментам.
      *
-     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.InstrumentClosePriceRequest instruments = 1;</code>
+     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.InstrumentClosePriceRequest instruments = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param \Tinkoff\Invest\V1\InstrumentClosePriceRequest[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */

@@ -18,7 +18,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор счёта клиента. Обязательный параметр для данного метода, остальные параметры опциональны.
      *
-     * Generated from protobuf field <code>string account_id = 1;</code>
+     * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $account_id = '';
     /**
@@ -26,7 +26,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string instrument_id = 2;</code>
      */
-    protected $instrument_id = '';
+    protected $instrument_id = null;
     /**
      *Начало периода (по UTC).
      *
@@ -44,13 +44,13 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string cursor = 11;</code>
      */
-    protected $cursor = '';
+    protected $cursor = null;
     /**
      *Лимит количества операций. По умолчанию устанавливается значение **100**, максимальное значение 1000.
      *
      * Generated from protobuf field <code>int32 limit = 12;</code>
      */
-    protected $limit = 0;
+    protected $limit = null;
     /**
      *Тип операции. Принимает значение из списка OperationType.
      *
@@ -62,25 +62,25 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OperationState state = 14;</code>
      */
-    protected $state = 0;
+    protected $state = null;
     /**
      *Флаг возвращать ли комиссии, по умолчанию false
      *
      * Generated from protobuf field <code>bool without_commissions = 15;</code>
      */
-    protected $without_commissions = false;
+    protected $without_commissions = null;
     /**
      *Флаг получения ответа без массива сделок.
      *
      * Generated from protobuf field <code>bool without_trades = 16;</code>
      */
-    protected $without_trades = false;
+    protected $without_trades = null;
     /**
      *Флаг не показывать overnight операций.
      *
      * Generated from protobuf field <code>bool without_overnights = 17;</code>
      */
-    protected $without_overnights = false;
+    protected $without_overnights = null;
 
     /**
      * Constructor.
@@ -120,7 +120,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор счёта клиента. Обязательный параметр для данного метода, остальные параметры опциональны.
      *
-     * Generated from protobuf field <code>string account_id = 1;</code>
+     * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getAccountId()
@@ -131,7 +131,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор счёта клиента. Обязательный параметр для данного метода, остальные параметры опциональны.
      *
-     * Generated from protobuf field <code>string account_id = 1;</code>
+     * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */
@@ -151,7 +151,17 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      */
     public function getInstrumentId()
     {
-        return $this->instrument_id;
+        return isset($this->instrument_id) ? $this->instrument_id : '';
+    }
+
+    public function hasInstrumentId()
+    {
+        return isset($this->instrument_id);
+    }
+
+    public function clearInstrumentId()
+    {
+        unset($this->instrument_id);
     }
 
     /**
@@ -249,7 +259,17 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      */
     public function getCursor()
     {
-        return $this->cursor;
+        return isset($this->cursor) ? $this->cursor : '';
+    }
+
+    public function hasCursor()
+    {
+        return isset($this->cursor);
+    }
+
+    public function clearCursor()
+    {
+        unset($this->cursor);
     }
 
     /**
@@ -275,7 +295,17 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      */
     public function getLimit()
     {
-        return $this->limit;
+        return isset($this->limit) ? $this->limit : 0;
+    }
+
+    public function hasLimit()
+    {
+        return isset($this->limit);
+    }
+
+    public function clearLimit()
+    {
+        unset($this->limit);
     }
 
     /**
@@ -327,7 +357,17 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      */
     public function getState()
     {
-        return $this->state;
+        return isset($this->state) ? $this->state : 0;
+    }
+
+    public function hasState()
+    {
+        return isset($this->state);
+    }
+
+    public function clearState()
+    {
+        unset($this->state);
     }
 
     /**
@@ -353,7 +393,17 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      */
     public function getWithoutCommissions()
     {
-        return $this->without_commissions;
+        return isset($this->without_commissions) ? $this->without_commissions : false;
+    }
+
+    public function hasWithoutCommissions()
+    {
+        return isset($this->without_commissions);
+    }
+
+    public function clearWithoutCommissions()
+    {
+        unset($this->without_commissions);
     }
 
     /**
@@ -379,7 +429,17 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      */
     public function getWithoutTrades()
     {
-        return $this->without_trades;
+        return isset($this->without_trades) ? $this->without_trades : false;
+    }
+
+    public function hasWithoutTrades()
+    {
+        return isset($this->without_trades);
+    }
+
+    public function clearWithoutTrades()
+    {
+        unset($this->without_trades);
     }
 
     /**
@@ -405,7 +465,17 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      */
     public function getWithoutOvernights()
     {
-        return $this->without_overnights;
+        return isset($this->without_overnights) ? $this->without_overnights : false;
+    }
+
+    public function hasWithoutOvernights()
+    {
+        return isset($this->without_overnights);
+    }
+
+    public function clearWithoutOvernights()
+    {
+        unset($this->without_overnights);
     }
 
     /**

@@ -18,7 +18,8 @@ class GetDividendsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Figi-идентификатор инструмента.
      *
-     * Generated from protobuf field <code>string figi = 1;</code>
+     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
+     * @deprecated
      */
     protected $figi = '';
     /**
@@ -33,6 +34,12 @@ class GetDividendsRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3;</code>
      */
     protected $to = null;
+    /**
+     *Идентификатор инструмента Figi или instrument_uid
+     *
+     * Generated from protobuf field <code>string instrument_id = 4 [(.google.api.field_behavior) = REQUIRED];</code>
+     */
+    protected $instrument_id = '';
 
     /**
      * Constructor.
@@ -46,6 +53,8 @@ class GetDividendsRequest extends \Google\Protobuf\Internal\Message
      *          Начало запрашиваемого периода в часовом поясе UTC. Фильтрация происходит по параметру *record_date* (дата фиксации реестра).
      *     @type \Google\Protobuf\Timestamp $to
      *          Окончание запрашиваемого периода в часовом поясе UTC. Фильтрация происходит по параметру *record_date* (дата фиксации реестра).
+     *     @type string $instrument_id
+     *          Идентификатор инструмента Figi или instrument_uid
      * }
      */
     public function __construct($data = NULL) {
@@ -56,23 +65,27 @@ class GetDividendsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Figi-идентификатор инструмента.
      *
-     * Generated from protobuf field <code>string figi = 1;</code>
+     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @return string
+     * @deprecated
      */
     public function getFigi()
     {
+        @trigger_error('figi is deprecated.', E_USER_DEPRECATED);
         return $this->figi;
     }
 
     /**
      *Figi-идентификатор инструмента.
      *
-     * Generated from protobuf field <code>string figi = 1;</code>
+     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @param string $var
      * @return $this
+     * @deprecated
      */
     public function setFigi($var)
     {
+        @trigger_error('figi is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkString($var, True);
         $this->figi = $var;
 
@@ -147,6 +160,32 @@ class GetDividendsRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->to = $var;
+
+        return $this;
+    }
+
+    /**
+     *Идентификатор инструмента Figi или instrument_uid
+     *
+     * Generated from protobuf field <code>string instrument_id = 4 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return string
+     */
+    public function getInstrumentId()
+    {
+        return $this->instrument_id;
+    }
+
+    /**
+     *Идентификатор инструмента Figi или instrument_uid
+     *
+     * Generated from protobuf field <code>string instrument_id = 4 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setInstrumentId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->instrument_id = $var;
 
         return $this;
     }

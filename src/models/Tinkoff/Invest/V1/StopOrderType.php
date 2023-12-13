@@ -14,25 +14,25 @@ use UnexpectedValueException;
 class StopOrderType
 {
     /**
-     *Значение не указано.
+     *Значение не указано
      *
      * Generated from protobuf enum <code>STOP_ORDER_TYPE_UNSPECIFIED = 0;</code>
      */
     const STOP_ORDER_TYPE_UNSPECIFIED = 0;
     /**
-     *Take-profit заявка.
+     *Take-profit заявка
      *
      * Generated from protobuf enum <code>STOP_ORDER_TYPE_TAKE_PROFIT = 1;</code>
      */
     const STOP_ORDER_TYPE_TAKE_PROFIT = 1;
     /**
-     *Stop-loss заявка.
+     *Stop-loss заявка
      *
      * Generated from protobuf enum <code>STOP_ORDER_TYPE_STOP_LOSS = 2;</code>
      */
     const STOP_ORDER_TYPE_STOP_LOSS = 2;
     /**
-     *Stop-limit заявка.
+     *Stop-limit заявка
      *
      * Generated from protobuf enum <code>STOP_ORDER_TYPE_STOP_LIMIT = 3;</code>
      */

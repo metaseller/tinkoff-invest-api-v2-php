@@ -18,7 +18,7 @@ class EditFavoritesRequestInstrument extends \Google\Protobuf\Internal\Message
     /**
      *Figi-идентификатор инструмента.
      *
-     * Generated from protobuf field <code>string figi = 1;</code>
+     * Generated from protobuf field <code>string figi = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $figi = '';
 
@@ -40,7 +40,7 @@ class EditFavoritesRequestInstrument extends \Google\Protobuf\Internal\Message
     /**
      *Figi-идентификатор инструмента.
      *
-     * Generated from protobuf field <code>string figi = 1;</code>
+     * Generated from protobuf field <code>string figi = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getFigi()
@@ -51,7 +51,7 @@ class EditFavoritesRequestInstrument extends \Google\Protobuf\Internal\Message
     /**
      *Figi-идентификатор инструмента.
      *
-     * Generated from protobuf field <code>string figi = 1;</code>
+     * Generated from protobuf field <code>string figi = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */

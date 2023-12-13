@@ -18,7 +18,7 @@ class PositionsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор счёта пользователя.
      *
-     * Generated from protobuf field <code>string account_id = 1;</code>
+     * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $account_id = '';
 
@@ -40,7 +40,7 @@ class PositionsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор счёта пользователя.
      *
-     * Generated from protobuf field <code>string account_id = 1;</code>
+     * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getAccountId()
@@ -51,7 +51,7 @@ class PositionsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор счёта пользователя.
      *
-     * Generated from protobuf field <code>string account_id = 1;</code>
+     * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */

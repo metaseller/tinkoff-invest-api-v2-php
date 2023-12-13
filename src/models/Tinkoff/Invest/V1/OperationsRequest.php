@@ -18,7 +18,7 @@ class OperationsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор счёта клиента.
      *
-     * Generated from protobuf field <code>string account_id = 1;</code>
+     * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $account_id = '';
     /**
@@ -38,13 +38,13 @@ class OperationsRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OperationState state = 4;</code>
      */
-    protected $state = 0;
+    protected $state = null;
     /**
      *Figi-идентификатор инструмента для фильтрации.
      *
      * Generated from protobuf field <code>string figi = 5;</code>
      */
-    protected $figi = '';
+    protected $figi = null;
 
     /**
      * Constructor.
@@ -72,7 +72,7 @@ class OperationsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор счёта клиента.
      *
-     * Generated from protobuf field <code>string account_id = 1;</code>
+     * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getAccountId()
@@ -83,7 +83,7 @@ class OperationsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор счёта клиента.
      *
-     * Generated from protobuf field <code>string account_id = 1;</code>
+     * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */
@@ -175,7 +175,17 @@ class OperationsRequest extends \Google\Protobuf\Internal\Message
      */
     public function getState()
     {
-        return $this->state;
+        return isset($this->state) ? $this->state : 0;
+    }
+
+    public function hasState()
+    {
+        return isset($this->state);
+    }
+
+    public function clearState()
+    {
+        unset($this->state);
     }
 
     /**
@@ -201,7 +211,17 @@ class OperationsRequest extends \Google\Protobuf\Internal\Message
      */
     public function getFigi()
     {
-        return $this->figi;
+        return isset($this->figi) ? $this->figi : '';
+    }
+
+    public function hasFigi()
+    {
+        return isset($this->figi);
+    }
+
+    public function clearFigi()
+    {
+        unset($this->figi);
     }
 
     /**

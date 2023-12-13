@@ -18,13 +18,13 @@ class EditFavoritesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Массив инструментов.
      *
-     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.EditFavoritesRequestInstrument instruments = 1;</code>
+     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.EditFavoritesRequestInstrument instruments = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     private $instruments;
     /**
      *Тип действия со списком.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.EditFavoritesActionType action_type = 6;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.EditFavoritesActionType action_type = 6 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $action_type = 0;
 
@@ -48,7 +48,7 @@ class EditFavoritesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Массив инструментов.
      *
-     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.EditFavoritesRequestInstrument instruments = 1;</code>
+     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.EditFavoritesRequestInstrument instruments = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getInstruments()
@@ -59,7 +59,7 @@ class EditFavoritesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Массив инструментов.
      *
-     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.EditFavoritesRequestInstrument instruments = 1;</code>
+     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.EditFavoritesRequestInstrument instruments = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param \Tinkoff\Invest\V1\EditFavoritesRequestInstrument[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -74,7 +74,7 @@ class EditFavoritesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Тип действия со списком.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.EditFavoritesActionType action_type = 6;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.EditFavoritesActionType action_type = 6 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return int
      */
     public function getActionType()
@@ -85,7 +85,7 @@ class EditFavoritesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Тип действия со списком.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.EditFavoritesActionType action_type = 6;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.EditFavoritesActionType action_type = 6 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param int $var
      * @return $this
      */

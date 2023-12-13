@@ -40,7 +40,7 @@ class Share extends \Google\Protobuf\Internal\Message
      */
     protected $isin = '';
     /**
-     *Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://tinkoff.github.io/investAPI/glossary#lot)
+     *Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://russianinvestments.github.io/investAPI/glossary#lot)
      *
      * Generated from protobuf field <code>int32 lot = 5;</code>
      */
@@ -178,7 +178,7 @@ class Share extends \Google\Protobuf\Internal\Message
      */
     protected $div_yield_flag = false;
     /**
-     *Тип акции. Возможные значения: [ShareType](https://tinkoff.github.io/investAPI/instruments#sharetype)
+     *Тип акции. Возможные значения: [ShareType](https://russianinvestments.github.io/investAPI/instruments#sharetype)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ShareType share_type = 30;</code>
      */
@@ -271,7 +271,7 @@ class Share extends \Google\Protobuf\Internal\Message
      *     @type string $isin
      *          Isin-идентификатор инструмента.
      *     @type int $lot
-     *          Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://tinkoff.github.io/investAPI/glossary#lot)
+     *          Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://russianinvestments.github.io/investAPI/glossary#lot)
      *     @type string $currency
      *          Валюта расчётов.
      *     @type \Tinkoff\Invest\V1\Quotation $klong
@@ -317,7 +317,7 @@ class Share extends \Google\Protobuf\Internal\Message
      *     @type bool $div_yield_flag
      *          Признак наличия дивидендной доходности.
      *     @type int $share_type
-     *          Тип акции. Возможные значения: [ShareType](https://tinkoff.github.io/investAPI/instruments#sharetype)
+     *          Тип акции. Возможные значения: [ShareType](https://russianinvestments.github.io/investAPI/instruments#sharetype)
      *     @type \Tinkoff\Invest\V1\Quotation $min_price_increment
      *          Шаг цены.
      *     @type bool $api_trade_available_flag
@@ -454,7 +454,7 @@ class Share extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://tinkoff.github.io/investAPI/glossary#lot)
+     *Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://russianinvestments.github.io/investAPI/glossary#lot)
      *
      * Generated from protobuf field <code>int32 lot = 5;</code>
      * @return int
@@ -465,7 +465,7 @@ class Share extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://tinkoff.github.io/investAPI/glossary#lot)
+     *Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://russianinvestments.github.io/investAPI/glossary#lot)
      *
      * Generated from protobuf field <code>int32 lot = 5;</code>
      * @param int $var
@@ -1132,7 +1132,7 @@ class Share extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип акции. Возможные значения: [ShareType](https://tinkoff.github.io/investAPI/instruments#sharetype)
+     *Тип акции. Возможные значения: [ShareType](https://russianinvestments.github.io/investAPI/instruments#sharetype)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ShareType share_type = 30;</code>
      * @return int
@@ -1143,7 +1143,7 @@ class Share extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип акции. Возможные значения: [ShareType](https://tinkoff.github.io/investAPI/instruments#sharetype)
+     *Тип акции. Возможные значения: [ShareType](https://russianinvestments.github.io/investAPI/instruments#sharetype)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ShareType share_type = 30;</code>
      * @param int $var

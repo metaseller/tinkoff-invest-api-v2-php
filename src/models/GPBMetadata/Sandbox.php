@@ -18,22 +18,23 @@ class Sandbox
         \GPBMetadata\Orders::initOnce();
         \GPBMetadata\Operations::initOnce();
         \GPBMetadata\Users::initOnce();
+        \GPBMetadata\Google\Api\FieldBehavior::initOnce();
         $pool->internalAddGeneratedFile(
             '
-Ω
-sandbox.proto%tinkoff.public.invest.api.contract.v1orders.protooperations.protousers.proto"
+Ì
+sandbox.proto%tinkoff.public.invest.api.contract.v1orders.protooperations.protousers.protogoogle/api/field_behavior.proto"
 OpenSandboxAccountRequest"0
 OpenSandboxAccountResponse
 
-account_id (	"0
-CloseSandboxAccountRequest
+account_id (	"5
+CloseSandboxAccountRequest
 
-account_id (	"
-CloseSandboxAccountResponse"l
-SandboxPayInRequest
+account_id (	B‡A"
+CloseSandboxAccountResponse"v
+SandboxPayInRequest
 
-account_id (	A
-amount (21.tinkoff.public.invest.api.contract.v1.MoneyValue"Z
+account_id (	B‡AF
+amount (21.tinkoff.public.invest.api.contract.v1.MoneyValueB‡A"Z
 SandboxPayInResponseB
 balance (21.tinkoff.public.invest.api.contract.v1.MoneyValue2Ç
 SandboxServiceô

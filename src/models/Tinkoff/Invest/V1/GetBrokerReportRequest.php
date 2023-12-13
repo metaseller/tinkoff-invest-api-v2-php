@@ -16,7 +16,7 @@ class GetBrokerReportRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор задачи формирования брокерского отчёта.
      *
-     * Generated from protobuf field <code>string task_id = 1;</code>
+     * Generated from protobuf field <code>string task_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $task_id = '';
     /**
@@ -24,7 +24,7 @@ class GetBrokerReportRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>int32 page = 2;</code>
      */
-    protected $page = 0;
+    protected $page = null;
 
     /**
      * Constructor.
@@ -46,7 +46,7 @@ class GetBrokerReportRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор задачи формирования брокерского отчёта.
      *
-     * Generated from protobuf field <code>string task_id = 1;</code>
+     * Generated from protobuf field <code>string task_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getTaskId()
@@ -57,7 +57,7 @@ class GetBrokerReportRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор задачи формирования брокерского отчёта.
      *
-     * Generated from protobuf field <code>string task_id = 1;</code>
+     * Generated from protobuf field <code>string task_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */
@@ -77,7 +77,17 @@ class GetBrokerReportRequest extends \Google\Protobuf\Internal\Message
      */
     public function getPage()
     {
-        return $this->page;
+        return isset($this->page) ? $this->page : 0;
+    }
+
+    public function hasPage()
+    {
+        return isset($this->page);
+    }
+
+    public function clearPage()
+    {
+        unset($this->page);
     }
 
     /**

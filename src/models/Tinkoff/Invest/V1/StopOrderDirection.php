@@ -14,19 +14,19 @@ use UnexpectedValueException;
 class StopOrderDirection
 {
     /**
-     *Значение не указано.
+     *Значение не указано
      *
      * Generated from protobuf enum <code>STOP_ORDER_DIRECTION_UNSPECIFIED = 0;</code>
      */
     const STOP_ORDER_DIRECTION_UNSPECIFIED = 0;
     /**
-     *Покупка.
+     *Покупка
      *
      * Generated from protobuf enum <code>STOP_ORDER_DIRECTION_BUY = 1;</code>
      */
     const STOP_ORDER_DIRECTION_BUY = 1;
     /**
-     *Продажа.
+     *Продажа
      *
      * Generated from protobuf enum <code>STOP_ORDER_DIRECTION_SELL = 2;</code>
      */

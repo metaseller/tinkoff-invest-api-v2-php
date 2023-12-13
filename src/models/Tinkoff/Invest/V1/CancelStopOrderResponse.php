@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class CancelStopOrderResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Время отмены заявки в часовом поясе UTC.
+     *Время отмены заявки в часовом поясе UTC
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp time = 1;</code>
      */
@@ -29,7 +29,7 @@ class CancelStopOrderResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Google\Protobuf\Timestamp $time
-     *          Время отмены заявки в часовом поясе UTC.
+     *          Время отмены заявки в часовом поясе UTC
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +38,7 @@ class CancelStopOrderResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Время отмены заявки в часовом поясе UTC.
+     *Время отмены заявки в часовом поясе UTC
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp time = 1;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -59,7 +59,7 @@ class CancelStopOrderResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Время отмены заявки в часовом поясе UTC.
+     *Время отмены заявки в часовом поясе UTC
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp time = 1;</code>
      * @param \Google\Protobuf\Timestamp $var

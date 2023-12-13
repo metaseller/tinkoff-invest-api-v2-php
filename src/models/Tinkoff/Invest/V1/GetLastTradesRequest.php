@@ -21,17 +21,17 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @deprecated
      */
-    protected $figi = '';
+    protected $figi = null;
     /**
      *Начало запрашиваемого периода в часовом поясе UTC.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2;</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $from = null;
     /**
      *Окончание запрашиваемого периода в часовом поясе UTC.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3;</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $to = null;
     /**
@@ -39,7 +39,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string instrument_id = 4;</code>
      */
-    protected $instrument_id = '';
+    protected $instrument_id = null;
 
     /**
      * Constructor.
@@ -72,7 +72,19 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     public function getFigi()
     {
         @trigger_error('figi is deprecated.', E_USER_DEPRECATED);
-        return $this->figi;
+        return isset($this->figi) ? $this->figi : '';
+    }
+
+    public function hasFigi()
+    {
+        @trigger_error('figi is deprecated.', E_USER_DEPRECATED);
+        return isset($this->figi);
+    }
+
+    public function clearFigi()
+    {
+        @trigger_error('figi is deprecated.', E_USER_DEPRECATED);
+        unset($this->figi);
     }
 
     /**
@@ -95,7 +107,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Начало запрашиваемого периода в часовом поясе UTC.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2;</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return \Google\Protobuf\Timestamp|null
      */
     public function getFrom()
@@ -116,7 +128,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Начало запрашиваемого периода в часовом поясе UTC.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2;</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
@@ -131,7 +143,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Окончание запрашиваемого периода в часовом поясе UTC.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3;</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return \Google\Protobuf\Timestamp|null
      */
     public function getTo()
@@ -152,7 +164,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Окончание запрашиваемого периода в часовом поясе UTC.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3;</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
@@ -172,7 +184,17 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
      */
     public function getInstrumentId()
     {
-        return $this->instrument_id;
+        return isset($this->instrument_id) ? $this->instrument_id : '';
+    }
+
+    public function hasInstrumentId()
+    {
+        return isset($this->instrument_id);
+    }
+
+    public function clearInstrumentId()
+    {
+        unset($this->instrument_id);
     }
 
     /**

@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetStopOrdersResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Массив стоп-заявок по счёту.
+     *Массив стоп-заявок по счёту
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.StopOrder stop_orders = 1;</code>
      */
@@ -29,7 +29,7 @@ class GetStopOrdersResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Tinkoff\Invest\V1\StopOrder[]|\Google\Protobuf\Internal\RepeatedField $stop_orders
-     *          Массив стоп-заявок по счёту.
+     *          Массив стоп-заявок по счёту
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +38,7 @@ class GetStopOrdersResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив стоп-заявок по счёту.
+     *Массив стоп-заявок по счёту
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.StopOrder stop_orders = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -49,7 +49,7 @@ class GetStopOrdersResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив стоп-заявок по счёту.
+     *Массив стоп-заявок по счёту
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.StopOrder stop_orders = 1;</code>
      * @param \Tinkoff\Invest\V1\StopOrder[]|\Google\Protobuf\Internal\RepeatedField $var

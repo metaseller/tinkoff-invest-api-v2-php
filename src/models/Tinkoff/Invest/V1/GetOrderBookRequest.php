@@ -21,11 +21,11 @@ class GetOrderBookRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @deprecated
      */
-    protected $figi = '';
+    protected $figi = null;
     /**
      *Глубина стакана.
      *
-     * Generated from protobuf field <code>int32 depth = 2;</code>
+     * Generated from protobuf field <code>int32 depth = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $depth = 0;
     /**
@@ -33,7 +33,7 @@ class GetOrderBookRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string instrument_id = 3;</code>
      */
-    protected $instrument_id = '';
+    protected $instrument_id = null;
 
     /**
      * Constructor.
@@ -64,7 +64,19 @@ class GetOrderBookRequest extends \Google\Protobuf\Internal\Message
     public function getFigi()
     {
         @trigger_error('figi is deprecated.', E_USER_DEPRECATED);
-        return $this->figi;
+        return isset($this->figi) ? $this->figi : '';
+    }
+
+    public function hasFigi()
+    {
+        @trigger_error('figi is deprecated.', E_USER_DEPRECATED);
+        return isset($this->figi);
+    }
+
+    public function clearFigi()
+    {
+        @trigger_error('figi is deprecated.', E_USER_DEPRECATED);
+        unset($this->figi);
     }
 
     /**
@@ -87,7 +99,7 @@ class GetOrderBookRequest extends \Google\Protobuf\Internal\Message
     /**
      *Глубина стакана.
      *
-     * Generated from protobuf field <code>int32 depth = 2;</code>
+     * Generated from protobuf field <code>int32 depth = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return int
      */
     public function getDepth()
@@ -98,7 +110,7 @@ class GetOrderBookRequest extends \Google\Protobuf\Internal\Message
     /**
      *Глубина стакана.
      *
-     * Generated from protobuf field <code>int32 depth = 2;</code>
+     * Generated from protobuf field <code>int32 depth = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param int $var
      * @return $this
      */
@@ -118,7 +130,17 @@ class GetOrderBookRequest extends \Google\Protobuf\Internal\Message
      */
     public function getInstrumentId()
     {
-        return $this->instrument_id;
+        return isset($this->instrument_id) ? $this->instrument_id : '';
+    }
+
+    public function hasInstrumentId()
+    {
+        return isset($this->instrument_id);
+    }
+
+    public function clearInstrumentId()
+    {
+        unset($this->instrument_id);
     }
 
     /**

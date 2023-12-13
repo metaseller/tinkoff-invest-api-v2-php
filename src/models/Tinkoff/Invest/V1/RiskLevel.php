@@ -14,28 +14,35 @@ use UnexpectedValueException;
 class RiskLevel
 {
     /**
-     *Высокий уровень риска
+     *не указан
      *
-     * Generated from protobuf enum <code>RISK_LEVEL_HIGH = 0;</code>
+     * Generated from protobuf enum <code>RISK_LEVEL_UNSPECIFIED = 0;</code>
      */
-    const RISK_LEVEL_HIGH = 0;
-    /**
-     *Средний уровень риска
-     *
-     * Generated from protobuf enum <code>RISK_LEVEL_MODERATE = 1;</code>
-     */
-    const RISK_LEVEL_MODERATE = 1;
+    const RISK_LEVEL_UNSPECIFIED = 0;
     /**
      *Низкий уровень риска
      *
-     * Generated from protobuf enum <code>RISK_LEVEL_LOW = 2;</code>
+     * Generated from protobuf enum <code>RISK_LEVEL_LOW = 1;</code>
      */
-    const RISK_LEVEL_LOW = 2;
+    const RISK_LEVEL_LOW = 1;
+    /**
+     *Средний уровень риска
+     *
+     * Generated from protobuf enum <code>RISK_LEVEL_MODERATE = 2;</code>
+     */
+    const RISK_LEVEL_MODERATE = 2;
+    /**
+     *Высокий уровень риска
+     *
+     * Generated from protobuf enum <code>RISK_LEVEL_HIGH = 3;</code>
+     */
+    const RISK_LEVEL_HIGH = 3;
 
     private static $valueToName = [
-        self::RISK_LEVEL_HIGH => 'RISK_LEVEL_HIGH',
-        self::RISK_LEVEL_MODERATE => 'RISK_LEVEL_MODERATE',
+        self::RISK_LEVEL_UNSPECIFIED => 'RISK_LEVEL_UNSPECIFIED',
         self::RISK_LEVEL_LOW => 'RISK_LEVEL_LOW',
+        self::RISK_LEVEL_MODERATE => 'RISK_LEVEL_MODERATE',
+        self::RISK_LEVEL_HIGH => 'RISK_LEVEL_HIGH',
     ];
 
     public static function name($value)

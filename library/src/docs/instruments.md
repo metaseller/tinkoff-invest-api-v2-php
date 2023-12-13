@@ -227,6 +227,14 @@ Deprecated Метод получения списка опционов.
 
 - Тело ответа — [Brand](#brand)
 
+
+#### GetAssetFundamentals
+Метод получения фундаментальных показателей по активу
+
+- Тело запроса — [GetAssetFundamentalsRequest](#getassetfundamentalsrequest)
+
+- Тело ответа — [GetAssetFundamentalsResponse](#getassetfundamentalsresponse)
+
  <!-- range .Methods -->
  <!-- range .Services -->
 
@@ -301,7 +309,7 @@ Deprecated Метод получения списка опционов.
 
 | Field | Type | Description |
 | ----- | ---- | ----------- |
-| id_type |  [InstrumentIdType](#instrumentidtype) | Тип идентификатора инструмента. Возможные значения: figi, ticker. Подробнее об идентификации инструментов: [Идентификация инструментов](https://tinkoff.github.io/investAPI/faq_identification/) |
+| id_type |  [InstrumentIdType](#instrumentidtype) | Тип идентификатора инструмента. Возможные значения: figi, ticker. Подробнее об идентификации инструментов: [Идентификация инструментов](https://russianinvestments.github.io/investAPI/faq_identification/) |
 | class_code |  [string](#string) | Идентификатор class_code. Обязателен при id_type = ticker. |
 | id |  [string](#string) | Идентификатор запрашиваемого инструмента. |
  <!-- end Fields -->
@@ -362,6 +370,7 @@ Deprecated Метод получения списка опционов.
 | figi |  [string](#string) | Figi-идентификатор инструмента. |
 | from |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Начало запрашиваемого периода в часовом поясе UTC. Фильтрация по coupon_date (дата выплаты купона) |
 | to |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Окончание запрашиваемого периода в часовом поясе UTC. Фильтрация по coupon_date (дата выплаты купона) |
+| instrument_id |  [string](#string) | Идентификатор инструмента Figi или instrument_uid |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -570,7 +579,7 @@ Deprecated Метод получения списка опционов.
 | ticker |  [string](#string) | Тикер инструмента. |
 | class_code |  [string](#string) | Класс-код (секция торгов). |
 | isin |  [string](#string) | Isin-идентификатор инструмента. |
-| lot |  [int32](#int32) | Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://tinkoff.github.io/investAPI/glossary#lot) |
+| lot |  [int32](#int32) | Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://russianinvestments.github.io/investAPI/glossary#lot) |
 | currency |  [string](#string) | Валюта расчётов. |
 | klong |  [Quotation](#quotation) | Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР) |
 | kshort |  [Quotation](#quotation) | Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР) |
@@ -630,7 +639,7 @@ Deprecated Метод получения списка опционов.
 | ticker |  [string](#string) | Тикер инструмента. |
 | class_code |  [string](#string) | Класс-код (секция торгов). |
 | isin |  [string](#string) | Isin-идентификатор инструмента. |
-| lot |  [int32](#int32) | Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://tinkoff.github.io/investAPI/glossary#lot) |
+| lot |  [int32](#int32) | Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://russianinvestments.github.io/investAPI/glossary#lot) |
 | currency |  [string](#string) | Валюта расчётов. |
 | klong |  [Quotation](#quotation) | Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР) |
 | kshort |  [Quotation](#quotation) | Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР) |
@@ -674,7 +683,7 @@ Deprecated Метод получения списка опционов.
 | ticker |  [string](#string) | Тикер инструмента. |
 | class_code |  [string](#string) | Класс-код (секция торгов). |
 | isin |  [string](#string) | Isin-идентификатор инструмента. |
-| lot |  [int32](#int32) | Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://tinkoff.github.io/investAPI/glossary#lot) |
+| lot |  [int32](#int32) | Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://russianinvestments.github.io/investAPI/glossary#lot) |
 | currency |  [string](#string) | Валюта расчётов. |
 | klong |  [Quotation](#quotation) | Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР) |
 | kshort |  [Quotation](#quotation) | Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР) |
@@ -722,7 +731,7 @@ Deprecated Метод получения списка опционов.
 | figi |  [string](#string) | Figi-идентификатор инструмента. |
 | ticker |  [string](#string) | Тикер инструмента. |
 | class_code |  [string](#string) | Класс-код (секция торгов). |
-| lot |  [int32](#int32) | Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://tinkoff.github.io/investAPI/glossary#lot) |
+| lot |  [int32](#int32) | Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://russianinvestments.github.io/investAPI/glossary#lot) |
 | currency |  [string](#string) | Валюта расчётов. |
 | klong |  [Quotation](#quotation) | Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР) |
 | kshort |  [Quotation](#quotation) | Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР) |
@@ -759,6 +768,9 @@ Deprecated Метод получения списка опционов.
 | blocked_tca_flag |  [bool](#bool) | Флаг заблокированного ТКС. |
 | first_1min_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой минутной свечи. |
 | first_1day_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой дневной свечи. |
+| initial_margin_on_buy |  [MoneyValue](#moneyvalue) | Гарантийное обеспечение при покупке. |
+| initial_margin_on_sell |  [MoneyValue](#moneyvalue) | Гарантийное обеспечение при продаже. |
+| min_price_increment_amount |  [Quotation](#quotation) | Стоимость шага цены. |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -773,7 +785,7 @@ Deprecated Метод получения списка опционов.
 | ticker |  [string](#string) | Тикер инструмента. |
 | class_code |  [string](#string) | Класс-код (секция торгов). |
 | isin |  [string](#string) | Isin-идентификатор инструмента. |
-| lot |  [int32](#int32) | Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://tinkoff.github.io/investAPI/glossary#lot) |
+| lot |  [int32](#int32) | Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://russianinvestments.github.io/investAPI/glossary#lot) |
 | currency |  [string](#string) | Валюта расчётов. |
 | klong |  [Quotation](#quotation) | Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР) |
 | kshort |  [Quotation](#quotation) | Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР) |
@@ -796,7 +808,7 @@ Deprecated Метод получения списка опционов.
 | buy_available_flag |  [bool](#bool) | Признак доступности для покупки. |
 | sell_available_flag |  [bool](#bool) | Признак доступности для продажи. |
 | div_yield_flag |  [bool](#bool) | Признак наличия дивидендной доходности. |
-| share_type |  [ShareType](#sharetype) | Тип акции. Возможные значения: [ShareType](https://tinkoff.github.io/investAPI/instruments#sharetype) |
+| share_type |  [ShareType](#sharetype) | Тип акции. Возможные значения: [ShareType](https://russianinvestments.github.io/investAPI/instruments#sharetype) |
 | min_price_increment |  [Quotation](#quotation) | Шаг цены. |
 | api_trade_available_flag |  [bool](#bool) | Параметр указывает на возможность торговать инструментом через API. |
 | uid |  [string](#string) | Уникальный идентификатор инструмента. |
@@ -822,6 +834,7 @@ Deprecated Метод получения списка опционов.
 | figi |  [string](#string) | Figi-идентификатор инструмента. |
 | from |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Начало запрашиваемого периода в часовом поясе UTC. |
 | to |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Окончание запрашиваемого периода в часовом поясе UTC. |
+| instrument_id |  [string](#string) | Идентификатор инструмента Figi или instrument_uid |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -858,6 +871,7 @@ Deprecated Метод получения списка опционов.
 | Field | Type | Description |
 | ----- | ---- | ----------- |
 | figi |  [string](#string) | Идентификатор инструмента. |
+| instrument_id |  [string](#string) | Идентификатор инструмента Figi или instrument_uid |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -897,11 +911,11 @@ Deprecated Метод получения списка опционов.
 | ticker |  [string](#string) | Тикер инструмента. |
 | class_code |  [string](#string) | Класс-код инструмента. |
 | isin |  [string](#string) | Isin-идентификатор инструмента. |
-| lot |  [int32](#int32) | Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://tinkoff.github.io/investAPI/glossary#lot) |
+| lot |  [int32](#int32) | Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://russianinvestments.github.io/investAPI/glossary#lot) |
 | currency |  [string](#string) | Валюта расчётов. |
 | klong |  [Quotation](#quotation) | Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР) |
 | kshort |  [Quotation](#quotation) | Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР) |
-| dlong |  [Quotation](#quotation) | ССтавка риска начальной маржи для КСУР лонг.Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/) |
+| dlong |  [Quotation](#quotation) | Ставка риска начальной маржи для КСУР лонг.Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/) |
 | dshort |  [Quotation](#quotation) | Ставка риска начальной маржи для КСУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/) |
 | dlong_min |  [Quotation](#quotation) | Ставка риска начальной маржи для КПУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/) |
 | dshort_min |  [Quotation](#quotation) | Ставка риска начальной маржи для КПУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/) |
@@ -940,6 +954,7 @@ Deprecated Метод получения списка опционов.
 | figi |  [string](#string) | Figi-идентификатор инструмента. |
 | from |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Начало запрашиваемого периода в часовом поясе UTC. Фильтрация происходит по параметру *record_date* (дата фиксации реестра). |
 | to |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Окончание запрашиваемого периода в часовом поясе UTC. Фильтрация происходит по параметру *record_date* (дата фиксации реестра). |
+| instrument_id |  [string](#string) | Идентификатор инструмента Figi или instrument_uid |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -1423,6 +1438,11 @@ Deprecated Метод получения списка опционов.
 #### GetBrandsRequest
 Запрос списка брендов.
 
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| paging |  [Page](#page) | Настройки пагинации. |
+ <!-- end Fields -->
  <!-- end HasFields -->
 
 
@@ -1444,6 +1464,95 @@ Deprecated Метод получения списка опционов.
 | Field | Type | Description |
 | ----- | ---- | ----------- |
 | brands | Массив объектов [Brand](#brand) | Массив брендов. |
+| paging |  [PageResponse](#pageresponse) | Данные по пагинации |
+ <!-- end Fields -->
+ <!-- end HasFields -->
+
+
+#### GetAssetFundamentalsRequest
+
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| assets | Массив объектов [string](#string) | Массив идентификаторов активов (не более 100 шт.). |
+ <!-- end Fields -->
+ <!-- end HasFields -->
+
+
+#### GetAssetFundamentalsResponse
+
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| fundamentals | Массив объектов [GetAssetFundamentalsResponse.StatisticResponse](#getassetfundamentalsresponsestatisticresponse) |  |
+ <!-- end Fields -->
+ <!-- end HasFields -->
+
+
+#### GetAssetFundamentalsResponse.StatisticResponse
+
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| asset_uid |  [string](#string) |  |
+| currency |  [string](#string) | Валюта |
+| market_capitalization |  [double](#double) | Рыночная капитализация |
+| high_price_last_52_weeks |  [double](#double) | Максимум за год |
+| low_price_last_52_weeks |  [double](#double) | Минимум за год |
+| average_daily_volume_last_10_days |  [double](#double) | Средний объем торгов за 10 дней |
+| average_daily_volume_last_4_weeks |  [double](#double) | Средний объем торгов за месяц |
+| beta |  [double](#double) |  |
+| free_float |  [double](#double) | Доля акций в свободном обращении |
+| forward_annual_dividend_yield |  [double](#double) | Процент форвардной дивидендной доходности по отношению к цене акций. |
+| shares_outstanding |  [double](#double) | Количество акций в обращении |
+| revenue_ttm |  [double](#double) | Выручка |
+| ebitda_ttm |  [double](#double) | EBITDA Прибыль до вычета процентов, налогов, износа и амортизации |
+| net_income_ttm |  [double](#double) | Чистая прибыль |
+| eps_ttm |  [double](#double) | EPS Величина чистой прибыли компании, приходящуюся на каждую обыкновенную акцию |
+| diluted_eps_ttm |  [double](#double) | EPS компании с допущением, что все конвертируемые ценные бумаги компании были сконвертированы в обыкновенные акции |
+| free_cash_flow_ttm |  [double](#double) | Свободный денежный поток |
+| five_year_annual_revenue_growth_rate |  [double](#double) | Среднегодовой  рocт выручки (за 5 лет) |
+| three_year_annual_revenue_growth_rate |  [double](#double) | Среднегодовой  рocт выручки (за 3 года) |
+| pe_ratio_ttm |  [double](#double) | Показывает соотношение рыночной капитализации компании к ее чистой прибыли |
+| price_to_sales_ttm |  [double](#double) | Показывает соотношение рыночной капитализации компании к ее выручке |
+| price_to_book_ttm |  [double](#double) | Показывает соотношение рыночной капитализации компании к ее балансовой стоимости |
+| price_to_free_cash_flow_ttm |  [double](#double) | Показывает соотношение рыночной капитализации компании к ее свободному денежному потоку |
+| total_enterprise_value_mrq |  [double](#double) | Рыночная стоимость компании |
+| ev_to_ebitda_mrq |  [double](#double) | Соотношение EV и EBITDA |
+| net_margin_mrq |  [double](#double) | Маржа чистой прибыли |
+| net_interest_margin_mrq |  [double](#double) | Рентабельность чистой прибыли |
+| roe |  [double](#double) | Рентабельность собственного капитала |
+| roa |  [double](#double) | Рентабельность активов |
+| roic |  [double](#double) | Рентабельность активов |
+| total_debt_mrq |  [double](#double) | Сумма краткосрочных и долгосрочных обязательств компании |
+| total_debt_to_equity_mrq |  [double](#double) | Соотношение долга к собственному капиталу |
+| total_debt_to_ebitda_mrq |  [double](#double) | Total Debt/EBITDA |
+| free_cash_flow_to_price |  [double](#double) | Отношение свободглго кэша к стоимости |
+| net_debt_to_ebitda |  [double](#double) | Отношение чистого долга к ebitda |
+| current_ratio_mrq |  [double](#double) | Коэффициент текущей ликвидности |
+| fixed_charge_coverage_ratio_fy |  [double](#double) | Коэффициент покрытия фиксированных платежей (FCCR) |
+| dividend_yield_daily_ttm |  [double](#double) | Дивидендная доходность за 12 мес |
+| dividend_rate_ttm |  [double](#double) | Выплаченные дивиденды за 12 мес. |
+| dividends_per_share |  [double](#double) | Значение дивидендов на акцию |
+| five_years_average_dividend_yield |  [double](#double) | Средняя дивидендная доходность за 5 лет |
+| five_year_annual_dividend_growth_rate |  [double](#double) | Среднегодовой рост дивидендов за 5 лет |
+| dividend_payout_ratio_fy |  [double](#double) | Процент чистой прибыли, уходящий на выплату дивидендов |
+| buy_back_ttm |  [double](#double) | Деньги, потраченные на обратный выкуп акций |
+| one_year_annual_revenue_growth_rate |  [double](#double) | Рост выручки за 1 год |
+| domicile_indicator_code |  [string](#string) | Код страны |
+| adr_to_common_share_ratio |  [double](#double) | Соотношение депозитарной расписки к акциям |
+| number_of_employees |  [double](#double) | Количество сотрудников |
+| ex_dividend_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) |  |
+| fiscal_period_start_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Начало фискального периода |
+| fiscal_period_end_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Конец фискального периода |
+| revenue_change_five_years |  [double](#double) | Изменение общего дохода за 5 лет |
+| eps_change_five_years |  [double](#double) | Изменение eps за 5 лет |
+| ebitda_change_five_years |  [double](#double) | Изменение ebitda за 5 лет |
+| total_debt_change_five_years |  [double](#double) | Изменение общей задолжности за 5 лет |
+| ev_to_sales |  [double](#double) | Отношение EV к выручке |
  <!-- end Fields -->
  <!-- end HasFields -->
  <!-- end messages -->
@@ -1517,7 +1626,7 @@ Deprecated Метод получения списка опционов.
 
 
 #### InstrumentIdType
-Тип идентификатора инструмента. Подробнее об идентификации инструментов: [Идентификация инструментов](https://tinkoff.github.io/investAPI/faq_identification/)
+Тип идентификатора инструмента. Подробнее об идентификации инструментов: [Идентификация инструментов](https://russianinvestments.github.io/investAPI/faq_identification/)
 
 | Name | Number | Description |
 | ---- | ------ | ----------- |
@@ -1616,36 +1725,29 @@ Deprecated Метод получения списка опционов.
 
 | Name | Number | Description |
 | ---- | ------ | ----------- |
-| RISK_LEVEL_HIGH | 0 | Высокий уровень риска |
-| RISK_LEVEL_MODERATE | 1 | Средний уровень риска |
-| RISK_LEVEL_LOW | 2 | Низкий уровень риска |
+| RISK_LEVEL_UNSPECIFIED | 0 | не указан |
+| RISK_LEVEL_LOW | 1 | Низкий уровень риска |
+| RISK_LEVEL_MODERATE | 2 | Средний уровень риска |
+| RISK_LEVEL_HIGH | 3 | Высокий уровень риска |
 
 
  <!-- range .Enums -->
  <!-- range HasServices -->
  <!-- range .Files -->
 
-#### SecurityTradingStatus
-
+#### InstrumentType
 | Name | Number | Description |
 | ---- | ------ | ----------- |
-| SECURITY_TRADING_STATUS_UNSPECIFIED | 0 | Торговый статус не определён |
-| SECURITY_TRADING_STATUS_NOT_AVAILABLE_FOR_TRADING | 1 | Недоступен для торгов |
-| SECURITY_TRADING_STATUS_OPENING_PERIOD | 2 | Период открытия торгов |
-| SECURITY_TRADING_STATUS_CLOSING_PERIOD | 3 | Период закрытия торгов |
-| SECURITY_TRADING_STATUS_BREAK_IN_TRADING | 4 | Перерыв в торговле |
-| SECURITY_TRADING_STATUS_NORMAL_TRADING | 5 | Нормальная торговля |
-| SECURITY_TRADING_STATUS_CLOSING_AUCTION | 6 | Аукцион закрытия |
-| SECURITY_TRADING_STATUS_DARK_POOL_AUCTION | 7 | Аукцион крупных пакетов |
-| SECURITY_TRADING_STATUS_DISCRETE_AUCTION | 8 | Дискретный аукцион |
-| SECURITY_TRADING_STATUS_OPENING_AUCTION_PERIOD | 9 | Аукцион открытия |
-| SECURITY_TRADING_STATUS_TRADING_AT_CLOSING_AUCTION_PRICE | 10 | Период торгов по цене аукциона закрытия |
-| SECURITY_TRADING_STATUS_SESSION_ASSIGNED | 11 | Сессия назначена |
-| SECURITY_TRADING_STATUS_SESSION_CLOSE | 12 | Сессия закрыта |
-| SECURITY_TRADING_STATUS_SESSION_OPEN | 13 | Сессия открыта |
-| SECURITY_TRADING_STATUS_DEALER_NORMAL_TRADING | 14 |Доступна торговля в режиме внутренней ликвидности брокера |
-| SECURITY_TRADING_STATUS_DEALER_BREAK_IN_TRADING | 15 |Перерыв торговли в режиме внутренней ликвидности брокера |
-| SECURITY_TRADING_STATUS_DEALER_NOT_AVAILABLE_FOR_TRADING | 16 |Недоступна торговля в режиме внутренней ликвидности брокера |
+| INSTRUMENT_TYPE_UNSPECIFIED | 0 | Тип инструмента не определён |
+| INSTRUMENT_TYPE_BOND | 1 | Облигация |
+| INSTRUMENT_TYPE_SHARE | 2 | Акция |
+| INSTRUMENT_TYPE_CURRENCY | 3 | Валюта |
+| INSTRUMENT_TYPE_ETF | 4 | Exchange-traded fund |
+| INSTRUMENT_TYPE_FUTURES | 5 | Фьючерс |
+| INSTRUMENT_TYPE_SP | 6 | Структурная нота |
+| INSTRUMENT_TYPE_OPTION | 7 | Опцион |
+| INSTRUMENT_TYPE_CLEARING_CERTIFICATE | 8 | Clearing certificate |
+
 
 ### Нестандартные типы данных
 

@@ -21,6 +21,12 @@ class GetBrandsResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.Brand brands = 1;</code>
      */
     private $brands;
+    /**
+     *Данные по пагинации
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PageResponse paging = 2;</code>
+     */
+    protected $paging = null;
 
     /**
      * Constructor.
@@ -30,6 +36,8 @@ class GetBrandsResponse extends \Google\Protobuf\Internal\Message
      *
      *     @type \Tinkoff\Invest\V1\Brand[]|\Google\Protobuf\Internal\RepeatedField $brands
      *          Массив брендов.
+     *     @type \Tinkoff\Invest\V1\PageResponse $paging
+     *          Данные по пагинации
      * }
      */
     public function __construct($data = NULL) {
@@ -59,6 +67,42 @@ class GetBrandsResponse extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\Brand::class);
         $this->brands = $arr;
+
+        return $this;
+    }
+
+    /**
+     *Данные по пагинации
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PageResponse paging = 2;</code>
+     * @return \Tinkoff\Invest\V1\PageResponse|null
+     */
+    public function getPaging()
+    {
+        return isset($this->paging) ? $this->paging : null;
+    }
+
+    public function hasPaging()
+    {
+        return isset($this->paging);
+    }
+
+    public function clearPaging()
+    {
+        unset($this->paging);
+    }
+
+    /**
+     *Данные по пагинации
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PageResponse paging = 2;</code>
+     * @param \Tinkoff\Invest\V1\PageResponse $var
+     * @return $this
+     */
+    public function setPaging($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\PageResponse::class);
+        $this->paging = $var;
 
         return $this;
     }

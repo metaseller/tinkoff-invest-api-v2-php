@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class PostStopOrderResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Уникальный идентификатор стоп-заявки.
+     *Уникальный идентификатор стоп-заявки
      *
      * Generated from protobuf field <code>string stop_order_id = 1;</code>
      */
@@ -29,7 +29,7 @@ class PostStopOrderResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $stop_order_id
-     *          Уникальный идентификатор стоп-заявки.
+     *          Уникальный идентификатор стоп-заявки
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +38,7 @@ class PostStopOrderResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Уникальный идентификатор стоп-заявки.
+     *Уникальный идентификатор стоп-заявки
      *
      * Generated from protobuf field <code>string stop_order_id = 1;</code>
      * @return string
@@ -49,7 +49,7 @@ class PostStopOrderResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Уникальный идентификатор стоп-заявки.
+     *Уникальный идентификатор стоп-заявки
      *
      * Generated from protobuf field <code>string stop_order_id = 1;</code>
      * @param string $var

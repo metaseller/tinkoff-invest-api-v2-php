@@ -18,15 +18,21 @@ class GetOrderStateRequest extends \Google\Protobuf\Internal\Message
     /**
      *Номер счёта.
      *
-     * Generated from protobuf field <code>string account_id = 1;</code>
+     * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $account_id = '';
     /**
      *Идентификатор заявки.
      *
-     * Generated from protobuf field <code>string order_id = 2;</code>
+     * Generated from protobuf field <code>string order_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $order_id = '';
+    /**
+     *Тип цены.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PriceType price_type = 3;</code>
+     */
+    protected $price_type = 0;
 
     /**
      * Constructor.
@@ -38,6 +44,8 @@ class GetOrderStateRequest extends \Google\Protobuf\Internal\Message
      *          Номер счёта.
      *     @type string $order_id
      *          Идентификатор заявки.
+     *     @type int $price_type
+     *          Тип цены.
      * }
      */
     public function __construct($data = NULL) {
@@ -48,7 +56,7 @@ class GetOrderStateRequest extends \Google\Protobuf\Internal\Message
     /**
      *Номер счёта.
      *
-     * Generated from protobuf field <code>string account_id = 1;</code>
+     * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getAccountId()
@@ -59,7 +67,7 @@ class GetOrderStateRequest extends \Google\Protobuf\Internal\Message
     /**
      *Номер счёта.
      *
-     * Generated from protobuf field <code>string account_id = 1;</code>
+     * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */
@@ -74,7 +82,7 @@ class GetOrderStateRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор заявки.
      *
-     * Generated from protobuf field <code>string order_id = 2;</code>
+     * Generated from protobuf field <code>string order_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getOrderId()
@@ -85,7 +93,7 @@ class GetOrderStateRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор заявки.
      *
-     * Generated from protobuf field <code>string order_id = 2;</code>
+     * Generated from protobuf field <code>string order_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */
@@ -93,6 +101,32 @@ class GetOrderStateRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->order_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тип цены.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PriceType price_type = 3;</code>
+     * @return int
+     */
+    public function getPriceType()
+    {
+        return $this->price_type;
+    }
+
+    /**
+     *Тип цены.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PriceType price_type = 3;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setPriceType($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\PriceType::class);
+        $this->price_type = $var;
 
         return $this;
     }

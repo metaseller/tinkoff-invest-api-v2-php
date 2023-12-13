@@ -16,9 +16,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class InstrumentRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Тип идентификатора инструмента. Возможные значения: figi, ticker. Подробнее об идентификации инструментов: [Идентификация инструментов](https://tinkoff.github.io/investAPI/faq_identification/)
+     * Тип идентификатора инструмента. Возможные значения: figi, ticker. Подробнее об идентификации инструментов: [Идентификация инструментов](https://russianinvestments.github.io/investAPI/faq_identification/)
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentIdType id_type = 1;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentIdType id_type = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $id_type = 0;
     /**
@@ -26,11 +26,11 @@ class InstrumentRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string class_code = 2;</code>
      */
-    protected $class_code = '';
+    protected $class_code = null;
     /**
      * Идентификатор запрашиваемого инструмента.
      *
-     * Generated from protobuf field <code>string id = 3;</code>
+     * Generated from protobuf field <code>string id = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $id = '';
 
@@ -41,7 +41,7 @@ class InstrumentRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $id_type
-     *           Тип идентификатора инструмента. Возможные значения: figi, ticker. Подробнее об идентификации инструментов: [Идентификация инструментов](https://tinkoff.github.io/investAPI/faq_identification/)
+     *           Тип идентификатора инструмента. Возможные значения: figi, ticker. Подробнее об идентификации инструментов: [Идентификация инструментов](https://russianinvestments.github.io/investAPI/faq_identification/)
      *     @type string $class_code
      *           Идентификатор class_code. Обязателен при id_type = ticker.
      *     @type string $id
@@ -54,9 +54,9 @@ class InstrumentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Тип идентификатора инструмента. Возможные значения: figi, ticker. Подробнее об идентификации инструментов: [Идентификация инструментов](https://tinkoff.github.io/investAPI/faq_identification/)
+     * Тип идентификатора инструмента. Возможные значения: figi, ticker. Подробнее об идентификации инструментов: [Идентификация инструментов](https://russianinvestments.github.io/investAPI/faq_identification/)
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentIdType id_type = 1;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentIdType id_type = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return int
      */
     public function getIdType()
@@ -65,9 +65,9 @@ class InstrumentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Тип идентификатора инструмента. Возможные значения: figi, ticker. Подробнее об идентификации инструментов: [Идентификация инструментов](https://tinkoff.github.io/investAPI/faq_identification/)
+     * Тип идентификатора инструмента. Возможные значения: figi, ticker. Подробнее об идентификации инструментов: [Идентификация инструментов](https://russianinvestments.github.io/investAPI/faq_identification/)
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentIdType id_type = 1;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentIdType id_type = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param int $var
      * @return $this
      */
@@ -87,7 +87,17 @@ class InstrumentRequest extends \Google\Protobuf\Internal\Message
      */
     public function getClassCode()
     {
-        return $this->class_code;
+        return isset($this->class_code) ? $this->class_code : '';
+    }
+
+    public function hasClassCode()
+    {
+        return isset($this->class_code);
+    }
+
+    public function clearClassCode()
+    {
+        unset($this->class_code);
     }
 
     /**
@@ -108,7 +118,7 @@ class InstrumentRequest extends \Google\Protobuf\Internal\Message
     /**
      * Идентификатор запрашиваемого инструмента.
      *
-     * Generated from protobuf field <code>string id = 3;</code>
+     * Generated from protobuf field <code>string id = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getId()
@@ -119,7 +129,7 @@ class InstrumentRequest extends \Google\Protobuf\Internal\Message
     /**
      * Идентификатор запрашиваемого инструмента.
      *
-     * Generated from protobuf field <code>string id = 3;</code>
+     * Generated from protobuf field <code>string id = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */

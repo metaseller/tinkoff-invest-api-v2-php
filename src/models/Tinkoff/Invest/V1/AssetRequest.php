@@ -18,7 +18,7 @@ class AssetRequest extends \Google\Protobuf\Internal\Message
     /**
      *uid-идентификатор актива.
      *
-     * Generated from protobuf field <code>string id = 1;</code>
+     * Generated from protobuf field <code>string id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $id = '';
 
@@ -40,7 +40,7 @@ class AssetRequest extends \Google\Protobuf\Internal\Message
     /**
      *uid-идентификатор актива.
      *
-     * Generated from protobuf field <code>string id = 1;</code>
+     * Generated from protobuf field <code>string id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getId()
@@ -51,7 +51,7 @@ class AssetRequest extends \Google\Protobuf\Internal\Message
     /**
      *uid-идентификатор актива.
      *
-     * Generated from protobuf field <code>string id = 1;</code>
+     * Generated from protobuf field <code>string id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */

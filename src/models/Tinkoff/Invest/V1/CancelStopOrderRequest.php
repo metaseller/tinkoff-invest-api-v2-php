@@ -16,15 +16,15 @@ use Google\Protobuf\Internal\GPBUtil;
 class CancelStopOrderRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Идентификатор счёта клиента.
+     *Идентификатор счёта клиента
      *
-     * Generated from protobuf field <code>string account_id = 1;</code>
+     * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $account_id = '';
     /**
-     *Уникальный идентификатор стоп-заявки.
+     *Уникальный идентификатор стоп-заявки
      *
-     * Generated from protobuf field <code>string stop_order_id = 2;</code>
+     * Generated from protobuf field <code>string stop_order_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $stop_order_id = '';
 
@@ -35,9 +35,9 @@ class CancelStopOrderRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $account_id
-     *          Идентификатор счёта клиента.
+     *          Идентификатор счёта клиента
      *     @type string $stop_order_id
-     *          Уникальный идентификатор стоп-заявки.
+     *          Уникальный идентификатор стоп-заявки
      * }
      */
     public function __construct($data = NULL) {
@@ -46,9 +46,9 @@ class CancelStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор счёта клиента.
+     *Идентификатор счёта клиента
      *
-     * Generated from protobuf field <code>string account_id = 1;</code>
+     * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getAccountId()
@@ -57,9 +57,9 @@ class CancelStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор счёта клиента.
+     *Идентификатор счёта клиента
      *
-     * Generated from protobuf field <code>string account_id = 1;</code>
+     * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */
@@ -72,9 +72,9 @@ class CancelStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Уникальный идентификатор стоп-заявки.
+     *Уникальный идентификатор стоп-заявки
      *
-     * Generated from protobuf field <code>string stop_order_id = 2;</code>
+     * Generated from protobuf field <code>string stop_order_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getStopOrderId()
@@ -83,9 +83,9 @@ class CancelStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Уникальный идентификатор стоп-заявки.
+     *Уникальный идентификатор стоп-заявки
      *
-     * Generated from protobuf field <code>string stop_order_id = 2;</code>
+     * Generated from protobuf field <code>string stop_order_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */

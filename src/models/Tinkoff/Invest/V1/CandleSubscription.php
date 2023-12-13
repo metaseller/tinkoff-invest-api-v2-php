@@ -39,6 +39,12 @@ class CandleSubscription extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string instrument_uid = 4;</code>
      */
     protected $instrument_uid = '';
+    /**
+     *Флаг ожидания закрытия временного интервала для отправки свечи
+     *
+     * Generated from protobuf field <code>bool waiting_close = 5;</code>
+     */
+    protected $waiting_close = false;
 
     /**
      * Constructor.
@@ -54,6 +60,8 @@ class CandleSubscription extends \Google\Protobuf\Internal\Message
      *          Статус подписки.
      *     @type string $instrument_uid
      *          Uid инструмента
+     *     @type bool $waiting_close
+     *          Флаг ожидания закрытия временного интервала для отправки свечи
      * }
      */
     public function __construct($data = NULL) {
@@ -161,6 +169,32 @@ class CandleSubscription extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->instrument_uid = $var;
+
+        return $this;
+    }
+
+    /**
+     *Флаг ожидания закрытия временного интервала для отправки свечи
+     *
+     * Generated from protobuf field <code>bool waiting_close = 5;</code>
+     * @return bool
+     */
+    public function getWaitingClose()
+    {
+        return $this->waiting_close;
+    }
+
+    /**
+     *Флаг ожидания закрытия временного интервала для отправки свечи
+     *
+     * Generated from protobuf field <code>bool waiting_close = 5;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setWaitingClose($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->waiting_close = $var;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 site_name: 'TINKOFF INVEST API'
 docs_dir: docs
-repo_url: https://github.com/Tinkoff/investAPI
+repo_url: https://github.com/RussianInvestments/investAPI
 theme:
   name: material
   custom_dir: overrides
@@ -51,6 +51,8 @@ nav:
   - "SLA": sla.md
   - Примеры запросов: example.md
   - "EOL v1": eol_v1.md
+  - "Stream-соединения" : stream.md
+  - "Цены облигаций и фьючерсов" : points.md
 - Ответы на частые вопросы: faq.md
 - Языки программирования:
   - Python: faq_python.md
@@ -90,4 +92,6 @@ nav:
   - Методы: sandbox.md
   - FAQ: faq_sandbox.md
   - Отличия контура песочницы: url_difference.md
-- Коды ошибок: errors.md
+- Коды ошибок: 
+  - "GRPC": errors.md 
+  - "WebSocket": ws\errors.md

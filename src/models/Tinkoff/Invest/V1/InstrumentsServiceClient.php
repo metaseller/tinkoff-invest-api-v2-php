@@ -421,4 +421,19 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * Метод получения фундаментальных показателей по активу
+     * @param \Tinkoff\Invest\V1\GetAssetFundamentalsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetAssetFundamentals(\Tinkoff\Invest\V1\GetAssetFundamentalsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetAssetFundamentals',
+        $argument,
+        ['\Tinkoff\Invest\V1\GetAssetFundamentalsResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }

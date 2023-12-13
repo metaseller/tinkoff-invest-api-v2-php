@@ -14,19 +14,19 @@ use UnexpectedValueException;
 class StopOrderExpirationType
 {
     /**
-     *Значение не указано.
+     *Значение не указано
      *
      * Generated from protobuf enum <code>STOP_ORDER_EXPIRATION_TYPE_UNSPECIFIED = 0;</code>
      */
     const STOP_ORDER_EXPIRATION_TYPE_UNSPECIFIED = 0;
     /**
-     *Действительно до отмены.
+     *Действительно до отмены
      *
      * Generated from protobuf enum <code>STOP_ORDER_EXPIRATION_TYPE_GOOD_TILL_CANCEL = 1;</code>
      */
     const STOP_ORDER_EXPIRATION_TYPE_GOOD_TILL_CANCEL = 1;
     /**
-     *Действительно до даты снятия.
+     *Действительно до даты снятия
      *
      * Generated from protobuf enum <code>STOP_ORDER_EXPIRATION_TYPE_GOOD_TILL_DATE = 2;</code>
      */

@@ -18,9 +18,16 @@ class GetFuturesMarginRequest extends \Google\Protobuf\Internal\Message
     /**
      * Идентификатор инструмента.
      *
-     * Generated from protobuf field <code>string figi = 1;</code>
+     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
+     * @deprecated
      */
     protected $figi = '';
+    /**
+     *Идентификатор инструмента Figi или instrument_uid
+     *
+     * Generated from protobuf field <code>string instrument_id = 4 [(.google.api.field_behavior) = REQUIRED];</code>
+     */
+    protected $instrument_id = '';
 
     /**
      * Constructor.
@@ -30,6 +37,8 @@ class GetFuturesMarginRequest extends \Google\Protobuf\Internal\Message
      *
      *     @type string $figi
      *           Идентификатор инструмента.
+     *     @type string $instrument_id
+     *          Идентификатор инструмента Figi или instrument_uid
      * }
      */
     public function __construct($data = NULL) {
@@ -40,25 +49,55 @@ class GetFuturesMarginRequest extends \Google\Protobuf\Internal\Message
     /**
      * Идентификатор инструмента.
      *
-     * Generated from protobuf field <code>string figi = 1;</code>
+     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @return string
+     * @deprecated
      */
     public function getFigi()
     {
+        @trigger_error('figi is deprecated.', E_USER_DEPRECATED);
         return $this->figi;
     }
 
     /**
      * Идентификатор инструмента.
      *
-     * Generated from protobuf field <code>string figi = 1;</code>
+     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @param string $var
      * @return $this
+     * @deprecated
      */
     public function setFigi($var)
     {
+        @trigger_error('figi is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkString($var, True);
         $this->figi = $var;
+
+        return $this;
+    }
+
+    /**
+     *Идентификатор инструмента Figi или instrument_uid
+     *
+     * Generated from protobuf field <code>string instrument_id = 4 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return string
+     */
+    public function getInstrumentId()
+    {
+        return $this->instrument_id;
+    }
+
+    /**
+     *Идентификатор инструмента Figi или instrument_uid
+     *
+     * Generated from protobuf field <code>string instrument_id = 4 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setInstrumentId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->instrument_id = $var;
 
         return $this;
     }

@@ -31,11 +31,88 @@ class SubscriptionInterval
      * Generated from protobuf enum <code>SUBSCRIPTION_INTERVAL_FIVE_MINUTES = 2;</code>
      */
     const SUBSCRIPTION_INTERVAL_FIVE_MINUTES = 2;
+    /**
+     *Пятнадцатиминутные свечи
+     *
+     * Generated from protobuf enum <code>SUBSCRIPTION_INTERVAL_FIFTEEN_MINUTES = 3;</code>
+     */
+    const SUBSCRIPTION_INTERVAL_FIFTEEN_MINUTES = 3;
+    /**
+     *Часовые свечи
+     *
+     * Generated from protobuf enum <code>SUBSCRIPTION_INTERVAL_ONE_HOUR = 4;</code>
+     */
+    const SUBSCRIPTION_INTERVAL_ONE_HOUR = 4;
+    /**
+     *Дневные свечи
+     *
+     * Generated from protobuf enum <code>SUBSCRIPTION_INTERVAL_ONE_DAY = 5;</code>
+     */
+    const SUBSCRIPTION_INTERVAL_ONE_DAY = 5;
+    /**
+     *Двухминутные свечи
+     *
+     * Generated from protobuf enum <code>SUBSCRIPTION_INTERVAL_2_MIN = 6;</code>
+     */
+    const SUBSCRIPTION_INTERVAL_2_MIN = 6;
+    /**
+     *Трехминутные свечи
+     *
+     * Generated from protobuf enum <code>SUBSCRIPTION_INTERVAL_3_MIN = 7;</code>
+     */
+    const SUBSCRIPTION_INTERVAL_3_MIN = 7;
+    /**
+     *Десятиминутные свечи
+     *
+     * Generated from protobuf enum <code>SUBSCRIPTION_INTERVAL_10_MIN = 8;</code>
+     */
+    const SUBSCRIPTION_INTERVAL_10_MIN = 8;
+    /**
+     *Тридцатиминутные свечи
+     *
+     * Generated from protobuf enum <code>SUBSCRIPTION_INTERVAL_30_MIN = 9;</code>
+     */
+    const SUBSCRIPTION_INTERVAL_30_MIN = 9;
+    /**
+     *Двухчасовые свечи
+     *
+     * Generated from protobuf enum <code>SUBSCRIPTION_INTERVAL_2_HOUR = 10;</code>
+     */
+    const SUBSCRIPTION_INTERVAL_2_HOUR = 10;
+    /**
+     *Четырехчасовые свечи
+     *
+     * Generated from protobuf enum <code>SUBSCRIPTION_INTERVAL_4_HOUR = 11;</code>
+     */
+    const SUBSCRIPTION_INTERVAL_4_HOUR = 11;
+    /**
+     *Недельные свечи
+     *
+     * Generated from protobuf enum <code>SUBSCRIPTION_INTERVAL_WEEK = 12;</code>
+     */
+    const SUBSCRIPTION_INTERVAL_WEEK = 12;
+    /**
+     *Месячные свечи
+     *
+     * Generated from protobuf enum <code>SUBSCRIPTION_INTERVAL_MONTH = 13;</code>
+     */
+    const SUBSCRIPTION_INTERVAL_MONTH = 13;
 
     private static $valueToName = [
         self::SUBSCRIPTION_INTERVAL_UNSPECIFIED => 'SUBSCRIPTION_INTERVAL_UNSPECIFIED',
         self::SUBSCRIPTION_INTERVAL_ONE_MINUTE => 'SUBSCRIPTION_INTERVAL_ONE_MINUTE',
         self::SUBSCRIPTION_INTERVAL_FIVE_MINUTES => 'SUBSCRIPTION_INTERVAL_FIVE_MINUTES',
+        self::SUBSCRIPTION_INTERVAL_FIFTEEN_MINUTES => 'SUBSCRIPTION_INTERVAL_FIFTEEN_MINUTES',
+        self::SUBSCRIPTION_INTERVAL_ONE_HOUR => 'SUBSCRIPTION_INTERVAL_ONE_HOUR',
+        self::SUBSCRIPTION_INTERVAL_ONE_DAY => 'SUBSCRIPTION_INTERVAL_ONE_DAY',
+        self::SUBSCRIPTION_INTERVAL_2_MIN => 'SUBSCRIPTION_INTERVAL_2_MIN',
+        self::SUBSCRIPTION_INTERVAL_3_MIN => 'SUBSCRIPTION_INTERVAL_3_MIN',
+        self::SUBSCRIPTION_INTERVAL_10_MIN => 'SUBSCRIPTION_INTERVAL_10_MIN',
+        self::SUBSCRIPTION_INTERVAL_30_MIN => 'SUBSCRIPTION_INTERVAL_30_MIN',
+        self::SUBSCRIPTION_INTERVAL_2_HOUR => 'SUBSCRIPTION_INTERVAL_2_HOUR',
+        self::SUBSCRIPTION_INTERVAL_4_HOUR => 'SUBSCRIPTION_INTERVAL_4_HOUR',
+        self::SUBSCRIPTION_INTERVAL_WEEK => 'SUBSCRIPTION_INTERVAL_WEEK',
+        self::SUBSCRIPTION_INTERVAL_MONTH => 'SUBSCRIPTION_INTERVAL_MONTH',
     ];
 
     public static function name($value)

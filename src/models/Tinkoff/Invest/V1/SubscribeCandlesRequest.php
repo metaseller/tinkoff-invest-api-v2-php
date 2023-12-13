@@ -28,7 +28,7 @@ class SubscribeCandlesRequest extends \Google\Protobuf\Internal\Message
      */
     private $instruments;
     /**
-     *Флаг ожидания закрытия временного интервала для отправки свечи, применяется только для минутных свечей.
+     *Флаг ожидания закрытия временного интервала для отправки свечи.
      *
      * Generated from protobuf field <code>bool waiting_close = 3;</code>
      */
@@ -45,7 +45,7 @@ class SubscribeCandlesRequest extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\CandleInstrument[]|\Google\Protobuf\Internal\RepeatedField $instruments
      *          Массив инструментов для подписки на свечи.
      *     @type bool $waiting_close
-     *          Флаг ожидания закрытия временного интервала для отправки свечи, применяется только для минутных свечей.
+     *          Флаг ожидания закрытия временного интервала для отправки свечи.
      * }
      */
     public function __construct($data = NULL) {
@@ -106,7 +106,7 @@ class SubscribeCandlesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг ожидания закрытия временного интервала для отправки свечи, применяется только для минутных свечей.
+     *Флаг ожидания закрытия временного интервала для отправки свечи.
      *
      * Generated from protobuf field <code>bool waiting_close = 3;</code>
      * @return bool
@@ -117,7 +117,7 @@ class SubscribeCandlesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг ожидания закрытия временного интервала для отправки свечи, применяется только для минутных свечей.
+     *Флаг ожидания закрытия временного интервала для отправки свечи.
      *
      * Generated from protobuf field <code>bool waiting_close = 3;</code>
      * @param bool $var

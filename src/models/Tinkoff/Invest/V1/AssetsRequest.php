@@ -18,7 +18,7 @@ class AssetsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_type = 1;</code>
      */
-    protected $instrument_type = 0;
+    protected $instrument_type = null;
 
     /**
      * Constructor.
@@ -40,7 +40,17 @@ class AssetsRequest extends \Google\Protobuf\Internal\Message
      */
     public function getInstrumentType()
     {
-        return $this->instrument_type;
+        return isset($this->instrument_type) ? $this->instrument_type : 0;
+    }
+
+    public function hasInstrumentType()
+    {
+        return isset($this->instrument_type);
+    }
+
+    public function clearInstrumentType()
+    {
+        unset($this->instrument_type);
     }
 
     /**

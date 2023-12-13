@@ -16,11 +16,29 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetStopOrdersRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Идентификатор счёта клиента.
+     *Идентификатор счёта клиента
      *
-     * Generated from protobuf field <code>string account_id = 1;</code>
+     * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $account_id = '';
+    /**
+     *Статус заявок
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderStatusOption status = 2;</code>
+     */
+    protected $status = 0;
+    /**
+     *Левая граница
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp from = 3;</code>
+     */
+    protected $from = null;
+    /**
+     *Правая граница
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp to = 4;</code>
+     */
+    protected $to = null;
 
     /**
      * Constructor.
@@ -29,7 +47,13 @@ class GetStopOrdersRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $account_id
-     *          Идентификатор счёта клиента.
+     *          Идентификатор счёта клиента
+     *     @type int $status
+     *          Статус заявок
+     *     @type \Google\Protobuf\Timestamp $from
+     *          Левая граница
+     *     @type \Google\Protobuf\Timestamp $to
+     *          Правая граница
      * }
      */
     public function __construct($data = NULL) {
@@ -38,9 +62,9 @@ class GetStopOrdersRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор счёта клиента.
+     *Идентификатор счёта клиента
      *
-     * Generated from protobuf field <code>string account_id = 1;</code>
+     * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getAccountId()
@@ -49,9 +73,9 @@ class GetStopOrdersRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор счёта клиента.
+     *Идентификатор счёта клиента
      *
-     * Generated from protobuf field <code>string account_id = 1;</code>
+     * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */
@@ -59,6 +83,104 @@ class GetStopOrdersRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->account_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *Статус заявок
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderStatusOption status = 2;</code>
+     * @return int
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     *Статус заявок
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderStatusOption status = 2;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setStatus($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\StopOrderStatusOption::class);
+        $this->status = $var;
+
+        return $this;
+    }
+
+    /**
+     *Левая граница
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp from = 3;</code>
+     * @return \Google\Protobuf\Timestamp|null
+     */
+    public function getFrom()
+    {
+        return isset($this->from) ? $this->from : null;
+    }
+
+    public function hasFrom()
+    {
+        return isset($this->from);
+    }
+
+    public function clearFrom()
+    {
+        unset($this->from);
+    }
+
+    /**
+     *Левая граница
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp from = 3;</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setFrom($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        $this->from = $var;
+
+        return $this;
+    }
+
+    /**
+     *Правая граница
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp to = 4;</code>
+     * @return \Google\Protobuf\Timestamp|null
+     */
+    public function getTo()
+    {
+        return isset($this->to) ? $this->to : null;
+    }
+
+    public function hasTo()
+    {
+        return isset($this->to);
+    }
+
+    public function clearTo()
+    {
+        unset($this->to);
+    }
+
+    /**
+     *Правая граница
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp to = 4;</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setTo($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        $this->to = $var;
 
         return $this;
     }

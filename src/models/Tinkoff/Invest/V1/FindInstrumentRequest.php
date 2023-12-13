@@ -18,7 +18,7 @@ class FindInstrumentRequest extends \Google\Protobuf\Internal\Message
     /**
      *Строка поиска.
      *
-     * Generated from protobuf field <code>string query = 1;</code>
+     * Generated from protobuf field <code>string query = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $query = '';
     /**
@@ -26,13 +26,13 @@ class FindInstrumentRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 2;</code>
      */
-    protected $instrument_kind = 0;
+    protected $instrument_kind = null;
     /**
      *Фильтр для отображения только торговых инструментов.
      *
      * Generated from protobuf field <code>bool api_trade_available_flag = 3;</code>
      */
-    protected $api_trade_available_flag = false;
+    protected $api_trade_available_flag = null;
 
     /**
      * Constructor.
@@ -56,7 +56,7 @@ class FindInstrumentRequest extends \Google\Protobuf\Internal\Message
     /**
      *Строка поиска.
      *
-     * Generated from protobuf field <code>string query = 1;</code>
+     * Generated from protobuf field <code>string query = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getQuery()
@@ -67,7 +67,7 @@ class FindInstrumentRequest extends \Google\Protobuf\Internal\Message
     /**
      *Строка поиска.
      *
-     * Generated from protobuf field <code>string query = 1;</code>
+     * Generated from protobuf field <code>string query = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */
@@ -87,7 +87,17 @@ class FindInstrumentRequest extends \Google\Protobuf\Internal\Message
      */
     public function getInstrumentKind()
     {
-        return $this->instrument_kind;
+        return isset($this->instrument_kind) ? $this->instrument_kind : 0;
+    }
+
+    public function hasInstrumentKind()
+    {
+        return isset($this->instrument_kind);
+    }
+
+    public function clearInstrumentKind()
+    {
+        unset($this->instrument_kind);
     }
 
     /**
@@ -113,7 +123,17 @@ class FindInstrumentRequest extends \Google\Protobuf\Internal\Message
      */
     public function getApiTradeAvailableFlag()
     {
-        return $this->api_trade_available_flag;
+        return isset($this->api_trade_available_flag) ? $this->api_trade_available_flag : false;
+    }
+
+    public function hasApiTradeAvailableFlag()
+    {
+        return isset($this->api_trade_available_flag);
+    }
+
+    public function clearApiTradeAvailableFlag()
+    {
+        unset($this->api_trade_available_flag);
     }
 
     /**

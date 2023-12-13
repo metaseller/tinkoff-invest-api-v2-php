@@ -91,4 +91,34 @@ class OrdersServiceClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * расчет количества доступных для покупки/продажи лотов
+     * @param \Tinkoff\Invest\V1\GetMaxLotsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetMaxLots(\Tinkoff\Invest\V1\GetMaxLotsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.OrdersService/GetMaxLots',
+        $argument,
+        ['\Tinkoff\Invest\V1\GetMaxLotsResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Метод получения предварительной стоимости для лимитной заявки
+     * @param \Tinkoff\Invest\V1\GetOrderPriceRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetOrderPrice(\Tinkoff\Invest\V1\GetOrderPriceRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.OrdersService/GetOrderPrice',
+        $argument,
+        ['\Tinkoff\Invest\V1\GetOrderPriceResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }
