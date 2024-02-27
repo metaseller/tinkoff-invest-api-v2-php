@@ -46,6 +46,18 @@ class FavoriteInstrument extends \Google\Protobuf\Internal\Message
      */
     protected $instrument_type = '';
     /**
+     *Название инструмента.
+     *
+     * Generated from protobuf field <code>string name = 12;</code>
+     */
+    protected $name = '';
+    /**
+     *Уникальный идентификатор инструмента.
+     *
+     * Generated from protobuf field <code>string uid = 13;</code>
+     */
+    protected $uid = '';
+    /**
      *Признак внебиржевой ценной бумаги.
      *
      * Generated from protobuf field <code>bool otc_flag = 16;</code>
@@ -80,6 +92,10 @@ class FavoriteInstrument extends \Google\Protobuf\Internal\Message
      *          Isin-идентификатор инструмента.
      *     @type string $instrument_type
      *          Тип инструмента.
+     *     @type string $name
+     *          Название инструмента.
+     *     @type string $uid
+     *          Уникальный идентификатор инструмента.
      *     @type bool $otc_flag
      *          Признак внебиржевой ценной бумаги.
      *     @type bool $api_trade_available_flag
@@ -219,6 +235,58 @@ class FavoriteInstrument extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->instrument_type = $var;
+
+        return $this;
+    }
+
+    /**
+     *Название инструмента.
+     *
+     * Generated from protobuf field <code>string name = 12;</code>
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     *Название инструмента.
+     *
+     * Generated from protobuf field <code>string name = 12;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setName($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->name = $var;
+
+        return $this;
+    }
+
+    /**
+     *Уникальный идентификатор инструмента.
+     *
+     * Generated from protobuf field <code>string uid = 13;</code>
+     * @return string
+     */
+    public function getUid()
+    {
+        return $this->uid;
+    }
+
+    /**
+     *Уникальный идентификатор инструмента.
+     *
+     * Generated from protobuf field <code>string uid = 13;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->uid = $var;
 
         return $this;
     }

@@ -219,6 +219,12 @@ class Currency extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.google.protobuf.Timestamp first_1day_candle_date = 57;</code>
      */
     protected $first_1day_candle_date = null;
+    /**
+     * Информация о бренде.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.BrandData brand = 60;</code>
+     */
+    protected $brand = null;
 
     /**
      * Constructor.
@@ -294,6 +300,8 @@ class Currency extends \Google\Protobuf\Internal\Message
      *          Дата первой минутной свечи.
      *     @type \Google\Protobuf\Timestamp $first_1day_candle_date
      *          Дата первой дневной свечи.
+     *     @type \Tinkoff\Invest\V1\BrandData $brand
+     *           Информация о бренде.
      * }
      */
     public function __construct($data = NULL) {
@@ -1281,6 +1289,42 @@ class Currency extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->first_1day_candle_date = $var;
+
+        return $this;
+    }
+
+    /**
+     * Информация о бренде.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.BrandData brand = 60;</code>
+     * @return \Tinkoff\Invest\V1\BrandData|null
+     */
+    public function getBrand()
+    {
+        return isset($this->brand) ? $this->brand : null;
+    }
+
+    public function hasBrand()
+    {
+        return isset($this->brand);
+    }
+
+    public function clearBrand()
+    {
+        unset($this->brand);
+    }
+
+    /**
+     * Информация о бренде.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.BrandData brand = 60;</code>
+     * @param \Tinkoff\Invest\V1\BrandData $var
+     * @return $this
+     */
+    public function setBrand($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\BrandData::class);
+        $this->brand = $var;
 
         return $this;
     }

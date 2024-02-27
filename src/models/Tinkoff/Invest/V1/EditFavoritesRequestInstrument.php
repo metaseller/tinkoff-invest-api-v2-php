@@ -18,9 +18,16 @@ class EditFavoritesRequestInstrument extends \Google\Protobuf\Internal\Message
     /**
      *Figi-идентификатор инструмента.
      *
-     * Generated from protobuf field <code>string figi = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
+     * @deprecated
      */
-    protected $figi = '';
+    protected $figi = null;
+    /**
+     *Идентификатор инструмента Figi или instrument_uid
+     *
+     * Generated from protobuf field <code>string instrument_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     */
+    protected $instrument_id = '';
 
     /**
      * Constructor.
@@ -30,6 +37,8 @@ class EditFavoritesRequestInstrument extends \Google\Protobuf\Internal\Message
      *
      *     @type string $figi
      *          Figi-идентификатор инструмента.
+     *     @type string $instrument_id
+     *          Идентификатор инструмента Figi или instrument_uid
      * }
      */
     public function __construct($data = NULL) {
@@ -40,25 +49,67 @@ class EditFavoritesRequestInstrument extends \Google\Protobuf\Internal\Message
     /**
      *Figi-идентификатор инструмента.
      *
-     * Generated from protobuf field <code>string figi = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @return string
+     * @deprecated
      */
     public function getFigi()
     {
-        return $this->figi;
+        @trigger_error('figi is deprecated.', E_USER_DEPRECATED);
+        return isset($this->figi) ? $this->figi : '';
+    }
+
+    public function hasFigi()
+    {
+        @trigger_error('figi is deprecated.', E_USER_DEPRECATED);
+        return isset($this->figi);
+    }
+
+    public function clearFigi()
+    {
+        @trigger_error('figi is deprecated.', E_USER_DEPRECATED);
+        unset($this->figi);
     }
 
     /**
      *Figi-идентификатор инструмента.
      *
-     * Generated from protobuf field <code>string figi = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @param string $var
      * @return $this
+     * @deprecated
      */
     public function setFigi($var)
     {
+        @trigger_error('figi is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkString($var, True);
         $this->figi = $var;
+
+        return $this;
+    }
+
+    /**
+     *Идентификатор инструмента Figi или instrument_uid
+     *
+     * Generated from protobuf field <code>string instrument_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return string
+     */
+    public function getInstrumentId()
+    {
+        return $this->instrument_id;
+    }
+
+    /**
+     *Идентификатор инструмента Figi или instrument_uid
+     *
+     * Generated from protobuf field <code>string instrument_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setInstrumentId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->instrument_id = $var;
 
         return $this;
     }

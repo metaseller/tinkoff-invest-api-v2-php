@@ -188,6 +188,7 @@ Stream сделок пользователя
 | initial_order_price_pt |  [Quotation](#quotation) | Начальная цена заявки в пунктах (для фьючерсов). |
 | instrument_uid |  [string](#string) | UID идентификатор инструмента. |
 | order_request_id |  [string](#string) | Идентификатор ключа идемпотентности, переданный клиентом, в формате UID. Максимальная длина 36 символов. |
+| response_metadata |  [ResponseMetadata](#responsemetadata) | Метадата |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -211,6 +212,7 @@ Stream сделок пользователя
 | Field | Type | Description |
 | ----- | ---- | ----------- |
 | time |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата и время отмены заявки в часовом поясе UTC. |
+| response_metadata |  [ResponseMetadata](#responsemetadata) | Метадата |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -289,6 +291,7 @@ Stream сделок пользователя
 | price |  [MoneyValue](#moneyvalue) | Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. |
 | quantity |  [int64](#int64) | Количество лотов. |
 | trade_id |  [string](#string) | Идентификатор сделки. |
+| execution_time |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Время исполнения сделки |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -467,9 +470,9 @@ Stream сделок пользователя
 | Name | Number | Description |
 | ---- | ------ | ----------- |
 | TIME_IN_FORCE_UNSPECIFIED | 0 | Значение не определено см. TIME_IN_FORCE_DAY |
-| TIME_IN_FORCE_DAY | 1 | Заявка действует до конца торгового дня. значение по умолчанию |
-| TIME_IN_FORCE_FILL_AND_KILL | 2 | Заявка исполнена(возможно частично) и уничтожена |
-| TIME_IN_FORCE_FILL_OR_KILL | 3 | Заявка исполнена полностью или уничтожена, недоступно для срочного рынка |
+| TIME_IN_FORCE_DAY | 1 | Заявка действует до конца торгового дня. Значение по умолчанию |
+| TIME_IN_FORCE_FILL_AND_KILL | 2 | Если в момент выставления возможно исполнение заявки(в т.ч. частичное), заявка будет исполнена или отменена сразу после выставления |
+| TIME_IN_FORCE_FILL_OR_KILL | 3 | Если в момент выставления возможно полное исполнение заявки, заявка будет исполнена или отменена сразу после выставления, недоступно для срочного рынка и торговли по выходным |
 
 
  <!-- range .Enums -->
@@ -483,6 +486,14 @@ Stream сделок пользователя
 | PRICE_TYPE_UNSPECIFIED | 0 | Значение не определено |
 | PRICE_TYPE_POINT | 1 | Цена в пунктах (только для фьючерсов и облигаций) |
 | PRICE_TYPE_CURRENCY | 2 | Цена в валюте расчётов по инструменту |
+
+#### ResponseMetadata
+Метадата
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| [tracking_id](https://russianinvestments.github.io/investAPI/grpc/#tracking-id) |  [string](#string) | Идентификатор трекинга |
+| server_time |  [google.protobuf.Timestamp](#google.protobuf.Timestamp) | Серверное время |
 
 ### Про тип цены
 

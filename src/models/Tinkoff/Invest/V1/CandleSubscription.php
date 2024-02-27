@@ -45,6 +45,18 @@ class CandleSubscription extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool waiting_close = 5;</code>
      */
     protected $waiting_close = false;
+    /**
+     *Идентификатор открытого соединения
+     *
+     * Generated from protobuf field <code>string stream_id = 6;</code>
+     */
+    protected $stream_id = '';
+    /**
+     *Идентификатор подписки в формате UUID
+     *
+     * Generated from protobuf field <code>string subscription_id = 7;</code>
+     */
+    protected $subscription_id = '';
 
     /**
      * Constructor.
@@ -62,6 +74,10 @@ class CandleSubscription extends \Google\Protobuf\Internal\Message
      *          Uid инструмента
      *     @type bool $waiting_close
      *          Флаг ожидания закрытия временного интервала для отправки свечи
+     *     @type string $stream_id
+     *          Идентификатор открытого соединения
+     *     @type string $subscription_id
+     *          Идентификатор подписки в формате UUID
      * }
      */
     public function __construct($data = NULL) {
@@ -195,6 +211,58 @@ class CandleSubscription extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->waiting_close = $var;
+
+        return $this;
+    }
+
+    /**
+     *Идентификатор открытого соединения
+     *
+     * Generated from protobuf field <code>string stream_id = 6;</code>
+     * @return string
+     */
+    public function getStreamId()
+    {
+        return $this->stream_id;
+    }
+
+    /**
+     *Идентификатор открытого соединения
+     *
+     * Generated from protobuf field <code>string stream_id = 6;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setStreamId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->stream_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *Идентификатор подписки в формате UUID
+     *
+     * Generated from protobuf field <code>string subscription_id = 7;</code>
+     * @return string
+     */
+    public function getSubscriptionId()
+    {
+        return $this->subscription_id;
+    }
+
+    /**
+     *Идентификатор подписки в формате UUID
+     *
+     * Generated from protobuf field <code>string subscription_id = 7;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setSubscriptionId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->subscription_id = $var;
 
         return $this;
     }

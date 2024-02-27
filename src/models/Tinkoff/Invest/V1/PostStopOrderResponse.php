@@ -21,6 +21,18 @@ class PostStopOrderResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string stop_order_id = 1;</code>
      */
     protected $stop_order_id = '';
+    /**
+     *Идентификатор ключа идемпотентности, переданный клиентом, в формате UID. Максимальная длина 36 символов.
+     *
+     * Generated from protobuf field <code>string order_request_id = 2;</code>
+     */
+    protected $order_request_id = '';
+    /**
+     *Метадата
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ResponseMetadata response_metadata = 254;</code>
+     */
+    protected $response_metadata = null;
 
     /**
      * Constructor.
@@ -30,6 +42,10 @@ class PostStopOrderResponse extends \Google\Protobuf\Internal\Message
      *
      *     @type string $stop_order_id
      *          Уникальный идентификатор стоп-заявки
+     *     @type string $order_request_id
+     *          Идентификатор ключа идемпотентности, переданный клиентом, в формате UID. Максимальная длина 36 символов.
+     *     @type \Tinkoff\Invest\V1\ResponseMetadata $response_metadata
+     *          Метадата
      * }
      */
     public function __construct($data = NULL) {
@@ -59,6 +75,68 @@ class PostStopOrderResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->stop_order_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *Идентификатор ключа идемпотентности, переданный клиентом, в формате UID. Максимальная длина 36 символов.
+     *
+     * Generated from protobuf field <code>string order_request_id = 2;</code>
+     * @return string
+     */
+    public function getOrderRequestId()
+    {
+        return $this->order_request_id;
+    }
+
+    /**
+     *Идентификатор ключа идемпотентности, переданный клиентом, в формате UID. Максимальная длина 36 символов.
+     *
+     * Generated from protobuf field <code>string order_request_id = 2;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setOrderRequestId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->order_request_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *Метадата
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ResponseMetadata response_metadata = 254;</code>
+     * @return \Tinkoff\Invest\V1\ResponseMetadata|null
+     */
+    public function getResponseMetadata()
+    {
+        return isset($this->response_metadata) ? $this->response_metadata : null;
+    }
+
+    public function hasResponseMetadata()
+    {
+        return isset($this->response_metadata);
+    }
+
+    public function clearResponseMetadata()
+    {
+        unset($this->response_metadata);
+    }
+
+    /**
+     *Метадата
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ResponseMetadata response_metadata = 254;</code>
+     * @param \Tinkoff\Invest\V1\ResponseMetadata $var
+     * @return $this
+     */
+    public function setResponseMetadata($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\ResponseMetadata::class);
+        $this->response_metadata = $var;
 
         return $this;
     }

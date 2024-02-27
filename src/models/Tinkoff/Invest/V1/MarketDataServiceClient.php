@@ -121,4 +121,18 @@ class MarketDataServiceClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * @param \Tinkoff\Invest\V1\GetTechAnalysisRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetTechAnalysis(\Tinkoff\Invest\V1\GetTechAnalysisRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.MarketDataService/GetTechAnalysis',
+        $argument,
+        ['\Tinkoff\Invest\V1\GetTechAnalysisResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }

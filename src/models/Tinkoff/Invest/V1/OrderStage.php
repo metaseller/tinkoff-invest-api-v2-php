@@ -33,6 +33,12 @@ class OrderStage extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string trade_id = 3;</code>
      */
     protected $trade_id = '';
+    /**
+     *Время исполнения сделки
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp execution_time = 5;</code>
+     */
+    protected $execution_time = null;
 
     /**
      * Constructor.
@@ -46,6 +52,8 @@ class OrderStage extends \Google\Protobuf\Internal\Message
      *          Количество лотов.
      *     @type string $trade_id
      *          Идентификатор сделки.
+     *     @type \Google\Protobuf\Timestamp $execution_time
+     *          Время исполнения сделки
      * }
      */
     public function __construct($data = NULL) {
@@ -137,6 +145,42 @@ class OrderStage extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->trade_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *Время исполнения сделки
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp execution_time = 5;</code>
+     * @return \Google\Protobuf\Timestamp|null
+     */
+    public function getExecutionTime()
+    {
+        return isset($this->execution_time) ? $this->execution_time : null;
+    }
+
+    public function hasExecutionTime()
+    {
+        return isset($this->execution_time);
+    }
+
+    public function clearExecutionTime()
+    {
+        unset($this->execution_time);
+    }
+
+    /**
+     *Время исполнения сделки
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp execution_time = 5;</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setExecutionTime($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        $this->execution_time = $var;
 
         return $this;
     }

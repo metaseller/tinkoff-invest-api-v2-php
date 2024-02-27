@@ -20,7 +20,7 @@ class OperationState
      */
     const OPERATION_STATE_UNSPECIFIED = 0;
     /**
-     *Исполнена.
+     *Исполнена частично или полностью.
      *
      * Generated from protobuf enum <code>OPERATION_STATE_EXECUTED = 1;</code>
      */

@@ -55,12 +55,13 @@
 | account_id |  [string](#string) | Номер счёта |
 | expiration_type |  [StopOrderExpirationType](#stoporderexpirationtype) | Тип экспирации заявки |
 | stop_order_type |  [StopOrderType](#stopordertype) | Тип заявки |
-| expire_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата и время окончания действия стоп-заявки в часовом поясе UTC. **Для ExpirationType = GoodTillDate заполнение обязательно**. |
+| expire_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата и время окончания действия стоп-заявки в часовом поясе UTC. **Для ExpirationType = GoodTillDate заполнение обязательно, для GoodTillCancel игнорируется**. |
 | instrument_id |  [string](#string) | Идентификатор инструмента, принимает значения Figi или instrument_uid. |
 | exchange_order_type |  [ExchangeOrderType](#exchangeordertype) | Тип дочерней биржевой заявки для тейкпрофита |
 | take_profit_type |  [TakeProfitType](#takeprofittype) | Подтип стоп-заявки TakeProfit |
 | trailing_data |  [PostStopOrderRequest.TrailingData](#poststoporderrequesttrailingdata) | Массив с параметрами трейлинг-стопа |
 | price_type |  [PriceType](#pricetype) | Тип цены |
+| order_id |  [string](#string) | Идентификатор запроса выставления поручения для целей идемпотентности в формате UID. Максимальная длина 36 символов. |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -86,6 +87,8 @@
 | Field | Type | Description |
 | ----- | ---- | ----------- |
 | stop_order_id |  [string](#string) | Уникальный идентификатор стоп-заявки |
+| order_request_id |  [string](#string) | Идентификатор ключа идемпотентности, переданный клиентом, в формате UID. Максимальная длина 36 символов. |
+| response_metadata |  [ResponseMetadata](#responsemetadata) | Метадата |
  <!-- end Fields -->
  <!-- end HasFields -->
 

@@ -69,6 +69,12 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string instrument_uid = 9;</code>
      */
     protected $instrument_uid = '';
+    /**
+     *Тип стакана
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderBookType order_book_type = 10;</code>
+     */
+    protected $order_book_type = 0;
 
     /**
      * Constructor.
@@ -94,6 +100,8 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      *          Нижний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
      *     @type string $instrument_uid
      *          Uid инструмента
+     *     @type int $order_book_type
+     *          Тип стакана
      * }
      */
     public function __construct($data = NULL) {
@@ -361,6 +369,32 @@ class OrderBook extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->instrument_uid = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тип стакана
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderBookType order_book_type = 10;</code>
+     * @return int
+     */
+    public function getOrderBookType()
+    {
+        return $this->order_book_type;
+    }
+
+    /**
+     *Тип стакана
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderBookType order_book_type = 10;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setOrderBookType($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\OrderBookType::class);
+        $this->order_book_type = $var;
 
         return $this;
     }

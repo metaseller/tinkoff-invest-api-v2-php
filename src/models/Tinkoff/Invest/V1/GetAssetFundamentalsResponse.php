@@ -9,6 +9,8 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ *Фундаментальные показатели
+ *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.GetAssetFundamentalsResponse</code>
  */
 class GetAssetFundamentalsResponse extends \Google\Protobuf\Internal\Message

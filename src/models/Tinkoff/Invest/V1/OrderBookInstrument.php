@@ -34,6 +34,12 @@ class OrderBookInstrument extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string instrument_id = 3;</code>
      */
     protected $instrument_id = '';
+    /**
+     *Тип стакана
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderBookType order_book_type = 4;</code>
+     */
+    protected $order_book_type = 0;
 
     /**
      * Constructor.
@@ -47,6 +53,8 @@ class OrderBookInstrument extends \Google\Protobuf\Internal\Message
      *          Глубина стакана.
      *     @type string $instrument_id
      *          Идентификатор инструмента, принимает значение figi или instrument_uid
+     *     @type int $order_book_type
+     *          Тип стакана
      * }
      */
     public function __construct($data = NULL) {
@@ -132,6 +140,32 @@ class OrderBookInstrument extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->instrument_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тип стакана
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderBookType order_book_type = 4;</code>
+     * @return int
+     */
+    public function getOrderBookType()
+    {
+        return $this->order_book_type;
+    }
+
+    /**
+     *Тип стакана
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderBookType order_book_type = 4;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setOrderBookType($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\OrderBookType::class);
+        $this->order_book_type = $var;
 
         return $this;
     }

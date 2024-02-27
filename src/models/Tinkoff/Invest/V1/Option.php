@@ -136,6 +136,12 @@ class Option extends \Google\Protobuf\Internal\Message
      */
     protected $sector = '';
     /**
+     * Информация о бренде.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.BrandData brand = 162;</code>
+     */
+    protected $brand = null;
+    /**
      *Количество бумаг в лоте.
      *
      * Generated from protobuf field <code>int32 lot = 201;</code>
@@ -326,6 +332,8 @@ class Option extends \Google\Protobuf\Internal\Message
      *          Наименование страны рисков.
      *     @type string $sector
      *          Сектор экономики.
+     *     @type \Tinkoff\Invest\V1\BrandData $brand
+     *           Информация о бренде.
      *     @type int $lot
      *          Количество бумаг в лоте.
      *     @type \Tinkoff\Invest\V1\Quotation $basic_asset_size
@@ -897,6 +905,42 @@ class Option extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->sector = $var;
+
+        return $this;
+    }
+
+    /**
+     * Информация о бренде.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.BrandData brand = 162;</code>
+     * @return \Tinkoff\Invest\V1\BrandData|null
+     */
+    public function getBrand()
+    {
+        return isset($this->brand) ? $this->brand : null;
+    }
+
+    public function hasBrand()
+    {
+        return isset($this->brand);
+    }
+
+    public function clearBrand()
+    {
+        unset($this->brand);
+    }
+
+    /**
+     * Информация о бренде.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.BrandData brand = 162;</code>
+     * @param \Tinkoff\Invest\V1\BrandData $var
+     * @return $this
+     */
+    public function setBrand($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\BrandData::class);
+        $this->brand = $var;
 
         return $this;
     }

@@ -65,7 +65,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
      */
     protected $stop_order_type = 0;
     /**
-     *Дата и время окончания действия стоп-заявки в часовом поясе UTC. **Для ExpirationType = GoodTillDate заполнение обязательно**.
+     *Дата и время окончания действия стоп-заявки в часовом поясе UTC. **Для ExpirationType = GoodTillDate заполнение обязательно, для GoodTillCancel игнорируется**.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp expire_date = 9;</code>
      */
@@ -100,6 +100,12 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PriceType price_type = 14;</code>
      */
     protected $price_type = 0;
+    /**
+     *Идентификатор запроса выставления поручения для целей идемпотентности в формате UID. Максимальная длина 36 символов.
+     *
+     * Generated from protobuf field <code>string order_id = 15 [(.google.api.field_behavior) = REQUIRED];</code>
+     */
+    protected $order_id = '';
 
     /**
      * Constructor.
@@ -124,7 +130,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
      *     @type int $stop_order_type
      *          Тип заявки
      *     @type \Google\Protobuf\Timestamp $expire_date
-     *          Дата и время окончания действия стоп-заявки в часовом поясе UTC. **Для ExpirationType = GoodTillDate заполнение обязательно**.
+     *          Дата и время окончания действия стоп-заявки в часовом поясе UTC. **Для ExpirationType = GoodTillDate заполнение обязательно, для GoodTillCancel игнорируется**.
      *     @type string $instrument_id
      *          Идентификатор инструмента, принимает значения Figi или instrument_uid.
      *     @type int $exchange_order_type
@@ -135,6 +141,8 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
      *          Массив с параметрами трейлинг-стопа
      *     @type int $price_type
      *          Тип цены
+     *     @type string $order_id
+     *          Идентификатор запроса выставления поручения для целей идемпотентности в формате UID. Максимальная длина 36 символов.
      * }
      */
     public function __construct($data = NULL) {
@@ -387,7 +395,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время окончания действия стоп-заявки в часовом поясе UTC. **Для ExpirationType = GoodTillDate заполнение обязательно**.
+     *Дата и время окончания действия стоп-заявки в часовом поясе UTC. **Для ExpirationType = GoodTillDate заполнение обязательно, для GoodTillCancel игнорируется**.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp expire_date = 9;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -408,7 +416,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время окончания действия стоп-заявки в часовом поясе UTC. **Для ExpirationType = GoodTillDate заполнение обязательно**.
+     *Дата и время окончания действия стоп-заявки в часовом поясе UTC. **Для ExpirationType = GoodTillDate заполнение обязательно, для GoodTillCancel игнорируется**.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp expire_date = 9;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -558,6 +566,32 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\PriceType::class);
         $this->price_type = $var;
+
+        return $this;
+    }
+
+    /**
+     *Идентификатор запроса выставления поручения для целей идемпотентности в формате UID. Максимальная длина 36 символов.
+     *
+     * Generated from protobuf field <code>string order_id = 15 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return string
+     */
+    public function getOrderId()
+    {
+        return $this->order_id;
+    }
+
+    /**
+     *Идентификатор запроса выставления поручения для целей идемпотентности в формате UID. Максимальная длина 36 символов.
+     *
+     * Generated from protobuf field <code>string order_id = 15 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setOrderId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->order_id = $var;
 
         return $this;
     }

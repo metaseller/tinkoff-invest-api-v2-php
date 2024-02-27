@@ -45,6 +45,7 @@ nav:
   - "Алгоритмический трейдинг": algorithmic_trading.md
   - "Индикаторы технического анализа": tech_indicators.md
   - "Торговые площадки и режимы торгов": markets.md
+  - "Торговля в выходные": weekend_trading.md
   - "Квалифицированный инвестор": accredited_investor.md
   - "Правила обработки корпоративных действий": faq_corp_action.md
   - "Как ускорить работу с биржей": speedup.md
@@ -83,6 +84,7 @@ nav:
   - Методы: marketdata.md
   - FAQ: faq_marketdata.md
   - Получение исторических рыночных данных: get_history.md
+  - Методы работы с индикаторами технического анализа: get_tech_indicators.md
 - Сервис стоп-ордеров:
   - Описание: head-stoporders.md
   - Методы: stoporders.md
@@ -95,3 +97,4 @@ nav:
 - Коды ошибок: 
   - "GRPC": errors.md 
   - "WebSocket": ws\errors.md
+  - "HTTP": http_errors.md 

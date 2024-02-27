@@ -178,6 +178,12 @@ class Instrument extends \Google\Protobuf\Internal\Message
      */
     protected $position_uid = '';
     /**
+     *Уникальный идентификатор актива.
+     *
+     * Generated from protobuf field <code>string asset_uid = 28;</code>
+     */
+    protected $asset_uid = '';
+    /**
      *Признак доступности для ИИС.
      *
      * Generated from protobuf field <code>bool for_iis_flag = 36;</code>
@@ -219,6 +225,12 @@ class Instrument extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.google.protobuf.Timestamp first_1day_candle_date = 57;</code>
      */
     protected $first_1day_candle_date = null;
+    /**
+     * Информация о бренде.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.BrandData brand = 60;</code>
+     */
+    protected $brand = null;
 
     /**
      * Constructor.
@@ -280,6 +292,8 @@ class Instrument extends \Google\Protobuf\Internal\Message
      *          Реальная площадка исполнения расчётов (биржа).
      *     @type string $position_uid
      *          Уникальный идентификатор позиции инструмента.
+     *     @type string $asset_uid
+     *          Уникальный идентификатор актива.
      *     @type bool $for_iis_flag
      *          Признак доступности для ИИС.
      *     @type bool $for_qual_investor_flag
@@ -294,6 +308,8 @@ class Instrument extends \Google\Protobuf\Internal\Message
      *          Дата первой минутной свечи.
      *     @type \Google\Protobuf\Timestamp $first_1day_candle_date
      *          Дата первой дневной свечи.
+     *     @type \Tinkoff\Invest\V1\BrandData $brand
+     *           Информация о бренде.
      * }
      */
     public function __construct($data = NULL) {
@@ -1074,6 +1090,32 @@ class Instrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *Уникальный идентификатор актива.
+     *
+     * Generated from protobuf field <code>string asset_uid = 28;</code>
+     * @return string
+     */
+    public function getAssetUid()
+    {
+        return $this->asset_uid;
+    }
+
+    /**
+     *Уникальный идентификатор актива.
+     *
+     * Generated from protobuf field <code>string asset_uid = 28;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setAssetUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->asset_uid = $var;
+
+        return $this;
+    }
+
+    /**
      *Признак доступности для ИИС.
      *
      * Generated from protobuf field <code>bool for_iis_flag = 36;</code>
@@ -1271,6 +1313,42 @@ class Instrument extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->first_1day_candle_date = $var;
+
+        return $this;
+    }
+
+    /**
+     * Информация о бренде.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.BrandData brand = 60;</code>
+     * @return \Tinkoff\Invest\V1\BrandData|null
+     */
+    public function getBrand()
+    {
+        return isset($this->brand) ? $this->brand : null;
+    }
+
+    public function hasBrand()
+    {
+        return isset($this->brand);
+    }
+
+    public function clearBrand()
+    {
+        unset($this->brand);
+    }
+
+    /**
+     * Информация о бренде.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.BrandData brand = 60;</code>
+     * @param \Tinkoff\Invest\V1\BrandData $var
+     * @return $this
+     */
+    public function setBrand($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\BrandData::class);
+        $this->brand = $var;
 
         return $this;
     }

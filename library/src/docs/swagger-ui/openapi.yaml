@@ -4,7 +4,7 @@ info:
   termsOfService: https://www.tinkoff.ru/invest/disclaimers/basic-information/
   contact:
     email: al.a.volkov@tinkoff.ru
-  version: '1.7'
+  version: '1.10'
   license:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0
@@ -376,6 +376,32 @@ paths:
       tags:
         - InstrumentsService
       x-codegen-request-body-name: body
+  /tinkoff.public.invest.api.contract.v1.InstrumentsService/GetAssetReports:
+    post:
+      operationId: InstrumentsService_GetAssetReports
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/v1GetAssetReportsRequest'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/v1GetAssetReportsResponse'
+          description: A successful response.
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An unexpected error response.
+      summary: Метод получения расписания выхода отчетностей эмитентов
+      tags:
+        - InstrumentsService
+      x-codegen-request-body-name: body
   /tinkoff.public.invest.api.contract.v1.InstrumentsService/GetAssets:
     post:
       operationId: InstrumentsService_GetAssets
@@ -432,6 +458,33 @@ paths:
       tags:
         - InstrumentsService
       x-codegen-request-body-name: body
+  /tinkoff.public.invest.api.contract.v1.InstrumentsService/GetBondEvents:
+    post:
+      operationId: InstrumentsService_GetBondEvents
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/v1GetBondEventsRequest'
+        description: События по облигации.
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/v1GetBondEventsResponse'
+          description: A successful response.
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An unexpected error response.
+      summary: Метод получения событий по облигации
+      tags:
+        - InstrumentsService
+      x-codegen-request-body-name: body
   /tinkoff.public.invest.api.contract.v1.InstrumentsService/GetBrandBy:
     post:
       operationId: InstrumentsService_GetBrandBy
@@ -483,6 +536,32 @@ paths:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
       summary: Метод получения списка брендов.
+      tags:
+        - InstrumentsService
+      x-codegen-request-body-name: body
+  /tinkoff.public.invest.api.contract.v1.InstrumentsService/GetConsensusForecasts:
+    post:
+      operationId: InstrumentsService_GetConsensusForecasts
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/v1GetConsensusForecastsRequest'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/v1GetConsensusForecastsResponse'
+          description: A successful response.
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An unexpected error response.
+      summary: Метод получения мнения аналитиков по инструменту
       tags:
         - InstrumentsService
       x-codegen-request-body-name: body
@@ -567,6 +646,32 @@ paths:
       tags:
         - InstrumentsService
       x-codegen-request-body-name: body
+  /tinkoff.public.invest.api.contract.v1.InstrumentsService/GetForecastBy:
+    post:
+      operationId: InstrumentsService_GetForecastBy
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/v1GetForecastRequest'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/v1GetForecastResponse'
+          description: A successful response.
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An unexpected error response.
+      summary: Метод получения прогнозов инвестдомов по инструменту
+      tags:
+        - InstrumentsService
+      x-codegen-request-body-name: body
   /tinkoff.public.invest.api.contract.v1.InstrumentsService/GetFuturesMargin:
     post:
       operationId: InstrumentsService_GetFuturesMargin
@@ -617,6 +722,32 @@ paths:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
       summary: Метод получения основной информации об инструменте.
+      tags:
+        - InstrumentsService
+      x-codegen-request-body-name: body
+  /tinkoff.public.invest.api.contract.v1.InstrumentsService/Indicatives:
+    post:
+      operationId: InstrumentsService_Indicatives
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/v1IndicativesRequest'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/v1IndicativesResponse'
+          description: A successful response.
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An unexpected error response.
+      summary: Метод получения индикативных инструментов (индексов, товаров и др.)
       tags:
         - InstrumentsService
       x-codegen-request-body-name: body
@@ -913,6 +1044,32 @@ paths:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
       summary: Метод получения стакана по инструменту.
+      tags:
+        - MarketDataService
+      x-codegen-request-body-name: body
+  /tinkoff.public.invest.api.contract.v1.MarketDataService/GetTechAnalysis:
+    post:
+      operationId: MarketDataService_GetTechAnalysis
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/v1GetTechAnalysisRequest'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/v1GetTechAnalysisResponse'
+          description: A successful response.
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An unexpected error response.
+      summary: Метод получения технических индикаторов по инструменту.
       tags:
         - MarketDataService
       x-codegen-request-body-name: body
@@ -2382,6 +2539,7 @@ components:
         dividendsPerShare: 0.8851374739011653
       properties:
         assetUid:
+          title: Идентификатор актива
           type: string
         currency:
           title: Валюта
@@ -2609,6 +2767,331 @@ components:
           format: double
           title: Отношение EV к выручке
           type: number
+      title: Фундаментальные показатели по активу
+      type: object
+    GetAssetReportsResponseAssetReportPeriodType:
+      default: PERIOD_TYPE_UNSPECIFIED
+      enum:
+        - PERIOD_TYPE_UNSPECIFIED
+        - PERIOD_TYPE_QUARTER
+        - PERIOD_TYPE_SEMIANNUAL
+        - PERIOD_TYPE_ANNUAL
+      title: |-
+        - PERIOD_TYPE_UNSPECIFIED: не указан
+         - PERIOD_TYPE_QUARTER: Квартальный
+         - PERIOD_TYPE_SEMIANNUAL: Полугодовой
+         - PERIOD_TYPE_ANNUAL: Годовой
+      type: string
+    GetAssetReportsResponseGetAssetReportsEvent:
+      example:
+        periodNum: 6
+        createdAt: 2000-01-23T04:56:07.000Z
+        reportDate: 2000-01-23T04:56:07.000Z
+        periodYear: 0
+        instrumentId: instrumentId
+      properties:
+        instrumentId:
+          description: Идентификатор инструмента.
+          type: string
+        reportDate:
+          description: Дата публикации отчета.
+          format: date-time
+          type: string
+        periodYear:
+          description: Год периода отчета.
+          format: int32
+          type: integer
+        periodNum:
+          description: Номер периода.
+          format: int32
+          type: integer
+        periodType:
+          $ref: '#/components/schemas/GetAssetReportsResponseAssetReportPeriodType'
+        createdAt:
+          description: Дата создания записи.
+          format: date-time
+          type: string
+      title: Отчет
+      type: object
+    GetBondEventsRequestEventType:
+      default: EVENT_TYPE_UNSPECIFIED
+      enum:
+        - EVENT_TYPE_UNSPECIFIED
+        - EVENT_TYPE_CPN
+        - EVENT_TYPE_CALL
+        - EVENT_TYPE_MTY
+        - EVENT_TYPE_CONV
+      title: |-
+        - EVENT_TYPE_UNSPECIFIED: Неопределенное значение
+         - EVENT_TYPE_CPN: Купон
+         - EVENT_TYPE_CALL: Опцион (оферта)
+         - EVENT_TYPE_MTY: Погашение
+         - EVENT_TYPE_CONV: Конвертация
+      type: string
+    GetBondEventsResponseBondEvent:
+      example:
+        fixDate: 2000-01-23T04:56:07.000Z
+        execution: execution
+        note: note
+        defaultDate: 2000-01-23T04:56:07.000Z
+        eventNumber: 0
+        instrumentId: instrumentId
+        couponEndDate: 2000-01-23T04:56:07.000Z
+        rateDate: 2000-01-23T04:56:07.000Z
+        payOneBond:
+          nano: 5
+          currency: currency
+          units: units
+        moneyFlowVal:
+          nano: 5
+          currency: currency
+          units: units
+        couponPeriod: 6
+        convertToFinToolId: convertToFinToolId
+        couponInterestRate:
+          nano: 6
+          units: units
+        eventTotalVol:
+          nano: 6
+          units: units
+        realPayDate: 2000-01-23T04:56:07.000Z
+        operationType: operationType
+        value:
+          nano: 6
+          units: units
+        couponStartDate: 2000-01-23T04:56:07.000Z
+        eventDate: 2000-01-23T04:56:07.000Z
+        payDate: 2000-01-23T04:56:07.000Z
+      properties:
+        instrumentId:
+          title: Идентификатор инструмента
+          type: string
+        eventNumber:
+          format: int32
+          title: Номер события для данного типа события
+          type: integer
+        eventDate:
+          format: date-time
+          title: Дата события
+          type: string
+        eventType:
+          $ref: '#/components/schemas/GetBondEventsRequestEventType'
+        eventTotalVol:
+          $ref: '#/components/schemas/v1Quotation'
+        fixDate:
+          format: date-time
+          title: Дата фиксации владельцев для участия в событии
+          type: string
+        rateDate:
+          format: date-time
+          title: Дата определения даты либо факта события
+          type: string
+        defaultDate:
+          format: date-time
+          title: Дата дефолта (если применимо)
+          type: string
+        realPayDate:
+          format: date-time
+          title: Дата реального исполнения обязательства
+          type: string
+        payDate:
+          format: date-time
+          title: Дата выплаты
+          type: string
+        payOneBond:
+          $ref: '#/components/schemas/v1MoneyValue'
+        moneyFlowVal:
+          $ref: '#/components/schemas/v1MoneyValue'
+        execution:
+          title: Признак исполнения
+          type: string
+        operationType:
+          title: Тип операции
+          type: string
+        value:
+          $ref: '#/components/schemas/v1Quotation'
+        note:
+          title: Примечание
+          type: string
+        convertToFinToolId:
+          title: >-
+            ID выпуска бумаг, в который произведена конвертация (для
+            конвертаций)
+          type: string
+        couponStartDate:
+          format: date-time
+          title: Начало купонного периода
+          type: string
+        couponEndDate:
+          format: date-time
+          title: Окончание купонного периода
+          type: string
+        couponPeriod:
+          format: int32
+          title: Купонный период
+          type: integer
+        couponInterestRate:
+          $ref: '#/components/schemas/v1Quotation'
+      type: object
+    GetConsensusForecastsResponseConsensusForecastsItem:
+      example:
+        uid: uid
+        assetUid: assetUid
+        createdAt: 2000-01-23T04:56:07.000Z
+        bestTargetHigh:
+          nano: 6
+          units: units
+        bestTargetLow:
+          nano: 6
+          units: units
+        totalSellRecommend: 1
+        currency: currency
+        bestTargetPrice:
+          nano: 6
+          units: units
+        totalHoldRecommend: 6
+        prognosisDate: 2000-01-23T04:56:07.000Z
+        totalBuyRecommend: 0
+      properties:
+        uid:
+          title: uid идентификатор
+          type: string
+        assetUid:
+          title: uid идентификатор актива
+          type: string
+        createdAt:
+          format: date-time
+          title: Дата и время создания записи
+          type: string
+        bestTargetPrice:
+          $ref: '#/components/schemas/v1Quotation'
+        bestTargetLow:
+          $ref: '#/components/schemas/v1Quotation'
+        bestTargetHigh:
+          $ref: '#/components/schemas/v1Quotation'
+        totalBuyRecommend:
+          format: int32
+          title: Количество аналитиков рекомендующих покупать
+          type: integer
+        totalHoldRecommend:
+          format: int32
+          title: Количество аналитиков рекомендующих держать
+          type: integer
+        totalSellRecommend:
+          format: int32
+          title: Количество аналитиков рекомендующих продавать
+          type: integer
+        currency:
+          title: Валюта прогнозов /инструмента
+          type: string
+        consensus:
+          $ref: '#/components/schemas/v1Recommendation'
+        prognosisDate:
+          format: date-time
+          title: Дата прогноза
+          type: string
+      title: Прогноз
+      type: object
+    GetForecastResponseConsensusItem:
+      example:
+        consensus:
+          nano: 6
+          units: units
+        priceChange:
+          nano: 6
+          units: units
+        uid: uid
+        maxTarget:
+          nano: 6
+          units: units
+        ticker: ticker
+        priceChangeRel:
+          nano: 6
+          units: units
+        currentPrice:
+          nano: 6
+          units: units
+        currency: currency
+        minTarget:
+          nano: 6
+          units: units
+      properties:
+        uid:
+          title: Уникальный идентификатор инструмента
+          type: string
+        ticker:
+          title: Тикер инструмента
+          type: string
+        recommendation:
+          $ref: '#/components/schemas/v1Recommendation'
+        currency:
+          title: Валюта
+          type: string
+        currentPrice:
+          $ref: '#/components/schemas/v1Quotation'
+        consensus:
+          $ref: '#/components/schemas/v1Quotation'
+        minTarget:
+          $ref: '#/components/schemas/v1Quotation'
+        maxTarget:
+          $ref: '#/components/schemas/v1Quotation'
+        priceChange:
+          $ref: '#/components/schemas/v1Quotation'
+        priceChangeRel:
+          $ref: '#/components/schemas/v1Quotation'
+      title: Консенсус-прогноз
+      type: object
+    GetForecastResponseTargetItem:
+      example:
+        priceChange:
+          nano: 6
+          units: units
+        uid: uid
+        ticker: ticker
+        targetPrice:
+          nano: 6
+          units: units
+        showName: showName
+        priceChangeRel:
+          nano: 6
+          units: units
+        currentPrice:
+          nano: 6
+          units: units
+        company: company
+        currency: currency
+        recommendationDate: 2000-01-23T04:56:07.000Z
+      properties:
+        uid:
+          title: Уникальный идентификатор инструмента
+          type: string
+        ticker:
+          title: Тикер инструмента
+          type: string
+        company:
+          title: Название компании, давшей прогноз
+          type: string
+        recommendation:
+          $ref: '#/components/schemas/v1Recommendation'
+        recommendationDate:
+          format: date-time
+          title: Дата прогноза
+          type: string
+        currency:
+          title: Валюта
+          type: string
+        currentPrice:
+          $ref: '#/components/schemas/v1Quotation'
+        targetPrice:
+          $ref: '#/components/schemas/v1Quotation'
+        priceChange:
+          $ref: '#/components/schemas/v1Quotation'
+        priceChangeRel:
+          $ref: '#/components/schemas/v1Quotation'
+        showName:
+          title: Наименование инструмента
+          type: string
+      title: Прогноз
       type: object
     GetMaxLotsResponseBuyLimitsView:
       example:
@@ -2665,6 +3148,137 @@ components:
         initialMargin:
           $ref: '#/components/schemas/v1MoneyValue'
       type: object
+    GetTechAnalysisRequestDeviation:
+      properties:
+        deviationMultiplier:
+          $ref: '#/components/schemas/v1Quotation'
+      type: object
+    GetTechAnalysisRequestIndicatorInterval:
+      default: INDICATOR_INTERVAL_UNSPECIFIED
+      description: |-
+        Интервал свечи.
+
+         - INDICATOR_INTERVAL_UNSPECIFIED: Интервал не определён.
+         - INDICATOR_INTERVAL_ONE_MINUTE: 1 минута.
+         - INDICATOR_INTERVAL_FIVE_MINUTES: 5 минут.
+         - INDICATOR_INTERVAL_FIFTEEN_MINUTES: 15 минут.
+         - INDICATOR_INTERVAL_ONE_HOUR: 1 час.
+         - INDICATOR_INTERVAL_ONE_DAY: 1 день.
+         - INDICATOR_INTERVAL_2_MIN: 2 минуты.
+         - INDICATOR_INTERVAL_3_MIN: 3 минуты.
+         - INDICATOR_INTERVAL_10_MIN: 10 минут.
+         - INDICATOR_INTERVAL_30_MIN: 30 минут.
+         - INDICATOR_INTERVAL_2_HOUR: 2 часа.
+         - INDICATOR_INTERVAL_4_HOUR: 4 часа.
+         - INDICATOR_INTERVAL_WEEK: Неделя
+         - INDICATOR_INTERVAL_MONTH: Месяц
+      enum:
+        - INDICATOR_INTERVAL_UNSPECIFIED
+        - INDICATOR_INTERVAL_ONE_MINUTE
+        - INDICATOR_INTERVAL_FIVE_MINUTES
+        - INDICATOR_INTERVAL_FIFTEEN_MINUTES
+        - INDICATOR_INTERVAL_ONE_HOUR
+        - INDICATOR_INTERVAL_ONE_DAY
+        - INDICATOR_INTERVAL_2_MIN
+        - INDICATOR_INTERVAL_3_MIN
+        - INDICATOR_INTERVAL_10_MIN
+        - INDICATOR_INTERVAL_30_MIN
+        - INDICATOR_INTERVAL_2_HOUR
+        - INDICATOR_INTERVAL_4_HOUR
+        - INDICATOR_INTERVAL_WEEK
+        - INDICATOR_INTERVAL_MONTH
+      type: string
+    GetTechAnalysisRequestIndicatorType:
+      default: INDICATOR_TYPE_UNSPECIFIED
+      description: |2-
+         - INDICATOR_TYPE_UNSPECIFIED: Не определен.
+         - INDICATOR_TYPE_BB: Bollinger Bands (Линия Боллинжера).
+         - INDICATOR_TYPE_EMA: Exponential Moving Average (EMA, Экспоненциальная скользящая средняя).
+         - INDICATOR_TYPE_RSI: Relative Strength Index (Индекс относительной силы).
+         - INDICATOR_TYPE_MACD: Moving Average Convergence/Divergence (Схождение/Расхождение скользящих средних).
+         - INDICATOR_TYPE_SMA: Simple Moving Average (Простое скользящее среднее).
+      enum:
+        - INDICATOR_TYPE_UNSPECIFIED
+        - INDICATOR_TYPE_BB
+        - INDICATOR_TYPE_EMA
+        - INDICATOR_TYPE_RSI
+        - INDICATOR_TYPE_MACD
+        - INDICATOR_TYPE_SMA
+      type: string
+    GetTechAnalysisRequestSmoothing:
+      properties:
+        fastLength:
+          description: >-
+            Короткий период сглаживания для первой экспоненциальной скользящей
+            средней (EMA).
+          format: int32
+          type: integer
+        slowLength:
+          description: >-
+            Длинный период сглаживания для второй экспоненциальной скользящей
+            средней (EMA).
+          format: int32
+          type: integer
+        signalSmoothing:
+          format: int32
+          title: >-
+            Период сглаживания для третьей экспоненциальной скользящей средней
+            (EMA)
+          type: integer
+      type: object
+    GetTechAnalysisRequestTypeOfPrice:
+      default: TYPE_OF_PRICE_UNSPECIFIED
+      description: |2-
+         - TYPE_OF_PRICE_UNSPECIFIED: Не указано.
+         - TYPE_OF_PRICE_CLOSE: Цена закрытия.
+         - TYPE_OF_PRICE_OPEN: Цена открытия.
+         - TYPE_OF_PRICE_HIGH: Максимальное значение за выбранный интервал.
+         - TYPE_OF_PRICE_LOW: Минимальное значение за выбранный интервал.
+         - TYPE_OF_PRICE_AVG: Среднее значение по показателям [ (close + open + high + low) / 4 ].
+      enum:
+        - TYPE_OF_PRICE_UNSPECIFIED
+        - TYPE_OF_PRICE_CLOSE
+        - TYPE_OF_PRICE_OPEN
+        - TYPE_OF_PRICE_HIGH
+        - TYPE_OF_PRICE_LOW
+        - TYPE_OF_PRICE_AVG
+      type: string
+    GetTechAnalysisResponseTechAnalysisItem:
+      example:
+        lowerBand:
+          nano: 6
+          units: units
+        upperBand:
+          nano: 6
+          units: units
+        macd:
+          nano: 6
+          units: units
+        signal:
+          nano: 6
+          units: units
+        timestamp: 2000-01-23T04:56:07.000Z
+        middleBand:
+          nano: 6
+          units: units
+      properties:
+        timestamp:
+          description: >-
+            Временная метка по UTC, для которой были рассчитаны значения
+            индикатора.
+          format: date-time
+          type: string
+        middleBand:
+          $ref: '#/components/schemas/v1Quotation'
+        upperBand:
+          $ref: '#/components/schemas/v1Quotation'
+        lowerBand:
+          $ref: '#/components/schemas/v1Quotation'
+        signal:
+          $ref: '#/components/schemas/v1Quotation'
+        macd:
+          $ref: '#/components/schemas/v1Quotation'
+      type: object
     PortfolioRequestCurrencyRequest:
       default: RUB
       enum:
@@ -2676,6 +3290,20 @@ components:
          - USD: Доллары
          - EUR: Евро
       type: string
+    TradingIntervalTimeInterval:
+      example:
+        endTs: 2000-01-23T04:56:07.000Z
+        startTs: 2000-01-23T04:56:07.000Z
+      properties:
+        startTs:
+          format: date-time
+          title: Время начала интервала
+          type: string
+        endTs:
+          format: date-time
+          title: Время окончания интервала
+          type: string
+      type: object
     protobufAny:
       additionalProperties:
         type: object
@@ -4003,6 +4631,7 @@ components:
     v1Bond:
       description: Объект передачи информации об облигации.
       example:
+        assetUid: assetUid
         countryOfRisk: countryOfRisk
         blockedTcaFlag: true
         maturityDate: 2000-01-23T04:56:07.000Z
@@ -4013,6 +4642,10 @@ components:
           currency: currency
           units: units
         sector: sector
+        brand:
+          logoName: logoName
+          logoBaseColor: logoBaseColor
+          textColor: textColor
         liquidityFlag: true
         forIisFlag: true
         positionUid: positionUid
@@ -4203,6 +4836,9 @@ components:
         positionUid:
           description: Уникальный идентификатор позиции инструмента.
           type: string
+        assetUid:
+          description: Уникальный идентификатор актива.
+          type: string
         forIisFlag:
           description: Признак доступности для ИИС.
           type: boolean
@@ -4233,11 +4869,14 @@ components:
           type: string
         riskLevel:
           $ref: '#/components/schemas/v1RiskLevel'
+        brand:
+          $ref: '#/components/schemas/v1BrandData'
       type: object
     v1BondResponse:
       description: Информация об облигации.
       example:
         instrument:
+          assetUid: assetUid
           countryOfRisk: countryOfRisk
           blockedTcaFlag: true
           maturityDate: 2000-01-23T04:56:07.000Z
@@ -4248,6 +4887,10 @@ components:
             currency: currency
             units: units
           sector: sector
+          brand:
+            logoName: logoName
+            logoBaseColor: logoBaseColor
+            textColor: textColor
           liquidityFlag: true
           forIisFlag: true
           positionUid: positionUid
@@ -4319,7 +4962,8 @@ components:
       description: Список облигаций.
       example:
         instruments:
-          - countryOfRisk: countryOfRisk
+          - assetUid: assetUid
+            countryOfRisk: countryOfRisk
             blockedTcaFlag: true
             maturityDate: 2000-01-23T04:56:07.000Z
             sellAvailableFlag: true
@@ -4329,6 +4973,10 @@ components:
               currency: currency
               units: units
             sector: sector
+            brand:
+              logoName: logoName
+              logoBaseColor: logoBaseColor
+              textColor: textColor
             liquidityFlag: true
             forIisFlag: true
             positionUid: positionUid
@@ -4392,7 +5040,8 @@ components:
             issueSize: issueSize
             countryOfRiskName: countryOfRiskName
             isin: isin
-          - countryOfRisk: countryOfRisk
+          - assetUid: assetUid
+            countryOfRisk: countryOfRisk
             blockedTcaFlag: true
             maturityDate: 2000-01-23T04:56:07.000Z
             sellAvailableFlag: true
@@ -4402,6 +5051,10 @@ components:
               currency: currency
               units: units
             sector: sector
+            brand:
+              logoName: logoName
+              logoBaseColor: logoBaseColor
+              textColor: textColor
             liquidityFlag: true
             forIisFlag: true
             positionUid: positionUid
@@ -4507,6 +5160,22 @@ components:
           type: string
         countryOfRiskName:
           description: Наименование страны риска.
+          type: string
+      type: object
+    v1BrandData:
+      example:
+        logoName: logoName
+        logoBaseColor: logoBaseColor
+        textColor: textColor
+      properties:
+        logoName:
+          description: Логотип инструмента. Имя файла для получения логотипа.
+          type: string
+        logoBaseColor:
+          description: Цвет бренда.
+          type: string
+        textColor:
+          description: Цвет текста для цвета логотипа бренда.
           type: string
       type: object
     v1BrokerReport:
@@ -4776,11 +5445,16 @@ components:
       description: Результат отмены торгового поручения.
       example:
         time: 2000-01-23T04:56:07.000Z
+        responseMetadata:
+          serverTime: 2000-01-23T04:56:07.000Z
+          trackingId: trackingId
       properties:
         time:
           description: Дата и время отмены заявки в часовом поясе UTC.
           format: date-time
           type: string
+        responseMetadata:
+          $ref: '#/components/schemas/v1ResponseMetadata'
       type: object
     v1CancelStopOrderRequest:
       description: Запрос отмены выставленной стоп-заявки.
@@ -4909,9 +5583,11 @@ components:
     v1CandleSubscription:
       description: Статус подписки на свечи.
       example:
+        streamId: streamId
         instrumentUid: instrumentUid
         waitingClose: true
         figi: figi
+        subscriptionId: subscriptionId
       properties:
         figi:
           description: Figi-идентификатор инструмента.
@@ -4926,6 +5602,12 @@ components:
         waitingClose:
           title: Флаг ожидания закрытия временного интервала для отправки свечи
           type: boolean
+        streamId:
+          title: Идентификатор открытого соединения
+          type: string
+        subscriptionId:
+          title: Идентификатор подписки в формате UUID
+          type: string
       type: object
     v1CloseSandboxAccountRequest:
       description: Запрос закрытия счёта в песочнице.
@@ -5056,6 +5738,10 @@ components:
             sellAvailableFlag: true
             currency: currency
             first1dayCandleDate: 2000-01-23T04:56:07.000Z
+            brand:
+              logoName: logoName
+              logoBaseColor: logoBaseColor
+              textColor: textColor
             buyAvailableFlag: true
             weekendFlag: true
             classCode: classCode
@@ -5105,6 +5791,10 @@ components:
             sellAvailableFlag: true
             currency: currency
             first1dayCandleDate: 2000-01-23T04:56:07.000Z
+            brand:
+              logoName: logoName
+              logoBaseColor: logoBaseColor
+              textColor: textColor
             buyAvailableFlag: true
             weekendFlag: true
             classCode: classCode
@@ -5164,6 +5854,10 @@ components:
         sellAvailableFlag: true
         currency: currency
         first1dayCandleDate: 2000-01-23T04:56:07.000Z
+        brand:
+          logoName: logoName
+          logoBaseColor: logoBaseColor
+          textColor: textColor
         buyAvailableFlag: true
         weekendFlag: true
         classCode: classCode
@@ -5299,6 +5993,8 @@ components:
           description: Дата первой дневной свечи.
           format: date-time
           type: string
+        brand:
+          $ref: '#/components/schemas/v1BrandData'
       type: object
     v1CurrencyResponse:
       description: Данные по валюте.
@@ -5323,6 +6019,10 @@ components:
           sellAvailableFlag: true
           currency: currency
           first1dayCandleDate: 2000-01-23T04:56:07.000Z
+          brand:
+            logoName: logoName
+            logoBaseColor: logoBaseColor
+            textColor: textColor
           buyAvailableFlag: true
           weekendFlag: true
           classCode: classCode
@@ -5515,8 +6215,11 @@ components:
         figi:
           description: Figi-идентификатор инструмента.
           type: string
+        instrumentId:
+          title: Идентификатор инструмента Figi или instrument_uid
+          type: string
       required:
-        - figi
+        - instrumentId
       type: object
     v1EditFavoritesResponse:
       description: Результат редактирования списка избранных инструментов.
@@ -5524,15 +6227,19 @@ components:
         favoriteInstruments:
           - otcFlag: true
             classCode: classCode
+            uid: uid
             ticker: ticker
             instrumentType: instrumentType
+            name: name
             figi: figi
             apiTradeAvailableFlag: true
             isin: isin
           - otcFlag: true
             classCode: classCode
+            uid: uid
             ticker: ticker
             instrumentType: instrumentType
+            name: name
             figi: figi
             apiTradeAvailableFlag: true
             isin: isin
@@ -5550,6 +6257,7 @@ components:
         fixedCommission:
           nano: 6
           units: units
+        assetUid: assetUid
         figi: figi
         dshortMin:
           nano: 6
@@ -5565,6 +6273,10 @@ components:
         currency: currency
         first1dayCandleDate: 2000-01-23T04:56:07.000Z
         sector: sector
+        brand:
+          logoName: logoName
+          logoBaseColor: logoBaseColor
+          textColor: textColor
         buyAvailableFlag: true
         weekendFlag: true
         classCode: classCode
@@ -5703,6 +6415,9 @@ components:
         positionUid:
           description: Уникальный идентификатор позиции инструмента.
           type: string
+        assetUid:
+          description: Уникальный идентификатор актива.
+          type: string
         forIisFlag:
           description: Признак доступности для ИИС.
           type: boolean
@@ -5728,6 +6443,8 @@ components:
           description: Дата первой дневной свечи.
           format: date-time
           type: string
+        brand:
+          $ref: '#/components/schemas/v1BrandData'
       type: object
     v1EtfResponse:
       description: Данные по фонду.
@@ -5737,6 +6454,7 @@ components:
           fixedCommission:
             nano: 6
             units: units
+          assetUid: assetUid
           figi: figi
           dshortMin:
             nano: 6
@@ -5752,6 +6470,10 @@ components:
           currency: currency
           first1dayCandleDate: 2000-01-23T04:56:07.000Z
           sector: sector
+          brand:
+            logoName: logoName
+            logoBaseColor: logoBaseColor
+            textColor: textColor
           buyAvailableFlag: true
           weekendFlag: true
           classCode: classCode
@@ -5800,6 +6522,7 @@ components:
             fixedCommission:
               nano: 6
               units: units
+            assetUid: assetUid
             figi: figi
             dshortMin:
               nano: 6
@@ -5815,6 +6538,10 @@ components:
             currency: currency
             first1dayCandleDate: 2000-01-23T04:56:07.000Z
             sector: sector
+            brand:
+              logoName: logoName
+              logoBaseColor: logoBaseColor
+              textColor: textColor
             buyAvailableFlag: true
             weekendFlag: true
             classCode: classCode
@@ -5855,6 +6582,7 @@ components:
             fixedCommission:
               nano: 6
               units: units
+            assetUid: assetUid
             figi: figi
             dshortMin:
               nano: 6
@@ -5870,6 +6598,10 @@ components:
             currency: currency
             first1dayCandleDate: 2000-01-23T04:56:07.000Z
             sector: sector
+            brand:
+              logoName: logoName
+              logoBaseColor: logoBaseColor
+              textColor: textColor
             buyAvailableFlag: true
             weekendFlag: true
             classCode: classCode
@@ -5931,8 +6663,10 @@ components:
       example:
         otcFlag: true
         classCode: classCode
+        uid: uid
         ticker: ticker
         instrumentType: instrumentType
+        name: name
         figi: figi
         apiTradeAvailableFlag: true
         isin: isin
@@ -5951,6 +6685,12 @@ components:
           type: string
         instrumentType:
           description: Тип инструмента.
+          type: string
+        name:
+          description: Название инструмента.
+          type: string
+        uid:
+          description: Уникальный идентификатор инструмента.
           type: string
         otcFlag:
           description: Признак внебиржевой ценной бумаги.
@@ -6050,6 +6790,10 @@ components:
         currency: currency
         first1dayCandleDate: 2000-01-23T04:56:07.000Z
         sector: sector
+        brand:
+          logoName: logoName
+          logoBaseColor: logoBaseColor
+          textColor: textColor
         minPriceIncrementAmount:
           nano: 6
           units: units
@@ -6233,6 +6977,8 @@ components:
           $ref: '#/components/schemas/v1MoneyValue'
         minPriceIncrementAmount:
           $ref: '#/components/schemas/v1Quotation'
+        brand:
+          $ref: '#/components/schemas/v1BrandData'
       type: object
     v1FutureResponse:
       description: Данные по фьючерсу.
@@ -6259,6 +7005,10 @@ components:
           currency: currency
           first1dayCandleDate: 2000-01-23T04:56:07.000Z
           sector: sector
+          brand:
+            logoName: logoName
+            logoBaseColor: logoBaseColor
+            textColor: textColor
           minPriceIncrementAmount:
             nano: 6
             units: units
@@ -6332,6 +7082,10 @@ components:
             currency: currency
             first1dayCandleDate: 2000-01-23T04:56:07.000Z
             sector: sector
+            brand:
+              logoName: logoName
+              logoBaseColor: logoBaseColor
+              textColor: textColor
             minPriceIncrementAmount:
               nano: 6
               units: units
@@ -6397,6 +7151,10 @@ components:
             currency: currency
             first1dayCandleDate: 2000-01-23T04:56:07.000Z
             sector: sector
+            brand:
+              logoName: logoName
+              logoBaseColor: logoBaseColor
+              textColor: textColor
             minPriceIncrementAmount:
               nano: 6
               units: units
@@ -6591,6 +7349,7 @@ components:
           type: array
       required:
         - assets
+      title: Запрос фундаментальных показателей
       type: object
     v1GetAssetFundamentalsResponse:
       example:
@@ -6712,6 +7471,45 @@ components:
           items:
             $ref: '#/components/schemas/GetAssetFundamentalsResponseStatisticResponse'
           type: array
+      title: Фундаментальные показатели
+      type: object
+    v1GetAssetReportsRequest:
+      properties:
+        instrumentId:
+          description: Идентификатор инструмента в формате uid.
+          type: string
+        from:
+          description: Начало запрашиваемого периода в часовом поясе UTC.
+          format: date-time
+          type: string
+        to:
+          description: Окончание запрашиваемого периода в часовом поясе UTC.
+          format: date-time
+          type: string
+      required:
+        - instrumentId
+      title: Запрос отчетов эмитентов
+      type: object
+    v1GetAssetReportsResponse:
+      example:
+        events:
+          - periodNum: 6
+            createdAt: 2000-01-23T04:56:07.000Z
+            reportDate: 2000-01-23T04:56:07.000Z
+            periodYear: 0
+            instrumentId: instrumentId
+          - periodNum: 6
+            createdAt: 2000-01-23T04:56:07.000Z
+            reportDate: 2000-01-23T04:56:07.000Z
+            periodYear: 0
+            instrumentId: instrumentId
+      properties:
+        events:
+          items:
+            $ref: '#/components/schemas/GetAssetReportsResponseGetAssetReportsEvent'
+          title: Массив событий по облигации
+          type: array
+      title: Отчеты эмитентов
       type: object
     v1GetBondCouponsRequest:
       description: Запрос купонов по облигации.
@@ -6767,6 +7565,99 @@ components:
         events:
           items:
             $ref: '#/components/schemas/v1Coupon'
+          type: array
+      type: object
+    v1GetBondEventsRequest:
+      description: События по облигации.
+      properties:
+        from:
+          description: Начало запрашиваемого периода в часовом поясе UTC.
+          format: date-time
+          type: string
+        to:
+          description: Окончание запрашиваемого периода в часовом поясе UTC.
+          format: date-time
+          type: string
+        instrumentId:
+          title: Идентификатор инструмента Figi или instrument_uid
+          type: string
+        type:
+          $ref: '#/components/schemas/GetBondEventsRequestEventType'
+      required:
+        - instrumentId
+      type: object
+    v1GetBondEventsResponse:
+      description: Объект передачи информации о событии облигации.
+      example:
+        events:
+          - fixDate: 2000-01-23T04:56:07.000Z
+            execution: execution
+            note: note
+            defaultDate: 2000-01-23T04:56:07.000Z
+            eventNumber: 0
+            instrumentId: instrumentId
+            couponEndDate: 2000-01-23T04:56:07.000Z
+            rateDate: 2000-01-23T04:56:07.000Z
+            payOneBond:
+              nano: 5
+              currency: currency
+              units: units
+            moneyFlowVal:
+              nano: 5
+              currency: currency
+              units: units
+            couponPeriod: 6
+            convertToFinToolId: convertToFinToolId
+            couponInterestRate:
+              nano: 6
+              units: units
+            eventTotalVol:
+              nano: 6
+              units: units
+            realPayDate: 2000-01-23T04:56:07.000Z
+            operationType: operationType
+            value:
+              nano: 6
+              units: units
+            couponStartDate: 2000-01-23T04:56:07.000Z
+            eventDate: 2000-01-23T04:56:07.000Z
+            payDate: 2000-01-23T04:56:07.000Z
+          - fixDate: 2000-01-23T04:56:07.000Z
+            execution: execution
+            note: note
+            defaultDate: 2000-01-23T04:56:07.000Z
+            eventNumber: 0
+            instrumentId: instrumentId
+            couponEndDate: 2000-01-23T04:56:07.000Z
+            rateDate: 2000-01-23T04:56:07.000Z
+            payOneBond:
+              nano: 5
+              currency: currency
+              units: units
+            moneyFlowVal:
+              nano: 5
+              currency: currency
+              units: units
+            couponPeriod: 6
+            convertToFinToolId: convertToFinToolId
+            couponInterestRate:
+              nano: 6
+              units: units
+            eventTotalVol:
+              nano: 6
+              units: units
+            realPayDate: 2000-01-23T04:56:07.000Z
+            operationType: operationType
+            value:
+              nano: 6
+              units: units
+            couponStartDate: 2000-01-23T04:56:07.000Z
+            eventDate: 2000-01-23T04:56:07.000Z
+            payDate: 2000-01-23T04:56:07.000Z
+      properties:
+        events:
+          items:
+            $ref: '#/components/schemas/GetBondEventsResponseBondEvent'
           type: array
       type: object
     v1GetBrandRequest:
@@ -7060,6 +7951,64 @@ components:
             $ref: '#/components/schemas/v1InstrumentClosePriceResponse'
           type: array
       type: object
+    v1GetConsensusForecastsRequest:
+      properties:
+        paging:
+          $ref: '#/components/schemas/v1Page'
+      title: Запрос консенсус-прогнозов
+      type: object
+    v1GetConsensusForecastsResponse:
+      example:
+        page:
+          pageNumber: 6
+          limit: 0
+          totalCount: 1
+        items:
+          - uid: uid
+            assetUid: assetUid
+            createdAt: 2000-01-23T04:56:07.000Z
+            bestTargetHigh:
+              nano: 6
+              units: units
+            bestTargetLow:
+              nano: 6
+              units: units
+            totalSellRecommend: 1
+            currency: currency
+            bestTargetPrice:
+              nano: 6
+              units: units
+            totalHoldRecommend: 6
+            prognosisDate: 2000-01-23T04:56:07.000Z
+            totalBuyRecommend: 0
+          - uid: uid
+            assetUid: assetUid
+            createdAt: 2000-01-23T04:56:07.000Z
+            bestTargetHigh:
+              nano: 6
+              units: units
+            bestTargetLow:
+              nano: 6
+              units: units
+            totalSellRecommend: 1
+            currency: currency
+            bestTargetPrice:
+              nano: 6
+              units: units
+            totalHoldRecommend: 6
+            prognosisDate: 2000-01-23T04:56:07.000Z
+            totalBuyRecommend: 0
+      properties:
+        items:
+          items:
+            $ref: >-
+              #/components/schemas/GetConsensusForecastsResponseConsensusForecastsItem
+          title: Массив прогнозов
+          type: array
+        page:
+          $ref: '#/components/schemas/v1PageResponse'
+      title: Консенсус-прогнозы
+      type: object
     v1GetCountriesRequest:
       description: Запрос справочника стран.
       type: object
@@ -7310,15 +8259,19 @@ components:
         favoriteInstruments:
           - otcFlag: true
             classCode: classCode
+            uid: uid
             ticker: ticker
             instrumentType: instrumentType
+            name: name
             figi: figi
             apiTradeAvailableFlag: true
             isin: isin
           - otcFlag: true
             classCode: classCode
+            uid: uid
             ticker: ticker
             instrumentType: instrumentType
+            name: name
             figi: figi
             apiTradeAvailableFlag: true
             isin: isin
@@ -7328,6 +8281,84 @@ components:
             $ref: '#/components/schemas/v1FavoriteInstrument'
           title: Массив инструментов
           type: array
+      type: object
+    v1GetForecastRequest:
+      properties:
+        instrumentId:
+          title: Идентификатор инструмента
+          type: string
+      title: Запрос прогнозов инвестдомов
+      type: object
+    v1GetForecastResponse:
+      example:
+        consensus:
+          consensus:
+            nano: 6
+            units: units
+          priceChange:
+            nano: 6
+            units: units
+          uid: uid
+          maxTarget:
+            nano: 6
+            units: units
+          ticker: ticker
+          priceChangeRel:
+            nano: 6
+            units: units
+          currentPrice:
+            nano: 6
+            units: units
+          currency: currency
+          minTarget:
+            nano: 6
+            units: units
+        targets:
+          - priceChange:
+              nano: 6
+              units: units
+            uid: uid
+            ticker: ticker
+            targetPrice:
+              nano: 6
+              units: units
+            showName: showName
+            priceChangeRel:
+              nano: 6
+              units: units
+            currentPrice:
+              nano: 6
+              units: units
+            company: company
+            currency: currency
+            recommendationDate: 2000-01-23T04:56:07.000Z
+          - priceChange:
+              nano: 6
+              units: units
+            uid: uid
+            ticker: ticker
+            targetPrice:
+              nano: 6
+              units: units
+            showName: showName
+            priceChangeRel:
+              nano: 6
+              units: units
+            currentPrice:
+              nano: 6
+              units: units
+            company: company
+            currency: currency
+            recommendationDate: 2000-01-23T04:56:07.000Z
+      properties:
+        targets:
+          items:
+            $ref: '#/components/schemas/GetForecastResponseTargetItem'
+          title: Массив прогнозов
+          type: array
+        consensus:
+          $ref: '#/components/schemas/GetForecastResponseConsensusItem'
+      title: Прогнозы инвестдомов по инструменту
       type: object
     v1GetFuturesMarginRequest:
       properties:
@@ -8034,13 +9065,15 @@ components:
             lotsRequested: lotsRequested
             instrumentUid: instrumentUid
             stages:
-              - quantity: quantity
+              - executionTime: 2000-01-23T04:56:07.000Z
+                quantity: quantity
                 price:
                   nano: 5
                   currency: currency
                   units: units
                 tradeId: tradeId
-              - quantity: quantity
+              - executionTime: 2000-01-23T04:56:07.000Z
+                quantity: quantity
                 price:
                   nano: 5
                   currency: currency
@@ -8087,13 +9120,15 @@ components:
             lotsRequested: lotsRequested
             instrumentUid: instrumentUid
             stages:
-              - quantity: quantity
+              - executionTime: 2000-01-23T04:56:07.000Z
+                quantity: quantity
                 price:
                   nano: 5
                   currency: currency
                   units: units
                 tradeId: tradeId
-              - quantity: quantity
+              - executionTime: 2000-01-23T04:56:07.000Z
+                quantity: quantity
                 price:
                   nano: 5
                   currency: currency
@@ -8213,6 +9248,83 @@ components:
           title: Массив стоп-заявок по счёту
           type: array
       type: object
+    v1GetTechAnalysisRequest:
+      properties:
+        indicatorType:
+          $ref: '#/components/schemas/GetTechAnalysisRequestIndicatorType'
+        instrumentUid:
+          description: Uid инструмента.
+          type: string
+        from:
+          description: Начало запрашиваемого периода в часовом поясе UTC.
+          format: date-time
+          type: string
+        to:
+          description: Окончание запрашиваемого периода в часовом поясе UTC.
+          format: date-time
+          type: string
+        interval:
+          $ref: '#/components/schemas/GetTechAnalysisRequestIndicatorInterval'
+        typeOfPrice:
+          $ref: '#/components/schemas/GetTechAnalysisRequestTypeOfPrice'
+        length:
+          description: Торговый период, за который рассчитывается индикатор.
+          format: int32
+          type: integer
+        deviation:
+          $ref: '#/components/schemas/GetTechAnalysisRequestDeviation'
+        smoothing:
+          $ref: '#/components/schemas/GetTechAnalysisRequestSmoothing'
+      required:
+        - from
+        - indicatorType
+        - instrumentUid
+        - interval
+        - to
+        - typeOfPrice
+      type: object
+    v1GetTechAnalysisResponse:
+      example:
+        technicalIndicators:
+          - lowerBand:
+              nano: 6
+              units: units
+            upperBand:
+              nano: 6
+              units: units
+            macd:
+              nano: 6
+              units: units
+            signal:
+              nano: 6
+              units: units
+            timestamp: 2000-01-23T04:56:07.000Z
+            middleBand:
+              nano: 6
+              units: units
+          - lowerBand:
+              nano: 6
+              units: units
+            upperBand:
+              nano: 6
+              units: units
+            macd:
+              nano: 6
+              units: units
+            signal:
+              nano: 6
+              units: units
+            timestamp: 2000-01-23T04:56:07.000Z
+            middleBand:
+              nano: 6
+              units: units
+      properties:
+        technicalIndicators:
+          items:
+            $ref: '#/components/schemas/GetTechAnalysisResponseTechAnalysisItem'
+          title: Массив значений результатов тех. анализа
+          type: array
+      type: object
     v1GetTradingStatusRequest:
       description: Запрос получения торгового статуса.
       properties:
@@ -8231,6 +9343,8 @@ components:
       description: Информация о торговом статусе.
       example:
         limitOrderAvailableFlag: true
+        bestpriceOrderAvailableFlag: true
+        onlyBestPrice: true
         marketOrderAvailableFlag: true
         instrumentUid: instrumentUid
         figi: figi
@@ -8253,6 +9367,12 @@ components:
         instrumentUid:
           description: Uid инструмента.
           type: string
+        bestpriceOrderAvailableFlag:
+          title: Признак доступности завяки по лучшей цене
+          type: boolean
+        onlyBestPrice:
+          title: Признак доступности только заявки по лучшей цене
+          type: boolean
       type: object
     v1GetTradingStatusesRequest:
       description: Запрос получения торгового статуса.
@@ -8270,11 +9390,15 @@ components:
       example:
         tradingStatuses:
           - limitOrderAvailableFlag: true
+            bestpriceOrderAvailableFlag: true
+            onlyBestPrice: true
             marketOrderAvailableFlag: true
             instrumentUid: instrumentUid
             figi: figi
             apiTradeAvailableFlag: true
           - limitOrderAvailableFlag: true
+            bestpriceOrderAvailableFlag: true
+            onlyBestPrice: true
             marketOrderAvailableFlag: true
             instrumentUid: instrumentUid
             figi: figi
@@ -8365,6 +9489,81 @@ components:
             интервал ещё сформирована не полностью.
           type: boolean
       type: object
+    v1IndicativeResponse:
+      example:
+        classCode: classCode
+        uid: uid
+        ticker: ticker
+        name: name
+        sellAvailableFlag: true
+        figi: figi
+        currency: currency
+        exchange: exchange
+        buyAvailableFlag: true
+      properties:
+        figi:
+          title: Figi-идентификатор инструмента
+          type: string
+        ticker:
+          title: Тикер инструмента
+          type: string
+        classCode:
+          title: Класс-код инструмента
+          type: string
+        currency:
+          title: Валюта расчётов
+          type: string
+        instrumentKind:
+          $ref: '#/components/schemas/v1InstrumentType'
+        name:
+          title: Название инструмента
+          type: string
+        exchange:
+          title: Tорговая площадка (секция биржи)
+          type: string
+        uid:
+          title: Уникальный идентификатор инструмента
+          type: string
+        buyAvailableFlag:
+          title: Признак доступности для покупки
+          type: boolean
+        sellAvailableFlag:
+          title: Признак доступности для продажи
+          type: boolean
+      title: Индикатив
+      type: object
+    v1IndicativesRequest:
+      title: Запрос справочника индексов и товаров
+      type: object
+    v1IndicativesResponse:
+      example:
+        instruments:
+          - classCode: classCode
+            uid: uid
+            ticker: ticker
+            name: name
+            sellAvailableFlag: true
+            figi: figi
+            currency: currency
+            exchange: exchange
+            buyAvailableFlag: true
+          - classCode: classCode
+            uid: uid
+            ticker: ticker
+            name: name
+            sellAvailableFlag: true
+            figi: figi
+            currency: currency
+            exchange: exchange
+            buyAvailableFlag: true
+      properties:
+        instruments:
+          items:
+            $ref: '#/components/schemas/v1IndicativeResponse'
+          title: Массив инструментов
+          type: array
+      title: Справочник индексов и товаров
+      type: object
     v1InfoInstrument:
       description: Запрос подписки на торговый статус.
       properties:
@@ -8382,8 +9581,10 @@ components:
     v1InfoSubscription:
       description: Статус подписки.
       example:
+        streamId: streamId
         instrumentUid: instrumentUid
         figi: figi
+        subscriptionId: subscriptionId
       properties:
         figi:
           description: Figi-идентификатор инструмента.
@@ -8393,10 +9594,17 @@ components:
         instrumentUid:
           title: Uid инструмента
           type: string
+        streamId:
+          title: Идентификатор открытого соединения
+          type: string
+        subscriptionId:
+          title: Идентификатор подписки в формате UUID
+          type: string
       type: object
     v1Instrument:
       description: Объект передачи основной информации об инструменте.
       example:
+        assetUid: assetUid
         figi: figi
         dshortMin:
           nano: 6
@@ -8411,6 +9619,10 @@ components:
         sellAvailableFlag: true
         currency: currency
         first1dayCandleDate: 2000-01-23T04:56:07.000Z
+        brand:
+          logoName: logoName
+          logoBaseColor: logoBaseColor
+          textColor: textColor
         buyAvailableFlag: true
         weekendFlag: true
         classCode: classCode
@@ -8523,6 +9735,9 @@ components:
         positionUid:
           description: Уникальный идентификатор позиции инструмента.
           type: string
+        assetUid:
+          description: Уникальный идентификатор актива.
+          type: string
         forIisFlag:
           description: Признак доступности для ИИС.
           type: boolean
@@ -8547,6 +9762,8 @@ components:
           description: Дата первой дневной свечи.
           format: date-time
           type: string
+        brand:
+          $ref: '#/components/schemas/v1BrandData'
       type: object
     v1InstrumentClosePriceRequest:
       description: Запрос цен закрытия торговой сессии по инструменту.
@@ -8636,6 +9853,7 @@ components:
       description: Данные по инструменту.
       example:
         instrument:
+          assetUid: assetUid
           figi: figi
           dshortMin:
             nano: 6
@@ -8650,6 +9868,10 @@ components:
           sellAvailableFlag: true
           currency: currency
           first1dayCandleDate: 2000-01-23T04:56:07.000Z
+          brand:
+            logoName: logoName
+            logoBaseColor: logoBaseColor
+            textColor: textColor
           buyAvailableFlag: true
           weekendFlag: true
           classCode: classCode
@@ -8782,6 +10004,8 @@ components:
          - INSTRUMENT_TYPE_SP: Структурная нота.
          - INSTRUMENT_TYPE_OPTION: Опцион.
          - INSTRUMENT_TYPE_CLEARING_CERTIFICATE: Clearing certificate.
+         - INSTRUMENT_TYPE_INDEX: Индекс.
+         - INSTRUMENT_TYPE_COMMODITY: Товар.
       enum:
         - INSTRUMENT_TYPE_UNSPECIFIED
         - INSTRUMENT_TYPE_BOND
@@ -8792,6 +10016,8 @@ components:
         - INSTRUMENT_TYPE_SP
         - INSTRUMENT_TYPE_OPTION
         - INSTRUMENT_TYPE_CLEARING_CERTIFICATE
+        - INSTRUMENT_TYPE_INDEX
+        - INSTRUMENT_TYPE_COMMODITY
       type: string
     v1InstrumentsRequest:
       description: Запрос получения инструментов.
@@ -8839,8 +10065,10 @@ components:
     v1LastPriceSubscription:
       description: Статус подписки на цену последней сделки.
       example:
+        streamId: streamId
         instrumentUid: instrumentUid
         figi: figi
+        subscriptionId: subscriptionId
       properties:
         figi:
           description: Figi-идентификатор инструмента.
@@ -8849,6 +10077,12 @@ components:
           $ref: '#/components/schemas/v1SubscriptionStatus'
         instrumentUid:
           title: Uid инструмента
+          type: string
+        streamId:
+          title: Идентификатор открытого соединения
+          type: string
+        subscriptionId:
+          title: Идентификатор подписки в формате UUID
           type: string
       type: object
     v1MarketDataRequest:
@@ -8873,10 +10107,14 @@ components:
       example:
         subscribeInfoResponse:
           infoSubscriptions:
-            - instrumentUid: instrumentUid
+            - streamId: streamId
+              instrumentUid: instrumentUid
               figi: figi
-            - instrumentUid: instrumentUid
+              subscriptionId: subscriptionId
+            - streamId: streamId
+              instrumentUid: instrumentUid
               figi: figi
+              subscriptionId: subscriptionId
           trackingId: trackingId
         trade:
           quantity: quantity
@@ -8889,13 +10127,18 @@ components:
         subscribeOrderBookResponse:
           orderBookSubscriptions:
             - depth: 0
+              streamId: streamId
               instrumentUid: instrumentUid
               figi: figi
+              subscriptionId: subscriptionId
             - depth: 0
+              streamId: streamId
               instrumentUid: instrumentUid
               figi: figi
+              subscriptionId: subscriptionId
           trackingId: trackingId
         ping:
+          streamId: streamId
           time: 2000-01-23T04:56:07.000Z
         candle:
           volume: volume
@@ -8947,10 +10190,14 @@ components:
           isConsistent: true
         subscribeTradesResponse:
           tradeSubscriptions:
-            - instrumentUid: instrumentUid
+            - streamId: streamId
+              instrumentUid: instrumentUid
               figi: figi
-            - instrumentUid: instrumentUid
+              subscriptionId: subscriptionId
+            - streamId: streamId
+              instrumentUid: instrumentUid
               figi: figi
+              subscriptionId: subscriptionId
           trackingId: trackingId
         tradingStatus:
           limitOrderAvailableFlag: true
@@ -8960,19 +10207,27 @@ components:
           time: 2000-01-23T04:56:07.000Z
         subscribeCandlesResponse:
           candlesSubscriptions:
-            - instrumentUid: instrumentUid
+            - streamId: streamId
+              instrumentUid: instrumentUid
               waitingClose: true
               figi: figi
-            - instrumentUid: instrumentUid
+              subscriptionId: subscriptionId
+            - streamId: streamId
+              instrumentUid: instrumentUid
               waitingClose: true
               figi: figi
+              subscriptionId: subscriptionId
           trackingId: trackingId
         subscribeLastPriceResponse:
           lastPriceSubscriptions:
-            - instrumentUid: instrumentUid
+            - streamId: streamId
+              instrumentUid: instrumentUid
               figi: figi
-            - instrumentUid: instrumentUid
+              subscriptionId: subscriptionId
+            - streamId: streamId
+              instrumentUid: instrumentUid
               figi: figi
+              subscriptionId: subscriptionId
           trackingId: trackingId
         lastPrice:
           price:
@@ -9380,7 +10635,7 @@ components:
         Статус запрашиваемых операций.
 
          - OPERATION_STATE_UNSPECIFIED: Статус операции не определён
-         - OPERATION_STATE_EXECUTED: Исполнена.
+         - OPERATION_STATE_EXECUTED: Исполнена частично или полностью.
          - OPERATION_STATE_CANCELED: Отменена.
          - OPERATION_STATE_PROGRESS: Исполняется.
       enum:
@@ -9666,6 +10921,10 @@ components:
         currency: currency
         first1dayCandleDate: 2000-01-23T04:56:07.000Z
         sector: sector
+        brand:
+          logoName: logoName
+          logoBaseColor: logoBaseColor
+          textColor: textColor
         expirationDate: 2000-01-23T04:56:07.000Z
         buyAvailableFlag: true
         weekendFlag: true
@@ -9763,6 +11022,8 @@ components:
         sector:
           description: Сектор экономики.
           type: string
+        brand:
+          $ref: '#/components/schemas/v1BrandData'
         lot:
           description: Количество бумаг в лоте.
           format: int32
@@ -9880,6 +11141,10 @@ components:
           currency: currency
           first1dayCandleDate: 2000-01-23T04:56:07.000Z
           sector: sector
+          brand:
+            logoName: logoName
+            logoBaseColor: logoBaseColor
+            textColor: textColor
           expirationDate: 2000-01-23T04:56:07.000Z
           buyAvailableFlag: true
           weekendFlag: true
@@ -9971,6 +11236,10 @@ components:
             currency: currency
             first1dayCandleDate: 2000-01-23T04:56:07.000Z
             sector: sector
+            brand:
+              logoName: logoName
+              logoBaseColor: logoBaseColor
+              textColor: textColor
             expirationDate: 2000-01-23T04:56:07.000Z
             buyAvailableFlag: true
             weekendFlag: true
@@ -10028,6 +11297,10 @@ components:
             currency: currency
             first1dayCandleDate: 2000-01-23T04:56:07.000Z
             sector: sector
+            brand:
+              logoName: logoName
+              logoBaseColor: logoBaseColor
+              textColor: textColor
             expirationDate: 2000-01-23T04:56:07.000Z
             buyAvailableFlag: true
             weekendFlag: true
@@ -10159,6 +11432,8 @@ components:
         instrumentUid:
           title: Uid инструмента
           type: string
+        orderBookType:
+          $ref: '#/components/schemas/v1OrderBookType'
       type: object
     v1OrderBookInstrument:
       description: Запрос подписки на стаканы.
@@ -10177,13 +11452,17 @@ components:
             Идентификатор инструмента, принимает значение figi или
             instrument_uid
           type: string
+        orderBookType:
+          $ref: '#/components/schemas/v1OrderBookType'
       type: object
     v1OrderBookSubscription:
       description: Статус подписки.
       example:
         depth: 0
+        streamId: streamId
         instrumentUid: instrumentUid
         figi: figi
+        subscriptionId: subscriptionId
       properties:
         figi:
           description: Figi-идентификатор инструмента.
@@ -10197,7 +11476,26 @@ components:
         instrumentUid:
           title: Uid инструмента
           type: string
+        streamId:
+          title: Идентификатор открытого соединения
+          type: string
+        subscriptionId:
+          title: Идентификатор подписки в формате UUID
+          type: string
+        orderBookType:
+          $ref: '#/components/schemas/v1OrderBookType'
       type: object
+    v1OrderBookType:
+      default: ORDERBOOK_TYPE_UNSPECIFIED
+      enum:
+        - ORDERBOOK_TYPE_UNSPECIFIED
+        - ORDERBOOK_TYPE_EXCHANGE
+        - ORDERBOOK_TYPE_DEALER
+      title: |-
+        - ORDERBOOK_TYPE_UNSPECIFIED: не определен
+         - ORDERBOOK_TYPE_EXCHANGE: Биржевой стакан
+         - ORDERBOOK_TYPE_DEALER: Стакан дилера
+      type: string
     v1OrderDirection:
       default: ORDER_DIRECTION_UNSPECIFIED
       description: |-
@@ -10231,6 +11529,7 @@ components:
     v1OrderStage:
       description: Сделки в рамках торгового поручения.
       example:
+        executionTime: 2000-01-23T04:56:07.000Z
         quantity: quantity
         price:
           nano: 5
@@ -10246,6 +11545,10 @@ components:
           type: string
         tradeId:
           description: Идентификатор сделки.
+          type: string
+        executionTime:
+          format: date-time
+          title: Время исполнения сделки
           type: string
       type: object
     v1OrderState:
@@ -10273,13 +11576,15 @@ components:
         lotsRequested: lotsRequested
         instrumentUid: instrumentUid
         stages:
-          - quantity: quantity
+          - executionTime: 2000-01-23T04:56:07.000Z
+            quantity: quantity
             price:
               nano: 5
               currency: currency
               units: units
             tradeId: tradeId
-          - quantity: quantity
+          - executionTime: 2000-01-23T04:56:07.000Z
+            quantity: quantity
             price:
               nano: 5
               currency: currency
@@ -10480,11 +11785,15 @@ components:
     v1Ping:
       description: Проверка активности стрима.
       example:
+        streamId: streamId
         time: 2000-01-23T04:56:07.000Z
       properties:
         time:
           description: Время проверки.
           format: date-time
+          type: string
+        streamId:
+          title: Идентификатор соединения
           type: string
       type: object
     v1PortfolioPosition:
@@ -10989,6 +12298,7 @@ components:
             currency: currency
             units: units
         ping:
+          streamId: streamId
           time: 2000-01-23T04:56:07.000Z
       properties:
         subscriptions:
@@ -11338,6 +12648,7 @@ components:
             - accountId: accountId
             - accountId: accountId
         ping:
+          streamId: streamId
           time: 2000-01-23T04:56:07.000Z
         position:
           date: 2000-01-23T04:56:07.000Z
@@ -11509,6 +12820,9 @@ components:
           nano: 5
           currency: currency
           units: units
+        responseMetadata:
+          serverTime: 2000-01-23T04:56:07.000Z
+          trackingId: trackingId
       properties:
         orderId:
           description: Биржевой идентификатор заявки.
@@ -11557,6 +12871,8 @@ components:
             Идентификатор ключа идемпотентности, переданный клиентом, в формате
             UID. Максимальная длина 36 символов.
           type: string
+        responseMetadata:
+          $ref: '#/components/schemas/v1ResponseMetadata'
       type: object
     v1PostStopOrderRequest:
       description: Запрос выставления стоп-заявки.
@@ -11586,7 +12902,8 @@ components:
         expireDate:
           description: >-
             Дата и время окончания действия стоп-заявки в часовом поясе UTC.
-            **Для ExpirationType = GoodTillDate заполнение обязательно**.
+            **Для ExpirationType = GoodTillDate заполнение обязательно, для
+            GoodTillCancel игнорируется**.
           format: date-time
           type: string
         instrumentId:
@@ -11602,11 +12919,17 @@ components:
           $ref: '#/components/schemas/v1PostStopOrderRequestTrailingData'
         priceType:
           $ref: '#/components/schemas/v1PriceType'
+        orderId:
+          description: >-
+            Идентификатор запроса выставления поручения для целей
+            идемпотентности в формате UID. Максимальная длина 36 символов.
+          type: string
       required:
         - accountId
         - direction
         - expirationType
         - instrumentId
+        - orderId
         - quantity
         - stopOrderType
       type: object
@@ -11624,11 +12947,22 @@ components:
     v1PostStopOrderResponse:
       description: Результат выставления стоп-заявки.
       example:
+        orderRequestId: orderRequestId
+        responseMetadata:
+          serverTime: 2000-01-23T04:56:07.000Z
+          trackingId: trackingId
         stopOrderId: stopOrderId
       properties:
         stopOrderId:
           title: Уникальный идентификатор стоп-заявки
           type: string
+        orderRequestId:
+          description: >-
+            Идентификатор ключа идемпотентности, переданный клиентом, в формате
+            UID. Максимальная длина 36 символов.
+          type: string
+        responseMetadata:
+          $ref: '#/components/schemas/v1ResponseMetadata'
       type: object
     v1PriceType:
       default: PRICE_TYPE_UNSPECIFIED
@@ -11673,6 +13007,19 @@ components:
         - REAL_EXCHANGE_RTS
         - REAL_EXCHANGE_OTC
       type: string
+    v1Recommendation:
+      default: RECOMMENDATION_UNSPECIFIED
+      enum:
+        - RECOMMENDATION_UNSPECIFIED
+        - RECOMMENDATION_BUY
+        - RECOMMENDATION_HOLD
+        - RECOMMENDATION_SELL
+      title: |-
+        - RECOMMENDATION_UNSPECIFIED: Не определено
+         - RECOMMENDATION_BUY: Покупать
+         - RECOMMENDATION_HOLD: Держать
+         - RECOMMENDATION_SELL: Продавать
+      type: string
     v1ReplaceOrderRequest:
       description: Запрос изменения выставленной заявки.
       properties:
@@ -11701,6 +13048,19 @@ components:
         - idempotencyKey
         - orderId
         - quantity
+      type: object
+    v1ResponseMetadata:
+      example:
+        serverTime: 2000-01-23T04:56:07.000Z
+        trackingId: trackingId
+      properties:
+        trackingId:
+          title: Идентификатор трекинга
+          type: string
+        serverTime:
+          format: date-time
+          title: Серверное время
+          type: string
       type: object
     v1RiskLevel:
       default: RISK_LEVEL_UNSPECIFIED
@@ -11783,6 +13143,7 @@ components:
     v1Share:
       description: Объект передачи информации об акции.
       example:
+        assetUid: assetUid
         figi: figi
         dshortMin:
           nano: 6
@@ -11802,6 +13163,10 @@ components:
         currency: currency
         first1dayCandleDate: 2000-01-23T04:56:07.000Z
         sector: sector
+        brand:
+          logoName: logoName
+          logoBaseColor: logoBaseColor
+          textColor: textColor
         buyAvailableFlag: true
         weekendFlag: true
         classCode: classCode
@@ -11937,6 +13302,9 @@ components:
         positionUid:
           description: Уникальный идентификатор позиции инструмента.
           type: string
+        assetUid:
+          description: Уникальный идентификатор актива.
+          type: string
         forIisFlag:
           description: Признак доступности для ИИС.
           type: boolean
@@ -11962,11 +13330,14 @@ components:
           description: Дата первой дневной свечи.
           format: date-time
           type: string
+        brand:
+          $ref: '#/components/schemas/v1BrandData'
       type: object
     v1ShareResponse:
       description: Данные по акции.
       example:
         instrument:
+          assetUid: assetUid
           figi: figi
           dshortMin:
             nano: 6
@@ -11986,6 +13357,10 @@ components:
           currency: currency
           first1dayCandleDate: 2000-01-23T04:56:07.000Z
           sector: sector
+          brand:
+            logoName: logoName
+            logoBaseColor: logoBaseColor
+            textColor: textColor
           buyAvailableFlag: true
           weekendFlag: true
           classCode: classCode
@@ -12054,7 +13429,8 @@ components:
       description: Данные по акциям.
       example:
         instruments:
-          - figi: figi
+          - assetUid: assetUid
+            figi: figi
             dshortMin:
               nano: 6
               units: units
@@ -12073,6 +13449,10 @@ components:
             currency: currency
             first1dayCandleDate: 2000-01-23T04:56:07.000Z
             sector: sector
+            brand:
+              logoName: logoName
+              logoBaseColor: logoBaseColor
+              textColor: textColor
             buyAvailableFlag: true
             weekendFlag: true
             classCode: classCode
@@ -12108,7 +13488,8 @@ components:
             divYieldFlag: true
             isin: isin
             ipoDate: 2000-01-23T04:56:07.000Z
-          - figi: figi
+          - assetUid: assetUid
+            figi: figi
             dshortMin:
               nano: 6
               units: units
@@ -12127,6 +13508,10 @@ components:
             currency: currency
             first1dayCandleDate: 2000-01-23T04:56:07.000Z
             sector: sector
+            brand:
+              logoName: logoName
+              logoBaseColor: logoBaseColor
+              textColor: textColor
             buyAvailableFlag: true
             weekendFlag: true
             classCode: classCode
@@ -12389,12 +13774,16 @@ components:
       description: Результат изменения статус подписки на свечи.
       example:
         candlesSubscriptions:
-          - instrumentUid: instrumentUid
+          - streamId: streamId
+            instrumentUid: instrumentUid
             waitingClose: true
             figi: figi
-          - instrumentUid: instrumentUid
+            subscriptionId: subscriptionId
+          - streamId: streamId
+            instrumentUid: instrumentUid
             waitingClose: true
             figi: figi
+            subscriptionId: subscriptionId
         trackingId: trackingId
       properties:
         trackingId:
@@ -12423,10 +13812,14 @@ components:
       description: Результат изменения статуса подписки на торговый статус.
       example:
         infoSubscriptions:
-          - instrumentUid: instrumentUid
+          - streamId: streamId
+            instrumentUid: instrumentUid
             figi: figi
-          - instrumentUid: instrumentUid
+            subscriptionId: subscriptionId
+          - streamId: streamId
+            instrumentUid: instrumentUid
             figi: figi
+            subscriptionId: subscriptionId
         trackingId: trackingId
       properties:
         trackingId:
@@ -12455,10 +13848,14 @@ components:
       description: Результат изменения статуса подписки на цену последней сделки.
       example:
         lastPriceSubscriptions:
-          - instrumentUid: instrumentUid
+          - streamId: streamId
+            instrumentUid: instrumentUid
             figi: figi
-          - instrumentUid: instrumentUid
+            subscriptionId: subscriptionId
+          - streamId: streamId
+            instrumentUid: instrumentUid
             figi: figi
+            subscriptionId: subscriptionId
         trackingId: trackingId
       properties:
         trackingId:
@@ -12488,11 +13885,15 @@ components:
       example:
         orderBookSubscriptions:
           - depth: 0
+            streamId: streamId
             instrumentUid: instrumentUid
             figi: figi
+            subscriptionId: subscriptionId
           - depth: 0
+            streamId: streamId
             instrumentUid: instrumentUid
             figi: figi
+            subscriptionId: subscriptionId
         trackingId: trackingId
       properties:
         trackingId:
@@ -12521,10 +13922,14 @@ components:
       description: Результат изменения статуса подписки на поток обезличенных сделок.
       example:
         tradeSubscriptions:
-          - instrumentUid: instrumentUid
+          - streamId: streamId
+            instrumentUid: instrumentUid
             figi: figi
-          - instrumentUid: instrumentUid
+            subscriptionId: subscriptionId
+          - streamId: streamId
+            instrumentUid: instrumentUid
             figi: figi
+            subscriptionId: subscriptionId
         trackingId: trackingId
       properties:
         trackingId:
@@ -12636,9 +14041,9 @@ components:
       title: >-
         - TIME_IN_FORCE_UNSPECIFIED: Значение не определено см.
         TIME_IN_FORCE_DAY
-         - TIME_IN_FORCE_DAY: Заявка действует до конца торгового дня. значение по умолчанию
-         - TIME_IN_FORCE_FILL_AND_KILL: Заявка исполнена(возможно частично) и уничтожена
-         - TIME_IN_FORCE_FILL_OR_KILL: Заявка исполнена полностью или уничтожена, недоступно для срочного рынка
+         - TIME_IN_FORCE_DAY: Заявка действует до конца торгового дня. Значение по умолчанию
+         - TIME_IN_FORCE_FILL_AND_KILL: Если в момент выставления возможно исполнение заявки(в т.ч. частичное), заявка будет исполнена или отменена сразу после выставления
+         - TIME_IN_FORCE_FILL_OR_KILL: Если в момент выставления возможно полное исполнение заявки, заявка будет исполнена или отменена сразу после выставления, недоступно для срочного рынка и торговли по выходным
       type: string
     v1Trade:
       description: Информация о сделке.
@@ -12700,8 +14105,10 @@ components:
     v1TradeSubscription:
       description: Статус подписки.
       example:
+        streamId: streamId
         instrumentUid: instrumentUid
         figi: figi
+        subscriptionId: subscriptionId
       properties:
         figi:
           description: Figi-идентификатор инструмента.
@@ -12710,6 +14117,12 @@ components:
           $ref: '#/components/schemas/v1SubscriptionStatus'
         instrumentUid:
           title: Uid инструмента
+          type: string
+        streamId:
+          title: Идентификатор открытого соединения
+          type: string
+        subscriptionId:
+          title: Идентификатор подписки в формате UUID
           type: string
       type: object
     v1TradesStreamRequest:
@@ -12725,6 +14138,7 @@ components:
       description: Информация о торговых поручениях.
       example:
         ping:
+          streamId: streamId
           time: 2000-01-23T04:56:07.000Z
         orderTrades:
           createdAt: 2000-01-23T04:56:07.000Z
@@ -12762,6 +14176,15 @@ components:
         premarketStartTime: 2000-01-23T04:56:07.000Z
         eveningOpeningAuctionStartTime: 2000-01-23T04:56:07.000Z
         isTradingDay: true
+        intervals:
+          - interval:
+              endTs: 2000-01-23T04:56:07.000Z
+              startTs: 2000-01-23T04:56:07.000Z
+            type: type
+          - interval:
+              endTs: 2000-01-23T04:56:07.000Z
+              startTs: 2000-01-23T04:56:07.000Z
+            type: type
         eveningStartTime: 2000-01-23T04:56:07.000Z
         openingAuctionEndTime: 2000-01-23T04:56:07.000Z
         premarketEndTime: 2000-01-23T04:56:07.000Z
@@ -12829,6 +14252,24 @@ components:
           description: Время окончания аукциона открытия в часовом поясе UTC.
           format: date-time
           type: string
+        intervals:
+          items:
+            $ref: '#/components/schemas/v1TradingInterval'
+          title: Торговые интервалы
+          type: array
+      type: object
+    v1TradingInterval:
+      example:
+        interval:
+          endTs: 2000-01-23T04:56:07.000Z
+          startTs: 2000-01-23T04:56:07.000Z
+        type: type
+      properties:
+        type:
+          title: Название интервала
+          type: string
+        interval:
+          $ref: '#/components/schemas/TradingIntervalTimeInterval'
       type: object
     v1TradingSchedule:
       description: Данные по торговой площадке.
@@ -12842,6 +14283,15 @@ components:
             premarketStartTime: 2000-01-23T04:56:07.000Z
             eveningOpeningAuctionStartTime: 2000-01-23T04:56:07.000Z
             isTradingDay: true
+            intervals:
+              - interval:
+                  endTs: 2000-01-23T04:56:07.000Z
+                  startTs: 2000-01-23T04:56:07.000Z
+                type: type
+              - interval:
+                  endTs: 2000-01-23T04:56:07.000Z
+                  startTs: 2000-01-23T04:56:07.000Z
+                type: type
             eveningStartTime: 2000-01-23T04:56:07.000Z
             openingAuctionEndTime: 2000-01-23T04:56:07.000Z
             premarketEndTime: 2000-01-23T04:56:07.000Z
@@ -12857,6 +14307,15 @@ components:
             premarketStartTime: 2000-01-23T04:56:07.000Z
             eveningOpeningAuctionStartTime: 2000-01-23T04:56:07.000Z
             isTradingDay: true
+            intervals:
+              - interval:
+                  endTs: 2000-01-23T04:56:07.000Z
+                  startTs: 2000-01-23T04:56:07.000Z
+                type: type
+              - interval:
+                  endTs: 2000-01-23T04:56:07.000Z
+                  startTs: 2000-01-23T04:56:07.000Z
+                type: type
             eveningStartTime: 2000-01-23T04:56:07.000Z
             openingAuctionEndTime: 2000-01-23T04:56:07.000Z
             premarketEndTime: 2000-01-23T04:56:07.000Z
@@ -12906,6 +14365,15 @@ components:
                 premarketStartTime: 2000-01-23T04:56:07.000Z
                 eveningOpeningAuctionStartTime: 2000-01-23T04:56:07.000Z
                 isTradingDay: true
+                intervals:
+                  - interval:
+                      endTs: 2000-01-23T04:56:07.000Z
+                      startTs: 2000-01-23T04:56:07.000Z
+                    type: type
+                  - interval:
+                      endTs: 2000-01-23T04:56:07.000Z
+                      startTs: 2000-01-23T04:56:07.000Z
+                    type: type
                 eveningStartTime: 2000-01-23T04:56:07.000Z
                 openingAuctionEndTime: 2000-01-23T04:56:07.000Z
                 premarketEndTime: 2000-01-23T04:56:07.000Z
@@ -12921,6 +14389,15 @@ components:
                 premarketStartTime: 2000-01-23T04:56:07.000Z
                 eveningOpeningAuctionStartTime: 2000-01-23T04:56:07.000Z
                 isTradingDay: true
+                intervals:
+                  - interval:
+                      endTs: 2000-01-23T04:56:07.000Z
+                      startTs: 2000-01-23T04:56:07.000Z
+                    type: type
+                  - interval:
+                      endTs: 2000-01-23T04:56:07.000Z
+                      startTs: 2000-01-23T04:56:07.000Z
+                    type: type
                 eveningStartTime: 2000-01-23T04:56:07.000Z
                 openingAuctionEndTime: 2000-01-23T04:56:07.000Z
                 premarketEndTime: 2000-01-23T04:56:07.000Z
@@ -12938,6 +14415,15 @@ components:
                 premarketStartTime: 2000-01-23T04:56:07.000Z
                 eveningOpeningAuctionStartTime: 2000-01-23T04:56:07.000Z
                 isTradingDay: true
+                intervals:
+                  - interval:
+                      endTs: 2000-01-23T04:56:07.000Z
+                      startTs: 2000-01-23T04:56:07.000Z
+                    type: type
+                  - interval:
+                      endTs: 2000-01-23T04:56:07.000Z
+                      startTs: 2000-01-23T04:56:07.000Z
+                    type: type
                 eveningStartTime: 2000-01-23T04:56:07.000Z
                 openingAuctionEndTime: 2000-01-23T04:56:07.000Z
                 premarketEndTime: 2000-01-23T04:56:07.000Z
@@ -12953,6 +14439,15 @@ components:
                 premarketStartTime: 2000-01-23T04:56:07.000Z
                 eveningOpeningAuctionStartTime: 2000-01-23T04:56:07.000Z
                 isTradingDay: true
+                intervals:
+                  - interval:
+                      endTs: 2000-01-23T04:56:07.000Z
+                      startTs: 2000-01-23T04:56:07.000Z
+                    type: type
+                  - interval:
+                      endTs: 2000-01-23T04:56:07.000Z
+                      startTs: 2000-01-23T04:56:07.000Z
+                    type: type
                 eveningStartTime: 2000-01-23T04:56:07.000Z
                 openingAuctionEndTime: 2000-01-23T04:56:07.000Z
                 premarketEndTime: 2000-01-23T04:56:07.000Z
@@ -13153,10 +14648,14 @@ components:
         result:
           subscribeInfoResponse:
             infoSubscriptions:
-              - instrumentUid: instrumentUid
+              - streamId: streamId
+                instrumentUid: instrumentUid
                 figi: figi
-              - instrumentUid: instrumentUid
+                subscriptionId: subscriptionId
+              - streamId: streamId
+                instrumentUid: instrumentUid
                 figi: figi
+                subscriptionId: subscriptionId
             trackingId: trackingId
           trade:
             quantity: quantity
@@ -13169,13 +14668,18 @@ components:
           subscribeOrderBookResponse:
             orderBookSubscriptions:
               - depth: 0
+                streamId: streamId
                 instrumentUid: instrumentUid
                 figi: figi
+                subscriptionId: subscriptionId
               - depth: 0
+                streamId: streamId
                 instrumentUid: instrumentUid
                 figi: figi
+                subscriptionId: subscriptionId
             trackingId: trackingId
           ping:
+            streamId: streamId
             time: 2000-01-23T04:56:07.000Z
           candle:
             volume: volume
@@ -13227,10 +14731,14 @@ components:
             isConsistent: true
           subscribeTradesResponse:
             tradeSubscriptions:
-              - instrumentUid: instrumentUid
+              - streamId: streamId
+                instrumentUid: instrumentUid
                 figi: figi
-              - instrumentUid: instrumentUid
+                subscriptionId: subscriptionId
+              - streamId: streamId
+                instrumentUid: instrumentUid
                 figi: figi
+                subscriptionId: subscriptionId
             trackingId: trackingId
           tradingStatus:
             limitOrderAvailableFlag: true
@@ -13240,19 +14748,27 @@ components:
             time: 2000-01-23T04:56:07.000Z
           subscribeCandlesResponse:
             candlesSubscriptions:
-              - instrumentUid: instrumentUid
+              - streamId: streamId
+                instrumentUid: instrumentUid
                 waitingClose: true
                 figi: figi
-              - instrumentUid: instrumentUid
+                subscriptionId: subscriptionId
+              - streamId: streamId
+                instrumentUid: instrumentUid
                 waitingClose: true
                 figi: figi
+                subscriptionId: subscriptionId
             trackingId: trackingId
           subscribeLastPriceResponse:
             lastPriceSubscriptions:
-              - instrumentUid: instrumentUid
+              - streamId: streamId
+                instrumentUid: instrumentUid
                 figi: figi
-              - instrumentUid: instrumentUid
+                subscriptionId: subscriptionId
+              - streamId: streamId
+                instrumentUid: instrumentUid
                 figi: figi
+                subscriptionId: subscriptionId
             trackingId: trackingId
           lastPrice:
             price:
@@ -13459,6 +14975,7 @@ components:
               currency: currency
               units: units
           ping:
+            streamId: streamId
             time: 2000-01-23T04:56:07.000Z
         error:
           code: 1
@@ -13481,6 +14998,7 @@ components:
               - accountId: accountId
               - accountId: accountId
           ping:
+            streamId: streamId
             time: 2000-01-23T04:56:07.000Z
           position:
             date: 2000-01-23T04:56:07.000Z
@@ -13554,6 +15072,7 @@ components:
       example:
         result:
           ping:
+            streamId: streamId
             time: 2000-01-23T04:56:07.000Z
           orderTrades:
             createdAt: 2000-01-23T04:56:07.000Z

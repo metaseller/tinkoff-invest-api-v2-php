@@ -65,6 +65,18 @@ class InstrumentType
      * Generated from protobuf enum <code>INSTRUMENT_TYPE_CLEARING_CERTIFICATE = 8;</code>
      */
     const INSTRUMENT_TYPE_CLEARING_CERTIFICATE = 8;
+    /**
+     *Индекс.
+     *
+     * Generated from protobuf enum <code>INSTRUMENT_TYPE_INDEX = 9;</code>
+     */
+    const INSTRUMENT_TYPE_INDEX = 9;
+    /**
+     *Товар.
+     *
+     * Generated from protobuf enum <code>INSTRUMENT_TYPE_COMMODITY = 10;</code>
+     */
+    const INSTRUMENT_TYPE_COMMODITY = 10;
 
     private static $valueToName = [
         self::INSTRUMENT_TYPE_UNSPECIFIED => 'INSTRUMENT_TYPE_UNSPECIFIED',
@@ -76,6 +88,8 @@ class InstrumentType
         self::INSTRUMENT_TYPE_SP => 'INSTRUMENT_TYPE_SP',
         self::INSTRUMENT_TYPE_OPTION => 'INSTRUMENT_TYPE_OPTION',
         self::INSTRUMENT_TYPE_CLEARING_CERTIFICATE => 'INSTRUMENT_TYPE_CLEARING_CERTIFICATE',
+        self::INSTRUMENT_TYPE_INDEX => 'INSTRUMENT_TYPE_INDEX',
+        self::INSTRUMENT_TYPE_COMMODITY => 'INSTRUMENT_TYPE_COMMODITY',
     ];
 
     public static function name($value)

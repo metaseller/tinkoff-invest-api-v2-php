@@ -105,6 +105,12 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.google.protobuf.Timestamp opening_auction_end_time = 17;</code>
      */
     protected $opening_auction_end_time = null;
+    /**
+     * Торговые интервалы
+     *
+     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.TradingInterval intervals = 18;</code>
+     */
+    private $intervals;
 
     /**
      * Constructor.
@@ -142,6 +148,8 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      *           Время начала аукциона закрытия в часовом поясе UTC.
      *     @type \Google\Protobuf\Timestamp $opening_auction_end_time
      *           Время окончания аукциона открытия в часовом поясе UTC.
+     *     @type \Tinkoff\Invest\V1\TradingInterval[]|\Google\Protobuf\Internal\RepeatedField $intervals
+     *           Торговые интервалы
      * }
      */
     public function __construct($data = NULL) {
@@ -675,6 +683,32 @@ class TradingDay extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->opening_auction_end_time = $var;
+
+        return $this;
+    }
+
+    /**
+     * Торговые интервалы
+     *
+     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.TradingInterval intervals = 18;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getIntervals()
+    {
+        return $this->intervals;
+    }
+
+    /**
+     * Торговые интервалы
+     *
+     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.TradingInterval intervals = 18;</code>
+     * @param \Tinkoff\Invest\V1\TradingInterval[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setIntervals($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\TradingInterval::class);
+        $this->intervals = $arr;
 
         return $this;
     }

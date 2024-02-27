@@ -65,6 +65,14 @@
 
 - Тело ответа — [GetClosePricesResponse](#getclosepricesresponse)
 
+
+#### GetTechAnalysis
+
+
+- Тело запроса — [GetTechAnalysisRequest](#gettechanalysisrequest)
+
+- Тело ответа — [GetTechAnalysisResponse](#gettechanalysisresponse)
+
  <!-- range .Methods -->
 
 
@@ -168,7 +176,7 @@ subscribeCandles | Изменения статуса подписки на св�
 | Field | Type | Description |
 | ----- | ---- | ----------- |
 | figi |  [string](#string) | Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id. |
-| interval |  [SubscriptionInterval](#subscriptioninterval) | Интервал свечей. |
+| interval |  [SubscriptionInterval](#subscriptioninterval) | Интервал свечей. (Двухчасовые и четырехчасовые свечи в стриме отсчитываются с 0:00 по UTC) |
 | instrument_id |  [string](#string) | Идентификатор инструмента, принимает значение figi или instrument_uid |
  <!-- end Fields -->
  <!-- end HasFields -->
@@ -197,6 +205,8 @@ subscribeCandles | Изменения статуса подписки на св�
 | subscription_status |  [SubscriptionStatus](#subscriptionstatus) | Статус подписки. |
 | instrument_uid |  [string](#string) | Uid инструмента |
 | waiting_close |  [bool](#bool) | Флаг ожидания закрытия временного интервала для отправки свечи |
+| stream_id |  [string](#string) | Идентификатор открытого соединения |
+| subscription_id |  [string](#string) | Идентификатор подписки в формате UUID |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -222,6 +232,7 @@ subscribeCandles | Изменения статуса подписки на св�
 | figi |  [string](#string) | Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id. |
 | depth |  [int32](#int32) | Глубина стакана. |
 | instrument_id |  [string](#string) | Идентификатор инструмента, принимает значение figi или instrument_uid |
+| order_book_type |  [OrderBookType](#orderbooktype) | Тип стакана |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -248,6 +259,9 @@ subscribeCandles | Изменения статуса подписки на св�
 | depth |  [int32](#int32) | Глубина стакана. |
 | subscription_status |  [SubscriptionStatus](#subscriptionstatus) | Статус подписки. |
 | instrument_uid |  [string](#string) | Uid инструмента |
+| stream_id |  [string](#string) | Идентификатор открытого соединения |
+| subscription_id |  [string](#string) | Идентификатор подписки в формате UUID |
+| order_book_type |  [OrderBookType](#orderbooktype) | Тип стакана |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -297,6 +311,8 @@ subscribeCandles | Изменения статуса подписки на св�
 | figi |  [string](#string) | Figi-идентификатор инструмента. |
 | subscription_status |  [SubscriptionStatus](#subscriptionstatus) | Статус подписки. |
 | instrument_uid |  [string](#string) | Uid инструмента |
+| stream_id |  [string](#string) | Идентификатор открытого соединения |
+| subscription_id |  [string](#string) | Идентификатор подписки в формате UUID |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -346,6 +362,8 @@ subscribeCandles | Изменения статуса подписки на св�
 | figi |  [string](#string) | Figi-идентификатор инструмента. |
 | subscription_status |  [SubscriptionStatus](#subscriptionstatus) | Статус подписки. |
 | instrument_uid |  [string](#string) | Uid инструмента |
+| stream_id |  [string](#string) | Идентификатор открытого соединения |
+| subscription_id |  [string](#string) | Идентификатор подписки в формате UUID |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -395,6 +413,8 @@ subscribeCandles | Изменения статуса подписки на св�
 | figi |  [string](#string) | Figi-идентификатор инструмента. |
 | subscription_status |  [SubscriptionStatus](#subscriptionstatus) | Статус подписки. |
 | instrument_uid |  [string](#string) | Uid инструмента |
+| stream_id |  [string](#string) | Идентификатор открытого соединения |
+| subscription_id |  [string](#string) | Идентификатор подписки в формате UUID |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -434,6 +454,7 @@ subscribeCandles | Изменения статуса подписки на св�
 | limit_up |  [Quotation](#quotation) | Верхний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/) |
 | limit_down |  [Quotation](#quotation) | Нижний лимит цены за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/) |
 | instrument_uid |  [string](#string) | Uid инструмента |
+| order_book_type |  [OrderBookType](#orderbooktype) | Тип стакана |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -643,6 +664,8 @@ subscribeCandles | Изменения статуса подписки на св�
 | market_order_available_flag |  [bool](#bool) | Признак доступности выставления рыночной заявки по инструменту. |
 | api_trade_available_flag |  [bool](#bool) | Признак доступности торгов через API. |
 | instrument_uid |  [string](#string) | Uid инструмента. |
+| bestprice_order_available_flag |  [bool](#bool) | Признак доступности завяки по лучшей цене |
+| only_best_price |  [bool](#bool) | Признак доступности только заявки по лучшей цене |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -722,6 +745,76 @@ subscribeCandles | Изменения статуса подписки на св�
 | price |  [Quotation](#quotation) | Цена закрытия торговой сессии. |
 | evening_session_price |  [Quotation](#quotation) | Цена последней сделки с вечерней сессии |
 | time |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата совершения торгов. |
+ <!-- end Fields -->
+ <!-- end HasFields -->
+
+
+#### GetTechAnalysisRequest
+
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| indicator_type |  [GetTechAnalysisRequest.IndicatorType](#gettechanalysisrequestindicatortype) | Тип технического индикатора. |
+| instrument_uid |  [string](#string) | Uid инструмента. |
+| from |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Начало запрашиваемого периода в часовом поясе UTC. |
+| to |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Окончание запрашиваемого периода в часовом поясе UTC. |
+| interval |  [GetTechAnalysisRequest.IndicatorInterval](#gettechanalysisrequestindicatorinterval) | Интервал, за который рассчитывается индикатор. |
+| type_of_price |  [GetTechAnalysisRequest.TypeOfPrice](#gettechanalysisrequesttypeofprice) | Тип цены, используемый при расчёте индикатора. |
+| length |  [int32](#int32) | Торговый период, за который рассчитывается индикатор. |
+| deviation |  [GetTechAnalysisRequest.Deviation](#gettechanalysisrequestdeviation) | Параметры отклонения. |
+| smoothing |  [GetTechAnalysisRequest.Smoothing](#gettechanalysisrequestsmoothing) | Параметры сглаживания. |
+ <!-- end Fields -->
+ <!-- end HasFields -->
+
+
+#### GetTechAnalysisRequest.Smoothing
+
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| fast_length |  [int32](#int32) | Короткий период сглаживания для первой экспоненциальной скользящей средней (EMA). |
+| slow_length |  [int32](#int32) | Длинный период сглаживания для второй экспоненциальной скользящей средней (EMA). |
+| signal_smoothing |  [int32](#int32) | Период сглаживания для третьей экспоненциальной скользящей средней (EMA) |
+ <!-- end Fields -->
+ <!-- end HasFields -->
+
+
+#### GetTechAnalysisRequest.Deviation
+
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| deviation_multiplier |  [Quotation](#quotation) | Кол-во стандартных отклонений, на которые отступает верхняя и нижняя граница |
+ <!-- end Fields -->
+ <!-- end HasFields -->
+
+
+#### GetTechAnalysisResponse
+
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| technical_indicators | Массив объектов [GetTechAnalysisResponse.TechAnalysisItem](#gettechanalysisresponsetechanalysisitem) | Массив значений результатов тех. анализа |
+ <!-- end Fields -->
+ <!-- end HasFields -->
+
+
+#### GetTechAnalysisResponse.TechAnalysisItem
+
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| timestamp |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Временная метка по UTC, для которой были рассчитаны значения индикатора. |
+| middle_band |  [Quotation](#quotation) | Значение простого скользящего среднего (средней линии). |
+| upper_band |  [Quotation](#quotation) | Значение верхней линии Боллинджера. |
+| lower_band |  [Quotation](#quotation) | Значение нижней линии Боллинджера. |
+| signal |  [Quotation](#quotation) | Значение сигнальной линии. |
+| macd |  [Quotation](#quotation) | Значение линии MACD. |
  <!-- end Fields -->
  <!-- end HasFields -->
  <!-- end messages -->
@@ -814,6 +907,71 @@ subscribeCandles | Изменения статуса подписки на св�
 | CANDLE_INTERVAL_4_HOUR | 11 | от 4 часов до 1 месяца. |
 | CANDLE_INTERVAL_WEEK | 12 | от 1 недели до 2 лет. |
 | CANDLE_INTERVAL_MONTH | 13 | от 1 месяца до 10 лет. |
+
+
+
+
+#### OrderBookType
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| ORDERBOOK_TYPE_UNSPECIFIED | 0 | не определен |
+| ORDERBOOK_TYPE_EXCHANGE | 1 | Биржевой стакан |
+| ORDERBOOK_TYPE_DEALER | 2 | Стакан дилера |
+
+
+
+
+#### GetTechAnalysisRequest.IndicatorInterval
+Интервал свечи.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| INDICATOR_INTERVAL_UNSPECIFIED | 0 | Интервал не определён. |
+| INDICATOR_INTERVAL_ONE_MINUTE | 1 | 1 минута. |
+| INDICATOR_INTERVAL_FIVE_MINUTES | 2 | 5 минут. |
+| INDICATOR_INTERVAL_FIFTEEN_MINUTES | 3 | 15 минут. |
+| INDICATOR_INTERVAL_ONE_HOUR | 4 | 1 час. |
+| INDICATOR_INTERVAL_ONE_DAY | 5 | 1 день. |
+| INDICATOR_INTERVAL_2_MIN | 6 | 2 минуты. |
+| INDICATOR_INTERVAL_3_MIN | 7 | 3 минуты. |
+| INDICATOR_INTERVAL_10_MIN | 8 | 10 минут. |
+| INDICATOR_INTERVAL_30_MIN | 9 | 30 минут. |
+| INDICATOR_INTERVAL_2_HOUR | 10 | 2 часа. |
+| INDICATOR_INTERVAL_4_HOUR | 11 | 4 часа. |
+| INDICATOR_INTERVAL_WEEK | 12 | Неделя |
+| INDICATOR_INTERVAL_MONTH | 13 | Месяц |
+
+
+
+
+#### GetTechAnalysisRequest.TypeOfPrice
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| TYPE_OF_PRICE_UNSPECIFIED | 0 | Не указано. |
+| TYPE_OF_PRICE_CLOSE | 1 | Цена закрытия. |
+| TYPE_OF_PRICE_OPEN | 2 | Цена открытия. |
+| TYPE_OF_PRICE_HIGH | 3 | Максимальное значение за выбранный интервал. |
+| TYPE_OF_PRICE_LOW | 4 | Минимальное значение за выбранный интервал. |
+| TYPE_OF_PRICE_AVG | 5 | Среднее значение по показателям [ (close + open + high + low) / 4 ]. |
+
+
+
+
+#### GetTechAnalysisRequest.IndicatorType
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| INDICATOR_TYPE_UNSPECIFIED | 0 | Не определен. |
+| INDICATOR_TYPE_BB | 1 | Bollinger Bands (Линия Боллинжера). |
+| INDICATOR_TYPE_EMA | 2 | Exponential Moving Average (EMA, Экспоненциальная скользящая средняя). |
+| INDICATOR_TYPE_RSI | 3 | Relative Strength Index (Индекс относительной силы). |
+| INDICATOR_TYPE_MACD | 4 | Moving Average Convergence/Divergence (Схождение/Расхождение скользящих средних). |
+| INDICATOR_TYPE_SMA | 5 | Simple Moving Average (Простое скользящее среднее). |
 
 
  <!-- range .Enums -->

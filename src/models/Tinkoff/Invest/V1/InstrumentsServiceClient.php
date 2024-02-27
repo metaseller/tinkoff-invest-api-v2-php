@@ -77,6 +77,21 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Метод получения событий по облигации
+     * @param \Tinkoff\Invest\V1\GetBondEventsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetBondEvents(\Tinkoff\Invest\V1\GetBondEventsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetBondEvents',
+        $argument,
+        ['\Tinkoff\Invest\V1\GetBondEventsResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * Метод получения валюты по её идентификатору.
      * @param \Tinkoff\Invest\V1\InstrumentRequest $argument input argument
      * @param array $metadata metadata
@@ -238,6 +253,21 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/Shares',
         $argument,
         ['\Tinkoff\Invest\V1\SharesResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Метод получения индикативных инструментов (индексов, товаров и др.)
+     * @param \Tinkoff\Invest\V1\IndicativesRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function Indicatives(\Tinkoff\Invest\V1\IndicativesRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/Indicatives',
+        $argument,
+        ['\Tinkoff\Invest\V1\IndicativesResponse', 'decode'],
         $metadata, $options);
     }
 
@@ -433,6 +463,51 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetAssetFundamentals',
         $argument,
         ['\Tinkoff\Invest\V1\GetAssetFundamentalsResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Метод получения расписания выхода отчетностей эмитентов
+     * @param \Tinkoff\Invest\V1\GetAssetReportsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetAssetReports(\Tinkoff\Invest\V1\GetAssetReportsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetAssetReports',
+        $argument,
+        ['\Tinkoff\Invest\V1\GetAssetReportsResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Метод получения мнения аналитиков по инструменту
+     * @param \Tinkoff\Invest\V1\GetConsensusForecastsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetConsensusForecasts(\Tinkoff\Invest\V1\GetConsensusForecastsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetConsensusForecasts',
+        $argument,
+        ['\Tinkoff\Invest\V1\GetConsensusForecastsResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Метод получения прогнозов инвестдомов по инструменту
+     * @param \Tinkoff\Invest\V1\GetForecastRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetForecastBy(\Tinkoff\Invest\V1\GetForecastRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetForecastBy',
+        $argument,
+        ['\Tinkoff\Invest\V1\GetForecastResponse', 'decode'],
         $metadata, $options);
     }
 

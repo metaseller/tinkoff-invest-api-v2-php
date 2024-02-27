@@ -23,7 +23,7 @@ class CandleInstrument extends \Google\Protobuf\Internal\Message
      */
     protected $figi = '';
     /**
-     *Интервал свечей.
+     *Интервал свечей. (Двухчасовые и четырехчасовые свечи в стриме отсчитываются с 0:00 по UTC)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionInterval interval = 2;</code>
      */
@@ -44,7 +44,7 @@ class CandleInstrument extends \Google\Protobuf\Internal\Message
      *     @type string $figi
      *           Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *     @type int $interval
-     *          Интервал свечей.
+     *          Интервал свечей. (Двухчасовые и четырехчасовые свечи в стриме отсчитываются с 0:00 по UTC)
      *     @type string $instrument_id
      *          Идентификатор инструмента, принимает значение figi или instrument_uid
      * }
@@ -85,7 +85,7 @@ class CandleInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Интервал свечей.
+     *Интервал свечей. (Двухчасовые и четырехчасовые свечи в стриме отсчитываются с 0:00 по UTC)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionInterval interval = 2;</code>
      * @return int
@@ -96,7 +96,7 @@ class CandleInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Интервал свечей.
+     *Интервал свечей. (Двухчасовые и четырехчасовые свечи в стриме отсчитываются с 0:00 по UTC)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionInterval interval = 2;</code>
      * @param int $var

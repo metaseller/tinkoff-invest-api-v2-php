@@ -9,11 +9,15 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ *Фундаментальные показатели по активу
+ *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.GetAssetFundamentalsResponse.StatisticResponse</code>
  */
 class StatisticResponse extends \Google\Protobuf\Internal\Message
 {
     /**
+     *Идентификатор актива
+     *
      * Generated from protobuf field <code>string asset_uid = 1;</code>
      */
     protected $asset_uid = '';
@@ -351,6 +355,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $asset_uid
+     *          Идентификатор актива
      *     @type string $currency
      *          Валюта
      *     @type float $market_capitalization
@@ -467,6 +472,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *Идентификатор актива
+     *
      * Generated from protobuf field <code>string asset_uid = 1;</code>
      * @return string
      */
@@ -476,6 +483,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *Идентификатор актива
+     *
      * Generated from protobuf field <code>string asset_uid = 1;</code>
      * @param string $var
      * @return $this

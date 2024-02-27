@@ -39,6 +39,24 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string instrument_uid = 4;</code>
      */
     protected $instrument_uid = '';
+    /**
+     *Идентификатор открытого соединения
+     *
+     * Generated from protobuf field <code>string stream_id = 5;</code>
+     */
+    protected $stream_id = '';
+    /**
+     *Идентификатор подписки в формате UUID
+     *
+     * Generated from protobuf field <code>string subscription_id = 6;</code>
+     */
+    protected $subscription_id = '';
+    /**
+     *Тип стакана
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderBookType order_book_type = 7;</code>
+     */
+    protected $order_book_type = 0;
 
     /**
      * Constructor.
@@ -54,6 +72,12 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
      *          Статус подписки.
      *     @type string $instrument_uid
      *          Uid инструмента
+     *     @type string $stream_id
+     *          Идентификатор открытого соединения
+     *     @type string $subscription_id
+     *          Идентификатор подписки в формате UUID
+     *     @type int $order_book_type
+     *          Тип стакана
      * }
      */
     public function __construct($data = NULL) {
@@ -161,6 +185,84 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->instrument_uid = $var;
+
+        return $this;
+    }
+
+    /**
+     *Идентификатор открытого соединения
+     *
+     * Generated from protobuf field <code>string stream_id = 5;</code>
+     * @return string
+     */
+    public function getStreamId()
+    {
+        return $this->stream_id;
+    }
+
+    /**
+     *Идентификатор открытого соединения
+     *
+     * Generated from protobuf field <code>string stream_id = 5;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setStreamId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->stream_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *Идентификатор подписки в формате UUID
+     *
+     * Generated from protobuf field <code>string subscription_id = 6;</code>
+     * @return string
+     */
+    public function getSubscriptionId()
+    {
+        return $this->subscription_id;
+    }
+
+    /**
+     *Идентификатор подписки в формате UUID
+     *
+     * Generated from protobuf field <code>string subscription_id = 6;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setSubscriptionId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->subscription_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тип стакана
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderBookType order_book_type = 7;</code>
+     * @return int
+     */
+    public function getOrderBookType()
+    {
+        return $this->order_book_type;
+    }
+
+    /**
+     *Тип стакана
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderBookType order_book_type = 7;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setOrderBookType($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\OrderBookType::class);
+        $this->order_book_type = $var;
 
         return $this;
     }

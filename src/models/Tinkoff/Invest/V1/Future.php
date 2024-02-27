@@ -273,6 +273,12 @@ class Future extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation min_price_increment_amount = 63;</code>
      */
     protected $min_price_increment_amount = null;
+    /**
+     * Информация о бренде.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.BrandData brand = 64;</code>
+     */
+    protected $brand = null;
 
     /**
      * Constructor.
@@ -366,6 +372,8 @@ class Future extends \Google\Protobuf\Internal\Message
      *          Гарантийное обеспечение при продаже.
      *     @type \Tinkoff\Invest\V1\Quotation $min_price_increment_amount
      *          Стоимость шага цены.
+     *     @type \Tinkoff\Invest\V1\BrandData $brand
+     *           Информация о бренде.
      * }
      */
     public function __construct($data = NULL) {
@@ -1647,6 +1655,42 @@ class Future extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->min_price_increment_amount = $var;
+
+        return $this;
+    }
+
+    /**
+     * Информация о бренде.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.BrandData brand = 64;</code>
+     * @return \Tinkoff\Invest\V1\BrandData|null
+     */
+    public function getBrand()
+    {
+        return isset($this->brand) ? $this->brand : null;
+    }
+
+    public function hasBrand()
+    {
+        return isset($this->brand);
+    }
+
+    public function clearBrand()
+    {
+        unset($this->brand);
+    }
+
+    /**
+     * Информация о бренде.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.BrandData brand = 64;</code>
+     * @param \Tinkoff\Invest\V1\BrandData $var
+     * @return $this
+     */
+    public function setBrand($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\BrandData::class);
+        $this->brand = $var;
 
         return $this;
     }

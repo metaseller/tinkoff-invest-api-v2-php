@@ -262,6 +262,12 @@ class Bond extends \Google\Protobuf\Internal\Message
      */
     protected $position_uid = '';
     /**
+     *Уникальный идентификатор актива.
+     *
+     * Generated from protobuf field <code>string asset_uid = 43;</code>
+     */
+    protected $asset_uid = '';
+    /**
      *Признак доступности для ИИС.
      *
      * Generated from protobuf field <code>bool for_iis_flag = 51;</code>
@@ -315,6 +321,12 @@ class Bond extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.RiskLevel risk_level = 63;</code>
      */
     protected $risk_level = 0;
+    /**
+     * Информация о бренде.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.BrandData brand = 64;</code>
+     */
+    protected $brand = null;
 
     /**
      * Constructor.
@@ -404,6 +416,8 @@ class Bond extends \Google\Protobuf\Internal\Message
      *          Реальная площадка исполнения расчётов. (биржа)
      *     @type string $position_uid
      *          Уникальный идентификатор позиции инструмента.
+     *     @type string $asset_uid
+     *          Уникальный идентификатор актива.
      *     @type bool $for_iis_flag
      *          Признак доступности для ИИС.
      *     @type bool $for_qual_investor_flag
@@ -422,6 +436,8 @@ class Bond extends \Google\Protobuf\Internal\Message
      *          Дата первой дневной свечи.
      *     @type int $risk_level
      *          Уровень риска.
+     *     @type \Tinkoff\Invest\V1\BrandData $brand
+     *           Информация о бренде.
      * }
      */
     public function __construct($data = NULL) {
@@ -1636,6 +1652,32 @@ class Bond extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *Уникальный идентификатор актива.
+     *
+     * Generated from protobuf field <code>string asset_uid = 43;</code>
+     * @return string
+     */
+    public function getAssetUid()
+    {
+        return $this->asset_uid;
+    }
+
+    /**
+     *Уникальный идентификатор актива.
+     *
+     * Generated from protobuf field <code>string asset_uid = 43;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setAssetUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->asset_uid = $var;
+
+        return $this;
+    }
+
+    /**
      *Признак доступности для ИИС.
      *
      * Generated from protobuf field <code>bool for_iis_flag = 51;</code>
@@ -1885,6 +1927,42 @@ class Bond extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\RiskLevel::class);
         $this->risk_level = $var;
+
+        return $this;
+    }
+
+    /**
+     * Информация о бренде.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.BrandData brand = 64;</code>
+     * @return \Tinkoff\Invest\V1\BrandData|null
+     */
+    public function getBrand()
+    {
+        return isset($this->brand) ? $this->brand : null;
+    }
+
+    public function hasBrand()
+    {
+        return isset($this->brand);
+    }
+
+    public function clearBrand()
+    {
+        unset($this->brand);
+    }
+
+    /**
+     * Информация о бренде.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.BrandData brand = 64;</code>
+     * @param \Tinkoff\Invest\V1\BrandData $var
+     * @return $this
+     */
+    public function setBrand($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\BrandData::class);
+        $this->brand = $var;
 
         return $this;
     }
