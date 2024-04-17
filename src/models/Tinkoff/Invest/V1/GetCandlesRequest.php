@@ -46,6 +46,12 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string instrument_id = 5;</code>
      */
     protected $instrument_id = null;
+    /**
+     *Тип источника свечи
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetCandlesRequest.CandleSource candle_source_type = 7;</code>
+     */
+    protected $candle_source_type = null;
 
     /**
      * Constructor.
@@ -63,6 +69,8 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
      *          Интервал запрошенных свечей.
      *     @type string $instrument_id
      *          Идентификатор инструмента, принимает значение figi или instrument_uid.
+     *     @type int $candle_source_type
+     *          Тип источника свечи
      * }
      */
     public function __construct($data = NULL) {
@@ -242,6 +250,42 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->instrument_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тип источника свечи
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetCandlesRequest.CandleSource candle_source_type = 7;</code>
+     * @return int
+     */
+    public function getCandleSourceType()
+    {
+        return isset($this->candle_source_type) ? $this->candle_source_type : 0;
+    }
+
+    public function hasCandleSourceType()
+    {
+        return isset($this->candle_source_type);
+    }
+
+    public function clearCandleSourceType()
+    {
+        unset($this->candle_source_type);
+    }
+
+    /**
+     *Тип источника свечи
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetCandlesRequest.CandleSource candle_source_type = 7;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setCandleSourceType($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\GetCandlesRequest\CandleSource::class);
+        $this->candle_source_type = $var;
 
         return $this;
     }

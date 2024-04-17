@@ -57,6 +57,12 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool is_complete = 7;</code>
      */
     protected $is_complete = false;
+    /**
+     *Тип источника свечи
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.CandleSource candle_source = 9;</code>
+     */
+    protected $candle_source = 0;
 
     /**
      * Constructor.
@@ -78,6 +84,8 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
      *          Время свечи в часовом поясе UTC.
      *     @type bool $is_complete
      *          Признак завершённости свечи. **false** значит, свеча за текущие интервал ещё сформирована не полностью.
+     *     @type int $candle_source
+     *          Тип источника свечи
      * }
      */
     public function __construct($data = NULL) {
@@ -313,6 +321,32 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->is_complete = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тип источника свечи
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.CandleSource candle_source = 9;</code>
+     * @return int
+     */
+    public function getCandleSource()
+    {
+        return $this->candle_source;
+    }
+
+    /**
+     *Тип источника свечи
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.CandleSource candle_source = 9;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setCandleSource($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\CandleSource::class);
+        $this->candle_source = $var;
 
         return $this;
     }

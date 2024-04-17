@@ -122,6 +122,7 @@ class MarketDataServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Метод получения технических индикаторов по инструменту
      * @param \Tinkoff\Invest\V1\GetTechAnalysisRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
