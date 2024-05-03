@@ -220,6 +220,12 @@ class Share extends \Google\Protobuf\Internal\Message
      */
     protected $asset_uid = '';
     /**
+     *Тип площадки торговли.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentExchangeType instrument_exchange = 37;</code>
+     */
+    protected $instrument_exchange = 0;
+    /**
      *Признак доступности для ИИС.
      *
      * Generated from protobuf field <code>bool for_iis_flag = 46;</code>
@@ -342,6 +348,8 @@ class Share extends \Google\Protobuf\Internal\Message
      *          Уникальный идентификатор позиции инструмента.
      *     @type string $asset_uid
      *          Уникальный идентификатор актива.
+     *     @type int $instrument_exchange
+     *          Тип площадки торговли.
      *     @type bool $for_iis_flag
      *          Признак доступности для ИИС.
      *     @type bool $for_qual_investor_flag
@@ -1335,6 +1343,32 @@ class Share extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->asset_uid = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тип площадки торговли.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentExchangeType instrument_exchange = 37;</code>
+     * @return int
+     */
+    public function getInstrumentExchange()
+    {
+        return $this->instrument_exchange;
+    }
+
+    /**
+     *Тип площадки торговли.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentExchangeType instrument_exchange = 37;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setInstrumentExchange($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\InstrumentExchangeType::class);
+        $this->instrument_exchange = $var;
 
         return $this;
     }

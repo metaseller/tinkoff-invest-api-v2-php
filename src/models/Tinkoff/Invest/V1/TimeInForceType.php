@@ -7,6 +7,8 @@ namespace Tinkoff\Invest\V1;
 use UnexpectedValueException;
 
 /**
+ *Алгоритм исполнения заявки
+ *
  * Protobuf type <code>tinkoff.public.invest.api.contract.v1.TimeInForceType</code>
  */
 class TimeInForceType

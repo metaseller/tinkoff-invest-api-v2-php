@@ -51,6 +51,12 @@ class Trade extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string instrument_uid = 6;</code>
      */
     protected $instrument_uid = '';
+    /**
+     *Источник сделки
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType tradeSource = 7;</code>
+     */
+    protected $tradeSource = 0;
 
     /**
      * Constructor.
@@ -70,6 +76,8 @@ class Trade extends \Google\Protobuf\Internal\Message
      *          Время сделки в часовом поясе UTC по времени биржи.
      *     @type string $instrument_uid
      *          Uid инструмента
+     *     @type int $tradeSource
+     *          Источник сделки
      * }
      */
     public function __construct($data = NULL) {
@@ -249,6 +257,32 @@ class Trade extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->instrument_uid = $var;
+
+        return $this;
+    }
+
+    /**
+     *Источник сделки
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType tradeSource = 7;</code>
+     * @return int
+     */
+    public function getTradeSource()
+    {
+        return $this->tradeSource;
+    }
+
+    /**
+     *Источник сделки
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType tradeSource = 7;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setTradeSource($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\TradeSourceType::class);
+        $this->tradeSource = $var;
 
         return $this;
     }

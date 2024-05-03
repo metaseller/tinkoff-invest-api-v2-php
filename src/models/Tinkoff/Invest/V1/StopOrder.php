@@ -105,6 +105,12 @@ class StopOrder extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderStatusOption status = 15;</code>
      */
     protected $status = 0;
+    /**
+     *Тип дочерней биржевой заявки для тейкпрофита
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ExchangeOrderType exchange_order_type = 16;</code>
+     */
+    protected $exchange_order_type = 0;
 
     /**
      * Constructor.
@@ -142,6 +148,8 @@ class StopOrder extends \Google\Protobuf\Internal\Message
      *          Параметры трейлинг-стопа
      *     @type int $status
      *          Статус заявки
+     *     @type int $exchange_order_type
+     *          Тип дочерней биржевой заявки для тейкпрофита
      * }
      */
     public function __construct($data = NULL) {
@@ -595,6 +603,32 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\StopOrderStatusOption::class);
         $this->status = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тип дочерней биржевой заявки для тейкпрофита
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ExchangeOrderType exchange_order_type = 16;</code>
+     * @return int
+     */
+    public function getExchangeOrderType()
+    {
+        return $this->exchange_order_type;
+    }
+
+    /**
+     *Тип дочерней биржевой заявки для тейкпрофита
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ExchangeOrderType exchange_order_type = 16;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setExchangeOrderType($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\ExchangeOrderType::class);
+        $this->exchange_order_type = $var;
 
         return $this;
     }

@@ -327,6 +327,12 @@ class Bond extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.BrandData brand = 64;</code>
      */
     protected $brand = null;
+    /**
+     * Тип облигации.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.BondType bond_type = 65;</code>
+     */
+    protected $bond_type = 0;
 
     /**
      * Constructor.
@@ -438,6 +444,8 @@ class Bond extends \Google\Protobuf\Internal\Message
      *          Уровень риска.
      *     @type \Tinkoff\Invest\V1\BrandData $brand
      *           Информация о бренде.
+     *     @type int $bond_type
+     *           Тип облигации.
      * }
      */
     public function __construct($data = NULL) {
@@ -1963,6 +1971,32 @@ class Bond extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\BrandData::class);
         $this->brand = $var;
+
+        return $this;
+    }
+
+    /**
+     * Тип облигации.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.BondType bond_type = 65;</code>
+     * @return int
+     */
+    public function getBondType()
+    {
+        return $this->bond_type;
+    }
+
+    /**
+     * Тип облигации.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.BondType bond_type = 65;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setBondType($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\BondType::class);
+        $this->bond_type = $var;
 
         return $this;
     }
