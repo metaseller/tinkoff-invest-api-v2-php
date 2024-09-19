@@ -22,7 +22,7 @@ class GetBrandsResponse extends \Google\Protobuf\Internal\Message
      */
     private $brands;
     /**
-     *Данные по пагинации
+     *Данные по пагинации.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PageResponse paging = 2;</code>
      */
@@ -37,7 +37,7 @@ class GetBrandsResponse extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\Brand[]|\Google\Protobuf\Internal\RepeatedField $brands
      *          Массив брендов.
      *     @type \Tinkoff\Invest\V1\PageResponse $paging
-     *          Данные по пагинации
+     *          Данные по пагинации.
      * }
      */
     public function __construct($data = NULL) {
@@ -72,7 +72,7 @@ class GetBrandsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Данные по пагинации
+     *Данные по пагинации.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PageResponse paging = 2;</code>
      * @return \Tinkoff\Invest\V1\PageResponse|null
@@ -93,7 +93,7 @@ class GetBrandsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Данные по пагинации
+     *Данные по пагинации.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PageResponse paging = 2;</code>
      * @param \Tinkoff\Invest\V1\PageResponse $var

@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class Coupon extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Figi-идентификатор инструмента.
+     *FIGI-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      */
@@ -34,7 +34,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
      */
     protected $coupon_number = 0;
     /**
-     *(Опционально) Дата фиксации реестра для выплаты купона.
+     *Дата фиксации реестра для выплаты купона — опционально.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp fix_date = 4;</code>
      */
@@ -77,13 +77,13 @@ class Coupon extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $figi
-     *          Figi-идентификатор инструмента.
+     *          FIGI-идентификатор инструмента.
      *     @type \Google\Protobuf\Timestamp $coupon_date
      *          Дата выплаты купона.
      *     @type int|string $coupon_number
      *          Номер купона.
      *     @type \Google\Protobuf\Timestamp $fix_date
-     *          (Опционально) Дата фиксации реестра для выплаты купона.
+     *          Дата фиксации реестра для выплаты купона — опционально.
      *     @type \Tinkoff\Invest\V1\MoneyValue $pay_one_bond
      *          Выплата на одну облигацию.
      *     @type int $coupon_type
@@ -102,7 +102,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента.
+     *FIGI-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @return string
@@ -113,7 +113,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента.
+     *FIGI-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @param string $var
@@ -190,7 +190,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *(Опционально) Дата фиксации реестра для выплаты купона.
+     *Дата фиксации реестра для выплаты купона — опционально.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp fix_date = 4;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -211,7 +211,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *(Опционально) Дата фиксации реестра для выплаты купона.
+     *Дата фиксации реестра для выплаты купона — опционально.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp fix_date = 4;</code>
      * @param \Google\Protobuf\Timestamp $var

@@ -14,7 +14,7 @@ use UnexpectedValueException;
 class OperationState
 {
     /**
-     *Статус операции не определён
+     *Статус операции не определён.
      *
      * Generated from protobuf enum <code>OPERATION_STATE_UNSPECIFIED = 0;</code>
      */

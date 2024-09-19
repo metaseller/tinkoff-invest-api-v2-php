@@ -24,7 +24,7 @@ class GetDividendsForeignIssuerResponse extends \Google\Protobuf\Internal\Messag
      *     @type \Tinkoff\Invest\V1\GenerateDividendsForeignIssuerReportResponse $generate_div_foreign_issuer_report_response
      *          Объект результата задачи запуска формирования отчёта.
      *     @type \Tinkoff\Invest\V1\GetDividendsForeignIssuerReportResponse $div_foreign_issuer_report
-     *          Отчёт "Справка о доходах за пределами РФ".
+     *          Отчёт «Справка о доходах за пределами РФ».
      * }
      */
     public function __construct($data = NULL) {
@@ -64,7 +64,7 @@ class GetDividendsForeignIssuerResponse extends \Google\Protobuf\Internal\Messag
     }
 
     /**
-     *Отчёт "Справка о доходах за пределами РФ".
+     *Отчёт «Справка о доходах за пределами РФ».
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetDividendsForeignIssuerReportResponse div_foreign_issuer_report = 2;</code>
      * @return \Tinkoff\Invest\V1\GetDividendsForeignIssuerReportResponse|null
@@ -80,7 +80,7 @@ class GetDividendsForeignIssuerResponse extends \Google\Protobuf\Internal\Messag
     }
 
     /**
-     *Отчёт "Справка о доходах за пределами РФ".
+     *Отчёт «Справка о доходах за пределами РФ».
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetDividendsForeignIssuerReportResponse div_foreign_issuer_report = 2;</code>
      * @param \Tinkoff\Invest\V1\GetDividendsForeignIssuerReportResponse $var

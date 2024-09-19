@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetTradingStatusesResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Массив информации о торговых статусах
+     *Массив информации о торговых статусах.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.GetTradingStatusResponse trading_statuses = 1;</code>
      */
@@ -29,7 +29,7 @@ class GetTradingStatusesResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Tinkoff\Invest\V1\GetTradingStatusResponse[]|\Google\Protobuf\Internal\RepeatedField $trading_statuses
-     *          Массив информации о торговых статусах
+     *          Массив информации о торговых статусах.
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +38,7 @@ class GetTradingStatusesResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив информации о торговых статусах
+     *Массив информации о торговых статусах.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.GetTradingStatusResponse trading_statuses = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -49,7 +49,7 @@ class GetTradingStatusesResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив информации о торговых статусах
+     *Массив информации о торговых статусах.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.GetTradingStatusResponse trading_statuses = 1;</code>
      * @param \Tinkoff\Invest\V1\GetTradingStatusResponse[]|\Google\Protobuf\Internal\RepeatedField $var

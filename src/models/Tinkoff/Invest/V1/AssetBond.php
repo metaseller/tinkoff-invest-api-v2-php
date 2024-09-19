@@ -82,7 +82,7 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      */
     protected $collateral_flag = false;
     /**
-     *Признак показывает, что купоны облигации не облагаются налогом (для mass market).
+     *Признак показывает, что купоны облигации не облагаются налогом — для mass market.
      *
      * Generated from protobuf field <code>bool tax_free_flag = 12;</code>
      */
@@ -136,7 +136,7 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      */
     protected $placement_price = null;
     /**
-     *Объявленное количество шт.
+     *Объявленное количество, шт.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation issue_size_plan = 21;</code>
      */
@@ -171,7 +171,7 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      *     @type bool $collateral_flag
      *          Признак обеспеченной облигации.
      *     @type bool $tax_free_flag
-     *          Признак показывает, что купоны облигации не облагаются налогом (для mass market).
+     *          Признак показывает, что купоны облигации не облагаются налогом — для mass market.
      *     @type bool $amortization_flag
      *          Признак облигации с амортизацией долга.
      *     @type bool $floating_coupon_flag
@@ -189,7 +189,7 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\Quotation $placement_price
      *          Цена размещения облигации.
      *     @type \Tinkoff\Invest\V1\Quotation $issue_size_plan
-     *          Объявленное количество шт.
+     *          Объявленное количество, шт.
      * }
      */
     public function __construct($data = NULL) {
@@ -514,7 +514,7 @@ class AssetBond extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Признак показывает, что купоны облигации не облагаются налогом (для mass market).
+     *Признак показывает, что купоны облигации не облагаются налогом — для mass market.
      *
      * Generated from protobuf field <code>bool tax_free_flag = 12;</code>
      * @return bool
@@ -525,7 +525,7 @@ class AssetBond extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Признак показывает, что купоны облигации не облагаются налогом (для mass market).
+     *Признак показывает, что купоны облигации не облагаются налогом — для mass market.
      *
      * Generated from protobuf field <code>bool tax_free_flag = 12;</code>
      * @param bool $var
@@ -788,7 +788,7 @@ class AssetBond extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Объявленное количество шт.
+     *Объявленное количество, шт.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation issue_size_plan = 21;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -809,7 +809,7 @@ class AssetBond extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Объявленное количество шт.
+     *Объявленное количество, шт.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation issue_size_plan = 21;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var

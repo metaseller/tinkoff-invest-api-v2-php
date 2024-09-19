@@ -7,26 +7,26 @@ namespace Tinkoff\Invest\V1;
 use UnexpectedValueException;
 
 /**
- *Тип TakeProfit заявки.
+ *Тип TakeProfit-заявки.
  *
  * Protobuf type <code>tinkoff.public.invest.api.contract.v1.TakeProfitType</code>
  */
 class TakeProfitType
 {
     /**
-     *Значение не указано
+     *Значение не указано.
      *
      * Generated from protobuf enum <code>TAKE_PROFIT_TYPE_UNSPECIFIED = 0;</code>
      */
     const TAKE_PROFIT_TYPE_UNSPECIFIED = 0;
     /**
-     *Обычная заявка (значение по умолчанию)
+     *Обычная заявка, значение по умолчанию.
      *
      * Generated from protobuf enum <code>TAKE_PROFIT_TYPE_REGULAR = 1;</code>
      */
     const TAKE_PROFIT_TYPE_REGULAR = 1;
     /**
-     *Трейлинг-стоп
+     *Трейлинг-стоп.
      *
      * Generated from protobuf enum <code>TAKE_PROFIT_TYPE_TRAILING = 2;</code>
      */

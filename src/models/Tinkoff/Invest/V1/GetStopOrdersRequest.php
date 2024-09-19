@@ -16,25 +16,25 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetStopOrdersRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Идентификатор счёта клиента
+     *Идентификатор счёта клиента.
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $account_id = '';
     /**
-     *Статус заявок
+     *Статус заявок.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderStatusOption status = 2;</code>
      */
     protected $status = 0;
     /**
-     *Левая граница
+     *Левая граница.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 3;</code>
      */
     protected $from = null;
     /**
-     *Правая граница
+     *Правая граница.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 4;</code>
      */
@@ -47,13 +47,13 @@ class GetStopOrdersRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $account_id
-     *          Идентификатор счёта клиента
+     *          Идентификатор счёта клиента.
      *     @type int $status
-     *          Статус заявок
+     *          Статус заявок.
      *     @type \Google\Protobuf\Timestamp $from
-     *          Левая граница
+     *          Левая граница.
      *     @type \Google\Protobuf\Timestamp $to
-     *          Правая граница
+     *          Правая граница.
      * }
      */
     public function __construct($data = NULL) {
@@ -62,7 +62,7 @@ class GetStopOrdersRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор счёта клиента
+     *Идентификатор счёта клиента.
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
@@ -73,7 +73,7 @@ class GetStopOrdersRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор счёта клиента
+     *Идентификатор счёта клиента.
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
@@ -88,7 +88,7 @@ class GetStopOrdersRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Статус заявок
+     *Статус заявок.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderStatusOption status = 2;</code>
      * @return int
@@ -99,7 +99,7 @@ class GetStopOrdersRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Статус заявок
+     *Статус заявок.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderStatusOption status = 2;</code>
      * @param int $var
@@ -114,7 +114,7 @@ class GetStopOrdersRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Левая граница
+     *Левая граница.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 3;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -135,7 +135,7 @@ class GetStopOrdersRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Левая граница
+     *Левая граница.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 3;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -150,7 +150,7 @@ class GetStopOrdersRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Правая граница
+     *Правая граница.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 4;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -171,7 +171,7 @@ class GetStopOrdersRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Правая граница
+     *Правая граница.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 4;</code>
      * @param \Google\Protobuf\Timestamp $var

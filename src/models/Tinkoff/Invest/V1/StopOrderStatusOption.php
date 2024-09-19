@@ -14,37 +14,37 @@ use UnexpectedValueException;
 class StopOrderStatusOption
 {
     /**
-     *Значение не указано
+     *Значение не указано.
      *
      * Generated from protobuf enum <code>STOP_ORDER_STATUS_UNSPECIFIED = 0;</code>
      */
     const STOP_ORDER_STATUS_UNSPECIFIED = 0;
     /**
-     *Все заявки
+     *Все заявки.
      *
      * Generated from protobuf enum <code>STOP_ORDER_STATUS_ALL = 1;</code>
      */
     const STOP_ORDER_STATUS_ALL = 1;
     /**
-     *Активные заявки
+     *Активные заявки.
      *
      * Generated from protobuf enum <code>STOP_ORDER_STATUS_ACTIVE = 2;</code>
      */
     const STOP_ORDER_STATUS_ACTIVE = 2;
     /**
-     *Исполненные заявки
+     *Исполненные заявки.
      *
      * Generated from protobuf enum <code>STOP_ORDER_STATUS_EXECUTED = 3;</code>
      */
     const STOP_ORDER_STATUS_EXECUTED = 3;
     /**
-     *Отмененные заявки
+     *Отменённые заявки.
      *
      * Generated from protobuf enum <code>STOP_ORDER_STATUS_CANCELED = 4;</code>
      */
     const STOP_ORDER_STATUS_CANCELED = 4;
     /**
-     *Истекшие заявки
+     *Истёкшие заявки.
      *
      * Generated from protobuf enum <code>STOP_ORDER_STATUS_EXPIRED = 5;</code>
      */

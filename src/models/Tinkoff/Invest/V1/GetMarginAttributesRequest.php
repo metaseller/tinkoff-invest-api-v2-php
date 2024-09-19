@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Запрос маржинальных показателей по счёту
+ *Запрос маржинальных показателей по счёту.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.GetMarginAttributesRequest</code>
  */

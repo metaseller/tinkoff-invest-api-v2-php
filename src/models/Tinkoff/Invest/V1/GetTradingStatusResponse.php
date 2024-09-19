@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetTradingStatusResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Figi-идентификатор инструмента.
+     *FIGI-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      */
@@ -46,19 +46,19 @@ class GetTradingStatusResponse extends \Google\Protobuf\Internal\Message
      */
     protected $api_trade_available_flag = false;
     /**
-     *Uid инструмента.
+     *UID инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 6;</code>
      */
     protected $instrument_uid = '';
     /**
-     *Признак доступности завяки по лучшей цене
+     *Признак доступности завяки по лучшей цене.
      *
      * Generated from protobuf field <code>bool bestprice_order_available_flag = 8;</code>
      */
     protected $bestprice_order_available_flag = false;
     /**
-     *Признак доступности только заявки по лучшей цене
+     *Признак доступности только заявки по лучшей цене.
      *
      * Generated from protobuf field <code>bool only_best_price = 9;</code>
      */
@@ -71,7 +71,7 @@ class GetTradingStatusResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $figi
-     *          Figi-идентификатор инструмента.
+     *          FIGI-идентификатор инструмента.
      *     @type int $trading_status
      *          Статус торговли инструментом.
      *     @type bool $limit_order_available_flag
@@ -81,11 +81,11 @@ class GetTradingStatusResponse extends \Google\Protobuf\Internal\Message
      *     @type bool $api_trade_available_flag
      *          Признак доступности торгов через API.
      *     @type string $instrument_uid
-     *          Uid инструмента.
+     *          UID инструмента.
      *     @type bool $bestprice_order_available_flag
-     *          Признак доступности завяки по лучшей цене
+     *          Признак доступности завяки по лучшей цене.
      *     @type bool $only_best_price
-     *          Признак доступности только заявки по лучшей цене
+     *          Признак доступности только заявки по лучшей цене.
      * }
      */
     public function __construct($data = NULL) {
@@ -94,7 +94,7 @@ class GetTradingStatusResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента.
+     *FIGI-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @return string
@@ -105,7 +105,7 @@ class GetTradingStatusResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента.
+     *FIGI-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @param string $var
@@ -224,7 +224,7 @@ class GetTradingStatusResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Uid инструмента.
+     *UID инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 6;</code>
      * @return string
@@ -235,7 +235,7 @@ class GetTradingStatusResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Uid инструмента.
+     *UID инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 6;</code>
      * @param string $var
@@ -250,7 +250,7 @@ class GetTradingStatusResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Признак доступности завяки по лучшей цене
+     *Признак доступности завяки по лучшей цене.
      *
      * Generated from protobuf field <code>bool bestprice_order_available_flag = 8;</code>
      * @return bool
@@ -261,7 +261,7 @@ class GetTradingStatusResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Признак доступности завяки по лучшей цене
+     *Признак доступности завяки по лучшей цене.
      *
      * Generated from protobuf field <code>bool bestprice_order_available_flag = 8;</code>
      * @param bool $var
@@ -276,7 +276,7 @@ class GetTradingStatusResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Признак доступности только заявки по лучшей цене
+     *Признак доступности только заявки по лучшей цене.
      *
      * Generated from protobuf field <code>bool only_best_price = 9;</code>
      * @return bool
@@ -287,7 +287,7 @@ class GetTradingStatusResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Признак доступности только заявки по лучшей цене
+     *Признак доступности только заявки по лучшей цене.
      *
      * Generated from protobuf field <code>bool only_best_price = 9;</code>
      * @param bool $var

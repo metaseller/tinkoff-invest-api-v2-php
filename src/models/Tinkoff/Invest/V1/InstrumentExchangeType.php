@@ -7,7 +7,7 @@ namespace Tinkoff\Invest\V1;
 use UnexpectedValueException;
 
 /**
- * Площадка торговли
+ * Площадка торговли.
  *
  * Protobuf type <code>tinkoff.public.invest.api.contract.v1.InstrumentExchangeType</code>
  */

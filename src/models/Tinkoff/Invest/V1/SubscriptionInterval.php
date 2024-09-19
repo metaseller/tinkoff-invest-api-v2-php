@@ -32,67 +32,67 @@ class SubscriptionInterval
      */
     const SUBSCRIPTION_INTERVAL_FIVE_MINUTES = 2;
     /**
-     *Пятнадцатиминутные свечи
+     *Пятнадцатиминутные свечи.
      *
      * Generated from protobuf enum <code>SUBSCRIPTION_INTERVAL_FIFTEEN_MINUTES = 3;</code>
      */
     const SUBSCRIPTION_INTERVAL_FIFTEEN_MINUTES = 3;
     /**
-     *Часовые свечи
+     *Часовые свечи.
      *
      * Generated from protobuf enum <code>SUBSCRIPTION_INTERVAL_ONE_HOUR = 4;</code>
      */
     const SUBSCRIPTION_INTERVAL_ONE_HOUR = 4;
     /**
-     *Дневные свечи
+     *Дневные свечи.
      *
      * Generated from protobuf enum <code>SUBSCRIPTION_INTERVAL_ONE_DAY = 5;</code>
      */
     const SUBSCRIPTION_INTERVAL_ONE_DAY = 5;
     /**
-     *Двухминутные свечи
+     *Двухминутные свечи.
      *
      * Generated from protobuf enum <code>SUBSCRIPTION_INTERVAL_2_MIN = 6;</code>
      */
     const SUBSCRIPTION_INTERVAL_2_MIN = 6;
     /**
-     *Трехминутные свечи
+     *Трёхминутные свечи.
      *
      * Generated from protobuf enum <code>SUBSCRIPTION_INTERVAL_3_MIN = 7;</code>
      */
     const SUBSCRIPTION_INTERVAL_3_MIN = 7;
     /**
-     *Десятиминутные свечи
+     *Десятиминутные свечи.
      *
      * Generated from protobuf enum <code>SUBSCRIPTION_INTERVAL_10_MIN = 8;</code>
      */
     const SUBSCRIPTION_INTERVAL_10_MIN = 8;
     /**
-     *Тридцатиминутные свечи
+     *Тридцатиминутные свечи.
      *
      * Generated from protobuf enum <code>SUBSCRIPTION_INTERVAL_30_MIN = 9;</code>
      */
     const SUBSCRIPTION_INTERVAL_30_MIN = 9;
     /**
-     *Двухчасовые свечи
+     *Двухчасовые свечи.
      *
      * Generated from protobuf enum <code>SUBSCRIPTION_INTERVAL_2_HOUR = 10;</code>
      */
     const SUBSCRIPTION_INTERVAL_2_HOUR = 10;
     /**
-     *Четырехчасовые свечи
+     *Четырёхчасовые свечи.
      *
      * Generated from protobuf enum <code>SUBSCRIPTION_INTERVAL_4_HOUR = 11;</code>
      */
     const SUBSCRIPTION_INTERVAL_4_HOUR = 11;
     /**
-     *Недельные свечи
+     *Недельные свечи.
      *
      * Generated from protobuf enum <code>SUBSCRIPTION_INTERVAL_WEEK = 12;</code>
      */
     const SUBSCRIPTION_INTERVAL_WEEK = 12;
     /**
-     *Месячные свечи
+     *Месячные свечи.
      *
      * Generated from protobuf enum <code>SUBSCRIPTION_INTERVAL_MONTH = 13;</code>
      */

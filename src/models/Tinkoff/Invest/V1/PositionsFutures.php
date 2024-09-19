@@ -16,13 +16,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class PositionsFutures extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Figi-идентификатор фьючерса.
+     *FIGI-идентификатор фьючерса.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      */
     protected $figi = '';
     /**
-     *Количество бумаг заблокированных выставленными заявками.
+     *Количество бумаг, заблокированных выставленными заявками.
      *
      * Generated from protobuf field <code>int64 blocked = 2;</code>
      */
@@ -53,9 +53,9 @@ class PositionsFutures extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $figi
-     *          Figi-идентификатор фьючерса.
+     *          FIGI-идентификатор фьючерса.
      *     @type int|string $blocked
-     *          Количество бумаг заблокированных выставленными заявками.
+     *          Количество бумаг, заблокированных выставленными заявками.
      *     @type int|string $balance
      *          Текущий незаблокированный баланс.
      *     @type string $position_uid
@@ -70,7 +70,7 @@ class PositionsFutures extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор фьючерса.
+     *FIGI-идентификатор фьючерса.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @return string
@@ -81,7 +81,7 @@ class PositionsFutures extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор фьючерса.
+     *FIGI-идентификатор фьючерса.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @param string $var
@@ -96,7 +96,7 @@ class PositionsFutures extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество бумаг заблокированных выставленными заявками.
+     *Количество бумаг, заблокированных выставленными заявками.
      *
      * Generated from protobuf field <code>int64 blocked = 2;</code>
      * @return int|string
@@ -107,7 +107,7 @@ class PositionsFutures extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество бумаг заблокированных выставленными заявками.
+     *Количество бумаг, заблокированных выставленными заявками.
      *
      * Generated from protobuf field <code>int64 blocked = 2;</code>
      * @param int|string $var

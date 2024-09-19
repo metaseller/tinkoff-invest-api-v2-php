@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Отчёт "Справка о доходах за пределами РФ".
+ * Отчёт «Справка о доходах за пределами РФ».
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.DividendsForeignIssuerReport</code>
  */

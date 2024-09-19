@@ -37,12 +37,19 @@ class RealExchange
      * Generated from protobuf enum <code>REAL_EXCHANGE_OTC = 3;</code>
      */
     const REAL_EXCHANGE_OTC = 3;
+    /**
+     *Инструмент, торгуемый на площадке брокера.
+     *
+     * Generated from protobuf enum <code>REAL_EXCHANGE_DEALER = 4;</code>
+     */
+    const REAL_EXCHANGE_DEALER = 4;
 
     private static $valueToName = [
         self::REAL_EXCHANGE_UNSPECIFIED => 'REAL_EXCHANGE_UNSPECIFIED',
         self::REAL_EXCHANGE_MOEX => 'REAL_EXCHANGE_MOEX',
         self::REAL_EXCHANGE_RTS => 'REAL_EXCHANGE_RTS',
         self::REAL_EXCHANGE_OTC => 'REAL_EXCHANGE_OTC',
+        self::REAL_EXCHANGE_DEALER => 'REAL_EXCHANGE_DEALER',
     ];
 
     public static function name($value)

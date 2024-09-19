@@ -16,43 +16,43 @@ use Google\Protobuf\Internal\GPBUtil;
 class StatisticResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Идентификатор актива
+     *Идентификатор актива.
      *
      * Generated from protobuf field <code>string asset_uid = 1;</code>
      */
     protected $asset_uid = '';
     /**
-     *Валюта
+     *Валюта.
      *
      * Generated from protobuf field <code>string currency = 2;</code>
      */
     protected $currency = '';
     /**
-     *Рыночная капитализация
+     *Рыночная капитализация.
      *
      * Generated from protobuf field <code>double market_capitalization = 3;</code>
      */
     protected $market_capitalization = 0.0;
     /**
-     *Максимум за год
+     *Максимум за год.
      *
      * Generated from protobuf field <code>double high_price_last_52_weeks = 4;</code>
      */
     protected $high_price_last_52_weeks = 0.0;
     /**
-     *Минимум за год
+     *Минимум за год.
      *
      * Generated from protobuf field <code>double low_price_last_52_weeks = 5;</code>
      */
     protected $low_price_last_52_weeks = 0.0;
     /**
-     *Средний объем торгов за 10 дней
+     *Средний объём торгов за 10 дней.
      *
      * Generated from protobuf field <code>double average_daily_volume_last_10_days = 6;</code>
      */
     protected $average_daily_volume_last_10_days = 0.0;
     /**
-     *Средний объем торгов за месяц
+     *Средний объём торгов за месяц.
      *
      * Generated from protobuf field <code>double average_daily_volume_last_4_weeks = 7;</code>
      */
@@ -62,7 +62,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      */
     protected $beta = 0.0;
     /**
-     *Доля акций в свободном обращении
+     *Доля акций в свободном обращении.
      *
      * Generated from protobuf field <code>double free_float = 9;</code>
      */
@@ -74,229 +74,229 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      */
     protected $forward_annual_dividend_yield = 0.0;
     /**
-     *Количество акций в обращении
+     *Количество акций в обращении.
      *
      * Generated from protobuf field <code>double shares_outstanding = 11;</code>
      */
     protected $shares_outstanding = 0.0;
     /**
-     *Выручка
+     *Выручка.
      *
      * Generated from protobuf field <code>double revenue_ttm = 12;</code>
      */
     protected $revenue_ttm = 0.0;
     /**
-     *EBITDA Прибыль до вычета процентов, налогов, износа и амортизации
+     *EBITDA — прибыль до вычета процентов, налогов, износа и амортизации.
      *
      * Generated from protobuf field <code>double ebitda_ttm = 13;</code>
      */
     protected $ebitda_ttm = 0.0;
     /**
-     *Чистая прибыль
+     *Чистая прибыль.
      *
      * Generated from protobuf field <code>double net_income_ttm = 14;</code>
      */
     protected $net_income_ttm = 0.0;
     /**
-     *EPS Величина чистой прибыли компании, приходящуюся на каждую обыкновенную акцию
+     *EPS — величина чистой прибыли компании, которая приходится на каждую обыкновенную акцию.
      *
      * Generated from protobuf field <code>double eps_ttm = 15;</code>
      */
     protected $eps_ttm = 0.0;
     /**
-     *EPS компании с допущением, что все конвертируемые ценные бумаги компании были сконвертированы в обыкновенные акции
+     *EPS компании с допущением, что все конвертируемые ценные бумаги компании были сконвертированы в обыкновенные акции.
      *
      * Generated from protobuf field <code>double diluted_eps_ttm = 16;</code>
      */
     protected $diluted_eps_ttm = 0.0;
     /**
-     *Свободный денежный поток
+     *Свободный денежный поток.
      *
      * Generated from protobuf field <code>double free_cash_flow_ttm = 17;</code>
      */
     protected $free_cash_flow_ttm = 0.0;
     /**
-     *Среднегодовой  рocт выручки (за 5 лет)
+     *Среднегодовой  рocт выручки за 5 лет.
      *
      * Generated from protobuf field <code>double five_year_annual_revenue_growth_rate = 18;</code>
      */
     protected $five_year_annual_revenue_growth_rate = 0.0;
     /**
-     *Среднегодовой  рocт выручки (за 3 года)
+     *Среднегодовой  рocт выручки за 3 года.
      *
      * Generated from protobuf field <code>double three_year_annual_revenue_growth_rate = 19;</code>
      */
     protected $three_year_annual_revenue_growth_rate = 0.0;
     /**
-     *Показывает соотношение рыночной капитализации компании к ее чистой прибыли
+     *Соотношение рыночной капитализации компании к её чистой прибыли.
      *
      * Generated from protobuf field <code>double pe_ratio_ttm = 20;</code>
      */
     protected $pe_ratio_ttm = 0.0;
     /**
-     *Показывает соотношение рыночной капитализации компании к ее выручке
+     *Соотношение рыночной капитализации компании к её выручке.
      *
      * Generated from protobuf field <code>double price_to_sales_ttm = 21;</code>
      */
     protected $price_to_sales_ttm = 0.0;
     /**
-     *Показывает соотношение рыночной капитализации компании к ее балансовой стоимости
+     *Соотношение рыночной капитализации компании к её балансовой стоимости.
      *
      * Generated from protobuf field <code>double price_to_book_ttm = 22;</code>
      */
     protected $price_to_book_ttm = 0.0;
     /**
-     *Показывает соотношение рыночной капитализации компании к ее свободному денежному потоку
+     *Соотношение рыночной капитализации компании к её свободному денежному потоку.
      *
      * Generated from protobuf field <code>double price_to_free_cash_flow_ttm = 23;</code>
      */
     protected $price_to_free_cash_flow_ttm = 0.0;
     /**
-     *Рыночная стоимость компании
+     *Рыночная стоимость компании.
      *
      * Generated from protobuf field <code>double total_enterprise_value_mrq = 24;</code>
      */
     protected $total_enterprise_value_mrq = 0.0;
     /**
-     *Соотношение EV и EBITDA
+     *Соотношение EV и EBITDA.
      *
      * Generated from protobuf field <code>double ev_to_ebitda_mrq = 25;</code>
      */
     protected $ev_to_ebitda_mrq = 0.0;
     /**
-     *Маржа чистой прибыли
+     *Маржа чистой прибыли.
      *
      * Generated from protobuf field <code>double net_margin_mrq = 26;</code>
      */
     protected $net_margin_mrq = 0.0;
     /**
-     *Рентабельность чистой прибыли
+     *Рентабельность чистой прибыли.
      *
      * Generated from protobuf field <code>double net_interest_margin_mrq = 27;</code>
      */
     protected $net_interest_margin_mrq = 0.0;
     /**
-     *Рентабельность собственного капитала
+     *Рентабельность собственного капитала.
      *
      * Generated from protobuf field <code>double roe = 28;</code>
      */
     protected $roe = 0.0;
     /**
-     *Рентабельность активов
+     *Рентабельность активов.
      *
      * Generated from protobuf field <code>double roa = 29;</code>
      */
     protected $roa = 0.0;
     /**
-     *Рентабельность активов
+     *Рентабельность активов.
      *
      * Generated from protobuf field <code>double roic = 30;</code>
      */
     protected $roic = 0.0;
     /**
-     *Сумма краткосрочных и долгосрочных обязательств компании
+     *Сумма краткосрочных и долгосрочных обязательств компании.
      *
      * Generated from protobuf field <code>double total_debt_mrq = 31;</code>
      */
     protected $total_debt_mrq = 0.0;
     /**
-     *Соотношение долга к собственному капиталу
+     *Соотношение долга к собственному капиталу.
      *
      * Generated from protobuf field <code>double total_debt_to_equity_mrq = 32;</code>
      */
     protected $total_debt_to_equity_mrq = 0.0;
     /**
-     *Total Debt/EBITDA
+     *Total Debt/EBITDA.
      *
      * Generated from protobuf field <code>double total_debt_to_ebitda_mrq = 33;</code>
      */
     protected $total_debt_to_ebitda_mrq = 0.0;
     /**
-     *Отношение свободглго кэша к стоимости
+     *Отношение свободногоо кэша к стоимости.
      *
      * Generated from protobuf field <code>double free_cash_flow_to_price = 34;</code>
      */
     protected $free_cash_flow_to_price = 0.0;
     /**
-     *Отношение чистого долга к ebitda
+     *Отношение чистого долга к EBITDA.
      *
      * Generated from protobuf field <code>double net_debt_to_ebitda = 35;</code>
      */
     protected $net_debt_to_ebitda = 0.0;
     /**
-     *Коэффициент текущей ликвидности
+     *Коэффициент текущей ликвидности.
      *
      * Generated from protobuf field <code>double current_ratio_mrq = 36;</code>
      */
     protected $current_ratio_mrq = 0.0;
     /**
-     *Коэффициент покрытия фиксированных платежей (FCCR)
+     *Коэффициент покрытия фиксированных платежей — FCCR.
      *
      * Generated from protobuf field <code>double fixed_charge_coverage_ratio_fy = 37;</code>
      */
     protected $fixed_charge_coverage_ratio_fy = 0.0;
     /**
-     *Дивидендная доходность за 12 мес
+     *Дивидендная доходность за 12 месяцев.
      *
      * Generated from protobuf field <code>double dividend_yield_daily_ttm = 38;</code>
      */
     protected $dividend_yield_daily_ttm = 0.0;
     /**
-     *Выплаченные дивиденды за 12 мес.
+     *Выплаченные дивиденды за 12 месяцев.
      *
      * Generated from protobuf field <code>double dividend_rate_ttm = 39;</code>
      */
     protected $dividend_rate_ttm = 0.0;
     /**
-     *Значение дивидендов на акцию
+     *Значение дивидендов на акцию.
      *
      * Generated from protobuf field <code>double dividends_per_share = 40;</code>
      */
     protected $dividends_per_share = 0.0;
     /**
-     *Средняя дивидендная доходность за 5 лет
+     *Средняя дивидендная доходность за 5 лет.
      *
      * Generated from protobuf field <code>double five_years_average_dividend_yield = 41;</code>
      */
     protected $five_years_average_dividend_yield = 0.0;
     /**
-     *Среднегодовой рост дивидендов за 5 лет
+     *Среднегодовой рост дивидендов за 5 лет.
      *
      * Generated from protobuf field <code>double five_year_annual_dividend_growth_rate = 42;</code>
      */
     protected $five_year_annual_dividend_growth_rate = 0.0;
     /**
-     *Процент чистой прибыли, уходящий на выплату дивидендов
+     *Процент чистой прибыли, уходящий на выплату дивидендов.
      *
      * Generated from protobuf field <code>double dividend_payout_ratio_fy = 43;</code>
      */
     protected $dividend_payout_ratio_fy = 0.0;
     /**
-     *Деньги, потраченные на обратный выкуп акций
+     *Деньги, потраченные на обратный выкуп акций.
      *
      * Generated from protobuf field <code>double buy_back_ttm = 44;</code>
      */
     protected $buy_back_ttm = 0.0;
     /**
-     *Рост выручки за 1 год
+     *Рост выручки за 1 год.
      *
      * Generated from protobuf field <code>double one_year_annual_revenue_growth_rate = 45;</code>
      */
     protected $one_year_annual_revenue_growth_rate = 0.0;
     /**
-     *Код страны
+     *Код страны.
      *
      * Generated from protobuf field <code>string domicile_indicator_code = 46;</code>
      */
     protected $domicile_indicator_code = '';
     /**
-     *Соотношение депозитарной расписки к акциям
+     *Соотношение депозитарной расписки к акциям.
      *
      * Generated from protobuf field <code>double adr_to_common_share_ratio = 47;</code>
      */
     protected $adr_to_common_share_ratio = 0.0;
     /**
-     *Количество сотрудников
+     *Количество сотрудников.
      *
      * Generated from protobuf field <code>double number_of_employees = 48;</code>
      */
@@ -306,43 +306,43 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      */
     protected $ex_dividend_date = null;
     /**
-     *Начало фискального периода
+     *Начало фискального периода.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp fiscal_period_start_date = 50;</code>
      */
     protected $fiscal_period_start_date = null;
     /**
-     *Конец фискального периода
+     *Окончание фискального периода.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp fiscal_period_end_date = 51;</code>
      */
     protected $fiscal_period_end_date = null;
     /**
-     *Изменение общего дохода за 5 лет
+     *Изменение общего дохода за 5 лет.
      *
      * Generated from protobuf field <code>double revenue_change_five_years = 53;</code>
      */
     protected $revenue_change_five_years = 0.0;
     /**
-     *Изменение eps за 5 лет
+     *Изменение EPS за 5 лет.
      *
      * Generated from protobuf field <code>double eps_change_five_years = 54;</code>
      */
     protected $eps_change_five_years = 0.0;
     /**
-     *Изменение ebitda за 5 лет
+     *Изменение EBIDTA за 5 лет.
      *
      * Generated from protobuf field <code>double ebitda_change_five_years = 55;</code>
      */
     protected $ebitda_change_five_years = 0.0;
     /**
-     *Изменение общей задолжности за 5 лет
+     *Изменение общей задолжности за 5 лет.
      *
      * Generated from protobuf field <code>double total_debt_change_five_years = 56;</code>
      */
     protected $total_debt_change_five_years = 0.0;
     /**
-     *Отношение EV к выручке
+     *Отношение EV к выручке.
      *
      * Generated from protobuf field <code>double ev_to_sales = 57;</code>
      */
@@ -355,115 +355,115 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $asset_uid
-     *          Идентификатор актива
+     *          Идентификатор актива.
      *     @type string $currency
-     *          Валюта
+     *          Валюта.
      *     @type float $market_capitalization
-     *          Рыночная капитализация
+     *          Рыночная капитализация.
      *     @type float $high_price_last_52_weeks
-     *          Максимум за год
+     *          Максимум за год.
      *     @type float $low_price_last_52_weeks
-     *          Минимум за год
+     *          Минимум за год.
      *     @type float $average_daily_volume_last_10_days
-     *          Средний объем торгов за 10 дней
+     *          Средний объём торгов за 10 дней.
      *     @type float $average_daily_volume_last_4_weeks
-     *          Средний объем торгов за месяц
+     *          Средний объём торгов за месяц.
      *     @type float $beta
      *     @type float $free_float
-     *          Доля акций в свободном обращении
+     *          Доля акций в свободном обращении.
      *     @type float $forward_annual_dividend_yield
      *          Процент форвардной дивидендной доходности по отношению к цене акций.
      *     @type float $shares_outstanding
-     *          Количество акций в обращении
+     *          Количество акций в обращении.
      *     @type float $revenue_ttm
-     *          Выручка
+     *          Выручка.
      *     @type float $ebitda_ttm
-     *          EBITDA Прибыль до вычета процентов, налогов, износа и амортизации
+     *          EBITDA — прибыль до вычета процентов, налогов, износа и амортизации.
      *     @type float $net_income_ttm
-     *          Чистая прибыль
+     *          Чистая прибыль.
      *     @type float $eps_ttm
-     *          EPS Величина чистой прибыли компании, приходящуюся на каждую обыкновенную акцию
+     *          EPS — величина чистой прибыли компании, которая приходится на каждую обыкновенную акцию.
      *     @type float $diluted_eps_ttm
-     *          EPS компании с допущением, что все конвертируемые ценные бумаги компании были сконвертированы в обыкновенные акции
+     *          EPS компании с допущением, что все конвертируемые ценные бумаги компании были сконвертированы в обыкновенные акции.
      *     @type float $free_cash_flow_ttm
-     *          Свободный денежный поток
+     *          Свободный денежный поток.
      *     @type float $five_year_annual_revenue_growth_rate
-     *          Среднегодовой  рocт выручки (за 5 лет)
+     *          Среднегодовой  рocт выручки за 5 лет.
      *     @type float $three_year_annual_revenue_growth_rate
-     *          Среднегодовой  рocт выручки (за 3 года)
+     *          Среднегодовой  рocт выручки за 3 года.
      *     @type float $pe_ratio_ttm
-     *          Показывает соотношение рыночной капитализации компании к ее чистой прибыли
+     *          Соотношение рыночной капитализации компании к её чистой прибыли.
      *     @type float $price_to_sales_ttm
-     *          Показывает соотношение рыночной капитализации компании к ее выручке
+     *          Соотношение рыночной капитализации компании к её выручке.
      *     @type float $price_to_book_ttm
-     *          Показывает соотношение рыночной капитализации компании к ее балансовой стоимости
+     *          Соотношение рыночной капитализации компании к её балансовой стоимости.
      *     @type float $price_to_free_cash_flow_ttm
-     *          Показывает соотношение рыночной капитализации компании к ее свободному денежному потоку
+     *          Соотношение рыночной капитализации компании к её свободному денежному потоку.
      *     @type float $total_enterprise_value_mrq
-     *          Рыночная стоимость компании
+     *          Рыночная стоимость компании.
      *     @type float $ev_to_ebitda_mrq
-     *          Соотношение EV и EBITDA
+     *          Соотношение EV и EBITDA.
      *     @type float $net_margin_mrq
-     *          Маржа чистой прибыли
+     *          Маржа чистой прибыли.
      *     @type float $net_interest_margin_mrq
-     *          Рентабельность чистой прибыли
+     *          Рентабельность чистой прибыли.
      *     @type float $roe
-     *          Рентабельность собственного капитала
+     *          Рентабельность собственного капитала.
      *     @type float $roa
-     *          Рентабельность активов
+     *          Рентабельность активов.
      *     @type float $roic
-     *          Рентабельность активов
+     *          Рентабельность активов.
      *     @type float $total_debt_mrq
-     *          Сумма краткосрочных и долгосрочных обязательств компании
+     *          Сумма краткосрочных и долгосрочных обязательств компании.
      *     @type float $total_debt_to_equity_mrq
-     *          Соотношение долга к собственному капиталу
+     *          Соотношение долга к собственному капиталу.
      *     @type float $total_debt_to_ebitda_mrq
-     *          Total Debt/EBITDA
+     *          Total Debt/EBITDA.
      *     @type float $free_cash_flow_to_price
-     *          Отношение свободглго кэша к стоимости
+     *          Отношение свободногоо кэша к стоимости.
      *     @type float $net_debt_to_ebitda
-     *          Отношение чистого долга к ebitda
+     *          Отношение чистого долга к EBITDA.
      *     @type float $current_ratio_mrq
-     *          Коэффициент текущей ликвидности
+     *          Коэффициент текущей ликвидности.
      *     @type float $fixed_charge_coverage_ratio_fy
-     *          Коэффициент покрытия фиксированных платежей (FCCR)
+     *          Коэффициент покрытия фиксированных платежей — FCCR.
      *     @type float $dividend_yield_daily_ttm
-     *          Дивидендная доходность за 12 мес
+     *          Дивидендная доходность за 12 месяцев.
      *     @type float $dividend_rate_ttm
-     *          Выплаченные дивиденды за 12 мес.
+     *          Выплаченные дивиденды за 12 месяцев.
      *     @type float $dividends_per_share
-     *          Значение дивидендов на акцию
+     *          Значение дивидендов на акцию.
      *     @type float $five_years_average_dividend_yield
-     *          Средняя дивидендная доходность за 5 лет
+     *          Средняя дивидендная доходность за 5 лет.
      *     @type float $five_year_annual_dividend_growth_rate
-     *          Среднегодовой рост дивидендов за 5 лет
+     *          Среднегодовой рост дивидендов за 5 лет.
      *     @type float $dividend_payout_ratio_fy
-     *          Процент чистой прибыли, уходящий на выплату дивидендов
+     *          Процент чистой прибыли, уходящий на выплату дивидендов.
      *     @type float $buy_back_ttm
-     *          Деньги, потраченные на обратный выкуп акций
+     *          Деньги, потраченные на обратный выкуп акций.
      *     @type float $one_year_annual_revenue_growth_rate
-     *          Рост выручки за 1 год
+     *          Рост выручки за 1 год.
      *     @type string $domicile_indicator_code
-     *          Код страны
+     *          Код страны.
      *     @type float $adr_to_common_share_ratio
-     *          Соотношение депозитарной расписки к акциям
+     *          Соотношение депозитарной расписки к акциям.
      *     @type float $number_of_employees
-     *          Количество сотрудников
+     *          Количество сотрудников.
      *     @type \Google\Protobuf\Timestamp $ex_dividend_date
      *     @type \Google\Protobuf\Timestamp $fiscal_period_start_date
-     *          Начало фискального периода
+     *          Начало фискального периода.
      *     @type \Google\Protobuf\Timestamp $fiscal_period_end_date
-     *          Конец фискального периода
+     *          Окончание фискального периода.
      *     @type float $revenue_change_five_years
-     *          Изменение общего дохода за 5 лет
+     *          Изменение общего дохода за 5 лет.
      *     @type float $eps_change_five_years
-     *          Изменение eps за 5 лет
+     *          Изменение EPS за 5 лет.
      *     @type float $ebitda_change_five_years
-     *          Изменение ebitda за 5 лет
+     *          Изменение EBIDTA за 5 лет.
      *     @type float $total_debt_change_five_years
-     *          Изменение общей задолжности за 5 лет
+     *          Изменение общей задолжности за 5 лет.
      *     @type float $ev_to_sales
-     *          Отношение EV к выручке
+     *          Отношение EV к выручке.
      * }
      */
     public function __construct($data = NULL) {
@@ -472,7 +472,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор актива
+     *Идентификатор актива.
      *
      * Generated from protobuf field <code>string asset_uid = 1;</code>
      * @return string
@@ -483,7 +483,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор актива
+     *Идентификатор актива.
      *
      * Generated from protobuf field <code>string asset_uid = 1;</code>
      * @param string $var
@@ -498,7 +498,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Валюта
+     *Валюта.
      *
      * Generated from protobuf field <code>string currency = 2;</code>
      * @return string
@@ -509,7 +509,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Валюта
+     *Валюта.
      *
      * Generated from protobuf field <code>string currency = 2;</code>
      * @param string $var
@@ -524,7 +524,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Рыночная капитализация
+     *Рыночная капитализация.
      *
      * Generated from protobuf field <code>double market_capitalization = 3;</code>
      * @return float
@@ -535,7 +535,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Рыночная капитализация
+     *Рыночная капитализация.
      *
      * Generated from protobuf field <code>double market_capitalization = 3;</code>
      * @param float $var
@@ -550,7 +550,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Максимум за год
+     *Максимум за год.
      *
      * Generated from protobuf field <code>double high_price_last_52_weeks = 4;</code>
      * @return float
@@ -561,7 +561,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Максимум за год
+     *Максимум за год.
      *
      * Generated from protobuf field <code>double high_price_last_52_weeks = 4;</code>
      * @param float $var
@@ -576,7 +576,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Минимум за год
+     *Минимум за год.
      *
      * Generated from protobuf field <code>double low_price_last_52_weeks = 5;</code>
      * @return float
@@ -587,7 +587,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Минимум за год
+     *Минимум за год.
      *
      * Generated from protobuf field <code>double low_price_last_52_weeks = 5;</code>
      * @param float $var
@@ -602,7 +602,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средний объем торгов за 10 дней
+     *Средний объём торгов за 10 дней.
      *
      * Generated from protobuf field <code>double average_daily_volume_last_10_days = 6;</code>
      * @return float
@@ -613,7 +613,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средний объем торгов за 10 дней
+     *Средний объём торгов за 10 дней.
      *
      * Generated from protobuf field <code>double average_daily_volume_last_10_days = 6;</code>
      * @param float $var
@@ -628,7 +628,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средний объем торгов за месяц
+     *Средний объём торгов за месяц.
      *
      * Generated from protobuf field <code>double average_daily_volume_last_4_weeks = 7;</code>
      * @return float
@@ -639,7 +639,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средний объем торгов за месяц
+     *Средний объём торгов за месяц.
      *
      * Generated from protobuf field <code>double average_daily_volume_last_4_weeks = 7;</code>
      * @param float $var
@@ -676,7 +676,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Доля акций в свободном обращении
+     *Доля акций в свободном обращении.
      *
      * Generated from protobuf field <code>double free_float = 9;</code>
      * @return float
@@ -687,7 +687,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Доля акций в свободном обращении
+     *Доля акций в свободном обращении.
      *
      * Generated from protobuf field <code>double free_float = 9;</code>
      * @param float $var
@@ -728,7 +728,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество акций в обращении
+     *Количество акций в обращении.
      *
      * Generated from protobuf field <code>double shares_outstanding = 11;</code>
      * @return float
@@ -739,7 +739,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество акций в обращении
+     *Количество акций в обращении.
      *
      * Generated from protobuf field <code>double shares_outstanding = 11;</code>
      * @param float $var
@@ -754,7 +754,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Выручка
+     *Выручка.
      *
      * Generated from protobuf field <code>double revenue_ttm = 12;</code>
      * @return float
@@ -765,7 +765,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Выручка
+     *Выручка.
      *
      * Generated from protobuf field <code>double revenue_ttm = 12;</code>
      * @param float $var
@@ -780,7 +780,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *EBITDA Прибыль до вычета процентов, налогов, износа и амортизации
+     *EBITDA — прибыль до вычета процентов, налогов, износа и амортизации.
      *
      * Generated from protobuf field <code>double ebitda_ttm = 13;</code>
      * @return float
@@ -791,7 +791,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *EBITDA Прибыль до вычета процентов, налогов, износа и амортизации
+     *EBITDA — прибыль до вычета процентов, налогов, износа и амортизации.
      *
      * Generated from protobuf field <code>double ebitda_ttm = 13;</code>
      * @param float $var
@@ -806,7 +806,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Чистая прибыль
+     *Чистая прибыль.
      *
      * Generated from protobuf field <code>double net_income_ttm = 14;</code>
      * @return float
@@ -817,7 +817,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Чистая прибыль
+     *Чистая прибыль.
      *
      * Generated from protobuf field <code>double net_income_ttm = 14;</code>
      * @param float $var
@@ -832,7 +832,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *EPS Величина чистой прибыли компании, приходящуюся на каждую обыкновенную акцию
+     *EPS — величина чистой прибыли компании, которая приходится на каждую обыкновенную акцию.
      *
      * Generated from protobuf field <code>double eps_ttm = 15;</code>
      * @return float
@@ -843,7 +843,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *EPS Величина чистой прибыли компании, приходящуюся на каждую обыкновенную акцию
+     *EPS — величина чистой прибыли компании, которая приходится на каждую обыкновенную акцию.
      *
      * Generated from protobuf field <code>double eps_ttm = 15;</code>
      * @param float $var
@@ -858,7 +858,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *EPS компании с допущением, что все конвертируемые ценные бумаги компании были сконвертированы в обыкновенные акции
+     *EPS компании с допущением, что все конвертируемые ценные бумаги компании были сконвертированы в обыкновенные акции.
      *
      * Generated from protobuf field <code>double diluted_eps_ttm = 16;</code>
      * @return float
@@ -869,7 +869,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *EPS компании с допущением, что все конвертируемые ценные бумаги компании были сконвертированы в обыкновенные акции
+     *EPS компании с допущением, что все конвертируемые ценные бумаги компании были сконвертированы в обыкновенные акции.
      *
      * Generated from protobuf field <code>double diluted_eps_ttm = 16;</code>
      * @param float $var
@@ -884,7 +884,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Свободный денежный поток
+     *Свободный денежный поток.
      *
      * Generated from protobuf field <code>double free_cash_flow_ttm = 17;</code>
      * @return float
@@ -895,7 +895,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Свободный денежный поток
+     *Свободный денежный поток.
      *
      * Generated from protobuf field <code>double free_cash_flow_ttm = 17;</code>
      * @param float $var
@@ -910,7 +910,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Среднегодовой  рocт выручки (за 5 лет)
+     *Среднегодовой  рocт выручки за 5 лет.
      *
      * Generated from protobuf field <code>double five_year_annual_revenue_growth_rate = 18;</code>
      * @return float
@@ -921,7 +921,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Среднегодовой  рocт выручки (за 5 лет)
+     *Среднегодовой  рocт выручки за 5 лет.
      *
      * Generated from protobuf field <code>double five_year_annual_revenue_growth_rate = 18;</code>
      * @param float $var
@@ -936,7 +936,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Среднегодовой  рocт выручки (за 3 года)
+     *Среднегодовой  рocт выручки за 3 года.
      *
      * Generated from protobuf field <code>double three_year_annual_revenue_growth_rate = 19;</code>
      * @return float
@@ -947,7 +947,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Среднегодовой  рocт выручки (за 3 года)
+     *Среднегодовой  рocт выручки за 3 года.
      *
      * Generated from protobuf field <code>double three_year_annual_revenue_growth_rate = 19;</code>
      * @param float $var
@@ -962,7 +962,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Показывает соотношение рыночной капитализации компании к ее чистой прибыли
+     *Соотношение рыночной капитализации компании к её чистой прибыли.
      *
      * Generated from protobuf field <code>double pe_ratio_ttm = 20;</code>
      * @return float
@@ -973,7 +973,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Показывает соотношение рыночной капитализации компании к ее чистой прибыли
+     *Соотношение рыночной капитализации компании к её чистой прибыли.
      *
      * Generated from protobuf field <code>double pe_ratio_ttm = 20;</code>
      * @param float $var
@@ -988,7 +988,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Показывает соотношение рыночной капитализации компании к ее выручке
+     *Соотношение рыночной капитализации компании к её выручке.
      *
      * Generated from protobuf field <code>double price_to_sales_ttm = 21;</code>
      * @return float
@@ -999,7 +999,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Показывает соотношение рыночной капитализации компании к ее выручке
+     *Соотношение рыночной капитализации компании к её выручке.
      *
      * Generated from protobuf field <code>double price_to_sales_ttm = 21;</code>
      * @param float $var
@@ -1014,7 +1014,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Показывает соотношение рыночной капитализации компании к ее балансовой стоимости
+     *Соотношение рыночной капитализации компании к её балансовой стоимости.
      *
      * Generated from protobuf field <code>double price_to_book_ttm = 22;</code>
      * @return float
@@ -1025,7 +1025,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Показывает соотношение рыночной капитализации компании к ее балансовой стоимости
+     *Соотношение рыночной капитализации компании к её балансовой стоимости.
      *
      * Generated from protobuf field <code>double price_to_book_ttm = 22;</code>
      * @param float $var
@@ -1040,7 +1040,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Показывает соотношение рыночной капитализации компании к ее свободному денежному потоку
+     *Соотношение рыночной капитализации компании к её свободному денежному потоку.
      *
      * Generated from protobuf field <code>double price_to_free_cash_flow_ttm = 23;</code>
      * @return float
@@ -1051,7 +1051,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Показывает соотношение рыночной капитализации компании к ее свободному денежному потоку
+     *Соотношение рыночной капитализации компании к её свободному денежному потоку.
      *
      * Generated from protobuf field <code>double price_to_free_cash_flow_ttm = 23;</code>
      * @param float $var
@@ -1066,7 +1066,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Рыночная стоимость компании
+     *Рыночная стоимость компании.
      *
      * Generated from protobuf field <code>double total_enterprise_value_mrq = 24;</code>
      * @return float
@@ -1077,7 +1077,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Рыночная стоимость компании
+     *Рыночная стоимость компании.
      *
      * Generated from protobuf field <code>double total_enterprise_value_mrq = 24;</code>
      * @param float $var
@@ -1092,7 +1092,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Соотношение EV и EBITDA
+     *Соотношение EV и EBITDA.
      *
      * Generated from protobuf field <code>double ev_to_ebitda_mrq = 25;</code>
      * @return float
@@ -1103,7 +1103,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Соотношение EV и EBITDA
+     *Соотношение EV и EBITDA.
      *
      * Generated from protobuf field <code>double ev_to_ebitda_mrq = 25;</code>
      * @param float $var
@@ -1118,7 +1118,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Маржа чистой прибыли
+     *Маржа чистой прибыли.
      *
      * Generated from protobuf field <code>double net_margin_mrq = 26;</code>
      * @return float
@@ -1129,7 +1129,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Маржа чистой прибыли
+     *Маржа чистой прибыли.
      *
      * Generated from protobuf field <code>double net_margin_mrq = 26;</code>
      * @param float $var
@@ -1144,7 +1144,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Рентабельность чистой прибыли
+     *Рентабельность чистой прибыли.
      *
      * Generated from protobuf field <code>double net_interest_margin_mrq = 27;</code>
      * @return float
@@ -1155,7 +1155,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Рентабельность чистой прибыли
+     *Рентабельность чистой прибыли.
      *
      * Generated from protobuf field <code>double net_interest_margin_mrq = 27;</code>
      * @param float $var
@@ -1170,7 +1170,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Рентабельность собственного капитала
+     *Рентабельность собственного капитала.
      *
      * Generated from protobuf field <code>double roe = 28;</code>
      * @return float
@@ -1181,7 +1181,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Рентабельность собственного капитала
+     *Рентабельность собственного капитала.
      *
      * Generated from protobuf field <code>double roe = 28;</code>
      * @param float $var
@@ -1196,7 +1196,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Рентабельность активов
+     *Рентабельность активов.
      *
      * Generated from protobuf field <code>double roa = 29;</code>
      * @return float
@@ -1207,7 +1207,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Рентабельность активов
+     *Рентабельность активов.
      *
      * Generated from protobuf field <code>double roa = 29;</code>
      * @param float $var
@@ -1222,7 +1222,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Рентабельность активов
+     *Рентабельность активов.
      *
      * Generated from protobuf field <code>double roic = 30;</code>
      * @return float
@@ -1233,7 +1233,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Рентабельность активов
+     *Рентабельность активов.
      *
      * Generated from protobuf field <code>double roic = 30;</code>
      * @param float $var
@@ -1248,7 +1248,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Сумма краткосрочных и долгосрочных обязательств компании
+     *Сумма краткосрочных и долгосрочных обязательств компании.
      *
      * Generated from protobuf field <code>double total_debt_mrq = 31;</code>
      * @return float
@@ -1259,7 +1259,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Сумма краткосрочных и долгосрочных обязательств компании
+     *Сумма краткосрочных и долгосрочных обязательств компании.
      *
      * Generated from protobuf field <code>double total_debt_mrq = 31;</code>
      * @param float $var
@@ -1274,7 +1274,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Соотношение долга к собственному капиталу
+     *Соотношение долга к собственному капиталу.
      *
      * Generated from protobuf field <code>double total_debt_to_equity_mrq = 32;</code>
      * @return float
@@ -1285,7 +1285,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Соотношение долга к собственному капиталу
+     *Соотношение долга к собственному капиталу.
      *
      * Generated from protobuf field <code>double total_debt_to_equity_mrq = 32;</code>
      * @param float $var
@@ -1300,7 +1300,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Total Debt/EBITDA
+     *Total Debt/EBITDA.
      *
      * Generated from protobuf field <code>double total_debt_to_ebitda_mrq = 33;</code>
      * @return float
@@ -1311,7 +1311,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Total Debt/EBITDA
+     *Total Debt/EBITDA.
      *
      * Generated from protobuf field <code>double total_debt_to_ebitda_mrq = 33;</code>
      * @param float $var
@@ -1326,7 +1326,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Отношение свободглго кэша к стоимости
+     *Отношение свободногоо кэша к стоимости.
      *
      * Generated from protobuf field <code>double free_cash_flow_to_price = 34;</code>
      * @return float
@@ -1337,7 +1337,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Отношение свободглго кэша к стоимости
+     *Отношение свободногоо кэша к стоимости.
      *
      * Generated from protobuf field <code>double free_cash_flow_to_price = 34;</code>
      * @param float $var
@@ -1352,7 +1352,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Отношение чистого долга к ebitda
+     *Отношение чистого долга к EBITDA.
      *
      * Generated from protobuf field <code>double net_debt_to_ebitda = 35;</code>
      * @return float
@@ -1363,7 +1363,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Отношение чистого долга к ebitda
+     *Отношение чистого долга к EBITDA.
      *
      * Generated from protobuf field <code>double net_debt_to_ebitda = 35;</code>
      * @param float $var
@@ -1378,7 +1378,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Коэффициент текущей ликвидности
+     *Коэффициент текущей ликвидности.
      *
      * Generated from protobuf field <code>double current_ratio_mrq = 36;</code>
      * @return float
@@ -1389,7 +1389,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Коэффициент текущей ликвидности
+     *Коэффициент текущей ликвидности.
      *
      * Generated from protobuf field <code>double current_ratio_mrq = 36;</code>
      * @param float $var
@@ -1404,7 +1404,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Коэффициент покрытия фиксированных платежей (FCCR)
+     *Коэффициент покрытия фиксированных платежей — FCCR.
      *
      * Generated from protobuf field <code>double fixed_charge_coverage_ratio_fy = 37;</code>
      * @return float
@@ -1415,7 +1415,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Коэффициент покрытия фиксированных платежей (FCCR)
+     *Коэффициент покрытия фиксированных платежей — FCCR.
      *
      * Generated from protobuf field <code>double fixed_charge_coverage_ratio_fy = 37;</code>
      * @param float $var
@@ -1430,7 +1430,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дивидендная доходность за 12 мес
+     *Дивидендная доходность за 12 месяцев.
      *
      * Generated from protobuf field <code>double dividend_yield_daily_ttm = 38;</code>
      * @return float
@@ -1441,7 +1441,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дивидендная доходность за 12 мес
+     *Дивидендная доходность за 12 месяцев.
      *
      * Generated from protobuf field <code>double dividend_yield_daily_ttm = 38;</code>
      * @param float $var
@@ -1456,7 +1456,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Выплаченные дивиденды за 12 мес.
+     *Выплаченные дивиденды за 12 месяцев.
      *
      * Generated from protobuf field <code>double dividend_rate_ttm = 39;</code>
      * @return float
@@ -1467,7 +1467,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Выплаченные дивиденды за 12 мес.
+     *Выплаченные дивиденды за 12 месяцев.
      *
      * Generated from protobuf field <code>double dividend_rate_ttm = 39;</code>
      * @param float $var
@@ -1482,7 +1482,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Значение дивидендов на акцию
+     *Значение дивидендов на акцию.
      *
      * Generated from protobuf field <code>double dividends_per_share = 40;</code>
      * @return float
@@ -1493,7 +1493,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Значение дивидендов на акцию
+     *Значение дивидендов на акцию.
      *
      * Generated from protobuf field <code>double dividends_per_share = 40;</code>
      * @param float $var
@@ -1508,7 +1508,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средняя дивидендная доходность за 5 лет
+     *Средняя дивидендная доходность за 5 лет.
      *
      * Generated from protobuf field <code>double five_years_average_dividend_yield = 41;</code>
      * @return float
@@ -1519,7 +1519,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средняя дивидендная доходность за 5 лет
+     *Средняя дивидендная доходность за 5 лет.
      *
      * Generated from protobuf field <code>double five_years_average_dividend_yield = 41;</code>
      * @param float $var
@@ -1534,7 +1534,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Среднегодовой рост дивидендов за 5 лет
+     *Среднегодовой рост дивидендов за 5 лет.
      *
      * Generated from protobuf field <code>double five_year_annual_dividend_growth_rate = 42;</code>
      * @return float
@@ -1545,7 +1545,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Среднегодовой рост дивидендов за 5 лет
+     *Среднегодовой рост дивидендов за 5 лет.
      *
      * Generated from protobuf field <code>double five_year_annual_dividend_growth_rate = 42;</code>
      * @param float $var
@@ -1560,7 +1560,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Процент чистой прибыли, уходящий на выплату дивидендов
+     *Процент чистой прибыли, уходящий на выплату дивидендов.
      *
      * Generated from protobuf field <code>double dividend_payout_ratio_fy = 43;</code>
      * @return float
@@ -1571,7 +1571,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Процент чистой прибыли, уходящий на выплату дивидендов
+     *Процент чистой прибыли, уходящий на выплату дивидендов.
      *
      * Generated from protobuf field <code>double dividend_payout_ratio_fy = 43;</code>
      * @param float $var
@@ -1586,7 +1586,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Деньги, потраченные на обратный выкуп акций
+     *Деньги, потраченные на обратный выкуп акций.
      *
      * Generated from protobuf field <code>double buy_back_ttm = 44;</code>
      * @return float
@@ -1597,7 +1597,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Деньги, потраченные на обратный выкуп акций
+     *Деньги, потраченные на обратный выкуп акций.
      *
      * Generated from protobuf field <code>double buy_back_ttm = 44;</code>
      * @param float $var
@@ -1612,7 +1612,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Рост выручки за 1 год
+     *Рост выручки за 1 год.
      *
      * Generated from protobuf field <code>double one_year_annual_revenue_growth_rate = 45;</code>
      * @return float
@@ -1623,7 +1623,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Рост выручки за 1 год
+     *Рост выручки за 1 год.
      *
      * Generated from protobuf field <code>double one_year_annual_revenue_growth_rate = 45;</code>
      * @param float $var
@@ -1638,7 +1638,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Код страны
+     *Код страны.
      *
      * Generated from protobuf field <code>string domicile_indicator_code = 46;</code>
      * @return string
@@ -1649,7 +1649,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Код страны
+     *Код страны.
      *
      * Generated from protobuf field <code>string domicile_indicator_code = 46;</code>
      * @param string $var
@@ -1664,7 +1664,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Соотношение депозитарной расписки к акциям
+     *Соотношение депозитарной расписки к акциям.
      *
      * Generated from protobuf field <code>double adr_to_common_share_ratio = 47;</code>
      * @return float
@@ -1675,7 +1675,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Соотношение депозитарной расписки к акциям
+     *Соотношение депозитарной расписки к акциям.
      *
      * Generated from protobuf field <code>double adr_to_common_share_ratio = 47;</code>
      * @param float $var
@@ -1690,7 +1690,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество сотрудников
+     *Количество сотрудников.
      *
      * Generated from protobuf field <code>double number_of_employees = 48;</code>
      * @return float
@@ -1701,7 +1701,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество сотрудников
+     *Количество сотрудников.
      *
      * Generated from protobuf field <code>double number_of_employees = 48;</code>
      * @param float $var
@@ -1748,7 +1748,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Начало фискального периода
+     *Начало фискального периода.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp fiscal_period_start_date = 50;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -1769,7 +1769,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Начало фискального периода
+     *Начало фискального периода.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp fiscal_period_start_date = 50;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -1784,7 +1784,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Конец фискального периода
+     *Окончание фискального периода.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp fiscal_period_end_date = 51;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -1805,7 +1805,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Конец фискального периода
+     *Окончание фискального периода.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp fiscal_period_end_date = 51;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -1820,7 +1820,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Изменение общего дохода за 5 лет
+     *Изменение общего дохода за 5 лет.
      *
      * Generated from protobuf field <code>double revenue_change_five_years = 53;</code>
      * @return float
@@ -1831,7 +1831,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Изменение общего дохода за 5 лет
+     *Изменение общего дохода за 5 лет.
      *
      * Generated from protobuf field <code>double revenue_change_five_years = 53;</code>
      * @param float $var
@@ -1846,7 +1846,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Изменение eps за 5 лет
+     *Изменение EPS за 5 лет.
      *
      * Generated from protobuf field <code>double eps_change_five_years = 54;</code>
      * @return float
@@ -1857,7 +1857,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Изменение eps за 5 лет
+     *Изменение EPS за 5 лет.
      *
      * Generated from protobuf field <code>double eps_change_five_years = 54;</code>
      * @param float $var
@@ -1872,7 +1872,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Изменение ebitda за 5 лет
+     *Изменение EBIDTA за 5 лет.
      *
      * Generated from protobuf field <code>double ebitda_change_five_years = 55;</code>
      * @return float
@@ -1883,7 +1883,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Изменение ebitda за 5 лет
+     *Изменение EBIDTA за 5 лет.
      *
      * Generated from protobuf field <code>double ebitda_change_five_years = 55;</code>
      * @param float $var
@@ -1898,7 +1898,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Изменение общей задолжности за 5 лет
+     *Изменение общей задолжности за 5 лет.
      *
      * Generated from protobuf field <code>double total_debt_change_five_years = 56;</code>
      * @return float
@@ -1909,7 +1909,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Изменение общей задолжности за 5 лет
+     *Изменение общей задолжности за 5 лет.
      *
      * Generated from protobuf field <code>double total_debt_change_five_years = 56;</code>
      * @param float $var
@@ -1924,7 +1924,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Отношение EV к выручке
+     *Отношение EV к выручке.
      *
      * Generated from protobuf field <code>double ev_to_sales = 57;</code>
      * @return float
@@ -1935,7 +1935,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Отношение EV к выручке
+     *Отношение EV к выручке.
      *
      * Generated from protobuf field <code>double ev_to_sales = 57;</code>
      * @param float $var

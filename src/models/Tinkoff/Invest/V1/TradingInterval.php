@@ -14,13 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class TradingInterval extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Название интервала
+     *Название интервала.
      *
      * Generated from protobuf field <code>string type = 1;</code>
      */
     protected $type = '';
     /**
-     *Интервал
+     *Интервал.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradingInterval.TimeInterval interval = 2;</code>
      */
@@ -33,9 +33,9 @@ class TradingInterval extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $type
-     *          Название интервала
+     *          Название интервала.
      *     @type \Tinkoff\Invest\V1\TradingInterval\TimeInterval $interval
-     *          Интервал
+     *          Интервал.
      * }
      */
     public function __construct($data = NULL) {
@@ -44,7 +44,7 @@ class TradingInterval extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Название интервала
+     *Название интервала.
      *
      * Generated from protobuf field <code>string type = 1;</code>
      * @return string
@@ -55,7 +55,7 @@ class TradingInterval extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Название интервала
+     *Название интервала.
      *
      * Generated from protobuf field <code>string type = 1;</code>
      * @param string $var
@@ -70,7 +70,7 @@ class TradingInterval extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Интервал
+     *Интервал.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradingInterval.TimeInterval interval = 2;</code>
      * @return \Tinkoff\Invest\V1\TradingInterval\TimeInterval|null
@@ -91,7 +91,7 @@ class TradingInterval extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Интервал
+     *Интервал.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradingInterval.TimeInterval interval = 2;</code>
      * @param \Tinkoff\Invest\V1\TradingInterval\TimeInterval $var

@@ -12,37 +12,37 @@ use UnexpectedValueException;
 class IndicatorType
 {
     /**
-     *Не определен.
+     *Не определён.
      *
      * Generated from protobuf enum <code>INDICATOR_TYPE_UNSPECIFIED = 0;</code>
      */
     const INDICATOR_TYPE_UNSPECIFIED = 0;
     /**
-     *Bollinger Bands (Линия Боллинжера).
+     *Bollinger Bands — линия Боллинжера.
      *
      * Generated from protobuf enum <code>INDICATOR_TYPE_BB = 1;</code>
      */
     const INDICATOR_TYPE_BB = 1;
     /**
-     *Exponential Moving Average (EMA, Экспоненциальная скользящая средняя).
+     *Exponential Moving Average — EMA, экспоненциальная скользящая средняя.
      *
      * Generated from protobuf enum <code>INDICATOR_TYPE_EMA = 2;</code>
      */
     const INDICATOR_TYPE_EMA = 2;
     /**
-     *Relative Strength Index (Индекс относительной силы).
+     *Relative Strength Index — индекс относительной силы.
      *
      * Generated from protobuf enum <code>INDICATOR_TYPE_RSI = 3;</code>
      */
     const INDICATOR_TYPE_RSI = 3;
     /**
-     *Moving Average Convergence/Divergence (Схождение/Расхождение скользящих средних).
+     *Moving Average Convergence/Divergence — схождение/расхождение скользящих средних.
      *
      * Generated from protobuf enum <code>INDICATOR_TYPE_MACD = 4;</code>
      */
     const INDICATOR_TYPE_MACD = 4;
     /**
-     *Simple Moving Average (Простое скользящее среднее).
+     *Simple Moving Average — простое скользящее среднее.
      *
      * Generated from protobuf enum <code>INDICATOR_TYPE_SMA = 5;</code>
      */

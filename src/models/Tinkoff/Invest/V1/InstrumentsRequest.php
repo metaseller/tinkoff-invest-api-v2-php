@@ -16,13 +16,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class InstrumentsRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Статус запрашиваемых инструментов. Возможные значения: [InstrumentStatus](#instrumentstatus)
+     *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 1;</code>
      */
     protected $instrument_status = null;
     /**
-     * Тип площадки торговли. Возможные значения: [InstrumentExchangeType](#instrumentexchangetype)
+     * Тип площадки торговли. [Возможные значения](#instrumentexchangetype).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentExchangeType instrument_exchange = 2;</code>
      */
@@ -35,9 +35,9 @@ class InstrumentsRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $instrument_status
-     *          Статус запрашиваемых инструментов. Возможные значения: [InstrumentStatus](#instrumentstatus)
+     *          Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
      *     @type int $instrument_exchange
-     *           Тип площадки торговли. Возможные значения: [InstrumentExchangeType](#instrumentexchangetype)
+     *           Тип площадки торговли. [Возможные значения](#instrumentexchangetype).
      * }
      */
     public function __construct($data = NULL) {
@@ -46,7 +46,7 @@ class InstrumentsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Статус запрашиваемых инструментов. Возможные значения: [InstrumentStatus](#instrumentstatus)
+     *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 1;</code>
      * @return int
@@ -67,7 +67,7 @@ class InstrumentsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Статус запрашиваемых инструментов. Возможные значения: [InstrumentStatus](#instrumentstatus)
+     *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 1;</code>
      * @param int $var
@@ -82,7 +82,7 @@ class InstrumentsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Тип площадки торговли. Возможные значения: [InstrumentExchangeType](#instrumentexchangetype)
+     * Тип площадки торговли. [Возможные значения](#instrumentexchangetype).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentExchangeType instrument_exchange = 2;</code>
      * @return int
@@ -103,7 +103,7 @@ class InstrumentsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Тип площадки торговли. Возможные значения: [InstrumentExchangeType](#instrumentexchangetype)
+     * Тип площадки торговли. [Возможные значения](#instrumentexchangetype).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentExchangeType instrument_exchange = 2;</code>
      * @param int $var

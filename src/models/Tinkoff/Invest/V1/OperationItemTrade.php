@@ -16,13 +16,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class OperationItemTrade extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Номер сделки
+     *Номер сделки.
      *
      * Generated from protobuf field <code>string num = 1;</code>
      */
     protected $num = '';
     /**
-     *Дата сделки
+     *Дата сделки.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp date = 6;</code>
      */
@@ -59,9 +59,9 @@ class OperationItemTrade extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $num
-     *          Номер сделки
+     *          Номер сделки.
      *     @type \Google\Protobuf\Timestamp $date
-     *          Дата сделки
+     *          Дата сделки.
      *     @type int|string $quantity
      *          Количество в единицах.
      *     @type \Tinkoff\Invest\V1\MoneyValue $price
@@ -78,7 +78,7 @@ class OperationItemTrade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер сделки
+     *Номер сделки.
      *
      * Generated from protobuf field <code>string num = 1;</code>
      * @return string
@@ -89,7 +89,7 @@ class OperationItemTrade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер сделки
+     *Номер сделки.
      *
      * Generated from protobuf field <code>string num = 1;</code>
      * @param string $var
@@ -104,7 +104,7 @@ class OperationItemTrade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата сделки
+     *Дата сделки.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp date = 6;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -125,7 +125,7 @@ class OperationItemTrade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата сделки
+     *Дата сделки.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp date = 6;</code>
      * @param \Google\Protobuf\Timestamp $var

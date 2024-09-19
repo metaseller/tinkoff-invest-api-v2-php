@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Запрос активных подписок. Запрос вернет по одному сообщению на каждый тип активных подписок (SubscribeLastPriceResponse, SubscribeInfoResponse, SubscribeTradesResponse, SubscribeOrderBookResponse, SubscribeCandlesResponse)
+ *Запрос активных подписок. Возвращает по одному сообщению на каждый тип активных подписок — `SubscribeLastPriceResponse`, `SubscribeInfoResponse`, `SubscribeTradesResponse`, `SubscribeOrderBookResponse`, `SubscribeCandlesResponse`.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.GetMySubscriptions</code>
  */

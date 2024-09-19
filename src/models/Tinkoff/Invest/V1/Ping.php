@@ -22,7 +22,7 @@ class Ping extends \Google\Protobuf\Internal\Message
      */
     protected $time = null;
     /**
-     *Идентификатор соединения
+     *Идентификатор соединения.
      *
      * Generated from protobuf field <code>string stream_id = 2;</code>
      */
@@ -37,7 +37,7 @@ class Ping extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $time
      *          Время проверки.
      *     @type string $stream_id
-     *          Идентификатор соединения
+     *          Идентификатор соединения.
      * }
      */
     public function __construct($data = NULL) {
@@ -82,7 +82,7 @@ class Ping extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор соединения
+     *Идентификатор соединения.
      *
      * Generated from protobuf field <code>string stream_id = 2;</code>
      * @return string
@@ -93,7 +93,7 @@ class Ping extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор соединения
+     *Идентификатор соединения.
      *
      * Generated from protobuf field <code>string stream_id = 2;</code>
      * @param string $var

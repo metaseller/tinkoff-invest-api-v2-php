@@ -14,13 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class TimeInterval extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Время начала интервала
+     * Время начала интервала.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp start_ts = 1;</code>
      */
     protected $start_ts = null;
     /**
-     * Время окончания интервала
+     * Время окончания интервала.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp end_ts = 2;</code>
      */
@@ -33,9 +33,9 @@ class TimeInterval extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Google\Protobuf\Timestamp $start_ts
-     *           Время начала интервала
+     *           Время начала интервала.
      *     @type \Google\Protobuf\Timestamp $end_ts
-     *           Время окончания интервала
+     *           Время окончания интервала.
      * }
      */
     public function __construct($data = NULL) {
@@ -44,7 +44,7 @@ class TimeInterval extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Время начала интервала
+     * Время начала интервала.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp start_ts = 1;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -65,7 +65,7 @@ class TimeInterval extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Время начала интервала
+     * Время начала интервала.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp start_ts = 1;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -80,7 +80,7 @@ class TimeInterval extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Время окончания интервала
+     * Время окончания интервала.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp end_ts = 2;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -101,7 +101,7 @@ class TimeInterval extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Время окончания интервала
+     * Время окончания интервала.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp end_ts = 2;</code>
      * @param \Google\Protobuf\Timestamp $var

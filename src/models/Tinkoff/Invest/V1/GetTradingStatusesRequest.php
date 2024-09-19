@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetTradingStatusesRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Идентификатор инструмента, принимает значение figi или instrument_uid
+     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
      *
      * Generated from protobuf field <code>repeated string instrument_id = 1;</code>
      */
@@ -29,7 +29,7 @@ class GetTradingStatusesRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $instrument_id
-     *          Идентификатор инструмента, принимает значение figi или instrument_uid
+     *          Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +38,7 @@ class GetTradingStatusesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента, принимает значение figi или instrument_uid
+     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
      *
      * Generated from protobuf field <code>repeated string instrument_id = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -49,7 +49,7 @@ class GetTradingStatusesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента, принимает значение figi или instrument_uid
+     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
      *
      * Generated from protobuf field <code>repeated string instrument_id = 1;</code>
      * @param string[]|\Google\Protobuf\Internal\RepeatedField $var

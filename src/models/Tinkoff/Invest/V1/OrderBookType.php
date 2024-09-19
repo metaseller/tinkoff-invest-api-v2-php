@@ -12,19 +12,19 @@ use UnexpectedValueException;
 class OrderBookType
 {
     /**
-     *не определен
+     *Не определён.
      *
      * Generated from protobuf enum <code>ORDERBOOK_TYPE_UNSPECIFIED = 0;</code>
      */
     const ORDERBOOK_TYPE_UNSPECIFIED = 0;
     /**
-     *Биржевой стакан
+     *Биржевой стакан.
      *
      * Generated from protobuf enum <code>ORDERBOOK_TYPE_EXCHANGE = 1;</code>
      */
     const ORDERBOOK_TYPE_EXCHANGE = 1;
     /**
-     *Стакан дилера
+     *Стакан дилера.
      *
      * Generated from protobuf enum <code>ORDERBOOK_TYPE_DEALER = 2;</code>
      */

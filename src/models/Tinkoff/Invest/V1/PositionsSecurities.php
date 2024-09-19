@@ -16,13 +16,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class PositionsSecurities extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Figi-идентификатор бумаги.
+     *FIGI-идентификатор бумаги.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      */
     protected $figi = '';
     /**
-     *Количество бумаг заблокированных выставленными заявками.
+     *Количество бумаг, заблокированных выставленными заявками.
      *
      * Generated from protobuf field <code>int64 blocked = 2;</code>
      */
@@ -40,7 +40,7 @@ class PositionsSecurities extends \Google\Protobuf\Internal\Message
      */
     protected $position_uid = '';
     /**
-     *Уникальный идентификатор  инструмента.
+     *Уникальный идентификатор инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 5;</code>
      */
@@ -65,15 +65,15 @@ class PositionsSecurities extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $figi
-     *          Figi-идентификатор бумаги.
+     *          FIGI-идентификатор бумаги.
      *     @type int|string $blocked
-     *          Количество бумаг заблокированных выставленными заявками.
+     *          Количество бумаг, заблокированных выставленными заявками.
      *     @type int|string $balance
      *          Текущий незаблокированный баланс.
      *     @type string $position_uid
      *          Уникальный идентификатор позиции.
      *     @type string $instrument_uid
-     *          Уникальный идентификатор  инструмента.
+     *          Уникальный идентификатор инструмента.
      *     @type bool $exchange_blocked
      *          Заблокировано на бирже.
      *     @type string $instrument_type
@@ -86,7 +86,7 @@ class PositionsSecurities extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор бумаги.
+     *FIGI-идентификатор бумаги.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @return string
@@ -97,7 +97,7 @@ class PositionsSecurities extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор бумаги.
+     *FIGI-идентификатор бумаги.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @param string $var
@@ -112,7 +112,7 @@ class PositionsSecurities extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество бумаг заблокированных выставленными заявками.
+     *Количество бумаг, заблокированных выставленными заявками.
      *
      * Generated from protobuf field <code>int64 blocked = 2;</code>
      * @return int|string
@@ -123,7 +123,7 @@ class PositionsSecurities extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество бумаг заблокированных выставленными заявками.
+     *Количество бумаг, заблокированных выставленными заявками.
      *
      * Generated from protobuf field <code>int64 blocked = 2;</code>
      * @param int|string $var
@@ -190,7 +190,7 @@ class PositionsSecurities extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Уникальный идентификатор  инструмента.
+     *Уникальный идентификатор инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 5;</code>
      * @return string
@@ -201,7 +201,7 @@ class PositionsSecurities extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Уникальный идентификатор  инструмента.
+     *Уникальный идентификатор инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 5;</code>
      * @param string $var

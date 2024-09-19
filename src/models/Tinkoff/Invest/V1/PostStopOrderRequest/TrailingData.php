@@ -14,25 +14,25 @@ use Google\Protobuf\Internal\GPBUtil;
 class TrailingData extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Отступ
+     *Отступ.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation indent = 1;</code>
      */
     protected $indent = null;
     /**
-     *Тип величины отступа
+     *Тип величины отступа.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TrailingValueType indent_type = 2;</code>
      */
     protected $indent_type = 0;
     /**
-     *Размер защитного спреда
+     *Размер защитного спреда.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation spread = 3;</code>
      */
     protected $spread = null;
     /**
-     *Тип величины защитного спреда
+     *Тип величины защитного спреда.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TrailingValueType spread_type = 4;</code>
      */
@@ -45,13 +45,13 @@ class TrailingData extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Tinkoff\Invest\V1\Quotation $indent
-     *          Отступ
+     *          Отступ.
      *     @type int $indent_type
-     *          Тип величины отступа
+     *          Тип величины отступа.
      *     @type \Tinkoff\Invest\V1\Quotation $spread
-     *          Размер защитного спреда
+     *          Размер защитного спреда.
      *     @type int $spread_type
-     *          Тип величины защитного спреда
+     *          Тип величины защитного спреда.
      * }
      */
     public function __construct($data = NULL) {
@@ -60,7 +60,7 @@ class TrailingData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Отступ
+     *Отступ.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation indent = 1;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -81,7 +81,7 @@ class TrailingData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Отступ
+     *Отступ.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation indent = 1;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -96,7 +96,7 @@ class TrailingData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип величины отступа
+     *Тип величины отступа.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TrailingValueType indent_type = 2;</code>
      * @return int
@@ -107,7 +107,7 @@ class TrailingData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип величины отступа
+     *Тип величины отступа.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TrailingValueType indent_type = 2;</code>
      * @param int $var
@@ -122,7 +122,7 @@ class TrailingData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Размер защитного спреда
+     *Размер защитного спреда.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation spread = 3;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -143,7 +143,7 @@ class TrailingData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Размер защитного спреда
+     *Размер защитного спреда.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation spread = 3;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -158,7 +158,7 @@ class TrailingData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип величины защитного спреда
+     *Тип величины защитного спреда.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TrailingValueType spread_type = 4;</code>
      * @return int
@@ -169,7 +169,7 @@ class TrailingData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип величины защитного спреда
+     *Тип величины защитного спреда.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TrailingValueType spread_type = 4;</code>
      * @param int $var

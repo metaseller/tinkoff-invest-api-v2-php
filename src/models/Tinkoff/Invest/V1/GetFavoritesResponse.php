@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetFavoritesResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Массив инструментов
+     *Массив инструментов.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.FavoriteInstrument favorite_instruments = 1;</code>
      */
@@ -29,7 +29,7 @@ class GetFavoritesResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Tinkoff\Invest\V1\FavoriteInstrument[]|\Google\Protobuf\Internal\RepeatedField $favorite_instruments
-     *          Массив инструментов
+     *          Массив инструментов.
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +38,7 @@ class GetFavoritesResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив инструментов
+     *Массив инструментов.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.FavoriteInstrument favorite_instruments = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -49,7 +49,7 @@ class GetFavoritesResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив инструментов
+     *Массив инструментов.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.FavoriteInstrument favorite_instruments = 1;</code>
      * @param \Tinkoff\Invest\V1\FavoriteInstrument[]|\Google\Protobuf\Internal\RepeatedField $var

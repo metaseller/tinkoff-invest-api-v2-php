@@ -9,20 +9,20 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Прогнозы инвестдомов по инструменту
+ *Прогнозы инвестдомов по инструменту.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.GetForecastResponse</code>
  */
 class GetForecastResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Массив прогнозов
+     *Массив прогнозов.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.GetForecastResponse.TargetItem targets = 1;</code>
      */
     private $targets;
     /**
-     * Согласованный прогноз
+     * Согласованный прогноз.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetForecastResponse.ConsensusItem consensus = 2;</code>
      */
@@ -35,9 +35,9 @@ class GetForecastResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Tinkoff\Invest\V1\GetForecastResponse\TargetItem[]|\Google\Protobuf\Internal\RepeatedField $targets
-     *          Массив прогнозов
+     *          Массив прогнозов.
      *     @type \Tinkoff\Invest\V1\GetForecastResponse\ConsensusItem $consensus
-     *           Согласованный прогноз
+     *           Согласованный прогноз.
      * }
      */
     public function __construct($data = NULL) {
@@ -46,7 +46,7 @@ class GetForecastResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив прогнозов
+     *Массив прогнозов.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.GetForecastResponse.TargetItem targets = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -57,7 +57,7 @@ class GetForecastResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив прогнозов
+     *Массив прогнозов.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.GetForecastResponse.TargetItem targets = 1;</code>
      * @param \Tinkoff\Invest\V1\GetForecastResponse\TargetItem[]|\Google\Protobuf\Internal\RepeatedField $var
@@ -72,7 +72,7 @@ class GetForecastResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Согласованный прогноз
+     * Согласованный прогноз.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetForecastResponse.ConsensusItem consensus = 2;</code>
      * @return \Tinkoff\Invest\V1\GetForecastResponse\ConsensusItem|null
@@ -93,7 +93,7 @@ class GetForecastResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Согласованный прогноз
+     * Согласованный прогноз.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetForecastResponse.ConsensusItem consensus = 2;</code>
      * @param \Tinkoff\Invest\V1\GetForecastResponse\ConsensusItem $var

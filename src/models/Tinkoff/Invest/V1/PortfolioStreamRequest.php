@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class PortfolioStreamRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Массив идентификаторов счётов пользователя
+     *Массив идентификаторов счётов пользователя.
      *
      * Generated from protobuf field <code>repeated string accounts = 1;</code>
      */
@@ -29,7 +29,7 @@ class PortfolioStreamRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $accounts
-     *          Массив идентификаторов счётов пользователя
+     *          Массив идентификаторов счётов пользователя.
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +38,7 @@ class PortfolioStreamRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив идентификаторов счётов пользователя
+     *Массив идентификаторов счётов пользователя.
      *
      * Generated from protobuf field <code>repeated string accounts = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -49,7 +49,7 @@ class PortfolioStreamRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив идентификаторов счётов пользователя
+     *Массив идентификаторов счётов пользователя.
      *
      * Generated from protobuf field <code>repeated string accounts = 1;</code>
      * @param string[]|\Google\Protobuf\Internal\RepeatedField $var

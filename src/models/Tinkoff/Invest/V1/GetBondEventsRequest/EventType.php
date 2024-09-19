@@ -12,31 +12,31 @@ use UnexpectedValueException;
 class EventType
 {
     /**
-     *Неопределенное значение
+     *Неопределённое значение.
      *
      * Generated from protobuf enum <code>EVENT_TYPE_UNSPECIFIED = 0;</code>
      */
     const EVENT_TYPE_UNSPECIFIED = 0;
     /**
-     * Купон
+     * Купон.
      *
      * Generated from protobuf enum <code>EVENT_TYPE_CPN = 1;</code>
      */
     const EVENT_TYPE_CPN = 1;
     /**
-     * Опцион (оферта)
+     * Опцион (оферта).
      *
      * Generated from protobuf enum <code>EVENT_TYPE_CALL = 2;</code>
      */
     const EVENT_TYPE_CALL = 2;
     /**
-     * Погашение
+     * Погашение.
      *
      * Generated from protobuf enum <code>EVENT_TYPE_MTY = 3;</code>
      */
     const EVENT_TYPE_MTY = 3;
     /**
-     * Конвертация
+     * Конвертация.
      *
      * Generated from protobuf enum <code>EVENT_TYPE_CONV = 4;</code>
      */

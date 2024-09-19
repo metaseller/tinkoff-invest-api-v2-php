@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class Trade extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Figi-идентификатор инструмента.
+     *FIGI-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      */
@@ -28,7 +28,7 @@ class Trade extends \Google\Protobuf\Internal\Message
      */
     protected $direction = 0;
     /**
-     *Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
+     *Цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
      */
@@ -46,13 +46,13 @@ class Trade extends \Google\Protobuf\Internal\Message
      */
     protected $time = null;
     /**
-     *Uid инструмента
+     *UID инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 6;</code>
      */
     protected $instrument_uid = '';
     /**
-     *Источник сделки
+     *Источник сделки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType tradeSource = 7;</code>
      */
@@ -65,19 +65,19 @@ class Trade extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $figi
-     *          Figi-идентификатор инструмента.
+     *          FIGI-идентификатор инструмента.
      *     @type int $direction
      *          Направление сделки.
      *     @type \Tinkoff\Invest\V1\Quotation $price
-     *          Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
+     *          Цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
      *     @type int|string $quantity
      *          Количество лотов.
      *     @type \Google\Protobuf\Timestamp $time
      *          Время сделки в часовом поясе UTC по времени биржи.
      *     @type string $instrument_uid
-     *          Uid инструмента
+     *          UID инструмента.
      *     @type int $tradeSource
-     *          Источник сделки
+     *          Источник сделки.
      * }
      */
     public function __construct($data = NULL) {
@@ -86,7 +86,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента.
+     *FIGI-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @return string
@@ -97,7 +97,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента.
+     *FIGI-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @param string $var
@@ -138,7 +138,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
+     *Цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -159,7 +159,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
+     *Цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -236,7 +236,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Uid инструмента
+     *UID инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 6;</code>
      * @return string
@@ -247,7 +247,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Uid инструмента
+     *UID инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 6;</code>
      * @param string $var
@@ -262,7 +262,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Источник сделки
+     *Источник сделки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType tradeSource = 7;</code>
      * @return int
@@ -273,7 +273,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Источник сделки
+     *Источник сделки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType tradeSource = 7;</code>
      * @param int $var

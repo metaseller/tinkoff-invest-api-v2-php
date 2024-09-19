@@ -16,25 +16,25 @@ use Google\Protobuf\Internal\GPBUtil;
 class IndicativeResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Figi-идентификатор инструмента
+     * FIGI-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      */
     protected $figi = '';
     /**
-     * Тикер инструмента
+     * Тикер инструмента.
      *
      * Generated from protobuf field <code>string ticker = 2;</code>
      */
     protected $ticker = '';
     /**
-     * Класс-код инструмента
+     * Класс-код инструмента.
      *
      * Generated from protobuf field <code>string class_code = 3;</code>
      */
     protected $class_code = '';
     /**
-     * Валюта расчётов
+     * Валюта расчётов.
      *
      * Generated from protobuf field <code>string currency = 4;</code>
      */
@@ -46,31 +46,31 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
      */
     protected $instrument_kind = 0;
     /**
-     * Название инструмента
+     * Название инструмента.
      *
      * Generated from protobuf field <code>string name = 12;</code>
      */
     protected $name = '';
     /**
-     * Tорговая площадка (секция биржи)
+     * Tорговая площадка (секция биржи).
      *
      * Generated from protobuf field <code>string exchange = 13;</code>
      */
     protected $exchange = '';
     /**
-     * Уникальный идентификатор инструмента
+     * Уникальный идентификатор инструмента.
      *
      * Generated from protobuf field <code>string uid = 14;</code>
      */
     protected $uid = '';
     /**
-     * Признак доступности для покупки
+     * Признак доступности для покупки.
      *
      * Generated from protobuf field <code>bool buy_available_flag = 404;</code>
      */
     protected $buy_available_flag = false;
     /**
-     * Признак доступности для продажи
+     * Признак доступности для продажи.
      *
      * Generated from protobuf field <code>bool sell_available_flag = 405;</code>
      */
@@ -83,25 +83,25 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $figi
-     *           Figi-идентификатор инструмента
+     *           FIGI-идентификатор инструмента.
      *     @type string $ticker
-     *           Тикер инструмента
+     *           Тикер инструмента.
      *     @type string $class_code
-     *           Класс-код инструмента
+     *           Класс-код инструмента.
      *     @type string $currency
-     *           Валюта расчётов
+     *           Валюта расчётов.
      *     @type int $instrument_kind
      *          Тип инструмента.
      *     @type string $name
-     *           Название инструмента
+     *           Название инструмента.
      *     @type string $exchange
-     *           Tорговая площадка (секция биржи)
+     *           Tорговая площадка (секция биржи).
      *     @type string $uid
-     *           Уникальный идентификатор инструмента
+     *           Уникальный идентификатор инструмента.
      *     @type bool $buy_available_flag
-     *           Признак доступности для покупки
+     *           Признак доступности для покупки.
      *     @type bool $sell_available_flag
-     *           Признак доступности для продажи
+     *           Признак доступности для продажи.
      * }
      */
     public function __construct($data = NULL) {
@@ -110,7 +110,7 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Figi-идентификатор инструмента
+     * FIGI-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @return string
@@ -121,7 +121,7 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Figi-идентификатор инструмента
+     * FIGI-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @param string $var
@@ -136,7 +136,7 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Тикер инструмента
+     * Тикер инструмента.
      *
      * Generated from protobuf field <code>string ticker = 2;</code>
      * @return string
@@ -147,7 +147,7 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Тикер инструмента
+     * Тикер инструмента.
      *
      * Generated from protobuf field <code>string ticker = 2;</code>
      * @param string $var
@@ -162,7 +162,7 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Класс-код инструмента
+     * Класс-код инструмента.
      *
      * Generated from protobuf field <code>string class_code = 3;</code>
      * @return string
@@ -173,7 +173,7 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Класс-код инструмента
+     * Класс-код инструмента.
      *
      * Generated from protobuf field <code>string class_code = 3;</code>
      * @param string $var
@@ -188,7 +188,7 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Валюта расчётов
+     * Валюта расчётов.
      *
      * Generated from protobuf field <code>string currency = 4;</code>
      * @return string
@@ -199,7 +199,7 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Валюта расчётов
+     * Валюта расчётов.
      *
      * Generated from protobuf field <code>string currency = 4;</code>
      * @param string $var
@@ -240,7 +240,7 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Название инструмента
+     * Название инструмента.
      *
      * Generated from protobuf field <code>string name = 12;</code>
      * @return string
@@ -251,7 +251,7 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Название инструмента
+     * Название инструмента.
      *
      * Generated from protobuf field <code>string name = 12;</code>
      * @param string $var
@@ -266,7 +266,7 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Tорговая площадка (секция биржи)
+     * Tорговая площадка (секция биржи).
      *
      * Generated from protobuf field <code>string exchange = 13;</code>
      * @return string
@@ -277,7 +277,7 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Tорговая площадка (секция биржи)
+     * Tорговая площадка (секция биржи).
      *
      * Generated from protobuf field <code>string exchange = 13;</code>
      * @param string $var
@@ -292,7 +292,7 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Уникальный идентификатор инструмента
+     * Уникальный идентификатор инструмента.
      *
      * Generated from protobuf field <code>string uid = 14;</code>
      * @return string
@@ -303,7 +303,7 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Уникальный идентификатор инструмента
+     * Уникальный идентификатор инструмента.
      *
      * Generated from protobuf field <code>string uid = 14;</code>
      * @param string $var
@@ -318,7 +318,7 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Признак доступности для покупки
+     * Признак доступности для покупки.
      *
      * Generated from protobuf field <code>bool buy_available_flag = 404;</code>
      * @return bool
@@ -329,7 +329,7 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Признак доступности для покупки
+     * Признак доступности для покупки.
      *
      * Generated from protobuf field <code>bool buy_available_flag = 404;</code>
      * @param bool $var
@@ -344,7 +344,7 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Признак доступности для продажи
+     * Признак доступности для продажи.
      *
      * Generated from protobuf field <code>bool sell_available_flag = 405;</code>
      * @return bool
@@ -355,7 +355,7 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Признак доступности для продажи
+     * Признак доступности для продажи.
      *
      * Generated from protobuf field <code>bool sell_available_flag = 405;</code>
      * @param bool $var

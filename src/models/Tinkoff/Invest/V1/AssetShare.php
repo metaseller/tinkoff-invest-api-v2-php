@@ -94,7 +94,7 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      */
     protected $repres_isin = '';
     /**
-     *Объявленное количество шт.
+     *Объявленное количество, шт.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation issue_size_plan = 14;</code>
      */
@@ -139,7 +139,7 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      *     @type string $repres_isin
      *          ISIN базового актива.
      *     @type \Tinkoff\Invest\V1\Quotation $issue_size_plan
-     *          Объявленное количество шт.
+     *          Объявленное количество, шт.
      *     @type \Tinkoff\Invest\V1\Quotation $total_float
      *          Количество акций в свободном обращении.
      * }
@@ -548,7 +548,7 @@ class AssetShare extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Объявленное количество шт.
+     *Объявленное количество, шт.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation issue_size_plan = 14;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -569,7 +569,7 @@ class AssetShare extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Объявленное количество шт.
+     *Объявленное количество, шт.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation issue_size_plan = 14;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var

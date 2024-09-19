@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetBrandRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Uid-идентификатор бренда.
+     *UID-идентификатор бренда.
      *
      * Generated from protobuf field <code>string id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
@@ -29,7 +29,7 @@ class GetBrandRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $id
-     *          Uid-идентификатор бренда.
+     *          UID-идентификатор бренда.
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +38,7 @@ class GetBrandRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Uid-идентификатор бренда.
+     *UID-идентификатор бренда.
      *
      * Generated from protobuf field <code>string id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
@@ -49,7 +49,7 @@ class GetBrandRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Uid-идентификатор бренда.
+     *UID-идентификатор бренда.
      *
      * Generated from protobuf field <code>string id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var

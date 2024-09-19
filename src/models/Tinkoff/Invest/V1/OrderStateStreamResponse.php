@@ -27,7 +27,7 @@ class OrderStateStreamResponse extends \Google\Protobuf\Internal\Message
      *          Информация об исполнении торгового поручения.
      *     @type \Tinkoff\Invest\V1\Ping $ping
      *          Проверка активности стрима.
-     *     @type \Tinkoff\Invest\V1\OrderStateStreamResponse\SubscriptionResponse $subscription
+     *     @type \Tinkoff\Invest\V1\SubscriptionResponse $subscription
      *          Ответ на запрос на подписку.
      * }
      */
@@ -101,8 +101,8 @@ class OrderStateStreamResponse extends \Google\Protobuf\Internal\Message
     /**
      *Ответ на запрос на подписку.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderStateStreamResponse.SubscriptionResponse subscription = 3;</code>
-     * @return \Tinkoff\Invest\V1\OrderStateStreamResponse\SubscriptionResponse|null
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionResponse subscription = 3;</code>
+     * @return \Tinkoff\Invest\V1\SubscriptionResponse|null
      */
     public function getSubscription()
     {
@@ -117,13 +117,13 @@ class OrderStateStreamResponse extends \Google\Protobuf\Internal\Message
     /**
      *Ответ на запрос на подписку.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderStateStreamResponse.SubscriptionResponse subscription = 3;</code>
-     * @param \Tinkoff\Invest\V1\OrderStateStreamResponse\SubscriptionResponse $var
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionResponse subscription = 3;</code>
+     * @param \Tinkoff\Invest\V1\SubscriptionResponse $var
      * @return $this
      */
     public function setSubscription($var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\OrderStateStreamResponse\SubscriptionResponse::class);
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\SubscriptionResponse::class);
         $this->writeOneof(3, $var);
 
         return $this;

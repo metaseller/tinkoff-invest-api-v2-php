@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class OrderBookSubscription extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Figi-идентификатор инструмента.
+     *FIGI-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      */
@@ -34,25 +34,25 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
      */
     protected $subscription_status = 0;
     /**
-     *Uid инструмента
+     *UID инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 4;</code>
      */
     protected $instrument_uid = '';
     /**
-     *Идентификатор открытого соединения
+     *Идентификатор открытого соединения.
      *
      * Generated from protobuf field <code>string stream_id = 5;</code>
      */
     protected $stream_id = '';
     /**
-     *Идентификатор подписки в формате UUID
+     *Идентификатор подписки в формате `UUID`.
      *
      * Generated from protobuf field <code>string subscription_id = 6;</code>
      */
     protected $subscription_id = '';
     /**
-     *Тип стакана
+     *Тип стакана.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderBookType order_book_type = 7;</code>
      */
@@ -65,19 +65,19 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $figi
-     *          Figi-идентификатор инструмента.
+     *          FIGI-идентификатор инструмента.
      *     @type int $depth
      *          Глубина стакана.
      *     @type int $subscription_status
      *          Статус подписки.
      *     @type string $instrument_uid
-     *          Uid инструмента
+     *          UID инструмента.
      *     @type string $stream_id
-     *          Идентификатор открытого соединения
+     *          Идентификатор открытого соединения.
      *     @type string $subscription_id
-     *          Идентификатор подписки в формате UUID
+     *          Идентификатор подписки в формате `UUID`.
      *     @type int $order_book_type
-     *          Тип стакана
+     *          Тип стакана.
      * }
      */
     public function __construct($data = NULL) {
@@ -86,7 +86,7 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента.
+     *FIGI-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @return string
@@ -97,7 +97,7 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента.
+     *FIGI-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @param string $var
@@ -164,7 +164,7 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Uid инструмента
+     *UID инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 4;</code>
      * @return string
@@ -175,7 +175,7 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Uid инструмента
+     *UID инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 4;</code>
      * @param string $var
@@ -190,7 +190,7 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор открытого соединения
+     *Идентификатор открытого соединения.
      *
      * Generated from protobuf field <code>string stream_id = 5;</code>
      * @return string
@@ -201,7 +201,7 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор открытого соединения
+     *Идентификатор открытого соединения.
      *
      * Generated from protobuf field <code>string stream_id = 5;</code>
      * @param string $var
@@ -216,7 +216,7 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор подписки в формате UUID
+     *Идентификатор подписки в формате `UUID`.
      *
      * Generated from protobuf field <code>string subscription_id = 6;</code>
      * @return string
@@ -227,7 +227,7 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор подписки в формате UUID
+     *Идентификатор подписки в формате `UUID`.
      *
      * Generated from protobuf field <code>string subscription_id = 6;</code>
      * @param string $var
@@ -242,7 +242,7 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип стакана
+     *Тип стакана.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderBookType order_book_type = 7;</code>
      * @return int
@@ -253,7 +253,7 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип стакана
+     *Тип стакана.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderBookType order_book_type = 7;</code>
      * @param int $var

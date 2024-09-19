@@ -9,68 +9,68 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Консенсус-прогноз
+ *Консенсус-прогноз.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.GetForecastResponse.ConsensusItem</code>
  */
 class ConsensusItem extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Уникальный идентификатор инструмента
+     * Уникальный идентификатор инструмента.
      *
      * Generated from protobuf field <code>string uid = 1;</code>
      */
     protected $uid = '';
     /**
-     * Тикер инструмента
+     * Тикер инструмента.
      *
      * Generated from protobuf field <code>string ticker = 2;</code>
      */
     protected $ticker = '';
     /**
-     * Прогноз
+     * Прогноз.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Recommendation recommendation = 3;</code>
      */
     protected $recommendation = 0;
     /**
-     * Валюта
+     * Валюта.
      *
      * Generated from protobuf field <code>string currency = 4;</code>
      */
     protected $currency = '';
     /**
-     * Текущая цена
+     * Текущая цена.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation current_price = 5;</code>
      */
     protected $current_price = null;
     /**
-     * Прогнозируемая цена
+     * Прогнозируемая цена.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation consensus = 6;</code>
      */
     protected $consensus = null;
     /**
-     * Минимальная цена прогноза
+     * Минимальная цена прогноза.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation min_target = 7;</code>
      */
     protected $min_target = null;
     /**
-     * Максимальная цена прогноза
+     * Максимальная цена прогноза.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation max_target = 8;</code>
      */
     protected $max_target = null;
     /**
-     * Изменение цены
+     * Изменение цены.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price_change = 9;</code>
      */
     protected $price_change = null;
     /**
-     * Относительное изменение цены
+     * Относительное изменение цены.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price_change_rel = 10;</code>
      */
@@ -83,25 +83,25 @@ class ConsensusItem extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $uid
-     *           Уникальный идентификатор инструмента
+     *           Уникальный идентификатор инструмента.
      *     @type string $ticker
-     *           Тикер инструмента
+     *           Тикер инструмента.
      *     @type int $recommendation
-     *           Прогноз
+     *           Прогноз.
      *     @type string $currency
-     *           Валюта
+     *           Валюта.
      *     @type \Tinkoff\Invest\V1\Quotation $current_price
-     *           Текущая цена
+     *           Текущая цена.
      *     @type \Tinkoff\Invest\V1\Quotation $consensus
-     *           Прогнозируемая цена
+     *           Прогнозируемая цена.
      *     @type \Tinkoff\Invest\V1\Quotation $min_target
-     *           Минимальная цена прогноза
+     *           Минимальная цена прогноза.
      *     @type \Tinkoff\Invest\V1\Quotation $max_target
-     *           Максимальная цена прогноза
+     *           Максимальная цена прогноза.
      *     @type \Tinkoff\Invest\V1\Quotation $price_change
-     *           Изменение цены
+     *           Изменение цены.
      *     @type \Tinkoff\Invest\V1\Quotation $price_change_rel
-     *           Относительное изменение цены
+     *           Относительное изменение цены.
      * }
      */
     public function __construct($data = NULL) {
@@ -110,7 +110,7 @@ class ConsensusItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Уникальный идентификатор инструмента
+     * Уникальный идентификатор инструмента.
      *
      * Generated from protobuf field <code>string uid = 1;</code>
      * @return string
@@ -121,7 +121,7 @@ class ConsensusItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Уникальный идентификатор инструмента
+     * Уникальный идентификатор инструмента.
      *
      * Generated from protobuf field <code>string uid = 1;</code>
      * @param string $var
@@ -136,7 +136,7 @@ class ConsensusItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Тикер инструмента
+     * Тикер инструмента.
      *
      * Generated from protobuf field <code>string ticker = 2;</code>
      * @return string
@@ -147,7 +147,7 @@ class ConsensusItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Тикер инструмента
+     * Тикер инструмента.
      *
      * Generated from protobuf field <code>string ticker = 2;</code>
      * @param string $var
@@ -162,7 +162,7 @@ class ConsensusItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Прогноз
+     * Прогноз.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Recommendation recommendation = 3;</code>
      * @return int
@@ -173,7 +173,7 @@ class ConsensusItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Прогноз
+     * Прогноз.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Recommendation recommendation = 3;</code>
      * @param int $var
@@ -188,7 +188,7 @@ class ConsensusItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Валюта
+     * Валюта.
      *
      * Generated from protobuf field <code>string currency = 4;</code>
      * @return string
@@ -199,7 +199,7 @@ class ConsensusItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Валюта
+     * Валюта.
      *
      * Generated from protobuf field <code>string currency = 4;</code>
      * @param string $var
@@ -214,7 +214,7 @@ class ConsensusItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Текущая цена
+     * Текущая цена.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation current_price = 5;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -235,7 +235,7 @@ class ConsensusItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Текущая цена
+     * Текущая цена.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation current_price = 5;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -250,7 +250,7 @@ class ConsensusItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Прогнозируемая цена
+     * Прогнозируемая цена.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation consensus = 6;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -271,7 +271,7 @@ class ConsensusItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Прогнозируемая цена
+     * Прогнозируемая цена.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation consensus = 6;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -286,7 +286,7 @@ class ConsensusItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Минимальная цена прогноза
+     * Минимальная цена прогноза.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation min_target = 7;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -307,7 +307,7 @@ class ConsensusItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Минимальная цена прогноза
+     * Минимальная цена прогноза.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation min_target = 7;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -322,7 +322,7 @@ class ConsensusItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Максимальная цена прогноза
+     * Максимальная цена прогноза.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation max_target = 8;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -343,7 +343,7 @@ class ConsensusItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Максимальная цена прогноза
+     * Максимальная цена прогноза.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation max_target = 8;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -358,7 +358,7 @@ class ConsensusItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Изменение цены
+     * Изменение цены.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price_change = 9;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -379,7 +379,7 @@ class ConsensusItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Изменение цены
+     * Изменение цены.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price_change = 9;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -394,7 +394,7 @@ class ConsensusItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Относительное изменение цены
+     * Относительное изменение цены.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price_change_rel = 10;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -415,7 +415,7 @@ class ConsensusItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Относительное изменение цены
+     * Относительное изменение цены.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price_change_rel = 10;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var

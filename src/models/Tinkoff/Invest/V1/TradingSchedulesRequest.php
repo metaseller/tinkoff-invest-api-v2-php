@@ -22,13 +22,13 @@ class TradingSchedulesRequest extends \Google\Protobuf\Internal\Message
      */
     protected $exchange = null;
     /**
-     *Начало периода по часовому поясу UTC.
+     *Начало периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2;</code>
      */
     protected $from = null;
     /**
-     *Окончание периода по часовому поясу UTC.
+     *Окончание периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3;</code>
      */
@@ -43,9 +43,9 @@ class TradingSchedulesRequest extends \Google\Protobuf\Internal\Message
      *     @type string $exchange
      *          Наименование биржи или расчетного календаря. </br>Если не передаётся, возвращается информация по всем доступным торговым площадкам.
      *     @type \Google\Protobuf\Timestamp $from
-     *          Начало периода по часовому поясу UTC.
+     *          Начало периода по UTC.
      *     @type \Google\Protobuf\Timestamp $to
-     *          Окончание периода по часовому поясу UTC.
+     *          Окончание периода по UTC.
      * }
      */
     public function __construct($data = NULL) {
@@ -90,7 +90,7 @@ class TradingSchedulesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Начало периода по часовому поясу UTC.
+     *Начало периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -111,7 +111,7 @@ class TradingSchedulesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Начало периода по часовому поясу UTC.
+     *Начало периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -126,7 +126,7 @@ class TradingSchedulesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Окончание периода по часовому поясу UTC.
+     *Окончание периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -147,7 +147,7 @@ class TradingSchedulesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Окончание периода по часовому поясу UTC.
+     *Окончание периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3;</code>
      * @param \Google\Protobuf\Timestamp $var

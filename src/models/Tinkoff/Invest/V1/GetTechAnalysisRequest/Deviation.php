@@ -14,7 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class Deviation extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Кол-во стандартных отклонений, на которые отступает верхняя и нижняя граница
+     *Количество стандартных отклонений, на которые отступают верхняя и нижняя границы.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation deviation_multiplier = 1;</code>
      */
@@ -27,7 +27,7 @@ class Deviation extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Tinkoff\Invest\V1\Quotation $deviation_multiplier
-     *          Кол-во стандартных отклонений, на которые отступает верхняя и нижняя граница
+     *          Количество стандартных отклонений, на которые отступают верхняя и нижняя границы.
      * }
      */
     public function __construct($data = NULL) {
@@ -36,7 +36,7 @@ class Deviation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Кол-во стандартных отклонений, на которые отступает верхняя и нижняя граница
+     *Количество стандартных отклонений, на которые отступают верхняя и нижняя границы.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation deviation_multiplier = 1;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -57,7 +57,7 @@ class Deviation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Кол-во стандартных отклонений, на которые отступает верхняя и нижняя граница
+     *Количество стандартных отклонений, на которые отступают верхняя и нижняя границы.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation deviation_multiplier = 1;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var

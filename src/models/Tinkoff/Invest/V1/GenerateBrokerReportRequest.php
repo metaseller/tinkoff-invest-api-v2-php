@@ -20,13 +20,13 @@ class GenerateBrokerReportRequest extends \Google\Protobuf\Internal\Message
      */
     protected $account_id = '';
     /**
-     *Начало периода в часовом поясе UTC.
+     *Начало периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $from = null;
     /**
-     *Окончание периода в часовом поясе UTC.
+     *Окончание периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
@@ -41,9 +41,9 @@ class GenerateBrokerReportRequest extends \Google\Protobuf\Internal\Message
      *     @type string $account_id
      *          Идентификатор счёта клиента.
      *     @type \Google\Protobuf\Timestamp $from
-     *          Начало периода в часовом поясе UTC.
+     *          Начало периода по UTC.
      *     @type \Google\Protobuf\Timestamp $to
-     *          Окончание периода в часовом поясе UTC.
+     *          Окончание периода по UTC.
      * }
      */
     public function __construct($data = NULL) {
@@ -78,7 +78,7 @@ class GenerateBrokerReportRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Начало периода в часовом поясе UTC.
+     *Начало периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -99,7 +99,7 @@ class GenerateBrokerReportRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Начало периода в часовом поясе UTC.
+     *Начало периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -114,7 +114,7 @@ class GenerateBrokerReportRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Окончание периода в часовом поясе UTC.
+     *Окончание периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -135,7 +135,7 @@ class GenerateBrokerReportRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Окончание периода в часовом поясе UTC.
+     *Окончание периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param \Google\Protobuf\Timestamp $var

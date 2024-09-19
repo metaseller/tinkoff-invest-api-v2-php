@@ -14,127 +14,127 @@ use Google\Protobuf\Internal\GPBUtil;
 class BondEvent extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Идентификатор инструмента
+     * Идентификатор инструмента.
      *
      * Generated from protobuf field <code>string instrument_id = 2;</code>
      */
     protected $instrument_id = '';
     /**
-     * Номер события для данного типа события
+     * Номер события для данного типа события.
      *
      * Generated from protobuf field <code>int32 event_number = 3;</code>
      */
     protected $event_number = 0;
     /**
-     * Дата события
+     * Дата события.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp event_date = 4;</code>
      */
     protected $event_date = null;
     /**
-     * Тип события
+     * Тип события.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetBondEventsRequest.EventType event_type = 5;</code>
      */
     protected $event_type = 0;
     /**
-     * Полное количество бумаг, задействованных в событии
+     * Полное количество бумаг, задействованных в событии.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation event_total_vol = 6;</code>
      */
     protected $event_total_vol = null;
     /**
-     * Дата фиксации владельцев для участия в событии
+     * Дата фиксации владельцев для участия в событии.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp fix_date = 7;</code>
      */
     protected $fix_date = null;
     /**
-     * Дата определения даты либо факта события
+     * Дата определения даты или факта события.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp rate_date = 8;</code>
      */
     protected $rate_date = null;
     /**
-     * Дата дефолта (если применимо)
+     * Дата дефолта, если применимо.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp default_date = 9;</code>
      */
     protected $default_date = null;
     /**
-     * Дата реального исполнения обязательства
+     * Дата реального исполнения обязательства.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp real_pay_date = 10;</code>
      */
     protected $real_pay_date = null;
     /**
-     * Дата выплаты
+     * Дата выплаты.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp pay_date = 11;</code>
      */
     protected $pay_date = null;
     /**
-     * Выплата на одну облигацию
+     * Выплата на одну облигацию.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue pay_one_bond = 12;</code>
      */
     protected $pay_one_bond = null;
     /**
-     * Выплаты на все бумаги, задействованные в событии
+     * Выплаты на все бумаги, задействованные в событии.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue money_flow_val = 13;</code>
      */
     protected $money_flow_val = null;
     /**
-     * Признак исполнения
+     * Признак исполнения.
      *
      * Generated from protobuf field <code>string execution = 14;</code>
      */
     protected $execution = '';
     /**
-     * Тип операции
+     * Тип операции.
      *
      * Generated from protobuf field <code>string operation_type = 15;</code>
      */
     protected $operation_type = '';
     /**
-     * Стоимость операции (ставка купона, доля номинала, цена выкупа или коэффициент конвертации)
+     * Стоимость операции — ставка купона, доля номинала, цена выкупа или коэффициент конвертации.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation value = 16;</code>
      */
     protected $value = null;
     /**
-     * Примечание
+     * Примечание.
      *
      * Generated from protobuf field <code>string note = 17;</code>
      */
     protected $note = '';
     /**
-     * ID выпуска бумаг, в который произведена конвертация (для конвертаций)
+     * ID выпуска бумаг, в который произведена конвертация (для конвертаций).
      *
      * Generated from protobuf field <code>string convert_to_fin_tool_id = 18;</code>
      */
     protected $convert_to_fin_tool_id = '';
     /**
-     * Начало купонного периода
+     * Начало купонного периода.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp coupon_start_date = 19;</code>
      */
     protected $coupon_start_date = null;
     /**
-     * Окончание купонного периода
+     * Окончание купонного периода.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp coupon_end_date = 20;</code>
      */
     protected $coupon_end_date = null;
     /**
-     * Купонный период
+     * Купонный период.
      *
      * Generated from protobuf field <code>int32 coupon_period = 21;</code>
      */
     protected $coupon_period = 0;
     /**
-     * Ставка купона, процентов годовых
+     * Ставка купона, процентов годовых.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation coupon_interest_rate = 22;</code>
      */
@@ -147,47 +147,47 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $instrument_id
-     *           Идентификатор инструмента
+     *           Идентификатор инструмента.
      *     @type int $event_number
-     *           Номер события для данного типа события
+     *           Номер события для данного типа события.
      *     @type \Google\Protobuf\Timestamp $event_date
-     *           Дата события
+     *           Дата события.
      *     @type int $event_type
-     *           Тип события
+     *           Тип события.
      *     @type \Tinkoff\Invest\V1\Quotation $event_total_vol
-     *           Полное количество бумаг, задействованных в событии
+     *           Полное количество бумаг, задействованных в событии.
      *     @type \Google\Protobuf\Timestamp $fix_date
-     *           Дата фиксации владельцев для участия в событии
+     *           Дата фиксации владельцев для участия в событии.
      *     @type \Google\Protobuf\Timestamp $rate_date
-     *           Дата определения даты либо факта события
+     *           Дата определения даты или факта события.
      *     @type \Google\Protobuf\Timestamp $default_date
-     *           Дата дефолта (если применимо)
+     *           Дата дефолта, если применимо.
      *     @type \Google\Protobuf\Timestamp $real_pay_date
-     *           Дата реального исполнения обязательства
+     *           Дата реального исполнения обязательства.
      *     @type \Google\Protobuf\Timestamp $pay_date
-     *           Дата выплаты
+     *           Дата выплаты.
      *     @type \Tinkoff\Invest\V1\MoneyValue $pay_one_bond
-     *           Выплата на одну облигацию
+     *           Выплата на одну облигацию.
      *     @type \Tinkoff\Invest\V1\MoneyValue $money_flow_val
-     *           Выплаты на все бумаги, задействованные в событии
+     *           Выплаты на все бумаги, задействованные в событии.
      *     @type string $execution
-     *           Признак исполнения
+     *           Признак исполнения.
      *     @type string $operation_type
-     *           Тип операции
+     *           Тип операции.
      *     @type \Tinkoff\Invest\V1\Quotation $value
-     *           Стоимость операции (ставка купона, доля номинала, цена выкупа или коэффициент конвертации)
+     *           Стоимость операции — ставка купона, доля номинала, цена выкупа или коэффициент конвертации.
      *     @type string $note
-     *           Примечание
+     *           Примечание.
      *     @type string $convert_to_fin_tool_id
-     *           ID выпуска бумаг, в который произведена конвертация (для конвертаций)
+     *           ID выпуска бумаг, в который произведена конвертация (для конвертаций).
      *     @type \Google\Protobuf\Timestamp $coupon_start_date
-     *           Начало купонного периода
+     *           Начало купонного периода.
      *     @type \Google\Protobuf\Timestamp $coupon_end_date
-     *           Окончание купонного периода
+     *           Окончание купонного периода.
      *     @type int $coupon_period
-     *           Купонный период
+     *           Купонный период.
      *     @type \Tinkoff\Invest\V1\Quotation $coupon_interest_rate
-     *           Ставка купона, процентов годовых
+     *           Ставка купона, процентов годовых.
      * }
      */
     public function __construct($data = NULL) {
@@ -196,7 +196,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Идентификатор инструмента
+     * Идентификатор инструмента.
      *
      * Generated from protobuf field <code>string instrument_id = 2;</code>
      * @return string
@@ -207,7 +207,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Идентификатор инструмента
+     * Идентификатор инструмента.
      *
      * Generated from protobuf field <code>string instrument_id = 2;</code>
      * @param string $var
@@ -222,7 +222,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Номер события для данного типа события
+     * Номер события для данного типа события.
      *
      * Generated from protobuf field <code>int32 event_number = 3;</code>
      * @return int
@@ -233,7 +233,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Номер события для данного типа события
+     * Номер события для данного типа события.
      *
      * Generated from protobuf field <code>int32 event_number = 3;</code>
      * @param int $var
@@ -248,7 +248,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Дата события
+     * Дата события.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp event_date = 4;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -269,7 +269,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Дата события
+     * Дата события.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp event_date = 4;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -284,7 +284,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Тип события
+     * Тип события.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetBondEventsRequest.EventType event_type = 5;</code>
      * @return int
@@ -295,7 +295,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Тип события
+     * Тип события.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetBondEventsRequest.EventType event_type = 5;</code>
      * @param int $var
@@ -310,7 +310,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Полное количество бумаг, задействованных в событии
+     * Полное количество бумаг, задействованных в событии.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation event_total_vol = 6;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -331,7 +331,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Полное количество бумаг, задействованных в событии
+     * Полное количество бумаг, задействованных в событии.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation event_total_vol = 6;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -346,7 +346,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Дата фиксации владельцев для участия в событии
+     * Дата фиксации владельцев для участия в событии.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp fix_date = 7;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -367,7 +367,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Дата фиксации владельцев для участия в событии
+     * Дата фиксации владельцев для участия в событии.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp fix_date = 7;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -382,7 +382,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Дата определения даты либо факта события
+     * Дата определения даты или факта события.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp rate_date = 8;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -403,7 +403,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Дата определения даты либо факта события
+     * Дата определения даты или факта события.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp rate_date = 8;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -418,7 +418,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Дата дефолта (если применимо)
+     * Дата дефолта, если применимо.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp default_date = 9;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -439,7 +439,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Дата дефолта (если применимо)
+     * Дата дефолта, если применимо.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp default_date = 9;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -454,7 +454,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Дата реального исполнения обязательства
+     * Дата реального исполнения обязательства.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp real_pay_date = 10;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -475,7 +475,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Дата реального исполнения обязательства
+     * Дата реального исполнения обязательства.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp real_pay_date = 10;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -490,7 +490,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Дата выплаты
+     * Дата выплаты.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp pay_date = 11;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -511,7 +511,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Дата выплаты
+     * Дата выплаты.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp pay_date = 11;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -526,7 +526,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Выплата на одну облигацию
+     * Выплата на одну облигацию.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue pay_one_bond = 12;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -547,7 +547,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Выплата на одну облигацию
+     * Выплата на одну облигацию.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue pay_one_bond = 12;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -562,7 +562,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Выплаты на все бумаги, задействованные в событии
+     * Выплаты на все бумаги, задействованные в событии.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue money_flow_val = 13;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -583,7 +583,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Выплаты на все бумаги, задействованные в событии
+     * Выплаты на все бумаги, задействованные в событии.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue money_flow_val = 13;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -598,7 +598,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Признак исполнения
+     * Признак исполнения.
      *
      * Generated from protobuf field <code>string execution = 14;</code>
      * @return string
@@ -609,7 +609,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Признак исполнения
+     * Признак исполнения.
      *
      * Generated from protobuf field <code>string execution = 14;</code>
      * @param string $var
@@ -624,7 +624,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Тип операции
+     * Тип операции.
      *
      * Generated from protobuf field <code>string operation_type = 15;</code>
      * @return string
@@ -635,7 +635,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Тип операции
+     * Тип операции.
      *
      * Generated from protobuf field <code>string operation_type = 15;</code>
      * @param string $var
@@ -650,7 +650,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Стоимость операции (ставка купона, доля номинала, цена выкупа или коэффициент конвертации)
+     * Стоимость операции — ставка купона, доля номинала, цена выкупа или коэффициент конвертации.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation value = 16;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -671,7 +671,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Стоимость операции (ставка купона, доля номинала, цена выкупа или коэффициент конвертации)
+     * Стоимость операции — ставка купона, доля номинала, цена выкупа или коэффициент конвертации.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation value = 16;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -686,7 +686,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Примечание
+     * Примечание.
      *
      * Generated from protobuf field <code>string note = 17;</code>
      * @return string
@@ -697,7 +697,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Примечание
+     * Примечание.
      *
      * Generated from protobuf field <code>string note = 17;</code>
      * @param string $var
@@ -712,7 +712,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * ID выпуска бумаг, в который произведена конвертация (для конвертаций)
+     * ID выпуска бумаг, в который произведена конвертация (для конвертаций).
      *
      * Generated from protobuf field <code>string convert_to_fin_tool_id = 18;</code>
      * @return string
@@ -723,7 +723,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * ID выпуска бумаг, в который произведена конвертация (для конвертаций)
+     * ID выпуска бумаг, в который произведена конвертация (для конвертаций).
      *
      * Generated from protobuf field <code>string convert_to_fin_tool_id = 18;</code>
      * @param string $var
@@ -738,7 +738,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Начало купонного периода
+     * Начало купонного периода.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp coupon_start_date = 19;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -759,7 +759,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Начало купонного периода
+     * Начало купонного периода.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp coupon_start_date = 19;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -774,7 +774,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Окончание купонного периода
+     * Окончание купонного периода.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp coupon_end_date = 20;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -795,7 +795,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Окончание купонного периода
+     * Окончание купонного периода.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp coupon_end_date = 20;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -810,7 +810,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Купонный период
+     * Купонный период.
      *
      * Generated from protobuf field <code>int32 coupon_period = 21;</code>
      * @return int
@@ -821,7 +821,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Купонный период
+     * Купонный период.
      *
      * Generated from protobuf field <code>int32 coupon_period = 21;</code>
      * @param int $var
@@ -836,7 +836,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Ставка купона, процентов годовых
+     * Ставка купона, процентов годовых.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation coupon_interest_rate = 22;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -857,7 +857,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Ставка купона, процентов годовых
+     * Ставка купона, процентов годовых.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation coupon_interest_rate = 22;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var

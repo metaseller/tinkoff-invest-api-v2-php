@@ -22,7 +22,7 @@ class PortfolioRequest extends \Google\Protobuf\Internal\Message
      */
     protected $account_id = '';
     /**
-     *Валюта, в которой требуется рассчитать портфель
+     *Валюта, в которой нужно рассчитать портфель.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PortfolioRequest.CurrencyRequest currency = 2;</code>
      */
@@ -37,7 +37,7 @@ class PortfolioRequest extends \Google\Protobuf\Internal\Message
      *     @type string $account_id
      *          Идентификатор счёта пользователя.
      *     @type int $currency
-     *          Валюта, в которой требуется рассчитать портфель
+     *          Валюта, в которой нужно рассчитать портфель.
      * }
      */
     public function __construct($data = NULL) {
@@ -72,7 +72,7 @@ class PortfolioRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Валюта, в которой требуется рассчитать портфель
+     *Валюта, в которой нужно рассчитать портфель.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PortfolioRequest.CurrencyRequest currency = 2;</code>
      * @return int
@@ -93,7 +93,7 @@ class PortfolioRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Валюта, в которой требуется рассчитать портфель
+     *Валюта, в которой нужно рассчитать портфель.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PortfolioRequest.CurrencyRequest currency = 2;</code>
      * @param int $var

@@ -20,49 +20,49 @@ class ShareType
      */
     const SHARE_TYPE_UNSPECIFIED = 0;
     /**
-     *Обыкновенная
+     *Обыкновенная.
      *
      * Generated from protobuf enum <code>SHARE_TYPE_COMMON = 1;</code>
      */
     const SHARE_TYPE_COMMON = 1;
     /**
-     *Привилегированная
+     *Привилегированная.
      *
      * Generated from protobuf enum <code>SHARE_TYPE_PREFERRED = 2;</code>
      */
     const SHARE_TYPE_PREFERRED = 2;
     /**
-     *Американские депозитарные расписки
+     *Американские депозитарные расписки.
      *
      * Generated from protobuf enum <code>SHARE_TYPE_ADR = 3;</code>
      */
     const SHARE_TYPE_ADR = 3;
     /**
-     *Глобальные депозитарные расписки
+     *Глобальные депозитарные расписки.
      *
      * Generated from protobuf enum <code>SHARE_TYPE_GDR = 4;</code>
      */
     const SHARE_TYPE_GDR = 4;
     /**
-     *Товарищество с ограниченной ответственностью
+     *Товарищество с ограниченной ответственностью.
      *
      * Generated from protobuf enum <code>SHARE_TYPE_MLP = 5;</code>
      */
     const SHARE_TYPE_MLP = 5;
     /**
-     *Акции из реестра Нью-Йорка
+     *Акции из реестра Нью-Йорка.
      *
      * Generated from protobuf enum <code>SHARE_TYPE_NY_REG_SHRS = 6;</code>
      */
     const SHARE_TYPE_NY_REG_SHRS = 6;
     /**
-     *Закрытый инвестиционный фонд
+     *Закрытый инвестиционный фонд.
      *
      * Generated from protobuf enum <code>SHARE_TYPE_CLOSED_END_FUND = 7;</code>
      */
     const SHARE_TYPE_CLOSED_END_FUND = 7;
     /**
-     *Траст недвижимости
+     *Траст недвижимости.
      *
      * Generated from protobuf enum <code>SHARE_TYPE_REIT = 8;</code>
      */

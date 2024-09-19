@@ -46,7 +46,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      */
     protected $total_amount_futures = null;
     /**
-     *Текущая относительная доходность портфеля, в %.
+     *Текущая относительная доходность портфеля в %.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation expected_yield = 6;</code>
      */
@@ -105,7 +105,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\MoneyValue $total_amount_futures
      *          Общая стоимость фьючерсов в портфеле.
      *     @type \Tinkoff\Invest\V1\Quotation $expected_yield
-     *          Текущая относительная доходность портфеля, в %.
+     *          Текущая относительная доходность портфеля в %.
      *     @type \Tinkoff\Invest\V1\PortfolioPosition[]|\Google\Protobuf\Internal\RepeatedField $positions
      *          Список позиций портфеля.
      *     @type string $account_id
@@ -306,7 +306,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Текущая относительная доходность портфеля, в %.
+     *Текущая относительная доходность портфеля в %.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation expected_yield = 6;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -327,7 +327,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Текущая относительная доходность портфеля, в %.
+     *Текущая относительная доходность портфеля в %.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation expected_yield = 6;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var

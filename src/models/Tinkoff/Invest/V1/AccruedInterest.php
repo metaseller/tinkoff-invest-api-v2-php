@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class AccruedInterest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Дата и время выплаты в часовом поясе UTC.
+     *Дата и время выплаты по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp date = 1;</code>
      */
@@ -47,7 +47,7 @@ class AccruedInterest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Google\Protobuf\Timestamp $date
-     *          Дата и время выплаты в часовом поясе UTC.
+     *          Дата и время выплаты по UTC.
      *     @type \Tinkoff\Invest\V1\Quotation $value
      *          Величина выплаты.
      *     @type \Tinkoff\Invest\V1\Quotation $value_percent
@@ -62,7 +62,7 @@ class AccruedInterest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время выплаты в часовом поясе UTC.
+     *Дата и время выплаты по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp date = 1;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -83,7 +83,7 @@ class AccruedInterest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время выплаты в часовом поясе UTC.
+     *Дата и время выплаты по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp date = 1;</code>
      * @param \Google\Protobuf\Timestamp $var

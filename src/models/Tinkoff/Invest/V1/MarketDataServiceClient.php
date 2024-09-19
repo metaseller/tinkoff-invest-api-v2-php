@@ -17,7 +17,7 @@ class MarketDataServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод запроса исторических свечей по инструменту.
+     * Запросить исторические свечи по инструменту.
      * @param \Tinkoff\Invest\V1\GetCandlesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -32,7 +32,7 @@ class MarketDataServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод запроса цен последних сделок по инструментам.
+     * Запросить цены последних сделок по инструментам.
      * @param \Tinkoff\Invest\V1\GetLastPricesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -47,7 +47,7 @@ class MarketDataServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения стакана по инструменту.
+     * Получить стакан по инструменту.
      * @param \Tinkoff\Invest\V1\GetOrderBookRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -62,7 +62,7 @@ class MarketDataServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод запроса статуса торгов по инструментам.
+     * Запросить статус торгов по инструментам.
      * @param \Tinkoff\Invest\V1\GetTradingStatusRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -77,7 +77,7 @@ class MarketDataServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод запроса статуса торгов по инструментам.
+     * Запросить статус торгов по инструментам.
      * @param \Tinkoff\Invest\V1\GetTradingStatusesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -92,7 +92,7 @@ class MarketDataServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод запроса обезличенных сделок за последний час.
+     * Запросить обезличенные сделки за последний час.
      * @param \Tinkoff\Invest\V1\GetLastTradesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -107,7 +107,7 @@ class MarketDataServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод запроса цен закрытия торговой сессии по инструментам.
+     * Запросить цены закрытия торговой сессии по инструментам.
      * @param \Tinkoff\Invest\V1\GetClosePricesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -122,7 +122,7 @@ class MarketDataServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения технических индикаторов по инструменту
+     * Получить технические индикаторы по инструменту.
      * @param \Tinkoff\Invest\V1\GetTechAnalysisRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

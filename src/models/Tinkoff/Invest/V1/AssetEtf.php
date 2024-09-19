@@ -16,25 +16,25 @@ use Google\Protobuf\Internal\GPBUtil;
 class AssetEtf extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Суммарные расходы фонда (в %).
+     *Суммарные расходы фонда в процентах.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation total_expense = 1;</code>
      */
     protected $total_expense = null;
     /**
-     *Барьерная ставка доходности после которой фонд имеет право на perfomance fee (в процентах).
+     *Барьерная ставка доходности, после которой фонд имеет право на perfomance fee — в процентах.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation hurdle_rate = 2;</code>
      */
     protected $hurdle_rate = null;
     /**
-     *Комиссия за успешные результаты фонда (в процентах).
+     *Комиссия за успешные результаты фонда в процентах.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation performance_fee = 3;</code>
      */
     protected $performance_fee = null;
     /**
-     *Фиксированная комиссия за управление (в процентах).
+     *Фиксированная комиссия за управление в процентах.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation fixed_commission = 4;</code>
      */
@@ -52,13 +52,13 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      */
     protected $watermark_flag = false;
     /**
-     *Премия (надбавка к цене) при покупке доли в фонде (в процентах).
+     *Премия (надбавка к цене) при покупке доли в фонде — в процентах.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation buy_premium = 7;</code>
      */
     protected $buy_premium = null;
     /**
-     *Ставка дисконта (вычет из цены) при продаже доли в фонде (в процентах).
+     *Ставка дисконта (вычет из цены) при продаже доли в фонде — в процентах.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation sell_discount = 8;</code>
      */
@@ -136,7 +136,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      */
     protected $primary_index_company = '';
     /**
-     *Срок восстановления индекса (после просадки).
+     *Срок восстановления индекса после просадки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation index_recovery_period = 21;</code>
      */
@@ -154,13 +154,13 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      */
     protected $div_yield_flag = false;
     /**
-     *Комиссия на покрытие расходов фонда (в процентах).
+     *Комиссия на покрытие расходов фонда в процентах.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation expense_commission = 24;</code>
      */
     protected $expense_commission = null;
     /**
-     *Ошибка следования за индексом (в процентах).
+     *Ошибка следования за индексом в процентах.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation primary_index_tracking_error = 25;</code>
      */
@@ -209,21 +209,21 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Tinkoff\Invest\V1\Quotation $total_expense
-     *          Суммарные расходы фонда (в %).
+     *          Суммарные расходы фонда в процентах.
      *     @type \Tinkoff\Invest\V1\Quotation $hurdle_rate
-     *          Барьерная ставка доходности после которой фонд имеет право на perfomance fee (в процентах).
+     *          Барьерная ставка доходности, после которой фонд имеет право на perfomance fee — в процентах.
      *     @type \Tinkoff\Invest\V1\Quotation $performance_fee
-     *          Комиссия за успешные результаты фонда (в процентах).
+     *          Комиссия за успешные результаты фонда в процентах.
      *     @type \Tinkoff\Invest\V1\Quotation $fixed_commission
-     *          Фиксированная комиссия за управление (в процентах).
+     *          Фиксированная комиссия за управление в процентах.
      *     @type string $payment_type
      *          Тип распределения доходов от выплат по бумагам.
      *     @type bool $watermark_flag
      *          Признак необходимости выхода фонда в плюс для получения комиссии.
      *     @type \Tinkoff\Invest\V1\Quotation $buy_premium
-     *          Премия (надбавка к цене) при покупке доли в фонде (в процентах).
+     *          Премия (надбавка к цене) при покупке доли в фонде — в процентах.
      *     @type \Tinkoff\Invest\V1\Quotation $sell_discount
-     *          Ставка дисконта (вычет из цены) при продаже доли в фонде (в процентах).
+     *          Ставка дисконта (вычет из цены) при продаже доли в фонде — в процентах.
      *     @type bool $rebalancing_flag
      *          Признак ребалансируемости портфеля фонда.
      *     @type string $rebalancing_freq
@@ -249,15 +249,15 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      *     @type string $primary_index_company
      *          Основные компании, в которые вкладывается фонд.
      *     @type \Tinkoff\Invest\V1\Quotation $index_recovery_period
-     *          Срок восстановления индекса (после просадки).
+     *          Срок восстановления индекса после просадки.
      *     @type string $inav_code
      *          IVAV-код.
      *     @type bool $div_yield_flag
      *          Признак наличия дивидендной доходности.
      *     @type \Tinkoff\Invest\V1\Quotation $expense_commission
-     *          Комиссия на покрытие расходов фонда (в процентах).
+     *          Комиссия на покрытие расходов фонда в процентах.
      *     @type \Tinkoff\Invest\V1\Quotation $primary_index_tracking_error
-     *          Ошибка следования за индексом (в процентах).
+     *          Ошибка следования за индексом в процентах.
      *     @type string $rebalancing_plan
      *          Плановая ребалансировка портфеля.
      *     @type string $tax_rate
@@ -278,7 +278,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Суммарные расходы фонда (в %).
+     *Суммарные расходы фонда в процентах.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation total_expense = 1;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -299,7 +299,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Суммарные расходы фонда (в %).
+     *Суммарные расходы фонда в процентах.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation total_expense = 1;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -314,7 +314,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Барьерная ставка доходности после которой фонд имеет право на perfomance fee (в процентах).
+     *Барьерная ставка доходности, после которой фонд имеет право на perfomance fee — в процентах.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation hurdle_rate = 2;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -335,7 +335,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Барьерная ставка доходности после которой фонд имеет право на perfomance fee (в процентах).
+     *Барьерная ставка доходности, после которой фонд имеет право на perfomance fee — в процентах.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation hurdle_rate = 2;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -350,7 +350,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Комиссия за успешные результаты фонда (в процентах).
+     *Комиссия за успешные результаты фонда в процентах.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation performance_fee = 3;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -371,7 +371,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Комиссия за успешные результаты фонда (в процентах).
+     *Комиссия за успешные результаты фонда в процентах.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation performance_fee = 3;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -386,7 +386,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Фиксированная комиссия за управление (в процентах).
+     *Фиксированная комиссия за управление в процентах.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation fixed_commission = 4;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -407,7 +407,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Фиксированная комиссия за управление (в процентах).
+     *Фиксированная комиссия за управление в процентах.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation fixed_commission = 4;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -474,7 +474,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Премия (надбавка к цене) при покупке доли в фонде (в процентах).
+     *Премия (надбавка к цене) при покупке доли в фонде — в процентах.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation buy_premium = 7;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -495,7 +495,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Премия (надбавка к цене) при покупке доли в фонде (в процентах).
+     *Премия (надбавка к цене) при покупке доли в фонде — в процентах.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation buy_premium = 7;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -510,7 +510,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Ставка дисконта (вычет из цены) при продаже доли в фонде (в процентах).
+     *Ставка дисконта (вычет из цены) при продаже доли в фонде — в процентах.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation sell_discount = 8;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -531,7 +531,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Ставка дисконта (вычет из цены) при продаже доли в фонде (в процентах).
+     *Ставка дисконта (вычет из цены) при продаже доли в фонде — в процентах.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation sell_discount = 8;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -878,7 +878,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Срок восстановления индекса (после просадки).
+     *Срок восстановления индекса после просадки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation index_recovery_period = 21;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -899,7 +899,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Срок восстановления индекса (после просадки).
+     *Срок восстановления индекса после просадки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation index_recovery_period = 21;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -966,7 +966,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Комиссия на покрытие расходов фонда (в процентах).
+     *Комиссия на покрытие расходов фонда в процентах.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation expense_commission = 24;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -987,7 +987,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Комиссия на покрытие расходов фонда (в процентах).
+     *Комиссия на покрытие расходов фонда в процентах.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation expense_commission = 24;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -1002,7 +1002,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Ошибка следования за индексом (в процентах).
+     *Ошибка следования за индексом в процентах.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation primary_index_tracking_error = 25;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -1023,7 +1023,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Ошибка следования за индексом (в процентах).
+     *Ошибка следования за индексом в процентах.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation primary_index_tracking_error = 25;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var

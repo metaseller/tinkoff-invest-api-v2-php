@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class TradingStatus extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Figi-идентификатор инструмента.
+     *FIGI-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      */
@@ -28,7 +28,7 @@ class TradingStatus extends \Google\Protobuf\Internal\Message
      */
     protected $trading_status = 0;
     /**
-     *Время изменения торгового статуса в часовом поясе UTC.
+     *Время изменения торгового статуса по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp time = 3;</code>
      */
@@ -46,7 +46,7 @@ class TradingStatus extends \Google\Protobuf\Internal\Message
      */
     protected $market_order_available_flag = false;
     /**
-     *Uid инструмента
+     *UID инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 6;</code>
      */
@@ -59,17 +59,17 @@ class TradingStatus extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $figi
-     *          Figi-идентификатор инструмента.
+     *          FIGI-идентификатор инструмента.
      *     @type int $trading_status
      *          Статус торговли инструментом.
      *     @type \Google\Protobuf\Timestamp $time
-     *          Время изменения торгового статуса в часовом поясе UTC.
+     *          Время изменения торгового статуса по UTC.
      *     @type bool $limit_order_available_flag
      *          Признак доступности выставления лимитной заявки по инструменту.
      *     @type bool $market_order_available_flag
      *          Признак доступности выставления рыночной заявки по инструменту.
      *     @type string $instrument_uid
-     *          Uid инструмента
+     *          UID инструмента.
      * }
      */
     public function __construct($data = NULL) {
@@ -78,7 +78,7 @@ class TradingStatus extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента.
+     *FIGI-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @return string
@@ -89,7 +89,7 @@ class TradingStatus extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента.
+     *FIGI-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @param string $var
@@ -130,7 +130,7 @@ class TradingStatus extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Время изменения торгового статуса в часовом поясе UTC.
+     *Время изменения торгового статуса по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp time = 3;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -151,7 +151,7 @@ class TradingStatus extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Время изменения торгового статуса в часовом поясе UTC.
+     *Время изменения торгового статуса по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp time = 3;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -218,7 +218,7 @@ class TradingStatus extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Uid инструмента
+     *UID инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 6;</code>
      * @return string
@@ -229,7 +229,7 @@ class TradingStatus extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Uid инструмента
+     *UID инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 6;</code>
      * @param string $var

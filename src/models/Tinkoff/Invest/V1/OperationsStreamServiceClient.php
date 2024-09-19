@@ -17,7 +17,7 @@ class OperationsStreamServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Server-side stream обновлений портфеля
+     * Server-side stream обновлений портфеля.
      * @param \Tinkoff\Invest\V1\PortfolioStreamRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -32,7 +32,7 @@ class OperationsStreamServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Server-side stream обновлений информации по изменению позиций портфеля
+     * Server-side stream обновлений информации по изменению позиций портфеля.
      * @param \Tinkoff\Invest\V1\PositionsStreamRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

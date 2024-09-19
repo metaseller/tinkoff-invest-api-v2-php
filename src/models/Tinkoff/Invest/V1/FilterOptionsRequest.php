@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Параметры фильтрации опционов
+ *Параметры фильтрации опционов.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.FilterOptionsRequest</code>
  */
@@ -22,7 +22,7 @@ class FilterOptionsRequest extends \Google\Protobuf\Internal\Message
      */
     protected $basic_asset_uid = null;
     /**
-     *Идентификатор позиции базового актива опциона
+     *Идентификатор позиции базового актива опциона.
      *
      * Generated from protobuf field <code>string basic_asset_position_uid = 2;</code>
      */
@@ -37,7 +37,7 @@ class FilterOptionsRequest extends \Google\Protobuf\Internal\Message
      *     @type string $basic_asset_uid
      *          Идентификатор базового актива опциона.  Обязательный параметр.
      *     @type string $basic_asset_position_uid
-     *          Идентификатор позиции базового актива опциона
+     *          Идентификатор позиции базового актива опциона.
      * }
      */
     public function __construct($data = NULL) {
@@ -82,7 +82,7 @@ class FilterOptionsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор позиции базового актива опциона
+     *Идентификатор позиции базового актива опциона.
      *
      * Generated from protobuf field <code>string basic_asset_position_uid = 2;</code>
      * @return string
@@ -103,7 +103,7 @@ class FilterOptionsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор позиции базового актива опциона
+     *Идентификатор позиции базового актива опциона.
      *
      * Generated from protobuf field <code>string basic_asset_position_uid = 2;</code>
      * @param string $var

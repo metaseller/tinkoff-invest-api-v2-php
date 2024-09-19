@@ -22,43 +22,43 @@ class Dividend extends \Google\Protobuf\Internal\Message
      */
     protected $dividend_net = null;
     /**
-     *Дата фактических выплат в часовом поясе UTC.
+     *Дата фактических выплат по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp payment_date = 2;</code>
      */
     protected $payment_date = null;
     /**
-     *Дата объявления дивидендов в часовом поясе UTC.
+     *Дата объявления дивидендов по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp declared_date = 3;</code>
      */
     protected $declared_date = null;
     /**
-     *Последний день (включительно) покупки для получения выплаты в часовом поясе UTC.
+     *Последний день (включительно) покупки для получения выплаты по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp last_buy_date = 4;</code>
      */
     protected $last_buy_date = null;
     /**
-     *Тип выплаты. Возможные значения: Regular Cash – регулярные выплаты, Cancelled – выплата отменена, Daily Accrual – ежедневное начисление, Return of Capital – возврат капитала, прочие типы выплат.
+     *Тип выплаты. Возможные значения: `Regular Cash` – регулярные выплаты, `Cancelled` – выплата отменена, `Daily Accrual` – ежедневное начисление, `Return of Capital` – возврат капитала, прочие типы выплат.
      *
      * Generated from protobuf field <code>string dividend_type = 5;</code>
      */
     protected $dividend_type = '';
     /**
-     *Дата фиксации реестра в часовом поясе UTC.
+     *Дата фиксации реестра по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp record_date = 6;</code>
      */
     protected $record_date = null;
     /**
-     *Регулярность выплаты. Возможные значения: Annual – ежегодная, Semi-Anl – каждые полгода, прочие типы выплат.
+     *Регулярность выплаты. Возможные значения: `Annual` – ежегодная, `Semi-Anl` – каждые полгода, прочие типы выплат.
      *
      * Generated from protobuf field <code>string regularity = 7;</code>
      */
     protected $regularity = '';
     /**
-     *Цена закрытия инструмента на момент ex_dividend_date.
+     *Цена закрытия инструмента на момент `ex_dividend_date`.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue close_price = 8;</code>
      */
@@ -70,7 +70,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
      */
     protected $yield_value = null;
     /**
-     *Дата и время создания записи в часовом поясе UTC.
+     *Дата и время создания записи по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp created_at = 10;</code>
      */
@@ -85,23 +85,23 @@ class Dividend extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\MoneyValue $dividend_net
      *          Величина дивиденда на 1 ценную бумагу (включая валюту).
      *     @type \Google\Protobuf\Timestamp $payment_date
-     *          Дата фактических выплат в часовом поясе UTC.
+     *          Дата фактических выплат по UTC.
      *     @type \Google\Protobuf\Timestamp $declared_date
-     *          Дата объявления дивидендов в часовом поясе UTC.
+     *          Дата объявления дивидендов по UTC.
      *     @type \Google\Protobuf\Timestamp $last_buy_date
-     *          Последний день (включительно) покупки для получения выплаты в часовом поясе UTC.
+     *          Последний день (включительно) покупки для получения выплаты по UTC.
      *     @type string $dividend_type
-     *          Тип выплаты. Возможные значения: Regular Cash – регулярные выплаты, Cancelled – выплата отменена, Daily Accrual – ежедневное начисление, Return of Capital – возврат капитала, прочие типы выплат.
+     *          Тип выплаты. Возможные значения: `Regular Cash` – регулярные выплаты, `Cancelled` – выплата отменена, `Daily Accrual` – ежедневное начисление, `Return of Capital` – возврат капитала, прочие типы выплат.
      *     @type \Google\Protobuf\Timestamp $record_date
-     *          Дата фиксации реестра в часовом поясе UTC.
+     *          Дата фиксации реестра по UTC.
      *     @type string $regularity
-     *          Регулярность выплаты. Возможные значения: Annual – ежегодная, Semi-Anl – каждые полгода, прочие типы выплат.
+     *          Регулярность выплаты. Возможные значения: `Annual` – ежегодная, `Semi-Anl` – каждые полгода, прочие типы выплат.
      *     @type \Tinkoff\Invest\V1\MoneyValue $close_price
-     *          Цена закрытия инструмента на момент ex_dividend_date.
+     *          Цена закрытия инструмента на момент `ex_dividend_date`.
      *     @type \Tinkoff\Invest\V1\Quotation $yield_value
      *          Величина доходности.
      *     @type \Google\Protobuf\Timestamp $created_at
-     *          Дата и время создания записи в часовом поясе UTC.
+     *          Дата и время создания записи по UTC.
      * }
      */
     public function __construct($data = NULL) {
@@ -146,7 +146,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата фактических выплат в часовом поясе UTC.
+     *Дата фактических выплат по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp payment_date = 2;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -167,7 +167,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата фактических выплат в часовом поясе UTC.
+     *Дата фактических выплат по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp payment_date = 2;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -182,7 +182,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата объявления дивидендов в часовом поясе UTC.
+     *Дата объявления дивидендов по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp declared_date = 3;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -203,7 +203,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата объявления дивидендов в часовом поясе UTC.
+     *Дата объявления дивидендов по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp declared_date = 3;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -218,7 +218,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Последний день (включительно) покупки для получения выплаты в часовом поясе UTC.
+     *Последний день (включительно) покупки для получения выплаты по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp last_buy_date = 4;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -239,7 +239,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Последний день (включительно) покупки для получения выплаты в часовом поясе UTC.
+     *Последний день (включительно) покупки для получения выплаты по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp last_buy_date = 4;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -254,7 +254,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип выплаты. Возможные значения: Regular Cash – регулярные выплаты, Cancelled – выплата отменена, Daily Accrual – ежедневное начисление, Return of Capital – возврат капитала, прочие типы выплат.
+     *Тип выплаты. Возможные значения: `Regular Cash` – регулярные выплаты, `Cancelled` – выплата отменена, `Daily Accrual` – ежедневное начисление, `Return of Capital` – возврат капитала, прочие типы выплат.
      *
      * Generated from protobuf field <code>string dividend_type = 5;</code>
      * @return string
@@ -265,7 +265,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип выплаты. Возможные значения: Regular Cash – регулярные выплаты, Cancelled – выплата отменена, Daily Accrual – ежедневное начисление, Return of Capital – возврат капитала, прочие типы выплат.
+     *Тип выплаты. Возможные значения: `Regular Cash` – регулярные выплаты, `Cancelled` – выплата отменена, `Daily Accrual` – ежедневное начисление, `Return of Capital` – возврат капитала, прочие типы выплат.
      *
      * Generated from protobuf field <code>string dividend_type = 5;</code>
      * @param string $var
@@ -280,7 +280,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата фиксации реестра в часовом поясе UTC.
+     *Дата фиксации реестра по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp record_date = 6;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -301,7 +301,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата фиксации реестра в часовом поясе UTC.
+     *Дата фиксации реестра по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp record_date = 6;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -316,7 +316,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Регулярность выплаты. Возможные значения: Annual – ежегодная, Semi-Anl – каждые полгода, прочие типы выплат.
+     *Регулярность выплаты. Возможные значения: `Annual` – ежегодная, `Semi-Anl` – каждые полгода, прочие типы выплат.
      *
      * Generated from protobuf field <code>string regularity = 7;</code>
      * @return string
@@ -327,7 +327,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Регулярность выплаты. Возможные значения: Annual – ежегодная, Semi-Anl – каждые полгода, прочие типы выплат.
+     *Регулярность выплаты. Возможные значения: `Annual` – ежегодная, `Semi-Anl` – каждые полгода, прочие типы выплат.
      *
      * Generated from protobuf field <code>string regularity = 7;</code>
      * @param string $var
@@ -342,7 +342,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена закрытия инструмента на момент ex_dividend_date.
+     *Цена закрытия инструмента на момент `ex_dividend_date`.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue close_price = 8;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -363,7 +363,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена закрытия инструмента на момент ex_dividend_date.
+     *Цена закрытия инструмента на момент `ex_dividend_date`.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue close_price = 8;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -414,7 +414,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время создания записи в часовом поясе UTC.
+     *Дата и время создания записи по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp created_at = 10;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -435,7 +435,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время создания записи в часовом поясе UTC.
+     *Дата и время создания записи по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp created_at = 10;</code>
      * @param \Google\Protobuf\Timestamp $var

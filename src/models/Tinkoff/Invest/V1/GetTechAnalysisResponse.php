@@ -14,7 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetTechAnalysisResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Массив значений результатов тех. анализа
+     *Массив значений результатов технического анализа.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.GetTechAnalysisResponse.TechAnalysisItem technical_indicators = 1;</code>
      */
@@ -27,7 +27,7 @@ class GetTechAnalysisResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Tinkoff\Invest\V1\GetTechAnalysisResponse\TechAnalysisItem[]|\Google\Protobuf\Internal\RepeatedField $technical_indicators
-     *          Массив значений результатов тех. анализа
+     *          Массив значений результатов технического анализа.
      * }
      */
     public function __construct($data = NULL) {
@@ -36,7 +36,7 @@ class GetTechAnalysisResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив значений результатов тех. анализа
+     *Массив значений результатов технического анализа.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.GetTechAnalysisResponse.TechAnalysisItem technical_indicators = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -47,7 +47,7 @@ class GetTechAnalysisResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив значений результатов тех. анализа
+     *Массив значений результатов технического анализа.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.GetTechAnalysisResponse.TechAnalysisItem technical_indicators = 1;</code>
      * @param \Tinkoff\Invest\V1\GetTechAnalysisResponse\TechAnalysisItem[]|\Google\Protobuf\Internal\RepeatedField $var

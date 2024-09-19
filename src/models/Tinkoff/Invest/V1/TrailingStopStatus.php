@@ -7,26 +7,26 @@ namespace Tinkoff\Invest\V1;
 use UnexpectedValueException;
 
 /**
- *Статус Трейлинг-стопа
+ *Статус трейлинг-стопа.
  *
  * Protobuf type <code>tinkoff.public.invest.api.contract.v1.TrailingStopStatus</code>
  */
 class TrailingStopStatus
 {
     /**
-     *Значение не указано
+     *Значение не указано.
      *
      * Generated from protobuf enum <code>TRAILING_STOP_UNSPECIFIED = 0;</code>
      */
     const TRAILING_STOP_UNSPECIFIED = 0;
     /**
-     *Активный
+     *Активный.
      *
      * Generated from protobuf enum <code>TRAILING_STOP_ACTIVE = 1;</code>
      */
     const TRAILING_STOP_ACTIVE = 1;
     /**
-     *Активированный
+     *Активированный.
      *
      * Generated from protobuf enum <code>TRAILING_STOP_ACTIVATED = 2;</code>
      */

@@ -17,8 +17,8 @@ class OperationsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения списка операций по счёту.При работе с данным методом необходимо учитывать
-     * [особенности взаимодействия](/investAPI/operations_problems) с данным методом.
+     * Получить список операций по счёту. При работе с методом учитывайте
+     * [особенности взаимодействия](/investAPI/operations_problems).
      * @param \Tinkoff\Invest\V1\OperationsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -33,7 +33,7 @@ class OperationsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения портфеля по счёту.
+     * Получить портфель по счёту.
      * @param \Tinkoff\Invest\V1\PortfolioRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -48,7 +48,7 @@ class OperationsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения списка позиций по счёту.
+     * Получить список позиций по счёту.
      * @param \Tinkoff\Invest\V1\PositionsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -63,7 +63,7 @@ class OperationsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения доступного остатка для вывода средств.
+     * Получить доступный остаток для вывода средств.
      * @param \Tinkoff\Invest\V1\WithdrawLimitsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -78,7 +78,7 @@ class OperationsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения брокерского отчёта.
+     * Получить брокерский отчёт.
      * @param \Tinkoff\Invest\V1\BrokerReportRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -93,7 +93,7 @@ class OperationsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения отчёта "Справка о доходах за пределами РФ".
+     * Получить отчёт «Справка о доходах за пределами РФ».
      * @param \Tinkoff\Invest\V1\GetDividendsForeignIssuerRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -108,8 +108,8 @@ class OperationsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения списка операций по счёту с пагинацией. При работе с данным методом необходимо учитывать
-     * [особенности взаимодействия](/investAPI/operations_problems) с данным методом.
+     * Получить список операций по счёту с пагинацией. При работе с методом учитывайте
+     * [особенности взаимодействия](/investAPI/operations_problems).
      * @param \Tinkoff\Invest\V1\GetOperationsByCursorRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

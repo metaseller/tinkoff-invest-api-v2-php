@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class PortfolioPosition extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Figi-идентификатора инструмента.
+     *FIGI-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      */
@@ -34,7 +34,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     protected $quantity = null;
     /**
-     *Средневзвешенная цена позиции. **Возможна задержка до секунды для пересчёта**.
+     *Средневзвешенная цена позиции. Для пересчёта возможна задержка до одной секунды.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price = 4;</code>
      */
@@ -52,20 +52,20 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     protected $current_nkd = null;
     /**
-     * Deprecated Средняя цена позиции в пунктах (для фьючерсов). **Возможна задержка до секунды для пересчёта**.
+     * Deprecated Средняя цена позиции в пунктах (для фьючерсов). Для пересчёта возможна задержка до одной секунды.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation average_position_price_pt = 7 [deprecated = true];</code>
      * @deprecated
      */
     protected $average_position_price_pt = null;
     /**
-     *Текущая цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
+     *Текущая цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue current_price = 8;</code>
      */
     protected $current_price = null;
     /**
-     *Средняя цена позиции по методу FIFO. **Возможна задержка до секунды для пересчёта**.
+     *Средняя цена позиции по методу FIFO. Для пересчёта возможна задержка до одной секунды.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price_fifo = 9;</code>
      */
@@ -90,19 +90,19 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     protected $blocked_lots = null;
     /**
-     *position_uid-идентификатора инструмента
+     *Уникальный идентификатор позиции.
      *
      * Generated from protobuf field <code>string position_uid = 24;</code>
      */
     protected $position_uid = '';
     /**
-     *instrument_uid-идентификатора инструмента
+     *Уникальный идентификатор инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 25;</code>
      */
     protected $instrument_uid = '';
     /**
-     *Вариационная маржа
+     *Вариационная маржа.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue var_margin = 26;</code>
      */
@@ -121,23 +121,23 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $figi
-     *          Figi-идентификатора инструмента.
+     *          FIGI-идентификатор инструмента.
      *     @type string $instrument_type
      *          Тип инструмента.
      *     @type \Tinkoff\Invest\V1\Quotation $quantity
      *          Количество инструмента в портфеле в штуках.
      *     @type \Tinkoff\Invest\V1\MoneyValue $average_position_price
-     *          Средневзвешенная цена позиции. **Возможна задержка до секунды для пересчёта**.
+     *          Средневзвешенная цена позиции. Для пересчёта возможна задержка до одной секунды.
      *     @type \Tinkoff\Invest\V1\Quotation $expected_yield
      *          Текущая рассчитанная доходность позиции.
      *     @type \Tinkoff\Invest\V1\MoneyValue $current_nkd
      *           Текущий НКД.
      *     @type \Tinkoff\Invest\V1\Quotation $average_position_price_pt
-     *           Deprecated Средняя цена позиции в пунктах (для фьючерсов). **Возможна задержка до секунды для пересчёта**.
+     *           Deprecated Средняя цена позиции в пунктах (для фьючерсов). Для пересчёта возможна задержка до одной секунды.
      *     @type \Tinkoff\Invest\V1\MoneyValue $current_price
-     *          Текущая цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
+     *          Текущая цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
      *     @type \Tinkoff\Invest\V1\MoneyValue $average_position_price_fifo
-     *          Средняя цена позиции по методу FIFO. **Возможна задержка до секунды для пересчёта**.
+     *          Средняя цена позиции по методу FIFO. Для пересчёта возможна задержка до одной секунды.
      *     @type \Tinkoff\Invest\V1\Quotation $quantity_lots
      *          Deprecated Количество лотов в портфеле.
      *     @type bool $blocked
@@ -145,11 +145,11 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\Quotation $blocked_lots
      *          Количество бумаг, заблокированных выставленными заявками.
      *     @type string $position_uid
-     *          position_uid-идентификатора инструмента
+     *          Уникальный идентификатор позиции.
      *     @type string $instrument_uid
-     *          instrument_uid-идентификатора инструмента
+     *          Уникальный идентификатор инструмента.
      *     @type \Tinkoff\Invest\V1\MoneyValue $var_margin
-     *          Вариационная маржа
+     *          Вариационная маржа.
      *     @type \Tinkoff\Invest\V1\Quotation $expected_yield_fifo
      *          Текущая рассчитанная доходность позиции.
      * }
@@ -160,7 +160,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатора инструмента.
+     *FIGI-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @return string
@@ -171,7 +171,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатора инструмента.
+     *FIGI-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @param string $var
@@ -248,7 +248,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средневзвешенная цена позиции. **Возможна задержка до секунды для пересчёта**.
+     *Средневзвешенная цена позиции. Для пересчёта возможна задержка до одной секунды.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price = 4;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -269,7 +269,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средневзвешенная цена позиции. **Возможна задержка до секунды для пересчёта**.
+     *Средневзвешенная цена позиции. Для пересчёта возможна задержка до одной секунды.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price = 4;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -356,7 +356,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Deprecated Средняя цена позиции в пунктах (для фьючерсов). **Возможна задержка до секунды для пересчёта**.
+     * Deprecated Средняя цена позиции в пунктах (для фьючерсов). Для пересчёта возможна задержка до одной секунды.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation average_position_price_pt = 7 [deprecated = true];</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -381,7 +381,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Deprecated Средняя цена позиции в пунктах (для фьючерсов). **Возможна задержка до секунды для пересчёта**.
+     * Deprecated Средняя цена позиции в пунктах (для фьючерсов). Для пересчёта возможна задержка до одной секунды.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation average_position_price_pt = 7 [deprecated = true];</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -398,7 +398,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Текущая цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
+     *Текущая цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue current_price = 8;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -419,7 +419,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Текущая цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
+     *Текущая цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue current_price = 8;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -434,7 +434,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средняя цена позиции по методу FIFO. **Возможна задержка до секунды для пересчёта**.
+     *Средняя цена позиции по методу FIFO. Для пересчёта возможна задержка до одной секунды.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price_fifo = 9;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -455,7 +455,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средняя цена позиции по методу FIFO. **Возможна задержка до секунды для пересчёта**.
+     *Средняя цена позиции по методу FIFO. Для пересчёта возможна задержка до одной секунды.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price_fifo = 9;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -574,7 +574,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *position_uid-идентификатора инструмента
+     *Уникальный идентификатор позиции.
      *
      * Generated from protobuf field <code>string position_uid = 24;</code>
      * @return string
@@ -585,7 +585,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *position_uid-идентификатора инструмента
+     *Уникальный идентификатор позиции.
      *
      * Generated from protobuf field <code>string position_uid = 24;</code>
      * @param string $var
@@ -600,7 +600,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *instrument_uid-идентификатора инструмента
+     *Уникальный идентификатор инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 25;</code>
      * @return string
@@ -611,7 +611,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *instrument_uid-идентификатора инструмента
+     *Уникальный идентификатор инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 25;</code>
      * @param string $var
@@ -626,7 +626,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Вариационная маржа
+     *Вариационная маржа.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue var_margin = 26;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -647,7 +647,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Вариационная маржа
+     *Вариационная маржа.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue var_margin = 26;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var

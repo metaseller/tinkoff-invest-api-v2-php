@@ -14,103 +14,103 @@ use UnexpectedValueException;
 class SecurityTradingStatus
 {
     /**
-     *Торговый статус не определён
+     *Торговый статус не определён.
      *
      * Generated from protobuf enum <code>SECURITY_TRADING_STATUS_UNSPECIFIED = 0;</code>
      */
     const SECURITY_TRADING_STATUS_UNSPECIFIED = 0;
     /**
-     *Недоступен для торгов
+     *Недоступен для торгов.
      *
      * Generated from protobuf enum <code>SECURITY_TRADING_STATUS_NOT_AVAILABLE_FOR_TRADING = 1;</code>
      */
     const SECURITY_TRADING_STATUS_NOT_AVAILABLE_FOR_TRADING = 1;
     /**
-     *Период открытия торгов
+     *Период открытия торгов.
      *
      * Generated from protobuf enum <code>SECURITY_TRADING_STATUS_OPENING_PERIOD = 2;</code>
      */
     const SECURITY_TRADING_STATUS_OPENING_PERIOD = 2;
     /**
-     *Период закрытия торгов
+     *Период закрытия торгов.
      *
      * Generated from protobuf enum <code>SECURITY_TRADING_STATUS_CLOSING_PERIOD = 3;</code>
      */
     const SECURITY_TRADING_STATUS_CLOSING_PERIOD = 3;
     /**
-     *Перерыв в торговле
+     *Перерыв в торговле.
      *
      * Generated from protobuf enum <code>SECURITY_TRADING_STATUS_BREAK_IN_TRADING = 4;</code>
      */
     const SECURITY_TRADING_STATUS_BREAK_IN_TRADING = 4;
     /**
-     *Нормальная торговля
+     *Нормальная торговля.
      *
      * Generated from protobuf enum <code>SECURITY_TRADING_STATUS_NORMAL_TRADING = 5;</code>
      */
     const SECURITY_TRADING_STATUS_NORMAL_TRADING = 5;
     /**
-     *Аукцион закрытия
+     *Аукцион закрытия.
      *
      * Generated from protobuf enum <code>SECURITY_TRADING_STATUS_CLOSING_AUCTION = 6;</code>
      */
     const SECURITY_TRADING_STATUS_CLOSING_AUCTION = 6;
     /**
-     *Аукцион крупных пакетов
+     *Аукцион крупных пакетов.
      *
      * Generated from protobuf enum <code>SECURITY_TRADING_STATUS_DARK_POOL_AUCTION = 7;</code>
      */
     const SECURITY_TRADING_STATUS_DARK_POOL_AUCTION = 7;
     /**
-     *Дискретный аукцион
+     *Дискретный аукцион.
      *
      * Generated from protobuf enum <code>SECURITY_TRADING_STATUS_DISCRETE_AUCTION = 8;</code>
      */
     const SECURITY_TRADING_STATUS_DISCRETE_AUCTION = 8;
     /**
-     *Аукцион открытия
+     *Аукцион открытия.
      *
      * Generated from protobuf enum <code>SECURITY_TRADING_STATUS_OPENING_AUCTION_PERIOD = 9;</code>
      */
     const SECURITY_TRADING_STATUS_OPENING_AUCTION_PERIOD = 9;
     /**
-     *Период торгов по цене аукциона закрытия
+     *Период торгов по цене аукциона закрытия.
      *
      * Generated from protobuf enum <code>SECURITY_TRADING_STATUS_TRADING_AT_CLOSING_AUCTION_PRICE = 10;</code>
      */
     const SECURITY_TRADING_STATUS_TRADING_AT_CLOSING_AUCTION_PRICE = 10;
     /**
-     *Сессия назначена
+     *Сессия назначена.
      *
      * Generated from protobuf enum <code>SECURITY_TRADING_STATUS_SESSION_ASSIGNED = 11;</code>
      */
     const SECURITY_TRADING_STATUS_SESSION_ASSIGNED = 11;
     /**
-     *Сессия закрыта
+     *Сессия закрыта.
      *
      * Generated from protobuf enum <code>SECURITY_TRADING_STATUS_SESSION_CLOSE = 12;</code>
      */
     const SECURITY_TRADING_STATUS_SESSION_CLOSE = 12;
     /**
-     *Сессия открыта
+     *Сессия открыта.
      *
      * Generated from protobuf enum <code>SECURITY_TRADING_STATUS_SESSION_OPEN = 13;</code>
      */
     const SECURITY_TRADING_STATUS_SESSION_OPEN = 13;
     /**
-     *Доступна торговля в режиме внутренней ликвидности брокера
+     *Доступна торговля в режиме внутренней ликвидности брокера.
      *
      * Generated from protobuf enum <code>SECURITY_TRADING_STATUS_DEALER_NORMAL_TRADING = 14;</code>
      */
     const SECURITY_TRADING_STATUS_DEALER_NORMAL_TRADING = 14;
     /**
-     *Перерыв торговли в режиме внутренней ликвидности брокера
+     *Перерыв торговли в режиме внутренней ликвидности брокера.
      *
      * Generated from protobuf enum <code>SECURITY_TRADING_STATUS_DEALER_BREAK_IN_TRADING = 15;</code>
      */
     const SECURITY_TRADING_STATUS_DEALER_BREAK_IN_TRADING = 15;
     /**
-     *Недоступна торговля в режиме внутренней ликвидности брокера
+     *Недоступна торговля в режиме внутренней ликвидности брокера.
      *
      * Generated from protobuf enum <code>SECURITY_TRADING_STATUS_DEALER_NOT_AVAILABLE_FOR_TRADING = 16;</code>
      */

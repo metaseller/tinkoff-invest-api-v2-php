@@ -16,19 +16,19 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetAssetReportsRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Идентификатор инструмента в формате uid.
+     *Идентификатор инструмента в формате UID.
      *
      * Generated from protobuf field <code>string instrument_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $instrument_id = '';
     /**
-     *Начало запрашиваемого периода в часовом поясе UTC.
+     *Начало запрашиваемого периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2;</code>
      */
     protected $from = null;
     /**
-     *Окончание запрашиваемого периода в часовом поясе UTC.
+     *Окончание запрашиваемого периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3;</code>
      */
@@ -41,11 +41,11 @@ class GetAssetReportsRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $instrument_id
-     *          Идентификатор инструмента в формате uid.
+     *          Идентификатор инструмента в формате UID.
      *     @type \Google\Protobuf\Timestamp $from
-     *          Начало запрашиваемого периода в часовом поясе UTC.
+     *          Начало запрашиваемого периода по UTC.
      *     @type \Google\Protobuf\Timestamp $to
-     *          Окончание запрашиваемого периода в часовом поясе UTC.
+     *          Окончание запрашиваемого периода по UTC.
      * }
      */
     public function __construct($data = NULL) {
@@ -54,7 +54,7 @@ class GetAssetReportsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента в формате uid.
+     *Идентификатор инструмента в формате UID.
      *
      * Generated from protobuf field <code>string instrument_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
@@ -65,7 +65,7 @@ class GetAssetReportsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента в формате uid.
+     *Идентификатор инструмента в формате UID.
      *
      * Generated from protobuf field <code>string instrument_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
@@ -80,7 +80,7 @@ class GetAssetReportsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Начало запрашиваемого периода в часовом поясе UTC.
+     *Начало запрашиваемого периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -101,7 +101,7 @@ class GetAssetReportsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Начало запрашиваемого периода в часовом поясе UTC.
+     *Начало запрашиваемого периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -116,7 +116,7 @@ class GetAssetReportsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Окончание запрашиваемого периода в часовом поясе UTC.
+     *Окончание запрашиваемого периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -137,7 +137,7 @@ class GetAssetReportsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Окончание запрашиваемого периода в часовом поясе UTC.
+     *Окончание запрашиваемого периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3;</code>
      * @param \Google\Protobuf\Timestamp $var

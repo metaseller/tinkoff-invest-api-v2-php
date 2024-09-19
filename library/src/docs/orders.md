@@ -19,7 +19,7 @@ Stream сделок пользователя
 
 
 #### OrderStateStream
-Stream поручений пользователя
+Stream поручений пользователя. Перед работой прочитайте [статью](https://russianinvestments.github.io/investAPI/orders_state_stream/).
 
 - Тело запроса — [OrderStateStreamRequest](#orderstatestreamrequest)
 
@@ -42,6 +42,14 @@ Stream поручений пользователя
 - Тело запроса — [PostOrderRequest](#postorderrequest)
 
 - Тело ответа — [PostOrderResponse](#postorderresponse)
+
+
+#### PostOrderAsync
+Асинхронный метод выставления заявки.
+
+- Тело запроса — [PostOrderAsyncRequest](#postorderasyncrequest)
+
+- Тело ответа — [PostOrderAsyncResponse](#postorderasyncresponse)
 
 
 #### CancelOrder
@@ -117,6 +125,7 @@ Stream поручений пользователя
 | ----- | ---- | ----------- |
 | order_trades |  [OrderTrades](#ordertrades) | Информация об исполнении торгового поручения. |
 | ping |  [Ping](#ping) | Проверка активности стрима. |
+| subscription |  [SubscriptionResponse](#subscriptionresponse) | Ответ на запрос на подписку. |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -201,6 +210,38 @@ Stream поручений пользователя
  <!-- end HasFields -->
 
  
+#### PostOrderAsyncRequest
+Запрос выставления асинхронного торгового поручения.
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| instrument_id |  [string](#string) | Идентификатор инструмента, принимает значения Figi или Instrument_uid. |
+| quantity |  [int64](#int64) | Количество лотов. |
+| price |  [Quotation](#quotation) | Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Игнорируется для рыночных поручений. |
+| direction |  [OrderDirection](#orderdirection) | Направление операции. |
+| account_id |  [string](#string) | Номер счёта. |
+| order_type |  [OrderType](#ordertype) | Тип заявки. |
+| order_id |  [string](#string) | Идентификатор запроса выставления поручения для целей идемпотентности в формате UID. Максимальная длина 36 символов. |
+| time_in_force |  [TimeInForceType](#timeinforcetype) | Алгоритм исполнения поручения, применяется только к лимитной заявке. |
+| price_type |  [PriceType](#pricetype) | Тип цены. |
+ <!-- end Fields -->
+ <!-- end HasFields -->
+
+ 
+#### PostOrderAsyncResponse
+Результат выставления асинхронного торгового поручения.
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| order_request_id |  [string](#string) | Идентификатор ключа идемпотентности, переданный клиентом, в формате UID. Максимальная длина 36 символов. |
+| execution_report_status |  [OrderExecutionReportStatus](#orderexecutionreportstatus) | Текущий статус заявки. |
+| trade_intent_id |  [string](#string) | Идентификатор торгового поручения. |
+ <!-- end Fields -->
+ <!-- end HasFields -->
+
+ 
 #### CancelOrderRequest
 Запрос отмены торгового поручения.
 
@@ -209,6 +250,7 @@ Stream поручений пользователя
 | ----- | ---- | ----------- |
 | account_id |  [string](#string) | Номер счёта. |
 | order_id |  [string](#string) | Идентификатор заявки. |
+| order_id_type |  [OrderIdType](#orderidtype) | Тип идентификатора заявки. |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -234,6 +276,7 @@ Stream поручений пользователя
 | account_id |  [string](#string) | Номер счёта. |
 | order_id |  [string](#string) | Идентификатор заявки. |
 | price_type |  [PriceType](#pricetype) | Тип цены. |
+| order_id_type |  [OrderIdType](#orderidtype) | Тип идентификатора заявки. |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -441,6 +484,21 @@ Stream поручений пользователя
  <!-- end HasFields -->
 
  
+#### SubscriptionResponse
+Информация по подпискам
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| tracking_id |  [string](#string) | Уникальный идентификатор запроса, подробнее: [tracking_id](https://russianinvestments.github.io/investAPI/grpc#tracking-id). |
+| status |  [ResultSubscriptionStatus](#resultsubscriptionstatus) | Статус подписки. |
+| stream_id |  [string](#string) | Идентификатор открытого соединения |
+| accounts | Массив объектов [string](#string) | Идентификаторы счетов. |
+| error |  [ErrorDetail](#errordetail) |  |
+ <!-- end Fields -->
+ <!-- end HasFields -->
+
+ 
 #### OrderStateStreamResponse
 Информация по заявкам
 
@@ -449,34 +507,7 @@ Stream поручений пользователя
 | ----- | ---- | ----------- |
 | order_state |  [OrderStateStreamResponse.OrderState](#orderstatestreamresponseorderstate) | Информация об исполнении торгового поручения. |
 | ping |  [Ping](#ping) | Проверка активности стрима. |
-| subscription |  [OrderStateStreamResponse.SubscriptionResponse](#orderstatestreamresponsesubscriptionresponse) | Ответ на запрос на подписку. |
- <!-- end Fields -->
- <!-- end HasFields -->
-
- 
-#### OrderStateStreamResponse.SubscriptionResponse
-
-
-
-| Field | Type | Description |
-| ----- | ---- | ----------- |
-| tracking_id |  [string](#string) | Уникальный идентификатор запроса, подробнее: [tracking_id](https://russianinvestments.github.io/investAPI/grpc#tracking-id). |
-| status |  [OrderStateStreamResponse.SubscriptionResponse.SubscriptionStatus](#orderstatestreamresponsesubscriptionresponsesubscriptionstatus) | Статус подписки. |
-| stream_id |  [string](#string) | Идентификатор открытого соединения |
-| accounts | Массив объектов [string](#string) | Идентификаторы счетов. |
-| error |  [OrderStateStreamResponse.SubscriptionResponse.ErrorDetail](#orderstatestreamresponsesubscriptionresponseerrordetail) |  |
- <!-- end Fields -->
- <!-- end HasFields -->
-
- 
-#### OrderStateStreamResponse.SubscriptionResponse.ErrorDetail
-
-
-
-| Field | Type | Description |
-| ----- | ---- | ----------- |
-| code |  [string](#string) | Код ошибки. |
-| message |  [string](#string) | Описание ошибки. |
+| subscription |  [SubscriptionResponse](#subscriptionresponse) | Ответ на запрос на подписку. |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -574,6 +605,18 @@ Stream поручений пользователя
 
 
 
+#### OrderIdType
+Тип идентификатора заявки
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| ORDER_ID_TYPE_UNSPECIFIED | 0 | Тип идентификатора не указан. |
+| ORDER_ID_TYPE_EXCHANGE | 1 | Биржевой идентификатор |
+| ORDER_ID_TYPE_REQUEST | 2 | Ключ идемпотентности, переданный клиентом |
+
+
+
+
 #### OrderStateStreamResponse.MarkerType
 Маркер
 
@@ -607,18 +650,6 @@ Stream поручений пользователя
 | CAUSE_CANCELLED_BY_BROKER | 6 | Отменено брокером |
 
 
-
-
-#### OrderStateStreamResponse.SubscriptionResponse.SubscriptionStatus
-
-
-| Name | Number | Description |
-| ---- | ------ | ----------- |
-| SUBSCRIPTION_STATUS_UNSPECIFIED | 0 | Статус подписки не определен. |
-| SUBSCRIPTION_STATUS_OK | 1 | Подписка успешно установлена. |
-| SUBSCRIPTION_STATUS_ERROR | 13 | Ошибка подписки |
-
-
  <!-- range .Enums -->
  <!-- range HasServices -->
  <!-- range .Files -->
@@ -639,9 +670,26 @@ Stream поручений пользователя
 | [tracking_id](https://russianinvestments.github.io/investAPI/grpc/#tracking-id) |  [string](#string) | Идентификатор трекинга |
 | server_time |  [google.protobuf.Timestamp](#google.protobuf.Timestamp) | Серверное время |
 
+#### ResultSubscriptionStatus
+Результат подписки
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| SUBSCRIPTION_STATUS_UNSPECIFIED | 0 | Статус подписки не определен. |
+| SUBSCRIPTION_STATUS_OK | 1 | Подписка успешно установлена. |
+| SUBSCRIPTION_STATUS_ERROR | 13 | Ошибка подписки |
+
+### ErrorDetail
+Описание ошибки
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| code |  [string](#string) | Код ошибки. |
+| message |  [string](#string) | Описание ошибки. |
+
 ### Про тип цены
 
-В TINKOFF INVEST API ответ в методах для фьючерсов и облигаций может возвращаться как в валюте расчетов, так и в пунктах цены.
+В T-INVEST API ответ в методах для фьючерсов и облигаций может возвращаться как в валюте расчетов, так и в пунктах цены.
 Стоимость пункта может меняться в зависимости от курсовой разницы.
 Про конвертацию пунктов в валюту можно почитать [тут](https://russianinvestments.github.io/investAPI/points/)
 
@@ -664,7 +712,6 @@ Stream поручений пользователя
 | ----- | ---- | ----------- |
 | units |  [int64](#int64) | Целая часть суммы, может быть отрицательным числом |
 | nano |  [int32](#int32) | Дробная часть суммы, может быть отрицательным числом |
-
 
 
 ####Числа с плавающей точкой(запятой)

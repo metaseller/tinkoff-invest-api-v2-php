@@ -14,19 +14,19 @@ use UnexpectedValueException;
 class ExchangeOrderType
 {
     /**
-     *Значение не указано
+     *Значение не указано.
      *
      * Generated from protobuf enum <code>EXCHANGE_ORDER_TYPE_UNSPECIFIED = 0;</code>
      */
     const EXCHANGE_ORDER_TYPE_UNSPECIFIED = 0;
     /**
-     *Заявка по рыночной цене
+     *Заявка по рыночной цене.
      *
      * Generated from protobuf enum <code>EXCHANGE_ORDER_TYPE_MARKET = 1;</code>
      */
     const EXCHANGE_ORDER_TYPE_MARKET = 1;
     /**
-     *Лимитная заявка
+     *Лимитная заявка.
      *
      * Generated from protobuf enum <code>EXCHANGE_ORDER_TYPE_LIMIT = 2;</code>
      */

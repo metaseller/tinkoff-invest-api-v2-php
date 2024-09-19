@@ -9,14 +9,14 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Запрос прогнозов инвестдомов
+ *Запрос прогнозов инвестдомов.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.GetForecastRequest</code>
  */
 class GetForecastRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Идентификатор инструмента
+     * Идентификатор инструмента.
      *
      * Generated from protobuf field <code>string instrument_id = 1;</code>
      */
@@ -29,7 +29,7 @@ class GetForecastRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $instrument_id
-     *           Идентификатор инструмента
+     *           Идентификатор инструмента.
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +38,7 @@ class GetForecastRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Идентификатор инструмента
+     * Идентификатор инструмента.
      *
      * Generated from protobuf field <code>string instrument_id = 1;</code>
      * @return string
@@ -49,7 +49,7 @@ class GetForecastRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Идентификатор инструмента
+     * Идентификатор инструмента.
      *
      * Generated from protobuf field <code>string instrument_id = 1;</code>
      * @param string $var

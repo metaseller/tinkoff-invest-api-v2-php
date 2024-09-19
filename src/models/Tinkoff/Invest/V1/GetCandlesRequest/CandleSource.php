@@ -23,10 +23,17 @@ class CandleSource
      * Generated from protobuf enum <code>CANDLE_SOURCE_EXCHANGE = 1;</code>
      */
     const CANDLE_SOURCE_EXCHANGE = 1;
+    /**
+     *Все свечи с учетом торговли по выходным.
+     *
+     * Generated from protobuf enum <code>CANDLE_SOURCE_INCLUDE_WEEKEND = 3;</code>
+     */
+    const CANDLE_SOURCE_INCLUDE_WEEKEND = 3;
 
     private static $valueToName = [
         self::CANDLE_SOURCE_UNSPECIFIED => 'CANDLE_SOURCE_UNSPECIFIED',
         self::CANDLE_SOURCE_EXCHANGE => 'CANDLE_SOURCE_EXCHANGE',
+        self::CANDLE_SOURCE_INCLUDE_WEEKEND => 'CANDLE_SOURCE_INCLUDE_WEEKEND',
     ];
 
     public static function name($value)

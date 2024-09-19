@@ -12,25 +12,25 @@ use UnexpectedValueException;
 class Recommendation
 {
     /**
-     * Не определено
+     * Не определено.
      *
      * Generated from protobuf enum <code>RECOMMENDATION_UNSPECIFIED = 0;</code>
      */
     const RECOMMENDATION_UNSPECIFIED = 0;
     /**
-     * Покупать
+     * Покупать.
      *
      * Generated from protobuf enum <code>RECOMMENDATION_BUY = 1;</code>
      */
     const RECOMMENDATION_BUY = 1;
     /**
-     * Держать
+     * Держать.
      *
      * Generated from protobuf enum <code>RECOMMENDATION_HOLD = 2;</code>
      */
     const RECOMMENDATION_HOLD = 2;
     /**
-     * Продавать
+     * Продавать.
      *
      * Generated from protobuf enum <code>RECOMMENDATION_SELL = 3;</code>
      */

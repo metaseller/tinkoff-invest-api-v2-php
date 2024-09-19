@@ -14,13 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class ResponseMetadata extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Идентификатор трекинга
+     *Идентификатор трекинга.
      *
      * Generated from protobuf field <code>string tracking_id = 42;</code>
      */
     protected $tracking_id = '';
     /**
-     *Серверное время
+     *Серверное время.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp server_time = 43;</code>
      */
@@ -33,9 +33,9 @@ class ResponseMetadata extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $tracking_id
-     *          Идентификатор трекинга
+     *          Идентификатор трекинга.
      *     @type \Google\Protobuf\Timestamp $server_time
-     *          Серверное время
+     *          Серверное время.
      * }
      */
     public function __construct($data = NULL) {
@@ -44,7 +44,7 @@ class ResponseMetadata extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор трекинга
+     *Идентификатор трекинга.
      *
      * Generated from protobuf field <code>string tracking_id = 42;</code>
      * @return string
@@ -55,7 +55,7 @@ class ResponseMetadata extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор трекинга
+     *Идентификатор трекинга.
      *
      * Generated from protobuf field <code>string tracking_id = 42;</code>
      * @param string $var
@@ -70,7 +70,7 @@ class ResponseMetadata extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Серверное время
+     *Серверное время.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp server_time = 43;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -91,7 +91,7 @@ class ResponseMetadata extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Серверное время
+     *Серверное время.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp server_time = 43;</code>
      * @param \Google\Protobuf\Timestamp $var

@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetAssetFundamentalsRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Массив идентификаторов активов (не более 100 шт.).
+     *Массив идентификаторов активов, не более 100 шт.
      *
      * Generated from protobuf field <code>repeated string assets = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
@@ -29,7 +29,7 @@ class GetAssetFundamentalsRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $assets
-     *          Массив идентификаторов активов (не более 100 шт.).
+     *          Массив идентификаторов активов, не более 100 шт.
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +38,7 @@ class GetAssetFundamentalsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив идентификаторов активов (не более 100 шт.).
+     *Массив идентификаторов активов, не более 100 шт.
      *
      * Generated from protobuf field <code>repeated string assets = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -49,7 +49,7 @@ class GetAssetFundamentalsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив идентификаторов активов (не более 100 шт.).
+     *Массив идентификаторов активов, не более 100 шт.
      *
      * Generated from protobuf field <code>repeated string assets = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string[]|\Google\Protobuf\Internal\RepeatedField $var

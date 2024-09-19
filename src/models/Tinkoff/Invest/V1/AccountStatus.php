@@ -37,12 +37,19 @@ class AccountStatus
      * Generated from protobuf enum <code>ACCOUNT_STATUS_CLOSED = 3;</code>
      */
     const ACCOUNT_STATUS_CLOSED = 3;
+    /**
+     *Все счета.
+     *
+     * Generated from protobuf enum <code>ACCOUNT_STATUS_ALL = 4;</code>
+     */
+    const ACCOUNT_STATUS_ALL = 4;
 
     private static $valueToName = [
         self::ACCOUNT_STATUS_UNSPECIFIED => 'ACCOUNT_STATUS_UNSPECIFIED',
         self::ACCOUNT_STATUS_NEW => 'ACCOUNT_STATUS_NEW',
         self::ACCOUNT_STATUS_OPEN => 'ACCOUNT_STATUS_OPEN',
         self::ACCOUNT_STATUS_CLOSED => 'ACCOUNT_STATUS_CLOSED',
+        self::ACCOUNT_STATUS_ALL => 'ACCOUNT_STATUS_ALL',
     ];
 
     public static function name($value)

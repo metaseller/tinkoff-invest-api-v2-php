@@ -16,73 +16,73 @@ use Google\Protobuf\Internal\GPBUtil;
 class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
 {
     /**
-     * uid идентификатор
+     * UID-идентификатор.
      *
      * Generated from protobuf field <code>string uid = 1;</code>
      */
     protected $uid = '';
     /**
-     * uid идентификатор актива
+     * UID-идентификатор актива.
      *
      * Generated from protobuf field <code>string asset_uid = 2;</code>
      */
     protected $asset_uid = '';
     /**
-     * Дата и время создания записи
+     * Дата и время создания записи.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     protected $created_at = null;
     /**
-     * Целевая цена на 12 месяцев
+     * Целевая цена на 12 месяцев.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation best_target_price = 4;</code>
      */
     protected $best_target_price = null;
     /**
-     * Минимальная прогнозная цена
+     * Минимальная прогнозная цена.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation best_target_low = 5;</code>
      */
     protected $best_target_low = null;
     /**
-     * Максимальная прогнозная цена
+     * Максимальная прогнозная цена.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation best_target_high = 6;</code>
      */
     protected $best_target_high = null;
     /**
-     * Количество аналитиков рекомендующих покупать
+     * Количество аналитиков рекомендующих покупать.
      *
      * Generated from protobuf field <code>int32 total_buy_recommend = 7;</code>
      */
     protected $total_buy_recommend = 0;
     /**
-     * Количество аналитиков рекомендующих держать
+     * Количество аналитиков рекомендующих держать.
      *
      * Generated from protobuf field <code>int32 total_hold_recommend = 8;</code>
      */
     protected $total_hold_recommend = 0;
     /**
-     * Количество аналитиков рекомендующих продавать
+     * Количество аналитиков рекомендующих продавать.
      *
      * Generated from protobuf field <code>int32 total_sell_recommend = 9;</code>
      */
     protected $total_sell_recommend = 0;
     /**
-     * Валюта прогнозов /инструмента
+     * Валюта прогнозов инструмента.
      *
      * Generated from protobuf field <code>string currency = 10;</code>
      */
     protected $currency = '';
     /**
-     * Консенсус-прогноз
+     * Консенсус-прогноз.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Recommendation consensus = 11;</code>
      */
     protected $consensus = 0;
     /**
-     * Дата прогноза
+     * Дата прогноза.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp prognosis_date = 12;</code>
      */
@@ -95,29 +95,29 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $uid
-     *           uid идентификатор
+     *           UID-идентификатор.
      *     @type string $asset_uid
-     *           uid идентификатор актива
+     *           UID-идентификатор актива.
      *     @type \Google\Protobuf\Timestamp $created_at
-     *           Дата и время создания записи
+     *           Дата и время создания записи.
      *     @type \Tinkoff\Invest\V1\Quotation $best_target_price
-     *           Целевая цена на 12 месяцев
+     *           Целевая цена на 12 месяцев.
      *     @type \Tinkoff\Invest\V1\Quotation $best_target_low
-     *           Минимальная прогнозная цена
+     *           Минимальная прогнозная цена.
      *     @type \Tinkoff\Invest\V1\Quotation $best_target_high
-     *           Максимальная прогнозная цена
+     *           Максимальная прогнозная цена.
      *     @type int $total_buy_recommend
-     *           Количество аналитиков рекомендующих покупать
+     *           Количество аналитиков рекомендующих покупать.
      *     @type int $total_hold_recommend
-     *           Количество аналитиков рекомендующих держать
+     *           Количество аналитиков рекомендующих держать.
      *     @type int $total_sell_recommend
-     *           Количество аналитиков рекомендующих продавать
+     *           Количество аналитиков рекомендующих продавать.
      *     @type string $currency
-     *           Валюта прогнозов /инструмента
+     *           Валюта прогнозов инструмента.
      *     @type int $consensus
-     *           Консенсус-прогноз
+     *           Консенсус-прогноз.
      *     @type \Google\Protobuf\Timestamp $prognosis_date
-     *           Дата прогноза
+     *           Дата прогноза.
      * }
      */
     public function __construct($data = NULL) {
@@ -126,7 +126,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * uid идентификатор
+     * UID-идентификатор.
      *
      * Generated from protobuf field <code>string uid = 1;</code>
      * @return string
@@ -137,7 +137,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * uid идентификатор
+     * UID-идентификатор.
      *
      * Generated from protobuf field <code>string uid = 1;</code>
      * @param string $var
@@ -152,7 +152,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * uid идентификатор актива
+     * UID-идентификатор актива.
      *
      * Generated from protobuf field <code>string asset_uid = 2;</code>
      * @return string
@@ -163,7 +163,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * uid идентификатор актива
+     * UID-идентификатор актива.
      *
      * Generated from protobuf field <code>string asset_uid = 2;</code>
      * @param string $var
@@ -178,7 +178,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Дата и время создания записи
+     * Дата и время создания записи.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp created_at = 3;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -199,7 +199,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Дата и время создания записи
+     * Дата и время создания записи.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp created_at = 3;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -214,7 +214,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Целевая цена на 12 месяцев
+     * Целевая цена на 12 месяцев.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation best_target_price = 4;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -235,7 +235,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Целевая цена на 12 месяцев
+     * Целевая цена на 12 месяцев.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation best_target_price = 4;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -250,7 +250,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Минимальная прогнозная цена
+     * Минимальная прогнозная цена.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation best_target_low = 5;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -271,7 +271,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Минимальная прогнозная цена
+     * Минимальная прогнозная цена.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation best_target_low = 5;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -286,7 +286,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Максимальная прогнозная цена
+     * Максимальная прогнозная цена.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation best_target_high = 6;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -307,7 +307,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Максимальная прогнозная цена
+     * Максимальная прогнозная цена.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation best_target_high = 6;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -322,7 +322,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Количество аналитиков рекомендующих покупать
+     * Количество аналитиков рекомендующих покупать.
      *
      * Generated from protobuf field <code>int32 total_buy_recommend = 7;</code>
      * @return int
@@ -333,7 +333,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Количество аналитиков рекомендующих покупать
+     * Количество аналитиков рекомендующих покупать.
      *
      * Generated from protobuf field <code>int32 total_buy_recommend = 7;</code>
      * @param int $var
@@ -348,7 +348,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Количество аналитиков рекомендующих держать
+     * Количество аналитиков рекомендующих держать.
      *
      * Generated from protobuf field <code>int32 total_hold_recommend = 8;</code>
      * @return int
@@ -359,7 +359,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Количество аналитиков рекомендующих держать
+     * Количество аналитиков рекомендующих держать.
      *
      * Generated from protobuf field <code>int32 total_hold_recommend = 8;</code>
      * @param int $var
@@ -374,7 +374,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Количество аналитиков рекомендующих продавать
+     * Количество аналитиков рекомендующих продавать.
      *
      * Generated from protobuf field <code>int32 total_sell_recommend = 9;</code>
      * @return int
@@ -385,7 +385,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Количество аналитиков рекомендующих продавать
+     * Количество аналитиков рекомендующих продавать.
      *
      * Generated from protobuf field <code>int32 total_sell_recommend = 9;</code>
      * @param int $var
@@ -400,7 +400,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Валюта прогнозов /инструмента
+     * Валюта прогнозов инструмента.
      *
      * Generated from protobuf field <code>string currency = 10;</code>
      * @return string
@@ -411,7 +411,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Валюта прогнозов /инструмента
+     * Валюта прогнозов инструмента.
      *
      * Generated from protobuf field <code>string currency = 10;</code>
      * @param string $var
@@ -426,7 +426,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Консенсус-прогноз
+     * Консенсус-прогноз.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Recommendation consensus = 11;</code>
      * @return int
@@ -437,7 +437,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Консенсус-прогноз
+     * Консенсус-прогноз.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Recommendation consensus = 11;</code>
      * @param int $var
@@ -452,7 +452,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Дата прогноза
+     * Дата прогноза.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp prognosis_date = 12;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -473,7 +473,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Дата прогноза
+     * Дата прогноза.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp prognosis_date = 12;</code>
      * @param \Google\Protobuf\Timestamp $var

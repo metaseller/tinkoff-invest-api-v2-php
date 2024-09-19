@@ -26,13 +26,13 @@ class AccessLevel
      */
     const ACCOUNT_ACCESS_LEVEL_FULL_ACCESS = 1;
     /**
-     *Доступ с уровнем прав "только чтение".
+     *Доступ с уровнем прав «только чтение».
      *
      * Generated from protobuf enum <code>ACCOUNT_ACCESS_LEVEL_READ_ONLY = 2;</code>
      */
     const ACCOUNT_ACCESS_LEVEL_READ_ONLY = 2;
     /**
-     *Доступ отсутствует.
+     *Доступа нет.
      *
      * Generated from protobuf enum <code>ACCOUNT_ACCESS_LEVEL_NO_ACCESS = 3;</code>
      */

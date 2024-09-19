@@ -28,7 +28,7 @@ class PositionsOptions extends \Google\Protobuf\Internal\Message
      */
     protected $instrument_uid = '';
     /**
-     *Количество бумаг заблокированных выставленными заявками.
+     *Количество бумаг, заблокированных выставленными заявками.
      *
      * Generated from protobuf field <code>int64 blocked = 11;</code>
      */
@@ -51,7 +51,7 @@ class PositionsOptions extends \Google\Protobuf\Internal\Message
      *     @type string $instrument_uid
      *          Уникальный идентификатор  инструмента.
      *     @type int|string $blocked
-     *          Количество бумаг заблокированных выставленными заявками.
+     *          Количество бумаг, заблокированных выставленными заявками.
      *     @type int|string $balance
      *          Текущий незаблокированный баланс.
      * }
@@ -114,7 +114,7 @@ class PositionsOptions extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество бумаг заблокированных выставленными заявками.
+     *Количество бумаг, заблокированных выставленными заявками.
      *
      * Generated from protobuf field <code>int64 blocked = 11;</code>
      * @return int|string
@@ -125,7 +125,7 @@ class PositionsOptions extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Количество бумаг заблокированных выставленными заявками.
+     *Количество бумаг, заблокированных выставленными заявками.
      *
      * Generated from protobuf field <code>int64 blocked = 11;</code>
      * @param int|string $var

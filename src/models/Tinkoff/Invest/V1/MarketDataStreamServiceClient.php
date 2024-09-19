@@ -17,7 +17,7 @@ class MarketDataStreamServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Bi-directional стрим предоставления биржевой информации.
+     * Bidirectional-стрим предоставления биржевой информации.
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\BidiStreamingCall

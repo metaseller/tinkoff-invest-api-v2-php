@@ -16,14 +16,14 @@ use Google\Protobuf\Internal\GPBUtil;
 class EditFavoritesRequestInstrument extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Figi-идентификатор инструмента.
+     *FIGI-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @deprecated
      */
     protected $figi = null;
     /**
-     *Идентификатор инструмента Figi или instrument_uid
+     *Идентификатор инструмента — `figi` или `instrument_uid`.
      *
      * Generated from protobuf field <code>string instrument_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
@@ -36,9 +36,9 @@ class EditFavoritesRequestInstrument extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $figi
-     *          Figi-идентификатор инструмента.
+     *          FIGI-идентификатор инструмента.
      *     @type string $instrument_id
-     *          Идентификатор инструмента Figi или instrument_uid
+     *          Идентификатор инструмента — `figi` или `instrument_uid`.
      * }
      */
     public function __construct($data = NULL) {
@@ -47,7 +47,7 @@ class EditFavoritesRequestInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента.
+     *FIGI-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @return string
@@ -72,7 +72,7 @@ class EditFavoritesRequestInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента.
+     *FIGI-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @param string $var
@@ -89,7 +89,7 @@ class EditFavoritesRequestInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента Figi или instrument_uid
+     *Идентификатор инструмента — `figi` или `instrument_uid`.
      *
      * Generated from protobuf field <code>string instrument_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
@@ -100,7 +100,7 @@ class EditFavoritesRequestInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента Figi или instrument_uid
+     *Идентификатор инструмента — `figi` или `instrument_uid`.
      *
      * Generated from protobuf field <code>string instrument_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var

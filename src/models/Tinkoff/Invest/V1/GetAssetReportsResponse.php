@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetAssetReportsResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Массив событий по облигации
+     * Массив событий по облигации.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.GetAssetReportsResponse.GetAssetReportsEvent events = 1;</code>
      */
@@ -29,7 +29,7 @@ class GetAssetReportsResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Tinkoff\Invest\V1\GetAssetReportsResponse\GetAssetReportsEvent[]|\Google\Protobuf\Internal\RepeatedField $events
-     *           Массив событий по облигации
+     *           Массив событий по облигации.
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +38,7 @@ class GetAssetReportsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Массив событий по облигации
+     * Массив событий по облигации.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.GetAssetReportsResponse.GetAssetReportsEvent events = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -49,7 +49,7 @@ class GetAssetReportsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Массив событий по облигации
+     * Массив событий по облигации.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.GetAssetReportsResponse.GetAssetReportsEvent events = 1;</code>
      * @param \Tinkoff\Invest\V1\GetAssetReportsResponse\GetAssetReportsEvent[]|\Google\Protobuf\Internal\RepeatedField $var

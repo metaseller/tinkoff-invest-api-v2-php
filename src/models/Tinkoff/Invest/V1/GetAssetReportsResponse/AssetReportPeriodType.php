@@ -12,25 +12,25 @@ use UnexpectedValueException;
 class AssetReportPeriodType
 {
     /**
-     *не указан
+     * Не указан.
      *
      * Generated from protobuf enum <code>PERIOD_TYPE_UNSPECIFIED = 0;</code>
      */
     const PERIOD_TYPE_UNSPECIFIED = 0;
     /**
-     * Квартальный
+     * Квартальный.
      *
      * Generated from protobuf enum <code>PERIOD_TYPE_QUARTER = 1;</code>
      */
     const PERIOD_TYPE_QUARTER = 1;
     /**
-     * Полугодовой
+     * Полугодовой.
      *
      * Generated from protobuf enum <code>PERIOD_TYPE_SEMIANNUAL = 2;</code>
      */
     const PERIOD_TYPE_SEMIANNUAL = 2;
     /**
-     * Годовой
+     * Годовой.
      *
      * Generated from protobuf enum <code>PERIOD_TYPE_ANNUAL = 3;</code>
      */

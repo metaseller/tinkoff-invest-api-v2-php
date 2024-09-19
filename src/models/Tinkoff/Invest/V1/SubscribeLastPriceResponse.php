@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class SubscribeLastPriceResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Уникальный идентификатор запроса, подробнее: [tracking_id](https://russianinvestments.github.io/investAPI/grpc#tracking-id).
+     *Уникальный идентификатор запроса. [Подробнее](https://russianinvestments.github.io/investAPI/grpc#tracking-id).
      *
      * Generated from protobuf field <code>string tracking_id = 1;</code>
      */
@@ -35,7 +35,7 @@ class SubscribeLastPriceResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $tracking_id
-     *          Уникальный идентификатор запроса, подробнее: [tracking_id](https://russianinvestments.github.io/investAPI/grpc#tracking-id).
+     *          Уникальный идентификатор запроса. [Подробнее](https://russianinvestments.github.io/investAPI/grpc#tracking-id).
      *     @type \Tinkoff\Invest\V1\LastPriceSubscription[]|\Google\Protobuf\Internal\RepeatedField $last_price_subscriptions
      *          Массив статусов подписки на цену последней сделки.
      * }
@@ -46,7 +46,7 @@ class SubscribeLastPriceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Уникальный идентификатор запроса, подробнее: [tracking_id](https://russianinvestments.github.io/investAPI/grpc#tracking-id).
+     *Уникальный идентификатор запроса. [Подробнее](https://russianinvestments.github.io/investAPI/grpc#tracking-id).
      *
      * Generated from protobuf field <code>string tracking_id = 1;</code>
      * @return string
@@ -57,7 +57,7 @@ class SubscribeLastPriceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Уникальный идентификатор запроса, подробнее: [tracking_id](https://russianinvestments.github.io/investAPI/grpc#tracking-id).
+     *Уникальный идентификатор запроса. [Подробнее](https://russianinvestments.github.io/investAPI/grpc#tracking-id).
      *
      * Generated from protobuf field <code>string tracking_id = 1;</code>
      * @param string $var

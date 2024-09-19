@@ -16,25 +16,25 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Идентификатор счёта клиента. Обязательный параметр для данного метода, остальные параметры опциональны.
+     *Идентификатор счёта клиента, обязательный параметр. Остальные параметры опциональны.
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $account_id = '';
     /**
-     *Идентификатор инструмента (Figi инструмента или uid инструмента)
+     *Идентификатор инструмента — FIGI или UID инструмента.
      *
      * Generated from protobuf field <code>string instrument_id = 2;</code>
      */
     protected $instrument_id = null;
     /**
-     *Начало периода (по UTC).
+     *Начало периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 6;</code>
      */
     protected $from = null;
     /**
-     *Окончание периода (по UTC).
+     *Окончание периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 7;</code>
      */
@@ -46,25 +46,25 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      */
     protected $cursor = null;
     /**
-     *Лимит количества операций. По умолчанию устанавливается значение **100**, максимальное значение 1000.
+     *Лимит количества операций. По умолчанию — `100`, максимальное значение — `1000`.
      *
      * Generated from protobuf field <code>int32 limit = 12;</code>
      */
     protected $limit = null;
     /**
-     *Тип операции. Принимает значение из списка OperationType.
+     *Тип операции. Принимает значение из списка `OperationType`.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OperationType operation_types = 13;</code>
      */
     private $operation_types;
     /**
-     *Статус запрашиваемых операций, возможные значения указаны в OperationState.
+     *Статус запрашиваемых операций. Возможные значения указаны в `OperationState`.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OperationState state = 14;</code>
      */
     protected $state = null;
     /**
-     *Флаг возвращать ли комиссии, по умолчанию false
+     *Флаг возврата комиссии. По умолчанию — `false`.
      *
      * Generated from protobuf field <code>bool without_commissions = 15;</code>
      */
@@ -76,7 +76,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      */
     protected $without_trades = null;
     /**
-     *Флаг не показывать overnight операций.
+     *Флаг показа overnight операций.
      *
      * Generated from protobuf field <code>bool without_overnights = 17;</code>
      */
@@ -89,27 +89,27 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $account_id
-     *          Идентификатор счёта клиента. Обязательный параметр для данного метода, остальные параметры опциональны.
+     *          Идентификатор счёта клиента, обязательный параметр. Остальные параметры опциональны.
      *     @type string $instrument_id
-     *          Идентификатор инструмента (Figi инструмента или uid инструмента)
+     *          Идентификатор инструмента — FIGI или UID инструмента.
      *     @type \Google\Protobuf\Timestamp $from
-     *          Начало периода (по UTC).
+     *          Начало периода по UTC.
      *     @type \Google\Protobuf\Timestamp $to
-     *          Окончание периода (по UTC).
+     *          Окончание периода по UTC.
      *     @type string $cursor
      *          Идентификатор элемента, с которого начать формировать ответ.
      *     @type int $limit
-     *          Лимит количества операций. По умолчанию устанавливается значение **100**, максимальное значение 1000.
+     *          Лимит количества операций. По умолчанию — `100`, максимальное значение — `1000`.
      *     @type int[]|\Google\Protobuf\Internal\RepeatedField $operation_types
-     *          Тип операции. Принимает значение из списка OperationType.
+     *          Тип операции. Принимает значение из списка `OperationType`.
      *     @type int $state
-     *          Статус запрашиваемых операций, возможные значения указаны в OperationState.
+     *          Статус запрашиваемых операций. Возможные значения указаны в `OperationState`.
      *     @type bool $without_commissions
-     *          Флаг возвращать ли комиссии, по умолчанию false
+     *          Флаг возврата комиссии. По умолчанию — `false`.
      *     @type bool $without_trades
      *          Флаг получения ответа без массива сделок.
      *     @type bool $without_overnights
-     *          Флаг не показывать overnight операций.
+     *          Флаг показа overnight операций.
      * }
      */
     public function __construct($data = NULL) {
@@ -118,7 +118,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор счёта клиента. Обязательный параметр для данного метода, остальные параметры опциональны.
+     *Идентификатор счёта клиента, обязательный параметр. Остальные параметры опциональны.
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
@@ -129,7 +129,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор счёта клиента. Обязательный параметр для данного метода, остальные параметры опциональны.
+     *Идентификатор счёта клиента, обязательный параметр. Остальные параметры опциональны.
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
@@ -144,7 +144,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента (Figi инструмента или uid инструмента)
+     *Идентификатор инструмента — FIGI или UID инструмента.
      *
      * Generated from protobuf field <code>string instrument_id = 2;</code>
      * @return string
@@ -165,7 +165,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента (Figi инструмента или uid инструмента)
+     *Идентификатор инструмента — FIGI или UID инструмента.
      *
      * Generated from protobuf field <code>string instrument_id = 2;</code>
      * @param string $var
@@ -180,7 +180,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Начало периода (по UTC).
+     *Начало периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 6;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -201,7 +201,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Начало периода (по UTC).
+     *Начало периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 6;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -216,7 +216,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Окончание периода (по UTC).
+     *Окончание периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 7;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -237,7 +237,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Окончание периода (по UTC).
+     *Окончание периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 7;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -288,7 +288,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Лимит количества операций. По умолчанию устанавливается значение **100**, максимальное значение 1000.
+     *Лимит количества операций. По умолчанию — `100`, максимальное значение — `1000`.
      *
      * Generated from protobuf field <code>int32 limit = 12;</code>
      * @return int
@@ -309,7 +309,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Лимит количества операций. По умолчанию устанавливается значение **100**, максимальное значение 1000.
+     *Лимит количества операций. По умолчанию — `100`, максимальное значение — `1000`.
      *
      * Generated from protobuf field <code>int32 limit = 12;</code>
      * @param int $var
@@ -324,7 +324,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип операции. Принимает значение из списка OperationType.
+     *Тип операции. Принимает значение из списка `OperationType`.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OperationType operation_types = 13;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -335,7 +335,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип операции. Принимает значение из списка OperationType.
+     *Тип операции. Принимает значение из списка `OperationType`.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OperationType operation_types = 13;</code>
      * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
@@ -350,7 +350,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Статус запрашиваемых операций, возможные значения указаны в OperationState.
+     *Статус запрашиваемых операций. Возможные значения указаны в `OperationState`.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OperationState state = 14;</code>
      * @return int
@@ -371,7 +371,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Статус запрашиваемых операций, возможные значения указаны в OperationState.
+     *Статус запрашиваемых операций. Возможные значения указаны в `OperationState`.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OperationState state = 14;</code>
      * @param int $var
@@ -386,7 +386,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг возвращать ли комиссии, по умолчанию false
+     *Флаг возврата комиссии. По умолчанию — `false`.
      *
      * Generated from protobuf field <code>bool without_commissions = 15;</code>
      * @return bool
@@ -407,7 +407,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг возвращать ли комиссии, по умолчанию false
+     *Флаг возврата комиссии. По умолчанию — `false`.
      *
      * Generated from protobuf field <code>bool without_commissions = 15;</code>
      * @param bool $var
@@ -458,7 +458,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг не показывать overnight операций.
+     *Флаг показа overnight операций.
      *
      * Generated from protobuf field <code>bool without_overnights = 17;</code>
      * @return bool
@@ -479,7 +479,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Флаг не показывать overnight операций.
+     *Флаг показа overnight операций.
      *
      * Generated from protobuf field <code>bool without_overnights = 17;</code>
      * @param bool $var

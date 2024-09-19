@@ -7,7 +7,7 @@ namespace Tinkoff\Invest\V1;
 use UnexpectedValueException;
 
 /**
- *Тип идентификатора инструмента. Подробнее об идентификации инструментов: [Идентификация инструментов](https://russianinvestments.github.io/investAPI/faq_identification/)
+ *Тип идентификатора инструмента. [Подробнее об идентификации инструментов](https://russianinvestments.github.io/investAPI/faq_identification/).
  *
  * Protobuf type <code>tinkoff.public.invest.api.contract.v1.InstrumentIdType</code>
  */
@@ -20,7 +20,7 @@ class InstrumentIdType
      */
     const INSTRUMENT_ID_UNSPECIFIED = 0;
     /**
-     *Figi.
+     *FIGI.
      *
      * Generated from protobuf enum <code>INSTRUMENT_ID_TYPE_FIGI = 1;</code>
      */

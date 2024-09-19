@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class Candle extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Figi-идентификатор инструмента.
+     *FIGI-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      */
@@ -28,25 +28,25 @@ class Candle extends \Google\Protobuf\Internal\Message
      */
     protected $interval = 0;
     /**
-     *Цена открытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
+     *Цена открытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation open = 3;</code>
      */
     protected $open = null;
     /**
-     *Максимальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
+     *Максимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation high = 4;</code>
      */
     protected $high = null;
     /**
-     *Минимальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
+     *Минимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation low = 5;</code>
      */
     protected $low = null;
     /**
-     *Цена закрытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
+     *Цена закрытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation close = 6;</code>
      */
@@ -58,19 +58,19 @@ class Candle extends \Google\Protobuf\Internal\Message
      */
     protected $volume = 0;
     /**
-     *Время начала интервала свечи в часовом поясе UTC.
+     *Время начала интервала свечи по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp time = 8;</code>
      */
     protected $time = null;
     /**
-     *Время последней сделки, вошедшей в свечу в часовом поясе UTC.
+     *Время последней сделки, вошедшей в свечу по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp last_trade_ts = 9;</code>
      */
     protected $last_trade_ts = null;
     /**
-     *Uid инструмента
+     *UID инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 10;</code>
      */
@@ -83,25 +83,25 @@ class Candle extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $figi
-     *          Figi-идентификатор инструмента.
+     *          FIGI-идентификатор инструмента.
      *     @type int $interval
      *          Интервал свечи.
      *     @type \Tinkoff\Invest\V1\Quotation $open
-     *          Цена открытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
+     *          Цена открытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
      *     @type \Tinkoff\Invest\V1\Quotation $high
-     *          Максимальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
+     *          Максимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
      *     @type \Tinkoff\Invest\V1\Quotation $low
-     *          Минимальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
+     *          Минимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
      *     @type \Tinkoff\Invest\V1\Quotation $close
-     *          Цена закрытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
+     *          Цена закрытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
      *     @type int|string $volume
      *          Объём сделок в лотах.
      *     @type \Google\Protobuf\Timestamp $time
-     *          Время начала интервала свечи в часовом поясе UTC.
+     *          Время начала интервала свечи по UTC.
      *     @type \Google\Protobuf\Timestamp $last_trade_ts
-     *          Время последней сделки, вошедшей в свечу в часовом поясе UTC.
+     *          Время последней сделки, вошедшей в свечу по UTC.
      *     @type string $instrument_uid
-     *          Uid инструмента
+     *          UID инструмента.
      * }
      */
     public function __construct($data = NULL) {
@@ -110,7 +110,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента.
+     *FIGI-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @return string
@@ -121,7 +121,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Figi-идентификатор инструмента.
+     *FIGI-идентификатор инструмента.
      *
      * Generated from protobuf field <code>string figi = 1;</code>
      * @param string $var
@@ -162,7 +162,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена открытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
+     *Цена открытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation open = 3;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -183,7 +183,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена открытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
+     *Цена открытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation open = 3;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -198,7 +198,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Максимальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
+     *Максимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation high = 4;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -219,7 +219,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Максимальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
+     *Максимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation high = 4;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -234,7 +234,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Минимальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
+     *Минимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation low = 5;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -255,7 +255,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Минимальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
+     *Минимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation low = 5;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -270,7 +270,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена закрытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
+     *Цена закрытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation close = 6;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -291,7 +291,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена закрытия за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Для перевод цен в валюту рекомендуем использовать [информацию со страницы](https://russianinvestments.github.io/investAPI/faq_marketdata/)
+     *Цена закрытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation close = 6;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -332,7 +332,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Время начала интервала свечи в часовом поясе UTC.
+     *Время начала интервала свечи по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp time = 8;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -353,7 +353,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Время начала интервала свечи в часовом поясе UTC.
+     *Время начала интервала свечи по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp time = 8;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -368,7 +368,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Время последней сделки, вошедшей в свечу в часовом поясе UTC.
+     *Время последней сделки, вошедшей в свечу по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp last_trade_ts = 9;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -389,7 +389,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Время последней сделки, вошедшей в свечу в часовом поясе UTC.
+     *Время последней сделки, вошедшей в свечу по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp last_trade_ts = 9;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -404,7 +404,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Uid инструмента
+     *UID инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 10;</code>
      * @return string
@@ -415,7 +415,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Uid инструмента
+     *UID инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 10;</code>
      * @param string $var

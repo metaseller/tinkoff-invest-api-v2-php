@@ -22,7 +22,7 @@ class GetAssetReportsEvent extends \Google\Protobuf\Internal\Message
      */
     protected $instrument_id = '';
     /**
-     * Дата публикации отчета.
+     * Дата публикации отчёта.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp report_date = 2;</code>
      */
@@ -40,7 +40,7 @@ class GetAssetReportsEvent extends \Google\Protobuf\Internal\Message
      */
     protected $period_num = 0;
     /**
-     * Тип отчета.
+     * Тип отчёта.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetAssetReportsResponse.AssetReportPeriodType period_type = 5;</code>
      */
@@ -61,13 +61,13 @@ class GetAssetReportsEvent extends \Google\Protobuf\Internal\Message
      *     @type string $instrument_id
      *           Идентификатор инструмента.
      *     @type \Google\Protobuf\Timestamp $report_date
-     *           Дата публикации отчета.
+     *           Дата публикации отчёта.
      *     @type int $period_year
      *           Год периода отчета.
      *     @type int $period_num
      *           Номер периода.
      *     @type int $period_type
-     *           Тип отчета.
+     *           Тип отчёта.
      *     @type \Google\Protobuf\Timestamp $created_at
      *           Дата создания записи.
      * }
@@ -104,7 +104,7 @@ class GetAssetReportsEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Дата публикации отчета.
+     * Дата публикации отчёта.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp report_date = 2;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -125,7 +125,7 @@ class GetAssetReportsEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Дата публикации отчета.
+     * Дата публикации отчёта.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp report_date = 2;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -192,7 +192,7 @@ class GetAssetReportsEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Тип отчета.
+     * Тип отчёта.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetAssetReportsResponse.AssetReportPeriodType period_type = 5;</code>
      * @return int
@@ -203,7 +203,7 @@ class GetAssetReportsEvent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Тип отчета.
+     * Тип отчёта.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetAssetReportsResponse.AssetReportPeriodType period_type = 5;</code>
      * @param int $var

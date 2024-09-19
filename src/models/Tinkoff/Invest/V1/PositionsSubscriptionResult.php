@@ -21,6 +21,18 @@ class PositionsSubscriptionResult extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.PositionsSubscriptionStatus accounts = 1;</code>
      */
     private $accounts;
+    /**
+     *Уникальный идентификатор запроса, подробнее: [tracking_id](https://russianinvestments.github.io/investAPI/grpc#tracking-id).
+     *
+     * Generated from protobuf field <code>string tracking_id = 7;</code>
+     */
+    protected $tracking_id = '';
+    /**
+     *Идентификатор открытого соединения
+     *
+     * Generated from protobuf field <code>string stream_id = 8;</code>
+     */
+    protected $stream_id = '';
 
     /**
      * Constructor.
@@ -30,6 +42,10 @@ class PositionsSubscriptionResult extends \Google\Protobuf\Internal\Message
      *
      *     @type \Tinkoff\Invest\V1\PositionsSubscriptionStatus[]|\Google\Protobuf\Internal\RepeatedField $accounts
      *          Массив счетов клиента.
+     *     @type string $tracking_id
+     *          Уникальный идентификатор запроса, подробнее: [tracking_id](https://russianinvestments.github.io/investAPI/grpc#tracking-id).
+     *     @type string $stream_id
+     *          Идентификатор открытого соединения
      * }
      */
     public function __construct($data = NULL) {
@@ -59,6 +75,58 @@ class PositionsSubscriptionResult extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\PositionsSubscriptionStatus::class);
         $this->accounts = $arr;
+
+        return $this;
+    }
+
+    /**
+     *Уникальный идентификатор запроса, подробнее: [tracking_id](https://russianinvestments.github.io/investAPI/grpc#tracking-id).
+     *
+     * Generated from protobuf field <code>string tracking_id = 7;</code>
+     * @return string
+     */
+    public function getTrackingId()
+    {
+        return $this->tracking_id;
+    }
+
+    /**
+     *Уникальный идентификатор запроса, подробнее: [tracking_id](https://russianinvestments.github.io/investAPI/grpc#tracking-id).
+     *
+     * Generated from protobuf field <code>string tracking_id = 7;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTrackingId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->tracking_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *Идентификатор открытого соединения
+     *
+     * Generated from protobuf field <code>string stream_id = 8;</code>
+     * @return string
+     */
+    public function getStreamId()
+    {
+        return $this->stream_id;
+    }
+
+    /**
+     *Идентификатор открытого соединения
+     *
+     * Generated from protobuf field <code>string stream_id = 8;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setStreamId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->stream_id = $var;
 
         return $this;
     }

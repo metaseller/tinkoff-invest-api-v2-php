@@ -20,19 +20,19 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
      */
     protected $indicator_type = 0;
     /**
-     *Uid инструмента.
+     *UID инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $instrument_uid = '';
     /**
-     *Начало запрашиваемого периода в часовом поясе UTC.
+     *Начало запрашиваемого периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $from = null;
     /**
-     *Окончание запрашиваемого периода в часовом поясе UTC.
+     *Окончание запрашиваемого периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      */
@@ -44,7 +44,7 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
      */
     protected $interval = 0;
     /**
-     *Тип цены, используемый при расчёте индикатора.
+     *Тип цены, который используется при расчёте индикатора.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetTechAnalysisRequest.TypeOfPrice type_of_price = 6 [(.google.api.field_behavior) = REQUIRED];</code>
      */
@@ -77,15 +77,15 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
      *     @type int $indicator_type
      *          Тип технического индикатора.
      *     @type string $instrument_uid
-     *          Uid инструмента.
+     *          UID инструмента.
      *     @type \Google\Protobuf\Timestamp $from
-     *          Начало запрашиваемого периода в часовом поясе UTC.
+     *          Начало запрашиваемого периода по UTC.
      *     @type \Google\Protobuf\Timestamp $to
-     *          Окончание запрашиваемого периода в часовом поясе UTC.
+     *          Окончание запрашиваемого периода по UTC.
      *     @type int $interval
      *          Интервал, за который рассчитывается индикатор.
      *     @type int $type_of_price
-     *          Тип цены, используемый при расчёте индикатора.
+     *          Тип цены, который используется при расчёте индикатора.
      *     @type int $length
      *          Торговый период, за который рассчитывается индикатор.
      *     @type \Tinkoff\Invest\V1\GetTechAnalysisRequest\Deviation $deviation
@@ -126,7 +126,7 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Uid инструмента.
+     *UID инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
@@ -137,7 +137,7 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Uid инструмента.
+     *UID инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
@@ -152,7 +152,7 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Начало запрашиваемого периода в часовом поясе UTC.
+     *Начало запрашиваемого периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -173,7 +173,7 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Начало запрашиваемого периода в часовом поясе UTC.
+     *Начало запрашиваемого периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -188,7 +188,7 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Окончание запрашиваемого периода в часовом поясе UTC.
+     *Окончание запрашиваемого периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -209,7 +209,7 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Окончание запрашиваемого периода в часовом поясе UTC.
+     *Окончание запрашиваемого периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -250,7 +250,7 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип цены, используемый при расчёте индикатора.
+     *Тип цены, который используется при расчёте индикатора.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetTechAnalysisRequest.TypeOfPrice type_of_price = 6 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return int
@@ -261,7 +261,7 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип цены, используемый при расчёте индикатора.
+     *Тип цены, который используется при расчёте индикатора.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetTechAnalysisRequest.TypeOfPrice type_of_price = 6 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param int $var

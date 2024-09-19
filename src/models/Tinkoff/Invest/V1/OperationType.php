@@ -290,7 +290,7 @@ class OperationType
      */
     const OPERATION_TYPE_CASH_FEE = 45;
     /**
-     *Комиссия за вывод валюты с брокерского счета.
+     *Комиссия за вывод валюты с брокерского счёта.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_OUT_FEE = 46;</code>
      */
@@ -302,89 +302,95 @@ class OperationType
      */
     const OPERATION_TYPE_OUT_STAMP_DUTY = 47;
     /**
-     *	SWIFT-перевод
+     *	SWIFT-перевод.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_OUTPUT_SWIFT = 50;</code>
      */
     const OPERATION_TYPE_OUTPUT_SWIFT = 50;
     /**
-     *	SWIFT-перевод
+     *	SWIFT-перевод.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_INPUT_SWIFT = 51;</code>
      */
     const OPERATION_TYPE_INPUT_SWIFT = 51;
     /**
-     *  Перевод на карту
+     *  Перевод на карту.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_OUTPUT_ACQUIRING = 53;</code>
      */
     const OPERATION_TYPE_OUTPUT_ACQUIRING = 53;
     /**
-     *	Перевод с карты
+     *	Перевод с карты.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_INPUT_ACQUIRING = 54;</code>
      */
     const OPERATION_TYPE_INPUT_ACQUIRING = 54;
     /**
-     *	Комиссия за вывод средств
+     *	Комиссия за вывод средств.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_OUTPUT_PENALTY = 55;</code>
      */
     const OPERATION_TYPE_OUTPUT_PENALTY = 55;
     /**
-     *	Списание оплаты за сервис Советов
+     *	Списание оплаты за сервис Советов.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_ADVICE_FEE = 56;</code>
      */
     const OPERATION_TYPE_ADVICE_FEE = 56;
     /**
-     *  Перевод ценных бумаг с ИИС на Брокерский счет
+     *  Перевод ценных бумаг с ИИС на брокерский счёт.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_TRANS_IIS_BS = 57;</code>
      */
     const OPERATION_TYPE_TRANS_IIS_BS = 57;
     /**
-     *  Перевод ценных бумаг с одного брокерского счета на другой
+     *  Перевод ценных бумаг с одного брокерского счёта на другой.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_TRANS_BS_BS = 58;</code>
      */
     const OPERATION_TYPE_TRANS_BS_BS = 58;
     /**
-     *  Вывод денежных средств со счета
+     *  Вывод денежных средств со счёта.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_OUT_MULTI = 59;</code>
      */
     const OPERATION_TYPE_OUT_MULTI = 59;
     /**
-     *  Пополнение денежных средств со счета
+     *  Пополнение денежных средств со счёта.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_INP_MULTI = 60;</code>
      */
     const OPERATION_TYPE_INP_MULTI = 60;
     /**
-     *  Размещение биржевого овернайта
+     *  Размещение биржевого овернайта.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_OVER_PLACEMENT = 61;</code>
      */
     const OPERATION_TYPE_OVER_PLACEMENT = 61;
     /**
-     *  Списание комиссии
+     *  Списание комиссии.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_OVER_COM = 62;</code>
      */
     const OPERATION_TYPE_OVER_COM = 62;
     /**
-     *  Доход от оверанайта
+     *  Доход от оверанайта.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_OVER_INCOME = 63;</code>
      */
     const OPERATION_TYPE_OVER_INCOME = 63;
     /**
-     * Экспирация
+     * Экспирация опциона.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_OPTION_EXPIRATION = 64;</code>
      */
     const OPERATION_TYPE_OPTION_EXPIRATION = 64;
+    /**
+     * Экспирация фьючерса.
+     *
+     * Generated from protobuf enum <code>OPERATION_TYPE_FUTURE_EXPIRATION = 65;</code>
+     */
+    const OPERATION_TYPE_FUTURE_EXPIRATION = 65;
 
     private static $valueToName = [
         self::OPERATION_TYPE_UNSPECIFIED => 'OPERATION_TYPE_UNSPECIFIED',
@@ -449,6 +455,7 @@ class OperationType
         self::OPERATION_TYPE_OVER_COM => 'OPERATION_TYPE_OVER_COM',
         self::OPERATION_TYPE_OVER_INCOME => 'OPERATION_TYPE_OVER_INCOME',
         self::OPERATION_TYPE_OPTION_EXPIRATION => 'OPERATION_TYPE_OPTION_EXPIRATION',
+        self::OPERATION_TYPE_FUTURE_EXPIRATION => 'OPERATION_TYPE_FUTURE_EXPIRATION',
     ];
 
     public static function name($value)

@@ -17,7 +17,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения расписания торгов торговых площадок.
+     * Получить расписания торгов торговых площадок.
      * @param \Tinkoff\Invest\V1\TradingSchedulesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -32,7 +32,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения облигации по её идентификатору.
+     * Получить облигации по её идентификатору.
      * @param \Tinkoff\Invest\V1\InstrumentRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -47,7 +47,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения списка облигаций.
+     * Получить список облигаций.
      * @param \Tinkoff\Invest\V1\InstrumentsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -62,7 +62,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения графика выплат купонов по облигации.
+     * Получить график выплат купонов по облигации.
      * @param \Tinkoff\Invest\V1\GetBondCouponsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -77,7 +77,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения событий по облигации
+     * Получить события по облигации
      * @param \Tinkoff\Invest\V1\GetBondEventsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -92,7 +92,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения валюты по её идентификатору.
+     * Получить валюту по её идентификатору.
      * @param \Tinkoff\Invest\V1\InstrumentRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -107,7 +107,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения списка валют.
+     * Получить список валют.
      * @param \Tinkoff\Invest\V1\InstrumentsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -122,7 +122,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения инвестиционного фонда по его идентификатору.
+     * Получить инвестиционный фонд по его идентификатору.
      * @param \Tinkoff\Invest\V1\InstrumentRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -137,7 +137,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения списка инвестиционных фондов.
+     * Получить список инвестиционных фондов.
      * @param \Tinkoff\Invest\V1\InstrumentsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -152,7 +152,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения фьючерса по его идентификатору.
+     * Получить фьючерс по его идентификатору.
      * @param \Tinkoff\Invest\V1\InstrumentRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -167,7 +167,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения списка фьючерсов.
+     * Получить список фьючерсов.
      * @param \Tinkoff\Invest\V1\InstrumentsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -182,7 +182,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения опциона по его идентификатору.
+     * Получить опцион по его идентификатору.
      * @param \Tinkoff\Invest\V1\InstrumentRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -197,7 +197,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Deprecated Метод получения списка опционов.
+     * Deprecated Получить списка опционов.
      * @param \Tinkoff\Invest\V1\InstrumentsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -212,7 +212,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения списка опционов.
+     * Получить список опционов.
      * @param \Tinkoff\Invest\V1\FilterOptionsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -227,7 +227,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения акции по её идентификатору.
+     * Получить акцию по её идентификатору.
      * @param \Tinkoff\Invest\V1\InstrumentRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -242,7 +242,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения списка акций.
+     * Получить список акций.
      * @param \Tinkoff\Invest\V1\InstrumentsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -257,7 +257,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения индикативных инструментов (индексов, товаров и др.)
+     * Получить индикативные инструменты — индексы, товары и другие.
      * @param \Tinkoff\Invest\V1\IndicativesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -272,7 +272,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения накопленного купонного дохода по облигации.
+     * Получить накопленный купонный доход по облигации.
      * @param \Tinkoff\Invest\V1\GetAccruedInterestsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -287,7 +287,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения размера гарантийного обеспечения по фьючерсам.
+     * Получить размера гарантийного обеспечения по фьючерсам.
      * @param \Tinkoff\Invest\V1\GetFuturesMarginRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -302,7 +302,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения основной информации об инструменте.
+     * Получить основную информацию об инструменте.
      * @param \Tinkoff\Invest\V1\InstrumentRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -317,7 +317,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод для получения событий выплаты дивидендов по инструменту.
+     * Получить события выплаты дивидендов по инструменту.
      * @param \Tinkoff\Invest\V1\GetDividendsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -332,7 +332,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения актива по его идентификатору.
+     * Получить актив по его идентификатору.
      * @param \Tinkoff\Invest\V1\AssetRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -347,7 +347,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения списка активов. Метод работает для всех инструментов, за исключением срочных - опционов и фьючерсов.
+     * Получить список активов. Метод работает для всех инструментов, кроме срочных — фьючерсов и опционов.
      * @param \Tinkoff\Invest\V1\AssetsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -362,7 +362,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения списка избранных инструментов.
+     * Получить список избранных инструментов.
      * @param \Tinkoff\Invest\V1\GetFavoritesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -377,7 +377,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод редактирования списка избранных инструментов.
+     * Отредактировать список избранных инструментов.
      * @param \Tinkoff\Invest\V1\EditFavoritesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -392,7 +392,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения списка стран.
+     * Получить список стран.
      * @param \Tinkoff\Invest\V1\GetCountriesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -407,7 +407,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод поиска инструмента.
+     * Найти инструмент.
      * @param \Tinkoff\Invest\V1\FindInstrumentRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -422,7 +422,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения списка брендов.
+     * Получить список брендов.
      * @param \Tinkoff\Invest\V1\GetBrandsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -437,7 +437,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения бренда по его идентификатору.
+     * Получить бренд по его идентификатору.
      * @param \Tinkoff\Invest\V1\GetBrandRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -452,7 +452,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения фундаментальных показателей по активу
+     * Получить фундаментальные показатели по активу.
      * @param \Tinkoff\Invest\V1\GetAssetFundamentalsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -467,7 +467,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения расписания выхода отчетностей эмитентов
+     * Получить расписания выхода отчётностей эмитентов.
      * @param \Tinkoff\Invest\V1\GetAssetReportsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -482,7 +482,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения мнения аналитиков по инструменту
+     * Получить мнения аналитиков по инструменту.
      * @param \Tinkoff\Invest\V1\GetConsensusForecastsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -497,7 +497,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения прогнозов инвестдомов по инструменту
+     * Получить прогнозов инвестдомов по инструменту.
      * @param \Tinkoff\Invest\V1\GetForecastRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

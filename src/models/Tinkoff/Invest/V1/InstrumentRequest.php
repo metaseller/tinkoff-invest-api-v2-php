@@ -16,13 +16,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class InstrumentRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Тип идентификатора инструмента. Возможные значения: figi, ticker. Подробнее об идентификации инструментов: [Идентификация инструментов](https://russianinvestments.github.io/investAPI/faq_identification/)
+     * Тип идентификатора инструмента. Возможные значения — `figi`, `ticker`. [Подробнее об идентификации инструментов](https://russianinvestments.github.io/investAPI/faq_identification/).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentIdType id_type = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $id_type = 0;
     /**
-     * Идентификатор class_code. Обязателен при id_type = ticker.
+     * Идентификатор `class_code`. Обязательный, если `id_type = ticker`.
      *
      * Generated from protobuf field <code>string class_code = 2;</code>
      */
@@ -41,9 +41,9 @@ class InstrumentRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $id_type
-     *           Тип идентификатора инструмента. Возможные значения: figi, ticker. Подробнее об идентификации инструментов: [Идентификация инструментов](https://russianinvestments.github.io/investAPI/faq_identification/)
+     *           Тип идентификатора инструмента. Возможные значения — `figi`, `ticker`. [Подробнее об идентификации инструментов](https://russianinvestments.github.io/investAPI/faq_identification/).
      *     @type string $class_code
-     *           Идентификатор class_code. Обязателен при id_type = ticker.
+     *           Идентификатор `class_code`. Обязательный, если `id_type = ticker`.
      *     @type string $id
      *           Идентификатор запрашиваемого инструмента.
      * }
@@ -54,7 +54,7 @@ class InstrumentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Тип идентификатора инструмента. Возможные значения: figi, ticker. Подробнее об идентификации инструментов: [Идентификация инструментов](https://russianinvestments.github.io/investAPI/faq_identification/)
+     * Тип идентификатора инструмента. Возможные значения — `figi`, `ticker`. [Подробнее об идентификации инструментов](https://russianinvestments.github.io/investAPI/faq_identification/).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentIdType id_type = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return int
@@ -65,7 +65,7 @@ class InstrumentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Тип идентификатора инструмента. Возможные значения: figi, ticker. Подробнее об идентификации инструментов: [Идентификация инструментов](https://russianinvestments.github.io/investAPI/faq_identification/)
+     * Тип идентификатора инструмента. Возможные значения — `figi`, `ticker`. [Подробнее об идентификации инструментов](https://russianinvestments.github.io/investAPI/faq_identification/).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentIdType id_type = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param int $var
@@ -80,7 +80,7 @@ class InstrumentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Идентификатор class_code. Обязателен при id_type = ticker.
+     * Идентификатор `class_code`. Обязательный, если `id_type = ticker`.
      *
      * Generated from protobuf field <code>string class_code = 2;</code>
      * @return string
@@ -101,7 +101,7 @@ class InstrumentRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Идентификатор class_code. Обязателен при id_type = ticker.
+     * Идентификатор `class_code`. Обязательный, если `id_type = ticker`.
      *
      * Generated from protobuf field <code>string class_code = 2;</code>
      * @param string $var

@@ -16,26 +16,26 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
+     *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *
      * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @deprecated
      */
     protected $figi = null;
     /**
-     *Начало запрашиваемого периода в часовом поясе UTC.
+     *Начало запрашиваемого периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $from = null;
     /**
-     *Окончание запрашиваемого периода в часовом поясе UTC.
+     *Окончание запрашиваемого периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $to = null;
     /**
-     *Идентификатор инструмента, принимает значение figi или instrument_uid.
+     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
      *
      * Generated from protobuf field <code>string instrument_id = 4;</code>
      */
@@ -48,13 +48,13 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $figi
-     *          Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
+     *          Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *     @type \Google\Protobuf\Timestamp $from
-     *          Начало запрашиваемого периода в часовом поясе UTC.
+     *          Начало запрашиваемого периода по UTC.
      *     @type \Google\Protobuf\Timestamp $to
-     *          Окончание запрашиваемого периода в часовом поясе UTC.
+     *          Окончание запрашиваемого периода по UTC.
      *     @type string $instrument_id
-     *          Идентификатор инструмента, принимает значение figi или instrument_uid.
+     *          Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
      * }
      */
     public function __construct($data = NULL) {
@@ -63,7 +63,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
+     *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *
      * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @return string
@@ -88,7 +88,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
+     *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *
      * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @param string $var
@@ -105,7 +105,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Начало запрашиваемого периода в часовом поясе UTC.
+     *Начало запрашиваемого периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -126,7 +126,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Начало запрашиваемого периода в часовом поясе UTC.
+     *Начало запрашиваемого периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -141,7 +141,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Окончание запрашиваемого периода в часовом поясе UTC.
+     *Окончание запрашиваемого периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -162,7 +162,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Окончание запрашиваемого периода в часовом поясе UTC.
+     *Окончание запрашиваемого периода по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -177,7 +177,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента, принимает значение figi или instrument_uid.
+     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
      *
      * Generated from protobuf field <code>string instrument_id = 4;</code>
      * @return string
@@ -198,7 +198,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента, принимает значение figi или instrument_uid.
+     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
      *
      * Generated from protobuf field <code>string instrument_id = 4;</code>
      * @param string $var

@@ -86,13 +86,13 @@ class IndicatorInterval
      */
     const INDICATOR_INTERVAL_4_HOUR = 11;
     /**
-     *Неделя
+     *Неделя.
      *
      * Generated from protobuf enum <code>INDICATOR_INTERVAL_WEEK = 12;</code>
      */
     const INDICATOR_INTERVAL_WEEK = 12;
     /**
-     *Месяц
+     *Месяц.
      *
      * Generated from protobuf enum <code>INDICATOR_INTERVAL_MONTH = 13;</code>
      */

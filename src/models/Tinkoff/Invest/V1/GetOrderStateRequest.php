@@ -33,6 +33,12 @@ class GetOrderStateRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PriceType price_type = 3;</code>
      */
     protected $price_type = 0;
+    /**
+     *Тип идентификатора заявки.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderIdType order_id_type = 4;</code>
+     */
+    protected $order_id_type = null;
 
     /**
      * Constructor.
@@ -46,6 +52,8 @@ class GetOrderStateRequest extends \Google\Protobuf\Internal\Message
      *          Идентификатор заявки.
      *     @type int $price_type
      *          Тип цены.
+     *     @type int $order_id_type
+     *          Тип идентификатора заявки.
      * }
      */
     public function __construct($data = NULL) {
@@ -127,6 +135,42 @@ class GetOrderStateRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\PriceType::class);
         $this->price_type = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тип идентификатора заявки.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderIdType order_id_type = 4;</code>
+     * @return int
+     */
+    public function getOrderIdType()
+    {
+        return isset($this->order_id_type) ? $this->order_id_type : 0;
+    }
+
+    public function hasOrderIdType()
+    {
+        return isset($this->order_id_type);
+    }
+
+    public function clearOrderIdType()
+    {
+        unset($this->order_id_type);
+    }
+
+    /**
+     *Тип идентификатора заявки.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderIdType order_id_type = 4;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setOrderIdType($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\OrderIdType::class);
+        $this->order_id_type = $var;
 
         return $this;
     }

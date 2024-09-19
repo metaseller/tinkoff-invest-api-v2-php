@@ -16,67 +16,67 @@ use Google\Protobuf\Internal\GPBUtil;
 class TargetItem extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Уникальный идентификатор инструмента
+     * Уникальный идентификатор инструмента.
      *
      * Generated from protobuf field <code>string uid = 1;</code>
      */
     protected $uid = '';
     /**
-     * Тикер инструмента
+     * Тикер инструмента.
      *
      * Generated from protobuf field <code>string ticker = 2;</code>
      */
     protected $ticker = '';
     /**
-     * Название компании, давшей прогноз
+     * Название компании, давшей прогноз.
      *
      * Generated from protobuf field <code>string company = 3;</code>
      */
     protected $company = '';
     /**
-     * Прогноз
+     * Прогноз.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Recommendation recommendation = 4;</code>
      */
     protected $recommendation = 0;
     /**
-     *Дата прогноза
+     *Дата прогноза.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp recommendation_date = 5;</code>
      */
     protected $recommendation_date = null;
     /**
-     * Валюта
+     * Валюта.
      *
      * Generated from protobuf field <code>string currency = 6;</code>
      */
     protected $currency = '';
     /**
-     * Текущая цена
+     * Текущая цена.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation current_price = 7;</code>
      */
     protected $current_price = null;
     /**
-     * Прогнозируемая цена
+     * Прогнозируемая цена.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation target_price = 8;</code>
      */
     protected $target_price = null;
     /**
-     * Изменение цены
+     * Изменение цены.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price_change = 9;</code>
      */
     protected $price_change = null;
     /**
-     * Относительное изменение цены
+     * Относительное изменение цены.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price_change_rel = 10;</code>
      */
     protected $price_change_rel = null;
     /**
-     * Наименование инструмента
+     * Наименование инструмента.
      *
      * Generated from protobuf field <code>string show_name = 11;</code>
      */
@@ -89,27 +89,27 @@ class TargetItem extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $uid
-     *           Уникальный идентификатор инструмента
+     *           Уникальный идентификатор инструмента.
      *     @type string $ticker
-     *           Тикер инструмента
+     *           Тикер инструмента.
      *     @type string $company
-     *           Название компании, давшей прогноз
+     *           Название компании, давшей прогноз.
      *     @type int $recommendation
-     *           Прогноз
+     *           Прогноз.
      *     @type \Google\Protobuf\Timestamp $recommendation_date
-     *          Дата прогноза
+     *          Дата прогноза.
      *     @type string $currency
-     *           Валюта
+     *           Валюта.
      *     @type \Tinkoff\Invest\V1\Quotation $current_price
-     *           Текущая цена
+     *           Текущая цена.
      *     @type \Tinkoff\Invest\V1\Quotation $target_price
-     *           Прогнозируемая цена
+     *           Прогнозируемая цена.
      *     @type \Tinkoff\Invest\V1\Quotation $price_change
-     *           Изменение цены
+     *           Изменение цены.
      *     @type \Tinkoff\Invest\V1\Quotation $price_change_rel
-     *           Относительное изменение цены
+     *           Относительное изменение цены.
      *     @type string $show_name
-     *           Наименование инструмента
+     *           Наименование инструмента.
      * }
      */
     public function __construct($data = NULL) {
@@ -118,7 +118,7 @@ class TargetItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Уникальный идентификатор инструмента
+     * Уникальный идентификатор инструмента.
      *
      * Generated from protobuf field <code>string uid = 1;</code>
      * @return string
@@ -129,7 +129,7 @@ class TargetItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Уникальный идентификатор инструмента
+     * Уникальный идентификатор инструмента.
      *
      * Generated from protobuf field <code>string uid = 1;</code>
      * @param string $var
@@ -144,7 +144,7 @@ class TargetItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Тикер инструмента
+     * Тикер инструмента.
      *
      * Generated from protobuf field <code>string ticker = 2;</code>
      * @return string
@@ -155,7 +155,7 @@ class TargetItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Тикер инструмента
+     * Тикер инструмента.
      *
      * Generated from protobuf field <code>string ticker = 2;</code>
      * @param string $var
@@ -170,7 +170,7 @@ class TargetItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Название компании, давшей прогноз
+     * Название компании, давшей прогноз.
      *
      * Generated from protobuf field <code>string company = 3;</code>
      * @return string
@@ -181,7 +181,7 @@ class TargetItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Название компании, давшей прогноз
+     * Название компании, давшей прогноз.
      *
      * Generated from protobuf field <code>string company = 3;</code>
      * @param string $var
@@ -196,7 +196,7 @@ class TargetItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Прогноз
+     * Прогноз.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Recommendation recommendation = 4;</code>
      * @return int
@@ -207,7 +207,7 @@ class TargetItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Прогноз
+     * Прогноз.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Recommendation recommendation = 4;</code>
      * @param int $var
@@ -222,7 +222,7 @@ class TargetItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата прогноза
+     *Дата прогноза.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp recommendation_date = 5;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -243,7 +243,7 @@ class TargetItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата прогноза
+     *Дата прогноза.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp recommendation_date = 5;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -258,7 +258,7 @@ class TargetItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Валюта
+     * Валюта.
      *
      * Generated from protobuf field <code>string currency = 6;</code>
      * @return string
@@ -269,7 +269,7 @@ class TargetItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Валюта
+     * Валюта.
      *
      * Generated from protobuf field <code>string currency = 6;</code>
      * @param string $var
@@ -284,7 +284,7 @@ class TargetItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Текущая цена
+     * Текущая цена.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation current_price = 7;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -305,7 +305,7 @@ class TargetItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Текущая цена
+     * Текущая цена.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation current_price = 7;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -320,7 +320,7 @@ class TargetItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Прогнозируемая цена
+     * Прогнозируемая цена.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation target_price = 8;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -341,7 +341,7 @@ class TargetItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Прогнозируемая цена
+     * Прогнозируемая цена.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation target_price = 8;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -356,7 +356,7 @@ class TargetItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Изменение цены
+     * Изменение цены.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price_change = 9;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -377,7 +377,7 @@ class TargetItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Изменение цены
+     * Изменение цены.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price_change = 9;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -392,7 +392,7 @@ class TargetItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Относительное изменение цены
+     * Относительное изменение цены.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price_change_rel = 10;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -413,7 +413,7 @@ class TargetItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Относительное изменение цены
+     * Относительное изменение цены.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price_change_rel = 10;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -428,7 +428,7 @@ class TargetItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Наименование инструмента
+     * Наименование инструмента.
      *
      * Generated from protobuf field <code>string show_name = 11;</code>
      * @return string
@@ -439,7 +439,7 @@ class TargetItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Наименование инструмента
+     * Наименование инструмента.
      *
      * Generated from protobuf field <code>string show_name = 11;</code>
      * @param string $var

@@ -27,6 +27,8 @@ class TradesStreamResponse extends \Google\Protobuf\Internal\Message
      *          Информация об исполнении торгового поручения.
      *     @type \Tinkoff\Invest\V1\Ping $ping
      *          Проверка активности стрима.
+     *     @type \Tinkoff\Invest\V1\SubscriptionResponse $subscription
+     *          Ответ на запрос на подписку.
      * }
      */
     public function __construct($data = NULL) {
@@ -92,6 +94,37 @@ class TradesStreamResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Ping::class);
         $this->writeOneof(2, $var);
+
+        return $this;
+    }
+
+    /**
+     *Ответ на запрос на подписку.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionResponse subscription = 3;</code>
+     * @return \Tinkoff\Invest\V1\SubscriptionResponse|null
+     */
+    public function getSubscription()
+    {
+        return $this->readOneof(3);
+    }
+
+    public function hasSubscription()
+    {
+        return $this->hasOneof(3);
+    }
+
+    /**
+     *Ответ на запрос на подписку.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionResponse subscription = 3;</code>
+     * @param \Tinkoff\Invest\V1\SubscriptionResponse $var
+     * @return $this
+     */
+    public function setSubscription($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\SubscriptionResponse::class);
+        $this->writeOneof(3, $var);
 
         return $this;
     }

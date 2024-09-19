@@ -16,13 +16,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetConsensusForecastsResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Массив прогнозов
+     * Массив прогнозов.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.GetConsensusForecastsResponse.ConsensusForecastsItem items = 1;</code>
      */
     private $items;
     /**
-     *Данные по пагинации
+     *Данные по пагинации.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PageResponse page = 2;</code>
      */
@@ -35,9 +35,9 @@ class GetConsensusForecastsResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Tinkoff\Invest\V1\GetConsensusForecastsResponse\ConsensusForecastsItem[]|\Google\Protobuf\Internal\RepeatedField $items
-     *           Массив прогнозов
+     *           Массив прогнозов.
      *     @type \Tinkoff\Invest\V1\PageResponse $page
-     *          Данные по пагинации
+     *          Данные по пагинации.
      * }
      */
     public function __construct($data = NULL) {
@@ -46,7 +46,7 @@ class GetConsensusForecastsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Массив прогнозов
+     * Массив прогнозов.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.GetConsensusForecastsResponse.ConsensusForecastsItem items = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -57,7 +57,7 @@ class GetConsensusForecastsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Массив прогнозов
+     * Массив прогнозов.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.GetConsensusForecastsResponse.ConsensusForecastsItem items = 1;</code>
      * @param \Tinkoff\Invest\V1\GetConsensusForecastsResponse\ConsensusForecastsItem[]|\Google\Protobuf\Internal\RepeatedField $var
@@ -72,7 +72,7 @@ class GetConsensusForecastsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Данные по пагинации
+     *Данные по пагинации.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PageResponse page = 2;</code>
      * @return \Tinkoff\Invest\V1\PageResponse|null
@@ -93,7 +93,7 @@ class GetConsensusForecastsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Данные по пагинации
+     *Данные по пагинации.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PageResponse page = 2;</code>
      * @param \Tinkoff\Invest\V1\PageResponse $var

@@ -9,20 +9,20 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Котировка — денежная сумма без указания валюты
+ *Котировка — денежная сумма без указания валюты.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.Quotation</code>
  */
 class Quotation extends \Google\Protobuf\Internal\Message
 {
     /**
-     * целая часть суммы, может быть отрицательным числом
+     * Целая часть суммы, может быть отрицательным числом.
      *
      * Generated from protobuf field <code>int64 units = 1;</code>
      */
     protected $units = 0;
     /**
-     * дробная часть суммы, может быть отрицательным числом
+     * Дробная часть суммы, может быть отрицательным числом.
      *
      * Generated from protobuf field <code>int32 nano = 2;</code>
      */
@@ -35,9 +35,9 @@ class Quotation extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int|string $units
-     *           целая часть суммы, может быть отрицательным числом
+     *           Целая часть суммы, может быть отрицательным числом.
      *     @type int $nano
-     *           дробная часть суммы, может быть отрицательным числом
+     *           Дробная часть суммы, может быть отрицательным числом.
      * }
      */
     public function __construct($data = NULL) {
@@ -46,7 +46,7 @@ class Quotation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * целая часть суммы, может быть отрицательным числом
+     * Целая часть суммы, может быть отрицательным числом.
      *
      * Generated from protobuf field <code>int64 units = 1;</code>
      * @return int|string
@@ -57,7 +57,7 @@ class Quotation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * целая часть суммы, может быть отрицательным числом
+     * Целая часть суммы, может быть отрицательным числом.
      *
      * Generated from protobuf field <code>int64 units = 1;</code>
      * @param int|string $var
@@ -72,7 +72,7 @@ class Quotation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * дробная часть суммы, может быть отрицательным числом
+     * Дробная часть суммы, может быть отрицательным числом.
      *
      * Generated from protobuf field <code>int32 nano = 2;</code>
      * @return int
@@ -83,7 +83,7 @@ class Quotation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * дробная часть суммы, может быть отрицательным числом
+     * Дробная часть суммы, может быть отрицательным числом.
      *
      * Generated from protobuf field <code>int32 nano = 2;</code>
      * @param int $var

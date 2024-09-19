@@ -14,25 +14,25 @@ use UnexpectedValueException;
 class RiskLevel
 {
     /**
-     *не указан
+     *Не указан.
      *
      * Generated from protobuf enum <code>RISK_LEVEL_UNSPECIFIED = 0;</code>
      */
     const RISK_LEVEL_UNSPECIFIED = 0;
     /**
-     *Низкий уровень риска
+     *Низкий уровень риска.
      *
      * Generated from protobuf enum <code>RISK_LEVEL_LOW = 1;</code>
      */
     const RISK_LEVEL_LOW = 1;
     /**
-     *Средний уровень риска
+     *Средний уровень риска.
      *
      * Generated from protobuf enum <code>RISK_LEVEL_MODERATE = 2;</code>
      */
     const RISK_LEVEL_MODERATE = 2;
     /**
-     *Высокий уровень риска
+     *Высокий уровень риска.
      *
      * Generated from protobuf enum <code>RISK_LEVEL_HIGH = 3;</code>
      */

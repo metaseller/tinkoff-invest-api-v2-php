@@ -22,7 +22,7 @@ class PositionsMoney extends \Google\Protobuf\Internal\Message
      */
     protected $available_value = null;
     /**
-     *Заблокированное количество валютный позиций.
+     *Заблокированное количество валютных позиций.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue blocked_value = 2;</code>
      */
@@ -37,7 +37,7 @@ class PositionsMoney extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\MoneyValue $available_value
      *          Доступное количество валютный позиций.
      *     @type \Tinkoff\Invest\V1\MoneyValue $blocked_value
-     *          Заблокированное количество валютный позиций.
+     *          Заблокированное количество валютных позиций.
      * }
      */
     public function __construct($data = NULL) {
@@ -82,7 +82,7 @@ class PositionsMoney extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Заблокированное количество валютный позиций.
+     *Заблокированное количество валютных позиций.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue blocked_value = 2;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -103,7 +103,7 @@ class PositionsMoney extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Заблокированное количество валютный позиций.
+     *Заблокированное количество валютных позиций.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue blocked_value = 2;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var

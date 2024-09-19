@@ -132,9 +132,9 @@ class AssetFull extends \Google\Protobuf\Internal\Message
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $required_tests
      *          Тестирование клиентов.
      *     @type \Tinkoff\Invest\V1\AssetCurrency $currency
-     *          Валюта. Обязательно и заполняется только для type = "ASSET_TYPE_CURRENCY".
+     *          Валюта. Обязательно и заполняется только для `type = ASSET_TYPE_CURRENCY`.
      *     @type \Tinkoff\Invest\V1\AssetSecurity $security
-     *          Ценная бумага. Обязательно и заполняется только для type = "ASSET_TYPE_SECURITY".
+     *          Ценная бумага. Обязательно и заполняется только для `type = ASSET_TYPE_SECURITY`.
      *     @type string $gos_reg_code
      *          Номер государственной регистрации.
      *     @type string $cfi
@@ -353,7 +353,7 @@ class AssetFull extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Валюта. Обязательно и заполняется только для type = "ASSET_TYPE_CURRENCY".
+     *Валюта. Обязательно и заполняется только для `type = ASSET_TYPE_CURRENCY`.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AssetCurrency currency = 8;</code>
      * @return \Tinkoff\Invest\V1\AssetCurrency|null
@@ -369,7 +369,7 @@ class AssetFull extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Валюта. Обязательно и заполняется только для type = "ASSET_TYPE_CURRENCY".
+     *Валюта. Обязательно и заполняется только для `type = ASSET_TYPE_CURRENCY`.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AssetCurrency currency = 8;</code>
      * @param \Tinkoff\Invest\V1\AssetCurrency $var
@@ -384,7 +384,7 @@ class AssetFull extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Ценная бумага. Обязательно и заполняется только для type = "ASSET_TYPE_SECURITY".
+     *Ценная бумага. Обязательно и заполняется только для `type = ASSET_TYPE_SECURITY`.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AssetSecurity security = 9;</code>
      * @return \Tinkoff\Invest\V1\AssetSecurity|null
@@ -400,7 +400,7 @@ class AssetFull extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Ценная бумага. Обязательно и заполняется только для type = "ASSET_TYPE_SECURITY".
+     *Ценная бумага. Обязательно и заполняется только для `type = ASSET_TYPE_SECURITY`.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AssetSecurity security = 9;</code>
      * @param \Tinkoff\Invest\V1\AssetSecurity $var

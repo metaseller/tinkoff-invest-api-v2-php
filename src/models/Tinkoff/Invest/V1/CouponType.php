@@ -14,49 +14,49 @@ use UnexpectedValueException;
 class CouponType
 {
     /**
-     *Неопределенное значение
+     *Неопределённое значение.
      *
      * Generated from protobuf enum <code>COUPON_TYPE_UNSPECIFIED = 0;</code>
      */
     const COUPON_TYPE_UNSPECIFIED = 0;
     /**
-     *Постоянный
+     *Постоянный.
      *
      * Generated from protobuf enum <code>COUPON_TYPE_CONSTANT = 1;</code>
      */
     const COUPON_TYPE_CONSTANT = 1;
     /**
-     *Плавающий
+     *Плавающий.
      *
      * Generated from protobuf enum <code>COUPON_TYPE_FLOATING = 2;</code>
      */
     const COUPON_TYPE_FLOATING = 2;
     /**
-     *Дисконт
+     *Дисконт.
      *
      * Generated from protobuf enum <code>COUPON_TYPE_DISCOUNT = 3;</code>
      */
     const COUPON_TYPE_DISCOUNT = 3;
     /**
-     *Ипотечный
+     *Ипотечный.
      *
      * Generated from protobuf enum <code>COUPON_TYPE_MORTGAGE = 4;</code>
      */
     const COUPON_TYPE_MORTGAGE = 4;
     /**
-     *Фиксированный
+     *Фиксированный.
      *
      * Generated from protobuf enum <code>COUPON_TYPE_FIX = 5;</code>
      */
     const COUPON_TYPE_FIX = 5;
     /**
-     *Переменный
+     *Переменный.
      *
      * Generated from protobuf enum <code>COUPON_TYPE_VARIABLE = 6;</code>
      */
     const COUPON_TYPE_VARIABLE = 6;
     /**
-     *Прочее
+     *Прочее.
      *
      * Generated from protobuf enum <code>COUPON_TYPE_OTHER = 7;</code>
      */

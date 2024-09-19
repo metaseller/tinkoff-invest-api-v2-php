@@ -34,7 +34,7 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
      */
     private $securities;
     /**
-     *Признак идущей в данный момент выгрузки лимитов.
+     *Признак идущей выгрузки лимитов в данный момент.
      *
      * Generated from protobuf field <code>bool limits_loading_in_progress = 4;</code>
      */
@@ -65,7 +65,7 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\PositionsSecurities[]|\Google\Protobuf\Internal\RepeatedField $securities
      *          Список ценно-бумажных позиций портфеля.
      *     @type bool $limits_loading_in_progress
-     *          Признак идущей в данный момент выгрузки лимитов.
+     *          Признак идущей выгрузки лимитов в данный момент.
      *     @type \Tinkoff\Invest\V1\PositionsFutures[]|\Google\Protobuf\Internal\RepeatedField $futures
      *          Список фьючерсов портфеля.
      *     @type \Tinkoff\Invest\V1\PositionsOptions[]|\Google\Protobuf\Internal\RepeatedField $options
@@ -156,7 +156,7 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Признак идущей в данный момент выгрузки лимитов.
+     *Признак идущей выгрузки лимитов в данный момент.
      *
      * Generated from protobuf field <code>bool limits_loading_in_progress = 4;</code>
      * @return bool
@@ -167,7 +167,7 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Признак идущей в данный момент выгрузки лимитов.
+     *Признак идущей выгрузки лимитов в данный момент.
      *
      * Generated from protobuf field <code>bool limits_loading_in_progress = 4;</code>
      * @param bool $var

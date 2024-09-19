@@ -14,7 +14,7 @@ use UnexpectedValueException;
 class OptionStyle
 {
     /**
-     *Тип не определен.
+     *Тип не определён.
      *
      * Generated from protobuf enum <code>OPTION_STYLE_UNSPECIFIED = 0;</code>
      */

@@ -18,19 +18,19 @@ class GetDividendsForeignIssuerReportResponse extends \Google\Protobuf\Internal\
      */
     private $dividends_foreign_issuer_report;
     /**
-     *Количество записей в отчете.
+     *Количество записей в отчёте.
      *
      * Generated from protobuf field <code>int32 itemsCount = 2;</code>
      */
     protected $itemsCount = 0;
     /**
-     *Количество страниц с данными отчета (начинается с 0).
+     *Количество страниц с данными отчёта, начинается с 0.
      *
      * Generated from protobuf field <code>int32 pagesCount = 3;</code>
      */
     protected $pagesCount = 0;
     /**
-     *Текущая страница (начинается с 0).
+     *Текущая страница, начинается с 0.
      *
      * Generated from protobuf field <code>int32 page = 4;</code>
      */
@@ -44,11 +44,11 @@ class GetDividendsForeignIssuerReportResponse extends \Google\Protobuf\Internal\
      *
      *     @type \Tinkoff\Invest\V1\DividendsForeignIssuerReport[]|\Google\Protobuf\Internal\RepeatedField $dividends_foreign_issuer_report
      *     @type int $itemsCount
-     *          Количество записей в отчете.
+     *          Количество записей в отчёте.
      *     @type int $pagesCount
-     *          Количество страниц с данными отчета (начинается с 0).
+     *          Количество страниц с данными отчёта, начинается с 0.
      *     @type int $page
-     *          Текущая страница (начинается с 0).
+     *          Текущая страница, начинается с 0.
      * }
      */
     public function __construct($data = NULL) {
@@ -79,7 +79,7 @@ class GetDividendsForeignIssuerReportResponse extends \Google\Protobuf\Internal\
     }
 
     /**
-     *Количество записей в отчете.
+     *Количество записей в отчёте.
      *
      * Generated from protobuf field <code>int32 itemsCount = 2;</code>
      * @return int
@@ -90,7 +90,7 @@ class GetDividendsForeignIssuerReportResponse extends \Google\Protobuf\Internal\
     }
 
     /**
-     *Количество записей в отчете.
+     *Количество записей в отчёте.
      *
      * Generated from protobuf field <code>int32 itemsCount = 2;</code>
      * @param int $var
@@ -105,7 +105,7 @@ class GetDividendsForeignIssuerReportResponse extends \Google\Protobuf\Internal\
     }
 
     /**
-     *Количество страниц с данными отчета (начинается с 0).
+     *Количество страниц с данными отчёта, начинается с 0.
      *
      * Generated from protobuf field <code>int32 pagesCount = 3;</code>
      * @return int
@@ -116,7 +116,7 @@ class GetDividendsForeignIssuerReportResponse extends \Google\Protobuf\Internal\
     }
 
     /**
-     *Количество страниц с данными отчета (начинается с 0).
+     *Количество страниц с данными отчёта, начинается с 0.
      *
      * Generated from protobuf field <code>int32 pagesCount = 3;</code>
      * @param int $var
@@ -131,7 +131,7 @@ class GetDividendsForeignIssuerReportResponse extends \Google\Protobuf\Internal\
     }
 
     /**
-     *Текущая страница (начинается с 0).
+     *Текущая страница, начинается с 0.
      *
      * Generated from protobuf field <code>int32 page = 4;</code>
      * @return int
@@ -142,7 +142,7 @@ class GetDividendsForeignIssuerReportResponse extends \Google\Protobuf\Internal\
     }
 
     /**
-     *Текущая страница (начинается с 0).
+     *Текущая страница, начинается с 0.
      *
      * Generated from protobuf field <code>int32 page = 4;</code>
      * @param int $var

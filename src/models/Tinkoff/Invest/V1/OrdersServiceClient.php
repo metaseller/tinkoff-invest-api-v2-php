@@ -32,6 +32,21 @@ class OrdersServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Асинхронный метод выставления заявки.
+     * @param \Tinkoff\Invest\V1\PostOrderAsyncRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function PostOrderAsync(\Tinkoff\Invest\V1\PostOrderAsyncRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.OrdersService/PostOrderAsync',
+        $argument,
+        ['\Tinkoff\Invest\V1\PostOrderAsyncResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * Метод отмены биржевой заявки.
      * @param \Tinkoff\Invest\V1\CancelOrderRequest $argument input argument
      * @param array $metadata metadata

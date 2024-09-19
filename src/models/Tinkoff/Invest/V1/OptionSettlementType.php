@@ -14,7 +14,7 @@ use UnexpectedValueException;
 class OptionSettlementType
 {
     /**
-     *Тип не определен.
+     *Тип не определён.
      *
      * Generated from protobuf enum <code>OPTION_EXECUTION_TYPE_UNSPECIFIED = 0;</code>
      */
@@ -26,7 +26,7 @@ class OptionSettlementType
      */
     const OPTION_EXECUTION_TYPE_PHYSICAL_DELIVERY = 1;
     /**
-     *Расчетный тип опциона.
+     *Расчётный тип опциона.
      *
      * Generated from protobuf enum <code>OPTION_EXECUTION_TYPE_CASH_SETTLEMENT = 2;</code>
      */
