@@ -33,6 +33,11 @@ class ClientConnection
     public const TINKOFF_INVEST_API2_PORT = 443;
 
     /**
+     * @var int Максимальный размер сообщения в ответе
+     */
+    public const GRPC_MAX_RECEIVE_MESSAGE_LENGTH = 8388608;
+
+    /**
      * Метод получения опций соединения с сервисом Tinkoff Invest API 2
      *
      * @param string $api_token Токен доступа к Tinkoff Invest API 2
@@ -50,6 +55,7 @@ class ClientConnection
             'credentials' => ChannelCredentials::createSsl($cert),
             'grpc.enable_http_proxy' => 0,
             'grpc.ssl_target_name_override' => static::getApiDomain(),
+            'grpc.max_receive_message_length' => static::GRPC_MAX_RECEIVE_MESSAGE_LENGTH,
             'update_metadata' => function($meta_data) use ($api_token, $app_name) {
                 $meta_data['authorization'] = ['Bearer ' . $api_token];
                 $meta_data['x-app-name'] = [$app_name];
