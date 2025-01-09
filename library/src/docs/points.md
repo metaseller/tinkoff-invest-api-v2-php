@@ -35,7 +35,7 @@
 >Также при работе с фьючерсами важно учитывать размер гарантийного обеспечения. Узнать эти параметры фьючерсов
 можно через метод [getFuturesMargin](/investAPI/instruments#getfuturesmargin). 
 
-[Подробнее про срочный рынок](https://help.tbank.ru/forts/)
+[Подробнее про срочный рынок](https://www.tbank.ru/invest/help/brokerage/account/forts/)
 
 ## Параметры методов, в которых используются пункты цены
 
@@ -45,6 +45,9 @@
 |MarketData|Все методы|Все параметры|В валюте расчётов|В пунктах цены|
 |Operations|Все методы|Все параметры|В валюте расчётов|В валюте расчётов|
 |Orders|PostOrder|Все параметры|В валюте расчётов|В валюте расчётов или в пунктах цены в зависимости от [типа цены](https://russianinvestments.github.io/investAPI/orders/#pricetype)|
+|Orders|OrderStateStream|`orderPrice` и `price` сделки|В валюте расчётов|В пунктах цены|
+|Orders|OrderStateStream|Остальные параметры|В валюте расчётов|В валюте расчётов|
+|Orders|TradeStream|`price`|В валюте расчётов|В пунктах цены|
 |StopOrders|PostStopOrder|Входные параметры|В валюте расчётов|В валюте расчётов|
 |Operations|Все методы|Все параметры|В валюте расчётов|В валюте расчётов|
 |Sandbox|PostSandboxOrder|Входные параметры|В валюте расчётов|В валюте расчётов|

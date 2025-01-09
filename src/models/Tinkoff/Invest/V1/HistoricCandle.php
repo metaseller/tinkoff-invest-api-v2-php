@@ -60,9 +60,9 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
     /**
      *Тип источника свечи
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.CandleSource candle_source = 9;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.CandleSource candle_source_type = 9;</code>
      */
-    protected $candle_source = 0;
+    protected $candle_source_type = 0;
 
     /**
      * Constructor.
@@ -84,7 +84,7 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
      *          Время свечи в часовом поясе UTC.
      *     @type bool $is_complete
      *          Признак завершённости свечи. **false** — свеча за текущие интервал ещё сформирована не полностью.
-     *     @type int $candle_source
+     *     @type int $candle_source_type
      *          Тип источника свечи
      * }
      */
@@ -328,25 +328,25 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
     /**
      *Тип источника свечи
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.CandleSource candle_source = 9;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.CandleSource candle_source_type = 9;</code>
      * @return int
      */
-    public function getCandleSource()
+    public function getCandleSourceType()
     {
-        return $this->candle_source;
+        return $this->candle_source_type;
     }
 
     /**
      *Тип источника свечи
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.CandleSource candle_source = 9;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.CandleSource candle_source_type = 9;</code>
      * @param int $var
      * @return $this
      */
-    public function setCandleSource($var)
+    public function setCandleSourceType($var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\CandleSource::class);
-        $this->candle_source = $var;
+        $this->candle_source_type = $var;
 
         return $this;
     }

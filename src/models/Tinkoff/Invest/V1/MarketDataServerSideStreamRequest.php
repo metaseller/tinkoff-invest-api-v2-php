@@ -43,6 +43,12 @@ class MarketDataServerSideStreamRequest extends \Google\Protobuf\Internal\Messag
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscribeLastPriceRequest subscribe_last_price_request = 5;</code>
      */
     protected $subscribe_last_price_request = null;
+    /**
+     *Запрос настройки пинга.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PingDelaySettings ping_settings = 15;</code>
+     */
+    protected $ping_settings = null;
 
     /**
      * Constructor.
@@ -60,6 +66,8 @@ class MarketDataServerSideStreamRequest extends \Google\Protobuf\Internal\Messag
      *          Запрос подписки на торговые статусы инструментов.
      *     @type \Tinkoff\Invest\V1\SubscribeLastPriceRequest $subscribe_last_price_request
      *          Запрос подписки на цены последних сделок.
+     *     @type \Tinkoff\Invest\V1\PingDelaySettings $ping_settings
+     *          Запрос настройки пинга.
      * }
      */
     public function __construct($data = NULL) {
@@ -243,6 +251,42 @@ class MarketDataServerSideStreamRequest extends \Google\Protobuf\Internal\Messag
     {
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\SubscribeLastPriceRequest::class);
         $this->subscribe_last_price_request = $var;
+
+        return $this;
+    }
+
+    /**
+     *Запрос настройки пинга.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PingDelaySettings ping_settings = 15;</code>
+     * @return \Tinkoff\Invest\V1\PingDelaySettings|null
+     */
+    public function getPingSettings()
+    {
+        return isset($this->ping_settings) ? $this->ping_settings : null;
+    }
+
+    public function hasPingSettings()
+    {
+        return isset($this->ping_settings);
+    }
+
+    public function clearPingSettings()
+    {
+        unset($this->ping_settings);
+    }
+
+    /**
+     *Запрос настройки пинга.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PingDelaySettings ping_settings = 15;</code>
+     * @param \Tinkoff\Invest\V1\PingDelaySettings $var
+     * @return $this
+     */
+    public function setPingSettings($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\PingDelaySettings::class);
+        $this->ping_settings = $var;
 
         return $this;
     }

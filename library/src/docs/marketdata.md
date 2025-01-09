@@ -116,6 +116,8 @@ Server-side стрим предоставления биржевой инфор�
 | subscribe_info_request |  [SubscribeInfoRequest](#subscribeinforequest) | Запрос подписки на торговые статусы инструментов. |
 | subscribe_last_price_request |  [SubscribeLastPriceRequest](#subscribelastpricerequest) | Запрос подписки на цены последних сделок. |
 | get_my_subscriptions |  [GetMySubscriptions](#getmysubscriptions) | Запрос своих подписок. |
+| ping |  [PingRequest](#pingrequest) | Запрос проверки активности соединения. |
+| ping_settings |  [PingDelaySettings](#pingdelaysettings) | Запрос настройки пинга. |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -131,6 +133,7 @@ Server-side стрим предоставления биржевой инфор�
 | subscribe_trades_request |  [SubscribeTradesRequest](#subscribetradesrequest) | Запрос подписки на ленту обезличенных сделок. |
 | subscribe_info_request |  [SubscribeInfoRequest](#subscribeinforequest) | Запрос подписки на торговые статусы инструментов. |
 | subscribe_last_price_request |  [SubscribeLastPriceRequest](#subscribelastpricerequest) | Запрос подписки на цены последних сделок. |
+| ping_settings |  [PingDelaySettings](#pingdelaysettings) | Запрос настройки пинга. |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -165,6 +168,7 @@ subscribeCandles | Изменения статуса подписки на св�
 | subscription_action |  [SubscriptionAction](#subscriptionaction) | Изменение статуса подписки. |
 | instruments | Массив объектов [CandleInstrument](#candleinstrument) | Массив инструментов для подписки на свечи. |
 | waiting_close |  [bool](#bool) | Флаг ожидания закрытия временного интервала для отправки свечи. |
+| candle_source_type |  [GetCandlesRequest.CandleSource](#getcandlesrequestcandlesource) | Источник свечей. |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -207,6 +211,7 @@ subscribeCandles | Изменения статуса подписки на св�
 | waiting_close |  [bool](#bool) | Флаг ожидания закрытия временного интервала для отправки свечи. |
 | stream_id |  [string](#string) | Идентификатор открытого соединения. |
 | subscription_id |  [string](#string) | Идентификатор подписки в формате `UUID`. |
+| candle_source_type |  [GetCandlesRequest.CandleSource](#getcandlesrequestcandlesource) | Источник свечей. |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -232,7 +237,7 @@ subscribeCandles | Изменения статуса подписки на св�
 | figi |  [string](#string) | Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`. |
 | depth |  [int32](#int32) | Глубина стакана. |
 | instrument_id |  [string](#string) | Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`. |
-| order_book_type |  [OrderBookType](#orderbooktype) | Тип стакана. |
+| order_book_type |  [OrderBookType](#orderbooktype) | Тип стакана. По умолчанию ORDERBOOK_TYPE_ALL - стакан биржевой и дилера. |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -274,7 +279,7 @@ subscribeCandles | Изменения статуса подписки на св�
 | ----- | ---- | ----------- |
 | subscription_action |  [SubscriptionAction](#subscriptionaction) | Изменение статуса подписки. |
 | instruments | Массив объектов [TradeInstrument](#tradeinstrument) | Массив инструментов для подписки на поток обезличенных сделок. |
-| trade_type |  [TradeSourceType](#tradesourcetype) | Источник сделок. |
+| trade_source |  [TradeSourceType](#tradesourcetype) | Тип источника сделок. По умолчанию TRADE_SOURCE_ALL - все сделки. |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -299,7 +304,7 @@ subscribeCandles | Изменения статуса подписки на св�
 | ----- | ---- | ----------- |
 | tracking_id |  [string](#string) | Уникальный идентификатор запроса. [Подробнее](https://russianinvestments.github.io/investAPI/grpc#tracking-id). |
 | trade_subscriptions | Массив объектов [TradeSubscription](#tradesubscription) | Массив статусов подписки на поток сделок. |
-| trade_type |  [TradeSourceType](#tradesourcetype) | Источник сделок. |
+| trade_source |  [TradeSourceType](#tradesourcetype) | Тип источника сделок. |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -437,6 +442,7 @@ subscribeCandles | Изменения статуса подписки на св�
 | time |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Время начала интервала свечи по UTC. |
 | last_trade_ts |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Время последней сделки, вошедшей в свечу по UTC. |
 | instrument_uid |  [string](#string) | UID инструмента. |
+| candle_source_type |  [CandleSource](#candlesource) | Источник свечей |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -485,7 +491,7 @@ subscribeCandles | Изменения статуса подписки на св�
 | quantity |  [int64](#int64) | Количество лотов. |
 | time |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Время сделки в часовом поясе UTC по времени биржи. |
 | instrument_uid |  [string](#string) | UID инструмента. |
-| tradeSource |  [TradeSourceType](#tradesourcetype) | Источник сделки. |
+| trade_source |  [TradeSourceType](#tradesourcetype) | Тип источника сделки. |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -547,7 +553,7 @@ subscribeCandles | Изменения статуса подписки на св�
 | volume |  [int64](#int64) | Объём торгов в лотах. |
 | time |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Время свечи в часовом поясе UTC. |
 | is_complete |  [bool](#bool) | Признак завершённости свечи. **false** — свеча за текущие интервал ещё сформирована не полностью. |
-| candle_source |  [CandleSource](#candlesource) | Тип источника свечи |
+| candle_source_type |  [CandleSource](#candlesource) | Тип источника свечи |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -561,6 +567,7 @@ subscribeCandles | Изменения статуса подписки на св�
 | figi | Массив объектов [string](#string) | Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`. |
 | instrument_id | Массив объектов [string](#string) | Массив идентификаторов инструмента. Принимает значения `figi` или `instrument_uid`. |
 | last_price_type |  [LastPriceType](#lastpricetype) | Тип запрашиваемой последней цены. |
+| instrument_status |  [InstrumentStatus](#instrumentstatus) | Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus). |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -688,6 +695,7 @@ subscribeCandles | Изменения статуса подписки на св�
 | from |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Начало запрашиваемого периода по UTC. |
 | to |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Окончание запрашиваемого периода по UTC. |
 | instrument_id |  [string](#string) | Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`. |
+| trade_source |  [TradeSourceType](#tradesourcetype) | Тип источника сделок. По умолчанию TRADE_SOURCE_ALL - все сделки. |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -716,6 +724,7 @@ subscribeCandles | Изменения статуса подписки на св�
 | Field | Type | Description |
 | ----- | ---- | ----------- |
 | instruments | Массив объектов [InstrumentClosePriceRequest](#instrumentclosepricerequest) | Массив по инструментам. |
+| instrument_status |  [InstrumentStatus](#instrumentstatus) | Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus). |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -880,16 +889,17 @@ subscribeCandles | Изменения статуса подписки на св�
 | SUBSCRIPTION_STATUS_INTERNAL_ERROR | 7 | Внутренняя ошибка сервиса. |
 | SUBSCRIPTION_STATUS_TOO_MANY_REQUESTS | 8 | Превышен лимит на количество запросов на подписки в течение установленного отрезка времени. |
 | SUBSCRIPTION_STATUS_SUBSCRIPTION_NOT_FOUND | 9 | Активная подписка не найдена. Ошибка может возникнуть только при отписке от несуществующей подписки. |
+| SUBSCRIPTION_STATUS_SOURCE_IS_INVALID | 10 | Указан некорректный источник |
 
 
 
 
 #### TradeSourceType
-Источники сделок.
+Типы источников сделок.
 
 | Name | Number | Description |
 | ---- | ------ | ----------- |
-| TRADE_SOURCE_UNSPECIFIED | 0 | Тип сделки не определён. |
+| TRADE_SOURCE_UNSPECIFIED | 0 | Тип источника сделки не определён. |
 | TRADE_SOURCE_EXCHANGE | 1 | Биржевые сделки. |
 | TRADE_SOURCE_DEALER | 2 | Сделки дилера. |
 | TRADE_SOURCE_ALL | 3 | Все сделки. |
@@ -910,24 +920,24 @@ subscribeCandles | Изменения статуса подписки на св�
 
 
 #### CandleInterval
-Интервал свечей.
+Интервал свечей. Максимальное значение интервала приведено ориентировочно, может отличаться в большую сторону в зависимости от параметров запроса.
 
 | Name | Number | Description |
 | ---- | ------ | ----------- |
 | CANDLE_INTERVAL_UNSPECIFIED | 0 | Интервал не определён. |
-| CANDLE_INTERVAL_1_MIN | 1 | От 1 минуты до 1 дня. |
-| CANDLE_INTERVAL_5_MIN | 2 | От 5 минут до 1 дня. |
-| CANDLE_INTERVAL_15_MIN | 3 | От 15 минут до 1 дня. |
-| CANDLE_INTERVAL_HOUR | 4 | От 1 часа до 1 недели. |
-| CANDLE_INTERVAL_DAY | 5 | От 1 дня до 1 года. |
-| CANDLE_INTERVAL_2_MIN | 6 | От 2 минут до 1 дня. |
-| CANDLE_INTERVAL_3_MIN | 7 | От 3 минут до 1 дня. |
-| CANDLE_INTERVAL_10_MIN | 8 | От 10 минут до 1 дня. |
-| CANDLE_INTERVAL_30_MIN | 9 | От 30 минут до 2 дней. |
-| CANDLE_INTERVAL_2_HOUR | 10 | От 2 часов до 1 месяца. |
-| CANDLE_INTERVAL_4_HOUR | 11 | От 4 часов до 1 месяца. |
-| CANDLE_INTERVAL_WEEK | 12 | От 1 недели до 2 лет. |
-| CANDLE_INTERVAL_MONTH | 13 | От 1 месяца до 10 лет. |
+| CANDLE_INTERVAL_1_MIN | 1 | От 1 минуты до 1 дня (лимит 2400). |
+| CANDLE_INTERVAL_5_MIN | 2 | От 5 минут до недели (лимит 2400). |
+| CANDLE_INTERVAL_15_MIN | 3 | От 15 минут до 3 недель (лимит 2400). |
+| CANDLE_INTERVAL_HOUR | 4 | От 1 часа до 3 месяцев (лимит 2400). |
+| CANDLE_INTERVAL_DAY | 5 | От 1 дня до 6 лет (лимит 2400). |
+| CANDLE_INTERVAL_2_MIN | 6 | От 2 минут до 1 дня (лимит 1200). |
+| CANDLE_INTERVAL_3_MIN | 7 | От 3 минут до 1 дня (лимит 750). |
+| CANDLE_INTERVAL_10_MIN | 8 | От 10 минут до недели (лимит 1200). |
+| CANDLE_INTERVAL_30_MIN | 9 | От 30 минут до 3 недель (лимит 1200). |
+| CANDLE_INTERVAL_2_HOUR | 10 | От 2 часов до 3 месяцев (лимит 2400). |
+| CANDLE_INTERVAL_4_HOUR | 11 | От 4 часов до 3 месяцев (лимит 700). |
+| CANDLE_INTERVAL_WEEK | 12 | От 1 недели до 5 лет (лимит 300). |
+| CANDLE_INTERVAL_MONTH | 13 | От 1 месяца до 10 лет (лимит 120). |
 
 
 
@@ -952,6 +962,7 @@ subscribeCandles | Изменения статуса подписки на св�
 | ORDERBOOK_TYPE_UNSPECIFIED | 0 | Не определён. |
 | ORDERBOOK_TYPE_EXCHANGE | 1 | Биржевой стакан. |
 | ORDERBOOK_TYPE_DEALER | 2 | Стакан дилера. |
+| ORDERBOOK_TYPE_ALL | 3 | Стакан биржевой и дилера. |
 
 
 
@@ -1056,6 +1067,14 @@ subscribeCandles | Изменения статуса подписки на св�
 | SECURITY_TRADING_STATUS_DEALER_NORMAL_TRADING | 14 |Доступна торговля в режиме внутренней ликвидности брокера |
 | SECURITY_TRADING_STATUS_DEALER_BREAK_IN_TRADING | 15 |Перерыв торговли в режиме внутренней ликвидности брокера |
 | SECURITY_TRADING_STATUS_DEALER_NOT_AVAILABLE_FOR_TRADING | 16 |Недоступна торговля в режиме внутренней ликвидности брокера |
+
+
+#### InstrumentStatus
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| INSTRUMENT_TYPE_UNSPECIFIED | 0 | Значение не определено |
+| INSTRUMENT_STATUS_BASE | 1 | Базовый список инструментов (по умолчанию). Инструменты, доступные для торговли через T-Invest API. Cейчас списки бумаг, которые доступны из API и других интерфейсах совпадают — кроме внебиржевых бумаг. Но в будущем возможны ситуации, когда списки инструментов будут отличаться. |
+| INSTRUMENT_STATUS_ALL | 2 | Список всех инструментов |
 
 
 ### Нестандартные типы данных

@@ -26,6 +26,13 @@ enum InstrumentType {
   INSTRUMENT_TYPE_COMMODITY = 10; //Товар.
 }
 
+//Статус запрашиваемых инструментов.
+enum InstrumentStatus {
+  INSTRUMENT_STATUS_UNSPECIFIED = 0; //Значение не определено.
+  INSTRUMENT_STATUS_BASE = 1; //Базовый список инструментов (по умолчанию). Инструменты, доступные для торговли через T-Invest API. Cейчас списки бумаг, которые доступны из API и других интерфейсах совпадают — кроме внебиржевых бумаг. Но в будущем возможны ситуации, когда списки инструментов будут отличаться.
+  INSTRUMENT_STATUS_ALL = 2; //Список всех инструментов.
+}
+
 //Денежная сумма в определённой валюте.
 message MoneyValue {
 
@@ -70,10 +77,19 @@ enum SecurityTradingStatus {
   SECURITY_TRADING_STATUS_DEALER_NOT_AVAILABLE_FOR_TRADING = 16; //Недоступна торговля в режиме внутренней ликвидности брокера.
 }
 
+message PingRequest {
+  optional google.protobuf.Timestamp time = 1; //Время формирования запроса
+}
+
+message PingDelaySettings {
+  optional int32 ping_delay_ms = 15; //Задержка пинг сообщений milliseconds 5000-180000, default 120000
+}
+
 //Проверка активности стрима.
 message Ping {
   google.protobuf.Timestamp time = 1; //Время проверки.
   string stream_id = 2; //Идентификатор соединения.
+  optional google.protobuf.Timestamp ping_request_time = 4; //Время формирования запроса
 }
 
 //Тип цены.

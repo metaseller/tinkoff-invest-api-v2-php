@@ -28,11 +28,11 @@ class SubscribeTradesRequest extends \Google\Protobuf\Internal\Message
      */
     private $instruments;
     /**
-     *Источник сделок.
+     *Тип источника сделок. По умолчанию TRADE_SOURCE_ALL - все сделки.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType trade_type = 3;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType trade_source = 3;</code>
      */
-    protected $trade_type = 0;
+    protected $trade_source = 0;
 
     /**
      * Constructor.
@@ -44,8 +44,8 @@ class SubscribeTradesRequest extends \Google\Protobuf\Internal\Message
      *          Изменение статуса подписки.
      *     @type \Tinkoff\Invest\V1\TradeInstrument[]|\Google\Protobuf\Internal\RepeatedField $instruments
      *          Массив инструментов для подписки на поток обезличенных сделок.
-     *     @type int $trade_type
-     *          Источник сделок.
+     *     @type int $trade_source
+     *          Тип источника сделок. По умолчанию TRADE_SOURCE_ALL - все сделки.
      * }
      */
     public function __construct($data = NULL) {
@@ -106,27 +106,27 @@ class SubscribeTradesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Источник сделок.
+     *Тип источника сделок. По умолчанию TRADE_SOURCE_ALL - все сделки.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType trade_type = 3;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType trade_source = 3;</code>
      * @return int
      */
-    public function getTradeType()
+    public function getTradeSource()
     {
-        return $this->trade_type;
+        return $this->trade_source;
     }
 
     /**
-     *Источник сделок.
+     *Тип источника сделок. По умолчанию TRADE_SOURCE_ALL - все сделки.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType trade_type = 3;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType trade_source = 3;</code>
      * @param int $var
      * @return $this
      */
-    public function setTradeType($var)
+    public function setTradeSource($var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\TradeSourceType::class);
-        $this->trade_type = $var;
+        $this->trade_source = $var;
 
         return $this;
     }

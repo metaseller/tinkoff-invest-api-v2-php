@@ -628,6 +628,8 @@ Deprecated Получить списка опционов.
 | dshort_min |  [Quotation](#quotation) | Ставка риска начальной маржи для КПУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5). |
 | min_price_increment |  [Quotation](#quotation) | Минимальный шаг цены. |
 | strike_price |  [MoneyValue](#moneyvalue) | Цена страйка. |
+| dlong_client |  [Quotation](#quotation) | Ставка риска в лонг, с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5). |
+| dshort_client |  [Quotation](#quotation) | Ставка риска в шорт, с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5). |
 | expiration_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата истечения срока в формате UTC. |
 | first_trade_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата начала обращения контракта в формате UTC. |
 | last_trade_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата исполнения в формате UTC. |
@@ -727,6 +729,9 @@ Deprecated Получить списка опционов.
 | risk_level |  [RiskLevel](#risklevel) | Уровень риска. |
 | brand |  [BrandData](#branddata) | Информация о бренде. |
 | bond_type |  [BondType](#bondtype) | Тип облигации. |
+| call_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата погашения облигации. |
+| dlong_client |  [Quotation](#quotation) | Ставка риска в лонг, с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5). |
+| dshort_client |  [Quotation](#quotation) | Ставка риска в шорт, с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5). |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -772,6 +777,8 @@ Deprecated Получить списка опционов.
 | first_1min_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой минутной свечи. |
 | first_1day_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой дневной свечи. |
 | brand |  [BrandData](#branddata) | Информация о бренде. |
+| dlong_client |  [Quotation](#quotation) | Ставка риска в лонг, с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5). |
+| dshort_client |  [Quotation](#quotation) | Ставка риска в шорт, с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5). |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -824,6 +831,8 @@ Deprecated Получить списка опционов.
 | first_1min_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой минутной свечи. |
 | first_1day_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой дневной свечи. |
 | brand |  [BrandData](#branddata) | Информация о бренде. |
+| dlong_client |  [Quotation](#quotation) | Ставка риска в лонг, с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5). |
+| dshort_client |  [Quotation](#quotation) | Ставка риска в шорт, с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5). |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -878,6 +887,8 @@ Deprecated Получить списка опционов.
 | initial_margin_on_sell |  [MoneyValue](#moneyvalue) | Гарантийное обеспечение при продаже. |
 | min_price_increment_amount |  [Quotation](#quotation) | Стоимость шага цены. |
 | brand |  [BrandData](#branddata) | Информация о бренде. |
+| dlong_client |  [Quotation](#quotation) | Ставка риска в лонг, с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5). |
+| dshort_client |  [Quotation](#quotation) | Ставка риска в шорт, с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5). |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -931,6 +942,8 @@ Deprecated Получить списка опционов.
 | first_1min_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой минутной свечи. |
 | first_1day_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой дневной свечи. |
 | brand |  [BrandData](#branddata) | Информация о бренде. |
+| dlong_client |  [Quotation](#quotation) | Ставка риска в лонг, с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5). |
+| dshort_client |  [Quotation](#quotation) | Ставка риска в шорт, с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5). |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -1053,6 +1066,8 @@ Deprecated Получить списка опционов.
 | first_1min_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой минутной свечи. |
 | first_1day_candle_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата первой дневной свечи. |
 | brand |  [BrandData](#branddata) | Информация о бренде. |
+| dlong_client |  [Quotation](#quotation) | Ставка риска в лонг, с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5). |
+| dshort_client |  [Quotation](#quotation) | Ставка риска в шорт, с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5). |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -1131,6 +1146,7 @@ Deprecated Получить списка опционов.
 | Field | Type | Description |
 | ----- | ---- | ----------- |
 | instrument_type |  [InstrumentType](#instrumenttype) |  |
+| instrument_status |  [InstrumentStatus](#instrumentstatus) | Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus). |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -1583,6 +1599,7 @@ Deprecated Получить списка опционов.
 | for_qual_investor_flag |  [bool](#bool) | Флаг, отображающий доступность торговли инструментом только для квалифицированных инвесторов. |
 | weekend_flag |  [bool](#bool) | Флаг, отображающий доступность торговли инструментом по выходным. |
 | blocked_tca_flag |  [bool](#bool) | Флаг заблокированного ТКС. |
+| lot |  [int32](#int32) | Количество бумаг в лоте. |
  <!-- end Fields -->
  <!-- end HasFields -->
 
@@ -1964,18 +1981,6 @@ Deprecated Получить списка опционов.
 
 
 
-#### InstrumentStatus
-Статус запрашиваемых инструментов.
-
-| Name | Number | Description |
-| ---- | ------ | ----------- |
-| INSTRUMENT_STATUS_UNSPECIFIED | 0 | Значение не определено. |
-| INSTRUMENT_STATUS_BASE | 1 | Базовый список инструментов (по умолчанию). Инструменты, доступные для торговли через T-Invest API. Cейчас списки бумаг, которые доступны из API и других интерфейсах совпадают — кроме внебиржевых бумаг. Но в будущем возможны ситуации, когда списки инструментов будут отличаться. |
-| INSTRUMENT_STATUS_ALL | 2 | Список всех инструментов. |
-
-
-
-
 #### ShareType
 Тип акций.
 
@@ -2137,6 +2142,15 @@ Deprecated Получить списка опционов.
 | INSTRUMENT_TYPE_CLEARING_CERTIFICATE | 8 | Clearing certificate |
 | INSTRUMENT_TYPE_INDEX | 9 | Индекс |
 | INSTRUMENT_TYPE_COMMODITY | 10 | Товар |
+
+
+#### InstrumentStatus
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| INSTRUMENT_TYPE_UNSPECIFIED | 0 | Значение не определено |
+| INSTRUMENT_STATUS_BASE | 1 | Базовый список инструментов (по умолчанию). Инструменты, доступные для торговли через T-Invest API. Cейчас списки бумаг, которые доступны из API и других интерфейсах совпадают — кроме внебиржевых бумаг. Но в будущем возможны ситуации, когда списки инструментов будут отличаться. |
+| INSTRUMENT_STATUS_ALL | 2 | Список всех инструментов |
+
 
 
 #### Execution

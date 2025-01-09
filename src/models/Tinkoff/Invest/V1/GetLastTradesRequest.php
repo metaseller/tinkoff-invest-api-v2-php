@@ -40,6 +40,12 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string instrument_id = 4;</code>
      */
     protected $instrument_id = null;
+    /**
+     *Тип источника сделок. По умолчанию TRADE_SOURCE_ALL - все сделки.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType trade_source = 5;</code>
+     */
+    protected $trade_source = 0;
 
     /**
      * Constructor.
@@ -55,6 +61,8 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
      *          Окончание запрашиваемого периода по UTC.
      *     @type string $instrument_id
      *          Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *     @type int $trade_source
+     *          Тип источника сделок. По умолчанию TRADE_SOURCE_ALL - все сделки.
      * }
      */
     public function __construct($data = NULL) {
@@ -208,6 +216,32 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->instrument_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тип источника сделок. По умолчанию TRADE_SOURCE_ALL - все сделки.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType trade_source = 5;</code>
+     * @return int
+     */
+    public function getTradeSource()
+    {
+        return $this->trade_source;
+    }
+
+    /**
+     *Тип источника сделок. По умолчанию TRADE_SOURCE_ALL - все сделки.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType trade_source = 5;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setTradeSource($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\TradeSourceType::class);
+        $this->trade_source = $var;
 
         return $this;
     }

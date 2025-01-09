@@ -7,7 +7,7 @@ namespace Tinkoff\Invest\V1;
 use UnexpectedValueException;
 
 /**
- *Интервал свечей.
+ *Интервал свечей. Максимальное значение интервала приведено ориентировочно, может отличаться в большую сторону в зависимости от параметров запроса.
  *
  * Protobuf type <code>tinkoff.public.invest.api.contract.v1.CandleInterval</code>
  */
@@ -20,79 +20,79 @@ class CandleInterval
      */
     const CANDLE_INTERVAL_UNSPECIFIED = 0;
     /**
-     *От 1 минуты до 1 дня.
+     *От 1 минуты до 1 дня (лимит 2400).
      *
      * Generated from protobuf enum <code>CANDLE_INTERVAL_1_MIN = 1;</code>
      */
     const CANDLE_INTERVAL_1_MIN = 1;
     /**
-     *От 5 минут до 1 дня.
+     *От 5 минут до недели (лимит 2400).
      *
      * Generated from protobuf enum <code>CANDLE_INTERVAL_5_MIN = 2;</code>
      */
     const CANDLE_INTERVAL_5_MIN = 2;
     /**
-     *От 15 минут до 1 дня.
+     *От 15 минут до 3 недель (лимит 2400).
      *
      * Generated from protobuf enum <code>CANDLE_INTERVAL_15_MIN = 3;</code>
      */
     const CANDLE_INTERVAL_15_MIN = 3;
     /**
-     *От 1 часа до 1 недели.
+     *От 1 часа до 3 месяцев (лимит 2400).
      *
      * Generated from protobuf enum <code>CANDLE_INTERVAL_HOUR = 4;</code>
      */
     const CANDLE_INTERVAL_HOUR = 4;
     /**
-     *От 1 дня до 1 года.
+     *От 1 дня до 6 лет (лимит 2400).
      *
      * Generated from protobuf enum <code>CANDLE_INTERVAL_DAY = 5;</code>
      */
     const CANDLE_INTERVAL_DAY = 5;
     /**
-     *От 2 минут до 1 дня.
+     *От 2 минут до 1 дня (лимит 1200).
      *
      * Generated from protobuf enum <code>CANDLE_INTERVAL_2_MIN = 6;</code>
      */
     const CANDLE_INTERVAL_2_MIN = 6;
     /**
-     *От 3 минут до 1 дня.
+     *От 3 минут до 1 дня (лимит 750).
      *
      * Generated from protobuf enum <code>CANDLE_INTERVAL_3_MIN = 7;</code>
      */
     const CANDLE_INTERVAL_3_MIN = 7;
     /**
-     *От 10 минут до 1 дня.
+     *От 10 минут до недели (лимит 1200).
      *
      * Generated from protobuf enum <code>CANDLE_INTERVAL_10_MIN = 8;</code>
      */
     const CANDLE_INTERVAL_10_MIN = 8;
     /**
-     *От 30 минут до 2 дней.
+     *От 30 минут до 3 недель (лимит 1200).
      *
      * Generated from protobuf enum <code>CANDLE_INTERVAL_30_MIN = 9;</code>
      */
     const CANDLE_INTERVAL_30_MIN = 9;
     /**
-     *От 2 часов до 1 месяца.
+     *От 2 часов до 3 месяцев (лимит 2400).
      *
      * Generated from protobuf enum <code>CANDLE_INTERVAL_2_HOUR = 10;</code>
      */
     const CANDLE_INTERVAL_2_HOUR = 10;
     /**
-     *От 4 часов до 1 месяца.
+     *От 4 часов до 3 месяцев (лимит 700).
      *
      * Generated from protobuf enum <code>CANDLE_INTERVAL_4_HOUR = 11;</code>
      */
     const CANDLE_INTERVAL_4_HOUR = 11;
     /**
-     *От 1 недели до 2 лет.
+     *От 1 недели до 5 лет (лимит 300).
      *
      * Generated from protobuf enum <code>CANDLE_INTERVAL_WEEK = 12;</code>
      */
     const CANDLE_INTERVAL_WEEK = 12;
     /**
-     *От 1 месяца до 10 лет.
+     *От 1 месяца до 10 лет (лимит 120).
      *
      * Generated from protobuf enum <code>CANDLE_INTERVAL_MONTH = 13;</code>
      */

@@ -73,6 +73,12 @@ class SubscriptionStatus
      * Generated from protobuf enum <code>SUBSCRIPTION_STATUS_SUBSCRIPTION_NOT_FOUND = 9;</code>
      */
     const SUBSCRIPTION_STATUS_SUBSCRIPTION_NOT_FOUND = 9;
+    /**
+     *Указан некорректный источник
+     *
+     * Generated from protobuf enum <code>SUBSCRIPTION_STATUS_SOURCE_IS_INVALID = 10;</code>
+     */
+    const SUBSCRIPTION_STATUS_SOURCE_IS_INVALID = 10;
 
     private static $valueToName = [
         self::SUBSCRIPTION_STATUS_UNSPECIFIED => 'SUBSCRIPTION_STATUS_UNSPECIFIED',
@@ -85,6 +91,7 @@ class SubscriptionStatus
         self::SUBSCRIPTION_STATUS_INTERNAL_ERROR => 'SUBSCRIPTION_STATUS_INTERNAL_ERROR',
         self::SUBSCRIPTION_STATUS_TOO_MANY_REQUESTS => 'SUBSCRIPTION_STATUS_TOO_MANY_REQUESTS',
         self::SUBSCRIPTION_STATUS_SUBSCRIPTION_NOT_FOUND => 'SUBSCRIPTION_STATUS_SUBSCRIPTION_NOT_FOUND',
+        self::SUBSCRIPTION_STATUS_SOURCE_IS_INVALID => 'SUBSCRIPTION_STATUS_SOURCE_IS_INVALID',
     ];
 
     public static function name($value)

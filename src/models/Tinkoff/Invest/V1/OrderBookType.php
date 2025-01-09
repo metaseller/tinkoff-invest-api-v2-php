@@ -29,11 +29,18 @@ class OrderBookType
      * Generated from protobuf enum <code>ORDERBOOK_TYPE_DEALER = 2;</code>
      */
     const ORDERBOOK_TYPE_DEALER = 2;
+    /**
+     *Стакан биржевой и дилера.
+     *
+     * Generated from protobuf enum <code>ORDERBOOK_TYPE_ALL = 3;</code>
+     */
+    const ORDERBOOK_TYPE_ALL = 3;
 
     private static $valueToName = [
         self::ORDERBOOK_TYPE_UNSPECIFIED => 'ORDERBOOK_TYPE_UNSPECIFIED',
         self::ORDERBOOK_TYPE_EXCHANGE => 'ORDERBOOK_TYPE_EXCHANGE',
         self::ORDERBOOK_TYPE_DEALER => 'ORDERBOOK_TYPE_DEALER',
+        self::ORDERBOOK_TYPE_ALL => 'ORDERBOOK_TYPE_ALL',
     ];
 
     public static function name($value)

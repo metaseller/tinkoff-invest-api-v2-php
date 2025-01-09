@@ -52,11 +52,11 @@ class Trade extends \Google\Protobuf\Internal\Message
      */
     protected $instrument_uid = '';
     /**
-     *Источник сделки.
+     *Тип источника сделки.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType tradeSource = 7;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType trade_source = 7;</code>
      */
-    protected $tradeSource = 0;
+    protected $trade_source = 0;
 
     /**
      * Constructor.
@@ -76,8 +76,8 @@ class Trade extends \Google\Protobuf\Internal\Message
      *          Время сделки в часовом поясе UTC по времени биржи.
      *     @type string $instrument_uid
      *          UID инструмента.
-     *     @type int $tradeSource
-     *          Источник сделки.
+     *     @type int $trade_source
+     *          Тип источника сделки.
      * }
      */
     public function __construct($data = NULL) {
@@ -262,27 +262,27 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Источник сделки.
+     *Тип источника сделки.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType tradeSource = 7;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType trade_source = 7;</code>
      * @return int
      */
     public function getTradeSource()
     {
-        return $this->tradeSource;
+        return $this->trade_source;
     }
 
     /**
-     *Источник сделки.
+     *Тип источника сделки.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType tradeSource = 7;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType trade_source = 7;</code>
      * @param int $var
      * @return $this
      */
     public function setTradeSource($var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\TradeSourceType::class);
-        $this->tradeSource = $var;
+        $this->trade_source = $var;
 
         return $this;
     }

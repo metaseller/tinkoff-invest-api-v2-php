@@ -21,6 +21,12 @@ class TradesStreamRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated string accounts = 1;</code>
      */
     private $accounts;
+    /**
+     *Задержка пинг сообщений milliseconds 5000-180000, default 120000
+     *
+     * Generated from protobuf field <code>int32 ping_delay_ms = 15;</code>
+     */
+    protected $ping_delay_ms = null;
 
     /**
      * Constructor.
@@ -30,6 +36,8 @@ class TradesStreamRequest extends \Google\Protobuf\Internal\Message
      *
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $accounts
      *          Идентификаторы счетов.
+     *     @type int $ping_delay_ms
+     *          Задержка пинг сообщений milliseconds 5000-180000, default 120000
      * }
      */
     public function __construct($data = NULL) {
@@ -59,6 +67,42 @@ class TradesStreamRequest extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->accounts = $arr;
+
+        return $this;
+    }
+
+    /**
+     *Задержка пинг сообщений milliseconds 5000-180000, default 120000
+     *
+     * Generated from protobuf field <code>int32 ping_delay_ms = 15;</code>
+     * @return int
+     */
+    public function getPingDelayMs()
+    {
+        return isset($this->ping_delay_ms) ? $this->ping_delay_ms : 0;
+    }
+
+    public function hasPingDelayMs()
+    {
+        return isset($this->ping_delay_ms);
+    }
+
+    public function clearPingDelayMs()
+    {
+        unset($this->ping_delay_ms);
+    }
+
+    /**
+     *Задержка пинг сообщений milliseconds 5000-180000, default 120000
+     *
+     * Generated from protobuf field <code>int32 ping_delay_ms = 15;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setPingDelayMs($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->ping_delay_ms = $var;
 
         return $this;
     }

@@ -113,6 +113,12 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation expected_yield_fifo = 27;</code>
      */
     protected $expected_yield_fifo = null;
+    /**
+     * Рассчитанная доходность портфеля за день
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue daily_yield = 31;</code>
+     */
+    protected $daily_yield = null;
 
     /**
      * Constructor.
@@ -152,6 +158,8 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      *          Вариационная маржа.
      *     @type \Tinkoff\Invest\V1\Quotation $expected_yield_fifo
      *          Текущая рассчитанная доходность позиции.
+     *     @type \Tinkoff\Invest\V1\MoneyValue $daily_yield
+     *           Рассчитанная доходность портфеля за день
      * }
      */
     public function __construct($data = NULL) {
@@ -693,6 +701,42 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->expected_yield_fifo = $var;
+
+        return $this;
+    }
+
+    /**
+     * Рассчитанная доходность портфеля за день
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue daily_yield = 31;</code>
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
+     */
+    public function getDailyYield()
+    {
+        return isset($this->daily_yield) ? $this->daily_yield : null;
+    }
+
+    public function hasDailyYield()
+    {
+        return isset($this->daily_yield);
+    }
+
+    public function clearDailyYield()
+    {
+        unset($this->daily_yield);
+    }
+
+    /**
+     * Рассчитанная доходность портфеля за день
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue daily_yield = 31;</code>
+     * @param \Tinkoff\Invest\V1\MoneyValue $var
+     * @return $this
+     */
+    public function setDailyYield($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
+        $this->daily_yield = $var;
 
         return $this;
     }

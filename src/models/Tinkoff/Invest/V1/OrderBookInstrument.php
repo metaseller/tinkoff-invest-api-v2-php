@@ -35,7 +35,7 @@ class OrderBookInstrument extends \Google\Protobuf\Internal\Message
      */
     protected $instrument_id = '';
     /**
-     *Тип стакана.
+     *Тип стакана. По умолчанию ORDERBOOK_TYPE_ALL - стакан биржевой и дилера.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderBookType order_book_type = 4;</code>
      */
@@ -54,7 +54,7 @@ class OrderBookInstrument extends \Google\Protobuf\Internal\Message
      *     @type string $instrument_id
      *          Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
      *     @type int $order_book_type
-     *          Тип стакана.
+     *          Тип стакана. По умолчанию ORDERBOOK_TYPE_ALL - стакан биржевой и дилера.
      * }
      */
     public function __construct($data = NULL) {
@@ -145,7 +145,7 @@ class OrderBookInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип стакана.
+     *Тип стакана. По умолчанию ORDERBOOK_TYPE_ALL - стакан биржевой и дилера.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderBookType order_book_type = 4;</code>
      * @return int
@@ -156,7 +156,7 @@ class OrderBookInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип стакана.
+     *Тип стакана. По умолчанию ORDERBOOK_TYPE_ALL - стакан биржевой и дилера.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderBookType order_book_type = 4;</code>
      * @param int $var

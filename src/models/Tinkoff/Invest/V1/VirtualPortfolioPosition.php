@@ -79,6 +79,12 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price_fifo = 11;</code>
      */
     protected $average_position_price_fifo = null;
+    /**
+     * Рассчитанная доходность портфеля за день
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue daily_yield = 31;</code>
+     */
+    protected $daily_yield = null;
 
     /**
      * Constructor.
@@ -108,6 +114,8 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      *          Текущая цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
      *     @type \Tinkoff\Invest\V1\MoneyValue $average_position_price_fifo
      *          Средняя цена позиции по методу FIFO. Для пересчёта возможна задержка до одной секунды.
+     *     @type \Tinkoff\Invest\V1\MoneyValue $daily_yield
+     *           Рассчитанная доходность портфеля за день
      * }
      */
     public function __construct($data = NULL) {
@@ -467,6 +475,42 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->average_position_price_fifo = $var;
+
+        return $this;
+    }
+
+    /**
+     * Рассчитанная доходность портфеля за день
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue daily_yield = 31;</code>
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
+     */
+    public function getDailyYield()
+    {
+        return isset($this->daily_yield) ? $this->daily_yield : null;
+    }
+
+    public function hasDailyYield()
+    {
+        return isset($this->daily_yield);
+    }
+
+    public function clearDailyYield()
+    {
+        unset($this->daily_yield);
+    }
+
+    /**
+     * Рассчитанная доходность портфеля за день
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue daily_yield = 31;</code>
+     * @param \Tinkoff\Invest\V1\MoneyValue $var
+     * @return $this
+     */
+    public function setDailyYield($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
+        $this->daily_yield = $var;
 
         return $this;
     }

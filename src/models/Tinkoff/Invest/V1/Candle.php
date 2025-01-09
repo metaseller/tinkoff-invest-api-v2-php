@@ -75,6 +75,12 @@ class Candle extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string instrument_uid = 10;</code>
      */
     protected $instrument_uid = '';
+    /**
+     *Источник свечей
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.CandleSource candle_source_type = 19;</code>
+     */
+    protected $candle_source_type = 0;
 
     /**
      * Constructor.
@@ -102,6 +108,8 @@ class Candle extends \Google\Protobuf\Internal\Message
      *          Время последней сделки, вошедшей в свечу по UTC.
      *     @type string $instrument_uid
      *          UID инструмента.
+     *     @type int $candle_source_type
+     *          Источник свечей
      * }
      */
     public function __construct($data = NULL) {
@@ -425,6 +433,32 @@ class Candle extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->instrument_uid = $var;
+
+        return $this;
+    }
+
+    /**
+     *Источник свечей
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.CandleSource candle_source_type = 19;</code>
+     * @return int
+     */
+    public function getCandleSourceType()
+    {
+        return $this->candle_source_type;
+    }
+
+    /**
+     *Источник свечей
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.CandleSource candle_source_type = 19;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setCandleSourceType($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\CandleSource::class);
+        $this->candle_source_type = $var;
 
         return $this;
     }

@@ -29,6 +29,8 @@ class PositionsStreamResponse extends \Google\Protobuf\Internal\Message
      *          Объект стриминга позиций.
      *     @type \Tinkoff\Invest\V1\Ping $ping
      *          Проверка активности стрима.
+     *     @type \Tinkoff\Invest\V1\PositionsResponse $initial_positions
+     *          Текущие позиции.
      * }
      */
     public function __construct($data = NULL) {
@@ -125,6 +127,37 @@ class PositionsStreamResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Ping::class);
         $this->writeOneof(3, $var);
+
+        return $this;
+    }
+
+    /**
+     *Текущие позиции.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PositionsResponse initial_positions = 5;</code>
+     * @return \Tinkoff\Invest\V1\PositionsResponse|null
+     */
+    public function getInitialPositions()
+    {
+        return $this->readOneof(5);
+    }
+
+    public function hasInitialPositions()
+    {
+        return $this->hasOneof(5);
+    }
+
+    /**
+     *Текущие позиции.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PositionsResponse initial_positions = 5;</code>
+     * @param \Tinkoff\Invest\V1\PositionsResponse $var
+     * @return $this
+     */
+    public function setInitialPositions($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\PositionsResponse::class);
+        $this->writeOneof(5, $var);
 
         return $this;
     }

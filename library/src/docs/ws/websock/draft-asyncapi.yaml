@@ -1,7 +1,7 @@
 asyncapi: 2.6.0
 info:
   title: T-Invest API
-  version: '1.23'
+  version: '1.27'
   description: Websocket API for streaming data
   license:
     name: Apache 2.0
@@ -210,6 +210,7 @@ components:
           trackingId: trackingId
         ping:
           streamId: streamId
+          pingRequestTime: '2000-01-23T04:56:07.000+00:00'
           time: '2000-01-23T04:56:07.000+00:00'
         candle:
           volume: volume
@@ -386,6 +387,8 @@ components:
         subscriptionId:
           description: Идентификатор подписки в формате `UUID`.
           type: string
+        candleSourceType:
+          $ref: '#/components/schemas/v1GetCandlesRequestCandleSource'
       type: object
     v1SubscriptionInterval:
       default: SUBSCRIPTION_INTERVAL_UNSPECIFIED
@@ -437,6 +440,7 @@ components:
          - SUBSCRIPTION_STATUS_INTERNAL_ERROR: Внутренняя ошибка сервиса.
          - SUBSCRIPTION_STATUS_TOO_MANY_REQUESTS: Превышен лимит на количество запросов на подписки в течение установленного отрезка времени.
          - SUBSCRIPTION_STATUS_SUBSCRIPTION_NOT_FOUND: Активная подписка не найдена. Ошибка может возникнуть только при отписке от несуществующей подписки.
+         - SUBSCRIPTION_STATUS_SOURCE_IS_INVALID: Указан некорректный источник
       enum:
         - SUBSCRIPTION_STATUS_UNSPECIFIED
         - SUBSCRIPTION_STATUS_SUCCESS
@@ -448,6 +452,18 @@ components:
         - SUBSCRIPTION_STATUS_INTERNAL_ERROR
         - SUBSCRIPTION_STATUS_TOO_MANY_REQUESTS
         - SUBSCRIPTION_STATUS_SUBSCRIPTION_NOT_FOUND
+        - SUBSCRIPTION_STATUS_SOURCE_IS_INVALID
+      type: string
+    v1GetCandlesRequestCandleSource:
+      default: CANDLE_SOURCE_UNSPECIFIED
+      description: |2-
+         - CANDLE_SOURCE_UNSPECIFIED: Все свечи.
+         - CANDLE_SOURCE_EXCHANGE: Биржевые свечи.
+         - CANDLE_SOURCE_INCLUDE_WEEKEND: Все свечи с учетом торговли по выходным.
+      enum:
+        - CANDLE_SOURCE_UNSPECIFIED
+        - CANDLE_SOURCE_EXCHANGE
+        - CANDLE_SOURCE_INCLUDE_WEEKEND
       type: string
     v1SubscribeOrderBookResponse:
       description: Результат изменения статуса подписки на стаканы.
@@ -512,10 +528,12 @@ components:
          - ORDERBOOK_TYPE_UNSPECIFIED: Не определён.
          - ORDERBOOK_TYPE_EXCHANGE: Биржевой стакан.
          - ORDERBOOK_TYPE_DEALER: Стакан дилера.
+         - ORDERBOOK_TYPE_ALL: Стакан биржевой и дилера.
       enum:
         - ORDERBOOK_TYPE_UNSPECIFIED
         - ORDERBOOK_TYPE_EXCHANGE
         - ORDERBOOK_TYPE_DEALER
+        - ORDERBOOK_TYPE_ALL
       type: string
     v1SubscribeTradesResponse:
       description: Результат изменения статуса подписки на поток обезличенных сделок.
@@ -541,7 +559,7 @@ components:
           items:
             $ref: '#/components/schemas/v1TradeSubscription'
           type: array
-        tradeType:
+        tradeSource:
           $ref: '#/components/schemas/v1TradeSourceType'
       type: object
     v1TradeSubscription:
@@ -570,9 +588,9 @@ components:
     v1TradeSourceType:
       default: TRADE_SOURCE_UNSPECIFIED
       description: |-
-        Источники сделок.
+        Типы источников сделок.
 
-         - TRADE_SOURCE_UNSPECIFIED: Тип сделки не определён.
+         - TRADE_SOURCE_UNSPECIFIED: Тип источника сделки не определён.
          - TRADE_SOURCE_EXCHANGE: Биржевые сделки.
          - TRADE_SOURCE_DEALER: Сделки дилера.
          - TRADE_SOURCE_ALL: Все сделки.
@@ -679,6 +697,8 @@ components:
         instrumentUid:
           description: UID инструмента.
           type: string
+        candleSourceType:
+          $ref: '#/components/schemas/contractv1CandleSource'
       type: object
     v1Quotation:
       description: Котировка — денежная сумма без указания валюты.
@@ -695,6 +715,17 @@ components:
           format: int32
           type: integer
       type: object
+    contractv1CandleSource:
+      default: CANDLE_SOURCE_UNSPECIFIED
+      description: |2-
+         - CANDLE_SOURCE_UNSPECIFIED: Источник свечей не определён.
+         - CANDLE_SOURCE_EXCHANGE: Биржевые свечи.
+         - CANDLE_SOURCE_DEALER_WEEKEND: Свечи  дилера в результате торговли по выходным.
+      enum:
+        - CANDLE_SOURCE_UNSPECIFIED
+        - CANDLE_SOURCE_EXCHANGE
+        - CANDLE_SOURCE_DEALER_WEEKEND
+      type: string
     v1Trade:
       description: Информация о сделке.
       example:
@@ -896,6 +927,7 @@ components:
       description: Проверка активности стрима.
       example:
         streamId: streamId
+        pingRequestTime: '2000-01-23T04:56:07.000+00:00'
         time: '2000-01-23T04:56:07.000+00:00'
       properties:
         time:
@@ -904,6 +936,10 @@ components:
           type: string
         streamId:
           description: Идентификатор соединения.
+          type: string
+        pingRequestTime:
+          format: date-time
+          title: Время формирования запроса
           type: string
       type: object
     v1SubscribeLastPriceResponse:
@@ -1030,6 +1066,8 @@ components:
           $ref: '#/components/schemas/v1SubscribeInfoRequest'
         subscribeLastPriceRequest:
           $ref: '#/components/schemas/v1SubscribeLastPriceRequest'
+        pingSettings:
+          $ref: '#/components/schemas/v1PingDelaySettings'
       type: object
     v1SubscribeCandlesRequest:
       description: subscribeCandles | Изменения статуса подписки на свечи.
@@ -1044,6 +1082,8 @@ components:
         waitingClose:
           description: Флаг ожидания закрытия временного интервала для отправки свечи.
           type: boolean
+        candleSourceType:
+          $ref: '#/components/schemas/v1GetCandlesRequestCandleSource'
       type: object
     v1SubscriptionAction:
       default: SUBSCRIPTION_ACTION_UNSPECIFIED
@@ -1115,7 +1155,7 @@ components:
           items:
             $ref: '#/components/schemas/v1TradeInstrument'
           type: array
-        tradeType:
+        tradeSource:
           $ref: '#/components/schemas/v1TradeSourceType'
       type: object
     v1TradeInstrument:
@@ -1182,6 +1222,13 @@ components:
             `instrument_uid`.
           type: string
       type: object
+    v1PingDelaySettings:
+      properties:
+        pingDelayMs:
+          format: int32
+          title: Задержка пинг сообщений milliseconds 5000-180000, default 120000
+          type: integer
+      type: object
     v1MarketDataRequest:
       description: Запрос подписки или отписки на определённые биржевые данные.
       properties:
@@ -1197,6 +1244,17 @@ components:
           $ref: '#/components/schemas/v1SubscribeLastPriceRequest'
         getMySubscriptions:
           $ref: '#/components/schemas/EmptyObj'
+        ping:
+          $ref: '#/components/schemas/v1PingRequest'
+        pingSettings:
+          $ref: '#/components/schemas/v1PingDelaySettings'
+      type: object
+    v1PingRequest:
+      properties:
+        time:
+          format: date-time
+          title: Время формирования запроса
+          type: string
       type: object
     v1PortfolioStreamResponse:
       description: Информация по позициям и доходностям портфелей.
@@ -1216,17 +1274,9 @@ components:
             nano: 5
             currency: currency
             units: units
-          accountId: accountId
-          totalAmountCurrencies:
-            nano: 5
-            currency: currency
-            units: units
           totalAmountSp:
             nano: 5
             currency: currency
-            units: units
-          expectedYield:
-            nano: 6
             units: units
           positions:
             - varMargin:
@@ -1265,6 +1315,10 @@ components:
                 units: units
               blocked: true
               instrumentUid: instrumentUid
+              dailyYield:
+                nano: 5
+                currency: currency
+                units: units
               currentNkd:
                 nano: 5
                 currency: currency
@@ -1308,6 +1362,10 @@ components:
                 units: units
               blocked: true
               instrumentUid: instrumentUid
+              dailyYield:
+                nano: 5
+                currency: currency
+                units: units
               currentNkd:
                 nano: 5
                 currency: currency
@@ -1315,11 +1373,23 @@ components:
               expectedYield:
                 nano: 6
                 units: units
-          totalAmountShares:
+          totalAmountEtf:
             nano: 5
             currency: currency
             units: units
-          totalAmountEtf:
+          accountId: accountId
+          totalAmountCurrencies:
+            nano: 5
+            currency: currency
+            units: units
+          dailyYield:
+            nano: 5
+            currency: currency
+            units: units
+          expectedYield:
+            nano: 6
+            units: units
+          totalAmountShares:
             nano: 5
             currency: currency
             units: units
@@ -1344,6 +1414,10 @@ components:
                 currency: currency
                 units: units
               instrumentUid: instrumentUid
+              dailyYield:
+                nano: 5
+                currency: currency
+                units: units
               positionUid: positionUid
               currentPrice:
                 nano: 5
@@ -1370,6 +1444,10 @@ components:
                 currency: currency
                 units: units
               instrumentUid: instrumentUid
+              dailyYield:
+                nano: 5
+                currency: currency
+                units: units
               positionUid: positionUid
               currentPrice:
                 nano: 5
@@ -1380,12 +1458,16 @@ components:
                 nano: 6
                 units: units
               expireDate: '2000-01-23T04:56:07.000+00:00'
+          dailyYieldRelative:
+            nano: 6
+            units: units
           totalAmountOptions:
             nano: 5
             currency: currency
             units: units
         ping:
           streamId: streamId
+          pingRequestTime: '2000-01-23T04:56:07.000+00:00'
           time: '2000-01-23T04:56:07.000+00:00'
       properties:
         subscriptions:
@@ -1455,17 +1537,9 @@ components:
           nano: 5
           currency: currency
           units: units
-        accountId: accountId
-        totalAmountCurrencies:
-          nano: 5
-          currency: currency
-          units: units
         totalAmountSp:
           nano: 5
           currency: currency
-          units: units
-        expectedYield:
-          nano: 6
           units: units
         positions:
           - varMargin:
@@ -1504,6 +1578,10 @@ components:
               units: units
             blocked: true
             instrumentUid: instrumentUid
+            dailyYield:
+              nano: 5
+              currency: currency
+              units: units
             currentNkd:
               nano: 5
               currency: currency
@@ -1547,6 +1625,10 @@ components:
               units: units
             blocked: true
             instrumentUid: instrumentUid
+            dailyYield:
+              nano: 5
+              currency: currency
+              units: units
             currentNkd:
               nano: 5
               currency: currency
@@ -1554,11 +1636,23 @@ components:
             expectedYield:
               nano: 6
               units: units
-        totalAmountShares:
+        totalAmountEtf:
           nano: 5
           currency: currency
           units: units
-        totalAmountEtf:
+        accountId: accountId
+        totalAmountCurrencies:
+          nano: 5
+          currency: currency
+          units: units
+        dailyYield:
+          nano: 5
+          currency: currency
+          units: units
+        expectedYield:
+          nano: 6
+          units: units
+        totalAmountShares:
           nano: 5
           currency: currency
           units: units
@@ -1583,6 +1677,10 @@ components:
               currency: currency
               units: units
             instrumentUid: instrumentUid
+            dailyYield:
+              nano: 5
+              currency: currency
+              units: units
             positionUid: positionUid
             currentPrice:
               nano: 5
@@ -1609,6 +1707,10 @@ components:
               currency: currency
               units: units
             instrumentUid: instrumentUid
+            dailyYield:
+              nano: 5
+              currency: currency
+              units: units
             positionUid: positionUid
             currentPrice:
               nano: 5
@@ -1619,6 +1721,9 @@ components:
               nano: 6
               units: units
             expireDate: '2000-01-23T04:56:07.000+00:00'
+        dailyYieldRelative:
+          nano: 6
+          units: units
         totalAmountOptions:
           nano: 5
           currency: currency
@@ -1655,6 +1760,10 @@ components:
           items:
             $ref: '#/components/schemas/v1VirtualPortfolioPosition'
           type: array
+        dailyYield:
+          $ref: '#/components/schemas/v1MoneyValue'
+        dailyYieldRelative:
+          $ref: '#/components/schemas/v1Quotation'
       type: object
     v1MoneyValue:
       description: Денежная сумма в определённой валюте.
@@ -1714,6 +1823,10 @@ components:
           units: units
         blocked: true
         instrumentUid: instrumentUid
+        dailyYield:
+          nano: 5
+          currency: currency
+          units: units
         currentNkd:
           nano: 5
           currency: currency
@@ -1759,6 +1872,8 @@ components:
           $ref: '#/components/schemas/v1MoneyValue'
         expectedYieldFifo:
           $ref: '#/components/schemas/v1Quotation'
+        dailyYield:
+          $ref: '#/components/schemas/v1MoneyValue'
       type: object
     v1VirtualPortfolioPosition:
       example:
@@ -1778,6 +1893,10 @@ components:
           currency: currency
           units: units
         instrumentUid: instrumentUid
+        dailyYield:
+          nano: 5
+          currency: currency
+          units: units
         positionUid: positionUid
         currentPrice:
           nano: 5
@@ -1819,6 +1938,8 @@ components:
           $ref: '#/components/schemas/v1MoneyValue'
         averagePositionPriceFifo:
           $ref: '#/components/schemas/v1MoneyValue'
+        dailyYield:
+          $ref: '#/components/schemas/v1MoneyValue'
       type: object
     v1PortfolioStreamRequest:
       description: Запрос установки stream-соединения.
@@ -1828,6 +1949,8 @@ components:
           items:
             type: string
           type: array
+        pingSettings:
+          $ref: '#/components/schemas/v1PingDelaySettings'
       type: object
     v1PositionsStreamResponse:
       description: Информация по изменению позиций портфеля.
@@ -1838,8 +1961,61 @@ components:
             - accountId: accountId
             - accountId: accountId
           trackingId: trackingId
+        initialPositions:
+          limitsLoadingInProgress: true
+          accountId: accountId
+          money:
+            - nano: 5
+              currency: currency
+              units: units
+            - nano: 5
+              currency: currency
+              units: units
+          blocked:
+            - nano: 5
+              currency: currency
+              units: units
+            - nano: 5
+              currency: currency
+              units: units
+          options:
+            - blocked: blocked
+              balance: balance
+              instrumentUid: instrumentUid
+              positionUid: positionUid
+            - blocked: blocked
+              balance: balance
+              instrumentUid: instrumentUid
+              positionUid: positionUid
+          futures:
+            - blocked: blocked
+              balance: balance
+              instrumentUid: instrumentUid
+              positionUid: positionUid
+              figi: figi
+            - blocked: blocked
+              balance: balance
+              instrumentUid: instrumentUid
+              positionUid: positionUid
+              figi: figi
+          securities:
+            - instrumentType: instrumentType
+              blocked: blocked
+              balance: balance
+              instrumentUid: instrumentUid
+              positionUid: positionUid
+              figi: figi
+              exchangeBlocked: true
+            - instrumentType: instrumentType
+              blocked: blocked
+              balance: balance
+              instrumentUid: instrumentUid
+              positionUid: positionUid
+              figi: figi
+              exchangeBlocked: true
         ping:
           streamId: streamId
+          pingRequestTime: '2000-01-23T04:56:07.000+00:00'
           time: '2000-01-23T04:56:07.000+00:00'
         position:
           date: '2000-01-23T04:56:07.000+00:00'
@@ -1903,6 +2079,8 @@ components:
           $ref: '#/components/schemas/v1PositionData'
         ping:
           $ref: '#/components/schemas/v1Ping'
+        initialPositions:
+          $ref: '#/components/schemas/v1PositionsResponse'
       type: object
     v1PositionsSubscriptionResult:
       description: Объект результата подписки.
@@ -2141,6 +2319,93 @@ components:
           format: int64
           type: string
       type: object
+    v1PositionsResponse:
+      description: Список позиций по счёту.
+      example:
+        limitsLoadingInProgress: true
+        accountId: accountId
+        money:
+          - nano: 5
+            currency: currency
+            units: units
+          - nano: 5
+            currency: currency
+            units: units
+        blocked:
+          - nano: 5
+            currency: currency
+            units: units
+          - nano: 5
+            currency: currency
+            units: units
+        options:
+          - blocked: blocked
+            balance: balance
+            instrumentUid: instrumentUid
+            positionUid: positionUid
+          - blocked: blocked
+            balance: balance
+            instrumentUid: instrumentUid
+            positionUid: positionUid
+        futures:
+          - blocked: blocked
+            balance: balance
+            instrumentUid: instrumentUid
+            positionUid: positionUid
+            figi: figi
+          - blocked: blocked
+            balance: balance
+            instrumentUid: instrumentUid
+            positionUid: positionUid
+            figi: figi
+        securities:
+          - instrumentType: instrumentType
+            blocked: blocked
+            balance: balance
+            instrumentUid: instrumentUid
+            positionUid: positionUid
+            figi: figi
+            exchangeBlocked: true
+          - instrumentType: instrumentType
+            blocked: blocked
+            balance: balance
+            instrumentUid: instrumentUid
+            positionUid: positionUid
+            figi: figi
+            exchangeBlocked: true
+      properties:
+        money:
+          description: Массив валютных позиций портфеля.
+          items:
+            $ref: '#/components/schemas/v1MoneyValue'
+          type: array
+        blocked:
+          description: Массив заблокированных валютных позиций портфеля.
+          items:
+            $ref: '#/components/schemas/v1MoneyValue'
+          type: array
+        securities:
+          description: Список ценно-бумажных позиций портфеля.
+          items:
+            $ref: '#/components/schemas/v1PositionsSecurities'
+          type: array
+        limitsLoadingInProgress:
+          description: Признак идущей выгрузки лимитов в данный момент.
+          type: boolean
+        futures:
+          description: Список фьючерсов портфеля.
+          items:
+            $ref: '#/components/schemas/v1PositionsFutures'
+          type: array
+        options:
+          description: Список опционов портфеля.
+          items:
+            $ref: '#/components/schemas/v1PositionsOptions'
+          type: array
+        accountId:
+          description: Идентификатор счёта пользователя.
+          type: string
+      type: object
     v1PositionsStreamRequest:
       description: Запрос установки stream-соединения позиций.
       properties:
@@ -2149,11 +2414,17 @@ components:
           items:
             type: string
           type: array
+        withInitialPositions:
+          description: Получение состояния позиций на момент подключения.
+          type: boolean
+        pingSettings:
+          $ref: '#/components/schemas/v1PingDelaySettings'
       type: object
     v1OrderStateStreamResponse:
       example:
         ping:
           streamId: streamId
+          pingRequestTime: '2000-01-23T04:56:07.000+00:00'
           time: '2000-01-23T04:56:07.000+00:00'
         subscription:
           streamId: streamId
@@ -2508,6 +2779,7 @@ components:
           type: array
         error:
           $ref: '#/components/schemas/v1ErrorDetail'
+      title: Информация по подпискам
       type: object
     v1ResultSubscriptionStatus:
       default: RESULT_SUBSCRIPTION_STATUS_UNSPECIFIED
@@ -2539,9 +2811,9 @@ components:
           items:
             type: string
           type: array
-        pingDelayMillis:
+        pingDelayMs:
           format: int32
-          title: Задержка пинг сообщений milliseconds 1000-120000, default 120000
+          title: Задержка пинг сообщений milliseconds 5000-180000, default 120000
           type: integer
       title: Запрос установки стрим-соединения торговых поручений
       type: object
@@ -2550,6 +2822,7 @@ components:
       example:
         ping:
           streamId: streamId
+          pingRequestTime: '2000-01-23T04:56:07.000+00:00'
           time: '2000-01-23T04:56:07.000+00:00'
         subscription:
           streamId: streamId
@@ -2641,6 +2914,10 @@ components:
           items:
             type: string
           type: array
+        pingDelayMs:
+          format: int32
+          title: Задержка пинг сообщений milliseconds 5000-180000, default 120000
+          type: integer
       type: object
     EmptyObj:
       type: object

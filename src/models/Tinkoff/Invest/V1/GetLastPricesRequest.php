@@ -34,6 +34,12 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.LastPriceType last_price_type = 3;</code>
      */
     protected $last_price_type = 0;
+    /**
+     *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 9;</code>
+     */
+    protected $instrument_status = null;
 
     /**
      * Constructor.
@@ -47,6 +53,8 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
      *          Массив идентификаторов инструмента. Принимает значения `figi` или `instrument_uid`.
      *     @type int $last_price_type
      *          Тип запрашиваемой последней цены.
+     *     @type int $instrument_status
+     *          Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
      * }
      */
     public function __construct($data = NULL) {
@@ -132,6 +140,42 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\LastPriceType::class);
         $this->last_price_type = $var;
+
+        return $this;
+    }
+
+    /**
+     *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 9;</code>
+     * @return int
+     */
+    public function getInstrumentStatus()
+    {
+        return isset($this->instrument_status) ? $this->instrument_status : 0;
+    }
+
+    public function hasInstrumentStatus()
+    {
+        return isset($this->instrument_status);
+    }
+
+    public function clearInstrumentStatus()
+    {
+        unset($this->instrument_status);
+    }
+
+    /**
+     *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 9;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setInstrumentStatus($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\InstrumentStatus::class);
+        $this->instrument_status = $var;
 
         return $this;
     }

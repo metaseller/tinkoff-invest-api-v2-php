@@ -35,6 +35,10 @@ class MarketDataRequest extends \Google\Protobuf\Internal\Message
      *          Запрос подписки на цены последних сделок.
      *     @type \Tinkoff\Invest\V1\GetMySubscriptions $get_my_subscriptions
      *          Запрос своих подписок.
+     *     @type \Tinkoff\Invest\V1\PingRequest $ping
+     *          Запрос проверки активности соединения.
+     *     @type \Tinkoff\Invest\V1\PingDelaySettings $ping_settings
+     *          Запрос настройки пинга.
      * }
      */
     public function __construct($data = NULL) {
@@ -224,6 +228,68 @@ class MarketDataRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\GetMySubscriptions::class);
         $this->writeOneof(6, $var);
+
+        return $this;
+    }
+
+    /**
+     *Запрос проверки активности соединения.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PingRequest ping = 7;</code>
+     * @return \Tinkoff\Invest\V1\PingRequest|null
+     */
+    public function getPing()
+    {
+        return $this->readOneof(7);
+    }
+
+    public function hasPing()
+    {
+        return $this->hasOneof(7);
+    }
+
+    /**
+     *Запрос проверки активности соединения.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PingRequest ping = 7;</code>
+     * @param \Tinkoff\Invest\V1\PingRequest $var
+     * @return $this
+     */
+    public function setPing($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\PingRequest::class);
+        $this->writeOneof(7, $var);
+
+        return $this;
+    }
+
+    /**
+     *Запрос настройки пинга.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PingDelaySettings ping_settings = 15;</code>
+     * @return \Tinkoff\Invest\V1\PingDelaySettings|null
+     */
+    public function getPingSettings()
+    {
+        return $this->readOneof(15);
+    }
+
+    public function hasPingSettings()
+    {
+        return $this->hasOneof(15);
+    }
+
+    /**
+     *Запрос настройки пинга.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PingDelaySettings ping_settings = 15;</code>
+     * @param \Tinkoff\Invest\V1\PingDelaySettings $var
+     * @return $this
+     */
+    public function setPingSettings($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\PingDelaySettings::class);
+        $this->writeOneof(15, $var);
 
         return $this;
     }

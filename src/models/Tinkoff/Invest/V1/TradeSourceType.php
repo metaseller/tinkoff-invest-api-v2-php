@@ -7,14 +7,14 @@ namespace Tinkoff\Invest\V1;
 use UnexpectedValueException;
 
 /**
- *Источники сделок.
+ *Типы источников сделок.
  *
  * Protobuf type <code>tinkoff.public.invest.api.contract.v1.TradeSourceType</code>
  */
 class TradeSourceType
 {
     /**
-     *Тип сделки не определён.
+     *Тип источника сделки не определён.
      *
      * Generated from protobuf enum <code>TRADE_SOURCE_UNSPECIFIED = 0;</code>
      */

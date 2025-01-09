@@ -66,25 +66,29 @@ class Instrument extends \Google\Protobuf\Internal\Message
     /**
      *Ставка риска начальной маржи для КСУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong = 9;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong = 9 [deprecated = true];</code>
+     * @deprecated
      */
     protected $dlong = null;
     /**
      *Ставка риска начальной маржи для КСУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort = 10;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort = 10 [deprecated = true];</code>
+     * @deprecated
      */
     protected $dshort = null;
     /**
      *Ставка риска начальной маржи для КПУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_min = 11;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_min = 11 [deprecated = true];</code>
+     * @deprecated
      */
     protected $dlong_min = null;
     /**
      *Ставка риска начальной маржи для КПУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_min = 12;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_min = 12 [deprecated = true];</code>
+     * @deprecated
      */
     protected $dshort_min = null;
     /**
@@ -231,6 +235,18 @@ class Instrument extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.BrandData brand = 60;</code>
      */
     protected $brand = null;
+    /**
+     *Ставка риска в лонг, с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_client = 490;</code>
+     */
+    protected $dlong_client = null;
+    /**
+     *Ставка риска в шорт, с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_client = 491;</code>
+     */
+    protected $dshort_client = null;
 
     /**
      * Constructor.
@@ -310,6 +326,10 @@ class Instrument extends \Google\Protobuf\Internal\Message
      *          Дата первой дневной свечи.
      *     @type \Tinkoff\Invest\V1\BrandData $brand
      *           Информация о бренде.
+     *     @type \Tinkoff\Invest\V1\Quotation $dlong_client
+     *          Ставка риска в лонг, с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+     *     @type \Tinkoff\Invest\V1\Quotation $dshort_client
+     *          Ставка риска в шорт, с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      * }
      */
     public function __construct($data = NULL) {
@@ -548,33 +568,39 @@ class Instrument extends \Google\Protobuf\Internal\Message
     /**
      *Ставка риска начальной маржи для КСУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong = 9;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong = 9 [deprecated = true];</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
+     * @deprecated
      */
     public function getDlong()
     {
+        @trigger_error('dlong is deprecated.', E_USER_DEPRECATED);
         return isset($this->dlong) ? $this->dlong : null;
     }
 
     public function hasDlong()
     {
+        @trigger_error('dlong is deprecated.', E_USER_DEPRECATED);
         return isset($this->dlong);
     }
 
     public function clearDlong()
     {
+        @trigger_error('dlong is deprecated.', E_USER_DEPRECATED);
         unset($this->dlong);
     }
 
     /**
      *Ставка риска начальной маржи для КСУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong = 9;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong = 9 [deprecated = true];</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
+     * @deprecated
      */
     public function setDlong($var)
     {
+        @trigger_error('dlong is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->dlong = $var;
 
@@ -584,33 +610,39 @@ class Instrument extends \Google\Protobuf\Internal\Message
     /**
      *Ставка риска начальной маржи для КСУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort = 10;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort = 10 [deprecated = true];</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
+     * @deprecated
      */
     public function getDshort()
     {
+        @trigger_error('dshort is deprecated.', E_USER_DEPRECATED);
         return isset($this->dshort) ? $this->dshort : null;
     }
 
     public function hasDshort()
     {
+        @trigger_error('dshort is deprecated.', E_USER_DEPRECATED);
         return isset($this->dshort);
     }
 
     public function clearDshort()
     {
+        @trigger_error('dshort is deprecated.', E_USER_DEPRECATED);
         unset($this->dshort);
     }
 
     /**
      *Ставка риска начальной маржи для КСУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort = 10;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort = 10 [deprecated = true];</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
+     * @deprecated
      */
     public function setDshort($var)
     {
+        @trigger_error('dshort is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->dshort = $var;
 
@@ -620,33 +652,39 @@ class Instrument extends \Google\Protobuf\Internal\Message
     /**
      *Ставка риска начальной маржи для КПУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_min = 11;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_min = 11 [deprecated = true];</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
+     * @deprecated
      */
     public function getDlongMin()
     {
+        @trigger_error('dlong_min is deprecated.', E_USER_DEPRECATED);
         return isset($this->dlong_min) ? $this->dlong_min : null;
     }
 
     public function hasDlongMin()
     {
+        @trigger_error('dlong_min is deprecated.', E_USER_DEPRECATED);
         return isset($this->dlong_min);
     }
 
     public function clearDlongMin()
     {
+        @trigger_error('dlong_min is deprecated.', E_USER_DEPRECATED);
         unset($this->dlong_min);
     }
 
     /**
      *Ставка риска начальной маржи для КПУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_min = 11;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_min = 11 [deprecated = true];</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
+     * @deprecated
      */
     public function setDlongMin($var)
     {
+        @trigger_error('dlong_min is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->dlong_min = $var;
 
@@ -656,33 +694,39 @@ class Instrument extends \Google\Protobuf\Internal\Message
     /**
      *Ставка риска начальной маржи для КПУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_min = 12;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_min = 12 [deprecated = true];</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
+     * @deprecated
      */
     public function getDshortMin()
     {
+        @trigger_error('dshort_min is deprecated.', E_USER_DEPRECATED);
         return isset($this->dshort_min) ? $this->dshort_min : null;
     }
 
     public function hasDshortMin()
     {
+        @trigger_error('dshort_min is deprecated.', E_USER_DEPRECATED);
         return isset($this->dshort_min);
     }
 
     public function clearDshortMin()
     {
+        @trigger_error('dshort_min is deprecated.', E_USER_DEPRECATED);
         unset($this->dshort_min);
     }
 
     /**
      *Ставка риска начальной маржи для КПУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_min = 12;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_min = 12 [deprecated = true];</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
+     * @deprecated
      */
     public function setDshortMin($var)
     {
+        @trigger_error('dshort_min is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->dshort_min = $var;
 
@@ -1349,6 +1393,78 @@ class Instrument extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\BrandData::class);
         $this->brand = $var;
+
+        return $this;
+    }
+
+    /**
+     *Ставка риска в лонг, с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_client = 490;</code>
+     * @return \Tinkoff\Invest\V1\Quotation|null
+     */
+    public function getDlongClient()
+    {
+        return isset($this->dlong_client) ? $this->dlong_client : null;
+    }
+
+    public function hasDlongClient()
+    {
+        return isset($this->dlong_client);
+    }
+
+    public function clearDlongClient()
+    {
+        unset($this->dlong_client);
+    }
+
+    /**
+     *Ставка риска в лонг, с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_client = 490;</code>
+     * @param \Tinkoff\Invest\V1\Quotation $var
+     * @return $this
+     */
+    public function setDlongClient($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
+        $this->dlong_client = $var;
+
+        return $this;
+    }
+
+    /**
+     *Ставка риска в шорт, с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_client = 491;</code>
+     * @return \Tinkoff\Invest\V1\Quotation|null
+     */
+    public function getDshortClient()
+    {
+        return isset($this->dshort_client) ? $this->dshort_client : null;
+    }
+
+    public function hasDshortClient()
+    {
+        return isset($this->dshort_client);
+    }
+
+    public function clearDshortClient()
+    {
+        unset($this->dshort_client);
+    }
+
+    /**
+     *Ставка риска в шорт, с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_client = 491;</code>
+     * @param \Tinkoff\Invest\V1\Quotation $var
+     * @return $this
+     */
+    public function setDshortClient($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
+        $this->dshort_client = $var;
 
         return $this;
     }

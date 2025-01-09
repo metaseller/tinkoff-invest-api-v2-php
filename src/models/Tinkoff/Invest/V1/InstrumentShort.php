@@ -111,6 +111,12 @@ class InstrumentShort extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool blocked_tca_flag = 30;</code>
      */
     protected $blocked_tca_flag = false;
+    /**
+     *Количество бумаг в лоте.
+     *
+     * Generated from protobuf field <code>int32 lot = 31;</code>
+     */
+    protected $lot = 0;
 
     /**
      * Constructor.
@@ -150,6 +156,8 @@ class InstrumentShort extends \Google\Protobuf\Internal\Message
      *          Флаг, отображающий доступность торговли инструментом по выходным.
      *     @type bool $blocked_tca_flag
      *          Флаг заблокированного ТКС.
+     *     @type int $lot
+     *          Количество бумаг в лоте.
      * }
      */
     public function __construct($data = NULL) {
@@ -589,6 +597,32 @@ class InstrumentShort extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->blocked_tca_flag = $var;
+
+        return $this;
+    }
+
+    /**
+     *Количество бумаг в лоте.
+     *
+     * Generated from protobuf field <code>int32 lot = 31;</code>
+     * @return int
+     */
+    public function getLot()
+    {
+        return $this->lot;
+    }
+
+    /**
+     *Количество бумаг в лоте.
+     *
+     * Generated from protobuf field <code>int32 lot = 31;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setLot($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->lot = $var;
 
         return $this;
     }
