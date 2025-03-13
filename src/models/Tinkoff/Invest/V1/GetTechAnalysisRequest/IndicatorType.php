@@ -12,7 +12,7 @@ use UnexpectedValueException;
 class IndicatorType
 {
     /**
-     *Не определён.
+     *Не определен.
      *
      * Generated from protobuf enum <code>INDICATOR_TYPE_UNSPECIFIED = 0;</code>
      */

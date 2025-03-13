@@ -17,7 +17,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Зарегистрировать счёт.
+     * Зарегистрировать счет.
      * @param \Tinkoff\Invest\V1\OpenSandboxAccountRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -47,7 +47,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Закрыть счёт.
+     * Закрыть счет.
      * @param \Tinkoff\Invest\V1\CloseSandboxAccountRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -92,7 +92,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Получить список активных заявок по счёту.
+     * Получить список активных заявок по счету.
      * @param \Tinkoff\Invest\V1\GetOrdersRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -122,7 +122,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Поулчить статус заявки в песочнице. Заявки хранятся в таблице 7 дней.
+     * Получить статус заявки в песочнице. Заявки хранятся в таблице 7 дней.
      * @param \Tinkoff\Invest\V1\GetOrderStateRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -137,7 +137,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Получить позиции по виртуальному счёту.
+     * Получить позиции по виртуальному счету.
      * @param \Tinkoff\Invest\V1\PositionsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -152,7 +152,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Получить операции по номеру счёта.
+     * Получить операции по номеру счета.
      * @param \Tinkoff\Invest\V1\OperationsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -167,7 +167,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Получить операции по номеру счёта с пагинацией.
+     * Получить операции по номеру счета с пагинацией.
      * @param \Tinkoff\Invest\V1\GetOperationsByCursorRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -197,7 +197,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Пополнить счёт.
+     * Пополнить счет.
      * @param \Tinkoff\Invest\V1\SandboxPayInRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -227,7 +227,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Расчёт количества доступных для покупки/продажи лотов в песочнице.
+     * Расчет количества доступных для покупки/продажи лотов в песочнице.
      * @param \Tinkoff\Invest\V1\GetMaxLotsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

@@ -27,6 +27,12 @@ class EditFavoritesRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.EditFavoritesActionType action_type = 6 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $action_type = 0;
+    /**
+     *Уникальный идентификатор группы.
+     *
+     * Generated from protobuf field <code>string group_id = 7;</code>
+     */
+    protected $group_id = null;
 
     /**
      * Constructor.
@@ -38,6 +44,8 @@ class EditFavoritesRequest extends \Google\Protobuf\Internal\Message
      *          Массив инструментов.
      *     @type int $action_type
      *          Тип действия со списком.
+     *     @type string $group_id
+     *          Уникальный идентификатор группы.
      * }
      */
     public function __construct($data = NULL) {
@@ -93,6 +101,42 @@ class EditFavoritesRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\EditFavoritesActionType::class);
         $this->action_type = $var;
+
+        return $this;
+    }
+
+    /**
+     *Уникальный идентификатор группы.
+     *
+     * Generated from protobuf field <code>string group_id = 7;</code>
+     * @return string
+     */
+    public function getGroupId()
+    {
+        return isset($this->group_id) ? $this->group_id : '';
+    }
+
+    public function hasGroupId()
+    {
+        return isset($this->group_id);
+    }
+
+    public function clearGroupId()
+    {
+        unset($this->group_id);
+    }
+
+    /**
+     *Уникальный идентификатор группы.
+     *
+     * Generated from protobuf field <code>string group_id = 7;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setGroupId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->group_id = $var;
 
         return $this;
     }

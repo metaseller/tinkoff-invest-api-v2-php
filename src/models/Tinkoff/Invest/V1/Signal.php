@@ -40,19 +40,19 @@ class Signal extends \Google\Protobuf\Internal\Message
      */
     protected $instrument_uid = '';
     /**
-     *Дата и время создания сигнала  в часовом поясе UTC.
+     *Дата и время создания сигнала по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp create_dt = 5 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $create_dt = null;
     /**
-     *Направление сигнала
+     *Направление сигнала.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SignalDirection direction = 6 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $direction = 0;
     /**
-     *Цена бумаги на момент формирования сигнала
+     *Цена бумаги на момент формирования сигнала.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation initial_price = 7 [(.google.api.field_behavior) = REQUIRED];</code>
      */
@@ -76,7 +76,7 @@ class Signal extends \Google\Protobuf\Internal\Message
      */
     protected $target_price = null;
     /**
-     *Дата и время дедлайна сигнала в часовом поясе UTC.
+     *Дата и время дедлайна сигнала по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp end_dt = 11 [(.google.api.field_behavior) = REQUIRED];</code>
      */
@@ -100,7 +100,7 @@ class Signal extends \Google\Protobuf\Internal\Message
      */
     protected $close_price = null;
     /**
-     *Дата и время закрытия сигнала в часовом поясе UTC.
+     *Дата и время закрытия сигнала по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp close_dt = 15;</code>
      */
@@ -121,11 +121,11 @@ class Signal extends \Google\Protobuf\Internal\Message
      *     @type string $instrument_uid
      *          Идентификатор бумаги.
      *     @type \Google\Protobuf\Timestamp $create_dt
-     *          Дата и время создания сигнала  в часовом поясе UTC.
+     *          Дата и время создания сигнала по UTC.
      *     @type int $direction
-     *          Направление сигнала
+     *          Направление сигнала.
      *     @type \Tinkoff\Invest\V1\Quotation $initial_price
-     *          Цена бумаги на момент формирования сигнала
+     *          Цена бумаги на момент формирования сигнала.
      *     @type string $info
      *          Дополнительная информация о сигнале.
      *     @type string $name
@@ -133,7 +133,7 @@ class Signal extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\Quotation $target_price
      *          Целевая цена.
      *     @type \Google\Protobuf\Timestamp $end_dt
-     *          Дата и время дедлайна сигнала в часовом поясе UTC.
+     *          Дата и время дедлайна сигнала по UTC.
      *     @type int $probability
      *          Вероятность сигнала.
      *     @type \Tinkoff\Invest\V1\Quotation $stoploss
@@ -141,7 +141,7 @@ class Signal extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\Quotation $close_price
      *          Цена закрытия сигнала.
      *     @type \Google\Protobuf\Timestamp $close_dt
-     *          Дата и время закрытия сигнала в часовом поясе UTC.
+     *          Дата и время закрытия сигнала по UTC.
      * }
      */
     public function __construct($data = NULL) {
@@ -254,7 +254,7 @@ class Signal extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время создания сигнала  в часовом поясе UTC.
+     *Дата и время создания сигнала по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp create_dt = 5 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -275,7 +275,7 @@ class Signal extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время создания сигнала  в часовом поясе UTC.
+     *Дата и время создания сигнала по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp create_dt = 5 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -290,7 +290,7 @@ class Signal extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Направление сигнала
+     *Направление сигнала.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SignalDirection direction = 6 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return int
@@ -301,7 +301,7 @@ class Signal extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Направление сигнала
+     *Направление сигнала.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SignalDirection direction = 6 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param int $var
@@ -316,7 +316,7 @@ class Signal extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена бумаги на момент формирования сигнала
+     *Цена бумаги на момент формирования сигнала.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation initial_price = 7 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -337,7 +337,7 @@ class Signal extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена бумаги на момент формирования сигнала
+     *Цена бумаги на момент формирования сигнала.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation initial_price = 7 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -450,7 +450,7 @@ class Signal extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время дедлайна сигнала в часовом поясе UTC.
+     *Дата и время дедлайна сигнала по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp end_dt = 11 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -471,7 +471,7 @@ class Signal extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время дедлайна сигнала в часовом поясе UTC.
+     *Дата и время дедлайна сигнала по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp end_dt = 11 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -594,7 +594,7 @@ class Signal extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время закрытия сигнала в часовом поясе UTC.
+     *Дата и время закрытия сигнала по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp close_dt = 15;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -615,7 +615,7 @@ class Signal extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата и время закрытия сигнала в часовом поясе UTC.
+     *Дата и время закрытия сигнала по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp close_dt = 15;</code>
      * @param \Google\Protobuf\Timestamp $var

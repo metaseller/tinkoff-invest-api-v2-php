@@ -34,7 +34,7 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
      */
     protected $class_code = '';
     /**
-     * Валюта расчётов.
+     * Валюта расчетов.
      *
      * Generated from protobuf field <code>string currency = 4;</code>
      */
@@ -89,7 +89,7 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
      *     @type string $class_code
      *           Класс-код инструмента.
      *     @type string $currency
-     *           Валюта расчётов.
+     *           Валюта расчетов.
      *     @type int $instrument_kind
      *          Тип инструмента.
      *     @type string $name
@@ -188,7 +188,7 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Валюта расчётов.
+     * Валюта расчетов.
      *
      * Generated from protobuf field <code>string currency = 4;</code>
      * @return string
@@ -199,7 +199,7 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Валюта расчётов.
+     * Валюта расчетов.
      *
      * Generated from protobuf field <code>string currency = 4;</code>
      * @param string $var

@@ -14,7 +14,7 @@ use UnexpectedValueException;
 class PositionsAccountSubscriptionStatus
 {
     /**
-     *Тип не определён.
+     *Тип не определен.
      *
      * Generated from protobuf enum <code>POSITIONS_SUBSCRIPTION_STATUS_UNSPECIFIED = 0;</code>
      */
@@ -26,7 +26,7 @@ class PositionsAccountSubscriptionStatus
      */
     const POSITIONS_SUBSCRIPTION_STATUS_SUCCESS = 1;
     /**
-     *Счёт не найден или недостаточно прав.
+     *Счет не найден или недостаточно прав.
      *
      * Generated from protobuf enum <code>POSITIONS_SUBSCRIPTION_STATUS_ACCOUNT_NOT_FOUND = 2;</code>
      */

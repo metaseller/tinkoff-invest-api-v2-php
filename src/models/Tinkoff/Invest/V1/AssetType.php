@@ -14,7 +14,7 @@ use UnexpectedValueException;
 class AssetType
 {
     /**
-     *Тип не определён.
+     *Тип не определен.
      *
      * Generated from protobuf enum <code>ASSET_TYPE_UNSPECIFIED = 0;</code>
      */

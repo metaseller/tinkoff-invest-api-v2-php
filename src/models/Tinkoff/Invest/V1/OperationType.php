@@ -14,13 +14,13 @@ use UnexpectedValueException;
 class OperationType
 {
     /**
-     *Тип операции не определён.
+     *Тип операции не определен.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_UNSPECIFIED = 0;</code>
      */
     const OPERATION_TYPE_UNSPECIFIED = 0;
     /**
-     *Пополнение брокерского счёта.
+     *Пополнение брокерского счета.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_INPUT = 1;</code>
      */
@@ -86,7 +86,7 @@ class OperationType
      */
     const OPERATION_TYPE_TAX_CORRECTION = 11;
     /**
-     *Удержание комиссии за обслуживание брокерского счёта.
+     *Удержание комиссии за обслуживание брокерского счета.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_SERVICE_FEE = 12;</code>
      */
@@ -194,13 +194,13 @@ class OperationType
      */
     const OPERATION_TYPE_DELIVERY_SELL = 29;
     /**
-     *Комиссия за управление по счёту автоследования.
+     *Комиссия за управление по счету автоследования.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_TRACK_MFEE = 30;</code>
      */
     const OPERATION_TYPE_TRACK_MFEE = 30;
     /**
-     *Комиссия за результат по счёту автоследования.
+     *Комиссия за результат по счету автоследования.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_TRACK_PFEE = 31;</code>
      */
@@ -290,7 +290,7 @@ class OperationType
      */
     const OPERATION_TYPE_CASH_FEE = 45;
     /**
-     *Комиссия за вывод валюты с брокерского счёта.
+     *Комиссия за вывод валюты с брокерского счета.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_OUT_FEE = 46;</code>
      */
@@ -338,25 +338,25 @@ class OperationType
      */
     const OPERATION_TYPE_ADVICE_FEE = 56;
     /**
-     *  Перевод ценных бумаг с ИИС на брокерский счёт.
+     *  Перевод ценных бумаг с ИИС на брокерский счет.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_TRANS_IIS_BS = 57;</code>
      */
     const OPERATION_TYPE_TRANS_IIS_BS = 57;
     /**
-     *  Перевод ценных бумаг с одного брокерского счёта на другой.
+     *  Перевод ценных бумаг с одного брокерского счета на другой.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_TRANS_BS_BS = 58;</code>
      */
     const OPERATION_TYPE_TRANS_BS_BS = 58;
     /**
-     *  Вывод денежных средств со счёта.
+     *  Вывод денежных средств со счета.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_OUT_MULTI = 59;</code>
      */
     const OPERATION_TYPE_OUT_MULTI = 59;
     /**
-     *  Пополнение денежных средств со счёта.
+     *  Пополнение денежных средств со счета.
      *
      * Generated from protobuf enum <code>OPERATION_TYPE_INP_MULTI = 60;</code>
      */

@@ -22,7 +22,7 @@ class CountryResponse extends \Google\Protobuf\Internal\Message
      */
     protected $alfa_two = '';
     /**
-     *Трёхбуквенный код страны.
+     *Трехбуквенный код страны.
      *
      * Generated from protobuf field <code>string alfa_three = 2;</code>
      */
@@ -49,7 +49,7 @@ class CountryResponse extends \Google\Protobuf\Internal\Message
      *     @type string $alfa_two
      *          Двухбуквенный код страны.
      *     @type string $alfa_three
-     *          Трёхбуквенный код страны.
+     *          Трехбуквенный код страны.
      *     @type string $name
      *          Наименование страны.
      *     @type string $name_brief
@@ -88,7 +88,7 @@ class CountryResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Трёхбуквенный код страны.
+     *Трехбуквенный код страны.
      *
      * Generated from protobuf field <code>string alfa_three = 2;</code>
      * @return string
@@ -99,7 +99,7 @@ class CountryResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Трёхбуквенный код страны.
+     *Трехбуквенный код страны.
      *
      * Generated from protobuf field <code>string alfa_three = 2;</code>
      * @param string $var

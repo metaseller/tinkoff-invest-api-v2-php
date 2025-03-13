@@ -9,14 +9,14 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Запрос закрытия счёта в песочнице.
+ *Запрос закрытия счета в песочнице.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.CloseSandboxAccountRequest</code>
  */
 class CloseSandboxAccountRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Номер счёта
+     *Номер счета
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
@@ -29,7 +29,7 @@ class CloseSandboxAccountRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $account_id
-     *          Номер счёта
+     *          Номер счета
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +38,7 @@ class CloseSandboxAccountRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер счёта
+     *Номер счета
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
@@ -49,7 +49,7 @@ class CloseSandboxAccountRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер счёта
+     *Номер счета
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var

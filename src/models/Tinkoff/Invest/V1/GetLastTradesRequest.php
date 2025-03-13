@@ -41,7 +41,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
      */
     protected $instrument_id = null;
     /**
-     *Тип источника сделок. По умолчанию TRADE_SOURCE_ALL - все сделки.
+     *Тип источника сделок. Значение по умолчанию — `TRADE_SOURCE_ALL`, все сделки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType trade_source = 5;</code>
      */
@@ -62,7 +62,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
      *     @type string $instrument_id
      *          Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
      *     @type int $trade_source
-     *          Тип источника сделок. По умолчанию TRADE_SOURCE_ALL - все сделки.
+     *          Тип источника сделок. Значение по умолчанию — `TRADE_SOURCE_ALL`, все сделки.
      * }
      */
     public function __construct($data = NULL) {
@@ -221,7 +221,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип источника сделок. По умолчанию TRADE_SOURCE_ALL - все сделки.
+     *Тип источника сделок. Значение по умолчанию — `TRADE_SOURCE_ALL`, все сделки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType trade_source = 5;</code>
      * @return int
@@ -232,7 +232,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип источника сделок. По умолчанию TRADE_SOURCE_ALL - все сделки.
+     *Тип источника сделок. Значение по умолчанию — `TRADE_SOURCE_ALL`, все сделки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType trade_source = 5;</code>
      * @param int $var

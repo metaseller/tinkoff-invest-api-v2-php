@@ -46,7 +46,7 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
      */
     private $trades;
     /**
-     *Идентификатор счёта.
+     *Идентификатор счета.
      *
      * Generated from protobuf field <code>string account_id = 6;</code>
      */
@@ -75,7 +75,7 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\OrderTrade[]|\Google\Protobuf\Internal\RepeatedField $trades
      *          Массив сделок.
      *     @type string $account_id
-     *          Идентификатор счёта.
+     *          Идентификатор счета.
      *     @type string $instrument_uid
      *          UID идентификатор инструмента.
      * }
@@ -226,7 +226,7 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор счёта.
+     *Идентификатор счета.
      *
      * Generated from protobuf field <code>string account_id = 6;</code>
      * @return string
@@ -237,7 +237,7 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор счёта.
+     *Идентификатор счета.
      *
      * Generated from protobuf field <code>string account_id = 6;</code>
      * @param string $var

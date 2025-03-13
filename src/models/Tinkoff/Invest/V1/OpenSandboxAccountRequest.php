@@ -9,14 +9,14 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Запрос открытия счёта в песочнице.
+ *Запрос открытия счета в песочнице.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.OpenSandboxAccountRequest</code>
  */
 class OpenSandboxAccountRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Название счёта
+     * Название счета
      *
      * Generated from protobuf field <code>string name = 1;</code>
      */
@@ -29,7 +29,7 @@ class OpenSandboxAccountRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $name
-     *           Название счёта
+     *           Название счета
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +38,7 @@ class OpenSandboxAccountRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Название счёта
+     * Название счета
      *
      * Generated from protobuf field <code>string name = 1;</code>
      * @return string
@@ -59,7 +59,7 @@ class OpenSandboxAccountRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Название счёта
+     * Название счета
      *
      * Generated from protobuf field <code>string name = 1;</code>
      * @param string $var

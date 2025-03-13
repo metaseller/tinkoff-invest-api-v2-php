@@ -14,7 +14,7 @@ use UnexpectedValueException;
 class SubscriptionInterval
 {
     /**
-     *Интервал свечи не определён.
+     *Интервал свечи не определен.
      *
      * Generated from protobuf enum <code>SUBSCRIPTION_INTERVAL_UNSPECIFIED = 0;</code>
      */
@@ -56,7 +56,7 @@ class SubscriptionInterval
      */
     const SUBSCRIPTION_INTERVAL_2_MIN = 6;
     /**
-     *Трёхминутные свечи.
+     *Трехминутные свечи.
      *
      * Generated from protobuf enum <code>SUBSCRIPTION_INTERVAL_3_MIN = 7;</code>
      */
@@ -80,7 +80,7 @@ class SubscriptionInterval
      */
     const SUBSCRIPTION_INTERVAL_2_HOUR = 10;
     /**
-     *Четырёхчасовые свечи.
+     *Четырехчасовые свечи.
      *
      * Generated from protobuf enum <code>SUBSCRIPTION_INTERVAL_4_HOUR = 11;</code>
      */

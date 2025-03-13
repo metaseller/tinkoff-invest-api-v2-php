@@ -12,7 +12,7 @@ use UnexpectedValueException;
 class BondType
 {
     /**
-     * Тип облигации не определён.
+     * Тип облигации не определен.
      *
      * Generated from protobuf enum <code>BOND_TYPE_UNSPECIFIED = 0;</code>
      */

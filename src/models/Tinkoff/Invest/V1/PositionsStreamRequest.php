@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class PositionsStreamRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Массив идентификаторов счётов пользователя.
+     *Массив идентификаторов счетов пользователя.
      *
      * Generated from protobuf field <code>repeated string accounts = 1;</code>
      */
@@ -41,7 +41,7 @@ class PositionsStreamRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $accounts
-     *          Массив идентификаторов счётов пользователя.
+     *          Массив идентификаторов счетов пользователя.
      *     @type bool $with_initial_positions
      *          Получение состояния позиций на момент подключения.
      *     @type \Tinkoff\Invest\V1\PingDelaySettings $ping_settings
@@ -54,7 +54,7 @@ class PositionsStreamRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив идентификаторов счётов пользователя.
+     *Массив идентификаторов счетов пользователя.
      *
      * Generated from protobuf field <code>repeated string accounts = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -65,7 +65,7 @@ class PositionsStreamRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив идентификаторов счётов пользователя.
+     *Массив идентификаторов счетов пользователя.
      *
      * Generated from protobuf field <code>repeated string accounts = 1;</code>
      * @param string[]|\Google\Protobuf\Internal\RepeatedField $var

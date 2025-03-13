@@ -22,7 +22,7 @@ class LastPrice extends \Google\Protobuf\Internal\Message
      */
     protected $figi = '';
     /**
-     *Цена последней сделки за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
+     *Цена последней сделки за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 2;</code>
      */
@@ -55,7 +55,7 @@ class LastPrice extends \Google\Protobuf\Internal\Message
      *     @type string $figi
      *          FIGI инструмента.
      *     @type \Tinkoff\Invest\V1\Quotation $price
-     *          Цена последней сделки за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
+     *          Цена последней сделки за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
      *     @type \Google\Protobuf\Timestamp $time
      *          Время получения последней цены в часовом поясе UTC по времени биржи.
      *     @type string $instrument_uid
@@ -96,7 +96,7 @@ class LastPrice extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена последней сделки за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
+     *Цена последней сделки за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 2;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -117,7 +117,7 @@ class LastPrice extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена последней сделки за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
+     *Цена последней сделки за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 2;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var

@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class PositionData extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Идентификатор счёта.
+     *Идентификатор счета.
      *
      * Generated from protobuf field <code>string account_id = 1;</code>
      */
@@ -59,7 +59,7 @@ class PositionData extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $account_id
-     *          Идентификатор счёта.
+     *          Идентификатор счета.
      *     @type \Tinkoff\Invest\V1\PositionsMoney[]|\Google\Protobuf\Internal\RepeatedField $money
      *          Массив валютных позиций портфеля.
      *     @type \Tinkoff\Invest\V1\PositionsSecurities[]|\Google\Protobuf\Internal\RepeatedField $securities
@@ -78,7 +78,7 @@ class PositionData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор счёта.
+     *Идентификатор счета.
      *
      * Generated from protobuf field <code>string account_id = 1;</code>
      * @return string
@@ -89,7 +89,7 @@ class PositionData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор счёта.
+     *Идентификатор счета.
      *
      * Generated from protobuf field <code>string account_id = 1;</code>
      * @param string $var

@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Денежная сумма в определённой валюте.
+ *Денежная сумма в определенной валюте.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.MoneyValue</code>
  */

@@ -9,14 +9,14 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Результат пополнения счёта, текущий баланс.
+ *Результат пополнения счета, текущий баланс.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.SandboxPayInResponse</code>
  */
 class SandboxPayInResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Текущий баланс счёта
+     *Текущий баланс счета
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue balance = 1;</code>
      */
@@ -29,7 +29,7 @@ class SandboxPayInResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Tinkoff\Invest\V1\MoneyValue $balance
-     *          Текущий баланс счёта
+     *          Текущий баланс счета
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +38,7 @@ class SandboxPayInResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Текущий баланс счёта
+     *Текущий баланс счета
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue balance = 1;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -59,7 +59,7 @@ class SandboxPayInResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Текущий баланс счёта
+     *Текущий баланс счета
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue balance = 1;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var

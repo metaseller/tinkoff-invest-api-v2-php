@@ -46,13 +46,13 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      */
     protected $low_price_last_52_weeks = 0.0;
     /**
-     *Средний объём торгов за 10 дней.
+     *Средний объем торгов за 10 дней.
      *
      * Generated from protobuf field <code>double average_daily_volume_last_10_days = 6;</code>
      */
     protected $average_daily_volume_last_10_days = 0.0;
     /**
-     *Средний объём торгов за месяц.
+     *Средний объем торгов за месяц.
      *
      * Generated from protobuf field <code>double average_daily_volume_last_4_weeks = 7;</code>
      */
@@ -128,25 +128,25 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      */
     protected $three_year_annual_revenue_growth_rate = 0.0;
     /**
-     *Соотношение рыночной капитализации компании к её чистой прибыли.
+     *Соотношение рыночной капитализации компании к ее чистой прибыли.
      *
      * Generated from protobuf field <code>double pe_ratio_ttm = 20;</code>
      */
     protected $pe_ratio_ttm = 0.0;
     /**
-     *Соотношение рыночной капитализации компании к её выручке.
+     *Соотношение рыночной капитализации компании к ее выручке.
      *
      * Generated from protobuf field <code>double price_to_sales_ttm = 21;</code>
      */
     protected $price_to_sales_ttm = 0.0;
     /**
-     *Соотношение рыночной капитализации компании к её балансовой стоимости.
+     *Соотношение рыночной капитализации компании к ее балансовой стоимости.
      *
      * Generated from protobuf field <code>double price_to_book_ttm = 22;</code>
      */
     protected $price_to_book_ttm = 0.0;
     /**
-     *Соотношение рыночной капитализации компании к её свободному денежному потоку.
+     *Соотношение рыночной капитализации компании к ее свободному денежному потоку.
      *
      * Generated from protobuf field <code>double price_to_free_cash_flow_ttm = 23;</code>
      */
@@ -365,9 +365,9 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      *     @type float $low_price_last_52_weeks
      *          Минимум за год.
      *     @type float $average_daily_volume_last_10_days
-     *          Средний объём торгов за 10 дней.
+     *          Средний объем торгов за 10 дней.
      *     @type float $average_daily_volume_last_4_weeks
-     *          Средний объём торгов за месяц.
+     *          Средний объем торгов за месяц.
      *     @type float $beta
      *     @type float $free_float
      *          Доля акций в свободном обращении.
@@ -392,13 +392,13 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      *     @type float $three_year_annual_revenue_growth_rate
      *          Среднегодовой  рocт выручки за 3 года.
      *     @type float $pe_ratio_ttm
-     *          Соотношение рыночной капитализации компании к её чистой прибыли.
+     *          Соотношение рыночной капитализации компании к ее чистой прибыли.
      *     @type float $price_to_sales_ttm
-     *          Соотношение рыночной капитализации компании к её выручке.
+     *          Соотношение рыночной капитализации компании к ее выручке.
      *     @type float $price_to_book_ttm
-     *          Соотношение рыночной капитализации компании к её балансовой стоимости.
+     *          Соотношение рыночной капитализации компании к ее балансовой стоимости.
      *     @type float $price_to_free_cash_flow_ttm
-     *          Соотношение рыночной капитализации компании к её свободному денежному потоку.
+     *          Соотношение рыночной капитализации компании к ее свободному денежному потоку.
      *     @type float $total_enterprise_value_mrq
      *          Рыночная стоимость компании.
      *     @type float $ev_to_ebitda_mrq
@@ -602,7 +602,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средний объём торгов за 10 дней.
+     *Средний объем торгов за 10 дней.
      *
      * Generated from protobuf field <code>double average_daily_volume_last_10_days = 6;</code>
      * @return float
@@ -613,7 +613,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средний объём торгов за 10 дней.
+     *Средний объем торгов за 10 дней.
      *
      * Generated from protobuf field <code>double average_daily_volume_last_10_days = 6;</code>
      * @param float $var
@@ -628,7 +628,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средний объём торгов за месяц.
+     *Средний объем торгов за месяц.
      *
      * Generated from protobuf field <code>double average_daily_volume_last_4_weeks = 7;</code>
      * @return float
@@ -639,7 +639,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средний объём торгов за месяц.
+     *Средний объем торгов за месяц.
      *
      * Generated from protobuf field <code>double average_daily_volume_last_4_weeks = 7;</code>
      * @param float $var
@@ -962,7 +962,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Соотношение рыночной капитализации компании к её чистой прибыли.
+     *Соотношение рыночной капитализации компании к ее чистой прибыли.
      *
      * Generated from protobuf field <code>double pe_ratio_ttm = 20;</code>
      * @return float
@@ -973,7 +973,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Соотношение рыночной капитализации компании к её чистой прибыли.
+     *Соотношение рыночной капитализации компании к ее чистой прибыли.
      *
      * Generated from protobuf field <code>double pe_ratio_ttm = 20;</code>
      * @param float $var
@@ -988,7 +988,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Соотношение рыночной капитализации компании к её выручке.
+     *Соотношение рыночной капитализации компании к ее выручке.
      *
      * Generated from protobuf field <code>double price_to_sales_ttm = 21;</code>
      * @return float
@@ -999,7 +999,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Соотношение рыночной капитализации компании к её выручке.
+     *Соотношение рыночной капитализации компании к ее выручке.
      *
      * Generated from protobuf field <code>double price_to_sales_ttm = 21;</code>
      * @param float $var
@@ -1014,7 +1014,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Соотношение рыночной капитализации компании к её балансовой стоимости.
+     *Соотношение рыночной капитализации компании к ее балансовой стоимости.
      *
      * Generated from protobuf field <code>double price_to_book_ttm = 22;</code>
      * @return float
@@ -1025,7 +1025,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Соотношение рыночной капитализации компании к её балансовой стоимости.
+     *Соотношение рыночной капитализации компании к ее балансовой стоимости.
      *
      * Generated from protobuf field <code>double price_to_book_ttm = 22;</code>
      * @param float $var
@@ -1040,7 +1040,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Соотношение рыночной капитализации компании к её свободному денежному потоку.
+     *Соотношение рыночной капитализации компании к ее свободному денежному потоку.
      *
      * Generated from protobuf field <code>double price_to_free_cash_flow_ttm = 23;</code>
      * @return float
@@ -1051,7 +1051,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Соотношение рыночной капитализации компании к её свободному денежному потоку.
+     *Соотношение рыночной капитализации компании к ее свободному денежному потоку.
      *
      * Generated from protobuf field <code>double price_to_free_cash_flow_ttm = 23;</code>
      * @param float $var

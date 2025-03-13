@@ -14,7 +14,7 @@ use UnexpectedValueException;
 class EditFavoritesActionType
 {
     /**
-     *Тип не определён.
+     *Тип не определен.
      *
      * Generated from protobuf enum <code>EDIT_FAVORITES_ACTION_TYPE_UNSPECIFIED = 0;</code>
      */

@@ -7,14 +7,14 @@ namespace Tinkoff\Invest\V1;
 use UnexpectedValueException;
 
 /**
- *Реальная площадка исполнения расчётов.
+ *Реальная площадка исполнения расчетов.
  *
  * Protobuf type <code>tinkoff.public.invest.api.contract.v1.RealExchange</code>
  */
 class RealExchange
 {
     /**
-     *Тип не определён.
+     *Тип не определен.
      *
      * Generated from protobuf enum <code>REAL_EXCHANGE_UNSPECIFIED = 0;</code>
      */

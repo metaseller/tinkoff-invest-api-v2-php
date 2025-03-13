@@ -14,7 +14,7 @@ use UnexpectedValueException;
 class CouponType
 {
     /**
-     *Неопределённое значение.
+     *Неопределенное значение.
      *
      * Generated from protobuf enum <code>COUPON_TYPE_UNSPECIFIED = 0;</code>
      */

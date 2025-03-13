@@ -28,7 +28,7 @@ class SubscribeTradesRequest extends \Google\Protobuf\Internal\Message
      */
     private $instruments;
     /**
-     *Тип источника сделок. По умолчанию TRADE_SOURCE_ALL - все сделки.
+     *Тип источника сделок. Значение по умолчанию — `TRADE_SOURCE_ALL`, все сделки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType trade_source = 3;</code>
      */
@@ -45,7 +45,7 @@ class SubscribeTradesRequest extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\TradeInstrument[]|\Google\Protobuf\Internal\RepeatedField $instruments
      *          Массив инструментов для подписки на поток обезличенных сделок.
      *     @type int $trade_source
-     *          Тип источника сделок. По умолчанию TRADE_SOURCE_ALL - все сделки.
+     *          Тип источника сделок. Значение по умолчанию — `TRADE_SOURCE_ALL`, все сделки.
      * }
      */
     public function __construct($data = NULL) {
@@ -106,7 +106,7 @@ class SubscribeTradesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип источника сделок. По умолчанию TRADE_SOURCE_ALL - все сделки.
+     *Тип источника сделок. Значение по умолчанию — `TRADE_SOURCE_ALL`, все сделки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType trade_source = 3;</code>
      * @return int
@@ -117,7 +117,7 @@ class SubscribeTradesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип источника сделок. По умолчанию TRADE_SOURCE_ALL - все сделки.
+     *Тип источника сделок. Значение по умолчанию — `TRADE_SOURCE_ALL`, все сделки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType trade_source = 3;</code>
      * @param int $var

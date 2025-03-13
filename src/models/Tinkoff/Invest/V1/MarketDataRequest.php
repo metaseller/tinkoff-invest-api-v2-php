@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Запрос подписки или отписки на определённые биржевые данные.
+ *Запрос подписки или отписки на определенные биржевые данные.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.MarketDataRequest</code>
  */

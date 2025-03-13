@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Список позиций по счёту.
+ *Список позиций по счету.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.PositionsResponse</code>
  */

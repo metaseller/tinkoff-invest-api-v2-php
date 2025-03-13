@@ -22,9 +22,9 @@ class GetDividendsForeignIssuerRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Tinkoff\Invest\V1\GenerateDividendsForeignIssuerReportRequest $generate_div_foreign_issuer_report
-     *          Объект запроса формирования отчёта.
+     *          Объект запроса формирования отчета.
      *     @type \Tinkoff\Invest\V1\GetDividendsForeignIssuerReportRequest $get_div_foreign_issuer_report
-     *          Объект запроса сформированного отчёта.
+     *          Объект запроса сформированного отчета.
      * }
      */
     public function __construct($data = NULL) {
@@ -33,7 +33,7 @@ class GetDividendsForeignIssuerRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Объект запроса формирования отчёта.
+     *Объект запроса формирования отчета.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GenerateDividendsForeignIssuerReportRequest generate_div_foreign_issuer_report = 1;</code>
      * @return \Tinkoff\Invest\V1\GenerateDividendsForeignIssuerReportRequest|null
@@ -49,7 +49,7 @@ class GetDividendsForeignIssuerRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Объект запроса формирования отчёта.
+     *Объект запроса формирования отчета.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GenerateDividendsForeignIssuerReportRequest generate_div_foreign_issuer_report = 1;</code>
      * @param \Tinkoff\Invest\V1\GenerateDividendsForeignIssuerReportRequest $var
@@ -64,7 +64,7 @@ class GetDividendsForeignIssuerRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Объект запроса сформированного отчёта.
+     *Объект запроса сформированного отчета.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetDividendsForeignIssuerReportRequest get_div_foreign_issuer_report = 2;</code>
      * @return \Tinkoff\Invest\V1\GetDividendsForeignIssuerReportRequest|null
@@ -80,7 +80,7 @@ class GetDividendsForeignIssuerRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Объект запроса сформированного отчёта.
+     *Объект запроса сформированного отчета.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetDividendsForeignIssuerReportRequest get_div_foreign_issuer_report = 2;</code>
      * @param \Tinkoff\Invest\V1\GetDividendsForeignIssuerReportRequest $var

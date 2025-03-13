@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Список операций по счёту с пагинацией.
+ *Список операций по счету с пагинацией.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.GetOperationsByCursorResponse</code>
  */

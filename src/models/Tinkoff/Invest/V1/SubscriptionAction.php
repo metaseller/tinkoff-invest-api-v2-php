@@ -14,7 +14,7 @@ use UnexpectedValueException;
 class SubscriptionAction
 {
     /**
-     *Статус подписки не определён.
+     *Статус подписки не определен.
      *
      * Generated from protobuf enum <code>SUBSCRIPTION_ACTION_UNSPECIFIED = 0;</code>
      */

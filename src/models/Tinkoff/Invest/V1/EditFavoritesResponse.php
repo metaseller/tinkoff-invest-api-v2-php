@@ -21,6 +21,12 @@ class EditFavoritesResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.FavoriteInstrument favorite_instruments = 1;</code>
      */
     private $favorite_instruments;
+    /**
+     *Уникальный идентификатор группы.
+     *
+     * Generated from protobuf field <code>string group_id = 2;</code>
+     */
+    protected $group_id = null;
 
     /**
      * Constructor.
@@ -30,6 +36,8 @@ class EditFavoritesResponse extends \Google\Protobuf\Internal\Message
      *
      *     @type \Tinkoff\Invest\V1\FavoriteInstrument[]|\Google\Protobuf\Internal\RepeatedField $favorite_instruments
      *          Массив инструментов.
+     *     @type string $group_id
+     *          Уникальный идентификатор группы.
      * }
      */
     public function __construct($data = NULL) {
@@ -59,6 +67,42 @@ class EditFavoritesResponse extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\FavoriteInstrument::class);
         $this->favorite_instruments = $arr;
+
+        return $this;
+    }
+
+    /**
+     *Уникальный идентификатор группы.
+     *
+     * Generated from protobuf field <code>string group_id = 2;</code>
+     * @return string
+     */
+    public function getGroupId()
+    {
+        return isset($this->group_id) ? $this->group_id : '';
+    }
+
+    public function hasGroupId()
+    {
+        return isset($this->group_id);
+    }
+
+    public function clearGroupId()
+    {
+        unset($this->group_id);
+    }
+
+    /**
+     *Уникальный идентификатор группы.
+     *
+     * Generated from protobuf field <code>string group_id = 2;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setGroupId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->group_id = $var;
 
         return $this;
     }

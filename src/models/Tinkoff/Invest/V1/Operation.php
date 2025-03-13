@@ -70,7 +70,7 @@ class Operation extends \Google\Protobuf\Internal\Message
      */
     protected $figi = '';
     /**
-     *Тип инструмента. Возможные значения: </br></br>`bond` — облигация; </br>`share` — акция; </br>`currency` — валюта; </br>`etf` — фонд; </br>`futures` — фьючерс.
+     *Тип инструмента. Возможные значения: <br/><br/>`bond` — облигация; <br/>`share` — акция; <br/>`currency` — валюта; <br/>`etf` — фонд; <br/>`futures` — фьючерс.
      *
      * Generated from protobuf field <code>string instrument_type = 10;</code>
      */
@@ -149,7 +149,7 @@ class Operation extends \Google\Protobuf\Internal\Message
      *     @type string $figi
      *          FIGI-идентификатор инструмента, связанного с операцией.
      *     @type string $instrument_type
-     *          Тип инструмента. Возможные значения: </br></br>`bond` — облигация; </br>`share` — акция; </br>`currency` — валюта; </br>`etf` — фонд; </br>`futures` — фьючерс.
+     *          Тип инструмента. Возможные значения: <br/><br/>`bond` — облигация; <br/>`share` — акция; <br/>`currency` — валюта; <br/>`etf` — фонд; <br/>`futures` — фьючерс.
      *     @type \Google\Protobuf\Timestamp $date
      *          Дата и время операции в формате часовом поясе UTC.
      *     @type string $type
@@ -428,7 +428,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип инструмента. Возможные значения: </br></br>`bond` — облигация; </br>`share` — акция; </br>`currency` — валюта; </br>`etf` — фонд; </br>`futures` — фьючерс.
+     *Тип инструмента. Возможные значения: <br/><br/>`bond` — облигация; <br/>`share` — акция; <br/>`currency` — валюта; <br/>`etf` — фонд; <br/>`futures` — фьючерс.
      *
      * Generated from protobuf field <code>string instrument_type = 10;</code>
      * @return string
@@ -439,7 +439,7 @@ class Operation extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип инструмента. Возможные значения: </br></br>`bond` — облигация; </br>`share` — акция; </br>`currency` — валюта; </br>`etf` — фонд; </br>`futures` — фьючерс.
+     *Тип инструмента. Возможные значения: <br/><br/>`bond` — облигация; <br/>`share` — акция; <br/>`currency` — валюта; <br/>`etf` — фонд; <br/>`futures` — фьючерс.
      *
      * Generated from protobuf field <code>string instrument_type = 10;</code>
      * @param string $var

@@ -12,7 +12,7 @@ use UnexpectedValueException;
 class OrderBookType
 {
     /**
-     *Не определён.
+     *Не определен.
      *
      * Generated from protobuf enum <code>ORDERBOOK_TYPE_UNSPECIFIED = 0;</code>
      */

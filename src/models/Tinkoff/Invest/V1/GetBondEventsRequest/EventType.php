@@ -12,7 +12,7 @@ use UnexpectedValueException;
 class EventType
 {
     /**
-     *Неопределённое значение.
+     *Неопределенное значение.
      *
      * Generated from protobuf enum <code>EVENT_TYPE_UNSPECIFIED = 0;</code>
      */

@@ -9,14 +9,14 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Объект результата задачи запуска формирования отчёта «Справка о доходах за пределами РФ».
+ * Объект результата задачи запуска формирования отчета «Справка о доходах за пределами РФ».
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.GenerateDividendsForeignIssuerReportResponse</code>
  */
 class GenerateDividendsForeignIssuerReportResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Идентификатор задачи формирования отчёта.
+     *Идентификатор задачи формирования отчета.
      *
      * Generated from protobuf field <code>string task_id = 1;</code>
      */
@@ -29,7 +29,7 @@ class GenerateDividendsForeignIssuerReportResponse extends \Google\Protobuf\Inte
      *     Optional. Data for populating the Message object.
      *
      *     @type string $task_id
-     *          Идентификатор задачи формирования отчёта.
+     *          Идентификатор задачи формирования отчета.
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +38,7 @@ class GenerateDividendsForeignIssuerReportResponse extends \Google\Protobuf\Inte
     }
 
     /**
-     *Идентификатор задачи формирования отчёта.
+     *Идентификатор задачи формирования отчета.
      *
      * Generated from protobuf field <code>string task_id = 1;</code>
      * @return string
@@ -49,7 +49,7 @@ class GenerateDividendsForeignIssuerReportResponse extends \Google\Protobuf\Inte
     }
 
     /**
-     *Идентификатор задачи формирования отчёта.
+     *Идентификатор задачи формирования отчета.
      *
      * Generated from protobuf field <code>string task_id = 1;</code>
      * @param string $var

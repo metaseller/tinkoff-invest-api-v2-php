@@ -44,7 +44,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     protected $quantity = null;
     /**
-     *Средневзвешенная цена позиции. Для пересчёта возможна задержка до одной секунды.
+     *Средневзвешенная цена позиции. Для пересчета возможна задержка до одной секунды.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price = 6;</code>
      */
@@ -74,13 +74,13 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     protected $current_price = null;
     /**
-     *Средняя цена позиции по методу FIFO. Для пересчёта возможна задержка до одной секунды.
+     *Средняя цена позиции по методу FIFO. Для пересчета возможна задержка до одной секунды.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price_fifo = 11;</code>
      */
     protected $average_position_price_fifo = null;
     /**
-     * Рассчитанная доходность портфеля за день
+     * Рассчитанная доходность портфеля за день.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue daily_yield = 31;</code>
      */
@@ -103,7 +103,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\Quotation $quantity
      *          Количество инструмента в портфеле в штуках.
      *     @type \Tinkoff\Invest\V1\MoneyValue $average_position_price
-     *          Средневзвешенная цена позиции. Для пересчёта возможна задержка до одной секунды.
+     *          Средневзвешенная цена позиции. Для пересчета возможна задержка до одной секунды.
      *     @type \Tinkoff\Invest\V1\Quotation $expected_yield
      *          Текущая рассчитанная доходность позиции.
      *     @type \Tinkoff\Invest\V1\Quotation $expected_yield_fifo
@@ -113,9 +113,9 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\MoneyValue $current_price
      *          Текущая цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
      *     @type \Tinkoff\Invest\V1\MoneyValue $average_position_price_fifo
-     *          Средняя цена позиции по методу FIFO. Для пересчёта возможна задержка до одной секунды.
+     *          Средняя цена позиции по методу FIFO. Для пересчета возможна задержка до одной секунды.
      *     @type \Tinkoff\Invest\V1\MoneyValue $daily_yield
-     *           Рассчитанная доходность портфеля за день
+     *           Рассчитанная доходность портфеля за день.
      * }
      */
     public function __construct($data = NULL) {
@@ -264,7 +264,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средневзвешенная цена позиции. Для пересчёта возможна задержка до одной секунды.
+     *Средневзвешенная цена позиции. Для пересчета возможна задержка до одной секунды.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price = 6;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -285,7 +285,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средневзвешенная цена позиции. Для пересчёта возможна задержка до одной секунды.
+     *Средневзвешенная цена позиции. Для пересчета возможна задержка до одной секунды.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price = 6;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -444,7 +444,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средняя цена позиции по методу FIFO. Для пересчёта возможна задержка до одной секунды.
+     *Средняя цена позиции по методу FIFO. Для пересчета возможна задержка до одной секунды.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price_fifo = 11;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -465,7 +465,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Средняя цена позиции по методу FIFO. Для пересчёта возможна задержка до одной секунды.
+     *Средняя цена позиции по методу FIFO. Для пересчета возможна задержка до одной секунды.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue average_position_price_fifo = 11;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -480,7 +480,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Рассчитанная доходность портфеля за день
+     * Рассчитанная доходность портфеля за день.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue daily_yield = 31;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -501,7 +501,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Рассчитанная доходность портфеля за день
+     * Рассчитанная доходность портфеля за день.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue daily_yield = 31;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var

@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class OrderState extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Биржевой идентификатор заявки
+     *Биржевой идентификатор заявки.
      *
      * Generated from protobuf field <code>string order_id = 1;</code>
      */
@@ -28,151 +28,151 @@ class OrderState extends \Google\Protobuf\Internal\Message
      */
     protected $order_request_id = null;
     /**
-     *Код клиента на бирже
+     *Код клиента на бирже.
      *
      * Generated from protobuf field <code>string client_code = 3;</code>
      */
     protected $client_code = '';
     /**
-     *Дата создания заявки
+     *Дата создания заявки.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp created_at = 4;</code>
      */
     protected $created_at = null;
     /**
-     *Статус заявки
+     *Статус заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderExecutionReportStatus execution_report_status = 5;</code>
      */
     protected $execution_report_status = 0;
     /**
-     *Дополнительная информация по статусу
+     *Дополнительная информация по статусу.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderStateStreamResponse.StatusCauseInfo status_info = 6;</code>
      */
     protected $status_info = null;
     /**
-     *Тикер инструмента
+     *Тикер инструмента.
      *
      * Generated from protobuf field <code>string ticker = 7;</code>
      */
     protected $ticker = '';
     /**
-     *Класс-код (секция торгов)
+     *Класс-код (секция торгов).
      *
      * Generated from protobuf field <code>string class_code = 8;</code>
      */
     protected $class_code = '';
     /**
-     *Лотность инструмента заявки
+     *Лотность инструмента заявки.
      *
      * Generated from protobuf field <code>int32 lot_size = 9;</code>
      */
     protected $lot_size = 0;
     /**
-     *Направление заявки
+     *Направление заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderDirection direction = 10;</code>
      */
     protected $direction = 0;
     /**
-     *Алгоритм исполнения поручения
+     *Алгоритм исполнения поручения.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TimeInForceType time_in_force = 11;</code>
      */
     protected $time_in_force = 0;
     /**
-     *Тип заявки
+     *Тип заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderType order_type = 12;</code>
      */
     protected $order_type = 0;
     /**
-     *Номер счета
+     *Номер счета.
      *
      * Generated from protobuf field <code>string account_id = 13;</code>
      */
     protected $account_id = '';
     /**
-     *Начальная цена заявки
+     *Начальная цена заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue initial_order_price = 22;</code>
      */
     protected $initial_order_price = null;
     /**
-     *Цена выставления заявки
+     *Цена выставления заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue order_price = 23;</code>
      */
     protected $order_price = null;
     /**
-     *Предрассчитанная стоимость полной заявки
+     *Предрассчитанная стоимость полной заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue amount = 24;</code>
      */
     protected $amount = null;
     /**
-     *Исполненная средняя цена одного инструмента в заявке
+     *Исполненная цена заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue executed_order_price = 25;</code>
      */
     protected $executed_order_price = null;
     /**
-     *Валюта исполнения
+     *Валюта исполнения.
      *
      * Generated from protobuf field <code>string currency = 26;</code>
      */
     protected $currency = '';
     /**
-     *Запрошено лотов
+     *Запрошено лотов.
      *
      * Generated from protobuf field <code>int64 lots_requested = 27;</code>
      */
     protected $lots_requested = 0;
     /**
-     *Исполнено лотов
+     *Исполнено лотов.
      *
      * Generated from protobuf field <code>int64 lots_executed = 28;</code>
      */
     protected $lots_executed = 0;
     /**
-     *Число неисполненных лотов по заявке
+     *Число неисполненных лотов по заявке.
      *
      * Generated from protobuf field <code>int64 lots_left = 29;</code>
      */
     protected $lots_left = 0;
     /**
-     *Отмененные лоты
+     *Отмененные лоты.
      *
      * Generated from protobuf field <code>int64 lots_cancelled = 30;</code>
      */
     protected $lots_cancelled = 0;
     /**
-     *Спецсимвол
+     *Спецсимвол.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderStateStreamResponse.MarkerType marker = 31;</code>
      */
     protected $marker = null;
     /**
-     *	Список сделок
+     *	Список сделок.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OrderTrade trades = 33;</code>
      */
     private $trades;
     /**
-     *Время исполнения заявки
+     *Время исполнения заявки.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp completion_time = 35;</code>
      */
     protected $completion_time = null;
     /**
-     *Код биржи
+     *Код биржи.
      *
      * Generated from protobuf field <code>string exchange = 36;</code>
      */
     protected $exchange = '';
     /**
-     *UID идентификатор инструмента
+     *UID идентификатор инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 41;</code>
      */
@@ -185,59 +185,59 @@ class OrderState extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $order_id
-     *          Биржевой идентификатор заявки
+     *          Биржевой идентификатор заявки.
      *     @type string $order_request_id
      *          Идентификатор ключа идемпотентности, переданный клиентом, в формате UID. Максимальная длина 36 символов.
      *     @type string $client_code
-     *          Код клиента на бирже
+     *          Код клиента на бирже.
      *     @type \Google\Protobuf\Timestamp $created_at
-     *          Дата создания заявки
+     *          Дата создания заявки.
      *     @type int $execution_report_status
-     *          Статус заявки
+     *          Статус заявки.
      *     @type int $status_info
-     *          Дополнительная информация по статусу
+     *          Дополнительная информация по статусу.
      *     @type string $ticker
-     *          Тикер инструмента
+     *          Тикер инструмента.
      *     @type string $class_code
-     *          Класс-код (секция торгов)
+     *          Класс-код (секция торгов).
      *     @type int $lot_size
-     *          Лотность инструмента заявки
+     *          Лотность инструмента заявки.
      *     @type int $direction
-     *          Направление заявки
+     *          Направление заявки.
      *     @type int $time_in_force
-     *          Алгоритм исполнения поручения
+     *          Алгоритм исполнения поручения.
      *     @type int $order_type
-     *          Тип заявки
+     *          Тип заявки.
      *     @type string $account_id
-     *          Номер счета
+     *          Номер счета.
      *     @type \Tinkoff\Invest\V1\MoneyValue $initial_order_price
-     *          Начальная цена заявки
+     *          Начальная цена заявки.
      *     @type \Tinkoff\Invest\V1\MoneyValue $order_price
-     *          Цена выставления заявки
+     *          Цена выставления заявки.
      *     @type \Tinkoff\Invest\V1\MoneyValue $amount
-     *          Предрассчитанная стоимость полной заявки
+     *          Предрассчитанная стоимость полной заявки.
      *     @type \Tinkoff\Invest\V1\MoneyValue $executed_order_price
-     *          Исполненная средняя цена одного инструмента в заявке
+     *          Исполненная цена заявки.
      *     @type string $currency
-     *          Валюта исполнения
+     *          Валюта исполнения.
      *     @type int|string $lots_requested
-     *          Запрошено лотов
+     *          Запрошено лотов.
      *     @type int|string $lots_executed
-     *          Исполнено лотов
+     *          Исполнено лотов.
      *     @type int|string $lots_left
-     *          Число неисполненных лотов по заявке
+     *          Число неисполненных лотов по заявке.
      *     @type int|string $lots_cancelled
-     *          Отмененные лоты
+     *          Отмененные лоты.
      *     @type int $marker
-     *          Спецсимвол
+     *          Спецсимвол.
      *     @type \Tinkoff\Invest\V1\OrderTrade[]|\Google\Protobuf\Internal\RepeatedField $trades
-     *          	Список сделок
+     *          	Список сделок.
      *     @type \Google\Protobuf\Timestamp $completion_time
-     *          Время исполнения заявки
+     *          Время исполнения заявки.
      *     @type string $exchange
-     *          Код биржи
+     *          Код биржи.
      *     @type string $instrument_uid
-     *          UID идентификатор инструмента
+     *          UID идентификатор инструмента.
      * }
      */
     public function __construct($data = NULL) {
@@ -246,7 +246,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Биржевой идентификатор заявки
+     *Биржевой идентификатор заявки.
      *
      * Generated from protobuf field <code>string order_id = 1;</code>
      * @return string
@@ -257,7 +257,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Биржевой идентификатор заявки
+     *Биржевой идентификатор заявки.
      *
      * Generated from protobuf field <code>string order_id = 1;</code>
      * @param string $var
@@ -308,7 +308,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Код клиента на бирже
+     *Код клиента на бирже.
      *
      * Generated from protobuf field <code>string client_code = 3;</code>
      * @return string
@@ -319,7 +319,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Код клиента на бирже
+     *Код клиента на бирже.
      *
      * Generated from protobuf field <code>string client_code = 3;</code>
      * @param string $var
@@ -334,7 +334,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата создания заявки
+     *Дата создания заявки.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp created_at = 4;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -355,7 +355,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата создания заявки
+     *Дата создания заявки.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp created_at = 4;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -370,7 +370,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Статус заявки
+     *Статус заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderExecutionReportStatus execution_report_status = 5;</code>
      * @return int
@@ -381,7 +381,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Статус заявки
+     *Статус заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderExecutionReportStatus execution_report_status = 5;</code>
      * @param int $var
@@ -396,7 +396,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дополнительная информация по статусу
+     *Дополнительная информация по статусу.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderStateStreamResponse.StatusCauseInfo status_info = 6;</code>
      * @return int
@@ -417,7 +417,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дополнительная информация по статусу
+     *Дополнительная информация по статусу.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderStateStreamResponse.StatusCauseInfo status_info = 6;</code>
      * @param int $var
@@ -432,7 +432,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тикер инструмента
+     *Тикер инструмента.
      *
      * Generated from protobuf field <code>string ticker = 7;</code>
      * @return string
@@ -443,7 +443,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тикер инструмента
+     *Тикер инструмента.
      *
      * Generated from protobuf field <code>string ticker = 7;</code>
      * @param string $var
@@ -458,7 +458,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Класс-код (секция торгов)
+     *Класс-код (секция торгов).
      *
      * Generated from protobuf field <code>string class_code = 8;</code>
      * @return string
@@ -469,7 +469,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Класс-код (секция торгов)
+     *Класс-код (секция торгов).
      *
      * Generated from protobuf field <code>string class_code = 8;</code>
      * @param string $var
@@ -484,7 +484,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Лотность инструмента заявки
+     *Лотность инструмента заявки.
      *
      * Generated from protobuf field <code>int32 lot_size = 9;</code>
      * @return int
@@ -495,7 +495,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Лотность инструмента заявки
+     *Лотность инструмента заявки.
      *
      * Generated from protobuf field <code>int32 lot_size = 9;</code>
      * @param int $var
@@ -510,7 +510,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Направление заявки
+     *Направление заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderDirection direction = 10;</code>
      * @return int
@@ -521,7 +521,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Направление заявки
+     *Направление заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderDirection direction = 10;</code>
      * @param int $var
@@ -536,7 +536,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Алгоритм исполнения поручения
+     *Алгоритм исполнения поручения.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TimeInForceType time_in_force = 11;</code>
      * @return int
@@ -547,7 +547,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Алгоритм исполнения поручения
+     *Алгоритм исполнения поручения.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TimeInForceType time_in_force = 11;</code>
      * @param int $var
@@ -562,7 +562,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип заявки
+     *Тип заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderType order_type = 12;</code>
      * @return int
@@ -573,7 +573,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип заявки
+     *Тип заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderType order_type = 12;</code>
      * @param int $var
@@ -588,7 +588,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер счета
+     *Номер счета.
      *
      * Generated from protobuf field <code>string account_id = 13;</code>
      * @return string
@@ -599,7 +599,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер счета
+     *Номер счета.
      *
      * Generated from protobuf field <code>string account_id = 13;</code>
      * @param string $var
@@ -614,7 +614,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Начальная цена заявки
+     *Начальная цена заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue initial_order_price = 22;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -635,7 +635,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Начальная цена заявки
+     *Начальная цена заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue initial_order_price = 22;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -650,7 +650,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена выставления заявки
+     *Цена выставления заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue order_price = 23;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -671,7 +671,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена выставления заявки
+     *Цена выставления заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue order_price = 23;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -686,7 +686,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Предрассчитанная стоимость полной заявки
+     *Предрассчитанная стоимость полной заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue amount = 24;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -707,7 +707,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Предрассчитанная стоимость полной заявки
+     *Предрассчитанная стоимость полной заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue amount = 24;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -722,7 +722,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Исполненная средняя цена одного инструмента в заявке
+     *Исполненная цена заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue executed_order_price = 25;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -743,7 +743,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Исполненная средняя цена одного инструмента в заявке
+     *Исполненная цена заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue executed_order_price = 25;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -758,7 +758,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Валюта исполнения
+     *Валюта исполнения.
      *
      * Generated from protobuf field <code>string currency = 26;</code>
      * @return string
@@ -769,7 +769,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Валюта исполнения
+     *Валюта исполнения.
      *
      * Generated from protobuf field <code>string currency = 26;</code>
      * @param string $var
@@ -784,7 +784,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Запрошено лотов
+     *Запрошено лотов.
      *
      * Generated from protobuf field <code>int64 lots_requested = 27;</code>
      * @return int|string
@@ -795,7 +795,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Запрошено лотов
+     *Запрошено лотов.
      *
      * Generated from protobuf field <code>int64 lots_requested = 27;</code>
      * @param int|string $var
@@ -810,7 +810,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Исполнено лотов
+     *Исполнено лотов.
      *
      * Generated from protobuf field <code>int64 lots_executed = 28;</code>
      * @return int|string
@@ -821,7 +821,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Исполнено лотов
+     *Исполнено лотов.
      *
      * Generated from protobuf field <code>int64 lots_executed = 28;</code>
      * @param int|string $var
@@ -836,7 +836,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Число неисполненных лотов по заявке
+     *Число неисполненных лотов по заявке.
      *
      * Generated from protobuf field <code>int64 lots_left = 29;</code>
      * @return int|string
@@ -847,7 +847,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Число неисполненных лотов по заявке
+     *Число неисполненных лотов по заявке.
      *
      * Generated from protobuf field <code>int64 lots_left = 29;</code>
      * @param int|string $var
@@ -862,7 +862,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Отмененные лоты
+     *Отмененные лоты.
      *
      * Generated from protobuf field <code>int64 lots_cancelled = 30;</code>
      * @return int|string
@@ -873,7 +873,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Отмененные лоты
+     *Отмененные лоты.
      *
      * Generated from protobuf field <code>int64 lots_cancelled = 30;</code>
      * @param int|string $var
@@ -888,7 +888,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Спецсимвол
+     *Спецсимвол.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderStateStreamResponse.MarkerType marker = 31;</code>
      * @return int
@@ -909,7 +909,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Спецсимвол
+     *Спецсимвол.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderStateStreamResponse.MarkerType marker = 31;</code>
      * @param int $var
@@ -924,7 +924,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *	Список сделок
+     *	Список сделок.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OrderTrade trades = 33;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -935,7 +935,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *	Список сделок
+     *	Список сделок.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OrderTrade trades = 33;</code>
      * @param \Tinkoff\Invest\V1\OrderTrade[]|\Google\Protobuf\Internal\RepeatedField $var
@@ -950,7 +950,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Время исполнения заявки
+     *Время исполнения заявки.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp completion_time = 35;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -971,7 +971,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Время исполнения заявки
+     *Время исполнения заявки.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp completion_time = 35;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -986,7 +986,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Код биржи
+     *Код биржи.
      *
      * Generated from protobuf field <code>string exchange = 36;</code>
      * @return string
@@ -997,7 +997,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Код биржи
+     *Код биржи.
      *
      * Generated from protobuf field <code>string exchange = 36;</code>
      * @param string $var
@@ -1012,7 +1012,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *UID идентификатор инструмента
+     *UID идентификатор инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 41;</code>
      * @return string
@@ -1023,7 +1023,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *UID идентификатор инструмента
+     *UID идентификатор инструмента.
      *
      * Generated from protobuf field <code>string instrument_uid = 41;</code>
      * @param string $var

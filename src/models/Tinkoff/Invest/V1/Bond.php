@@ -40,13 +40,13 @@ class Bond extends \Google\Protobuf\Internal\Message
      */
     protected $isin = '';
     /**
-     *Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру `lot`. [Подробнее](https://russianinvestments.github.io/investAPI/glossary#lot).
+     *Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру `lot`. [Подробнее](./glossary#lot).
      *
      * Generated from protobuf field <code>int32 lot = 5;</code>
      */
     protected $lot = 0;
     /**
-     *Валюта расчётов.
+     *Валюта расчетов.
      *
      * Generated from protobuf field <code>string currency = 6;</code>
      */
@@ -54,41 +54,39 @@ class Bond extends \Google\Protobuf\Internal\Message
     /**
      *Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР); 1 – клиент с повышенным уровнем риска (КПУР).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation klong = 7;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation klong = 7 [deprecated = true];</code>
+     * @deprecated
      */
     protected $klong = null;
     /**
      *Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР); 1 – клиент с повышенным уровнем риска (КПУР).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation kshort = 8;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation kshort = 8 [deprecated = true];</code>
+     * @deprecated
      */
     protected $kshort = null;
     /**
      *Ставка риска начальной маржи для КСУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong = 9 [deprecated = true];</code>
-     * @deprecated
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong = 9;</code>
      */
     protected $dlong = null;
     /**
      *Ставка риска начальной маржи для КСУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort = 10 [deprecated = true];</code>
-     * @deprecated
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort = 10;</code>
      */
     protected $dshort = null;
     /**
      * Ставка риска начальной маржи для КПУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_min = 11 [deprecated = true];</code>
-     * @deprecated
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_min = 11;</code>
      */
     protected $dlong_min = null;
     /**
      *Ставка риска начальной маржи для КПУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_min = 12 [deprecated = true];</code>
-     * @deprecated
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_min = 12;</code>
      */
     protected $dshort_min = null;
     /**
@@ -158,13 +156,13 @@ class Bond extends \Google\Protobuf\Internal\Message
      */
     protected $aci_value = null;
     /**
-     *Код страны риска — то есть страны, в которой компания ведёт основной бизнес.
+     *Код страны риска — то есть страны, в которой компания ведет основной бизнес.
      *
      * Generated from protobuf field <code>string country_of_risk = 25;</code>
      */
     protected $country_of_risk = '';
     /**
-     *Наименование страны риска — то есть страны, в которой компания ведёт основной бизнес.
+     *Наименование страны риска — то есть страны, в которой компания ведет основной бизнес.
      *
      * Generated from protobuf field <code>string country_of_risk_name = 26;</code>
      */
@@ -176,7 +174,7 @@ class Bond extends \Google\Protobuf\Internal\Message
      */
     protected $sector = '';
     /**
-     *Форма выпуска. Возможные значения: </br>**documentary** — документарная; </br>**non_documentary** — бездокументарная.
+     *Форма выпуска. Возможные значения: <br/>**documentary** — документарная; <br/>**non_documentary** — бездокументарная.
      *
      * Generated from protobuf field <code>string issue_kind = 28;</code>
      */
@@ -254,7 +252,7 @@ class Bond extends \Google\Protobuf\Internal\Message
      */
     protected $uid = '';
     /**
-     *Реальная площадка исполнения расчётов. (биржа)
+     *Реальная площадка исполнения расчетов. (биржа)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.RealExchange real_exchange = 41;</code>
      */
@@ -344,13 +342,13 @@ class Bond extends \Google\Protobuf\Internal\Message
      */
     protected $call_date = null;
     /**
-     *Ставка риска в лонг, с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+     *Ставка риска в лонг с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_client = 90;</code>
      */
     protected $dlong_client = null;
     /**
-     *Ставка риска в шорт, с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+     *Ставка риска в шорт с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_client = 91;</code>
      */
@@ -371,9 +369,9 @@ class Bond extends \Google\Protobuf\Internal\Message
      *     @type string $isin
      *          ISIN-идентификатор инструмента.
      *     @type int $lot
-     *          Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру `lot`. [Подробнее](https://russianinvestments.github.io/investAPI/glossary#lot).
+     *          Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру `lot`. [Подробнее](./glossary#lot).
      *     @type string $currency
-     *          Валюта расчётов.
+     *          Валюта расчетов.
      *     @type \Tinkoff\Invest\V1\Quotation $klong
      *          Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР); 1 – клиент с повышенным уровнем риска (КПУР).
      *     @type \Tinkoff\Invest\V1\Quotation $kshort
@@ -409,13 +407,13 @@ class Bond extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\MoneyValue $aci_value
      *          Значение НКД (накопленного купонного дохода) на дату.
      *     @type string $country_of_risk
-     *          Код страны риска — то есть страны, в которой компания ведёт основной бизнес.
+     *          Код страны риска — то есть страны, в которой компания ведет основной бизнес.
      *     @type string $country_of_risk_name
-     *          Наименование страны риска — то есть страны, в которой компания ведёт основной бизнес.
+     *          Наименование страны риска — то есть страны, в которой компания ведет основной бизнес.
      *     @type string $sector
      *          Сектор экономики.
      *     @type string $issue_kind
-     *          Форма выпуска. Возможные значения: </br>**documentary** — документарная; </br>**non_documentary** — бездокументарная.
+     *          Форма выпуска. Возможные значения: <br/>**documentary** — документарная; <br/>**non_documentary** — бездокументарная.
      *     @type int|string $issue_size
      *          Размер выпуска.
      *     @type int|string $issue_size_plan
@@ -441,7 +439,7 @@ class Bond extends \Google\Protobuf\Internal\Message
      *     @type string $uid
      *          Уникальный идентификатор инструмента.
      *     @type int $real_exchange
-     *          Реальная площадка исполнения расчётов. (биржа)
+     *          Реальная площадка исполнения расчетов. (биржа)
      *     @type string $position_uid
      *          Уникальный идентификатор позиции инструмента.
      *     @type string $asset_uid
@@ -471,9 +469,9 @@ class Bond extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $call_date
      *           Дата погашения облигации.
      *     @type \Tinkoff\Invest\V1\Quotation $dlong_client
-     *          Ставка риска в лонг, с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+     *          Ставка риска в лонг с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *     @type \Tinkoff\Invest\V1\Quotation $dshort_client
-     *          Ставка риска в шорт, с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+     *          Ставка риска в шорт с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      * }
      */
     public function __construct($data = NULL) {
@@ -586,7 +584,7 @@ class Bond extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру `lot`. [Подробнее](https://russianinvestments.github.io/investAPI/glossary#lot).
+     *Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру `lot`. [Подробнее](./glossary#lot).
      *
      * Generated from protobuf field <code>int32 lot = 5;</code>
      * @return int
@@ -597,7 +595,7 @@ class Bond extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру `lot`. [Подробнее](https://russianinvestments.github.io/investAPI/glossary#lot).
+     *Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру `lot`. [Подробнее](./glossary#lot).
      *
      * Generated from protobuf field <code>int32 lot = 5;</code>
      * @param int $var
@@ -612,7 +610,7 @@ class Bond extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Валюта расчётов.
+     *Валюта расчетов.
      *
      * Generated from protobuf field <code>string currency = 6;</code>
      * @return string
@@ -623,7 +621,7 @@ class Bond extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Валюта расчётов.
+     *Валюта расчетов.
      *
      * Generated from protobuf field <code>string currency = 6;</code>
      * @param string $var
@@ -640,33 +638,39 @@ class Bond extends \Google\Protobuf\Internal\Message
     /**
      *Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР); 1 – клиент с повышенным уровнем риска (КПУР).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation klong = 7;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation klong = 7 [deprecated = true];</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
+     * @deprecated
      */
     public function getKlong()
     {
+        @trigger_error('klong is deprecated.', E_USER_DEPRECATED);
         return isset($this->klong) ? $this->klong : null;
     }
 
     public function hasKlong()
     {
+        @trigger_error('klong is deprecated.', E_USER_DEPRECATED);
         return isset($this->klong);
     }
 
     public function clearKlong()
     {
+        @trigger_error('klong is deprecated.', E_USER_DEPRECATED);
         unset($this->klong);
     }
 
     /**
      *Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР); 1 – клиент с повышенным уровнем риска (КПУР).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation klong = 7;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation klong = 7 [deprecated = true];</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
+     * @deprecated
      */
     public function setKlong($var)
     {
+        @trigger_error('klong is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->klong = $var;
 
@@ -676,33 +680,39 @@ class Bond extends \Google\Protobuf\Internal\Message
     /**
      *Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР); 1 – клиент с повышенным уровнем риска (КПУР).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation kshort = 8;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation kshort = 8 [deprecated = true];</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
+     * @deprecated
      */
     public function getKshort()
     {
+        @trigger_error('kshort is deprecated.', E_USER_DEPRECATED);
         return isset($this->kshort) ? $this->kshort : null;
     }
 
     public function hasKshort()
     {
+        @trigger_error('kshort is deprecated.', E_USER_DEPRECATED);
         return isset($this->kshort);
     }
 
     public function clearKshort()
     {
+        @trigger_error('kshort is deprecated.', E_USER_DEPRECATED);
         unset($this->kshort);
     }
 
     /**
      *Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР); 1 – клиент с повышенным уровнем риска (КПУР).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation kshort = 8;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation kshort = 8 [deprecated = true];</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
+     * @deprecated
      */
     public function setKshort($var)
     {
+        @trigger_error('kshort is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->kshort = $var;
 
@@ -712,39 +722,33 @@ class Bond extends \Google\Protobuf\Internal\Message
     /**
      *Ставка риска начальной маржи для КСУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong = 9 [deprecated = true];</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong = 9;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
-     * @deprecated
      */
     public function getDlong()
     {
-        @trigger_error('dlong is deprecated.', E_USER_DEPRECATED);
         return isset($this->dlong) ? $this->dlong : null;
     }
 
     public function hasDlong()
     {
-        @trigger_error('dlong is deprecated.', E_USER_DEPRECATED);
         return isset($this->dlong);
     }
 
     public function clearDlong()
     {
-        @trigger_error('dlong is deprecated.', E_USER_DEPRECATED);
         unset($this->dlong);
     }
 
     /**
      *Ставка риска начальной маржи для КСУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong = 9 [deprecated = true];</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong = 9;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
-     * @deprecated
      */
     public function setDlong($var)
     {
-        @trigger_error('dlong is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->dlong = $var;
 
@@ -754,39 +758,33 @@ class Bond extends \Google\Protobuf\Internal\Message
     /**
      *Ставка риска начальной маржи для КСУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort = 10 [deprecated = true];</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort = 10;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
-     * @deprecated
      */
     public function getDshort()
     {
-        @trigger_error('dshort is deprecated.', E_USER_DEPRECATED);
         return isset($this->dshort) ? $this->dshort : null;
     }
 
     public function hasDshort()
     {
-        @trigger_error('dshort is deprecated.', E_USER_DEPRECATED);
         return isset($this->dshort);
     }
 
     public function clearDshort()
     {
-        @trigger_error('dshort is deprecated.', E_USER_DEPRECATED);
         unset($this->dshort);
     }
 
     /**
      *Ставка риска начальной маржи для КСУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort = 10 [deprecated = true];</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort = 10;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
-     * @deprecated
      */
     public function setDshort($var)
     {
-        @trigger_error('dshort is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->dshort = $var;
 
@@ -796,39 +794,33 @@ class Bond extends \Google\Protobuf\Internal\Message
     /**
      * Ставка риска начальной маржи для КПУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_min = 11 [deprecated = true];</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_min = 11;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
-     * @deprecated
      */
     public function getDlongMin()
     {
-        @trigger_error('dlong_min is deprecated.', E_USER_DEPRECATED);
         return isset($this->dlong_min) ? $this->dlong_min : null;
     }
 
     public function hasDlongMin()
     {
-        @trigger_error('dlong_min is deprecated.', E_USER_DEPRECATED);
         return isset($this->dlong_min);
     }
 
     public function clearDlongMin()
     {
-        @trigger_error('dlong_min is deprecated.', E_USER_DEPRECATED);
         unset($this->dlong_min);
     }
 
     /**
      * Ставка риска начальной маржи для КПУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_min = 11 [deprecated = true];</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_min = 11;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
-     * @deprecated
      */
     public function setDlongMin($var)
     {
-        @trigger_error('dlong_min is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->dlong_min = $var;
 
@@ -838,39 +830,33 @@ class Bond extends \Google\Protobuf\Internal\Message
     /**
      *Ставка риска начальной маржи для КПУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_min = 12 [deprecated = true];</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_min = 12;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
-     * @deprecated
      */
     public function getDshortMin()
     {
-        @trigger_error('dshort_min is deprecated.', E_USER_DEPRECATED);
         return isset($this->dshort_min) ? $this->dshort_min : null;
     }
 
     public function hasDshortMin()
     {
-        @trigger_error('dshort_min is deprecated.', E_USER_DEPRECATED);
         return isset($this->dshort_min);
     }
 
     public function clearDshortMin()
     {
-        @trigger_error('dshort_min is deprecated.', E_USER_DEPRECATED);
         unset($this->dshort_min);
     }
 
     /**
      *Ставка риска начальной маржи для КПУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_min = 12 [deprecated = true];</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_min = 12;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
-     * @deprecated
      */
     public function setDshortMin($var)
     {
-        @trigger_error('dshort_min is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->dshort_min = $var;
 
@@ -1234,7 +1220,7 @@ class Bond extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Код страны риска — то есть страны, в которой компания ведёт основной бизнес.
+     *Код страны риска — то есть страны, в которой компания ведет основной бизнес.
      *
      * Generated from protobuf field <code>string country_of_risk = 25;</code>
      * @return string
@@ -1245,7 +1231,7 @@ class Bond extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Код страны риска — то есть страны, в которой компания ведёт основной бизнес.
+     *Код страны риска — то есть страны, в которой компания ведет основной бизнес.
      *
      * Generated from protobuf field <code>string country_of_risk = 25;</code>
      * @param string $var
@@ -1260,7 +1246,7 @@ class Bond extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Наименование страны риска — то есть страны, в которой компания ведёт основной бизнес.
+     *Наименование страны риска — то есть страны, в которой компания ведет основной бизнес.
      *
      * Generated from protobuf field <code>string country_of_risk_name = 26;</code>
      * @return string
@@ -1271,7 +1257,7 @@ class Bond extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Наименование страны риска — то есть страны, в которой компания ведёт основной бизнес.
+     *Наименование страны риска — то есть страны, в которой компания ведет основной бизнес.
      *
      * Generated from protobuf field <code>string country_of_risk_name = 26;</code>
      * @param string $var
@@ -1312,7 +1298,7 @@ class Bond extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Форма выпуска. Возможные значения: </br>**documentary** — документарная; </br>**non_documentary** — бездокументарная.
+     *Форма выпуска. Возможные значения: <br/>**documentary** — документарная; <br/>**non_documentary** — бездокументарная.
      *
      * Generated from protobuf field <code>string issue_kind = 28;</code>
      * @return string
@@ -1323,7 +1309,7 @@ class Bond extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Форма выпуска. Возможные значения: </br>**documentary** — документарная; </br>**non_documentary** — бездокументарная.
+     *Форма выпуска. Возможные значения: <br/>**documentary** — документарная; <br/>**non_documentary** — бездокументарная.
      *
      * Generated from protobuf field <code>string issue_kind = 28;</code>
      * @param string $var
@@ -1660,7 +1646,7 @@ class Bond extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Реальная площадка исполнения расчётов. (биржа)
+     *Реальная площадка исполнения расчетов. (биржа)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.RealExchange real_exchange = 41;</code>
      * @return int
@@ -1671,7 +1657,7 @@ class Bond extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Реальная площадка исполнения расчётов. (биржа)
+     *Реальная площадка исполнения расчетов. (биржа)
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.RealExchange real_exchange = 41;</code>
      * @param int $var
@@ -2090,7 +2076,7 @@ class Bond extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Ставка риска в лонг, с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+     *Ставка риска в лонг с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_client = 90;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -2111,7 +2097,7 @@ class Bond extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Ставка риска в лонг, с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+     *Ставка риска в лонг с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dlong_client = 90;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -2126,7 +2112,7 @@ class Bond extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Ставка риска в шорт, с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+     *Ставка риска в шорт с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_client = 91;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -2147,7 +2133,7 @@ class Bond extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Ставка риска в шорт, с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+     *Ставка риска в шорт с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_client = 91;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var

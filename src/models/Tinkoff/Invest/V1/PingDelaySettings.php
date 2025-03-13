@@ -14,7 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class PingDelaySettings extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Задержка пинг сообщений milliseconds 5000-180000, default 120000
+     *Задержка (пинг) сообщений:  5000–180 000 миллисекунд. Значение по умолчанию — 120 000.
      *
      * Generated from protobuf field <code>int32 ping_delay_ms = 15;</code>
      */
@@ -27,7 +27,7 @@ class PingDelaySettings extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $ping_delay_ms
-     *          Задержка пинг сообщений milliseconds 5000-180000, default 120000
+     *          Задержка (пинг) сообщений:  5000–180 000 миллисекунд. Значение по умолчанию — 120 000.
      * }
      */
     public function __construct($data = NULL) {
@@ -36,7 +36,7 @@ class PingDelaySettings extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Задержка пинг сообщений milliseconds 5000-180000, default 120000
+     *Задержка (пинг) сообщений:  5000–180 000 миллисекунд. Значение по умолчанию — 120 000.
      *
      * Generated from protobuf field <code>int32 ping_delay_ms = 15;</code>
      * @return int
@@ -57,7 +57,7 @@ class PingDelaySettings extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Задержка пинг сообщений milliseconds 5000-180000, default 120000
+     *Задержка (пинг) сообщений:  5000–180 000 миллисекунд. Значение по умолчанию — 120 000.
      *
      * Generated from protobuf field <code>int32 ping_delay_ms = 15;</code>
      * @param int $var

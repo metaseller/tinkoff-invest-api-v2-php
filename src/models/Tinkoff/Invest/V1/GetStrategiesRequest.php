@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetStrategiesRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Идентификатор стратегии
+     *Идентификатор стратегии.
      *
      * Generated from protobuf field <code>string strategy_id = 1;</code>
      */
@@ -29,7 +29,7 @@ class GetStrategiesRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $strategy_id
-     *          Идентификатор стратегии
+     *          Идентификатор стратегии.
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +38,7 @@ class GetStrategiesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор стратегии
+     *Идентификатор стратегии.
      *
      * Generated from protobuf field <code>string strategy_id = 1;</code>
      * @return string
@@ -59,7 +59,7 @@ class GetStrategiesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор стратегии
+     *Идентификатор стратегии.
      *
      * Generated from protobuf field <code>string strategy_id = 1;</code>
      * @param string $var
