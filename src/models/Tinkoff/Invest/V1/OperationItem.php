@@ -22,7 +22,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      */
     protected $cursor = '';
     /**
-     *Номер счёта клиента.
+     *Номер счета клиента.
      *
      * Generated from protobuf field <code>string broker_account_id = 6;</code>
      */
@@ -193,7 +193,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      *     @type string $cursor
      *          Курсор.
      *     @type string $broker_account_id
-     *          Номер счёта клиента.
+     *          Номер счета клиента.
      *     @type string $id
      *          Идентификатор операции, может меняться с течением времени.
      *     @type string $parent_operation_id
@@ -280,7 +280,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер счёта клиента.
+     *Номер счета клиента.
      *
      * Generated from protobuf field <code>string broker_account_id = 6;</code>
      * @return string
@@ -291,7 +291,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер счёта клиента.
+     *Номер счета клиента.
      *
      * Generated from protobuf field <code>string broker_account_id = 6;</code>
      * @param string $var

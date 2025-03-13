@@ -14,7 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class PingRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Время формирования запроса
+     *Время формирования запроса.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp time = 1;</code>
      */
@@ -27,7 +27,7 @@ class PingRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Google\Protobuf\Timestamp $time
-     *          Время формирования запроса
+     *          Время формирования запроса.
      * }
      */
     public function __construct($data = NULL) {
@@ -36,7 +36,7 @@ class PingRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Время формирования запроса
+     *Время формирования запроса.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp time = 1;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -57,7 +57,7 @@ class PingRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Время формирования запроса
+     *Время формирования запроса.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp time = 1;</code>
      * @param \Google\Protobuf\Timestamp $var

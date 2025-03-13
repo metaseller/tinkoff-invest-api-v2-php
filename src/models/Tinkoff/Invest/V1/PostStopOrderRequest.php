@@ -47,7 +47,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
      */
     protected $direction = 0;
     /**
-     *Номер счёта.
+     *Номер счета.
      *
      * Generated from protobuf field <code>string account_id = 6 [(.google.api.field_behavior) = REQUIRED];</code>
      */
@@ -77,7 +77,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
      */
     protected $instrument_id = '';
     /**
-     *Тип дочерней биржевой заявки для тейкпрофита.
+     *Тип дочерней биржевой заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ExchangeOrderType exchange_order_type = 11;</code>
      */
@@ -124,7 +124,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
      *     @type int $direction
      *          Направление операции.
      *     @type string $account_id
-     *          Номер счёта.
+     *          Номер счета.
      *     @type int $expiration_type
      *          Тип экспирации заявки.
      *     @type int $stop_order_type
@@ -134,7 +134,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
      *     @type string $instrument_id
      *          Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
      *     @type int $exchange_order_type
-     *          Тип дочерней биржевой заявки для тейкпрофита.
+     *          Тип дочерней биржевой заявки.
      *     @type int $take_profit_type
      *          Подтип стоп-заявки — `TakeProfit`.
      *     @type \Tinkoff\Invest\V1\PostStopOrderRequest\TrailingData $trailing_data
@@ -317,7 +317,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер счёта.
+     *Номер счета.
      *
      * Generated from protobuf field <code>string account_id = 6 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
@@ -328,7 +328,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер счёта.
+     *Номер счета.
      *
      * Generated from protobuf field <code>string account_id = 6 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
@@ -457,7 +457,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип дочерней биржевой заявки для тейкпрофита.
+     *Тип дочерней биржевой заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ExchangeOrderType exchange_order_type = 11;</code>
      * @return int
@@ -468,7 +468,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип дочерней биржевой заявки для тейкпрофита.
+     *Тип дочерней биржевой заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ExchangeOrderType exchange_order_type = 11;</code>
      * @param int $var

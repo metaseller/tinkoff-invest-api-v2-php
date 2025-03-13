@@ -44,7 +44,7 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
      */
     protected $interval = 0;
     /**
-     *Тип цены, который используется при расчёте индикатора.
+     *Тип цены, который используется при расчете индикатора.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetTechAnalysisRequest.TypeOfPrice type_of_price = 6 [(.google.api.field_behavior) = REQUIRED];</code>
      */
@@ -85,7 +85,7 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
      *     @type int $interval
      *          Интервал, за который рассчитывается индикатор.
      *     @type int $type_of_price
-     *          Тип цены, который используется при расчёте индикатора.
+     *          Тип цены, который используется при расчете индикатора.
      *     @type int $length
      *          Торговый период, за который рассчитывается индикатор.
      *     @type \Tinkoff\Invest\V1\GetTechAnalysisRequest\Deviation $deviation
@@ -250,7 +250,7 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип цены, который используется при расчёте индикатора.
+     *Тип цены, который используется при расчете индикатора.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetTechAnalysisRequest.TypeOfPrice type_of_price = 6 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return int
@@ -261,7 +261,7 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип цены, который используется при расчёте индикатора.
+     *Тип цены, который используется при расчете индикатора.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetTechAnalysisRequest.TypeOfPrice type_of_price = 6 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param int $var

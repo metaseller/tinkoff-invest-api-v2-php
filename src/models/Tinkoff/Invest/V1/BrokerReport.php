@@ -62,7 +62,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      */
     protected $direction = '';
     /**
-     *Сокращённое наименование актива.
+     *Сокращенное наименование актива.
      *
      * Generated from protobuf field <code>string name = 9;</code>
      */
@@ -134,7 +134,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      */
     protected $party = '';
     /**
-     *Дата расчётов по UTC.
+     *Дата расчетов по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp clear_value_date = 21;</code>
      */
@@ -170,7 +170,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      */
     protected $separate_agreement_date = '';
     /**
-     *Тип расчёта по сделке.
+     *Тип расчета по сделке.
      *
      * Generated from protobuf field <code>string delivery_type = 27;</code>
      */
@@ -199,7 +199,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      *     @type string $direction
      *          Вид сделки.
      *     @type string $name
-     *          Сокращённое наименование актива.
+     *          Сокращенное наименование актива.
      *     @type string $ticker
      *          Код актива.
      *     @type \Tinkoff\Invest\V1\MoneyValue $price
@@ -223,7 +223,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      *     @type string $party
      *          Контрагент или брокерарокер.
      *     @type \Google\Protobuf\Timestamp $clear_value_date
-     *          Дата расчётов по UTC.
+     *          Дата расчетов по UTC.
      *     @type \Google\Protobuf\Timestamp $sec_value_date
      *          Дата поставки по UTC.
      *     @type string $broker_status
@@ -235,7 +235,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      *     @type string $separate_agreement_date
      *          Дата договора.
      *     @type string $delivery_type
-     *          Тип расчёта по сделке.
+     *          Тип расчета по сделке.
      * }
      */
     public function __construct($data = NULL) {
@@ -462,7 +462,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Сокращённое наименование актива.
+     *Сокращенное наименование актива.
      *
      * Generated from protobuf field <code>string name = 9;</code>
      * @return string
@@ -473,7 +473,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Сокращённое наименование актива.
+     *Сокращенное наименование актива.
      *
      * Generated from protobuf field <code>string name = 9;</code>
      * @param string $var
@@ -854,7 +854,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата расчётов по UTC.
+     *Дата расчетов по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp clear_value_date = 21;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -875,7 +875,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Дата расчётов по UTC.
+     *Дата расчетов по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp clear_value_date = 21;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -1030,7 +1030,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип расчёта по сделке.
+     *Тип расчета по сделке.
      *
      * Generated from protobuf field <code>string delivery_type = 27;</code>
      * @return string
@@ -1041,7 +1041,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Тип расчёта по сделке.
+     *Тип расчета по сделке.
      *
      * Generated from protobuf field <code>string delivery_type = 27;</code>
      * @param string $var

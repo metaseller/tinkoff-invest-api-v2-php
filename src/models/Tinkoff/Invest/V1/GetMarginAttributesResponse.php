@@ -16,19 +16,19 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Ликвидная стоимость портфеля. [Подробнее про ликвидный портфель](https://help.tbank.ru/margin-trade/short/liquid-portfolio/).
+     * Ликвидная стоимость портфеля. [Подробнее про ликвидный портфель](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q4).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue liquid_portfolio = 1;</code>
      */
     protected $liquid_portfolio = null;
     /**
-     * Начальная маржа — начальное обеспечение для совершения новой сделки. [Подробнее про начальную и минимальную маржу](https://help.tbank.ru/margin-trade/short/initial-and-maintenance-margin/).
+     * Начальная маржа — начальное обеспечение для совершения новой сделки. [Подробнее про начальную и минимальную маржу](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q6).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue starting_margin = 2;</code>
      */
     protected $starting_margin = null;
     /**
-     * Минимальная маржа — это минимальное обеспечение для поддержания позиции, которую вы уже открыли. [Подробнее про начальную и минимальную маржу](https://help.tbank.ru/margin-trade/short/initial-and-maintenance-margin/).
+     * Минимальная маржа — это минимальное обеспечение для поддержания позиции, которую вы уже открыли. [Подробнее про начальную и минимальную маржу](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q6).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue minimal_margin = 3;</code>
      */
@@ -59,11 +59,11 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Tinkoff\Invest\V1\MoneyValue $liquid_portfolio
-     *           Ликвидная стоимость портфеля. [Подробнее про ликвидный портфель](https://help.tbank.ru/margin-trade/short/liquid-portfolio/).
+     *           Ликвидная стоимость портфеля. [Подробнее про ликвидный портфель](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q4).
      *     @type \Tinkoff\Invest\V1\MoneyValue $starting_margin
-     *           Начальная маржа — начальное обеспечение для совершения новой сделки. [Подробнее про начальную и минимальную маржу](https://help.tbank.ru/margin-trade/short/initial-and-maintenance-margin/).
+     *           Начальная маржа — начальное обеспечение для совершения новой сделки. [Подробнее про начальную и минимальную маржу](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q6).
      *     @type \Tinkoff\Invest\V1\MoneyValue $minimal_margin
-     *           Минимальная маржа — это минимальное обеспечение для поддержания позиции, которую вы уже открыли. [Подробнее про начальную и минимальную маржу](https://help.tbank.ru/margin-trade/short/initial-and-maintenance-margin/).
+     *           Минимальная маржа — это минимальное обеспечение для поддержания позиции, которую вы уже открыли. [Подробнее про начальную и минимальную маржу](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q6).
      *     @type \Tinkoff\Invest\V1\Quotation $funds_sufficiency_level
      *           Уровень достаточности средств. Соотношение стоимости ликвидного портфеля к начальной марже.
      *     @type \Tinkoff\Invest\V1\MoneyValue $amount_of_missing_funds
@@ -78,7 +78,7 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Ликвидная стоимость портфеля. [Подробнее про ликвидный портфель](https://help.tbank.ru/margin-trade/short/liquid-portfolio/).
+     * Ликвидная стоимость портфеля. [Подробнее про ликвидный портфель](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q4).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue liquid_portfolio = 1;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -99,7 +99,7 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Ликвидная стоимость портфеля. [Подробнее про ликвидный портфель](https://help.tbank.ru/margin-trade/short/liquid-portfolio/).
+     * Ликвидная стоимость портфеля. [Подробнее про ликвидный портфель](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q4).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue liquid_portfolio = 1;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -114,7 +114,7 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Начальная маржа — начальное обеспечение для совершения новой сделки. [Подробнее про начальную и минимальную маржу](https://help.tbank.ru/margin-trade/short/initial-and-maintenance-margin/).
+     * Начальная маржа — начальное обеспечение для совершения новой сделки. [Подробнее про начальную и минимальную маржу](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q6).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue starting_margin = 2;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -135,7 +135,7 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Начальная маржа — начальное обеспечение для совершения новой сделки. [Подробнее про начальную и минимальную маржу](https://help.tbank.ru/margin-trade/short/initial-and-maintenance-margin/).
+     * Начальная маржа — начальное обеспечение для совершения новой сделки. [Подробнее про начальную и минимальную маржу](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q6).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue starting_margin = 2;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
@@ -150,7 +150,7 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Минимальная маржа — это минимальное обеспечение для поддержания позиции, которую вы уже открыли. [Подробнее про начальную и минимальную маржу](https://help.tbank.ru/margin-trade/short/initial-and-maintenance-margin/).
+     * Минимальная маржа — это минимальное обеспечение для поддержания позиции, которую вы уже открыли. [Подробнее про начальную и минимальную маржу](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q6).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue minimal_margin = 3;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -171,7 +171,7 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Минимальная маржа — это минимальное обеспечение для поддержания позиции, которую вы уже открыли. [Подробнее про начальную и минимальную маржу](https://help.tbank.ru/margin-trade/short/initial-and-maintenance-margin/).
+     * Минимальная маржа — это минимальное обеспечение для поддержания позиции, которую вы уже открыли. [Подробнее про начальную и минимальную маржу](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q6).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue minimal_margin = 3;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var

@@ -28,31 +28,31 @@ class Candle extends \Google\Protobuf\Internal\Message
      */
     protected $interval = 0;
     /**
-     *Цена открытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
+     *Цена открытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation open = 3;</code>
      */
     protected $open = null;
     /**
-     *Максимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
+     *Максимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation high = 4;</code>
      */
     protected $high = null;
     /**
-     *Минимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
+     *Минимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation low = 5;</code>
      */
     protected $low = null;
     /**
-     *Цена закрытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
+     *Цена закрытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation close = 6;</code>
      */
     protected $close = null;
     /**
-     *Объём сделок в лотах.
+     *Объем сделок в лотах.
      *
      * Generated from protobuf field <code>int64 volume = 7;</code>
      */
@@ -76,7 +76,7 @@ class Candle extends \Google\Protobuf\Internal\Message
      */
     protected $instrument_uid = '';
     /**
-     *Источник свечей
+     *Источник свечей.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.CandleSource candle_source_type = 19;</code>
      */
@@ -93,15 +93,15 @@ class Candle extends \Google\Protobuf\Internal\Message
      *     @type int $interval
      *          Интервал свечи.
      *     @type \Tinkoff\Invest\V1\Quotation $open
-     *          Цена открытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
+     *          Цена открытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
      *     @type \Tinkoff\Invest\V1\Quotation $high
-     *          Максимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
+     *          Максимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
      *     @type \Tinkoff\Invest\V1\Quotation $low
-     *          Минимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
+     *          Минимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
      *     @type \Tinkoff\Invest\V1\Quotation $close
-     *          Цена закрытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
+     *          Цена закрытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
      *     @type int|string $volume
-     *          Объём сделок в лотах.
+     *          Объем сделок в лотах.
      *     @type \Google\Protobuf\Timestamp $time
      *          Время начала интервала свечи по UTC.
      *     @type \Google\Protobuf\Timestamp $last_trade_ts
@@ -109,7 +109,7 @@ class Candle extends \Google\Protobuf\Internal\Message
      *     @type string $instrument_uid
      *          UID инструмента.
      *     @type int $candle_source_type
-     *          Источник свечей
+     *          Источник свечей.
      * }
      */
     public function __construct($data = NULL) {
@@ -170,7 +170,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена открытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
+     *Цена открытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation open = 3;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -191,7 +191,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена открытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
+     *Цена открытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation open = 3;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -206,7 +206,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Максимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
+     *Максимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation high = 4;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -227,7 +227,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Максимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
+     *Максимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation high = 4;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -242,7 +242,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Минимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
+     *Минимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation low = 5;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -263,7 +263,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Минимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
+     *Минимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation low = 5;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -278,7 +278,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена закрытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
+     *Цена закрытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation close = 6;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -299,7 +299,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Цена закрытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](https://russianinvestments.github.io/investAPI/faq_marketdata/#_15).
+     *Цена закрытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation close = 6;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
@@ -314,7 +314,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Объём сделок в лотах.
+     *Объем сделок в лотах.
      *
      * Generated from protobuf field <code>int64 volume = 7;</code>
      * @return int|string
@@ -325,7 +325,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Объём сделок в лотах.
+     *Объем сделок в лотах.
      *
      * Generated from protobuf field <code>int64 volume = 7;</code>
      * @param int|string $var
@@ -438,7 +438,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Источник свечей
+     *Источник свечей.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.CandleSource candle_source_type = 19;</code>
      * @return int
@@ -449,7 +449,7 @@ class Candle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Источник свечей
+     *Источник свечей.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.CandleSource candle_source_type = 19;</code>
      * @param int $var

@@ -17,7 +17,7 @@ class OrdersStreamServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Stream сделок пользователя
+     * Stream сделок пользователя.
      * @param \Tinkoff\Invest\V1\TradesStreamRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -32,7 +32,8 @@ class OrdersStreamServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Stream поручений пользователя. Перед работой прочитайте [статью](https://russianinvestments.github.io/investAPI/orders_state_stream/).
+     * Stream поручений пользователя.
+     * Перед работой прочитайте [статью](/invest/services/orders/orders_state_stream).
      * @param \Tinkoff\Invest\V1\OrderStateStreamRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

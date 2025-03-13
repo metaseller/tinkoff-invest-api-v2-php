@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Наименование заёмщика.
+     *Наименование заемщика.
      *
      * Generated from protobuf field <code>string borrow_name = 1;</code>
      */
@@ -76,7 +76,7 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      */
     protected $issue_size_plan = null;
     /**
-     *Объём размещения.
+     *Объем размещения.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation issue_size = 11;</code>
      */
@@ -101,7 +101,7 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $borrow_name
-     *          Наименование заёмщика.
+     *          Наименование заемщика.
      *     @type \Tinkoff\Invest\V1\Quotation $nominal
      *          Номинал.
      *     @type string $nominal_currency
@@ -121,7 +121,7 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\Quotation $issue_size_plan
      *          Объявленное количество, шт.
      *     @type \Tinkoff\Invest\V1\Quotation $issue_size
-     *          Объём размещения.
+     *          Объем размещения.
      *     @type \Google\Protobuf\Timestamp $placement_date
      *          Дата размещения ноты.
      *     @type string $issue_kind
@@ -134,7 +134,7 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Наименование заёмщика.
+     *Наименование заемщика.
      *
      * Generated from protobuf field <code>string borrow_name = 1;</code>
      * @return string
@@ -145,7 +145,7 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Наименование заёмщика.
+     *Наименование заемщика.
      *
      * Generated from protobuf field <code>string borrow_name = 1;</code>
      * @param string $var
@@ -434,7 +434,7 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Объём размещения.
+     *Объем размещения.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation issue_size = 11;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -455,7 +455,7 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Объём размещения.
+     *Объем размещения.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation issue_size = 11;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var

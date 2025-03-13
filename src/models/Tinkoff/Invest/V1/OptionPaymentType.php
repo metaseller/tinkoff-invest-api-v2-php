@@ -7,20 +7,20 @@ namespace Tinkoff\Invest\V1;
 use UnexpectedValueException;
 
 /**
- *Тип расчётов по опциону.
+ *Тип расчетов по опциону.
  *
  * Protobuf type <code>tinkoff.public.invest.api.contract.v1.OptionPaymentType</code>
  */
 class OptionPaymentType
 {
     /**
-     *Тип не определён.
+     *Тип не определен.
      *
      * Generated from protobuf enum <code>OPTION_PAYMENT_TYPE_UNSPECIFIED = 0;</code>
      */
     const OPTION_PAYMENT_TYPE_UNSPECIFIED = 0;
     /**
-     *Опционы с использованием премии в расчётах.
+     *Опционы с использованием премии в расчетах.
      *
      * Generated from protobuf enum <code>OPTION_PAYMENT_TYPE_PREMIUM = 1;</code>
      */

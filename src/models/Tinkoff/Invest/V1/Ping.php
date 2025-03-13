@@ -28,7 +28,7 @@ class Ping extends \Google\Protobuf\Internal\Message
      */
     protected $stream_id = '';
     /**
-     *Время формирования запроса
+     *Время формирования запроса.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp ping_request_time = 4;</code>
      */
@@ -45,7 +45,7 @@ class Ping extends \Google\Protobuf\Internal\Message
      *     @type string $stream_id
      *          Идентификатор соединения.
      *     @type \Google\Protobuf\Timestamp $ping_request_time
-     *          Время формирования запроса
+     *          Время формирования запроса.
      * }
      */
     public function __construct($data = NULL) {
@@ -116,7 +116,7 @@ class Ping extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Время формирования запроса
+     *Время формирования запроса.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp ping_request_time = 4;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -137,7 +137,7 @@ class Ping extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Время формирования запроса
+     *Время формирования запроса.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp ping_request_time = 4;</code>
      * @param \Google\Protobuf\Timestamp $var

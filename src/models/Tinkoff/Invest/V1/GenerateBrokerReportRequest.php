@@ -14,7 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class GenerateBrokerReportRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Идентификатор счёта клиента.
+     *Идентификатор счета клиента.
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
@@ -39,7 +39,7 @@ class GenerateBrokerReportRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $account_id
-     *          Идентификатор счёта клиента.
+     *          Идентификатор счета клиента.
      *     @type \Google\Protobuf\Timestamp $from
      *          Начало периода по UTC.
      *     @type \Google\Protobuf\Timestamp $to
@@ -52,7 +52,7 @@ class GenerateBrokerReportRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор счёта клиента.
+     *Идентификатор счета клиента.
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
@@ -63,7 +63,7 @@ class GenerateBrokerReportRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор счёта клиента.
+     *Идентификатор счета клиента.
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var

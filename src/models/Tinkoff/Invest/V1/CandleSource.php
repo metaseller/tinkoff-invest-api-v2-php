@@ -12,7 +12,7 @@ use UnexpectedValueException;
 class CandleSource
 {
     /**
-     *Источник свечей не определён.
+     *Источник свечей не определен.
      *
      * Generated from protobuf enum <code>CANDLE_SOURCE_UNSPECIFIED = 0;</code>
      */

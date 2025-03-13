@@ -26,7 +26,7 @@ class PriceType
      */
     const PRICE_TYPE_POINT = 1;
     /**
-     *Цена в валюте расчётов по инструменту.
+     *Цена в валюте расчетов по инструменту.
      *
      * Generated from protobuf enum <code>PRICE_TYPE_CURRENCY = 2;</code>
      */

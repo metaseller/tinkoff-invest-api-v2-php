@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class TradingSchedulesRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Наименование биржи или расчетного календаря. </br>Если не передаётся, возвращается информация по всем доступным торговым площадкам.
+     *Наименование биржи или расчетного календаря. <br/>Если не передается, возвращается информация по всем доступным торговым площадкам.
      *
      * Generated from protobuf field <code>string exchange = 1;</code>
      */
@@ -41,7 +41,7 @@ class TradingSchedulesRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $exchange
-     *          Наименование биржи или расчетного календаря. </br>Если не передаётся, возвращается информация по всем доступным торговым площадкам.
+     *          Наименование биржи или расчетного календаря. <br/>Если не передается, возвращается информация по всем доступным торговым площадкам.
      *     @type \Google\Protobuf\Timestamp $from
      *          Начало периода по UTC.
      *     @type \Google\Protobuf\Timestamp $to
@@ -54,7 +54,7 @@ class TradingSchedulesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Наименование биржи или расчетного календаря. </br>Если не передаётся, возвращается информация по всем доступным торговым площадкам.
+     *Наименование биржи или расчетного календаря. <br/>Если не передается, возвращается информация по всем доступным торговым площадкам.
      *
      * Generated from protobuf field <code>string exchange = 1;</code>
      * @return string
@@ -75,7 +75,7 @@ class TradingSchedulesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Наименование биржи или расчетного календаря. </br>Если не передаётся, возвращается информация по всем доступным торговым площадкам.
+     *Наименование биржи или расчетного календаря. <br/>Если не передается, возвращается информация по всем доступным торговым площадкам.
      *
      * Generated from protobuf field <code>string exchange = 1;</code>
      * @param string $var

@@ -14,7 +14,7 @@ use UnexpectedValueException;
 class IndicatorInterval
 {
     /**
-     *Интервал не определён.
+     *Интервал не определен.
      *
      * Generated from protobuf enum <code>INDICATOR_INTERVAL_UNSPECIFIED = 0;</code>
      */

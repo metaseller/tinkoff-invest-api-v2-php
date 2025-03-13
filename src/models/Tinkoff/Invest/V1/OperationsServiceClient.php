@@ -17,8 +17,8 @@ class OperationsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Получить список операций по счёту. При работе с методом учитывайте
-     * [особенности взаимодействия](/investAPI/operations_problems).
+     * Получить список операций по счету.
+     * При работе с методом учитывайте [особенности взаимодействия](/invest/services/operations/operations_problems).
      * @param \Tinkoff\Invest\V1\OperationsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -33,7 +33,7 @@ class OperationsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Получить портфель по счёту.
+     * Получить портфель по счету.
      * @param \Tinkoff\Invest\V1\PortfolioRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -48,7 +48,7 @@ class OperationsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Получить список позиций по счёту.
+     * Получить список позиций по счету.
      * @param \Tinkoff\Invest\V1\PositionsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -78,7 +78,7 @@ class OperationsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Получить брокерский отчёт.
+     * Получить брокерский отчет.
      * @param \Tinkoff\Invest\V1\BrokerReportRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -93,7 +93,7 @@ class OperationsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Получить отчёт «Справка о доходах за пределами РФ».
+     * Получить отчет «Справка о доходах за пределами РФ».
      * @param \Tinkoff\Invest\V1\GetDividendsForeignIssuerRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -108,8 +108,8 @@ class OperationsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Получить список операций по счёту с пагинацией. При работе с методом учитывайте
-     * [особенности взаимодействия](/investAPI/operations_problems).
+     * Получить список операций по счету с пагинацией.
+     * При работе с методом учитывайте [особенности взаимодействия](/invest/services/operations/operations_problems).
      * @param \Tinkoff\Invest\V1\GetOperationsByCursorRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

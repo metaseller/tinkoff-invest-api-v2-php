@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetStopOrdersRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Идентификатор счёта клиента.
+     *Идентификатор счета клиента.
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
@@ -47,7 +47,7 @@ class GetStopOrdersRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $account_id
-     *          Идентификатор счёта клиента.
+     *          Идентификатор счета клиента.
      *     @type int $status
      *          Статус заявок.
      *     @type \Google\Protobuf\Timestamp $from
@@ -62,7 +62,7 @@ class GetStopOrdersRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор счёта клиента.
+     *Идентификатор счета клиента.
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
@@ -73,7 +73,7 @@ class GetStopOrdersRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор счёта клиента.
+     *Идентификатор счета клиента.
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var

@@ -38,13 +38,13 @@ class StopOrderStatusOption
      */
     const STOP_ORDER_STATUS_EXECUTED = 3;
     /**
-     *Отменённые заявки.
+     *Отмененные заявки.
      *
      * Generated from protobuf enum <code>STOP_ORDER_STATUS_CANCELED = 4;</code>
      */
     const STOP_ORDER_STATUS_CANCELED = 4;
     /**
-     *Истёкшие заявки.
+     *Истекшие заявки.
      *
      * Generated from protobuf enum <code>STOP_ORDER_STATUS_EXPIRED = 5;</code>
      */

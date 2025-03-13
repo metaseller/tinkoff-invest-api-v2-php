@@ -9,14 +9,14 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Запрос списка операций по счёту с пагинацией.
+ *Запрос списка операций по счету с пагинацией.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.GetOperationsByCursorRequest</code>
  */
 class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Идентификатор счёта клиента, обязательный параметр. Остальные параметры опциональны.
+     *Идентификатор счета клиента, обязательный параметр. Остальные параметры опциональны.
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
@@ -89,7 +89,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $account_id
-     *          Идентификатор счёта клиента, обязательный параметр. Остальные параметры опциональны.
+     *          Идентификатор счета клиента, обязательный параметр. Остальные параметры опциональны.
      *     @type string $instrument_id
      *          Идентификатор инструмента — FIGI или UID инструмента.
      *     @type \Google\Protobuf\Timestamp $from
@@ -118,7 +118,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор счёта клиента, обязательный параметр. Остальные параметры опциональны.
+     *Идентификатор счета клиента, обязательный параметр. Остальные параметры опциональны.
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
@@ -129,7 +129,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор счёта клиента, обязательный параметр. Остальные параметры опциональны.
+     *Идентификатор счета клиента, обязательный параметр. Остальные параметры опциональны.
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var

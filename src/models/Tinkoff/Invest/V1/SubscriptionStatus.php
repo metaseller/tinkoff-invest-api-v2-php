@@ -14,7 +14,7 @@ use UnexpectedValueException;
 class SubscriptionStatus
 {
     /**
-     *Статус подписки не определён.
+     *Статус подписки не определен.
      *
      * Generated from protobuf enum <code>SUBSCRIPTION_STATUS_UNSPECIFIED = 0;</code>
      */
@@ -32,7 +32,7 @@ class SubscriptionStatus
      */
     const SUBSCRIPTION_STATUS_INSTRUMENT_NOT_FOUND = 2;
     /**
-     *Некорректный статус подписки. [Список возможных значений](https://russianinvestments.github.io/investAPI/marketdata#subscriptionaction).
+     *Некорректный статус подписки. [Список возможных значений](./marketdata#subscriptionaction).
      *
      * Generated from protobuf enum <code>SUBSCRIPTION_STATUS_SUBSCRIPTION_ACTION_IS_INVALID = 3;</code>
      */
@@ -44,13 +44,13 @@ class SubscriptionStatus
      */
     const SUBSCRIPTION_STATUS_DEPTH_IS_INVALID = 4;
     /**
-     *Некорректный интервал свечей. [Список возможных значений](https://russianinvestments.github.io/investAPI/marketdata#subscriptioninterval).
+     *Некорректный интервал свечей. [Список возможных значений](./marketdata#subscriptioninterval).
      *
      * Generated from protobuf enum <code>SUBSCRIPTION_STATUS_INTERVAL_IS_INVALID = 5;</code>
      */
     const SUBSCRIPTION_STATUS_INTERVAL_IS_INVALID = 5;
     /**
-     *Превышен лимит на общее количество подписок в рамках стрима. [Лимитная политика](https://russianinvestments.github.io/investAPI/limits/).
+     *Превышен лимит на общее количество подписок в рамках стрима. [Лимитная политика](./limits/).
      *
      * Generated from protobuf enum <code>SUBSCRIPTION_STATUS_LIMIT_IS_EXCEEDED = 6;</code>
      */
@@ -74,7 +74,7 @@ class SubscriptionStatus
      */
     const SUBSCRIPTION_STATUS_SUBSCRIPTION_NOT_FOUND = 9;
     /**
-     *Указан некорректный источник
+     *Указан некорректный источник.
      *
      * Generated from protobuf enum <code>SUBSCRIPTION_STATUS_SOURCE_IS_INVALID = 10;</code>
      */

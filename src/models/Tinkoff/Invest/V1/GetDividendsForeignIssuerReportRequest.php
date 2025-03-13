@@ -9,14 +9,14 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Объект запроса сформированного отчёта «Справка о доходах за пределами РФ».
+ * Объект запроса сформированного отчета «Справка о доходах за пределами РФ».
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.GetDividendsForeignIssuerReportRequest</code>
  */
 class GetDividendsForeignIssuerReportRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Идентификатор задачи формирования отчёта.
+     *Идентификатор задачи формирования отчета.
      *
      * Generated from protobuf field <code>string task_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
@@ -35,7 +35,7 @@ class GetDividendsForeignIssuerReportRequest extends \Google\Protobuf\Internal\M
      *     Optional. Data for populating the Message object.
      *
      *     @type string $task_id
-     *          Идентификатор задачи формирования отчёта.
+     *          Идентификатор задачи формирования отчета.
      *     @type int $page
      *          Номер страницы отчета (начинается с 0), значение по умолчанию: 0.
      * }
@@ -46,7 +46,7 @@ class GetDividendsForeignIssuerReportRequest extends \Google\Protobuf\Internal\M
     }
 
     /**
-     *Идентификатор задачи формирования отчёта.
+     *Идентификатор задачи формирования отчета.
      *
      * Generated from protobuf field <code>string task_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
@@ -57,7 +57,7 @@ class GetDividendsForeignIssuerReportRequest extends \Google\Protobuf\Internal\M
     }
 
     /**
-     *Идентификатор задачи формирования отчёта.
+     *Идентификатор задачи формирования отчета.
      *
      * Generated from protobuf field <code>string task_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var

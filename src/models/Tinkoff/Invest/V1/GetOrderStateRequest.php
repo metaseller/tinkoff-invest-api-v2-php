@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetOrderStateRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Номер счёта.
+     *Номер счета.
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
@@ -47,7 +47,7 @@ class GetOrderStateRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $account_id
-     *          Номер счёта.
+     *          Номер счета.
      *     @type string $order_id
      *          Идентификатор заявки.
      *     @type int $price_type
@@ -62,7 +62,7 @@ class GetOrderStateRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер счёта.
+     *Номер счета.
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
@@ -73,7 +73,7 @@ class GetOrderStateRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер счёта.
+     *Номер счета.
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var

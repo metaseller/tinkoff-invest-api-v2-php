@@ -28,7 +28,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
      */
     protected $qual_status = false;
     /**
-     *Набор требующих тестирования инструментов и возможностей, с которыми может работать пользователь. [Подробнее](https://russianinvestments.github.io/investAPI/faq_users/).
+     *Набор требующих тестирования инструментов и возможностей, с которыми может работать пользователь. [Подробнее](/invest/services/accounts/faq_users).
      *
      * Generated from protobuf field <code>repeated string qualified_for_work_with = 3;</code>
      */
@@ -39,6 +39,18 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string tariff = 4;</code>
      */
     protected $tariff = '';
+    /**
+     *Идентификатор пользователя.
+     *
+     * Generated from protobuf field <code>string user_id = 9;</code>
+     */
+    protected $user_id = '';
+    /**
+     * Категория риска.
+     *
+     * Generated from protobuf field <code>string risk_level_code = 12;</code>
+     */
+    protected $risk_level_code = '';
 
     /**
      * Constructor.
@@ -51,9 +63,13 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
      *     @type bool $qual_status
      *          Признак квалифицированного инвестора.
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $qualified_for_work_with
-     *          Набор требующих тестирования инструментов и возможностей, с которыми может работать пользователь. [Подробнее](https://russianinvestments.github.io/investAPI/faq_users/).
+     *          Набор требующих тестирования инструментов и возможностей, с которыми может работать пользователь. [Подробнее](/invest/services/accounts/faq_users).
      *     @type string $tariff
      *          Наименование тарифа пользователя.
+     *     @type string $user_id
+     *          Идентификатор пользователя.
+     *     @type string $risk_level_code
+     *           Категория риска.
      * }
      */
     public function __construct($data = NULL) {
@@ -114,7 +130,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Набор требующих тестирования инструментов и возможностей, с которыми может работать пользователь. [Подробнее](https://russianinvestments.github.io/investAPI/faq_users/).
+     *Набор требующих тестирования инструментов и возможностей, с которыми может работать пользователь. [Подробнее](/invest/services/accounts/faq_users).
      *
      * Generated from protobuf field <code>repeated string qualified_for_work_with = 3;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -125,7 +141,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Набор требующих тестирования инструментов и возможностей, с которыми может работать пользователь. [Подробнее](https://russianinvestments.github.io/investAPI/faq_users/).
+     *Набор требующих тестирования инструментов и возможностей, с которыми может работать пользователь. [Подробнее](/invest/services/accounts/faq_users).
      *
      * Generated from protobuf field <code>repeated string qualified_for_work_with = 3;</code>
      * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
@@ -161,6 +177,58 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->tariff = $var;
+
+        return $this;
+    }
+
+    /**
+     *Идентификатор пользователя.
+     *
+     * Generated from protobuf field <code>string user_id = 9;</code>
+     * @return string
+     */
+    public function getUserId()
+    {
+        return $this->user_id;
+    }
+
+    /**
+     *Идентификатор пользователя.
+     *
+     * Generated from protobuf field <code>string user_id = 9;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setUserId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->user_id = $var;
+
+        return $this;
+    }
+
+    /**
+     * Категория риска.
+     *
+     * Generated from protobuf field <code>string risk_level_code = 12;</code>
+     * @return string
+     */
+    public function getRiskLevelCode()
+    {
+        return $this->risk_level_code;
+    }
+
+    /**
+     * Категория риска.
+     *
+     * Generated from protobuf field <code>string risk_level_code = 12;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setRiskLevelCode($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->risk_level_code = $var;
 
         return $this;
     }

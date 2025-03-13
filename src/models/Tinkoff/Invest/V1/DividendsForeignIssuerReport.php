@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Отчёт «Справка о доходах за пределами РФ».
+ * Отчет «Справка о доходах за пределами РФ».
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.DividendsForeignIssuerReport</code>
  */
@@ -58,7 +58,7 @@ class DividendsForeignIssuerReport extends \Google\Protobuf\Internal\Message
      */
     protected $dividend = null;
     /**
-     *Комиссия внешних платёжных агентов.
+     *Комиссия внешних платежных агентов.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation external_commission = 8;</code>
      */
@@ -109,7 +109,7 @@ class DividendsForeignIssuerReport extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\Quotation $dividend
      *          Выплаты на одну бумагу
      *     @type \Tinkoff\Invest\V1\Quotation $external_commission
-     *          Комиссия внешних платёжных агентов.
+     *          Комиссия внешних платежных агентов.
      *     @type \Tinkoff\Invest\V1\Quotation $dividend_gross
      *          Сумма до удержания налога.
      *     @type \Tinkoff\Invest\V1\Quotation $tax
@@ -338,7 +338,7 @@ class DividendsForeignIssuerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Комиссия внешних платёжных агентов.
+     *Комиссия внешних платежных агентов.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation external_commission = 8;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
@@ -359,7 +359,7 @@ class DividendsForeignIssuerReport extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Комиссия внешних платёжных агентов.
+     *Комиссия внешних платежных агентов.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation external_commission = 8;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var

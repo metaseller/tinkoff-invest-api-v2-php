@@ -14,7 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class GenerateBrokerReportResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Идентификатор задачи формирования брокерского отчёта.
+     *Идентификатор задачи формирования брокерского отчета.
      *
      * Generated from protobuf field <code>string task_id = 1;</code>
      */
@@ -27,7 +27,7 @@ class GenerateBrokerReportResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $task_id
-     *          Идентификатор задачи формирования брокерского отчёта.
+     *          Идентификатор задачи формирования брокерского отчета.
      * }
      */
     public function __construct($data = NULL) {
@@ -36,7 +36,7 @@ class GenerateBrokerReportResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор задачи формирования брокерского отчёта.
+     *Идентификатор задачи формирования брокерского отчета.
      *
      * Generated from protobuf field <code>string task_id = 1;</code>
      * @return string
@@ -47,7 +47,7 @@ class GenerateBrokerReportResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор задачи формирования брокерского отчёта.
+     *Идентификатор задачи формирования брокерского отчета.
      *
      * Generated from protobuf field <code>string task_id = 1;</code>
      * @param string $var

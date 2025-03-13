@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class SubscribeTradesResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Уникальный идентификатор запроса. [Подробнее](https://russianinvestments.github.io/investAPI/grpc#tracking-id).
+     *Уникальный идентификатор запроса. [Подробнее](./grpc#tracking-id).
      *
      * Generated from protobuf field <code>string tracking_id = 1;</code>
      */
@@ -41,7 +41,7 @@ class SubscribeTradesResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $tracking_id
-     *          Уникальный идентификатор запроса. [Подробнее](https://russianinvestments.github.io/investAPI/grpc#tracking-id).
+     *          Уникальный идентификатор запроса. [Подробнее](./grpc#tracking-id).
      *     @type \Tinkoff\Invest\V1\TradeSubscription[]|\Google\Protobuf\Internal\RepeatedField $trade_subscriptions
      *          Массив статусов подписки на поток сделок.
      *     @type int $trade_source
@@ -54,7 +54,7 @@ class SubscribeTradesResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Уникальный идентификатор запроса. [Подробнее](https://russianinvestments.github.io/investAPI/grpc#tracking-id).
+     *Уникальный идентификатор запроса. [Подробнее](./grpc#tracking-id).
      *
      * Generated from protobuf field <code>string tracking_id = 1;</code>
      * @return string
@@ -65,7 +65,7 @@ class SubscribeTradesResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Уникальный идентификатор запроса. [Подробнее](https://russianinvestments.github.io/investAPI/grpc#tracking-id).
+     *Уникальный идентификатор запроса. [Подробнее](./grpc#tracking-id).
      *
      * Generated from protobuf field <code>string tracking_id = 1;</code>
      * @param string $var

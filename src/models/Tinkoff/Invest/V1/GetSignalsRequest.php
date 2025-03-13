@@ -34,19 +34,19 @@ class GetSignalsRequest extends \Google\Protobuf\Internal\Message
      */
     protected $strategy_type = null;
     /**
-     *	Идентификатор бумаги
+     *	Идентификатор бумаги.
      *
      * Generated from protobuf field <code>string instrument_uid = 4;</code>
      */
     protected $instrument_uid = null;
     /**
-     *	Дата начала запрашиваемого интервала в часовом поясе UTC.
+     *	Дата начала запрашиваемого интервала по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 5;</code>
      */
     protected $from = null;
     /**
-     *	Дата конца запрашиваемого интервала  в часовом поясе UTC.
+     *	Дата конца запрашиваемого интервала по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 6;</code>
      */
@@ -83,11 +83,11 @@ class GetSignalsRequest extends \Google\Protobuf\Internal\Message
      *     @type int $strategy_type
      *          Тип стратегии.
      *     @type string $instrument_uid
-     *          	Идентификатор бумаги
+     *          	Идентификатор бумаги.
      *     @type \Google\Protobuf\Timestamp $from
-     *          	Дата начала запрашиваемого интервала в часовом поясе UTC.
+     *          	Дата начала запрашиваемого интервала по UTC.
      *     @type \Google\Protobuf\Timestamp $to
-     *          	Дата конца запрашиваемого интервала  в часовом поясе UTC.
+     *          	Дата конца запрашиваемого интервала по UTC.
      *     @type int $direction
      *          	Направление сигнала.
      *     @type int $active
@@ -210,7 +210,7 @@ class GetSignalsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *	Идентификатор бумаги
+     *	Идентификатор бумаги.
      *
      * Generated from protobuf field <code>string instrument_uid = 4;</code>
      * @return string
@@ -231,7 +231,7 @@ class GetSignalsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *	Идентификатор бумаги
+     *	Идентификатор бумаги.
      *
      * Generated from protobuf field <code>string instrument_uid = 4;</code>
      * @param string $var
@@ -246,7 +246,7 @@ class GetSignalsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *	Дата начала запрашиваемого интервала в часовом поясе UTC.
+     *	Дата начала запрашиваемого интервала по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 5;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -267,7 +267,7 @@ class GetSignalsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *	Дата начала запрашиваемого интервала в часовом поясе UTC.
+     *	Дата начала запрашиваемого интервала по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp from = 5;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -282,7 +282,7 @@ class GetSignalsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *	Дата конца запрашиваемого интервала  в часовом поясе UTC.
+     *	Дата конца запрашиваемого интервала по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 6;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -303,7 +303,7 @@ class GetSignalsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *	Дата конца запрашиваемого интервала  в часовом поясе UTC.
+     *	Дата конца запрашиваемого интервала по UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp to = 6;</code>
      * @param \Google\Protobuf\Timestamp $var

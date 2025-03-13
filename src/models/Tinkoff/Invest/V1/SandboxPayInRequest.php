@@ -9,20 +9,20 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Запрос пополнения счёта в песочнице.
+ *Запрос пополнения счета в песочнице.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.SandboxPayInRequest</code>
  */
 class SandboxPayInRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Номер счёта
+     *Номер счета
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $account_id = '';
     /**
-     *Сумма пополнения счёта в рублях
+     *Сумма пополнения счета в рублях
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue amount = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
@@ -35,9 +35,9 @@ class SandboxPayInRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $account_id
-     *          Номер счёта
+     *          Номер счета
      *     @type \Tinkoff\Invest\V1\MoneyValue $amount
-     *          Сумма пополнения счёта в рублях
+     *          Сумма пополнения счета в рублях
      * }
      */
     public function __construct($data = NULL) {
@@ -46,7 +46,7 @@ class SandboxPayInRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер счёта
+     *Номер счета
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
@@ -57,7 +57,7 @@ class SandboxPayInRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер счёта
+     *Номер счета
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
@@ -72,7 +72,7 @@ class SandboxPayInRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Сумма пополнения счёта в рублях
+     *Сумма пополнения счета в рублях
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue amount = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -93,7 +93,7 @@ class SandboxPayInRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Сумма пополнения счёта в рублях
+     *Сумма пополнения счета в рублях
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue amount = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var

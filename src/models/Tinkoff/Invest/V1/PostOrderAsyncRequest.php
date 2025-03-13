@@ -40,7 +40,7 @@ class PostOrderAsyncRequest extends \Google\Protobuf\Internal\Message
      */
     protected $direction = 0;
     /**
-     *Номер счёта.
+     *Номер счета.
      *
      * Generated from protobuf field <code>string account_id = 5 [(.google.api.field_behavior) = REQUIRED];</code>
      */
@@ -85,7 +85,7 @@ class PostOrderAsyncRequest extends \Google\Protobuf\Internal\Message
      *     @type int $direction
      *          Направление операции.
      *     @type string $account_id
-     *          Номер счёта.
+     *          Номер счета.
      *     @type int $order_type
      *          Тип заявки.
      *     @type string $order_id
@@ -216,7 +216,7 @@ class PostOrderAsyncRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер счёта.
+     *Номер счета.
      *
      * Generated from protobuf field <code>string account_id = 5 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
@@ -227,7 +227,7 @@ class PostOrderAsyncRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Номер счёта.
+     *Номер счета.
      *
      * Generated from protobuf field <code>string account_id = 5 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var

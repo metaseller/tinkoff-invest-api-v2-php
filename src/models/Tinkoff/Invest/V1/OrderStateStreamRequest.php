@@ -22,11 +22,11 @@ class OrderStateStreamRequest extends \Google\Protobuf\Internal\Message
      */
     private $accounts;
     /**
-     *Задержка пинг сообщений milliseconds 5000-180000, default 120000
+     *Задержка (пинг) сообщений:  1000-120 000 миллисекунд. Значение по умолчанию — 120 000.
      *
-     * Generated from protobuf field <code>int32 ping_delay_ms = 15;</code>
+     * Generated from protobuf field <code>int32 ping_delay_millis = 15;</code>
      */
-    protected $ping_delay_ms = null;
+    protected $ping_delay_millis = null;
 
     /**
      * Constructor.
@@ -36,8 +36,8 @@ class OrderStateStreamRequest extends \Google\Protobuf\Internal\Message
      *
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $accounts
      *          Идентификаторы счетов.
-     *     @type int $ping_delay_ms
-     *          Задержка пинг сообщений milliseconds 5000-180000, default 120000
+     *     @type int $ping_delay_millis
+     *          Задержка (пинг) сообщений:  1000-120 000 миллисекунд. Значение по умолчанию — 120 000.
      * }
      */
     public function __construct($data = NULL) {
@@ -72,37 +72,37 @@ class OrderStateStreamRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Задержка пинг сообщений milliseconds 5000-180000, default 120000
+     *Задержка (пинг) сообщений:  1000-120 000 миллисекунд. Значение по умолчанию — 120 000.
      *
-     * Generated from protobuf field <code>int32 ping_delay_ms = 15;</code>
+     * Generated from protobuf field <code>int32 ping_delay_millis = 15;</code>
      * @return int
      */
-    public function getPingDelayMs()
+    public function getPingDelayMillis()
     {
-        return isset($this->ping_delay_ms) ? $this->ping_delay_ms : 0;
+        return isset($this->ping_delay_millis) ? $this->ping_delay_millis : 0;
     }
 
-    public function hasPingDelayMs()
+    public function hasPingDelayMillis()
     {
-        return isset($this->ping_delay_ms);
+        return isset($this->ping_delay_millis);
     }
 
-    public function clearPingDelayMs()
+    public function clearPingDelayMillis()
     {
-        unset($this->ping_delay_ms);
+        unset($this->ping_delay_millis);
     }
 
     /**
-     *Задержка пинг сообщений milliseconds 5000-180000, default 120000
+     *Задержка (пинг) сообщений:  1000-120 000 миллисекунд. Значение по умолчанию — 120 000.
      *
-     * Generated from protobuf field <code>int32 ping_delay_ms = 15;</code>
+     * Generated from protobuf field <code>int32 ping_delay_millis = 15;</code>
      * @param int $var
      * @return $this
      */
-    public function setPingDelayMs($var)
+    public function setPingDelayMillis($var)
     {
         GPBUtil::checkInt32($var);
-        $this->ping_delay_ms = $var;
+        $this->ping_delay_millis = $var;
 
         return $this;
     }

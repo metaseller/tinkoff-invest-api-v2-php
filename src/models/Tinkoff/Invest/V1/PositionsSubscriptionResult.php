@@ -22,7 +22,7 @@ class PositionsSubscriptionResult extends \Google\Protobuf\Internal\Message
      */
     private $accounts;
     /**
-     *Уникальный идентификатор запроса, подробнее: [tracking_id](https://russianinvestments.github.io/investAPI/grpc#tracking-id).
+     *Уникальный идентификатор запроса, подробнее: [tracking_id](/invest/intro/developer/protocols/grpc#tracking-id).
      *
      * Generated from protobuf field <code>string tracking_id = 7;</code>
      */
@@ -43,7 +43,7 @@ class PositionsSubscriptionResult extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\PositionsSubscriptionStatus[]|\Google\Protobuf\Internal\RepeatedField $accounts
      *          Массив счетов клиента.
      *     @type string $tracking_id
-     *          Уникальный идентификатор запроса, подробнее: [tracking_id](https://russianinvestments.github.io/investAPI/grpc#tracking-id).
+     *          Уникальный идентификатор запроса, подробнее: [tracking_id](/invest/intro/developer/protocols/grpc#tracking-id).
      *     @type string $stream_id
      *          Идентификатор открытого соединения
      * }
@@ -80,7 +80,7 @@ class PositionsSubscriptionResult extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Уникальный идентификатор запроса, подробнее: [tracking_id](https://russianinvestments.github.io/investAPI/grpc#tracking-id).
+     *Уникальный идентификатор запроса, подробнее: [tracking_id](/invest/intro/developer/protocols/grpc#tracking-id).
      *
      * Generated from protobuf field <code>string tracking_id = 7;</code>
      * @return string
@@ -91,7 +91,7 @@ class PositionsSubscriptionResult extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Уникальный идентификатор запроса, подробнее: [tracking_id](https://russianinvestments.github.io/investAPI/grpc#tracking-id).
+     *Уникальный идентификатор запроса, подробнее: [tracking_id](/invest/intro/developer/protocols/grpc#tracking-id).
      *
      * Generated from protobuf field <code>string tracking_id = 7;</code>
      * @param string $var

@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Результат закрытия счёта в песочнице.
+ *Результат закрытия счета в песочнице.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.CloseSandboxAccountResponse</code>
  */

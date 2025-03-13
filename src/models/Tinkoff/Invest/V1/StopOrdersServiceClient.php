@@ -32,7 +32,7 @@ class StopOrdersServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Получить список активных стоп-заявок по счёту.
+     * Получить список активных стоп-заявок по счету.
      * @param \Tinkoff\Invest\V1\GetStopOrdersRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

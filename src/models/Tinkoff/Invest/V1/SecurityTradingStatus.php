@@ -14,7 +14,7 @@ use UnexpectedValueException;
 class SecurityTradingStatus
 {
     /**
-     *Торговый статус не определён.
+     *Торговый статус не определен.
      *
      * Generated from protobuf enum <code>SECURITY_TRADING_STATUS_UNSPECIFIED = 0;</code>
      */

@@ -77,7 +77,7 @@ class OrdersServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения списка активных заявок по счёту.
+     * Метод получения списка активных заявок по счету.
      * @param \Tinkoff\Invest\V1\GetOrdersRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -107,7 +107,7 @@ class OrdersServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * расчет количества доступных для покупки/продажи лотов
+     * Расчет количества доступных для покупки/продажи лотов.
      * @param \Tinkoff\Invest\V1\GetMaxLotsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -122,7 +122,7 @@ class OrdersServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения предварительной стоимости для лимитной заявки
+     * Метод получения предварительной стоимости для лимитной заявки.
      * @param \Tinkoff\Invest\V1\GetOrderPriceRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

@@ -14,7 +14,7 @@ use UnexpectedValueException;
 class OptionDirection
 {
     /**
-     *Тип не определён.
+     *Тип не определен.
      *
      * Generated from protobuf enum <code>OPTION_DIRECTION_UNSPECIFIED = 0;</code>
      */
