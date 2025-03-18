@@ -114,7 +114,7 @@ class InstrumentsProvider extends BaseDataProvider
      * @param bool $preload_futures Флаг необходимости инициализировать кеш фьючерсов, путем загрузки полного справочника через API запрос. По умолчанию равно <code>false</code>
      */
     public function __construct(
-        TinkoffClientsFactory $model = null,
+        ?TinkoffClientsFactory $model = null,
         bool $preload_shares = false,
         bool $preload_etfs = false,
         bool $preload_currencies = false,
@@ -144,7 +144,7 @@ class InstrumentsProvider extends BaseDataProvider
      * @return static Созданный экземпляр провайдера
      */
     public static function create(
-        TinkoffClientsFactory $model = null,
+        ?TinkoffClientsFactory $model = null,
         bool $preload_shares = false,
         bool $preload_etfs = true,
         bool $preload_currencies = false,
@@ -204,7 +204,7 @@ class InstrumentsProvider extends BaseDataProvider
      * @throws InstrumentNotFoundException
      * @throws Exception
      */
-    public function bondByTicker(string $ticker, string $class_name = null, bool $refresh = false, bool $raise = true): ?Bond
+    public function bondByTicker(string $ticker, ?string $class_name = null, bool $refresh = false, bool $raise = true): ?Bond
     {
         try {
             $found_instrument_candidate_1 = null;
@@ -375,7 +375,7 @@ class InstrumentsProvider extends BaseDataProvider
      * @throws InstrumentNotFoundException
      * @throws Exception
      */
-    public function currencyByTicker(string $ticker, string $class_name = null, bool $refresh = false, bool $raise = true): ?Currency
+    public function currencyByTicker(string $ticker, ?string $class_name = null, bool $refresh = false, bool $raise = true): ?Currency
     {
         try {
             $instrument_type = 'currency';
@@ -531,7 +531,7 @@ class InstrumentsProvider extends BaseDataProvider
      * @throws InstrumentNotFoundException
      * @throws Exception
      */
-    public function etfByTicker(string $ticker, string $class_name = null, bool $refresh = false, bool $raise = true): ?Etf
+    public function etfByTicker(string $ticker, ?string $class_name = null, bool $refresh = false, bool $raise = true): ?Etf
     {
         try {
             $found_instrument_candidate_1 = null;
@@ -702,7 +702,7 @@ class InstrumentsProvider extends BaseDataProvider
      * @throws InstrumentNotFoundException
      * @throws Exception
      */
-    public function futureByTicker(string $ticker, string $class_name = null, bool $refresh = false, bool $raise = true): ?Future
+    public function futureByTicker(string $ticker, ?string $class_name = null, bool $refresh = false, bool $raise = true): ?Future
     {
         try {
             $instrument_type = 'future';
@@ -858,7 +858,7 @@ class InstrumentsProvider extends BaseDataProvider
      * @throws InstrumentNotFoundException
      * @throws Exception
      */
-    public function shareByTicker(string $ticker, string $class_name = null, bool $refresh = false, bool $raise = true): ?Share
+    public function shareByTicker(string $ticker, ?string $class_name = null, bool $refresh = false, bool $raise = true): ?Share
     {
         try {
             $found_instrument_candidate_1 = null;
@@ -1241,7 +1241,7 @@ class InstrumentsProvider extends BaseDataProvider
      * @throws InstrumentNotFoundException
      * @throws Exception
      */
-    public function searchByTicker(string $ticker, string $class_name = null, bool $raise = true)
+    public function searchByTicker(string $ticker, ?string $class_name = null, bool $raise = true)
     {
         try {
             for ($i = 1; $i <= 2; $i++) {
@@ -1322,7 +1322,7 @@ class InstrumentsProvider extends BaseDataProvider
      *
      * @throws Exception
      */
-    public function instrumentByTicker(string $ticker, string $class_name = null, bool $refresh = false, bool $raise = true): ?Instrument
+    public function instrumentByTicker(string $ticker, ?string $class_name = null, bool $refresh = false, bool $raise = true): ?Instrument
     {
         try {
             $instrument_type = 'instrument';
@@ -1720,7 +1720,7 @@ class InstrumentsProvider extends BaseDataProvider
      *
      * @see https://tinkoff.github.io/investAPI/faq_identification/
      */
-    protected function getCachedInstrumentByTicker(string $instrument_type, string $ticker, string $class_name = null)
+    protected function getCachedInstrumentByTicker(string $instrument_type, string $ticker, ?string $class_name = null)
     {
         $instrument_id_type = InstrumentIdType::INSTRUMENT_ID_TYPE_TICKER;
 

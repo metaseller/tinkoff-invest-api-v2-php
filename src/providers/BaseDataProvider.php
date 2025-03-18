@@ -22,7 +22,7 @@ abstract class BaseDataProvider
      * @param TinkoffClientsFactory|null $model Экземпляр фабрики клиентов доступа к сервису Tinkoff Invest API 2 или <code>null</code>,
      * если инициализация планируется позднее
      */
-    public function __construct(TinkoffClientsFactory $model = null)
+    public function __construct(?TinkoffClientsFactory $model = null)
     {
         if ($model) {
             $this->setClientsFactory($model);
@@ -59,7 +59,7 @@ abstract class BaseDataProvider
      *
      * @return static Созданный экземпляр провайдера
      */
-    public static function create(TinkoffClientsFactory $model = null): self
+    public static function create(?TinkoffClientsFactory $model = null): self
     {
         return new static($model);
     }

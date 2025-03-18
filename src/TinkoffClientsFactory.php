@@ -120,7 +120,7 @@ class TinkoffClientsFactory
      * @param string|null $app_name Значение AppName для запросов к Tinkoff Invest API 2. Если установлено <code>null</code>,
      * то будет использовано значение {@link TinkoffClientsFactory::DEFAULT_APP_NAME}
      */
-    public function __construct(string $api_token = null, string $app_name = null)
+    public function __construct(?string $api_token = null, ?string $app_name = null)
     {
         if ($api_token) {
             $this->setApiToken($api_token)->setAppName($app_name ?: TinkoffClientsFactory::DEFAULT_APP_NAME);
@@ -172,7 +172,7 @@ class TinkoffClientsFactory
      *
      * @throws Exception
      */
-    public function getInstrumentsServiceClient(array $extra_options = [], GrpcChannel $channel = null): InstrumentsServiceClient
+    public function getInstrumentsServiceClient(array $extra_options = [], ?GrpcChannel $channel = null): InstrumentsServiceClient
     {
         if (!empty($extra_options) || !empty($channel)) {
             return new InstrumentsServiceClient(
@@ -207,7 +207,7 @@ class TinkoffClientsFactory
      *
      * @throws Exception
      */
-    public function getMarketDataStreamServiceClient(array $extra_options = [], GrpcChannel $channel = null): MarketDataStreamServiceClient
+    public function getMarketDataStreamServiceClient(array $extra_options = [], ?GrpcChannel $channel = null): MarketDataStreamServiceClient
     {
         if (!empty($extra_options) || !empty($channel)) {
             return new MarketDataStreamServiceClient(
@@ -242,7 +242,7 @@ class TinkoffClientsFactory
      *
      * @throws Exception
      */
-    public function getMarketDataServiceClient(array $extra_options = [], GrpcChannel $channel = null): MarketDataServiceClient
+    public function getMarketDataServiceClient(array $extra_options = [], ?GrpcChannel $channel = null): MarketDataServiceClient
     {
         if (!empty($extra_options) || !empty($channel)) {
             return new MarketDataServiceClient(
@@ -277,7 +277,7 @@ class TinkoffClientsFactory
      *
      * @throws Exception
      */
-    public function getOperationsServiceClient(array $extra_options = [], GrpcChannel $channel = null): OperationsServiceClient
+    public function getOperationsServiceClient(array $extra_options = [], ?GrpcChannel $channel = null): OperationsServiceClient
     {
         if (!empty($extra_options) || !empty($channel)) {
             return new OperationsServiceClient(
@@ -312,7 +312,7 @@ class TinkoffClientsFactory
      *
      * @throws Exception
      */
-    public function getOrdersServiceClient(array $extra_options = [], GrpcChannel $channel = null): OrdersServiceClient
+    public function getOrdersServiceClient(array $extra_options = [], ?GrpcChannel $channel = null): OrdersServiceClient
     {
         if (!empty($extra_options) || !empty($channel)) {
             return new OrdersServiceClient(
@@ -347,7 +347,7 @@ class TinkoffClientsFactory
      *
      * @throws Exception
      */
-    public function getOrdersStreamServiceClient(array $extra_options = [], GrpcChannel $channel = null): OrdersStreamServiceClient
+    public function getOrdersStreamServiceClient(array $extra_options = [], ?GrpcChannel $channel = null): OrdersStreamServiceClient
     {
         if (!empty($extra_options) || !empty($channel)) {
             return new OrdersStreamServiceClient(
@@ -382,7 +382,7 @@ class TinkoffClientsFactory
      *
      * @throws Exception
      */
-    public function getSandboxServiceClient(array $extra_options = [], GrpcChannel $channel = null): SandboxServiceClient
+    public function getSandboxServiceClient(array $extra_options = [], ?GrpcChannel $channel = null): SandboxServiceClient
     {
         if (!empty($extra_options) || !empty($channel)) {
             return new SandboxServiceClient(
@@ -417,7 +417,7 @@ class TinkoffClientsFactory
      *
      * @throws Exception
      */
-    public function getStopOrdersServiceClient(array $extra_options = [], GrpcChannel $channel = null): StopOrdersServiceClient
+    public function getStopOrdersServiceClient(array $extra_options = [], ?GrpcChannel $channel = null): StopOrdersServiceClient
     {
         if (!empty($extra_options) || !empty($channel)) {
             return new StopOrdersServiceClient(
@@ -452,7 +452,7 @@ class TinkoffClientsFactory
      *
      * @throws Exception
      */
-    public function getUsersServiceClient(array $extra_options = [], GrpcChannel $channel = null): UsersServiceClient
+    public function getUsersServiceClient(array $extra_options = [], ?GrpcChannel $channel = null): UsersServiceClient
     {
         if (!empty($extra_options) || !empty($channel)) {
             return new UsersServiceClient(
