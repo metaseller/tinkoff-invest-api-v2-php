@@ -86,7 +86,7 @@ class QuotationHelper
      *
      * @see https://tinkoff.github.io/investAPI/faq/#_6
      */
-    public static function toCurrency($price, $instrument, GetFuturesMarginResponse $futures_data = null): float
+    public static function toCurrency($price, $instrument, ?GetFuturesMarginResponse $futures_data = null): float
     {
         if (!static::isInstrumentModelValid($instrument)) {
             throw new ValidateException('Instrument model is not valid');
