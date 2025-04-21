@@ -7,6 +7,7 @@ use Tinkoff\Invest\V1\InstrumentsServiceClient;
 use Tinkoff\Invest\V1\MarketDataServiceClient;
 use Tinkoff\Invest\V1\MarketDataStreamServiceClient;
 use Tinkoff\Invest\V1\OperationsServiceClient;
+use Tinkoff\Invest\V1\OperationsStreamServiceClient;
 use Tinkoff\Invest\V1\OrdersServiceClient;
 use Tinkoff\Invest\V1\OrdersStreamServiceClient;
 use Tinkoff\Invest\V1\SandboxServiceClient;
@@ -21,6 +22,7 @@ use Grpc\Channel as GrpcChannel;
  * @property-read MarketDataStreamServiceClient $marketDataStreamServiceClient Клиент с настройками по-умолчанию к Bidirectional-stream методам сервиса котировок
  * @property-read MarketDataServiceClient $marketDataServiceClient Клиент с настройками по-умолчанию к Unary методам сервиса котировок
  * @property-read OperationsServiceClient $operationsServiceClient Клиент с настройками по-умолчанию к сервису операций
+ * @property-read OperationsStreamServiceClient $operationsStreamServiceClient Клиент с настройками по-умолчанию к Stream сервису операций
  * @property-read OrdersServiceClient $ordersServiceClient Клиент с настройками по-умолчанию к сервису торговых поручений
  * @property-read OrdersStreamServiceClient $ordersStreamServiceClient Клиент с настройками по-умолчанию к Stream сервису торговых поручений
  * @property-read SandboxServiceClient $sandboxServiceClient Клиент с настройками по-умолчанию к песочнице
@@ -63,6 +65,13 @@ class TinkoffClientsFactory
      * @see https://tinkoff.github.io/investAPI/head-instruments/
      */
     protected $_market_data_stream_service_client;
+
+    /**
+     * @var OperationsStreamServiceClient|null Клиент к Bidirectional-stream методам сервиса операций
+     *
+     * @see https://tinkoff.github.io/investAPI/head-instruments/
+     */
+    protected $_operations_stream_service_client;
 
     /**
      * @var MarketDataServiceClient|null Клиент к Unary методам сервиса котировок
@@ -294,6 +303,41 @@ class TinkoffClientsFactory
             }
 
             return $this->_operations_service_client;
+        }
+    }
+
+    /**
+     * Метод получения клиента к Bidirectional-stream методам сервиса операций
+     *
+     * Если все параметры имеют значения по-умолчанию, то метод вернет созданный синглетон клиента в рамках
+     * текущей модели фабрики. Если атрибуты имеют отличные от пустых значения, то всегда будет создан новый экземпляр
+     * клиента.
+     *
+     * @param array $extra_options Массив параметров канала. При инициализации клиента рекурсивно объединяются со значением
+     * {@link ClientConnection::getOptions()}. По умолчанию равно <code>[]</code>
+     * @param GrpcChannel|null $channel Канал для повторного использования. По умолчанию равно <code>null</code>
+     *
+     * @return OperationsStreamServiceClient Клиент к Bidirectional-stream методам сервиса котировок
+     *
+     * @throws Exception
+     */
+    public function getOperationsStreamServiceClient(array $extra_options = [], ?GrpcChannel $channel = null): OperationsStreamServiceClient
+    {
+        if (!empty($extra_options) || !empty($channel)) {
+            return new OperationsStreamServiceClient(
+                ClientConnection::getHostname(),
+                array_merge_recursive($this->getBaseConnectionOptions(), $extra_options),
+                $channel
+            );
+        } else {
+            if (empty($this->_operations_stream_service_client)) {
+                $this->_operations_stream_service_client = new OperationsStreamServiceClient(
+                    ClientConnection::getHostname(),
+                    $this->getBaseConnectionOptions()
+                );
+            }
+
+            return $this->_operations_stream_service_client;
         }
     }
 
