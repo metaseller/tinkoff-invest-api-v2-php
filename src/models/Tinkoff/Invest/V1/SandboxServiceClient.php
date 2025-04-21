@@ -17,7 +17,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Зарегистрировать счет.
+     * OpenSandboxAccount — зарегистрировать счет
      * @param \Tinkoff\Invest\V1\OpenSandboxAccountRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -32,7 +32,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Получить счета.
+     * GetSandboxAccounts — счета пользователя
      * @param \Tinkoff\Invest\V1\GetAccountsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -47,7 +47,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Закрыть счет.
+     * CloseSandboxAccount — закрыть счет
      * @param \Tinkoff\Invest\V1\CloseSandboxAccountRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -62,7 +62,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Выставить торговое поручение.
+     * PostSandboxOrder — выставить заявку
      * @param \Tinkoff\Invest\V1\PostOrderRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -77,7 +77,23 @@ class SandboxServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Изменить выставленную заявку.
+     * PostSandboxOrderAsync — выставить заявку асинхронным методом
+     * Особенности работы приведены в [статье](/invest/services/orders/async).
+     * @param \Tinkoff\Invest\V1\PostOrderAsyncRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function PostSandboxOrderAsync(\Tinkoff\Invest\V1\PostOrderAsyncRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.SandboxService/PostSandboxOrderAsync',
+        $argument,
+        ['\Tinkoff\Invest\V1\PostOrderAsyncResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * ReplaceSandboxOrder — изменить выставленную заявку
      * @param \Tinkoff\Invest\V1\ReplaceOrderRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -92,7 +108,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Получить список активных заявок по счету.
+     * GetSandboxOrders — получить список активных заявок по счету
      * @param \Tinkoff\Invest\V1\GetOrdersRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -107,7 +123,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Отменить торговое поручение.
+     * CancelSandboxOrder — отменить заявку
      * @param \Tinkoff\Invest\V1\CancelOrderRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -122,7 +138,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Получить статус заявки в песочнице. Заявки хранятся в таблице 7 дней.
+     * GetSandboxOrderState — получить статус торгового поручения
      * @param \Tinkoff\Invest\V1\GetOrderStateRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -137,7 +153,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Получить позиции по виртуальному счету.
+     * GetSandboxPositions — список позиций по счету
      * @param \Tinkoff\Invest\V1\PositionsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -152,7 +168,8 @@ class SandboxServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Получить операции по номеру счета.
+     * GetSandboxOperations — список операций по счету
+     * При работе с методом учитывайте [особенности взаимодействия](/invest/services/operations/operations_problems).
      * @param \Tinkoff\Invest\V1\OperationsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -167,7 +184,8 @@ class SandboxServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Получить операции по номеру счета с пагинацией.
+     * GetSandboxOperationsByCursor — список операций по счету с пагинацией
+     * При работе с методом учитывайте [особенности взаимодействия](/invest/services/operations/operations_problems).
      * @param \Tinkoff\Invest\V1\GetOperationsByCursorRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -182,7 +200,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Получить портфель.
+     * GetSandboxPortfolio — портфель по счету
      * @param \Tinkoff\Invest\V1\PortfolioRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -197,7 +215,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Пополнить счет.
+     * SandboxPayIn — пополнить счет.
      * @param \Tinkoff\Invest\V1\SandboxPayInRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -212,7 +230,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Получить доступный остаток для вывода средств.
+     * GetSandboxWithdrawLimits — доступный остаток для вывода средств
      * @param \Tinkoff\Invest\V1\WithdrawLimitsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -227,7 +245,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Расчет количества доступных для покупки/продажи лотов в песочнице.
+     * GetSandboxMaxLots — расчет количества доступных для покупки/продажи лотов
      * @param \Tinkoff\Invest\V1\GetMaxLotsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

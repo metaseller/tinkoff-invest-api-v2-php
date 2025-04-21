@@ -9,6 +9,8 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ *Запрос удаления избранной группы
+ *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.DeleteFavoriteGroupRequest</code>
  */
 class DeleteFavoriteGroupRequest extends \Google\Protobuf\Internal\Message

@@ -7,14 +7,14 @@ namespace Tinkoff\Invest\V1;
 use UnexpectedValueException;
 
 /**
- *Статус счёта.
+ *Статус счeта.
  *
  * Protobuf type <code>tinkoff.public.invest.api.contract.v1.AccountStatus</code>
  */
 class AccountStatus
 {
     /**
-     *Статус счёта не определён.
+     *Статус счeта не определeн.
      *
      * Generated from protobuf enum <code>ACCOUNT_STATUS_UNSPECIFIED = 0;</code>
      */
@@ -26,13 +26,13 @@ class AccountStatus
      */
     const ACCOUNT_STATUS_NEW = 1;
     /**
-     *Открытый и активный счёт.
+     *Открытый и активный счeт.
      *
      * Generated from protobuf enum <code>ACCOUNT_STATUS_OPEN = 2;</code>
      */
     const ACCOUNT_STATUS_OPEN = 2;
     /**
-     *Закрытый счёт.
+     *Закрытый счeт.
      *
      * Generated from protobuf enum <code>ACCOUNT_STATUS_CLOSED = 3;</code>
      */

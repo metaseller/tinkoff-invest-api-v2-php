@@ -17,7 +17,7 @@ class SignalServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Запросить стратегии.
+     * GetStrategies — стратегии
      * @param \Tinkoff\Invest\V1\GetStrategiesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -32,7 +32,7 @@ class SignalServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Запросить сигналы.
+     * GetSignals — сигналы
      * @param \Tinkoff\Invest\V1\GetSignalsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

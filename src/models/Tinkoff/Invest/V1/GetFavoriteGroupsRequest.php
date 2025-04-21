@@ -9,6 +9,8 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ *Запрос получения списка избранных групп
+ *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.GetFavoriteGroupsRequest</code>
  */
 class GetFavoriteGroupsRequest extends \Google\Protobuf\Internal\Message

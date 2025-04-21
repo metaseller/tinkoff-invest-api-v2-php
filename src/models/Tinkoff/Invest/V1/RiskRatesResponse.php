@@ -9,6 +9,8 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
+ *Ставки риска
+ *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.RiskRatesResponse</code>
  */
 class RiskRatesResponse extends \Google\Protobuf\Internal\Message

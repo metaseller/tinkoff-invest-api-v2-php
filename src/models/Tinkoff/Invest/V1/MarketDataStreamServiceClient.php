@@ -17,7 +17,7 @@ class MarketDataStreamServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Bidirectional-стрим предоставления биржевой информации.
+     * MarketDataStream — bidirectional стрим предоставления биржевой информации
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\BidiStreamingCall
@@ -29,7 +29,7 @@ class MarketDataStreamServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Server-side стрим предоставления биржевой информации.
+     * MarketDataServerSideStream — server-side стрим предоставления биржевой информации
      * @param \Tinkoff\Invest\V1\MarketDataServerSideStreamRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

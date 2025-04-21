@@ -28,6 +28,12 @@ class PositionsOptions extends \Google\Protobuf\Internal\Message
      */
     protected $instrument_uid = '';
     /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 3;</code>
+     */
+    protected $ticker = '';
+    /**
      *Количество бумаг, заблокированных выставленными заявками.
      *
      * Generated from protobuf field <code>int64 blocked = 11;</code>
@@ -50,6 +56,8 @@ class PositionsOptions extends \Google\Protobuf\Internal\Message
      *          Уникальный идентификатор позиции опциона.
      *     @type string $instrument_uid
      *          Уникальный идентификатор  инструмента.
+     *     @type string $ticker
+     *          Тикер инструмента.
      *     @type int|string $blocked
      *          Количество бумаг, заблокированных выставленными заявками.
      *     @type int|string $balance
@@ -109,6 +117,32 @@ class PositionsOptions extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->instrument_uid = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 3;</code>
+     * @return string
+     */
+    public function getTicker()
+    {
+        return $this->ticker;
+    }
+
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 3;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTicker($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->ticker = $var;
 
         return $this;
     }

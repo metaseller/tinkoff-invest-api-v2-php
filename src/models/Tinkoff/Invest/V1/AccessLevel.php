@@ -7,20 +7,20 @@ namespace Tinkoff\Invest\V1;
 use UnexpectedValueException;
 
 /**
- *Уровень доступа к счёту.
+ *Уровень доступа к счeту.
  *
  * Protobuf type <code>tinkoff.public.invest.api.contract.v1.AccessLevel</code>
  */
 class AccessLevel
 {
     /**
-     *Уровень доступа не определён.
+     *Уровень доступа не определeн.
      *
      * Generated from protobuf enum <code>ACCOUNT_ACCESS_LEVEL_UNSPECIFIED = 0;</code>
      */
     const ACCOUNT_ACCESS_LEVEL_UNSPECIFIED = 0;
     /**
-     *Полный доступ к счёту.
+     *Полный доступ к счeту.
      *
      * Generated from protobuf enum <code>ACCOUNT_ACCESS_LEVEL_FULL_ACCESS = 1;</code>
      */

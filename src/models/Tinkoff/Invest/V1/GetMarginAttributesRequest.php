@@ -9,14 +9,14 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Запрос маржинальных показателей по счёту.
+ *Запрос маржинальных показателей по счeту.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.GetMarginAttributesRequest</code>
  */
 class GetMarginAttributesRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Идентификатор счёта пользователя.
+     * Идентификатор счeта пользователя.
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
@@ -29,7 +29,7 @@ class GetMarginAttributesRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $account_id
-     *           Идентификатор счёта пользователя.
+     *           Идентификатор счeта пользователя.
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +38,7 @@ class GetMarginAttributesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Идентификатор счёта пользователя.
+     * Идентификатор счeта пользователя.
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
@@ -49,7 +49,7 @@ class GetMarginAttributesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Идентификатор счёта пользователя.
+     * Идентификатор счeта пользователя.
      *
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var

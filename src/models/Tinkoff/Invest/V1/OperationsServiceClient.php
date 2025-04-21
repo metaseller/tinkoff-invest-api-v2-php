@@ -17,7 +17,7 @@ class OperationsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Получить список операций по счету.
+     * GetOperations — список операций по счету
      * При работе с методом учитывайте [особенности взаимодействия](/invest/services/operations/operations_problems).
      * @param \Tinkoff\Invest\V1\OperationsRequest $argument input argument
      * @param array $metadata metadata
@@ -33,7 +33,7 @@ class OperationsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Получить портфель по счету.
+     * GetPortfolio — портфель по счету
      * @param \Tinkoff\Invest\V1\PortfolioRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -48,7 +48,7 @@ class OperationsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Получить список позиций по счету.
+     * GetPositions — список позиций по счету
      * @param \Tinkoff\Invest\V1\PositionsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -63,7 +63,7 @@ class OperationsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Получить доступный остаток для вывода средств.
+     * GetWithdrawLimits — доступный остаток для вывода средств
      * @param \Tinkoff\Invest\V1\WithdrawLimitsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -78,7 +78,7 @@ class OperationsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Получить брокерский отчет.
+     * GetBrokerReport — брокерский отчет.
      * @param \Tinkoff\Invest\V1\BrokerReportRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -93,7 +93,7 @@ class OperationsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Получить отчет «Справка о доходах за пределами РФ».
+     * GetDividendsForeignIssuer — отчет «Справка о доходах за пределами РФ»
      * @param \Tinkoff\Invest\V1\GetDividendsForeignIssuerRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -108,7 +108,7 @@ class OperationsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Получить список операций по счету с пагинацией.
+     * GetOperationsByCursor — список операций по счету с пагинацией
      * При работе с методом учитывайте [особенности взаимодействия](/invest/services/operations/operations_problems).
      * @param \Tinkoff\Invest\V1\GetOperationsByCursorRequest $argument input argument
      * @param array $metadata metadata

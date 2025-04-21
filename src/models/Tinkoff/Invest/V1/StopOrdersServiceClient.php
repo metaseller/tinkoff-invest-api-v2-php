@@ -17,7 +17,7 @@ class StopOrdersServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Выставить стоп-заявку.
+     * PostStopOrder — выставить стоп-заявку
      * @param \Tinkoff\Invest\V1\PostStopOrderRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -32,7 +32,7 @@ class StopOrdersServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Получить список активных стоп-заявок по счету.
+     * GetStopOrders — получить список активных стоп-заявок по счету
      * @param \Tinkoff\Invest\V1\GetStopOrdersRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -47,7 +47,7 @@ class StopOrdersServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Отменить стоп-заявку.
+     * CancelStopOrder — отменить стоп-заявку
      * @param \Tinkoff\Invest\V1\CancelStopOrderRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

@@ -17,7 +17,7 @@ class OrdersServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод выставления заявки.
+     * PostOrder — выставить заявку
      * @param \Tinkoff\Invest\V1\PostOrderRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -32,7 +32,8 @@ class OrdersServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Асинхронный метод выставления заявки.
+     * PostOrderAsync — выставить заявку асинхронным методом
+     * Особенности работы приведены в [статье](/invest/services/orders/async).
      * @param \Tinkoff\Invest\V1\PostOrderAsyncRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -47,7 +48,7 @@ class OrdersServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод отмены биржевой заявки.
+     * CancelOrder — отменить заявку
      * @param \Tinkoff\Invest\V1\CancelOrderRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -62,7 +63,7 @@ class OrdersServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения статуса торгового поручения.
+     * GetOrderState — получить статус торгового поручения
      * @param \Tinkoff\Invest\V1\GetOrderStateRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -77,7 +78,7 @@ class OrdersServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения списка активных заявок по счету.
+     * GetOrders — получить список активных заявок по счету
      * @param \Tinkoff\Invest\V1\GetOrdersRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -92,7 +93,7 @@ class OrdersServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод изменения выставленной заявки.
+     * ReplaceOrder — изменить выставленную заявку
      * @param \Tinkoff\Invest\V1\ReplaceOrderRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -107,7 +108,7 @@ class OrdersServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Расчет количества доступных для покупки/продажи лотов.
+     * GetMaxLots — расчет количества доступных для покупки/продажи лотов
      * @param \Tinkoff\Invest\V1\GetMaxLotsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -122,7 +123,7 @@ class OrdersServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Метод получения предварительной стоимости для лимитной заявки.
+     * GetOrderPrice — получить предварительную стоимость для лимитной заявки
      * @param \Tinkoff\Invest\V1\GetOrderPriceRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

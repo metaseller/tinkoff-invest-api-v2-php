@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Маржинальные показатели по счёту.
+ *Маржинальные показатели по счeту.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.GetMarginAttributesResponse</code>
  */
@@ -46,7 +46,7 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
      */
     protected $amount_of_missing_funds = null;
     /**
-     * Скорректированная маржа. Начальная маржа, в которой плановые позиции рассчитываются с учётом активных заявок на покупку позиций лонг или продажу позиций шорт.
+     * Скорректированная маржа. Начальная маржа, в которой плановые позиции рассчитываются с учeтом активных заявок на покупку позиций лонг или продажу позиций шорт.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue corrected_margin = 6;</code>
      */
@@ -69,7 +69,7 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\MoneyValue $amount_of_missing_funds
      *           Объем недостающих средств. Разница между стартовой маржой и ликвидной стоимости портфеля.
      *     @type \Tinkoff\Invest\V1\MoneyValue $corrected_margin
-     *           Скорректированная маржа. Начальная маржа, в которой плановые позиции рассчитываются с учётом активных заявок на покупку позиций лонг или продажу позиций шорт.
+     *           Скорректированная маржа. Начальная маржа, в которой плановые позиции рассчитываются с учeтом активных заявок на покупку позиций лонг или продажу позиций шорт.
      * }
      */
     public function __construct($data = NULL) {
@@ -258,7 +258,7 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Скорректированная маржа. Начальная маржа, в которой плановые позиции рассчитываются с учётом активных заявок на покупку позиций лонг или продажу позиций шорт.
+     * Скорректированная маржа. Начальная маржа, в которой плановые позиции рассчитываются с учeтом активных заявок на покупку позиций лонг или продажу позиций шорт.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue corrected_margin = 6;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
@@ -279,7 +279,7 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Скорректированная маржа. Начальная маржа, в которой плановые позиции рассчитываются с учётом активных заявок на покупку позиций лонг или продажу позиций шорт.
+     * Скорректированная маржа. Начальная маржа, в которой плановые позиции рассчитываются с учeтом активных заявок на покупку позиций лонг или продажу позиций шорт.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue corrected_margin = 6;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var

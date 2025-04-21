@@ -45,6 +45,12 @@ class PositionsFutures extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string instrument_uid = 5;</code>
      */
     protected $instrument_uid = '';
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 6;</code>
+     */
+    protected $ticker = '';
 
     /**
      * Constructor.
@@ -62,6 +68,8 @@ class PositionsFutures extends \Google\Protobuf\Internal\Message
      *          Уникальный идентификатор позиции.
      *     @type string $instrument_uid
      *          Уникальный идентификатор  инструмента.
+     *     @type string $ticker
+     *          Тикер инструмента.
      * }
      */
     public function __construct($data = NULL) {
@@ -195,6 +203,32 @@ class PositionsFutures extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->instrument_uid = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 6;</code>
+     * @return string
+     */
+    public function getTicker()
+    {
+        return $this->ticker;
+    }
+
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 6;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTicker($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->ticker = $var;
 
         return $this;
     }

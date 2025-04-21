@@ -17,7 +17,8 @@ class UsersServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Получить счета пользователя.
+     * GetAccounts — счета пользователя
+     * Получить список счетов.
      * @param \Tinkoff\Invest\V1\GetAccountsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -32,7 +33,8 @@ class UsersServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Рассчитать маржинальные показатели по счёту.
+     * GetMarginAttributes — маржинальные показатели по счeту
+     * Метод позволяет получить маржинальные показатели и ликвидность по заданному счeту.
      * @param \Tinkoff\Invest\V1\GetMarginAttributesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -47,7 +49,8 @@ class UsersServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Запросить тариф пользователя.
+     * GetUserTariff — тариф пользователя
+     * Получить информацию о текущих лимитах на подклчение, согласно текущему тарифу пользователя.
      * @param \Tinkoff\Invest\V1\GetUserTariffRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -62,7 +65,8 @@ class UsersServiceClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Получить информацию о пользователе.
+     * GetInfo — информация о пользователе
+     * Получить информацию о пользователе: тариф, признак квалификации, пройденные тесты и др.
      * @param \Tinkoff\Invest\V1\GetInfoRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

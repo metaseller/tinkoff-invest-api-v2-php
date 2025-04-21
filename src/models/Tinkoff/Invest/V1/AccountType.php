@@ -7,20 +7,20 @@ namespace Tinkoff\Invest\V1;
 use UnexpectedValueException;
 
 /**
- *Тип счёта.
+ *Тип счeта.
  *
  * Protobuf type <code>tinkoff.public.invest.api.contract.v1.AccountType</code>
  */
 class AccountType
 {
     /**
-     *Тип аккаунта не определён.
+     *Тип аккаунта не определeн.
      *
      * Generated from protobuf enum <code>ACCOUNT_TYPE_UNSPECIFIED = 0;</code>
      */
     const ACCOUNT_TYPE_UNSPECIFIED = 0;
     /**
-     *Брокерский счёт Т-Инвестиций.
+     *Брокерский счeт Т-Инвестиций.
      *
      * Generated from protobuf enum <code>ACCOUNT_TYPE_TINKOFF = 1;</code>
      */

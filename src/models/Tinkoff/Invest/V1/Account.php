@@ -9,50 +9,50 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *Информация о счёте.
+ *Информация о счeте.
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.Account</code>
  */
 class Account extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Идентификатор счёта.
+     * Идентификатор счeта.
      *
      * Generated from protobuf field <code>string id = 1;</code>
      */
     protected $id = '';
     /**
-     * Тип счёта.
+     * Тип счeта.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AccountType type = 2;</code>
      */
     protected $type = 0;
     /**
-     * Название счёта.
+     * Название счeта.
      *
      * Generated from protobuf field <code>string name = 3;</code>
      */
     protected $name = '';
     /**
-     * Статус счёта.
+     * Статус счeта.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AccountStatus status = 4;</code>
      */
     protected $status = 0;
     /**
-     * Дата открытия счёта в часовом поясе UTC.
+     * Дата открытия счeта в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp opened_date = 5;</code>
      */
     protected $opened_date = null;
     /**
-     * Дата закрытия счёта в часовом поясе UTC.
+     * Дата закрытия счeта в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp closed_date = 6;</code>
      */
     protected $closed_date = null;
     /**
-     * Уровень доступа к текущему счёту (определяется токеном).
+     * Уровень доступа к текущему счeту (определяется токеном).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AccessLevel access_level = 7;</code>
      */
@@ -65,19 +65,19 @@ class Account extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $id
-     *           Идентификатор счёта.
+     *           Идентификатор счeта.
      *     @type int $type
-     *           Тип счёта.
+     *           Тип счeта.
      *     @type string $name
-     *           Название счёта.
+     *           Название счeта.
      *     @type int $status
-     *           Статус счёта.
+     *           Статус счeта.
      *     @type \Google\Protobuf\Timestamp $opened_date
-     *           Дата открытия счёта в часовом поясе UTC.
+     *           Дата открытия счeта в часовом поясе UTC.
      *     @type \Google\Protobuf\Timestamp $closed_date
-     *           Дата закрытия счёта в часовом поясе UTC.
+     *           Дата закрытия счeта в часовом поясе UTC.
      *     @type int $access_level
-     *           Уровень доступа к текущему счёту (определяется токеном).
+     *           Уровень доступа к текущему счeту (определяется токеном).
      * }
      */
     public function __construct($data = NULL) {
@@ -86,7 +86,7 @@ class Account extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Идентификатор счёта.
+     * Идентификатор счeта.
      *
      * Generated from protobuf field <code>string id = 1;</code>
      * @return string
@@ -97,7 +97,7 @@ class Account extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Идентификатор счёта.
+     * Идентификатор счeта.
      *
      * Generated from protobuf field <code>string id = 1;</code>
      * @param string $var
@@ -112,7 +112,7 @@ class Account extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Тип счёта.
+     * Тип счeта.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AccountType type = 2;</code>
      * @return int
@@ -123,7 +123,7 @@ class Account extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Тип счёта.
+     * Тип счeта.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AccountType type = 2;</code>
      * @param int $var
@@ -138,7 +138,7 @@ class Account extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Название счёта.
+     * Название счeта.
      *
      * Generated from protobuf field <code>string name = 3;</code>
      * @return string
@@ -149,7 +149,7 @@ class Account extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Название счёта.
+     * Название счeта.
      *
      * Generated from protobuf field <code>string name = 3;</code>
      * @param string $var
@@ -164,7 +164,7 @@ class Account extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Статус счёта.
+     * Статус счeта.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AccountStatus status = 4;</code>
      * @return int
@@ -175,7 +175,7 @@ class Account extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Статус счёта.
+     * Статус счeта.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AccountStatus status = 4;</code>
      * @param int $var
@@ -190,7 +190,7 @@ class Account extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Дата открытия счёта в часовом поясе UTC.
+     * Дата открытия счeта в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp opened_date = 5;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -211,7 +211,7 @@ class Account extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Дата открытия счёта в часовом поясе UTC.
+     * Дата открытия счeта в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp opened_date = 5;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -226,7 +226,7 @@ class Account extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Дата закрытия счёта в часовом поясе UTC.
+     * Дата закрытия счeта в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp closed_date = 6;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -247,7 +247,7 @@ class Account extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Дата закрытия счёта в часовом поясе UTC.
+     * Дата закрытия счeта в часовом поясе UTC.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp closed_date = 6;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -262,7 +262,7 @@ class Account extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Уровень доступа к текущему счёту (определяется токеном).
+     * Уровень доступа к текущему счeту (определяется токеном).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AccessLevel access_level = 7;</code>
      * @return int
@@ -273,7 +273,7 @@ class Account extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Уровень доступа к текущему счёту (определяется токеном).
+     * Уровень доступа к текущему счeту (определяется токеном).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AccessLevel access_level = 7;</code>
      * @param int $var

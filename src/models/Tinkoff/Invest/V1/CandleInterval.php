@@ -97,6 +97,24 @@ class CandleInterval
      * Generated from protobuf enum <code>CANDLE_INTERVAL_MONTH = 13;</code>
      */
     const CANDLE_INTERVAL_MONTH = 13;
+    /**
+     *От 5 секунд до 200 минут. Максимальное значение `limit` — 2500.
+     *
+     * Generated from protobuf enum <code>CANDLE_INTERVAL_5_SEC = 14;</code>
+     */
+    const CANDLE_INTERVAL_5_SEC = 14;
+    /**
+     *От 10 секунд до 200 минут. Максимальное значение `limit` — 1250.
+     *
+     * Generated from protobuf enum <code>CANDLE_INTERVAL_10_SEC = 15;</code>
+     */
+    const CANDLE_INTERVAL_10_SEC = 15;
+    /**
+     *От 30 секунд до 20 часов. Максимальное значение `limit` — 2500.
+     *
+     * Generated from protobuf enum <code>CANDLE_INTERVAL_30_SEC = 16;</code>
+     */
+    const CANDLE_INTERVAL_30_SEC = 16;
 
     private static $valueToName = [
         self::CANDLE_INTERVAL_UNSPECIFIED => 'CANDLE_INTERVAL_UNSPECIFIED',
@@ -113,6 +131,9 @@ class CandleInterval
         self::CANDLE_INTERVAL_4_HOUR => 'CANDLE_INTERVAL_4_HOUR',
         self::CANDLE_INTERVAL_WEEK => 'CANDLE_INTERVAL_WEEK',
         self::CANDLE_INTERVAL_MONTH => 'CANDLE_INTERVAL_MONTH',
+        self::CANDLE_INTERVAL_5_SEC => 'CANDLE_INTERVAL_5_SEC',
+        self::CANDLE_INTERVAL_10_SEC => 'CANDLE_INTERVAL_10_SEC',
+        self::CANDLE_INTERVAL_30_SEC => 'CANDLE_INTERVAL_30_SEC',
     ];
 
     public static function name($value)

@@ -85,6 +85,12 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue daily_yield = 31;</code>
      */
     protected $daily_yield = null;
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 32;</code>
+     */
+    protected $ticker = '';
 
     /**
      * Constructor.
@@ -116,6 +122,8 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      *          Средняя цена позиции по методу FIFO. Для пересчета возможна задержка до одной секунды.
      *     @type \Tinkoff\Invest\V1\MoneyValue $daily_yield
      *           Рассчитанная доходность портфеля за день.
+     *     @type string $ticker
+     *          Тикер инструмента.
      * }
      */
     public function __construct($data = NULL) {
@@ -511,6 +519,32 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->daily_yield = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 32;</code>
+     * @return string
+     */
+    public function getTicker()
+    {
+        return $this->ticker;
+    }
+
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 32;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTicker($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->ticker = $var;
 
         return $this;
     }
