@@ -138,9 +138,9 @@ class QuotationHelper
     public static function toQuotation(float $price): Quotation
     {
         $quotation = new Quotation();
-
-        $units = (int) floor($price);
-        $nano = (int) ($price * pow(10, 9)) - (int) ($units * pow(10, 9));
+        
+        $units = intval($price);
+        $nano = intval(round(($price - $units) * pow(10, 9)));
 
         $quotation->setUnits($units);
         $quotation->setNano($nano);
