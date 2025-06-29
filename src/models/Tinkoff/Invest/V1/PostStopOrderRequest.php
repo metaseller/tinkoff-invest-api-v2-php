@@ -106,6 +106,12 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string order_id = 15 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $order_id = '';
+    /**
+     *Согласие на выставление заявки, которая может привести к непокрытой позиции, по умолчанию false.
+     *
+     * Generated from protobuf field <code>bool confirm_margin_trade = 16;</code>
+     */
+    protected $confirm_margin_trade = false;
 
     /**
      * Constructor.
@@ -143,6 +149,8 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
      *          Тип цены.
      *     @type string $order_id
      *          Идентификатор запроса выставления поручения для целей идемпотентности в формате `UID`. Максимальная длина — 36 символов.
+     *     @type bool $confirm_margin_trade
+     *          Согласие на выставление заявки, которая может привести к непокрытой позиции, по умолчанию false.
      * }
      */
     public function __construct($data = NULL) {
@@ -592,6 +600,32 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->order_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *Согласие на выставление заявки, которая может привести к непокрытой позиции, по умолчанию false.
+     *
+     * Generated from protobuf field <code>bool confirm_margin_trade = 16;</code>
+     * @return bool
+     */
+    public function getConfirmMarginTrade()
+    {
+        return $this->confirm_margin_trade;
+    }
+
+    /**
+     *Согласие на выставление заявки, которая может привести к непокрытой позиции, по умолчанию false.
+     *
+     * Generated from protobuf field <code>bool confirm_margin_trade = 16;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setConfirmMarginTrade($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->confirm_margin_trade = $var;
 
         return $this;
     }

@@ -45,6 +45,18 @@ class TradeSubscription extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string subscription_id = 5;</code>
      */
     protected $subscription_id = '';
+    /**
+     *Флаг открытого интереса. **true** - в стриме дополнительно передается информация об открытом интересе для фьючерсов
+     *
+     * Generated from protobuf field <code>bool with_open_interest = 6;</code>
+     */
+    protected $with_open_interest = false;
+    /**
+     *Действие подписки.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionAction subscription_action = 7;</code>
+     */
+    protected $subscription_action = 0;
 
     /**
      * Constructor.
@@ -62,6 +74,10 @@ class TradeSubscription extends \Google\Protobuf\Internal\Message
      *          Идентификатор открытого соединения.
      *     @type string $subscription_id
      *          Идентификатор подписки в формате UUID.
+     *     @type bool $with_open_interest
+     *          Флаг открытого интереса. **true** - в стриме дополнительно передается информация об открытом интересе для фьючерсов
+     *     @type int $subscription_action
+     *          Действие подписки.
      * }
      */
     public function __construct($data = NULL) {
@@ -195,6 +211,58 @@ class TradeSubscription extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->subscription_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *Флаг открытого интереса. **true** - в стриме дополнительно передается информация об открытом интересе для фьючерсов
+     *
+     * Generated from protobuf field <code>bool with_open_interest = 6;</code>
+     * @return bool
+     */
+    public function getWithOpenInterest()
+    {
+        return $this->with_open_interest;
+    }
+
+    /**
+     *Флаг открытого интереса. **true** - в стриме дополнительно передается информация об открытом интересе для фьючерсов
+     *
+     * Generated from protobuf field <code>bool with_open_interest = 6;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setWithOpenInterest($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->with_open_interest = $var;
+
+        return $this;
+    }
+
+    /**
+     *Действие подписки.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionAction subscription_action = 7;</code>
+     * @return int
+     */
+    public function getSubscriptionAction()
+    {
+        return $this->subscription_action;
+    }
+
+    /**
+     *Действие подписки.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionAction subscription_action = 7;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setSubscriptionAction($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\SubscriptionAction::class);
+        $this->subscription_action = $var;
 
         return $this;
     }

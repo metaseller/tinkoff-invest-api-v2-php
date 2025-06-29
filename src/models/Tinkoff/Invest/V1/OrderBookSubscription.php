@@ -57,6 +57,12 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderBookType order_book_type = 7;</code>
      */
     protected $order_book_type = 0;
+    /**
+     *Действие подписки.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionAction subscription_action = 8;</code>
+     */
+    protected $subscription_action = 0;
 
     /**
      * Constructor.
@@ -78,6 +84,8 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
      *          Идентификатор подписки в формате `UUID`.
      *     @type int $order_book_type
      *          Тип стакана.
+     *     @type int $subscription_action
+     *          Действие подписки.
      * }
      */
     public function __construct($data = NULL) {
@@ -263,6 +271,32 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\OrderBookType::class);
         $this->order_book_type = $var;
+
+        return $this;
+    }
+
+    /**
+     *Действие подписки.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionAction subscription_action = 8;</code>
+     * @return int
+     */
+    public function getSubscriptionAction()
+    {
+        return $this->subscription_action;
+    }
+
+    /**
+     *Действие подписки.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionAction subscription_action = 8;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setSubscriptionAction($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\SubscriptionAction::class);
+        $this->subscription_action = $var;
 
         return $this;
     }

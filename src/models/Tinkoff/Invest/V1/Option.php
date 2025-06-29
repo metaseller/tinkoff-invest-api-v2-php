@@ -299,6 +299,12 @@ class Option extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool api_trade_available_flag = 409;</code>
      */
     protected $api_trade_available_flag = false;
+    /**
+     *Тесты, которые необходимо пройти клиенту, чтобы совершать сделки по инструменту.
+     *
+     * Generated from protobuf field <code>repeated string required_tests = 410;</code>
+     */
+    private $required_tests;
 
     /**
      * Constructor.
@@ -400,6 +406,8 @@ class Option extends \Google\Protobuf\Internal\Message
      *          Флаг заблокированного ТКС.
      *     @type bool $api_trade_available_flag
      *          Возможность торговать инструментом через API.
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $required_tests
+     *          Тесты, которые необходимо пройти клиенту, чтобы совершать сделки по инструменту.
      * }
      */
     public function __construct($data = NULL) {
@@ -1807,6 +1815,32 @@ class Option extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->api_trade_available_flag = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тесты, которые необходимо пройти клиенту, чтобы совершать сделки по инструменту.
+     *
+     * Generated from protobuf field <code>repeated string required_tests = 410;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getRequiredTests()
+    {
+        return $this->required_tests;
+    }
+
+    /**
+     *Тесты, которые необходимо пройти клиенту, чтобы совершать сделки по инструменту.
+     *
+     * Generated from protobuf field <code>repeated string required_tests = 410;</code>
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setRequiredTests($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->required_tests = $arr;
 
         return $this;
     }

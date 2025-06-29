@@ -45,6 +45,8 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
      *          Результат подписки на цены последние сделок по инструментам.
      *     @type \Tinkoff\Invest\V1\LastPrice $last_price
      *          Цена последней сделки.
+     *     @type \Tinkoff\Invest\V1\OpenInterest $open_interest
+     *          Открытый интерес.
      * }
      */
     public function __construct($data = NULL) {
@@ -389,6 +391,37 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\LastPrice::class);
         $this->writeOneof(11, $var);
+
+        return $this;
+    }
+
+    /**
+     *Открытый интерес.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OpenInterest open_interest = 12;</code>
+     * @return \Tinkoff\Invest\V1\OpenInterest|null
+     */
+    public function getOpenInterest()
+    {
+        return $this->readOneof(12);
+    }
+
+    public function hasOpenInterest()
+    {
+        return $this->hasOneof(12);
+    }
+
+    /**
+     *Открытый интерес.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OpenInterest open_interest = 12;</code>
+     * @param \Tinkoff\Invest\V1\OpenInterest $var
+     * @return $this
+     */
+    public function setOpenInterest($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\OpenInterest::class);
+        $this->writeOneof(12, $var);
 
         return $this;
     }

@@ -45,6 +45,12 @@ class LastPriceSubscription extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string subscription_id = 5;</code>
      */
     protected $subscription_id = '';
+    /**
+     *Действие подписки.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionAction subscription_action = 6;</code>
+     */
+    protected $subscription_action = 0;
 
     /**
      * Constructor.
@@ -62,6 +68,8 @@ class LastPriceSubscription extends \Google\Protobuf\Internal\Message
      *          Идентификатор открытого соединения.
      *     @type string $subscription_id
      *          Идентификатор подписки в формате `UUID`.
+     *     @type int $subscription_action
+     *          Действие подписки.
      * }
      */
     public function __construct($data = NULL) {
@@ -195,6 +203,32 @@ class LastPriceSubscription extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->subscription_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *Действие подписки.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionAction subscription_action = 6;</code>
+     * @return int
+     */
+    public function getSubscriptionAction()
+    {
+        return $this->subscription_action;
+    }
+
+    /**
+     *Действие подписки.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionAction subscription_action = 6;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setSubscriptionAction($var)
+    {
+        GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\SubscriptionAction::class);
+        $this->subscription_action = $var;
 
         return $this;
     }

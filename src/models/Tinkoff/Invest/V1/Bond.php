@@ -270,6 +270,12 @@ class Bond extends \Google\Protobuf\Internal\Message
      */
     protected $asset_uid = '';
     /**
+     *Тесты, которые необходимо пройти клиенту, чтобы совершать сделки по инструменту.
+     *
+     * Generated from protobuf field <code>repeated string required_tests = 44;</code>
+     */
+    private $required_tests;
+    /**
      *Признак доступности для ИИС.
      *
      * Generated from protobuf field <code>bool for_iis_flag = 51;</code>
@@ -444,6 +450,8 @@ class Bond extends \Google\Protobuf\Internal\Message
      *          Уникальный идентификатор позиции инструмента.
      *     @type string $asset_uid
      *          Уникальный идентификатор актива.
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $required_tests
+     *          Тесты, которые необходимо пройти клиенту, чтобы совершать сделки по инструменту.
      *     @type bool $for_iis_flag
      *          Признак доступности для ИИС.
      *     @type bool $for_qual_investor_flag
@@ -1719,6 +1727,32 @@ class Bond extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->asset_uid = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тесты, которые необходимо пройти клиенту, чтобы совершать сделки по инструменту.
+     *
+     * Generated from protobuf field <code>repeated string required_tests = 44;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getRequiredTests()
+    {
+        return $this->required_tests;
+    }
+
+    /**
+     *Тесты, которые необходимо пройти клиенту, чтобы совершать сделки по инструменту.
+     *
+     * Generated from protobuf field <code>repeated string required_tests = 44;</code>
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setRequiredTests($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->required_tests = $arr;
 
         return $this;
     }

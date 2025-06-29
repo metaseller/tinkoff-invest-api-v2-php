@@ -33,6 +33,12 @@ class SubscribeTradesRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType trade_source = 3;</code>
      */
     protected $trade_source = 0;
+    /**
+     *Флаг открытого интереса. **true** - в стриме дополнительно передается информация об открытом интересе для фьючерсов
+     *
+     * Generated from protobuf field <code>bool with_open_interest = 4;</code>
+     */
+    protected $with_open_interest = false;
 
     /**
      * Constructor.
@@ -46,6 +52,8 @@ class SubscribeTradesRequest extends \Google\Protobuf\Internal\Message
      *          Массив инструментов для подписки на поток обезличенных сделок.
      *     @type int $trade_source
      *          Тип источника сделок. Значение по умолчанию — `TRADE_SOURCE_ALL`, все сделки.
+     *     @type bool $with_open_interest
+     *          Флаг открытого интереса. **true** - в стриме дополнительно передается информация об открытом интересе для фьючерсов
      * }
      */
     public function __construct($data = NULL) {
@@ -127,6 +135,32 @@ class SubscribeTradesRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\TradeSourceType::class);
         $this->trade_source = $var;
+
+        return $this;
+    }
+
+    /**
+     *Флаг открытого интереса. **true** - в стриме дополнительно передается информация об открытом интересе для фьючерсов
+     *
+     * Generated from protobuf field <code>bool with_open_interest = 4;</code>
+     * @return bool
+     */
+    public function getWithOpenInterest()
+    {
+        return $this->with_open_interest;
+    }
+
+    /**
+     *Флаг открытого интереса. **true** - в стриме дополнительно передается информация об открытом интересе для фьючерсов
+     *
+     * Generated from protobuf field <code>bool with_open_interest = 4;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setWithOpenInterest($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->with_open_interest = $var;
 
         return $this;
     }

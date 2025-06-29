@@ -45,6 +45,12 @@ class InstrumentClosePriceResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.google.protobuf.Timestamp time = 21;</code>
      */
     protected $time = null;
+    /**
+     *Дата цены закрытия вечерней сессии.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp evening_session_price_time = 23;</code>
+     */
+    protected $evening_session_price_time = null;
 
     /**
      * Constructor.
@@ -62,6 +68,8 @@ class InstrumentClosePriceResponse extends \Google\Protobuf\Internal\Message
      *          Цена последней сделки с вечерней сессии. Цена публикуется биржей по торговым дням и в нерабочие дни не обновляется.
      *     @type \Google\Protobuf\Timestamp $time
      *          Дата совершения торгов.
+     *     @type \Google\Protobuf\Timestamp $evening_session_price_time
+     *          Дата цены закрытия вечерней сессии.
      * }
      */
     public function __construct($data = NULL) {
@@ -225,6 +233,42 @@ class InstrumentClosePriceResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->time = $var;
+
+        return $this;
+    }
+
+    /**
+     *Дата цены закрытия вечерней сессии.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp evening_session_price_time = 23;</code>
+     * @return \Google\Protobuf\Timestamp|null
+     */
+    public function getEveningSessionPriceTime()
+    {
+        return isset($this->evening_session_price_time) ? $this->evening_session_price_time : null;
+    }
+
+    public function hasEveningSessionPriceTime()
+    {
+        return isset($this->evening_session_price_time);
+    }
+
+    public function clearEveningSessionPriceTime()
+    {
+        unset($this->evening_session_price_time);
+    }
+
+    /**
+     *Дата цены закрытия вечерней сессии.
+     *
+     * Generated from protobuf field <code>.google.protobuf.Timestamp evening_session_price_time = 23;</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setEveningSessionPriceTime($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        $this->evening_session_price_time = $var;
 
         return $this;
     }

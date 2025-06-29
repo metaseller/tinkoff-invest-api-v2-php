@@ -51,6 +51,12 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PriceType price_type = 13;</code>
      */
     protected $price_type = null;
+    /**
+     * Согласие на выставление заявки, которая может привести к непокрытой позиции, по умолчанию false.
+     *
+     * Generated from protobuf field <code>bool confirm_margin_trade = 14;</code>
+     */
+    protected $confirm_margin_trade = false;
 
     /**
      * Constructor.
@@ -70,6 +76,8 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
      *          Цена за 1 инструмент.
      *     @type int $price_type
      *          Тип цены.
+     *     @type bool $confirm_margin_trade
+     *           Согласие на выставление заявки, которая может привести к непокрытой позиции, по умолчанию false.
      * }
      */
     public function __construct($data = NULL) {
@@ -249,6 +257,32 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\PriceType::class);
         $this->price_type = $var;
+
+        return $this;
+    }
+
+    /**
+     * Согласие на выставление заявки, которая может привести к непокрытой позиции, по умолчанию false.
+     *
+     * Generated from protobuf field <code>bool confirm_margin_trade = 14;</code>
+     * @return bool
+     */
+    public function getConfirmMarginTrade()
+    {
+        return $this->confirm_margin_trade;
+    }
+
+    /**
+     * Согласие на выставление заявки, которая может привести к непокрытой позиции, по умолчанию false.
+     *
+     * Generated from protobuf field <code>bool confirm_margin_trade = 14;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setConfirmMarginTrade($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->confirm_margin_trade = $var;
 
         return $this;
     }

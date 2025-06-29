@@ -228,6 +228,12 @@ class Share extends \Google\Protobuf\Internal\Message
      */
     protected $instrument_exchange = 0;
     /**
+     *Тесты, которые необходимо пройти клиенту, чтобы совершать сделки по инструменту.
+     *
+     * Generated from protobuf field <code>repeated string required_tests = 38;</code>
+     */
+    private $required_tests;
+    /**
      *Признак доступности для ИИС.
      *
      * Generated from protobuf field <code>bool for_iis_flag = 46;</code>
@@ -364,6 +370,8 @@ class Share extends \Google\Protobuf\Internal\Message
      *          Уникальный идентификатор актива.
      *     @type int $instrument_exchange
      *          Тип площадки торговли.
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $required_tests
+     *          Тесты, которые необходимо пройти клиенту, чтобы совершать сделки по инструменту.
      *     @type bool $for_iis_flag
      *          Признак доступности для ИИС.
      *     @type bool $for_qual_investor_flag
@@ -1399,6 +1407,32 @@ class Share extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\InstrumentExchangeType::class);
         $this->instrument_exchange = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тесты, которые необходимо пройти клиенту, чтобы совершать сделки по инструменту.
+     *
+     * Generated from protobuf field <code>repeated string required_tests = 38;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getRequiredTests()
+    {
+        return $this->required_tests;
+    }
+
+    /**
+     *Тесты, которые необходимо пройти клиенту, чтобы совершать сделки по инструменту.
+     *
+     * Generated from protobuf field <code>repeated string required_tests = 38;</code>
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setRequiredTests($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->required_tests = $arr;
 
         return $this;
     }
