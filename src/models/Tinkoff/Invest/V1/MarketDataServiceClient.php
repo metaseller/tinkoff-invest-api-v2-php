@@ -137,4 +137,19 @@ class MarketDataServiceClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * GetMarketValues — рыночные данные по инструментам
+     * @param \Tinkoff\Invest\V1\GetMarketValuesRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetMarketValues(\Tinkoff\Invest\V1\GetMarketValuesRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.MarketDataService/GetMarketValues',
+        $argument,
+        ['\Tinkoff\Invest\V1\GetMarketValuesResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }
