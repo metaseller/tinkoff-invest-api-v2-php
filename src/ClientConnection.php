@@ -16,14 +16,14 @@ class ClientConnection
      *
      * @see https://tinkoff.github.io/investAPI/
      */
-    public const TINKOFF_INVEST_API2_HOSTNAME = 'invest-public-api.tinkoff.ru';
+    public const TINKOFF_INVEST_API2_HOSTNAME = 'invest-public-api.tbank.ru';
 
     /**
      * @var string Адрес домена сервиса Tinkoff Invest API 2 (песочница)
      *
      * @see https://tinkoff.github.io/investAPI/
      */
-    public const TINKOFF_INVEST_API2_HOSTNAME_SANDBOX = 'sandbox-invest-public-api.tinkoff.ru';
+    public const TINKOFF_INVEST_API2_HOSTNAME_SANDBOX = 'sandbox-invest-public-api.tbank.ru';
 
     /**
      * @var int Порт сервиса Tinkoff Invest API 2
@@ -47,7 +47,7 @@ class ClientConnection
      */
     public static function getOptions(string $api_token, string $app_name = TinkoffClientsFactory::DEFAULT_APP_NAME): array
     {
-        $certificate_path = dirname(__FILE__) . '/../etc/tinkoff-ru.pem';
+        $certificate_path = dirname(__FILE__) . '/../etc/invest-public-api_tbank_ru.pem';
 
         $cert = file_get_contents($certificate_path);
 
