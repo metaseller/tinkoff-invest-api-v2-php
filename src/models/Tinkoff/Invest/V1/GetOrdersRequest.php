@@ -21,6 +21,12 @@ class GetOrdersRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string account_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $account_id = '';
+    /**
+     *Дополнительные фильтры.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetOrdersRequest.GetOrdersRequestFilters advanced_filters = 2;</code>
+     */
+    protected $advanced_filters = null;
 
     /**
      * Constructor.
@@ -30,6 +36,8 @@ class GetOrdersRequest extends \Google\Protobuf\Internal\Message
      *
      *     @type string $account_id
      *          Номер счета.
+     *     @type \Tinkoff\Invest\V1\GetOrdersRequest\GetOrdersRequestFilters $advanced_filters
+     *          Дополнительные фильтры.
      * }
      */
     public function __construct($data = NULL) {
@@ -59,6 +67,42 @@ class GetOrdersRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->account_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *Дополнительные фильтры.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetOrdersRequest.GetOrdersRequestFilters advanced_filters = 2;</code>
+     * @return \Tinkoff\Invest\V1\GetOrdersRequest\GetOrdersRequestFilters|null
+     */
+    public function getAdvancedFilters()
+    {
+        return isset($this->advanced_filters) ? $this->advanced_filters : null;
+    }
+
+    public function hasAdvancedFilters()
+    {
+        return isset($this->advanced_filters);
+    }
+
+    public function clearAdvancedFilters()
+    {
+        unset($this->advanced_filters);
+    }
+
+    /**
+     *Дополнительные фильтры.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetOrdersRequest.GetOrdersRequestFilters advanced_filters = 2;</code>
+     * @param \Tinkoff\Invest\V1\GetOrdersRequest\GetOrdersRequestFilters $var
+     * @return $this
+     */
+    public function setAdvancedFilters($var)
+    {
+        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\GetOrdersRequest\GetOrdersRequestFilters::class);
+        $this->advanced_filters = $var;
 
         return $this;
     }

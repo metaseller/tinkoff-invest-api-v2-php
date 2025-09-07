@@ -572,4 +572,19 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * GetInsiderDeals —  сделки инсайдеров по инструментам
+     * @param \Tinkoff\Invest\V1\GetInsiderDealsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetInsiderDeals(\Tinkoff\Invest\V1\GetInsiderDealsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetInsiderDeals',
+        $argument,
+        ['\Tinkoff\Invest\V1\GetInsiderDealsResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }

@@ -42,11 +42,17 @@ class MarketValueType
      */
     const INSTRUMENT_VALUE_EVENING_SESSION_PRICE = 4;
     /**
-     * Открытый интерес, возвращается только для фьючерсов
+     * Открытый интерес, возвращается только для фьючерсов.
      *
      * Generated from protobuf enum <code>INSTRUMENT_VALUE_OPEN_INTEREST = 5;</code>
      */
     const INSTRUMENT_VALUE_OPEN_INTEREST = 5;
+    /**
+     *Теоретическая цена, возвращается только для опционов.
+     *
+     * Generated from protobuf enum <code>INSTRUMENT_VALUE_THEOR_PRICE = 6;</code>
+     */
+    const INSTRUMENT_VALUE_THEOR_PRICE = 6;
 
     private static $valueToName = [
         self::INSTRUMENT_VALUE_UNSPECIFIED => 'INSTRUMENT_VALUE_UNSPECIFIED',
@@ -55,6 +61,7 @@ class MarketValueType
         self::INSTRUMENT_VALUE_CLOSE_PRICE => 'INSTRUMENT_VALUE_CLOSE_PRICE',
         self::INSTRUMENT_VALUE_EVENING_SESSION_PRICE => 'INSTRUMENT_VALUE_EVENING_SESSION_PRICE',
         self::INSTRUMENT_VALUE_OPEN_INTEREST => 'INSTRUMENT_VALUE_OPEN_INTEREST',
+        self::INSTRUMENT_VALUE_THEOR_PRICE => 'INSTRUMENT_VALUE_THEOR_PRICE',
     ];
 
     public static function name($value)
