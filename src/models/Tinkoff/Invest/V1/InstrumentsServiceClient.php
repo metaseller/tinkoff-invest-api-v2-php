@@ -587,4 +587,34 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * StructuredNoteBy — получить структурную ноту по ее идентификатору
+     * @param \Tinkoff\Invest\V1\InstrumentRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function StructuredNoteBy(\Tinkoff\Invest\V1\InstrumentRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/StructuredNoteBy',
+        $argument,
+        ['\Tinkoff\Invest\V1\StructuredNoteResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * StructuredNotes — список структурных нот
+     * @param \Tinkoff\Invest\V1\InstrumentsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function StructuredNotes(\Tinkoff\Invest\V1\InstrumentsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.InstrumentsService/StructuredNotes',
+        $argument,
+        ['\Tinkoff\Invest\V1\StructuredNotesResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }

@@ -29,11 +29,25 @@ class TradeDirection
      * Generated from protobuf enum <code>TRADE_DIRECTION_SELL = 2;</code>
      */
     const TRADE_DIRECTION_SELL = 2;
+    /**
+     * Увеличение доли.
+     *
+     * Generated from protobuf enum <code>TRADE_DIRECTION_INCREASE = 3;</code>
+     */
+    const TRADE_DIRECTION_INCREASE = 3;
+    /**
+     * Уменьшение доли.
+     *
+     * Generated from protobuf enum <code>TRADE_DIRECTION_DECREASE = 4;</code>
+     */
+    const TRADE_DIRECTION_DECREASE = 4;
 
     private static $valueToName = [
         self::TRADE_DIRECTION_UNSPECIFIED => 'TRADE_DIRECTION_UNSPECIFIED',
         self::TRADE_DIRECTION_BUY => 'TRADE_DIRECTION_BUY',
         self::TRADE_DIRECTION_SELL => 'TRADE_DIRECTION_SELL',
+        self::TRADE_DIRECTION_INCREASE => 'TRADE_DIRECTION_INCREASE',
+        self::TRADE_DIRECTION_DECREASE => 'TRADE_DIRECTION_DECREASE',
     ];
 
     public static function name($value)

@@ -27,6 +27,12 @@ class UnaryLimit extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated string methods = 2;</code>
      */
     private $methods;
+    /**
+     *Количество unary-запросов в секунду.
+     *
+     * Generated from protobuf field <code>int32 limit_per_second = 3;</code>
+     */
+    protected $limit_per_second = null;
 
     /**
      * Constructor.
@@ -38,6 +44,8 @@ class UnaryLimit extends \Google\Protobuf\Internal\Message
      *          Количество unary-запросов в минуту.
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $methods
      *          Названия методов.
+     *     @type int $limit_per_second
+     *          Количество unary-запросов в секунду.
      * }
      */
     public function __construct($data = NULL) {
@@ -93,6 +101,42 @@ class UnaryLimit extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->methods = $arr;
+
+        return $this;
+    }
+
+    /**
+     *Количество unary-запросов в секунду.
+     *
+     * Generated from protobuf field <code>int32 limit_per_second = 3;</code>
+     * @return int
+     */
+    public function getLimitPerSecond()
+    {
+        return isset($this->limit_per_second) ? $this->limit_per_second : 0;
+    }
+
+    public function hasLimitPerSecond()
+    {
+        return isset($this->limit_per_second);
+    }
+
+    public function clearLimitPerSecond()
+    {
+        unset($this->limit_per_second);
+    }
+
+    /**
+     *Количество unary-запросов в секунду.
+     *
+     * Generated from protobuf field <code>int32 limit_per_second = 3;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setLimitPerSecond($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->limit_per_second = $var;
 
         return $this;
     }

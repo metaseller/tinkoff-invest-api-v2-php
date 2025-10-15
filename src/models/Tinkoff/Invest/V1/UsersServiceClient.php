@@ -80,4 +80,36 @@ class UsersServiceClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * GetBankAccounts — банковские счета пользователя
+     * Получить список счетов пользователя, в том числе и банковских.
+     * @param \Tinkoff\Invest\V1\GetBankAccountsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetBankAccounts(\Tinkoff\Invest\V1\GetBankAccountsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.UsersService/GetBankAccounts',
+        $argument,
+        ['\Tinkoff\Invest\V1\GetBankAccountsResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * CurrencyTransfer — перевод денежных средств между счетами
+     * Перевести денежные средства между брокерскими счетами
+     * @param \Tinkoff\Invest\V1\CurrencyTransferRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function CurrencyTransfer(\Tinkoff\Invest\V1\CurrencyTransferRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.UsersService/CurrencyTransfer',
+        $argument,
+        ['\Tinkoff\Invest\V1\CurrencyTransferResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }

@@ -259,4 +259,49 @@ class SandboxServiceClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * PostSandboxStopOrder — выставить стоп-заявку
+     * @param \Tinkoff\Invest\V1\PostStopOrderRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function PostSandboxStopOrder(\Tinkoff\Invest\V1\PostStopOrderRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.SandboxService/PostSandboxStopOrder',
+        $argument,
+        ['\Tinkoff\Invest\V1\PostStopOrderResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * GetSandboxStopOrders — получить список активных стоп-заявок по счету
+     * @param \Tinkoff\Invest\V1\GetStopOrdersRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetSandboxStopOrders(\Tinkoff\Invest\V1\GetStopOrdersRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.SandboxService/GetSandboxStopOrders',
+        $argument,
+        ['\Tinkoff\Invest\V1\GetStopOrdersResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * CancelSandboxStopOrder — отменить стоп-заявку
+     * @param \Tinkoff\Invest\V1\CancelStopOrderRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function CancelSandboxStopOrder(\Tinkoff\Invest\V1\CancelStopOrderRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.SandboxService/CancelSandboxStopOrder',
+        $argument,
+        ['\Tinkoff\Invest\V1\CancelStopOrderResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }
