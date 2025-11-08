@@ -63,6 +63,18 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionAction subscription_action = 8;</code>
      */
     protected $subscription_action = 0;
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 9;</code>
+     */
+    protected $ticker = '';
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 10;</code>
+     */
+    protected $class_code = '';
 
     /**
      * Constructor.
@@ -86,6 +98,10 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
      *          Тип стакана.
      *     @type int $subscription_action
      *          Действие подписки.
+     *     @type string $ticker
+     *          Тикер инструмента.
+     *     @type string $class_code
+     *          Класс-код (секция торгов).
      * }
      */
     public function __construct($data = NULL) {
@@ -297,6 +313,58 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\SubscriptionAction::class);
         $this->subscription_action = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 9;</code>
+     * @return string
+     */
+    public function getTicker()
+    {
+        return $this->ticker;
+    }
+
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 9;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTicker($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->ticker = $var;
+
+        return $this;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 10;</code>
+     * @return string
+     */
+    public function getClassCode()
+    {
+        return $this->class_code;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 10;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setClassCode($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->class_code = $var;
 
         return $this;
     }

@@ -23,7 +23,7 @@ class InfoInstrument extends \Google\Protobuf\Internal\Message
      */
     protected $figi = '';
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>string instrument_id = 2;</code>
      */
@@ -38,7 +38,7 @@ class InfoInstrument extends \Google\Protobuf\Internal\Message
      *     @type string $figi
      *          Deprecated FIGI-идентификатор инструмента. Используйте instrument_id`.
      *     @type string $instrument_id
-     *          Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *          Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      * }
      */
     public function __construct($data = NULL) {
@@ -77,7 +77,7 @@ class InfoInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>string instrument_id = 2;</code>
      * @return string
@@ -88,7 +88,7 @@ class InfoInstrument extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>string instrument_id = 2;</code>
      * @param string $var

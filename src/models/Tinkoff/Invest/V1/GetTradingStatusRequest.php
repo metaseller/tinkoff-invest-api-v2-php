@@ -18,14 +18,14 @@ class GetTradingStatusRequest extends \Google\Protobuf\Internal\Message
     /**
      *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *
-     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
+     * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
      * @deprecated
      */
     protected $figi = null;
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`
      *
-     * Generated from protobuf field <code>string instrument_id = 2;</code>
+     * Generated from protobuf field <code>optional string instrument_id = 2;</code>
      */
     protected $instrument_id = null;
 
@@ -38,7 +38,7 @@ class GetTradingStatusRequest extends \Google\Protobuf\Internal\Message
      *     @type string $figi
      *          Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *     @type string $instrument_id
-     *          Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *          Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`
      * }
      */
     public function __construct($data = NULL) {
@@ -49,7 +49,7 @@ class GetTradingStatusRequest extends \Google\Protobuf\Internal\Message
     /**
      *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *
-     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
+     * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
      * @return string
      * @deprecated
      */
@@ -74,7 +74,7 @@ class GetTradingStatusRequest extends \Google\Protobuf\Internal\Message
     /**
      *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *
-     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
+     * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
      * @param string $var
      * @return $this
      * @deprecated
@@ -89,9 +89,9 @@ class GetTradingStatusRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`
      *
-     * Generated from protobuf field <code>string instrument_id = 2;</code>
+     * Generated from protobuf field <code>optional string instrument_id = 2;</code>
      * @return string
      */
     public function getInstrumentId()
@@ -110,9 +110,9 @@ class GetTradingStatusRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`
      *
-     * Generated from protobuf field <code>string instrument_id = 2;</code>
+     * Generated from protobuf field <code>optional string instrument_id = 2;</code>
      * @param string $var
      * @return $this
      */

@@ -95,7 +95,7 @@ class OperationTrade extends \Google\Protobuf\Internal\Message
      */
     public function getDateTime()
     {
-        return isset($this->date_time) ? $this->date_time : null;
+        return $this->date_time;
     }
 
     public function hasDateTime()
@@ -157,7 +157,7 @@ class OperationTrade extends \Google\Protobuf\Internal\Message
      */
     public function getPrice()
     {
-        return isset($this->price) ? $this->price : null;
+        return $this->price;
     }
 
     public function hasPrice()

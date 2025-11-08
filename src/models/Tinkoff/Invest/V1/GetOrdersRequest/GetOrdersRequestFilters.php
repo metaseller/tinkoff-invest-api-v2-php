@@ -16,13 +16,13 @@ class GetOrdersRequestFilters extends \Google\Protobuf\Internal\Message
     /**
      *Дата и время, начиная с которой нужно получить информацию в часовом поясе UTC. Параметр применим только к ордерам, созданным сегодня.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp from = 1;</code>
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp from = 1;</code>
      */
     protected $from = null;
     /**
      *Дата и время, до которой нужно получить информацию в часовом поясе UTC. Параметр применим только к ордерам, созданным сегодня.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp to = 2;</code>
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp to = 2;</code>
      */
     protected $to = null;
     /**
@@ -42,7 +42,7 @@ class GetOrdersRequestFilters extends \Google\Protobuf\Internal\Message
      *          Дата и время, начиная с которой нужно получить информацию в часовом поясе UTC. Параметр применим только к ордерам, созданным сегодня.
      *     @type \Google\Protobuf\Timestamp $to
      *          Дата и время, до которой нужно получить информацию в часовом поясе UTC. Параметр применим только к ордерам, созданным сегодня.
-     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $execution_status
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $execution_status
      *          Статусы заявок.
      * }
      */
@@ -54,12 +54,12 @@ class GetOrdersRequestFilters extends \Google\Protobuf\Internal\Message
     /**
      *Дата и время, начиная с которой нужно получить информацию в часовом поясе UTC. Параметр применим только к ордерам, созданным сегодня.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp from = 1;</code>
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp from = 1;</code>
      * @return \Google\Protobuf\Timestamp|null
      */
     public function getFrom()
     {
-        return isset($this->from) ? $this->from : null;
+        return $this->from;
     }
 
     public function hasFrom()
@@ -75,7 +75,7 @@ class GetOrdersRequestFilters extends \Google\Protobuf\Internal\Message
     /**
      *Дата и время, начиная с которой нужно получить информацию в часовом поясе UTC. Параметр применим только к ордерам, созданным сегодня.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp from = 1;</code>
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp from = 1;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
@@ -90,12 +90,12 @@ class GetOrdersRequestFilters extends \Google\Protobuf\Internal\Message
     /**
      *Дата и время, до которой нужно получить информацию в часовом поясе UTC. Параметр применим только к ордерам, созданным сегодня.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp to = 2;</code>
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp to = 2;</code>
      * @return \Google\Protobuf\Timestamp|null
      */
     public function getTo()
     {
-        return isset($this->to) ? $this->to : null;
+        return $this->to;
     }
 
     public function hasTo()
@@ -111,7 +111,7 @@ class GetOrdersRequestFilters extends \Google\Protobuf\Internal\Message
     /**
      *Дата и время, до которой нужно получить информацию в часовом поясе UTC. Параметр применим только к ордерам, созданным сегодня.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp to = 2;</code>
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp to = 2;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
@@ -138,7 +138,7 @@ class GetOrdersRequestFilters extends \Google\Protobuf\Internal\Message
      *Статусы заявок.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OrderExecutionReportStatus execution_status = 3;</code>
-     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setExecutionStatus($var)

@@ -28,7 +28,7 @@ class GetAssetFundamentalsRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $assets
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $assets
      *          Массив идентификаторов активов, не более 100 шт.
      * }
      */
@@ -52,7 +52,7 @@ class GetAssetFundamentalsRequest extends \Google\Protobuf\Internal\Message
      *Массив идентификаторов активов, не более 100 шт.
      *
      * Generated from protobuf field <code>repeated string assets = 1 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setAssets($var)

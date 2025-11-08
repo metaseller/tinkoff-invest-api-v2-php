@@ -156,7 +156,7 @@ class Operation extends \Google\Protobuf\Internal\Message
      *          Текстовое описание типа операции.
      *     @type int $operation_type
      *          Тип операции.
-     *     @type \Tinkoff\Invest\V1\OperationTrade[]|\Google\Protobuf\Internal\RepeatedField $trades
+     *     @type array<\Tinkoff\Invest\V1\OperationTrade>|\Google\Protobuf\Internal\RepeatedField $trades
      *          Массив сделок.
      *     @type string $asset_uid
      *          Идентификатор актива
@@ -164,7 +164,7 @@ class Operation extends \Google\Protobuf\Internal\Message
      *          Уникальный идентификатор позиции.
      *     @type string $instrument_uid
      *          Уникальный идентификатор инструмента.
-     *     @type \Tinkoff\Invest\V1\ChildOperationItem[]|\Google\Protobuf\Internal\RepeatedField $child_operations
+     *     @type array<\Tinkoff\Invest\V1\ChildOperationItem>|\Google\Protobuf\Internal\RepeatedField $child_operations
      *          Массив дочерних операций.
      * }
      */
@@ -259,7 +259,7 @@ class Operation extends \Google\Protobuf\Internal\Message
      */
     public function getPayment()
     {
-        return isset($this->payment) ? $this->payment : null;
+        return $this->payment;
     }
 
     public function hasPayment()
@@ -295,7 +295,7 @@ class Operation extends \Google\Protobuf\Internal\Message
      */
     public function getPrice()
     {
-        return isset($this->price) ? $this->price : null;
+        return $this->price;
     }
 
     public function hasPrice()
@@ -461,7 +461,7 @@ class Operation extends \Google\Protobuf\Internal\Message
      */
     public function getDate()
     {
-        return isset($this->date) ? $this->date : null;
+        return $this->date;
     }
 
     public function hasDate()
@@ -556,7 +556,7 @@ class Operation extends \Google\Protobuf\Internal\Message
      *Массив сделок.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OperationTrade trades = 14;</code>
-     * @param \Tinkoff\Invest\V1\OperationTrade[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\OperationTrade>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setTrades($var)
@@ -660,7 +660,7 @@ class Operation extends \Google\Protobuf\Internal\Message
      *Массив дочерних операций.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.ChildOperationItem child_operations = 19;</code>
-     * @param \Tinkoff\Invest\V1\ChildOperationItem[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\ChildOperationItem>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setChildOperations($var)

@@ -262,7 +262,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      *          Плановая ребалансировка портфеля.
      *     @type string $tax_rate
      *          Ставки налогообложения дивидендов и купонов.
-     *     @type \Google\Protobuf\Timestamp[]|\Google\Protobuf\Internal\RepeatedField $rebalancing_dates
+     *     @type array<\Google\Protobuf\Timestamp>|\Google\Protobuf\Internal\RepeatedField $rebalancing_dates
      *          Даты ребалансировок.
      *     @type string $issue_kind
      *          Форма выпуска.
@@ -285,7 +285,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      */
     public function getTotalExpense()
     {
-        return isset($this->total_expense) ? $this->total_expense : null;
+        return $this->total_expense;
     }
 
     public function hasTotalExpense()
@@ -321,7 +321,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      */
     public function getHurdleRate()
     {
-        return isset($this->hurdle_rate) ? $this->hurdle_rate : null;
+        return $this->hurdle_rate;
     }
 
     public function hasHurdleRate()
@@ -357,7 +357,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      */
     public function getPerformanceFee()
     {
-        return isset($this->performance_fee) ? $this->performance_fee : null;
+        return $this->performance_fee;
     }
 
     public function hasPerformanceFee()
@@ -393,7 +393,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      */
     public function getFixedCommission()
     {
-        return isset($this->fixed_commission) ? $this->fixed_commission : null;
+        return $this->fixed_commission;
     }
 
     public function hasFixedCommission()
@@ -481,7 +481,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      */
     public function getBuyPremium()
     {
-        return isset($this->buy_premium) ? $this->buy_premium : null;
+        return $this->buy_premium;
     }
 
     public function hasBuyPremium()
@@ -517,7 +517,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      */
     public function getSellDiscount()
     {
-        return isset($this->sell_discount) ? $this->sell_discount : null;
+        return $this->sell_discount;
     }
 
     public function hasSellDiscount()
@@ -709,7 +709,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      */
     public function getNumShare()
     {
-        return isset($this->num_share) ? $this->num_share : null;
+        return $this->num_share;
     }
 
     public function hasNumShare()
@@ -771,7 +771,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      */
     public function getReleasedDate()
     {
-        return isset($this->released_date) ? $this->released_date : null;
+        return $this->released_date;
     }
 
     public function hasReleasedDate()
@@ -885,7 +885,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      */
     public function getIndexRecoveryPeriod()
     {
-        return isset($this->index_recovery_period) ? $this->index_recovery_period : null;
+        return $this->index_recovery_period;
     }
 
     public function hasIndexRecoveryPeriod()
@@ -973,7 +973,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      */
     public function getExpenseCommission()
     {
-        return isset($this->expense_commission) ? $this->expense_commission : null;
+        return $this->expense_commission;
     }
 
     public function hasExpenseCommission()
@@ -1009,7 +1009,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      */
     public function getPrimaryIndexTrackingError()
     {
-        return isset($this->primary_index_tracking_error) ? $this->primary_index_tracking_error : null;
+        return $this->primary_index_tracking_error;
     }
 
     public function hasPrimaryIndexTrackingError()
@@ -1104,7 +1104,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      *Даты ребалансировок.
      *
      * Generated from protobuf field <code>repeated .google.protobuf.Timestamp rebalancing_dates = 28;</code>
-     * @param \Google\Protobuf\Timestamp[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Google\Protobuf\Timestamp>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setRebalancingDates($var)
@@ -1149,7 +1149,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      */
     public function getNominal()
     {
-        return isset($this->nominal) ? $this->nominal : null;
+        return $this->nominal;
     }
 
     public function hasNominal()

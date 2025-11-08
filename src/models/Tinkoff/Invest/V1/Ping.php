@@ -30,7 +30,7 @@ class Ping extends \Google\Protobuf\Internal\Message
     /**
      *Время формирования запроса.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp ping_request_time = 4;</code>
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp ping_request_time = 4;</code>
      */
     protected $ping_request_time = null;
 
@@ -61,7 +61,7 @@ class Ping extends \Google\Protobuf\Internal\Message
      */
     public function getTime()
     {
-        return isset($this->time) ? $this->time : null;
+        return $this->time;
     }
 
     public function hasTime()
@@ -118,12 +118,12 @@ class Ping extends \Google\Protobuf\Internal\Message
     /**
      *Время формирования запроса.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp ping_request_time = 4;</code>
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp ping_request_time = 4;</code>
      * @return \Google\Protobuf\Timestamp|null
      */
     public function getPingRequestTime()
     {
-        return isset($this->ping_request_time) ? $this->ping_request_time : null;
+        return $this->ping_request_time;
     }
 
     public function hasPingRequestTime()
@@ -139,7 +139,7 @@ class Ping extends \Google\Protobuf\Internal\Message
     /**
      *Время формирования запроса.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp ping_request_time = 4;</code>
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp ping_request_time = 4;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */

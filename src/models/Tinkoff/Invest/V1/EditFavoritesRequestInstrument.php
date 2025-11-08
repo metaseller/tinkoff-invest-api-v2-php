@@ -18,7 +18,7 @@ class EditFavoritesRequestInstrument extends \Google\Protobuf\Internal\Message
     /**
      *FIGI-идентификатор инструмента.
      *
-     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
+     * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
      * @deprecated
      */
     protected $figi = null;
@@ -49,7 +49,7 @@ class EditFavoritesRequestInstrument extends \Google\Protobuf\Internal\Message
     /**
      *FIGI-идентификатор инструмента.
      *
-     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
+     * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
      * @return string
      * @deprecated
      */
@@ -74,7 +74,7 @@ class EditFavoritesRequestInstrument extends \Google\Protobuf\Internal\Message
     /**
      *FIGI-идентификатор инструмента.
      *
-     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
+     * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
      * @param string $var
      * @return $this
      * @deprecated

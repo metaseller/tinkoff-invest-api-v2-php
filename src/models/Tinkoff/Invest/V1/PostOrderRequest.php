@@ -18,7 +18,7 @@ class PostOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
-     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
+     * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
      * @deprecated
      */
     protected $figi = null;
@@ -31,7 +31,7 @@ class PostOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Игнорируется для рыночных поручений.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
      */
     protected $price = null;
     /**
@@ -121,7 +121,7 @@ class PostOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
-     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
+     * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
      * @return string
      * @deprecated
      */
@@ -146,7 +146,7 @@ class PostOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Deprecated Figi-идентификатор инструмента. Необходимо использовать instrument_id.
      *
-     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
+     * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
      * @param string $var
      * @return $this
      * @deprecated
@@ -189,12 +189,12 @@ class PostOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Игнорируется для рыночных поручений.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getPrice()
     {
-        return isset($this->price) ? $this->price : null;
+        return $this->price;
     }
 
     public function hasPrice()
@@ -210,7 +210,7 @@ class PostOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Игнорируется для рыночных поручений.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */

@@ -459,7 +459,7 @@ class InstrumentShort extends \Google\Protobuf\Internal\Message
      */
     public function getFirst1MinCandleDate()
     {
-        return isset($this->first_1min_candle_date) ? $this->first_1min_candle_date : null;
+        return $this->first_1min_candle_date;
     }
 
     public function hasFirst1MinCandleDate()
@@ -495,7 +495,7 @@ class InstrumentShort extends \Google\Protobuf\Internal\Message
      */
     public function getFirst1DayCandleDate()
     {
-        return isset($this->first_1day_candle_date) ? $this->first_1day_candle_date : null;
+        return $this->first_1day_candle_date;
     }
 
     public function hasFirst1DayCandleDate()

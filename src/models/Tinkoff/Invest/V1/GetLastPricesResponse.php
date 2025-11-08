@@ -28,7 +28,7 @@ class GetLastPricesResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Tinkoff\Invest\V1\LastPrice[]|\Google\Protobuf\Internal\RepeatedField $last_prices
+     *     @type array<\Tinkoff\Invest\V1\LastPrice>|\Google\Protobuf\Internal\RepeatedField $last_prices
      *          Массив цен последних сделок.
      * }
      */
@@ -52,7 +52,7 @@ class GetLastPricesResponse extends \Google\Protobuf\Internal\Message
      *Массив цен последних сделок.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.LastPrice last_prices = 1;</code>
-     * @param \Tinkoff\Invest\V1\LastPrice[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\LastPrice>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setLastPrices($var)

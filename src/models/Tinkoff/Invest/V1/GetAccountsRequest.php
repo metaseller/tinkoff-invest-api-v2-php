@@ -18,7 +18,7 @@ class GetAccountsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Статус счета.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AccountStatus status = 1;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.AccountStatus status = 1;</code>
      */
     protected $status = null;
 
@@ -40,7 +40,7 @@ class GetAccountsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Статус счета.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AccountStatus status = 1;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.AccountStatus status = 1;</code>
      * @return int
      */
     public function getStatus()
@@ -61,7 +61,7 @@ class GetAccountsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Статус счета.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AccountStatus status = 1;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.AccountStatus status = 1;</code>
      * @param int $var
      * @return $this
      */

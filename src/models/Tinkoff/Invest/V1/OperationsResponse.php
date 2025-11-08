@@ -28,7 +28,7 @@ class OperationsResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Tinkoff\Invest\V1\Operation[]|\Google\Protobuf\Internal\RepeatedField $operations
+     *     @type array<\Tinkoff\Invest\V1\Operation>|\Google\Protobuf\Internal\RepeatedField $operations
      *          Массив операций.
      * }
      */
@@ -52,7 +52,7 @@ class OperationsResponse extends \Google\Protobuf\Internal\Message
      *Массив операций.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.Operation operations = 1;</code>
-     * @param \Tinkoff\Invest\V1\Operation[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\Operation>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setOperations($var)

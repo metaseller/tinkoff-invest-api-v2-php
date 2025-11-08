@@ -42,7 +42,7 @@ class SubscribeTradesResponse extends \Google\Protobuf\Internal\Message
      *
      *     @type string $tracking_id
      *          Уникальный идентификатор запроса. [Подробнее](./grpc#tracking-id).
-     *     @type \Tinkoff\Invest\V1\TradeSubscription[]|\Google\Protobuf\Internal\RepeatedField $trade_subscriptions
+     *     @type array<\Tinkoff\Invest\V1\TradeSubscription>|\Google\Protobuf\Internal\RepeatedField $trade_subscriptions
      *          Массив статусов подписки на поток сделок.
      *     @type int $trade_source
      *          Тип источника сделок.
@@ -94,7 +94,7 @@ class SubscribeTradesResponse extends \Google\Protobuf\Internal\Message
      *Массив статусов подписки на поток сделок.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.TradeSubscription trade_subscriptions = 2;</code>
-     * @param \Tinkoff\Invest\V1\TradeSubscription[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\TradeSubscription>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setTradeSubscriptions($var)

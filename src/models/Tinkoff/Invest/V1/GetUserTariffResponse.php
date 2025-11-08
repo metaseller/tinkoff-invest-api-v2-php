@@ -34,9 +34,9 @@ class GetUserTariffResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Tinkoff\Invest\V1\UnaryLimit[]|\Google\Protobuf\Internal\RepeatedField $unary_limits
+     *     @type array<\Tinkoff\Invest\V1\UnaryLimit>|\Google\Protobuf\Internal\RepeatedField $unary_limits
      *          Массив лимитов пользователя по unary-запросам.
-     *     @type \Tinkoff\Invest\V1\StreamLimit[]|\Google\Protobuf\Internal\RepeatedField $stream_limits
+     *     @type array<\Tinkoff\Invest\V1\StreamLimit>|\Google\Protobuf\Internal\RepeatedField $stream_limits
      *          Массив лимитов пользователей для stream-соединений.
      * }
      */
@@ -60,7 +60,7 @@ class GetUserTariffResponse extends \Google\Protobuf\Internal\Message
      *Массив лимитов пользователя по unary-запросам.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.UnaryLimit unary_limits = 1;</code>
-     * @param \Tinkoff\Invest\V1\UnaryLimit[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\UnaryLimit>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setUnaryLimits($var)
@@ -86,7 +86,7 @@ class GetUserTariffResponse extends \Google\Protobuf\Internal\Message
      *Массив лимитов пользователей для stream-соединений.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.StreamLimit stream_limits = 2;</code>
-     * @param \Tinkoff\Invest\V1\StreamLimit[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\StreamLimit>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setStreamLimits($var)

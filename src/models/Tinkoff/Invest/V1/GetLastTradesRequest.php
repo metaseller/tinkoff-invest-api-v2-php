@@ -18,7 +18,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *
-     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
+     * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
      * @deprecated
      */
     protected $figi = null;
@@ -35,9 +35,9 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
      */
     protected $to = null;
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`
      *
-     * Generated from protobuf field <code>string instrument_id = 4;</code>
+     * Generated from protobuf field <code>optional string instrument_id = 4;</code>
      */
     protected $instrument_id = null;
     /**
@@ -60,7 +60,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $to
      *          Окончание запрашиваемого периода по UTC.
      *     @type string $instrument_id
-     *          Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *          Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`
      *     @type int $trade_source
      *          Тип источника сделок. Значение по умолчанию — `TRADE_SOURCE_ALL`, все сделки.
      * }
@@ -73,7 +73,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *
-     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
+     * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
      * @return string
      * @deprecated
      */
@@ -98,7 +98,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *
-     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
+     * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
      * @param string $var
      * @return $this
      * @deprecated
@@ -120,7 +120,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
      */
     public function getFrom()
     {
-        return isset($this->from) ? $this->from : null;
+        return $this->from;
     }
 
     public function hasFrom()
@@ -156,7 +156,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
      */
     public function getTo()
     {
-        return isset($this->to) ? $this->to : null;
+        return $this->to;
     }
 
     public function hasTo()
@@ -185,9 +185,9 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`
      *
-     * Generated from protobuf field <code>string instrument_id = 4;</code>
+     * Generated from protobuf field <code>optional string instrument_id = 4;</code>
      * @return string
      */
     public function getInstrumentId()
@@ -206,9 +206,9 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`
      *
-     * Generated from protobuf field <code>string instrument_id = 4;</code>
+     * Generated from protobuf field <code>optional string instrument_id = 4;</code>
      * @param string $var
      * @return $this
      */

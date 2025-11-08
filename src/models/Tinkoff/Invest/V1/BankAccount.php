@@ -56,7 +56,7 @@ class BankAccount extends \Google\Protobuf\Internal\Message
      *          Идентификатор счeта.
      *     @type string $name
      *          Название счeта.
-     *     @type \Tinkoff\Invest\V1\MoneyValue[]|\Google\Protobuf\Internal\RepeatedField $money
+     *     @type array<\Tinkoff\Invest\V1\MoneyValue>|\Google\Protobuf\Internal\RepeatedField $money
      *          Список валютных позиций на счeте.
      *     @type \Google\Protobuf\Timestamp $opened_date
      *          Дата открытия счeта в часовом поясе UTC.
@@ -136,7 +136,7 @@ class BankAccount extends \Google\Protobuf\Internal\Message
      *Список валютных позиций на счeте.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.MoneyValue money = 3;</code>
-     * @param \Tinkoff\Invest\V1\MoneyValue[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\MoneyValue>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setMoney($var)
@@ -155,7 +155,7 @@ class BankAccount extends \Google\Protobuf\Internal\Message
      */
     public function getOpenedDate()
     {
-        return isset($this->opened_date) ? $this->opened_date : null;
+        return $this->opened_date;
     }
 
     public function hasOpenedDate()

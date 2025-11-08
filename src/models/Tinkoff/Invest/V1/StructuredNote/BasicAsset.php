@@ -113,7 +113,7 @@ class BasicAsset extends \Google\Protobuf\Internal\Message
      */
     public function getInitialPrice()
     {
-        return isset($this->initial_price) ? $this->initial_price : null;
+        return $this->initial_price;
     }
 
     public function hasInitialPrice()

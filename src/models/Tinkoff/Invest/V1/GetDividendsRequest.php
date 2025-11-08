@@ -25,13 +25,13 @@ class GetDividendsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Начало запрашиваемого периода по UTC. Фильтрация происходит по параметру `record_date` — дата фиксации реестра.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2;</code>
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp from = 2;</code>
      */
     protected $from = null;
     /**
      *Окончание запрашиваемого периода по UTC. Фильтрация происходит по параметру `record_date` — дата фиксации реестра.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3;</code>
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp to = 3;</code>
      */
     protected $to = null;
     /**
@@ -95,12 +95,12 @@ class GetDividendsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Начало запрашиваемого периода по UTC. Фильтрация происходит по параметру `record_date` — дата фиксации реестра.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2;</code>
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp from = 2;</code>
      * @return \Google\Protobuf\Timestamp|null
      */
     public function getFrom()
     {
-        return isset($this->from) ? $this->from : null;
+        return $this->from;
     }
 
     public function hasFrom()
@@ -116,7 +116,7 @@ class GetDividendsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Начало запрашиваемого периода по UTC. Фильтрация происходит по параметру `record_date` — дата фиксации реестра.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2;</code>
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp from = 2;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
@@ -131,12 +131,12 @@ class GetDividendsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Окончание запрашиваемого периода по UTC. Фильтрация происходит по параметру `record_date` — дата фиксации реестра.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3;</code>
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp to = 3;</code>
      * @return \Google\Protobuf\Timestamp|null
      */
     public function getTo()
     {
-        return isset($this->to) ? $this->to : null;
+        return $this->to;
     }
 
     public function hasTo()
@@ -152,7 +152,7 @@ class GetDividendsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Окончание запрашиваемого периода по UTC. Фильтрация происходит по параметру `record_date` — дата фиксации реестра.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3;</code>
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp to = 3;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */

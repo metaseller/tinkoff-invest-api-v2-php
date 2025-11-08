@@ -314,7 +314,7 @@ class Instrument extends \Google\Protobuf\Internal\Message
      *          Уникальный идентификатор позиции инструмента.
      *     @type string $asset_uid
      *          Уникальный идентификатор актива.
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $required_tests
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $required_tests
      *          Тесты, которые необходимо пройти клиенту, чтобы совершать сделки по инструменту.
      *     @type bool $for_iis_flag
      *          Признак доступности для ИИС.
@@ -509,7 +509,7 @@ class Instrument extends \Google\Protobuf\Internal\Message
     public function getKlong()
     {
         @trigger_error('klong is deprecated.', E_USER_DEPRECATED);
-        return isset($this->klong) ? $this->klong : null;
+        return $this->klong;
     }
 
     public function hasKlong()
@@ -551,7 +551,7 @@ class Instrument extends \Google\Protobuf\Internal\Message
     public function getKshort()
     {
         @trigger_error('kshort is deprecated.', E_USER_DEPRECATED);
-        return isset($this->kshort) ? $this->kshort : null;
+        return $this->kshort;
     }
 
     public function hasKshort()
@@ -591,7 +591,7 @@ class Instrument extends \Google\Protobuf\Internal\Message
      */
     public function getDlong()
     {
-        return isset($this->dlong) ? $this->dlong : null;
+        return $this->dlong;
     }
 
     public function hasDlong()
@@ -627,7 +627,7 @@ class Instrument extends \Google\Protobuf\Internal\Message
      */
     public function getDshort()
     {
-        return isset($this->dshort) ? $this->dshort : null;
+        return $this->dshort;
     }
 
     public function hasDshort()
@@ -663,7 +663,7 @@ class Instrument extends \Google\Protobuf\Internal\Message
      */
     public function getDlongMin()
     {
-        return isset($this->dlong_min) ? $this->dlong_min : null;
+        return $this->dlong_min;
     }
 
     public function hasDlongMin()
@@ -699,7 +699,7 @@ class Instrument extends \Google\Protobuf\Internal\Message
      */
     public function getDshortMin()
     {
-        return isset($this->dshort_min) ? $this->dshort_min : null;
+        return $this->dshort_min;
     }
 
     public function hasDshortMin()
@@ -995,7 +995,7 @@ class Instrument extends \Google\Protobuf\Internal\Message
      */
     public function getMinPriceIncrement()
     {
-        return isset($this->min_price_increment) ? $this->min_price_increment : null;
+        return $this->min_price_increment;
     }
 
     public function hasMinPriceIncrement()
@@ -1168,7 +1168,7 @@ class Instrument extends \Google\Protobuf\Internal\Message
      *Тесты, которые необходимо пройти клиенту, чтобы совершать сделки по инструменту.
      *
      * Generated from protobuf field <code>repeated string required_tests = 29;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setRequiredTests($var)
@@ -1317,7 +1317,7 @@ class Instrument extends \Google\Protobuf\Internal\Message
      */
     public function getFirst1MinCandleDate()
     {
-        return isset($this->first_1min_candle_date) ? $this->first_1min_candle_date : null;
+        return $this->first_1min_candle_date;
     }
 
     public function hasFirst1MinCandleDate()
@@ -1353,7 +1353,7 @@ class Instrument extends \Google\Protobuf\Internal\Message
      */
     public function getFirst1DayCandleDate()
     {
-        return isset($this->first_1day_candle_date) ? $this->first_1day_candle_date : null;
+        return $this->first_1day_candle_date;
     }
 
     public function hasFirst1DayCandleDate()
@@ -1389,7 +1389,7 @@ class Instrument extends \Google\Protobuf\Internal\Message
      */
     public function getBrand()
     {
-        return isset($this->brand) ? $this->brand : null;
+        return $this->brand;
     }
 
     public function hasBrand()
@@ -1425,7 +1425,7 @@ class Instrument extends \Google\Protobuf\Internal\Message
      */
     public function getDlongClient()
     {
-        return isset($this->dlong_client) ? $this->dlong_client : null;
+        return $this->dlong_client;
     }
 
     public function hasDlongClient()
@@ -1461,7 +1461,7 @@ class Instrument extends \Google\Protobuf\Internal\Message
      */
     public function getDshortClient()
     {
-        return isset($this->dshort_client) ? $this->dshort_client : null;
+        return $this->dshort_client;
     }
 
     public function hasDshortClient()

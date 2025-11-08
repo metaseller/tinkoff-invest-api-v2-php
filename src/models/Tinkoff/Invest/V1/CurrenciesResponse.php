@@ -28,7 +28,7 @@ class CurrenciesResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Tinkoff\Invest\V1\Currency[]|\Google\Protobuf\Internal\RepeatedField $instruments
+     *     @type array<\Tinkoff\Invest\V1\Currency>|\Google\Protobuf\Internal\RepeatedField $instruments
      *          Массив валют.
      * }
      */
@@ -52,7 +52,7 @@ class CurrenciesResponse extends \Google\Protobuf\Internal\Message
      *Массив валют.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.Currency instruments = 1;</code>
-     * @param \Tinkoff\Invest\V1\Currency[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\Currency>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setInstruments($var)

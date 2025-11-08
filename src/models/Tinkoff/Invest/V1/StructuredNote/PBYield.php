@@ -13,7 +13,7 @@ use Google\Protobuf\Internal\GPBUtil;
  *
  * Generated from protobuf message <code>tinkoff.public.invest.api.contract.v1.StructuredNote.Yield</code>
  */
-class Yield extends \Google\Protobuf\Internal\Message
+class PBYield extends \Google\Protobuf\Internal\Message
 {
     /**
      *Тип доходности.
@@ -79,7 +79,7 @@ class Yield extends \Google\Protobuf\Internal\Message
      */
     public function getValue()
     {
-        return isset($this->value) ? $this->value : null;
+        return $this->value;
     }
 
     public function hasValue()
@@ -110,5 +110,5 @@ class Yield extends \Google\Protobuf\Internal\Message
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Yield::class, \Tinkoff\Invest\V1\StructuredNote_Yield::class);
+class_alias(PBYield::class, \Tinkoff\Invest\V1\StructuredNote_Yield::class);
 

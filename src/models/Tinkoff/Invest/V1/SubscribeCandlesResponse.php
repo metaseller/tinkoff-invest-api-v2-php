@@ -36,7 +36,7 @@ class SubscribeCandlesResponse extends \Google\Protobuf\Internal\Message
      *
      *     @type string $tracking_id
      *          Уникальный идентификатор запроса. [Подробнее](./grpc#tracking-id).
-     *     @type \Tinkoff\Invest\V1\CandleSubscription[]|\Google\Protobuf\Internal\RepeatedField $candles_subscriptions
+     *     @type array<\Tinkoff\Invest\V1\CandleSubscription>|\Google\Protobuf\Internal\RepeatedField $candles_subscriptions
      *          Массив статусов подписки на свечи.
      * }
      */
@@ -86,7 +86,7 @@ class SubscribeCandlesResponse extends \Google\Protobuf\Internal\Message
      *Массив статусов подписки на свечи.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.CandleSubscription candles_subscriptions = 2;</code>
-     * @param \Tinkoff\Invest\V1\CandleSubscription[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\CandleSubscription>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setCandlesSubscriptions($var)

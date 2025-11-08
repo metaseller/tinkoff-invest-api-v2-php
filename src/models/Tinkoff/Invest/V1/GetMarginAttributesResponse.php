@@ -85,7 +85,7 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
      */
     public function getLiquidPortfolio()
     {
-        return isset($this->liquid_portfolio) ? $this->liquid_portfolio : null;
+        return $this->liquid_portfolio;
     }
 
     public function hasLiquidPortfolio()
@@ -121,7 +121,7 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
      */
     public function getStartingMargin()
     {
-        return isset($this->starting_margin) ? $this->starting_margin : null;
+        return $this->starting_margin;
     }
 
     public function hasStartingMargin()
@@ -157,7 +157,7 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
      */
     public function getMinimalMargin()
     {
-        return isset($this->minimal_margin) ? $this->minimal_margin : null;
+        return $this->minimal_margin;
     }
 
     public function hasMinimalMargin()
@@ -193,7 +193,7 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
      */
     public function getFundsSufficiencyLevel()
     {
-        return isset($this->funds_sufficiency_level) ? $this->funds_sufficiency_level : null;
+        return $this->funds_sufficiency_level;
     }
 
     public function hasFundsSufficiencyLevel()
@@ -229,7 +229,7 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
      */
     public function getAmountOfMissingFunds()
     {
-        return isset($this->amount_of_missing_funds) ? $this->amount_of_missing_funds : null;
+        return $this->amount_of_missing_funds;
     }
 
     public function hasAmountOfMissingFunds()
@@ -265,7 +265,7 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
      */
     public function getCorrectedMargin()
     {
-        return isset($this->corrected_margin) ? $this->corrected_margin : null;
+        return $this->corrected_margin;
     }
 
     public function hasCorrectedMargin()

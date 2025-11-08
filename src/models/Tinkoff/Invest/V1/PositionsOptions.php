@@ -34,6 +34,12 @@ class PositionsOptions extends \Google\Protobuf\Internal\Message
      */
     protected $ticker = '';
     /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 4;</code>
+     */
+    protected $class_code = '';
+    /**
      *Количество бумаг, заблокированных выставленными заявками.
      *
      * Generated from protobuf field <code>int64 blocked = 11;</code>
@@ -58,6 +64,8 @@ class PositionsOptions extends \Google\Protobuf\Internal\Message
      *          Уникальный идентификатор  инструмента.
      *     @type string $ticker
      *          Тикер инструмента.
+     *     @type string $class_code
+     *          Класс-код (секция торгов).
      *     @type int|string $blocked
      *          Количество бумаг, заблокированных выставленными заявками.
      *     @type int|string $balance
@@ -143,6 +151,32 @@ class PositionsOptions extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->ticker = $var;
+
+        return $this;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 4;</code>
+     * @return string
+     */
+    public function getClassCode()
+    {
+        return $this->class_code;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 4;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setClassCode($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->class_code = $var;
 
         return $this;
     }

@@ -36,7 +36,7 @@ class SubscribeOrderBookRequest extends \Google\Protobuf\Internal\Message
      *
      *     @type int $subscription_action
      *          Изменение статуса подписки.
-     *     @type \Tinkoff\Invest\V1\OrderBookInstrument[]|\Google\Protobuf\Internal\RepeatedField $instruments
+     *     @type array<\Tinkoff\Invest\V1\OrderBookInstrument>|\Google\Protobuf\Internal\RepeatedField $instruments
      *          Массив инструментов для подписки на стаканы.
      * }
      */
@@ -86,7 +86,7 @@ class SubscribeOrderBookRequest extends \Google\Protobuf\Internal\Message
      *Массив инструментов для подписки на стаканы.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OrderBookInstrument instruments = 2;</code>
-     * @param \Tinkoff\Invest\V1\OrderBookInstrument[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\OrderBookInstrument>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setInstruments($var)

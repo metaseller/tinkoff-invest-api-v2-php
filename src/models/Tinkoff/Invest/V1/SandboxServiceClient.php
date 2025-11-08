@@ -153,6 +153,21 @@ class SandboxServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * GetSandboxOrderPrice — получить предварительную стоимость для лимитной заявки
+     * @param \Tinkoff\Invest\V1\GetOrderPriceRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetSandboxOrderPrice(\Tinkoff\Invest\V1\GetOrderPriceRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.SandboxService/GetSandboxOrderPrice',
+        $argument,
+        ['\Tinkoff\Invest\V1\GetOrderPriceResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * GetSandboxPositions — список позиций по счету
      * @param \Tinkoff\Invest\V1\PositionsRequest $argument input argument
      * @param array $metadata metadata

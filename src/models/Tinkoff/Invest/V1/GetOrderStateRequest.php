@@ -36,7 +36,7 @@ class GetOrderStateRequest extends \Google\Protobuf\Internal\Message
     /**
      *Тип идентификатора заявки.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderIdType order_id_type = 4;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.OrderIdType order_id_type = 4;</code>
      */
     protected $order_id_type = null;
 
@@ -142,7 +142,7 @@ class GetOrderStateRequest extends \Google\Protobuf\Internal\Message
     /**
      *Тип идентификатора заявки.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderIdType order_id_type = 4;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.OrderIdType order_id_type = 4;</code>
      * @return int
      */
     public function getOrderIdType()
@@ -163,7 +163,7 @@ class GetOrderStateRequest extends \Google\Protobuf\Internal\Message
     /**
      *Тип идентификатора заявки.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderIdType order_id_type = 4;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.OrderIdType order_id_type = 4;</code>
      * @param int $var
      * @return $this
      */

@@ -103,7 +103,7 @@ class GetMaxLotsResponse extends \Google\Protobuf\Internal\Message
      */
     public function getBuyLimits()
     {
-        return isset($this->buy_limits) ? $this->buy_limits : null;
+        return $this->buy_limits;
     }
 
     public function hasBuyLimits()
@@ -139,7 +139,7 @@ class GetMaxLotsResponse extends \Google\Protobuf\Internal\Message
      */
     public function getBuyMarginLimits()
     {
-        return isset($this->buy_margin_limits) ? $this->buy_margin_limits : null;
+        return $this->buy_margin_limits;
     }
 
     public function hasBuyMarginLimits()
@@ -175,7 +175,7 @@ class GetMaxLotsResponse extends \Google\Protobuf\Internal\Message
      */
     public function getSellLimits()
     {
-        return isset($this->sell_limits) ? $this->sell_limits : null;
+        return $this->sell_limits;
     }
 
     public function hasSellLimits()
@@ -211,7 +211,7 @@ class GetMaxLotsResponse extends \Google\Protobuf\Internal\Message
      */
     public function getSellMarginLimits()
     {
-        return isset($this->sell_margin_limits) ? $this->sell_margin_limits : null;
+        return $this->sell_margin_limits;
     }
 
     public function hasSellMarginLimits()

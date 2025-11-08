@@ -28,7 +28,7 @@ class BondsResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Tinkoff\Invest\V1\Bond[]|\Google\Protobuf\Internal\RepeatedField $instruments
+     *     @type array<\Tinkoff\Invest\V1\Bond>|\Google\Protobuf\Internal\RepeatedField $instruments
      *          Массив облигаций.
      * }
      */
@@ -52,7 +52,7 @@ class BondsResponse extends \Google\Protobuf\Internal\Message
      *Массив облигаций.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.Bond instruments = 1;</code>
-     * @param \Tinkoff\Invest\V1\Bond[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\Bond>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setInstruments($var)

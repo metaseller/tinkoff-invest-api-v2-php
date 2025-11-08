@@ -167,7 +167,7 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      */
     public function getNominal()
     {
-        return isset($this->nominal) ? $this->nominal : null;
+        return $this->nominal;
     }
 
     public function hasNominal()
@@ -333,7 +333,7 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      */
     public function getSafetyBarrier()
     {
-        return isset($this->safety_barrier) ? $this->safety_barrier : null;
+        return $this->safety_barrier;
     }
 
     public function hasSafetyBarrier()
@@ -369,7 +369,7 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      */
     public function getMaturityDate()
     {
-        return isset($this->maturity_date) ? $this->maturity_date : null;
+        return $this->maturity_date;
     }
 
     public function hasMaturityDate()
@@ -405,7 +405,7 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      */
     public function getIssueSizePlan()
     {
-        return isset($this->issue_size_plan) ? $this->issue_size_plan : null;
+        return $this->issue_size_plan;
     }
 
     public function hasIssueSizePlan()
@@ -441,7 +441,7 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      */
     public function getIssueSize()
     {
-        return isset($this->issue_size) ? $this->issue_size : null;
+        return $this->issue_size;
     }
 
     public function hasIssueSize()
@@ -477,7 +477,7 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      */
     public function getPlacementDate()
     {
-        return isset($this->placement_date) ? $this->placement_date : null;
+        return $this->placement_date;
     }
 
     public function hasPlacementDate()

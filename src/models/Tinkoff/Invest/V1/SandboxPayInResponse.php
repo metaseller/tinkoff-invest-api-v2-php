@@ -45,7 +45,7 @@ class SandboxPayInResponse extends \Google\Protobuf\Internal\Message
      */
     public function getBalance()
     {
-        return isset($this->balance) ? $this->balance : null;
+        return $this->balance;
     }
 
     public function hasBalance()

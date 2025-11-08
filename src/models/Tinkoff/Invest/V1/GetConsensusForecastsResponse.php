@@ -34,7 +34,7 @@ class GetConsensusForecastsResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Tinkoff\Invest\V1\GetConsensusForecastsResponse\ConsensusForecastsItem[]|\Google\Protobuf\Internal\RepeatedField $items
+     *     @type array<\Tinkoff\Invest\V1\GetConsensusForecastsResponse\ConsensusForecastsItem>|\Google\Protobuf\Internal\RepeatedField $items
      *           Массив прогнозов.
      *     @type \Tinkoff\Invest\V1\PageResponse $page
      *          Данные по пагинации.
@@ -60,7 +60,7 @@ class GetConsensusForecastsResponse extends \Google\Protobuf\Internal\Message
      * Массив прогнозов.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.GetConsensusForecastsResponse.ConsensusForecastsItem items = 1;</code>
-     * @param \Tinkoff\Invest\V1\GetConsensusForecastsResponse\ConsensusForecastsItem[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\GetConsensusForecastsResponse\ConsensusForecastsItem>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setItems($var)
@@ -79,7 +79,7 @@ class GetConsensusForecastsResponse extends \Google\Protobuf\Internal\Message
      */
     public function getPage()
     {
-        return isset($this->page) ? $this->page : null;
+        return $this->page;
     }
 
     public function hasPage()

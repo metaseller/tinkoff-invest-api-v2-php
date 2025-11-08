@@ -63,6 +63,18 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.CandleSource candle_source = 9;</code>
      */
     protected $candle_source = 0;
+    /**
+     *Объем торгов на покупку.
+     *
+     * Generated from protobuf field <code>int64 volume_buy = 10;</code>
+     */
+    protected $volume_buy = 0;
+    /**
+     *Объём торгов на продажу.
+     *
+     * Generated from protobuf field <code>int64 volume_sell = 11;</code>
+     */
+    protected $volume_sell = 0;
 
     /**
      * Constructor.
@@ -86,6 +98,10 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
      *          Признак завершенности свечи. **false** — свеча за текущие интервал еще сформирована не полностью.
      *     @type int $candle_source
      *          Тип источника свечи
+     *     @type int|string $volume_buy
+     *          Объем торгов на покупку.
+     *     @type int|string $volume_sell
+     *          Объём торгов на продажу.
      * }
      */
     public function __construct($data = NULL) {
@@ -101,7 +117,7 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
      */
     public function getOpen()
     {
-        return isset($this->open) ? $this->open : null;
+        return $this->open;
     }
 
     public function hasOpen()
@@ -137,7 +153,7 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
      */
     public function getHigh()
     {
-        return isset($this->high) ? $this->high : null;
+        return $this->high;
     }
 
     public function hasHigh()
@@ -173,7 +189,7 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
      */
     public function getLow()
     {
-        return isset($this->low) ? $this->low : null;
+        return $this->low;
     }
 
     public function hasLow()
@@ -209,7 +225,7 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
      */
     public function getClose()
     {
-        return isset($this->close) ? $this->close : null;
+        return $this->close;
     }
 
     public function hasClose()
@@ -271,7 +287,7 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
      */
     public function getTime()
     {
-        return isset($this->time) ? $this->time : null;
+        return $this->time;
     }
 
     public function hasTime()
@@ -347,6 +363,58 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\CandleSource::class);
         $this->candle_source = $var;
+
+        return $this;
+    }
+
+    /**
+     *Объем торгов на покупку.
+     *
+     * Generated from protobuf field <code>int64 volume_buy = 10;</code>
+     * @return int|string
+     */
+    public function getVolumeBuy()
+    {
+        return $this->volume_buy;
+    }
+
+    /**
+     *Объем торгов на покупку.
+     *
+     * Generated from protobuf field <code>int64 volume_buy = 10;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setVolumeBuy($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->volume_buy = $var;
+
+        return $this;
+    }
+
+    /**
+     *Объём торгов на продажу.
+     *
+     * Generated from protobuf field <code>int64 volume_sell = 11;</code>
+     * @return int|string
+     */
+    public function getVolumeSell()
+    {
+        return $this->volume_sell;
+    }
+
+    /**
+     *Объём торгов на продажу.
+     *
+     * Generated from protobuf field <code>int64 volume_sell = 11;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setVolumeSell($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->volume_sell = $var;
 
         return $this;
     }

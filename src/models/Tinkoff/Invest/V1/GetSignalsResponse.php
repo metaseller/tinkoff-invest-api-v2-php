@@ -34,7 +34,7 @@ class GetSignalsResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Tinkoff\Invest\V1\Signal[]|\Google\Protobuf\Internal\RepeatedField $signals
+     *     @type array<\Tinkoff\Invest\V1\Signal>|\Google\Protobuf\Internal\RepeatedField $signals
      *          Массив сигналов.
      *     @type \Tinkoff\Invest\V1\PageResponse $paging
      *          Данные по пагинации.
@@ -60,7 +60,7 @@ class GetSignalsResponse extends \Google\Protobuf\Internal\Message
      *Массив сигналов.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.Signal signals = 1;</code>
-     * @param \Tinkoff\Invest\V1\Signal[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\Signal>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setSignals($var)
@@ -79,7 +79,7 @@ class GetSignalsResponse extends \Google\Protobuf\Internal\Message
      */
     public function getPaging()
     {
-        return isset($this->paging) ? $this->paging : null;
+        return $this->paging;
     }
 
     public function hasPaging()

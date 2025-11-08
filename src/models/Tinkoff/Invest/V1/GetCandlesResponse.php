@@ -28,7 +28,7 @@ class GetCandlesResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Tinkoff\Invest\V1\HistoricCandle[]|\Google\Protobuf\Internal\RepeatedField $candles
+     *     @type array<\Tinkoff\Invest\V1\HistoricCandle>|\Google\Protobuf\Internal\RepeatedField $candles
      *          Массив свечей.
      * }
      */
@@ -52,7 +52,7 @@ class GetCandlesResponse extends \Google\Protobuf\Internal\Message
      *Массив свечей.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.HistoricCandle candles = 1;</code>
-     * @param \Tinkoff\Invest\V1\HistoricCandle[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\HistoricCandle>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setCandles($var)

@@ -53,6 +53,12 @@ class MarketValueType
      * Generated from protobuf enum <code>INSTRUMENT_VALUE_THEOR_PRICE = 6;</code>
      */
     const INSTRUMENT_VALUE_THEOR_PRICE = 6;
+    /**
+     *Доходность
+     *
+     * Generated from protobuf enum <code>INSTRUMENT_VALUE_YIELD = 7;</code>
+     */
+    const INSTRUMENT_VALUE_YIELD = 7;
 
     private static $valueToName = [
         self::INSTRUMENT_VALUE_UNSPECIFIED => 'INSTRUMENT_VALUE_UNSPECIFIED',
@@ -62,6 +68,7 @@ class MarketValueType
         self::INSTRUMENT_VALUE_EVENING_SESSION_PRICE => 'INSTRUMENT_VALUE_EVENING_SESSION_PRICE',
         self::INSTRUMENT_VALUE_OPEN_INTEREST => 'INSTRUMENT_VALUE_OPEN_INTEREST',
         self::INSTRUMENT_VALUE_THEOR_PRICE => 'INSTRUMENT_VALUE_THEOR_PRICE',
+        self::INSTRUMENT_VALUE_YIELD => 'INSTRUMENT_VALUE_YIELD',
     ];
 
     public static function name($value)

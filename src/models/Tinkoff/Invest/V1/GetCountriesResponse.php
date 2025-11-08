@@ -28,7 +28,7 @@ class GetCountriesResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Tinkoff\Invest\V1\CountryResponse[]|\Google\Protobuf\Internal\RepeatedField $countries
+     *     @type array<\Tinkoff\Invest\V1\CountryResponse>|\Google\Protobuf\Internal\RepeatedField $countries
      *          Массив стран.
      * }
      */
@@ -52,7 +52,7 @@ class GetCountriesResponse extends \Google\Protobuf\Internal\Message
      *Массив стран.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.CountryResponse countries = 1;</code>
-     * @param \Tinkoff\Invest\V1\CountryResponse[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\CountryResponse>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setCountries($var)

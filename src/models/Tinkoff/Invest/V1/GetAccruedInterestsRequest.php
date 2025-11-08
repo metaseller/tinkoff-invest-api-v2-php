@@ -100,7 +100,7 @@ class GetAccruedInterestsRequest extends \Google\Protobuf\Internal\Message
      */
     public function getFrom()
     {
-        return isset($this->from) ? $this->from : null;
+        return $this->from;
     }
 
     public function hasFrom()
@@ -136,7 +136,7 @@ class GetAccruedInterestsRequest extends \Google\Protobuf\Internal\Message
      */
     public function getTo()
     {
-        return isset($this->to) ? $this->to : null;
+        return $this->to;
     }
 
     public function hasTo()

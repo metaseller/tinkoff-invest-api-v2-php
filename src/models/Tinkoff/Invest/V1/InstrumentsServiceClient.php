@@ -197,6 +197,7 @@ class InstrumentsServiceClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @deprecated
      * Deprecated Options — список опционов
      * @param \Tinkoff\Invest\V1\InstrumentsRequest $argument input argument
      * @param array $metadata metadata

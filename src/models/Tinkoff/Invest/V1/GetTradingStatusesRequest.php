@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetTradingStatusesRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`
      *
      * Generated from protobuf field <code>repeated string instrument_id = 1;</code>
      */
@@ -28,8 +28,8 @@ class GetTradingStatusesRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $instrument_id
-     *          Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $instrument_id
+     *          Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +38,7 @@ class GetTradingStatusesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`
      *
      * Generated from protobuf field <code>repeated string instrument_id = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -49,10 +49,10 @@ class GetTradingStatusesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`
      *
      * Generated from protobuf field <code>repeated string instrument_id = 1;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setInstrumentId($var)

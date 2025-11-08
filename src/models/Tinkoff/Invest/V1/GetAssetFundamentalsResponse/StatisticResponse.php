@@ -1721,7 +1721,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      */
     public function getExDividendDate()
     {
-        return isset($this->ex_dividend_date) ? $this->ex_dividend_date : null;
+        return $this->ex_dividend_date;
     }
 
     public function hasExDividendDate()
@@ -1755,7 +1755,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      */
     public function getFiscalPeriodStartDate()
     {
-        return isset($this->fiscal_period_start_date) ? $this->fiscal_period_start_date : null;
+        return $this->fiscal_period_start_date;
     }
 
     public function hasFiscalPeriodStartDate()
@@ -1791,7 +1791,7 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      */
     public function getFiscalPeriodEndDate()
     {
-        return isset($this->fiscal_period_end_date) ? $this->fiscal_period_end_date : null;
+        return $this->fiscal_period_end_date;
     }
 
     public function hasFiscalPeriodEndDate()

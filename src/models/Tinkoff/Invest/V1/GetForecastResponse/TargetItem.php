@@ -229,7 +229,7 @@ class TargetItem extends \Google\Protobuf\Internal\Message
      */
     public function getRecommendationDate()
     {
-        return isset($this->recommendation_date) ? $this->recommendation_date : null;
+        return $this->recommendation_date;
     }
 
     public function hasRecommendationDate()
@@ -291,7 +291,7 @@ class TargetItem extends \Google\Protobuf\Internal\Message
      */
     public function getCurrentPrice()
     {
-        return isset($this->current_price) ? $this->current_price : null;
+        return $this->current_price;
     }
 
     public function hasCurrentPrice()
@@ -327,7 +327,7 @@ class TargetItem extends \Google\Protobuf\Internal\Message
      */
     public function getTargetPrice()
     {
-        return isset($this->target_price) ? $this->target_price : null;
+        return $this->target_price;
     }
 
     public function hasTargetPrice()
@@ -363,7 +363,7 @@ class TargetItem extends \Google\Protobuf\Internal\Message
      */
     public function getPriceChange()
     {
-        return isset($this->price_change) ? $this->price_change : null;
+        return $this->price_change;
     }
 
     public function hasPriceChange()
@@ -399,7 +399,7 @@ class TargetItem extends \Google\Protobuf\Internal\Message
      */
     public function getPriceChangeRel()
     {
-        return isset($this->price_change_rel) ? $this->price_change_rel : null;
+        return $this->price_change_rel;
     }
 
     public function hasPriceChangeRel()

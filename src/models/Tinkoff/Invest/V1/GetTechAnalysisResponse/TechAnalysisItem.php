@@ -22,31 +22,31 @@ class TechAnalysisItem extends \Google\Protobuf\Internal\Message
     /**
      *Значение простого скользящего среднего (средней линии).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation middle_band = 2;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation middle_band = 2;</code>
      */
     protected $middle_band = null;
     /**
      *Значение верхней линии Боллинджера.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation upper_band = 3;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation upper_band = 3;</code>
      */
     protected $upper_band = null;
     /**
      *Значение нижней линии Боллинджера.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation lower_band = 4;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation lower_band = 4;</code>
      */
     protected $lower_band = null;
     /**
      *Значение сигнальной линии.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation signal = 5;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation signal = 5;</code>
      */
     protected $signal = null;
     /**
      *Значение линии MACD.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation macd = 6;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation macd = 6;</code>
      */
     protected $macd = null;
 
@@ -83,7 +83,7 @@ class TechAnalysisItem extends \Google\Protobuf\Internal\Message
      */
     public function getTimestamp()
     {
-        return isset($this->timestamp) ? $this->timestamp : null;
+        return $this->timestamp;
     }
 
     public function hasTimestamp()
@@ -114,12 +114,12 @@ class TechAnalysisItem extends \Google\Protobuf\Internal\Message
     /**
      *Значение простого скользящего среднего (средней линии).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation middle_band = 2;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation middle_band = 2;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getMiddleBand()
     {
-        return isset($this->middle_band) ? $this->middle_band : null;
+        return $this->middle_band;
     }
 
     public function hasMiddleBand()
@@ -135,7 +135,7 @@ class TechAnalysisItem extends \Google\Protobuf\Internal\Message
     /**
      *Значение простого скользящего среднего (средней линии).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation middle_band = 2;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation middle_band = 2;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
@@ -150,12 +150,12 @@ class TechAnalysisItem extends \Google\Protobuf\Internal\Message
     /**
      *Значение верхней линии Боллинджера.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation upper_band = 3;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation upper_band = 3;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getUpperBand()
     {
-        return isset($this->upper_band) ? $this->upper_band : null;
+        return $this->upper_band;
     }
 
     public function hasUpperBand()
@@ -171,7 +171,7 @@ class TechAnalysisItem extends \Google\Protobuf\Internal\Message
     /**
      *Значение верхней линии Боллинджера.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation upper_band = 3;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation upper_band = 3;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
@@ -186,12 +186,12 @@ class TechAnalysisItem extends \Google\Protobuf\Internal\Message
     /**
      *Значение нижней линии Боллинджера.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation lower_band = 4;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation lower_band = 4;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getLowerBand()
     {
-        return isset($this->lower_band) ? $this->lower_band : null;
+        return $this->lower_band;
     }
 
     public function hasLowerBand()
@@ -207,7 +207,7 @@ class TechAnalysisItem extends \Google\Protobuf\Internal\Message
     /**
      *Значение нижней линии Боллинджера.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation lower_band = 4;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation lower_band = 4;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
@@ -222,12 +222,12 @@ class TechAnalysisItem extends \Google\Protobuf\Internal\Message
     /**
      *Значение сигнальной линии.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation signal = 5;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation signal = 5;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getSignal()
     {
-        return isset($this->signal) ? $this->signal : null;
+        return $this->signal;
     }
 
     public function hasSignal()
@@ -243,7 +243,7 @@ class TechAnalysisItem extends \Google\Protobuf\Internal\Message
     /**
      *Значение сигнальной линии.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation signal = 5;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation signal = 5;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
@@ -258,12 +258,12 @@ class TechAnalysisItem extends \Google\Protobuf\Internal\Message
     /**
      *Значение линии MACD.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation macd = 6;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation macd = 6;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getMacd()
     {
-        return isset($this->macd) ? $this->macd : null;
+        return $this->macd;
     }
 
     public function hasMacd()
@@ -279,7 +279,7 @@ class TechAnalysisItem extends \Google\Protobuf\Internal\Message
     /**
      *Значение линии MACD.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation macd = 6;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation macd = 6;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */

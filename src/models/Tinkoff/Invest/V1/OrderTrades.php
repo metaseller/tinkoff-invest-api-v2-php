@@ -72,7 +72,7 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
      *          Направление сделки.
      *     @type string $figi
      *          Figi-идентификатор инструмента.
-     *     @type \Tinkoff\Invest\V1\OrderTrade[]|\Google\Protobuf\Internal\RepeatedField $trades
+     *     @type array<\Tinkoff\Invest\V1\OrderTrade>|\Google\Protobuf\Internal\RepeatedField $trades
      *          Массив сделок.
      *     @type string $account_id
      *          Идентификатор счета.
@@ -119,7 +119,7 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
      */
     public function getCreatedAt()
     {
-        return isset($this->created_at) ? $this->created_at : null;
+        return $this->created_at;
     }
 
     public function hasCreatedAt()
@@ -214,7 +214,7 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
      *Массив сделок.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OrderTrade trades = 5;</code>
-     * @param \Tinkoff\Invest\V1\OrderTrade[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\OrderTrade>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setTrades($var)

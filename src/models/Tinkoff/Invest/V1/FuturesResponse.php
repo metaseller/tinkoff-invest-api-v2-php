@@ -28,7 +28,7 @@ class FuturesResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Tinkoff\Invest\V1\Future[]|\Google\Protobuf\Internal\RepeatedField $instruments
+     *     @type array<\Tinkoff\Invest\V1\Future>|\Google\Protobuf\Internal\RepeatedField $instruments
      *          Массив фьючерсов.
      * }
      */
@@ -52,7 +52,7 @@ class FuturesResponse extends \Google\Protobuf\Internal\Message
      *Массив фьючерсов.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.Future instruments = 1;</code>
-     * @param \Tinkoff\Invest\V1\Future[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\Future>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setInstruments($var)

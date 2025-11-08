@@ -42,7 +42,7 @@ class StreamLimit extends \Google\Protobuf\Internal\Message
      *
      *     @type int $limit
      *          Максимальное количество stream-соединений.
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $streams
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $streams
      *          Названия stream-методов.
      *     @type int $open
      *          Текущее количество открытых stream-соединений.
@@ -94,7 +94,7 @@ class StreamLimit extends \Google\Protobuf\Internal\Message
      *Названия stream-методов.
      *
      * Generated from protobuf field <code>repeated string streams = 2;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setStreams($var)

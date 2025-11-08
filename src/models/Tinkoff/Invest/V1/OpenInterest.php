@@ -31,6 +31,18 @@ class OpenInterest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int64 open_interest = 3;</code>
      */
     protected $open_interest = 0;
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 4;</code>
+     */
+    protected $ticker = '';
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 5;</code>
+     */
+    protected $class_code = '';
 
     /**
      * Constructor.
@@ -44,6 +56,10 @@ class OpenInterest extends \Google\Protobuf\Internal\Message
      *          Время получения открытого интереса в часовом поясе UTC по времени биржи.
      *     @type int|string $open_interest
      *          Открытый интерес.
+     *     @type string $ticker
+     *          Тикер инструмента.
+     *     @type string $class_code
+     *          Класс-код (секция торгов).
      * }
      */
     public function __construct($data = NULL) {
@@ -85,7 +101,7 @@ class OpenInterest extends \Google\Protobuf\Internal\Message
      */
     public function getTime()
     {
-        return isset($this->time) ? $this->time : null;
+        return $this->time;
     }
 
     public function hasTime()
@@ -135,6 +151,58 @@ class OpenInterest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt64($var);
         $this->open_interest = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 4;</code>
+     * @return string
+     */
+    public function getTicker()
+    {
+        return $this->ticker;
+    }
+
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 4;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTicker($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->ticker = $var;
+
+        return $this;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 5;</code>
+     * @return string
+     */
+    public function getClassCode()
+    {
+        return $this->class_code;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 5;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setClassCode($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->class_code = $var;
 
         return $this;
     }

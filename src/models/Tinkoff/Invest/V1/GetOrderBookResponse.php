@@ -64,6 +64,24 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      */
     protected $limit_down = null;
     /**
+     *UID инструмента.
+     *
+     * Generated from protobuf field <code>string instrument_uid = 9;</code>
+     */
+    protected $instrument_uid = '';
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 10;</code>
+     */
+    protected $ticker = '';
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 11;</code>
+     */
+    protected $class_code = '';
+    /**
      *Время получения цены последней сделки.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp last_price_ts = 21;</code>
@@ -81,12 +99,6 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.google.protobuf.Timestamp orderbook_ts = 23;</code>
      */
     protected $orderbook_ts = null;
-    /**
-     *UID инструмента.
-     *
-     * Generated from protobuf field <code>string instrument_uid = 9;</code>
-     */
-    protected $instrument_uid = '';
 
     /**
      * Constructor.
@@ -98,9 +110,9 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      *          FIGI-идентификатор инструмента.
      *     @type int $depth
      *          Глубина стакана.
-     *     @type \Tinkoff\Invest\V1\Order[]|\Google\Protobuf\Internal\RepeatedField $bids
+     *     @type array<\Tinkoff\Invest\V1\Order>|\Google\Protobuf\Internal\RepeatedField $bids
      *          Множество пар значений на покупку.
-     *     @type \Tinkoff\Invest\V1\Order[]|\Google\Protobuf\Internal\RepeatedField $asks
+     *     @type array<\Tinkoff\Invest\V1\Order>|\Google\Protobuf\Internal\RepeatedField $asks
      *          Множество пар значений на продажу.
      *     @type \Tinkoff\Invest\V1\Quotation $last_price
      *          Цена последней сделки за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
@@ -110,14 +122,18 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      *          Верхний лимит цены за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
      *     @type \Tinkoff\Invest\V1\Quotation $limit_down
      *          Нижний лимит цены за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
+     *     @type string $instrument_uid
+     *          UID инструмента.
+     *     @type string $ticker
+     *          Тикер инструмента.
+     *     @type string $class_code
+     *          Класс-код (секция торгов).
      *     @type \Google\Protobuf\Timestamp $last_price_ts
      *          Время получения цены последней сделки.
      *     @type \Google\Protobuf\Timestamp $close_price_ts
      *          Время получения цены закрытия.
      *     @type \Google\Protobuf\Timestamp $orderbook_ts
      *          Время формирования стакана на бирже.
-     *     @type string $instrument_uid
-     *          UID инструмента.
      * }
      */
     public function __construct($data = NULL) {
@@ -192,7 +208,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      *Множество пар значений на покупку.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.Order bids = 3;</code>
-     * @param \Tinkoff\Invest\V1\Order[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\Order>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setBids($var)
@@ -218,7 +234,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      *Множество пар значений на продажу.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.Order asks = 4;</code>
-     * @param \Tinkoff\Invest\V1\Order[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\Order>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setAsks($var)
@@ -237,7 +253,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      */
     public function getLastPrice()
     {
-        return isset($this->last_price) ? $this->last_price : null;
+        return $this->last_price;
     }
 
     public function hasLastPrice()
@@ -273,7 +289,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      */
     public function getClosePrice()
     {
-        return isset($this->close_price) ? $this->close_price : null;
+        return $this->close_price;
     }
 
     public function hasClosePrice()
@@ -309,7 +325,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      */
     public function getLimitUp()
     {
-        return isset($this->limit_up) ? $this->limit_up : null;
+        return $this->limit_up;
     }
 
     public function hasLimitUp()
@@ -345,7 +361,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      */
     public function getLimitDown()
     {
-        return isset($this->limit_down) ? $this->limit_down : null;
+        return $this->limit_down;
     }
 
     public function hasLimitDown()
@@ -374,6 +390,84 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *UID инструмента.
+     *
+     * Generated from protobuf field <code>string instrument_uid = 9;</code>
+     * @return string
+     */
+    public function getInstrumentUid()
+    {
+        return $this->instrument_uid;
+    }
+
+    /**
+     *UID инструмента.
+     *
+     * Generated from protobuf field <code>string instrument_uid = 9;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setInstrumentUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->instrument_uid = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 10;</code>
+     * @return string
+     */
+    public function getTicker()
+    {
+        return $this->ticker;
+    }
+
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 10;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTicker($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->ticker = $var;
+
+        return $this;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 11;</code>
+     * @return string
+     */
+    public function getClassCode()
+    {
+        return $this->class_code;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 11;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setClassCode($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->class_code = $var;
+
+        return $this;
+    }
+
+    /**
      *Время получения цены последней сделки.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp last_price_ts = 21;</code>
@@ -381,7 +475,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      */
     public function getLastPriceTs()
     {
-        return isset($this->last_price_ts) ? $this->last_price_ts : null;
+        return $this->last_price_ts;
     }
 
     public function hasLastPriceTs()
@@ -417,7 +511,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      */
     public function getClosePriceTs()
     {
-        return isset($this->close_price_ts) ? $this->close_price_ts : null;
+        return $this->close_price_ts;
     }
 
     public function hasClosePriceTs()
@@ -453,7 +547,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      */
     public function getOrderbookTs()
     {
-        return isset($this->orderbook_ts) ? $this->orderbook_ts : null;
+        return $this->orderbook_ts;
     }
 
     public function hasOrderbookTs()
@@ -477,32 +571,6 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->orderbook_ts = $var;
-
-        return $this;
-    }
-
-    /**
-     *UID инструмента.
-     *
-     * Generated from protobuf field <code>string instrument_uid = 9;</code>
-     * @return string
-     */
-    public function getInstrumentUid()
-    {
-        return $this->instrument_uid;
-    }
-
-    /**
-     *UID инструмента.
-     *
-     * Generated from protobuf field <code>string instrument_uid = 9;</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setInstrumentUid($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->instrument_uid = $var;
 
         return $this;
     }

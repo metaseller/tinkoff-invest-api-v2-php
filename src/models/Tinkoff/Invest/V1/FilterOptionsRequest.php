@@ -18,13 +18,13 @@ class FilterOptionsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор базового актива опциона.  Обязательный параметр.
      *
-     * Generated from protobuf field <code>string basic_asset_uid = 1;</code>
+     * Generated from protobuf field <code>optional string basic_asset_uid = 1;</code>
      */
     protected $basic_asset_uid = null;
     /**
      *Идентификатор позиции базового актива опциона.
      *
-     * Generated from protobuf field <code>string basic_asset_position_uid = 2;</code>
+     * Generated from protobuf field <code>optional string basic_asset_position_uid = 2;</code>
      */
     protected $basic_asset_position_uid = null;
 
@@ -48,7 +48,7 @@ class FilterOptionsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор базового актива опциона.  Обязательный параметр.
      *
-     * Generated from protobuf field <code>string basic_asset_uid = 1;</code>
+     * Generated from protobuf field <code>optional string basic_asset_uid = 1;</code>
      * @return string
      */
     public function getBasicAssetUid()
@@ -69,7 +69,7 @@ class FilterOptionsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор базового актива опциона.  Обязательный параметр.
      *
-     * Generated from protobuf field <code>string basic_asset_uid = 1;</code>
+     * Generated from protobuf field <code>optional string basic_asset_uid = 1;</code>
      * @param string $var
      * @return $this
      */
@@ -84,7 +84,7 @@ class FilterOptionsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор позиции базового актива опциона.
      *
-     * Generated from protobuf field <code>string basic_asset_position_uid = 2;</code>
+     * Generated from protobuf field <code>optional string basic_asset_position_uid = 2;</code>
      * @return string
      */
     public function getBasicAssetPositionUid()
@@ -105,7 +105,7 @@ class FilterOptionsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор позиции базового актива опциона.
      *
-     * Generated from protobuf field <code>string basic_asset_position_uid = 2;</code>
+     * Generated from protobuf field <code>optional string basic_asset_position_uid = 2;</code>
      * @param string $var
      * @return $this
      */

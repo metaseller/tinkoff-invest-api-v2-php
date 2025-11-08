@@ -23,7 +23,7 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
      */
     private $figi;
     /**
-     *Массив идентификаторов инструмента. Принимает значения `figi` или `instrument_uid`.
+     *Массив идентификаторов инструмента. Принимает значения `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>repeated string instrument_id = 2;</code>
      */
@@ -37,7 +37,7 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 9;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 9;</code>
      */
     protected $instrument_status = null;
 
@@ -47,10 +47,10 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $figi
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $figi
      *          Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $instrument_id
-     *          Массив идентификаторов инструмента. Принимает значения `figi` или `instrument_uid`.
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $instrument_id
+     *          Массив идентификаторов инструмента. Принимает значения `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *     @type int $last_price_type
      *          Тип запрашиваемой последней цены.
      *     @type int $instrument_status
@@ -79,7 +79,7 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
      *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *
      * Generated from protobuf field <code>repeated string figi = 1 [deprecated = true];</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      * @deprecated
      */
@@ -93,7 +93,7 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив идентификаторов инструмента. Принимает значения `figi` или `instrument_uid`.
+     *Массив идентификаторов инструмента. Принимает значения `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>repeated string instrument_id = 2;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -104,10 +104,10 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Массив идентификаторов инструмента. Принимает значения `figi` или `instrument_uid`.
+     *Массив идентификаторов инструмента. Принимает значения `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>repeated string instrument_id = 2;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setInstrumentId($var)
@@ -147,7 +147,7 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 9;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 9;</code>
      * @return int
      */
     public function getInstrumentStatus()
@@ -168,7 +168,7 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 9;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 9;</code>
      * @param int $var
      * @return $this
      */

@@ -113,7 +113,7 @@ class PostStopOrderResponse extends \Google\Protobuf\Internal\Message
      */
     public function getResponseMetadata()
     {
-        return isset($this->response_metadata) ? $this->response_metadata : null;
+        return $this->response_metadata;
     }
 
     public function hasResponseMetadata()
