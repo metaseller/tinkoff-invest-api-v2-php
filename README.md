@@ -286,9 +286,20 @@ $stream->cancel();
 
 # Обновления
 
+- *Вер. 0.4.23 от 2025-11-11*.
+
+Обновлены контракты.
+PR от [Andrey Veprikov](https://github.com/aveprikov).
+
+- *Вер. 0.4.22 от 2025-09-07*.
+
+Обновлены контракты и сертификаты. 
+PR от [Andrey Veprikov](https://github.com/aveprikov). 
+
 - *Вер. 0.4.21 от 2025-09-07*. 
  
-Обновлены контракты. Смержен PR от [Andrey Veprikov](https://github.com/aveprikov):
+Обновлены контракты. 
+PR от [Andrey Veprikov](https://github.com/aveprikov):
 
 ```
 Новый домен API подписан сертификатом Минцифры, в связи с этим:
