@@ -69,7 +69,7 @@ class OrderStage extends \Google\Protobuf\Internal\Message
      */
     public function getPrice()
     {
-        return $this->price;
+        return isset($this->price) ? $this->price : null;
     }
 
     public function hasPrice()
@@ -157,7 +157,7 @@ class OrderStage extends \Google\Protobuf\Internal\Message
      */
     public function getExecutionTime()
     {
-        return $this->execution_time;
+        return isset($this->execution_time) ? $this->execution_time : null;
     }
 
     public function hasExecutionTime()

@@ -36,7 +36,7 @@ class SubscribeOrderBookResponse extends \Google\Protobuf\Internal\Message
      *
      *     @type string $tracking_id
      *          Уникальный идентификатор запроса. [Подробнее](./grpc#tracking-id).
-     *     @type array<\Tinkoff\Invest\V1\OrderBookSubscription>|\Google\Protobuf\Internal\RepeatedField $order_book_subscriptions
+     *     @type \Tinkoff\Invest\V1\OrderBookSubscription[]|\Google\Protobuf\Internal\RepeatedField $order_book_subscriptions
      *          Массив статусов подписки на стаканы.
      * }
      */
@@ -86,7 +86,7 @@ class SubscribeOrderBookResponse extends \Google\Protobuf\Internal\Message
      *Массив статусов подписки на стаканы.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OrderBookSubscription order_book_subscriptions = 2;</code>
-     * @param array<\Tinkoff\Invest\V1\OrderBookSubscription>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\OrderBookSubscription[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setOrderBookSubscriptions($var)

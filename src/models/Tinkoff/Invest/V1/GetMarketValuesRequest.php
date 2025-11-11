@@ -32,9 +32,9 @@ class GetMarketValuesRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $instrument_id
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $instrument_id
      *          Массив идентификаторов инструментов. Принимает значения `figi`, `instrument_uid` или `ticker + '_' + class_code`.
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $values
+     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $values
      *          Массив запрашиваемых параметров.
      * }
      */
@@ -58,7 +58,7 @@ class GetMarketValuesRequest extends \Google\Protobuf\Internal\Message
      *Массив идентификаторов инструментов. Принимает значения `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
      * Generated from protobuf field <code>repeated string instrument_id = 1;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setInstrumentId($var)
@@ -84,7 +84,7 @@ class GetMarketValuesRequest extends \Google\Protobuf\Internal\Message
      *Массив запрашиваемых параметров.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.MarketValueType values = 2;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setValues($var)

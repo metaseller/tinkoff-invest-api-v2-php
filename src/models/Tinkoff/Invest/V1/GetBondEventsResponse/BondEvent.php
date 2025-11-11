@@ -255,7 +255,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      */
     public function getEventDate()
     {
-        return $this->event_date;
+        return isset($this->event_date) ? $this->event_date : null;
     }
 
     public function hasEventDate()
@@ -317,7 +317,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      */
     public function getEventTotalVol()
     {
-        return $this->event_total_vol;
+        return isset($this->event_total_vol) ? $this->event_total_vol : null;
     }
 
     public function hasEventTotalVol()
@@ -353,7 +353,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      */
     public function getFixDate()
     {
-        return $this->fix_date;
+        return isset($this->fix_date) ? $this->fix_date : null;
     }
 
     public function hasFixDate()
@@ -389,7 +389,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      */
     public function getRateDate()
     {
-        return $this->rate_date;
+        return isset($this->rate_date) ? $this->rate_date : null;
     }
 
     public function hasRateDate()
@@ -425,7 +425,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      */
     public function getDefaultDate()
     {
-        return $this->default_date;
+        return isset($this->default_date) ? $this->default_date : null;
     }
 
     public function hasDefaultDate()
@@ -461,7 +461,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      */
     public function getRealPayDate()
     {
-        return $this->real_pay_date;
+        return isset($this->real_pay_date) ? $this->real_pay_date : null;
     }
 
     public function hasRealPayDate()
@@ -497,7 +497,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      */
     public function getPayDate()
     {
-        return $this->pay_date;
+        return isset($this->pay_date) ? $this->pay_date : null;
     }
 
     public function hasPayDate()
@@ -533,7 +533,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      */
     public function getPayOneBond()
     {
-        return $this->pay_one_bond;
+        return isset($this->pay_one_bond) ? $this->pay_one_bond : null;
     }
 
     public function hasPayOneBond()
@@ -569,7 +569,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      */
     public function getMoneyFlowVal()
     {
-        return $this->money_flow_val;
+        return isset($this->money_flow_val) ? $this->money_flow_val : null;
     }
 
     public function hasMoneyFlowVal()
@@ -657,7 +657,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      */
     public function getValue()
     {
-        return $this->value;
+        return isset($this->value) ? $this->value : null;
     }
 
     public function hasValue()
@@ -745,7 +745,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      */
     public function getCouponStartDate()
     {
-        return $this->coupon_start_date;
+        return isset($this->coupon_start_date) ? $this->coupon_start_date : null;
     }
 
     public function hasCouponStartDate()
@@ -781,7 +781,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      */
     public function getCouponEndDate()
     {
-        return $this->coupon_end_date;
+        return isset($this->coupon_end_date) ? $this->coupon_end_date : null;
     }
 
     public function hasCouponEndDate()
@@ -843,7 +843,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      */
     public function getCouponInterestRate()
     {
-        return $this->coupon_interest_rate;
+        return isset($this->coupon_interest_rate) ? $this->coupon_interest_rate : null;
     }
 
     public function hasCouponInterestRate()

@@ -30,7 +30,7 @@ class EditFavoritesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Уникальный идентификатор группы.
      *
-     * Generated from protobuf field <code>optional string group_id = 7;</code>
+     * Generated from protobuf field <code>string group_id = 7;</code>
      */
     protected $group_id = null;
 
@@ -40,7 +40,7 @@ class EditFavoritesRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Tinkoff\Invest\V1\EditFavoritesRequestInstrument>|\Google\Protobuf\Internal\RepeatedField $instruments
+     *     @type \Tinkoff\Invest\V1\EditFavoritesRequestInstrument[]|\Google\Protobuf\Internal\RepeatedField $instruments
      *          Массив инструментов.
      *     @type int $action_type
      *          Тип действия со списком.
@@ -68,7 +68,7 @@ class EditFavoritesRequest extends \Google\Protobuf\Internal\Message
      *Массив инструментов.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.EditFavoritesRequestInstrument instruments = 1 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @param array<\Tinkoff\Invest\V1\EditFavoritesRequestInstrument>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\EditFavoritesRequestInstrument[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setInstruments($var)
@@ -108,7 +108,7 @@ class EditFavoritesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Уникальный идентификатор группы.
      *
-     * Generated from protobuf field <code>optional string group_id = 7;</code>
+     * Generated from protobuf field <code>string group_id = 7;</code>
      * @return string
      */
     public function getGroupId()
@@ -129,7 +129,7 @@ class EditFavoritesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Уникальный идентификатор группы.
      *
-     * Generated from protobuf field <code>optional string group_id = 7;</code>
+     * Generated from protobuf field <code>string group_id = 7;</code>
      * @param string $var
      * @return $this
      */

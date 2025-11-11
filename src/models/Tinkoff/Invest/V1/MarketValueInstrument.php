@@ -46,7 +46,7 @@ class MarketValueInstrument extends \Google\Protobuf\Internal\Message
      *
      *     @type string $instrument_uid
      *          Идентификатор инструмента.
-     *     @type array<\Tinkoff\Invest\V1\MarketValue>|\Google\Protobuf\Internal\RepeatedField $values
+     *     @type \Tinkoff\Invest\V1\MarketValue[]|\Google\Protobuf\Internal\RepeatedField $values
      *          Массив параметров инструмента.
      *     @type string $ticker
      *          Тикер инструмента.
@@ -100,7 +100,7 @@ class MarketValueInstrument extends \Google\Protobuf\Internal\Message
      *Массив параметров инструмента.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.MarketValue values = 2;</code>
-     * @param array<\Tinkoff\Invest\V1\MarketValue>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\MarketValue[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setValues($var)

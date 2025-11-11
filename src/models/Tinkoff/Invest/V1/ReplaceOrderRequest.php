@@ -42,13 +42,13 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Цена за 1 инструмент.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation price = 12;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 12;</code>
      */
     protected $price = null;
     /**
      *Тип цены.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.PriceType price_type = 13;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PriceType price_type = 13;</code>
      */
     protected $price_type = null;
     /**
@@ -192,12 +192,12 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Цена за 1 инструмент.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation price = 12;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 12;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getPrice()
     {
-        return $this->price;
+        return isset($this->price) ? $this->price : null;
     }
 
     public function hasPrice()
@@ -213,7 +213,7 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Цена за 1 инструмент.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation price = 12;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 12;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
@@ -228,7 +228,7 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Тип цены.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.PriceType price_type = 13;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PriceType price_type = 13;</code>
      * @return int
      */
     public function getPriceType()
@@ -249,7 +249,7 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Тип цены.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.PriceType price_type = 13;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PriceType price_type = 13;</code>
      * @param int $var
      * @return $this
      */

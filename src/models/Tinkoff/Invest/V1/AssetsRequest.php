@@ -16,13 +16,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class AssetsRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentType instrument_type = 1;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_type = 1;</code>
      */
     protected $instrument_type = null;
     /**
      *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 2;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 2;</code>
      */
     protected $instrument_status = null;
 
@@ -43,7 +43,7 @@ class AssetsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentType instrument_type = 1;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_type = 1;</code>
      * @return int
      */
     public function getInstrumentType()
@@ -62,7 +62,7 @@ class AssetsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentType instrument_type = 1;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_type = 1;</code>
      * @param int $var
      * @return $this
      */
@@ -77,7 +77,7 @@ class AssetsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 2;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 2;</code>
      * @return int
      */
     public function getInstrumentStatus()
@@ -98,7 +98,7 @@ class AssetsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 2;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 2;</code>
      * @param int $var
      * @return $this
      */

@@ -60,7 +60,7 @@ class Signal extends \Google\Protobuf\Internal\Message
     /**
      *Дополнительная информация о сигнале.
      *
-     * Generated from protobuf field <code>optional string info = 8;</code>
+     * Generated from protobuf field <code>string info = 8;</code>
      */
     protected $info = null;
     /**
@@ -84,25 +84,25 @@ class Signal extends \Google\Protobuf\Internal\Message
     /**
      *Вероятность сигнала.
      *
-     * Generated from protobuf field <code>optional int32 probability = 12;</code>
+     * Generated from protobuf field <code>int32 probability = 12;</code>
      */
     protected $probability = null;
     /**
      *Порог закрытия сигнала по стоплосс.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation stoploss = 13;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation stoploss = 13;</code>
      */
     protected $stoploss = null;
     /**
      *Цена закрытия сигнала.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation close_price = 14;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation close_price = 14;</code>
      */
     protected $close_price = null;
     /**
      *Дата и время закрытия сигнала по UTC.
      *
-     * Generated from protobuf field <code>optional .google.protobuf.Timestamp close_dt = 15;</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp close_dt = 15;</code>
      */
     protected $close_dt = null;
 
@@ -261,7 +261,7 @@ class Signal extends \Google\Protobuf\Internal\Message
      */
     public function getCreateDt()
     {
-        return $this->create_dt;
+        return isset($this->create_dt) ? $this->create_dt : null;
     }
 
     public function hasCreateDt()
@@ -323,7 +323,7 @@ class Signal extends \Google\Protobuf\Internal\Message
      */
     public function getInitialPrice()
     {
-        return $this->initial_price;
+        return isset($this->initial_price) ? $this->initial_price : null;
     }
 
     public function hasInitialPrice()
@@ -354,7 +354,7 @@ class Signal extends \Google\Protobuf\Internal\Message
     /**
      *Дополнительная информация о сигнале.
      *
-     * Generated from protobuf field <code>optional string info = 8;</code>
+     * Generated from protobuf field <code>string info = 8;</code>
      * @return string
      */
     public function getInfo()
@@ -375,7 +375,7 @@ class Signal extends \Google\Protobuf\Internal\Message
     /**
      *Дополнительная информация о сигнале.
      *
-     * Generated from protobuf field <code>optional string info = 8;</code>
+     * Generated from protobuf field <code>string info = 8;</code>
      * @param string $var
      * @return $this
      */
@@ -421,7 +421,7 @@ class Signal extends \Google\Protobuf\Internal\Message
      */
     public function getTargetPrice()
     {
-        return $this->target_price;
+        return isset($this->target_price) ? $this->target_price : null;
     }
 
     public function hasTargetPrice()
@@ -457,7 +457,7 @@ class Signal extends \Google\Protobuf\Internal\Message
      */
     public function getEndDt()
     {
-        return $this->end_dt;
+        return isset($this->end_dt) ? $this->end_dt : null;
     }
 
     public function hasEndDt()
@@ -488,7 +488,7 @@ class Signal extends \Google\Protobuf\Internal\Message
     /**
      *Вероятность сигнала.
      *
-     * Generated from protobuf field <code>optional int32 probability = 12;</code>
+     * Generated from protobuf field <code>int32 probability = 12;</code>
      * @return int
      */
     public function getProbability()
@@ -509,7 +509,7 @@ class Signal extends \Google\Protobuf\Internal\Message
     /**
      *Вероятность сигнала.
      *
-     * Generated from protobuf field <code>optional int32 probability = 12;</code>
+     * Generated from protobuf field <code>int32 probability = 12;</code>
      * @param int $var
      * @return $this
      */
@@ -524,12 +524,12 @@ class Signal extends \Google\Protobuf\Internal\Message
     /**
      *Порог закрытия сигнала по стоплосс.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation stoploss = 13;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation stoploss = 13;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getStoploss()
     {
-        return $this->stoploss;
+        return isset($this->stoploss) ? $this->stoploss : null;
     }
 
     public function hasStoploss()
@@ -545,7 +545,7 @@ class Signal extends \Google\Protobuf\Internal\Message
     /**
      *Порог закрытия сигнала по стоплосс.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation stoploss = 13;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation stoploss = 13;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
@@ -560,12 +560,12 @@ class Signal extends \Google\Protobuf\Internal\Message
     /**
      *Цена закрытия сигнала.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation close_price = 14;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation close_price = 14;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getClosePrice()
     {
-        return $this->close_price;
+        return isset($this->close_price) ? $this->close_price : null;
     }
 
     public function hasClosePrice()
@@ -581,7 +581,7 @@ class Signal extends \Google\Protobuf\Internal\Message
     /**
      *Цена закрытия сигнала.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation close_price = 14;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation close_price = 14;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
@@ -596,12 +596,12 @@ class Signal extends \Google\Protobuf\Internal\Message
     /**
      *Дата и время закрытия сигнала по UTC.
      *
-     * Generated from protobuf field <code>optional .google.protobuf.Timestamp close_dt = 15;</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp close_dt = 15;</code>
      * @return \Google\Protobuf\Timestamp|null
      */
     public function getCloseDt()
     {
-        return $this->close_dt;
+        return isset($this->close_dt) ? $this->close_dt : null;
     }
 
     public function hasCloseDt()
@@ -617,7 +617,7 @@ class Signal extends \Google\Protobuf\Internal\Message
     /**
      *Дата и время закрытия сигнала по UTC.
      *
-     * Generated from protobuf field <code>optional .google.protobuf.Timestamp close_dt = 15;</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp close_dt = 15;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */

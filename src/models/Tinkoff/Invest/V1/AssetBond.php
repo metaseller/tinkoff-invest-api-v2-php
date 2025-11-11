@@ -205,7 +205,7 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      */
     public function getCurrentNominal()
     {
-        return $this->current_nominal;
+        return isset($this->current_nominal) ? $this->current_nominal : null;
     }
 
     public function hasCurrentNominal()
@@ -267,7 +267,7 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      */
     public function getIssueSize()
     {
-        return $this->issue_size;
+        return isset($this->issue_size) ? $this->issue_size : null;
     }
 
     public function hasIssueSize()
@@ -303,7 +303,7 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      */
     public function getNominal()
     {
-        return $this->nominal;
+        return isset($this->nominal) ? $this->nominal : null;
     }
 
     public function hasNominal()
@@ -625,7 +625,7 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      */
     public function getMaturityDate()
     {
-        return $this->maturity_date;
+        return isset($this->maturity_date) ? $this->maturity_date : null;
     }
 
     public function hasMaturityDate()
@@ -687,7 +687,7 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      */
     public function getStateRegDate()
     {
-        return $this->state_reg_date;
+        return isset($this->state_reg_date) ? $this->state_reg_date : null;
     }
 
     public function hasStateRegDate()
@@ -723,7 +723,7 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      */
     public function getPlacementDate()
     {
-        return $this->placement_date;
+        return isset($this->placement_date) ? $this->placement_date : null;
     }
 
     public function hasPlacementDate()
@@ -759,7 +759,7 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      */
     public function getPlacementPrice()
     {
-        return $this->placement_price;
+        return isset($this->placement_price) ? $this->placement_price : null;
     }
 
     public function hasPlacementPrice()
@@ -795,7 +795,7 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      */
     public function getIssueSizePlan()
     {
-        return $this->issue_size_plan;
+        return isset($this->issue_size_plan) ? $this->issue_size_plan : null;
     }
 
     public function hasIssueSizePlan()

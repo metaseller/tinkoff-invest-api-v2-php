@@ -28,7 +28,7 @@ class TradingSchedulesResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Tinkoff\Invest\V1\TradingSchedule>|\Google\Protobuf\Internal\RepeatedField $exchanges
+     *     @type \Tinkoff\Invest\V1\TradingSchedule[]|\Google\Protobuf\Internal\RepeatedField $exchanges
      *           Список торговых площадок и режимов торгов.
      * }
      */
@@ -52,7 +52,7 @@ class TradingSchedulesResponse extends \Google\Protobuf\Internal\Message
      * Список торговых площадок и режимов торгов.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.TradingSchedule exchanges = 1;</code>
-     * @param array<\Tinkoff\Invest\V1\TradingSchedule>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\TradingSchedule[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setExchanges($var)

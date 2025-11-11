@@ -24,7 +24,7 @@ class TradesStreamRequest extends \Google\Protobuf\Internal\Message
     /**
      *Задержка (пинг) сообщений: 5000–180 000 миллисекунд. Значение по умолчанию — 120 000.
      *
-     * Generated from protobuf field <code>optional int32 ping_delay_ms = 15;</code>
+     * Generated from protobuf field <code>int32 ping_delay_ms = 15;</code>
      */
     protected $ping_delay_ms = null;
 
@@ -34,7 +34,7 @@ class TradesStreamRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $accounts
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $accounts
      *          Идентификаторы счетов.
      *     @type int $ping_delay_ms
      *          Задержка (пинг) сообщений: 5000–180 000 миллисекунд. Значение по умолчанию — 120 000.
@@ -60,7 +60,7 @@ class TradesStreamRequest extends \Google\Protobuf\Internal\Message
      *Идентификаторы счетов.
      *
      * Generated from protobuf field <code>repeated string accounts = 1;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setAccounts($var)
@@ -74,7 +74,7 @@ class TradesStreamRequest extends \Google\Protobuf\Internal\Message
     /**
      *Задержка (пинг) сообщений: 5000–180 000 миллисекунд. Значение по умолчанию — 120 000.
      *
-     * Generated from protobuf field <code>optional int32 ping_delay_ms = 15;</code>
+     * Generated from protobuf field <code>int32 ping_delay_ms = 15;</code>
      * @return int
      */
     public function getPingDelayMs()
@@ -95,7 +95,7 @@ class TradesStreamRequest extends \Google\Protobuf\Internal\Message
     /**
      *Задержка (пинг) сообщений: 5000–180 000 миллисекунд. Значение по умолчанию — 120 000.
      *
-     * Generated from protobuf field <code>optional int32 ping_delay_ms = 15;</code>
+     * Generated from protobuf field <code>int32 ping_delay_ms = 15;</code>
      * @param int $var
      * @return $this
      */

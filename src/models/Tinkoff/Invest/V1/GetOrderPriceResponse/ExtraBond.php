@@ -51,7 +51,7 @@ class ExtraBond extends \Google\Protobuf\Internal\Message
      */
     public function getAciValue()
     {
-        return $this->aci_value;
+        return isset($this->aci_value) ? $this->aci_value : null;
     }
 
     public function hasAciValue()
@@ -87,7 +87,7 @@ class ExtraBond extends \Google\Protobuf\Internal\Message
      */
     public function getNominalConversionRate()
     {
-        return $this->nominal_conversion_rate;
+        return isset($this->nominal_conversion_rate) ? $this->nominal_conversion_rate : null;
     }
 
     public function hasNominalConversionRate()

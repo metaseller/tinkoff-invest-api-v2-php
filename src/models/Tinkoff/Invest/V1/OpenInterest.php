@@ -101,7 +101,7 @@ class OpenInterest extends \Google\Protobuf\Internal\Message
      */
     public function getTime()
     {
-        return $this->time;
+        return isset($this->time) ? $this->time : null;
     }
 
     public function hasTime()

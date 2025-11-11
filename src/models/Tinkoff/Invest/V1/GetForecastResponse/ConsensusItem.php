@@ -221,7 +221,7 @@ class ConsensusItem extends \Google\Protobuf\Internal\Message
      */
     public function getCurrentPrice()
     {
-        return $this->current_price;
+        return isset($this->current_price) ? $this->current_price : null;
     }
 
     public function hasCurrentPrice()
@@ -257,7 +257,7 @@ class ConsensusItem extends \Google\Protobuf\Internal\Message
      */
     public function getConsensus()
     {
-        return $this->consensus;
+        return isset($this->consensus) ? $this->consensus : null;
     }
 
     public function hasConsensus()
@@ -293,7 +293,7 @@ class ConsensusItem extends \Google\Protobuf\Internal\Message
      */
     public function getMinTarget()
     {
-        return $this->min_target;
+        return isset($this->min_target) ? $this->min_target : null;
     }
 
     public function hasMinTarget()
@@ -329,7 +329,7 @@ class ConsensusItem extends \Google\Protobuf\Internal\Message
      */
     public function getMaxTarget()
     {
-        return $this->max_target;
+        return isset($this->max_target) ? $this->max_target : null;
     }
 
     public function hasMaxTarget()
@@ -365,7 +365,7 @@ class ConsensusItem extends \Google\Protobuf\Internal\Message
      */
     public function getPriceChange()
     {
-        return $this->price_change;
+        return isset($this->price_change) ? $this->price_change : null;
     }
 
     public function hasPriceChange()
@@ -401,7 +401,7 @@ class ConsensusItem extends \Google\Protobuf\Internal\Message
      */
     public function getPriceChangeRel()
     {
-        return $this->price_change_rel;
+        return isset($this->price_change_rel) ? $this->price_change_rel : null;
     }
 
     public function hasPriceChangeRel()

@@ -40,7 +40,7 @@ class SubscriptionResponse extends \Google\Protobuf\Internal\Message
      */
     private $accounts;
     /**
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.ErrorDetail error = 7;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ErrorDetail error = 7;</code>
      */
     protected $error = null;
 
@@ -56,7 +56,7 @@ class SubscriptionResponse extends \Google\Protobuf\Internal\Message
      *          Статус подписки.
      *     @type string $stream_id
      *          Идентификатор открытого соединения
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $accounts
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $accounts
      *          Идентификаторы счетов.
      *     @type \Tinkoff\Invest\V1\ErrorDetail $error
      * }
@@ -159,7 +159,7 @@ class SubscriptionResponse extends \Google\Protobuf\Internal\Message
      *Идентификаторы счетов.
      *
      * Generated from protobuf field <code>repeated string accounts = 5;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setAccounts($var)
@@ -171,12 +171,12 @@ class SubscriptionResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.ErrorDetail error = 7;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ErrorDetail error = 7;</code>
      * @return \Tinkoff\Invest\V1\ErrorDetail|null
      */
     public function getError()
     {
-        return $this->error;
+        return isset($this->error) ? $this->error : null;
     }
 
     public function hasError()
@@ -190,7 +190,7 @@ class SubscriptionResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.ErrorDetail error = 7;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ErrorDetail error = 7;</code>
      * @param \Tinkoff\Invest\V1\ErrorDetail $var
      * @return $this
      */

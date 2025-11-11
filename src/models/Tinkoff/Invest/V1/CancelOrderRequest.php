@@ -30,7 +30,7 @@ class CancelOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Тип идентификатора заявки.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.OrderIdType order_id_type = 3;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderIdType order_id_type = 3;</code>
      */
     protected $order_id_type = null;
 
@@ -108,7 +108,7 @@ class CancelOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Тип идентификатора заявки.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.OrderIdType order_id_type = 3;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderIdType order_id_type = 3;</code>
      * @return int
      */
     public function getOrderIdType()
@@ -129,7 +129,7 @@ class CancelOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Тип идентификатора заявки.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.OrderIdType order_id_type = 3;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderIdType order_id_type = 3;</code>
      * @param int $var
      * @return $this
      */

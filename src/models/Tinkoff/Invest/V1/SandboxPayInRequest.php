@@ -79,7 +79,7 @@ class SandboxPayInRequest extends \Google\Protobuf\Internal\Message
      */
     public function getAmount()
     {
-        return $this->amount;
+        return isset($this->amount) ? $this->amount : null;
     }
 
     public function hasAmount()

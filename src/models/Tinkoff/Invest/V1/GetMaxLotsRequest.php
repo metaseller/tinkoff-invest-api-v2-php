@@ -30,7 +30,7 @@ class GetMaxLotsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Цена инструмента
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
      */
     protected $price = null;
 
@@ -108,12 +108,12 @@ class GetMaxLotsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Цена инструмента
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getPrice()
     {
-        return $this->price;
+        return isset($this->price) ? $this->price : null;
     }
 
     public function hasPrice()
@@ -129,7 +129,7 @@ class GetMaxLotsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Цена инструмента
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */

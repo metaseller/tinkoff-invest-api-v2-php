@@ -24,7 +24,7 @@ class GetDividendsForeignIssuerReportRequest extends \Google\Protobuf\Internal\M
     /**
      *Номер страницы отчета (начинается с 0), значение по умолчанию: 0.
      *
-     * Generated from protobuf field <code>optional int32 page = 2;</code>
+     * Generated from protobuf field <code>int32 page = 2;</code>
      */
     protected $page = null;
 
@@ -74,7 +74,7 @@ class GetDividendsForeignIssuerReportRequest extends \Google\Protobuf\Internal\M
     /**
      *Номер страницы отчета (начинается с 0), значение по умолчанию: 0.
      *
-     * Generated from protobuf field <code>optional int32 page = 2;</code>
+     * Generated from protobuf field <code>int32 page = 2;</code>
      * @return int
      */
     public function getPage()
@@ -95,7 +95,7 @@ class GetDividendsForeignIssuerReportRequest extends \Google\Protobuf\Internal\M
     /**
      *Номер страницы отчета (начинается с 0), значение по умолчанию: 0.
      *
-     * Generated from protobuf field <code>optional int32 page = 2;</code>
+     * Generated from protobuf field <code>int32 page = 2;</code>
      * @param int $var
      * @return $this
      */

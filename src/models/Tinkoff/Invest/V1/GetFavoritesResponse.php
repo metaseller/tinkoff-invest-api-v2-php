@@ -24,7 +24,7 @@ class GetFavoritesResponse extends \Google\Protobuf\Internal\Message
     /**
      *Уникальный идентификатор группы.
      *
-     * Generated from protobuf field <code>optional string group_id = 2;</code>
+     * Generated from protobuf field <code>string group_id = 2;</code>
      */
     protected $group_id = null;
 
@@ -34,7 +34,7 @@ class GetFavoritesResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Tinkoff\Invest\V1\FavoriteInstrument>|\Google\Protobuf\Internal\RepeatedField $favorite_instruments
+     *     @type \Tinkoff\Invest\V1\FavoriteInstrument[]|\Google\Protobuf\Internal\RepeatedField $favorite_instruments
      *          Массив инструментов.
      *     @type string $group_id
      *          Уникальный идентификатор группы.
@@ -60,7 +60,7 @@ class GetFavoritesResponse extends \Google\Protobuf\Internal\Message
      *Массив инструментов.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.FavoriteInstrument favorite_instruments = 1;</code>
-     * @param array<\Tinkoff\Invest\V1\FavoriteInstrument>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\FavoriteInstrument[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setFavoriteInstruments($var)
@@ -74,7 +74,7 @@ class GetFavoritesResponse extends \Google\Protobuf\Internal\Message
     /**
      *Уникальный идентификатор группы.
      *
-     * Generated from protobuf field <code>optional string group_id = 2;</code>
+     * Generated from protobuf field <code>string group_id = 2;</code>
      * @return string
      */
     public function getGroupId()
@@ -95,7 +95,7 @@ class GetFavoritesResponse extends \Google\Protobuf\Internal\Message
     /**
      *Уникальный идентификатор группы.
      *
-     * Generated from protobuf field <code>optional string group_id = 2;</code>
+     * Generated from protobuf field <code>string group_id = 2;</code>
      * @param string $var
      * @return $this
      */

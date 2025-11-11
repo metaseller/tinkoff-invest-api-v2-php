@@ -148,7 +148,7 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      *           Время начала аукциона закрытия по UTC.
      *     @type \Google\Protobuf\Timestamp $opening_auction_end_time
      *           Время окончания аукциона открытия по UTC.
-     *     @type array<\Tinkoff\Invest\V1\TradingInterval>|\Google\Protobuf\Internal\RepeatedField $intervals
+     *     @type \Tinkoff\Invest\V1\TradingInterval[]|\Google\Protobuf\Internal\RepeatedField $intervals
      *           Торговые интервалы.
      * }
      */
@@ -165,7 +165,7 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      */
     public function getDate()
     {
-        return $this->date;
+        return isset($this->date) ? $this->date : null;
     }
 
     public function hasDate()
@@ -227,7 +227,7 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      */
     public function getStartTime()
     {
-        return $this->start_time;
+        return isset($this->start_time) ? $this->start_time : null;
     }
 
     public function hasStartTime()
@@ -263,7 +263,7 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      */
     public function getEndTime()
     {
-        return $this->end_time;
+        return isset($this->end_time) ? $this->end_time : null;
     }
 
     public function hasEndTime()
@@ -299,7 +299,7 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      */
     public function getOpeningAuctionStartTime()
     {
-        return $this->opening_auction_start_time;
+        return isset($this->opening_auction_start_time) ? $this->opening_auction_start_time : null;
     }
 
     public function hasOpeningAuctionStartTime()
@@ -335,7 +335,7 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      */
     public function getClosingAuctionEndTime()
     {
-        return $this->closing_auction_end_time;
+        return isset($this->closing_auction_end_time) ? $this->closing_auction_end_time : null;
     }
 
     public function hasClosingAuctionEndTime()
@@ -371,7 +371,7 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      */
     public function getEveningOpeningAuctionStartTime()
     {
-        return $this->evening_opening_auction_start_time;
+        return isset($this->evening_opening_auction_start_time) ? $this->evening_opening_auction_start_time : null;
     }
 
     public function hasEveningOpeningAuctionStartTime()
@@ -407,7 +407,7 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      */
     public function getEveningStartTime()
     {
-        return $this->evening_start_time;
+        return isset($this->evening_start_time) ? $this->evening_start_time : null;
     }
 
     public function hasEveningStartTime()
@@ -443,7 +443,7 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      */
     public function getEveningEndTime()
     {
-        return $this->evening_end_time;
+        return isset($this->evening_end_time) ? $this->evening_end_time : null;
     }
 
     public function hasEveningEndTime()
@@ -479,7 +479,7 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      */
     public function getClearingStartTime()
     {
-        return $this->clearing_start_time;
+        return isset($this->clearing_start_time) ? $this->clearing_start_time : null;
     }
 
     public function hasClearingStartTime()
@@ -515,7 +515,7 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      */
     public function getClearingEndTime()
     {
-        return $this->clearing_end_time;
+        return isset($this->clearing_end_time) ? $this->clearing_end_time : null;
     }
 
     public function hasClearingEndTime()
@@ -551,7 +551,7 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      */
     public function getPremarketStartTime()
     {
-        return $this->premarket_start_time;
+        return isset($this->premarket_start_time) ? $this->premarket_start_time : null;
     }
 
     public function hasPremarketStartTime()
@@ -587,7 +587,7 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      */
     public function getPremarketEndTime()
     {
-        return $this->premarket_end_time;
+        return isset($this->premarket_end_time) ? $this->premarket_end_time : null;
     }
 
     public function hasPremarketEndTime()
@@ -623,7 +623,7 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      */
     public function getClosingAuctionStartTime()
     {
-        return $this->closing_auction_start_time;
+        return isset($this->closing_auction_start_time) ? $this->closing_auction_start_time : null;
     }
 
     public function hasClosingAuctionStartTime()
@@ -659,7 +659,7 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      */
     public function getOpeningAuctionEndTime()
     {
-        return $this->opening_auction_end_time;
+        return isset($this->opening_auction_end_time) ? $this->opening_auction_end_time : null;
     }
 
     public function hasOpeningAuctionEndTime()
@@ -702,7 +702,7 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      * Торговые интервалы.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.TradingInterval intervals = 18;</code>
-     * @param array<\Tinkoff\Invest\V1\TradingInterval>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\TradingInterval[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setIntervals($var)

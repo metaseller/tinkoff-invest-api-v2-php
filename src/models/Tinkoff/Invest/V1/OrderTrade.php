@@ -69,7 +69,7 @@ class OrderTrade extends \Google\Protobuf\Internal\Message
      */
     public function getDateTime()
     {
-        return $this->date_time;
+        return isset($this->date_time) ? $this->date_time : null;
     }
 
     public function hasDateTime()
@@ -105,7 +105,7 @@ class OrderTrade extends \Google\Protobuf\Internal\Message
      */
     public function getPrice()
     {
-        return $this->price;
+        return isset($this->price) ? $this->price : null;
     }
 
     public function hasPrice()

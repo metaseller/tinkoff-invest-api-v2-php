@@ -66,7 +66,7 @@ class CandleSubscription extends \Google\Protobuf\Internal\Message
     /**
      *Источник свечей.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.GetCandlesRequest.CandleSource candle_source_type = 9;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetCandlesRequest.CandleSource candle_source_type = 9;</code>
      */
     protected $candle_source_type = null;
     /**
@@ -328,7 +328,7 @@ class CandleSubscription extends \Google\Protobuf\Internal\Message
     /**
      *Источник свечей.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.GetCandlesRequest.CandleSource candle_source_type = 9;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetCandlesRequest.CandleSource candle_source_type = 9;</code>
      * @return int
      */
     public function getCandleSourceType()
@@ -349,7 +349,7 @@ class CandleSubscription extends \Google\Protobuf\Internal\Message
     /**
      *Источник свечей.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.GetCandlesRequest.CandleSource candle_source_type = 9;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetCandlesRequest.CandleSource candle_source_type = 9;</code>
      * @param int $var
      * @return $this
      */

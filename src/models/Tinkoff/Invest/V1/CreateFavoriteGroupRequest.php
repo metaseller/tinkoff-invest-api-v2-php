@@ -30,7 +30,7 @@ class CreateFavoriteGroupRequest extends \Google\Protobuf\Internal\Message
     /**
      *Описание
      *
-     * Generated from protobuf field <code>optional string note = 3;</code>
+     * Generated from protobuf field <code>string note = 3;</code>
      */
     protected $note = null;
 
@@ -108,7 +108,7 @@ class CreateFavoriteGroupRequest extends \Google\Protobuf\Internal\Message
     /**
      *Описание
      *
-     * Generated from protobuf field <code>optional string note = 3;</code>
+     * Generated from protobuf field <code>string note = 3;</code>
      * @return string
      */
     public function getNote()
@@ -129,7 +129,7 @@ class CreateFavoriteGroupRequest extends \Google\Protobuf\Internal\Message
     /**
      *Описание
      *
-     * Generated from protobuf field <code>optional string note = 3;</code>
+     * Generated from protobuf field <code>string note = 3;</code>
      * @param string $var
      * @return $this
      */

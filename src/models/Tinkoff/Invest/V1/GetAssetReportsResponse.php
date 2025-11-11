@@ -28,7 +28,7 @@ class GetAssetReportsResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Tinkoff\Invest\V1\GetAssetReportsResponse\GetAssetReportsEvent>|\Google\Protobuf\Internal\RepeatedField $events
+     *     @type \Tinkoff\Invest\V1\GetAssetReportsResponse\GetAssetReportsEvent[]|\Google\Protobuf\Internal\RepeatedField $events
      *           Массив событий по облигации.
      * }
      */
@@ -52,7 +52,7 @@ class GetAssetReportsResponse extends \Google\Protobuf\Internal\Message
      * Массив событий по облигации.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.GetAssetReportsResponse.GetAssetReportsEvent events = 1;</code>
-     * @param array<\Tinkoff\Invest\V1\GetAssetReportsResponse\GetAssetReportsEvent>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\GetAssetReportsResponse\GetAssetReportsEvent[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setEvents($var)

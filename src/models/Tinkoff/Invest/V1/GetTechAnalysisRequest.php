@@ -159,7 +159,7 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
      */
     public function getFrom()
     {
-        return $this->from;
+        return isset($this->from) ? $this->from : null;
     }
 
     public function hasFrom()
@@ -195,7 +195,7 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
      */
     public function getTo()
     {
-        return $this->to;
+        return isset($this->to) ? $this->to : null;
     }
 
     public function hasTo()
@@ -309,7 +309,7 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
      */
     public function getDeviation()
     {
-        return $this->deviation;
+        return isset($this->deviation) ? $this->deviation : null;
     }
 
     public function hasDeviation()
@@ -345,7 +345,7 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
      */
     public function getSmoothing()
     {
-        return $this->smoothing;
+        return isset($this->smoothing) ? $this->smoothing : null;
     }
 
     public function hasSmoothing()

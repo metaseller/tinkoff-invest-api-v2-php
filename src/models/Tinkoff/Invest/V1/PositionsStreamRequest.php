@@ -40,7 +40,7 @@ class PositionsStreamRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $accounts
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $accounts
      *          Массив идентификаторов счетов пользователя.
      *     @type bool $with_initial_positions
      *          Получение состояния позиций на момент подключения.
@@ -68,7 +68,7 @@ class PositionsStreamRequest extends \Google\Protobuf\Internal\Message
      *Массив идентификаторов счетов пользователя.
      *
      * Generated from protobuf field <code>repeated string accounts = 1;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setAccounts($var)
@@ -113,7 +113,7 @@ class PositionsStreamRequest extends \Google\Protobuf\Internal\Message
      */
     public function getPingSettings()
     {
-        return $this->ping_settings;
+        return isset($this->ping_settings) ? $this->ping_settings : null;
     }
 
     public function hasPingSettings()

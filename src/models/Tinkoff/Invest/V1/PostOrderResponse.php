@@ -309,7 +309,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      */
     public function getInitialOrderPrice()
     {
-        return $this->initial_order_price;
+        return isset($this->initial_order_price) ? $this->initial_order_price : null;
     }
 
     public function hasInitialOrderPrice()
@@ -345,7 +345,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      */
     public function getExecutedOrderPrice()
     {
-        return $this->executed_order_price;
+        return isset($this->executed_order_price) ? $this->executed_order_price : null;
     }
 
     public function hasExecutedOrderPrice()
@@ -381,7 +381,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      */
     public function getTotalOrderAmount()
     {
-        return $this->total_order_amount;
+        return isset($this->total_order_amount) ? $this->total_order_amount : null;
     }
 
     public function hasTotalOrderAmount()
@@ -417,7 +417,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      */
     public function getInitialCommission()
     {
-        return $this->initial_commission;
+        return isset($this->initial_commission) ? $this->initial_commission : null;
     }
 
     public function hasInitialCommission()
@@ -453,7 +453,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      */
     public function getExecutedCommission()
     {
-        return $this->executed_commission;
+        return isset($this->executed_commission) ? $this->executed_commission : null;
     }
 
     public function hasExecutedCommission()
@@ -489,7 +489,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      */
     public function getAciValue()
     {
-        return $this->aci_value;
+        return isset($this->aci_value) ? $this->aci_value : null;
     }
 
     public function hasAciValue()
@@ -577,7 +577,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      */
     public function getInitialSecurityPrice()
     {
-        return $this->initial_security_price;
+        return isset($this->initial_security_price) ? $this->initial_security_price : null;
     }
 
     public function hasInitialSecurityPrice()
@@ -665,7 +665,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      */
     public function getInitialOrderPricePt()
     {
-        return $this->initial_order_price_pt;
+        return isset($this->initial_order_price_pt) ? $this->initial_order_price_pt : null;
     }
 
     public function hasInitialOrderPricePt()
@@ -805,7 +805,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      */
     public function getResponseMetadata()
     {
-        return $this->response_metadata;
+        return isset($this->response_metadata) ? $this->response_metadata : null;
     }
 
     public function hasResponseMetadata()

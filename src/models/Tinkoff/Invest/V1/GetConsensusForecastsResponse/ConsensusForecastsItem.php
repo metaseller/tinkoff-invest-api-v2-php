@@ -185,7 +185,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
      */
     public function getCreatedAt()
     {
-        return $this->created_at;
+        return isset($this->created_at) ? $this->created_at : null;
     }
 
     public function hasCreatedAt()
@@ -221,7 +221,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
      */
     public function getBestTargetPrice()
     {
-        return $this->best_target_price;
+        return isset($this->best_target_price) ? $this->best_target_price : null;
     }
 
     public function hasBestTargetPrice()
@@ -257,7 +257,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
      */
     public function getBestTargetLow()
     {
-        return $this->best_target_low;
+        return isset($this->best_target_low) ? $this->best_target_low : null;
     }
 
     public function hasBestTargetLow()
@@ -293,7 +293,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
      */
     public function getBestTargetHigh()
     {
-        return $this->best_target_high;
+        return isset($this->best_target_high) ? $this->best_target_high : null;
     }
 
     public function hasBestTargetHigh()
@@ -459,7 +459,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
      */
     public function getPrognosisDate()
     {
-        return $this->prognosis_date;
+        return isset($this->prognosis_date) ? $this->prognosis_date : null;
     }
 
     public function hasPrognosisDate()

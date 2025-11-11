@@ -42,7 +42,7 @@ class FavoriteGroup extends \Google\Protobuf\Internal\Message
     /**
      *Признак наличия в группе хотя бы одного инструмента из запроса.
      *
-     * Generated from protobuf field <code>optional bool contains_instrument = 5;</code>
+     * Generated from protobuf field <code>bool contains_instrument = 5;</code>
      */
     protected $contains_instrument = null;
 
@@ -176,7 +176,7 @@ class FavoriteGroup extends \Google\Protobuf\Internal\Message
     /**
      *Признак наличия в группе хотя бы одного инструмента из запроса.
      *
-     * Generated from protobuf field <code>optional bool contains_instrument = 5;</code>
+     * Generated from protobuf field <code>bool contains_instrument = 5;</code>
      * @return bool
      */
     public function getContainsInstrument()
@@ -197,7 +197,7 @@ class FavoriteGroup extends \Google\Protobuf\Internal\Message
     /**
      *Признак наличия в группе хотя бы одного инструмента из запроса.
      *
-     * Generated from protobuf field <code>optional bool contains_instrument = 5;</code>
+     * Generated from protobuf field <code>bool contains_instrument = 5;</code>
      * @param bool $var
      * @return $this
      */

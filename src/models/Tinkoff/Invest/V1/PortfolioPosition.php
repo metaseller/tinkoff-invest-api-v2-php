@@ -243,7 +243,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getQuantity()
     {
-        return $this->quantity;
+        return isset($this->quantity) ? $this->quantity : null;
     }
 
     public function hasQuantity()
@@ -279,7 +279,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getAveragePositionPrice()
     {
-        return $this->average_position_price;
+        return isset($this->average_position_price) ? $this->average_position_price : null;
     }
 
     public function hasAveragePositionPrice()
@@ -315,7 +315,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getExpectedYield()
     {
-        return $this->expected_yield;
+        return isset($this->expected_yield) ? $this->expected_yield : null;
     }
 
     public function hasExpectedYield()
@@ -351,7 +351,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getCurrentNkd()
     {
-        return $this->current_nkd;
+        return isset($this->current_nkd) ? $this->current_nkd : null;
     }
 
     public function hasCurrentNkd()
@@ -389,7 +389,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     public function getAveragePositionPricePt()
     {
         @trigger_error('average_position_price_pt is deprecated.', E_USER_DEPRECATED);
-        return $this->average_position_price_pt;
+        return isset($this->average_position_price_pt) ? $this->average_position_price_pt : null;
     }
 
     public function hasAveragePositionPricePt()
@@ -429,7 +429,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getCurrentPrice()
     {
-        return $this->current_price;
+        return isset($this->current_price) ? $this->current_price : null;
     }
 
     public function hasCurrentPrice()
@@ -465,7 +465,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getAveragePositionPriceFifo()
     {
-        return $this->average_position_price_fifo;
+        return isset($this->average_position_price_fifo) ? $this->average_position_price_fifo : null;
     }
 
     public function hasAveragePositionPriceFifo()
@@ -503,7 +503,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     public function getQuantityLots()
     {
         @trigger_error('quantity_lots is deprecated.', E_USER_DEPRECATED);
-        return $this->quantity_lots;
+        return isset($this->quantity_lots) ? $this->quantity_lots : null;
     }
 
     public function hasQuantityLots()
@@ -569,7 +569,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getBlockedLots()
     {
-        return $this->blocked_lots;
+        return isset($this->blocked_lots) ? $this->blocked_lots : null;
     }
 
     public function hasBlockedLots()
@@ -657,7 +657,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getVarMargin()
     {
-        return $this->var_margin;
+        return isset($this->var_margin) ? $this->var_margin : null;
     }
 
     public function hasVarMargin()
@@ -693,7 +693,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getExpectedYieldFifo()
     {
-        return $this->expected_yield_fifo;
+        return isset($this->expected_yield_fifo) ? $this->expected_yield_fifo : null;
     }
 
     public function hasExpectedYieldFifo()
@@ -729,7 +729,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getDailyYield()
     {
-        return $this->daily_yield;
+        return isset($this->daily_yield) ? $this->daily_yield : null;
     }
 
     public function hasDailyYield()

@@ -18,7 +18,7 @@ class GetFavoritesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Уникальный идентификатор группы.
      *
-     * Generated from protobuf field <code>optional string group_id = 1;</code>
+     * Generated from protobuf field <code>string group_id = 1;</code>
      */
     protected $group_id = null;
 
@@ -40,7 +40,7 @@ class GetFavoritesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Уникальный идентификатор группы.
      *
-     * Generated from protobuf field <code>optional string group_id = 1;</code>
+     * Generated from protobuf field <code>string group_id = 1;</code>
      * @return string
      */
     public function getGroupId()
@@ -61,7 +61,7 @@ class GetFavoritesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Уникальный идентификатор группы.
      *
-     * Generated from protobuf field <code>optional string group_id = 1;</code>
+     * Generated from protobuf field <code>string group_id = 1;</code>
      * @param string $var
      * @return $this
      */

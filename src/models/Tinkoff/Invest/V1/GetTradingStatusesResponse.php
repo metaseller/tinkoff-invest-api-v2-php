@@ -28,7 +28,7 @@ class GetTradingStatusesResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Tinkoff\Invest\V1\GetTradingStatusResponse>|\Google\Protobuf\Internal\RepeatedField $trading_statuses
+     *     @type \Tinkoff\Invest\V1\GetTradingStatusResponse[]|\Google\Protobuf\Internal\RepeatedField $trading_statuses
      *          Массив информации о торговых статусах.
      * }
      */
@@ -52,7 +52,7 @@ class GetTradingStatusesResponse extends \Google\Protobuf\Internal\Message
      *Массив информации о торговых статусах.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.GetTradingStatusResponse trading_statuses = 1;</code>
-     * @param array<\Tinkoff\Invest\V1\GetTradingStatusResponse>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\GetTradingStatusResponse[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setTradingStatuses($var)

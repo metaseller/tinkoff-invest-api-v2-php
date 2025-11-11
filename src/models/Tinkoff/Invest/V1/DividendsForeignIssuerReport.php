@@ -133,7 +133,7 @@ class DividendsForeignIssuerReport extends \Google\Protobuf\Internal\Message
      */
     public function getRecordDate()
     {
-        return $this->record_date;
+        return isset($this->record_date) ? $this->record_date : null;
     }
 
     public function hasRecordDate()
@@ -169,7 +169,7 @@ class DividendsForeignIssuerReport extends \Google\Protobuf\Internal\Message
      */
     public function getPaymentDate()
     {
-        return $this->payment_date;
+        return isset($this->payment_date) ? $this->payment_date : null;
     }
 
     public function hasPaymentDate()
@@ -309,7 +309,7 @@ class DividendsForeignIssuerReport extends \Google\Protobuf\Internal\Message
      */
     public function getDividend()
     {
-        return $this->dividend;
+        return isset($this->dividend) ? $this->dividend : null;
     }
 
     public function hasDividend()
@@ -345,7 +345,7 @@ class DividendsForeignIssuerReport extends \Google\Protobuf\Internal\Message
      */
     public function getExternalCommission()
     {
-        return $this->external_commission;
+        return isset($this->external_commission) ? $this->external_commission : null;
     }
 
     public function hasExternalCommission()
@@ -381,7 +381,7 @@ class DividendsForeignIssuerReport extends \Google\Protobuf\Internal\Message
      */
     public function getDividendGross()
     {
-        return $this->dividend_gross;
+        return isset($this->dividend_gross) ? $this->dividend_gross : null;
     }
 
     public function hasDividendGross()
@@ -417,7 +417,7 @@ class DividendsForeignIssuerReport extends \Google\Protobuf\Internal\Message
      */
     public function getTax()
     {
-        return $this->tax;
+        return isset($this->tax) ? $this->tax : null;
     }
 
     public function hasTax()
@@ -453,7 +453,7 @@ class DividendsForeignIssuerReport extends \Google\Protobuf\Internal\Message
      */
     public function getDividendAmount()
     {
-        return $this->dividend_amount;
+        return isset($this->dividend_amount) ? $this->dividend_amount : null;
     }
 
     public function hasDividendAmount()

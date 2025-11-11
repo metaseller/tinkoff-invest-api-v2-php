@@ -260,7 +260,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      *          Массив сделок.
      *     @type string $asset_uid
      *          Идентификатор актива.
-     *     @type array<\Tinkoff\Invest\V1\ChildOperationItem>|\Google\Protobuf\Internal\RepeatedField $child_operations
+     *     @type \Tinkoff\Invest\V1\ChildOperationItem[]|\Google\Protobuf\Internal\RepeatedField $child_operations
      *          Массив дочерних операций.
      * }
      */
@@ -407,7 +407,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      */
     public function getDate()
     {
-        return $this->date;
+        return isset($this->date) ? $this->date : null;
     }
 
     public function hasDate()
@@ -703,7 +703,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      */
     public function getPayment()
     {
-        return $this->payment;
+        return isset($this->payment) ? $this->payment : null;
     }
 
     public function hasPayment()
@@ -739,7 +739,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      */
     public function getPrice()
     {
-        return $this->price;
+        return isset($this->price) ? $this->price : null;
     }
 
     public function hasPrice()
@@ -775,7 +775,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      */
     public function getCommission()
     {
-        return $this->commission;
+        return isset($this->commission) ? $this->commission : null;
     }
 
     public function hasCommission()
@@ -811,7 +811,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      */
     public function getYield()
     {
-        return $this->yield;
+        return isset($this->yield) ? $this->yield : null;
     }
 
     public function hasYield()
@@ -847,7 +847,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      */
     public function getYieldRelative()
     {
-        return $this->yield_relative;
+        return isset($this->yield_relative) ? $this->yield_relative : null;
     }
 
     public function hasYieldRelative()
@@ -883,7 +883,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      */
     public function getAccruedInt()
     {
-        return $this->accrued_int;
+        return isset($this->accrued_int) ? $this->accrued_int : null;
     }
 
     public function hasAccruedInt()
@@ -997,7 +997,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      */
     public function getCancelDateTime()
     {
-        return $this->cancel_date_time;
+        return isset($this->cancel_date_time) ? $this->cancel_date_time : null;
     }
 
     public function hasCancelDateTime()
@@ -1059,7 +1059,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      */
     public function getTradesInfo()
     {
-        return $this->trades_info;
+        return isset($this->trades_info) ? $this->trades_info : null;
     }
 
     public function hasTradesInfo()
@@ -1128,7 +1128,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      *Массив дочерних операций.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.ChildOperationItem child_operations = 65;</code>
-     * @param array<\Tinkoff\Invest\V1\ChildOperationItem>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\ChildOperationItem[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setChildOperations($var)

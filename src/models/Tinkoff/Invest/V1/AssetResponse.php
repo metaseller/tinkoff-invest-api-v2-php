@@ -45,7 +45,7 @@ class AssetResponse extends \Google\Protobuf\Internal\Message
      */
     public function getAsset()
     {
-        return $this->asset;
+        return isset($this->asset) ? $this->asset : null;
     }
 
     public function hasAsset()

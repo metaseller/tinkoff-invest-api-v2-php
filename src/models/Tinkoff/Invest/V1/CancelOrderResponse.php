@@ -53,7 +53,7 @@ class CancelOrderResponse extends \Google\Protobuf\Internal\Message
      */
     public function getTime()
     {
-        return $this->time;
+        return isset($this->time) ? $this->time : null;
     }
 
     public function hasTime()
@@ -89,7 +89,7 @@ class CancelOrderResponse extends \Google\Protobuf\Internal\Message
      */
     public function getResponseMetadata()
     {
-        return $this->response_metadata;
+        return isset($this->response_metadata) ? $this->response_metadata : null;
     }
 
     public function hasResponseMetadata()

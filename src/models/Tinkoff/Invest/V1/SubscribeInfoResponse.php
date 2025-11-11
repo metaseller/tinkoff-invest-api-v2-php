@@ -36,7 +36,7 @@ class SubscribeInfoResponse extends \Google\Protobuf\Internal\Message
      *
      *     @type string $tracking_id
      *          Уникальный идентификатор запроса. [Подробнее](./grpc#tracking-id).
-     *     @type array<\Tinkoff\Invest\V1\InfoSubscription>|\Google\Protobuf\Internal\RepeatedField $info_subscriptions
+     *     @type \Tinkoff\Invest\V1\InfoSubscription[]|\Google\Protobuf\Internal\RepeatedField $info_subscriptions
      *          Массив статусов подписки на торговый статус.
      * }
      */
@@ -86,7 +86,7 @@ class SubscribeInfoResponse extends \Google\Protobuf\Internal\Message
      *Массив статусов подписки на торговый статус.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.InfoSubscription info_subscriptions = 2;</code>
-     * @param array<\Tinkoff\Invest\V1\InfoSubscription>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\InfoSubscription[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setInfoSubscriptions($var)

@@ -53,7 +53,7 @@ class PositionsMoney extends \Google\Protobuf\Internal\Message
      */
     public function getAvailableValue()
     {
-        return $this->available_value;
+        return isset($this->available_value) ? $this->available_value : null;
     }
 
     public function hasAvailableValue()
@@ -89,7 +89,7 @@ class PositionsMoney extends \Google\Protobuf\Internal\Message
      */
     public function getBlockedValue()
     {
-        return $this->blocked_value;
+        return isset($this->blocked_value) ? $this->blocked_value : null;
     }
 
     public function hasBlockedValue()

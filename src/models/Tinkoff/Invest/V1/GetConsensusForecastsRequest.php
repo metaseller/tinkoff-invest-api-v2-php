@@ -18,7 +18,7 @@ class GetConsensusForecastsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Настройки пагинации.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Page paging = 1;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Page paging = 1;</code>
      */
     protected $paging = null;
 
@@ -40,12 +40,12 @@ class GetConsensusForecastsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Настройки пагинации.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Page paging = 1;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Page paging = 1;</code>
      * @return \Tinkoff\Invest\V1\Page|null
      */
     public function getPaging()
     {
-        return $this->paging;
+        return isset($this->paging) ? $this->paging : null;
     }
 
     public function hasPaging()
@@ -61,7 +61,7 @@ class GetConsensusForecastsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Настройки пагинации.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Page paging = 1;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Page paging = 1;</code>
      * @param \Tinkoff\Invest\V1\Page $var
      * @return $this
      */

@@ -26,7 +26,7 @@ class RiskRatesResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Tinkoff\Invest\V1\RiskRatesResponse\RiskRateResult>|\Google\Protobuf\Internal\RepeatedField $instrument_risk_rates
+     *     @type \Tinkoff\Invest\V1\RiskRatesResponse\RiskRateResult[]|\Google\Protobuf\Internal\RepeatedField $instrument_risk_rates
      * }
      */
     public function __construct($data = NULL) {
@@ -45,7 +45,7 @@ class RiskRatesResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.RiskRatesResponse.RiskRateResult instrument_risk_rates = 1;</code>
-     * @param array<\Tinkoff\Invest\V1\RiskRatesResponse\RiskRateResult>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\RiskRatesResponse\RiskRateResult[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setInstrumentRiskRates($var)

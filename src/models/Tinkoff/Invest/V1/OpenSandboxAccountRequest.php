@@ -18,7 +18,7 @@ class OpenSandboxAccountRequest extends \Google\Protobuf\Internal\Message
     /**
      * Название счета
      *
-     * Generated from protobuf field <code>optional string name = 1;</code>
+     * Generated from protobuf field <code>string name = 1;</code>
      */
     protected $name = null;
 
@@ -40,7 +40,7 @@ class OpenSandboxAccountRequest extends \Google\Protobuf\Internal\Message
     /**
      * Название счета
      *
-     * Generated from protobuf field <code>optional string name = 1;</code>
+     * Generated from protobuf field <code>string name = 1;</code>
      * @return string
      */
     public function getName()
@@ -61,7 +61,7 @@ class OpenSandboxAccountRequest extends \Google\Protobuf\Internal\Message
     /**
      * Название счета
      *
-     * Generated from protobuf field <code>optional string name = 1;</code>
+     * Generated from protobuf field <code>string name = 1;</code>
      * @param string $var
      * @return $this
      */

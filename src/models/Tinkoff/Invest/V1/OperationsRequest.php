@@ -24,25 +24,25 @@ class OperationsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Начало периода по UTC.
      *
-     * Generated from protobuf field <code>optional .google.protobuf.Timestamp from = 2;</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2;</code>
      */
     protected $from = null;
     /**
      *Окончание периода по UTC.
      *
-     * Generated from protobuf field <code>optional .google.protobuf.Timestamp to = 3;</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3;</code>
      */
     protected $to = null;
     /**
      *Статус запрашиваемых операций.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.OperationState state = 4;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OperationState state = 4;</code>
      */
     protected $state = null;
     /**
      *FIGI-идентификатор инструмента для фильтрации.
      *
-     * Generated from protobuf field <code>optional string figi = 5;</code>
+     * Generated from protobuf field <code>string figi = 5;</code>
      */
     protected $figi = null;
 
@@ -98,12 +98,12 @@ class OperationsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Начало периода по UTC.
      *
-     * Generated from protobuf field <code>optional .google.protobuf.Timestamp from = 2;</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2;</code>
      * @return \Google\Protobuf\Timestamp|null
      */
     public function getFrom()
     {
-        return $this->from;
+        return isset($this->from) ? $this->from : null;
     }
 
     public function hasFrom()
@@ -119,7 +119,7 @@ class OperationsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Начало периода по UTC.
      *
-     * Generated from protobuf field <code>optional .google.protobuf.Timestamp from = 2;</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp from = 2;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
@@ -134,12 +134,12 @@ class OperationsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Окончание периода по UTC.
      *
-     * Generated from protobuf field <code>optional .google.protobuf.Timestamp to = 3;</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3;</code>
      * @return \Google\Protobuf\Timestamp|null
      */
     public function getTo()
     {
-        return $this->to;
+        return isset($this->to) ? $this->to : null;
     }
 
     public function hasTo()
@@ -155,7 +155,7 @@ class OperationsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Окончание периода по UTC.
      *
-     * Generated from protobuf field <code>optional .google.protobuf.Timestamp to = 3;</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp to = 3;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
@@ -170,7 +170,7 @@ class OperationsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Статус запрашиваемых операций.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.OperationState state = 4;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OperationState state = 4;</code>
      * @return int
      */
     public function getState()
@@ -191,7 +191,7 @@ class OperationsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Статус запрашиваемых операций.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.OperationState state = 4;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OperationState state = 4;</code>
      * @param int $var
      * @return $this
      */
@@ -206,7 +206,7 @@ class OperationsRequest extends \Google\Protobuf\Internal\Message
     /**
      *FIGI-идентификатор инструмента для фильтрации.
      *
-     * Generated from protobuf field <code>optional string figi = 5;</code>
+     * Generated from protobuf field <code>string figi = 5;</code>
      * @return string
      */
     public function getFigi()
@@ -227,7 +227,7 @@ class OperationsRequest extends \Google\Protobuf\Internal\Message
     /**
      *FIGI-идентификатор инструмента для фильтрации.
      *
-     * Generated from protobuf field <code>optional string figi = 5;</code>
+     * Generated from protobuf field <code>string figi = 5;</code>
      * @param string $var
      * @return $this
      */

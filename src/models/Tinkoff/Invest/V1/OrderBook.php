@@ -100,9 +100,9 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      *          Глубина стакана.
      *     @type bool $is_consistent
      *          Флаг консистентности стакана. **false** — не все заявки попали в стакан из-за сетевых задержек или нарушения порядка доставки.
-     *     @type array<\Tinkoff\Invest\V1\Order>|\Google\Protobuf\Internal\RepeatedField $bids
+     *     @type \Tinkoff\Invest\V1\Order[]|\Google\Protobuf\Internal\RepeatedField $bids
      *          Массив предложений.
-     *     @type array<\Tinkoff\Invest\V1\Order>|\Google\Protobuf\Internal\RepeatedField $asks
+     *     @type \Tinkoff\Invest\V1\Order[]|\Google\Protobuf\Internal\RepeatedField $asks
      *          Массив спроса.
      *     @type \Google\Protobuf\Timestamp $time
      *          Время формирования стакана в часовом поясе UTC по времени биржи.
@@ -218,7 +218,7 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      *Массив предложений.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.Order bids = 4;</code>
-     * @param array<\Tinkoff\Invest\V1\Order>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\Order[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setBids($var)
@@ -244,7 +244,7 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      *Массив спроса.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.Order asks = 5;</code>
-     * @param array<\Tinkoff\Invest\V1\Order>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\Order[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setAsks($var)
@@ -263,7 +263,7 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      */
     public function getTime()
     {
-        return $this->time;
+        return isset($this->time) ? $this->time : null;
     }
 
     public function hasTime()
@@ -299,7 +299,7 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      */
     public function getLimitUp()
     {
-        return $this->limit_up;
+        return isset($this->limit_up) ? $this->limit_up : null;
     }
 
     public function hasLimitUp()
@@ -335,7 +335,7 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      */
     public function getLimitDown()
     {
-        return $this->limit_down;
+        return isset($this->limit_down) ? $this->limit_down : null;
     }
 
     public function hasLimitDown()

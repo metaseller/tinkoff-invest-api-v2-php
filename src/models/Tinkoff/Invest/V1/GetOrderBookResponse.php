@@ -110,9 +110,9 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      *          FIGI-идентификатор инструмента.
      *     @type int $depth
      *          Глубина стакана.
-     *     @type array<\Tinkoff\Invest\V1\Order>|\Google\Protobuf\Internal\RepeatedField $bids
+     *     @type \Tinkoff\Invest\V1\Order[]|\Google\Protobuf\Internal\RepeatedField $bids
      *          Множество пар значений на покупку.
-     *     @type array<\Tinkoff\Invest\V1\Order>|\Google\Protobuf\Internal\RepeatedField $asks
+     *     @type \Tinkoff\Invest\V1\Order[]|\Google\Protobuf\Internal\RepeatedField $asks
      *          Множество пар значений на продажу.
      *     @type \Tinkoff\Invest\V1\Quotation $last_price
      *          Цена последней сделки за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
@@ -208,7 +208,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      *Множество пар значений на покупку.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.Order bids = 3;</code>
-     * @param array<\Tinkoff\Invest\V1\Order>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\Order[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setBids($var)
@@ -234,7 +234,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      *Множество пар значений на продажу.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.Order asks = 4;</code>
-     * @param array<\Tinkoff\Invest\V1\Order>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\Order[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setAsks($var)
@@ -253,7 +253,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      */
     public function getLastPrice()
     {
-        return $this->last_price;
+        return isset($this->last_price) ? $this->last_price : null;
     }
 
     public function hasLastPrice()
@@ -289,7 +289,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      */
     public function getClosePrice()
     {
-        return $this->close_price;
+        return isset($this->close_price) ? $this->close_price : null;
     }
 
     public function hasClosePrice()
@@ -325,7 +325,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      */
     public function getLimitUp()
     {
-        return $this->limit_up;
+        return isset($this->limit_up) ? $this->limit_up : null;
     }
 
     public function hasLimitUp()
@@ -361,7 +361,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      */
     public function getLimitDown()
     {
-        return $this->limit_down;
+        return isset($this->limit_down) ? $this->limit_down : null;
     }
 
     public function hasLimitDown()
@@ -475,7 +475,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      */
     public function getLastPriceTs()
     {
-        return $this->last_price_ts;
+        return isset($this->last_price_ts) ? $this->last_price_ts : null;
     }
 
     public function hasLastPriceTs()
@@ -511,7 +511,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      */
     public function getClosePriceTs()
     {
-        return $this->close_price_ts;
+        return isset($this->close_price_ts) ? $this->close_price_ts : null;
     }
 
     public function hasClosePriceTs()
@@ -547,7 +547,7 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      */
     public function getOrderbookTs()
     {
-        return $this->orderbook_ts;
+        return isset($this->orderbook_ts) ? $this->orderbook_ts : null;
     }
 
     public function hasOrderbookTs()

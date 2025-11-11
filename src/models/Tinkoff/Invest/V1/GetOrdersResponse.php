@@ -28,7 +28,7 @@ class GetOrdersResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Tinkoff\Invest\V1\OrderState>|\Google\Protobuf\Internal\RepeatedField $orders
+     *     @type \Tinkoff\Invest\V1\OrderState[]|\Google\Protobuf\Internal\RepeatedField $orders
      *          Массив активных заявок.
      * }
      */
@@ -52,7 +52,7 @@ class GetOrdersResponse extends \Google\Protobuf\Internal\Message
      *Массив активных заявок.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OrderState orders = 1;</code>
-     * @param array<\Tinkoff\Invest\V1\OrderState>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\OrderState[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setOrders($var)

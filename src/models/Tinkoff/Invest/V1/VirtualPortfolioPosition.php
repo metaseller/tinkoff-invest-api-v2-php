@@ -251,7 +251,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getQuantity()
     {
-        return $this->quantity;
+        return isset($this->quantity) ? $this->quantity : null;
     }
 
     public function hasQuantity()
@@ -287,7 +287,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getAveragePositionPrice()
     {
-        return $this->average_position_price;
+        return isset($this->average_position_price) ? $this->average_position_price : null;
     }
 
     public function hasAveragePositionPrice()
@@ -323,7 +323,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getExpectedYield()
     {
-        return $this->expected_yield;
+        return isset($this->expected_yield) ? $this->expected_yield : null;
     }
 
     public function hasExpectedYield()
@@ -359,7 +359,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getExpectedYieldFifo()
     {
-        return $this->expected_yield_fifo;
+        return isset($this->expected_yield_fifo) ? $this->expected_yield_fifo : null;
     }
 
     public function hasExpectedYieldFifo()
@@ -395,7 +395,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getExpireDate()
     {
-        return $this->expire_date;
+        return isset($this->expire_date) ? $this->expire_date : null;
     }
 
     public function hasExpireDate()
@@ -431,7 +431,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getCurrentPrice()
     {
-        return $this->current_price;
+        return isset($this->current_price) ? $this->current_price : null;
     }
 
     public function hasCurrentPrice()
@@ -467,7 +467,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getAveragePositionPriceFifo()
     {
-        return $this->average_position_price_fifo;
+        return isset($this->average_position_price_fifo) ? $this->average_position_price_fifo : null;
     }
 
     public function hasAveragePositionPriceFifo()
@@ -503,7 +503,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getDailyYield()
     {
-        return $this->daily_yield;
+        return isset($this->daily_yield) ? $this->daily_yield : null;
     }
 
     public function hasDailyYield()

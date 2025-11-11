@@ -36,7 +36,7 @@ class SubscribeCandlesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Источник свечей.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.GetCandlesRequest.CandleSource candle_source_type = 9;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetCandlesRequest.CandleSource candle_source_type = 9;</code>
      */
     protected $candle_source_type = null;
 
@@ -48,7 +48,7 @@ class SubscribeCandlesRequest extends \Google\Protobuf\Internal\Message
      *
      *     @type int $subscription_action
      *          Изменение статуса подписки.
-     *     @type array<\Tinkoff\Invest\V1\CandleInstrument>|\Google\Protobuf\Internal\RepeatedField $instruments
+     *     @type \Tinkoff\Invest\V1\CandleInstrument[]|\Google\Protobuf\Internal\RepeatedField $instruments
      *          Массив инструментов для подписки на свечи.
      *     @type bool $waiting_close
      *          Флаг ожидания закрытия временного интервала для отправки свечи.
@@ -102,7 +102,7 @@ class SubscribeCandlesRequest extends \Google\Protobuf\Internal\Message
      *Массив инструментов для подписки на свечи.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.CandleInstrument instruments = 2;</code>
-     * @param array<\Tinkoff\Invest\V1\CandleInstrument>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\CandleInstrument[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setInstruments($var)
@@ -142,7 +142,7 @@ class SubscribeCandlesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Источник свечей.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.GetCandlesRequest.CandleSource candle_source_type = 9;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetCandlesRequest.CandleSource candle_source_type = 9;</code>
      * @return int
      */
     public function getCandleSourceType()
@@ -163,7 +163,7 @@ class SubscribeCandlesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Источник свечей.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.GetCandlesRequest.CandleSource candle_source_type = 9;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetCandlesRequest.CandleSource candle_source_type = 9;</code>
      * @param int $var
      * @return $this
      */

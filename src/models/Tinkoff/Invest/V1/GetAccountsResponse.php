@@ -28,7 +28,7 @@ class GetAccountsResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Tinkoff\Invest\V1\Account>|\Google\Protobuf\Internal\RepeatedField $accounts
+     *     @type \Tinkoff\Invest\V1\Account[]|\Google\Protobuf\Internal\RepeatedField $accounts
      *           Массив счетов клиента.
      * }
      */
@@ -52,7 +52,7 @@ class GetAccountsResponse extends \Google\Protobuf\Internal\Message
      * Массив счетов клиента.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.Account accounts = 1;</code>
-     * @param array<\Tinkoff\Invest\V1\Account>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\Account[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setAccounts($var)

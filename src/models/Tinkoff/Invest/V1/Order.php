@@ -53,7 +53,7 @@ class Order extends \Google\Protobuf\Internal\Message
      */
     public function getPrice()
     {
-        return $this->price;
+        return isset($this->price) ? $this->price : null;
     }
 
     public function hasPrice()

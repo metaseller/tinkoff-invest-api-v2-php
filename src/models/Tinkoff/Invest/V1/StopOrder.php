@@ -114,7 +114,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор биржевой заявки.
      *
-     * Generated from protobuf field <code>optional string exchange_order_id = 17;</code>
+     * Generated from protobuf field <code>string exchange_order_id = 17;</code>
      */
     protected $exchange_order_id = null;
     /**
@@ -345,7 +345,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
      */
     public function getCreateDate()
     {
-        return $this->create_date;
+        return isset($this->create_date) ? $this->create_date : null;
     }
 
     public function hasCreateDate()
@@ -381,7 +381,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
      */
     public function getActivationDateTime()
     {
-        return $this->activation_date_time;
+        return isset($this->activation_date_time) ? $this->activation_date_time : null;
     }
 
     public function hasActivationDateTime()
@@ -417,7 +417,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
      */
     public function getExpirationTime()
     {
-        return $this->expiration_time;
+        return isset($this->expiration_time) ? $this->expiration_time : null;
     }
 
     public function hasExpirationTime()
@@ -453,7 +453,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
      */
     public function getPrice()
     {
-        return $this->price;
+        return isset($this->price) ? $this->price : null;
     }
 
     public function hasPrice()
@@ -489,7 +489,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
      */
     public function getStopPrice()
     {
-        return $this->stop_price;
+        return isset($this->stop_price) ? $this->stop_price : null;
     }
 
     public function hasStopPrice()
@@ -577,7 +577,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
      */
     public function getTrailingData()
     {
-        return $this->trailing_data;
+        return isset($this->trailing_data) ? $this->trailing_data : null;
     }
 
     public function hasTrailingData()
@@ -660,7 +660,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор биржевой заявки.
      *
-     * Generated from protobuf field <code>optional string exchange_order_id = 17;</code>
+     * Generated from protobuf field <code>string exchange_order_id = 17;</code>
      * @return string
      */
     public function getExchangeOrderId()
@@ -681,7 +681,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор биржевой заявки.
      *
-     * Generated from protobuf field <code>optional string exchange_order_id = 17;</code>
+     * Generated from protobuf field <code>string exchange_order_id = 17;</code>
      * @param string $var
      * @return $this
      */

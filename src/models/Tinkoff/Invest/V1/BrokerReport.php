@@ -355,7 +355,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      */
     public function getTradeDatetime()
     {
-        return $this->trade_datetime;
+        return isset($this->trade_datetime) ? $this->trade_datetime : null;
     }
 
     public function hasTradeDatetime()
@@ -521,7 +521,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      */
     public function getPrice()
     {
-        return $this->price;
+        return isset($this->price) ? $this->price : null;
     }
 
     public function hasPrice()
@@ -583,7 +583,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      */
     public function getOrderAmount()
     {
-        return $this->order_amount;
+        return isset($this->order_amount) ? $this->order_amount : null;
     }
 
     public function hasOrderAmount()
@@ -619,7 +619,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      */
     public function getAciValue()
     {
-        return $this->aci_value;
+        return isset($this->aci_value) ? $this->aci_value : null;
     }
 
     public function hasAciValue()
@@ -655,7 +655,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      */
     public function getTotalOrderAmount()
     {
-        return $this->total_order_amount;
+        return isset($this->total_order_amount) ? $this->total_order_amount : null;
     }
 
     public function hasTotalOrderAmount()
@@ -691,7 +691,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      */
     public function getBrokerCommission()
     {
-        return $this->broker_commission;
+        return isset($this->broker_commission) ? $this->broker_commission : null;
     }
 
     public function hasBrokerCommission()
@@ -727,7 +727,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      */
     public function getExchangeCommission()
     {
-        return $this->exchange_commission;
+        return isset($this->exchange_commission) ? $this->exchange_commission : null;
     }
 
     public function hasExchangeCommission()
@@ -763,7 +763,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      */
     public function getExchangeClearingCommission()
     {
-        return $this->exchange_clearing_commission;
+        return isset($this->exchange_clearing_commission) ? $this->exchange_clearing_commission : null;
     }
 
     public function hasExchangeClearingCommission()
@@ -799,7 +799,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      */
     public function getRepoRate()
     {
-        return $this->repo_rate;
+        return isset($this->repo_rate) ? $this->repo_rate : null;
     }
 
     public function hasRepoRate()
@@ -861,7 +861,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      */
     public function getClearValueDate()
     {
-        return $this->clear_value_date;
+        return isset($this->clear_value_date) ? $this->clear_value_date : null;
     }
 
     public function hasClearValueDate()
@@ -897,7 +897,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      */
     public function getSecValueDate()
     {
-        return $this->sec_value_date;
+        return isset($this->sec_value_date) ? $this->sec_value_date : null;
     }
 
     public function hasSecValueDate()

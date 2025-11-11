@@ -406,7 +406,7 @@ class Option extends \Google\Protobuf\Internal\Message
      *          Флаг заблокированного ТКС.
      *     @type bool $api_trade_available_flag
      *          Возможность торговать инструментом через API.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $required_tests
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $required_tests
      *          Тесты, которые необходимо пройти клиенту, чтобы совершать сделки по инструменту.
      * }
      */
@@ -943,7 +943,7 @@ class Option extends \Google\Protobuf\Internal\Message
      */
     public function getBrand()
     {
-        return $this->brand;
+        return isset($this->brand) ? $this->brand : null;
     }
 
     public function hasBrand()
@@ -1005,7 +1005,7 @@ class Option extends \Google\Protobuf\Internal\Message
      */
     public function getBasicAssetSize()
     {
-        return $this->basic_asset_size;
+        return isset($this->basic_asset_size) ? $this->basic_asset_size : null;
     }
 
     public function hasBasicAssetSize()
@@ -1043,7 +1043,7 @@ class Option extends \Google\Protobuf\Internal\Message
     public function getKlong()
     {
         @trigger_error('klong is deprecated.', E_USER_DEPRECATED);
-        return $this->klong;
+        return isset($this->klong) ? $this->klong : null;
     }
 
     public function hasKlong()
@@ -1085,7 +1085,7 @@ class Option extends \Google\Protobuf\Internal\Message
     public function getKshort()
     {
         @trigger_error('kshort is deprecated.', E_USER_DEPRECATED);
-        return $this->kshort;
+        return isset($this->kshort) ? $this->kshort : null;
     }
 
     public function hasKshort()
@@ -1125,7 +1125,7 @@ class Option extends \Google\Protobuf\Internal\Message
      */
     public function getDlong()
     {
-        return $this->dlong;
+        return isset($this->dlong) ? $this->dlong : null;
     }
 
     public function hasDlong()
@@ -1161,7 +1161,7 @@ class Option extends \Google\Protobuf\Internal\Message
      */
     public function getDshort()
     {
-        return $this->dshort;
+        return isset($this->dshort) ? $this->dshort : null;
     }
 
     public function hasDshort()
@@ -1197,7 +1197,7 @@ class Option extends \Google\Protobuf\Internal\Message
      */
     public function getDlongMin()
     {
-        return $this->dlong_min;
+        return isset($this->dlong_min) ? $this->dlong_min : null;
     }
 
     public function hasDlongMin()
@@ -1233,7 +1233,7 @@ class Option extends \Google\Protobuf\Internal\Message
      */
     public function getDshortMin()
     {
-        return $this->dshort_min;
+        return isset($this->dshort_min) ? $this->dshort_min : null;
     }
 
     public function hasDshortMin()
@@ -1269,7 +1269,7 @@ class Option extends \Google\Protobuf\Internal\Message
      */
     public function getMinPriceIncrement()
     {
-        return $this->min_price_increment;
+        return isset($this->min_price_increment) ? $this->min_price_increment : null;
     }
 
     public function hasMinPriceIncrement()
@@ -1305,7 +1305,7 @@ class Option extends \Google\Protobuf\Internal\Message
      */
     public function getStrikePrice()
     {
-        return $this->strike_price;
+        return isset($this->strike_price) ? $this->strike_price : null;
     }
 
     public function hasStrikePrice()
@@ -1341,7 +1341,7 @@ class Option extends \Google\Protobuf\Internal\Message
      */
     public function getDlongClient()
     {
-        return $this->dlong_client;
+        return isset($this->dlong_client) ? $this->dlong_client : null;
     }
 
     public function hasDlongClient()
@@ -1377,7 +1377,7 @@ class Option extends \Google\Protobuf\Internal\Message
      */
     public function getDshortClient()
     {
-        return $this->dshort_client;
+        return isset($this->dshort_client) ? $this->dshort_client : null;
     }
 
     public function hasDshortClient()
@@ -1413,7 +1413,7 @@ class Option extends \Google\Protobuf\Internal\Message
      */
     public function getExpirationDate()
     {
-        return $this->expiration_date;
+        return isset($this->expiration_date) ? $this->expiration_date : null;
     }
 
     public function hasExpirationDate()
@@ -1449,7 +1449,7 @@ class Option extends \Google\Protobuf\Internal\Message
      */
     public function getFirstTradeDate()
     {
-        return $this->first_trade_date;
+        return isset($this->first_trade_date) ? $this->first_trade_date : null;
     }
 
     public function hasFirstTradeDate()
@@ -1485,7 +1485,7 @@ class Option extends \Google\Protobuf\Internal\Message
      */
     public function getLastTradeDate()
     {
-        return $this->last_trade_date;
+        return isset($this->last_trade_date) ? $this->last_trade_date : null;
     }
 
     public function hasLastTradeDate()
@@ -1521,7 +1521,7 @@ class Option extends \Google\Protobuf\Internal\Message
      */
     public function getFirst1MinCandleDate()
     {
-        return $this->first_1min_candle_date;
+        return isset($this->first_1min_candle_date) ? $this->first_1min_candle_date : null;
     }
 
     public function hasFirst1MinCandleDate()
@@ -1557,7 +1557,7 @@ class Option extends \Google\Protobuf\Internal\Message
      */
     public function getFirst1DayCandleDate()
     {
-        return $this->first_1day_candle_date;
+        return isset($this->first_1day_candle_date) ? $this->first_1day_candle_date : null;
     }
 
     public function hasFirst1DayCandleDate()
@@ -1834,7 +1834,7 @@ class Option extends \Google\Protobuf\Internal\Message
      *Тесты, которые необходимо пройти клиенту, чтобы совершать сделки по инструменту.
      *
      * Generated from protobuf field <code>repeated string required_tests = 410;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setRequiredTests($var)

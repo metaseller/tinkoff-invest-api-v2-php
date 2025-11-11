@@ -308,7 +308,7 @@ class Currency extends \Google\Protobuf\Internal\Message
      *          Реальная площадка исполнения расчетов (биржа).
      *     @type string $position_uid
      *          Уникальный идентификатор позиции инструмента.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $required_tests
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $required_tests
      *          Тесты, которые необходимо пройти клиенту, чтобы совершать сделки по инструменту.
      *     @type bool $for_iis_flag
      *          Признак доступности для ИИС.
@@ -501,7 +501,7 @@ class Currency extends \Google\Protobuf\Internal\Message
     public function getKlong()
     {
         @trigger_error('klong is deprecated.', E_USER_DEPRECATED);
-        return $this->klong;
+        return isset($this->klong) ? $this->klong : null;
     }
 
     public function hasKlong()
@@ -543,7 +543,7 @@ class Currency extends \Google\Protobuf\Internal\Message
     public function getKshort()
     {
         @trigger_error('kshort is deprecated.', E_USER_DEPRECATED);
-        return $this->kshort;
+        return isset($this->kshort) ? $this->kshort : null;
     }
 
     public function hasKshort()
@@ -583,7 +583,7 @@ class Currency extends \Google\Protobuf\Internal\Message
      */
     public function getDlong()
     {
-        return $this->dlong;
+        return isset($this->dlong) ? $this->dlong : null;
     }
 
     public function hasDlong()
@@ -619,7 +619,7 @@ class Currency extends \Google\Protobuf\Internal\Message
      */
     public function getDshort()
     {
-        return $this->dshort;
+        return isset($this->dshort) ? $this->dshort : null;
     }
 
     public function hasDshort()
@@ -655,7 +655,7 @@ class Currency extends \Google\Protobuf\Internal\Message
      */
     public function getDlongMin()
     {
-        return $this->dlong_min;
+        return isset($this->dlong_min) ? $this->dlong_min : null;
     }
 
     public function hasDlongMin()
@@ -691,7 +691,7 @@ class Currency extends \Google\Protobuf\Internal\Message
      */
     public function getDshortMin()
     {
-        return $this->dshort_min;
+        return isset($this->dshort_min) ? $this->dshort_min : null;
     }
 
     public function hasDshortMin()
@@ -805,7 +805,7 @@ class Currency extends \Google\Protobuf\Internal\Message
      */
     public function getNominal()
     {
-        return $this->nominal;
+        return isset($this->nominal) ? $this->nominal : null;
     }
 
     public function hasNominal()
@@ -1023,7 +1023,7 @@ class Currency extends \Google\Protobuf\Internal\Message
      */
     public function getMinPriceIncrement()
     {
-        return $this->min_price_increment;
+        return isset($this->min_price_increment) ? $this->min_price_increment : null;
     }
 
     public function hasMinPriceIncrement()
@@ -1170,7 +1170,7 @@ class Currency extends \Google\Protobuf\Internal\Message
      *Тесты, которые необходимо пройти клиенту, чтобы совершать сделки по инструменту.
      *
      * Generated from protobuf field <code>repeated string required_tests = 30;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setRequiredTests($var)
@@ -1293,7 +1293,7 @@ class Currency extends \Google\Protobuf\Internal\Message
      */
     public function getFirst1MinCandleDate()
     {
-        return $this->first_1min_candle_date;
+        return isset($this->first_1min_candle_date) ? $this->first_1min_candle_date : null;
     }
 
     public function hasFirst1MinCandleDate()
@@ -1329,7 +1329,7 @@ class Currency extends \Google\Protobuf\Internal\Message
      */
     public function getFirst1DayCandleDate()
     {
-        return $this->first_1day_candle_date;
+        return isset($this->first_1day_candle_date) ? $this->first_1day_candle_date : null;
     }
 
     public function hasFirst1DayCandleDate()
@@ -1365,7 +1365,7 @@ class Currency extends \Google\Protobuf\Internal\Message
      */
     public function getBrand()
     {
-        return $this->brand;
+        return isset($this->brand) ? $this->brand : null;
     }
 
     public function hasBrand()
@@ -1401,7 +1401,7 @@ class Currency extends \Google\Protobuf\Internal\Message
      */
     public function getDlongClient()
     {
-        return $this->dlong_client;
+        return isset($this->dlong_client) ? $this->dlong_client : null;
     }
 
     public function hasDlongClient()
@@ -1437,7 +1437,7 @@ class Currency extends \Google\Protobuf\Internal\Message
      */
     public function getDshortClient()
     {
-        return $this->dshort_client;
+        return isset($this->dshort_client) ? $this->dshort_client : null;
     }
 
     public function hasDshortClient()

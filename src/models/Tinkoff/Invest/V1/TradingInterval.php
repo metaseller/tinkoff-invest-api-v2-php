@@ -77,7 +77,7 @@ class TradingInterval extends \Google\Protobuf\Internal\Message
      */
     public function getInterval()
     {
-        return $this->interval;
+        return isset($this->interval) ? $this->interval : null;
     }
 
     public function hasInterval()

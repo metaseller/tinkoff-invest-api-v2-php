@@ -24,7 +24,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор ключа идемпотентности, переданный клиентом, в формате UID. Максимальная длина 36 символов.
      *
-     * Generated from protobuf field <code>optional string order_request_id = 2;</code>
+     * Generated from protobuf field <code>string order_request_id = 2;</code>
      */
     protected $order_request_id = null;
     /**
@@ -48,7 +48,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     /**
      *Дополнительная информация по статусу.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.OrderStateStreamResponse.StatusCauseInfo status_info = 6;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderStateStreamResponse.StatusCauseInfo status_info = 6;</code>
      */
     protected $status_info = null;
     /**
@@ -108,7 +108,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     /**
      *Предрассчитанная стоимость полной заявки.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.MoneyValue amount = 24;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue amount = 24;</code>
      */
     protected $amount = null;
     /**
@@ -150,7 +150,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     /**
      *Спецсимвол.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.OrderStateStreamResponse.MarkerType marker = 31;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderStateStreamResponse.MarkerType marker = 31;</code>
      */
     protected $marker = null;
     /**
@@ -230,7 +230,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
      *          Отмененные лоты.
      *     @type int $marker
      *          Спецсимвол.
-     *     @type array<\Tinkoff\Invest\V1\OrderTrade>|\Google\Protobuf\Internal\RepeatedField $trades
+     *     @type \Tinkoff\Invest\V1\OrderTrade[]|\Google\Protobuf\Internal\RepeatedField $trades
      *          	Список сделок.
      *     @type \Google\Protobuf\Timestamp $completion_time
      *          Время исполнения заявки.
@@ -274,7 +274,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор ключа идемпотентности, переданный клиентом, в формате UID. Максимальная длина 36 символов.
      *
-     * Generated from protobuf field <code>optional string order_request_id = 2;</code>
+     * Generated from protobuf field <code>string order_request_id = 2;</code>
      * @return string
      */
     public function getOrderRequestId()
@@ -295,7 +295,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор ключа идемпотентности, переданный клиентом, в формате UID. Максимальная длина 36 символов.
      *
-     * Generated from protobuf field <code>optional string order_request_id = 2;</code>
+     * Generated from protobuf field <code>string order_request_id = 2;</code>
      * @param string $var
      * @return $this
      */
@@ -341,7 +341,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
      */
     public function getCreatedAt()
     {
-        return $this->created_at;
+        return isset($this->created_at) ? $this->created_at : null;
     }
 
     public function hasCreatedAt()
@@ -398,7 +398,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     /**
      *Дополнительная информация по статусу.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.OrderStateStreamResponse.StatusCauseInfo status_info = 6;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderStateStreamResponse.StatusCauseInfo status_info = 6;</code>
      * @return int
      */
     public function getStatusInfo()
@@ -419,7 +419,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     /**
      *Дополнительная информация по статусу.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.OrderStateStreamResponse.StatusCauseInfo status_info = 6;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderStateStreamResponse.StatusCauseInfo status_info = 6;</code>
      * @param int $var
      * @return $this
      */
@@ -621,7 +621,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
      */
     public function getInitialOrderPrice()
     {
-        return $this->initial_order_price;
+        return isset($this->initial_order_price) ? $this->initial_order_price : null;
     }
 
     public function hasInitialOrderPrice()
@@ -657,7 +657,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
      */
     public function getOrderPrice()
     {
-        return $this->order_price;
+        return isset($this->order_price) ? $this->order_price : null;
     }
 
     public function hasOrderPrice()
@@ -688,12 +688,12 @@ class OrderState extends \Google\Protobuf\Internal\Message
     /**
      *Предрассчитанная стоимость полной заявки.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.MoneyValue amount = 24;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue amount = 24;</code>
      * @return \Tinkoff\Invest\V1\MoneyValue|null
      */
     public function getAmount()
     {
-        return $this->amount;
+        return isset($this->amount) ? $this->amount : null;
     }
 
     public function hasAmount()
@@ -709,7 +709,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     /**
      *Предрассчитанная стоимость полной заявки.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.MoneyValue amount = 24;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue amount = 24;</code>
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
@@ -729,7 +729,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
      */
     public function getExecutedOrderPrice()
     {
-        return $this->executed_order_price;
+        return isset($this->executed_order_price) ? $this->executed_order_price : null;
     }
 
     public function hasExecutedOrderPrice()
@@ -890,7 +890,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     /**
      *Спецсимвол.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.OrderStateStreamResponse.MarkerType marker = 31;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderStateStreamResponse.MarkerType marker = 31;</code>
      * @return int
      */
     public function getMarker()
@@ -911,7 +911,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
     /**
      *Спецсимвол.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.OrderStateStreamResponse.MarkerType marker = 31;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderStateStreamResponse.MarkerType marker = 31;</code>
      * @param int $var
      * @return $this
      */
@@ -938,7 +938,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
      *	Список сделок.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OrderTrade trades = 33;</code>
-     * @param array<\Tinkoff\Invest\V1\OrderTrade>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\OrderTrade[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setTrades($var)
@@ -957,7 +957,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
      */
     public function getCompletionTime()
     {
-        return $this->completion_time;
+        return isset($this->completion_time) ? $this->completion_time : null;
     }
 
     public function hasCompletionTime()

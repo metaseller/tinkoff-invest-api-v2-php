@@ -30,7 +30,7 @@ class PostOrderAsyncResponse extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор торгового поручения.
      *
-     * Generated from protobuf field <code>optional string trade_intent_id = 3;</code>
+     * Generated from protobuf field <code>string trade_intent_id = 3;</code>
      */
     protected $trade_intent_id = null;
 
@@ -108,7 +108,7 @@ class PostOrderAsyncResponse extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор торгового поручения.
      *
-     * Generated from protobuf field <code>optional string trade_intent_id = 3;</code>
+     * Generated from protobuf field <code>string trade_intent_id = 3;</code>
      * @return string
      */
     public function getTradeIntentId()
@@ -129,7 +129,7 @@ class PostOrderAsyncResponse extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор торгового поручения.
      *
-     * Generated from protobuf field <code>optional string trade_intent_id = 3;</code>
+     * Generated from protobuf field <code>string trade_intent_id = 3;</code>
      * @param string $var
      * @return $this
      */

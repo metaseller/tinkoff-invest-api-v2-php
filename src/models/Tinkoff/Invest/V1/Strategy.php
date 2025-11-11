@@ -30,13 +30,13 @@ class Strategy extends \Google\Protobuf\Internal\Message
     /**
      *Описание стратегии.
      *
-     * Generated from protobuf field <code>optional string strategy_description = 3;</code>
+     * Generated from protobuf field <code>string strategy_description = 3;</code>
      */
     protected $strategy_description = null;
     /**
      *Ссылка на страницу с описанием стратегии.
      *
-     * Generated from protobuf field <code>optional string strategy_url = 4;</code>
+     * Generated from protobuf field <code>string strategy_url = 4;</code>
      */
     protected $strategy_url = null;
     /**
@@ -180,7 +180,7 @@ class Strategy extends \Google\Protobuf\Internal\Message
     /**
      *Описание стратегии.
      *
-     * Generated from protobuf field <code>optional string strategy_description = 3;</code>
+     * Generated from protobuf field <code>string strategy_description = 3;</code>
      * @return string
      */
     public function getStrategyDescription()
@@ -201,7 +201,7 @@ class Strategy extends \Google\Protobuf\Internal\Message
     /**
      *Описание стратегии.
      *
-     * Generated from protobuf field <code>optional string strategy_description = 3;</code>
+     * Generated from protobuf field <code>string strategy_description = 3;</code>
      * @param string $var
      * @return $this
      */
@@ -216,7 +216,7 @@ class Strategy extends \Google\Protobuf\Internal\Message
     /**
      *Ссылка на страницу с описанием стратегии.
      *
-     * Generated from protobuf field <code>optional string strategy_url = 4;</code>
+     * Generated from protobuf field <code>string strategy_url = 4;</code>
      * @return string
      */
     public function getStrategyUrl()
@@ -237,7 +237,7 @@ class Strategy extends \Google\Protobuf\Internal\Message
     /**
      *Ссылка на страницу с описанием стратегии.
      *
-     * Generated from protobuf field <code>optional string strategy_url = 4;</code>
+     * Generated from protobuf field <code>string strategy_url = 4;</code>
      * @param string $var
      * @return $this
      */
@@ -361,7 +361,7 @@ class Strategy extends \Google\Protobuf\Internal\Message
      */
     public function getAverageSignalYield()
     {
-        return $this->average_signal_yield;
+        return isset($this->average_signal_yield) ? $this->average_signal_yield : null;
     }
 
     public function hasAverageSignalYield()
@@ -397,7 +397,7 @@ class Strategy extends \Google\Protobuf\Internal\Message
      */
     public function getAverageSignalYieldYear()
     {
-        return $this->average_signal_yield_year;
+        return isset($this->average_signal_yield_year) ? $this->average_signal_yield_year : null;
     }
 
     public function hasAverageSignalYieldYear()
@@ -433,7 +433,7 @@ class Strategy extends \Google\Protobuf\Internal\Message
      */
     public function getYield()
     {
-        return $this->yield;
+        return isset($this->yield) ? $this->yield : null;
     }
 
     public function hasYield()
@@ -469,7 +469,7 @@ class Strategy extends \Google\Protobuf\Internal\Message
      */
     public function getYieldYear()
     {
-        return $this->yield_year;
+        return isset($this->yield_year) ? $this->yield_year : null;
     }
 
     public function hasYieldYear()

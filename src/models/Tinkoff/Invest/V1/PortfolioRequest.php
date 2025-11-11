@@ -24,7 +24,7 @@ class PortfolioRequest extends \Google\Protobuf\Internal\Message
     /**
      *Валюта, в которой нужно рассчитать портфель.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.PortfolioRequest.CurrencyRequest currency = 2;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PortfolioRequest.CurrencyRequest currency = 2;</code>
      */
     protected $currency = null;
 
@@ -74,7 +74,7 @@ class PortfolioRequest extends \Google\Protobuf\Internal\Message
     /**
      *Валюта, в которой нужно рассчитать портфель.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.PortfolioRequest.CurrencyRequest currency = 2;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PortfolioRequest.CurrencyRequest currency = 2;</code>
      * @return int
      */
     public function getCurrency()
@@ -95,7 +95,7 @@ class PortfolioRequest extends \Google\Protobuf\Internal\Message
     /**
      *Валюта, в которой нужно рассчитать портфель.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.PortfolioRequest.CurrencyRequest currency = 2;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PortfolioRequest.CurrencyRequest currency = 2;</code>
      * @param int $var
      * @return $this
      */

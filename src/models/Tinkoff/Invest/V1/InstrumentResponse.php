@@ -45,7 +45,7 @@ class InstrumentResponse extends \Google\Protobuf\Internal\Message
      */
     public function getInstrument()
     {
-        return $this->instrument;
+        return isset($this->instrument) ? $this->instrument : null;
     }
 
     public function hasInstrument()

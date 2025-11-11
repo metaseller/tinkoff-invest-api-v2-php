@@ -77,7 +77,7 @@ class ChildOperationItem extends \Google\Protobuf\Internal\Message
      */
     public function getPayment()
     {
-        return $this->payment;
+        return isset($this->payment) ? $this->payment : null;
     }
 
     public function hasPayment()

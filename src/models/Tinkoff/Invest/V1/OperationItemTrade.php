@@ -111,7 +111,7 @@ class OperationItemTrade extends \Google\Protobuf\Internal\Message
      */
     public function getDate()
     {
-        return $this->date;
+        return isset($this->date) ? $this->date : null;
     }
 
     public function hasDate()
@@ -173,7 +173,7 @@ class OperationItemTrade extends \Google\Protobuf\Internal\Message
      */
     public function getPrice()
     {
-        return $this->price;
+        return isset($this->price) ? $this->price : null;
     }
 
     public function hasPrice()
@@ -209,7 +209,7 @@ class OperationItemTrade extends \Google\Protobuf\Internal\Message
      */
     public function getYield()
     {
-        return $this->yield;
+        return isset($this->yield) ? $this->yield : null;
     }
 
     public function hasYield()
@@ -245,7 +245,7 @@ class OperationItemTrade extends \Google\Protobuf\Internal\Message
      */
     public function getYieldRelative()
     {
-        return $this->yield_relative;
+        return isset($this->yield_relative) ? $this->yield_relative : null;
     }
 
     public function hasYieldRelative()

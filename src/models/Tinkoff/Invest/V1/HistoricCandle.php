@@ -117,7 +117,7 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
      */
     public function getOpen()
     {
-        return $this->open;
+        return isset($this->open) ? $this->open : null;
     }
 
     public function hasOpen()
@@ -153,7 +153,7 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
      */
     public function getHigh()
     {
-        return $this->high;
+        return isset($this->high) ? $this->high : null;
     }
 
     public function hasHigh()
@@ -189,7 +189,7 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
      */
     public function getLow()
     {
-        return $this->low;
+        return isset($this->low) ? $this->low : null;
     }
 
     public function hasLow()
@@ -225,7 +225,7 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
      */
     public function getClose()
     {
-        return $this->close;
+        return isset($this->close) ? $this->close : null;
     }
 
     public function hasClose()
@@ -287,7 +287,7 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
      */
     public function getTime()
     {
-        return $this->time;
+        return isset($this->time) ? $this->time : null;
     }
 
     public function hasTime()

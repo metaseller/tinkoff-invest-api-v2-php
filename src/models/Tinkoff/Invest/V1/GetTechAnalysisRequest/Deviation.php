@@ -43,7 +43,7 @@ class Deviation extends \Google\Protobuf\Internal\Message
      */
     public function getDeviationMultiplier()
     {
-        return $this->deviation_multiplier;
+        return isset($this->deviation_multiplier) ? $this->deviation_multiplier : null;
     }
 
     public function hasDeviationMultiplier()

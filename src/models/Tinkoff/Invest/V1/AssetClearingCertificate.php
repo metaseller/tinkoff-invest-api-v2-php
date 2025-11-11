@@ -53,7 +53,7 @@ class AssetClearingCertificate extends \Google\Protobuf\Internal\Message
      */
     public function getNominal()
     {
-        return $this->nominal;
+        return isset($this->nominal) ? $this->nominal : null;
     }
 
     public function hasNominal()

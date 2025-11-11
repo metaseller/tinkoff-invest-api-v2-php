@@ -60,13 +60,13 @@ class PositionData extends \Google\Protobuf\Internal\Message
      *
      *     @type string $account_id
      *          Идентификатор счета.
-     *     @type array<\Tinkoff\Invest\V1\PositionsMoney>|\Google\Protobuf\Internal\RepeatedField $money
+     *     @type \Tinkoff\Invest\V1\PositionsMoney[]|\Google\Protobuf\Internal\RepeatedField $money
      *          Массив валютных позиций портфеля.
-     *     @type array<\Tinkoff\Invest\V1\PositionsSecurities>|\Google\Protobuf\Internal\RepeatedField $securities
+     *     @type \Tinkoff\Invest\V1\PositionsSecurities[]|\Google\Protobuf\Internal\RepeatedField $securities
      *          Список ценно-бумажных позиций портфеля.
-     *     @type array<\Tinkoff\Invest\V1\PositionsFutures>|\Google\Protobuf\Internal\RepeatedField $futures
+     *     @type \Tinkoff\Invest\V1\PositionsFutures[]|\Google\Protobuf\Internal\RepeatedField $futures
      *          Список фьючерсов портфеля.
-     *     @type array<\Tinkoff\Invest\V1\PositionsOptions>|\Google\Protobuf\Internal\RepeatedField $options
+     *     @type \Tinkoff\Invest\V1\PositionsOptions[]|\Google\Protobuf\Internal\RepeatedField $options
      *          Список опционов портфеля.
      *     @type \Google\Protobuf\Timestamp $date
      *          Дата и время операции в формате UTC.
@@ -118,7 +118,7 @@ class PositionData extends \Google\Protobuf\Internal\Message
      *Массив валютных позиций портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.PositionsMoney money = 2;</code>
-     * @param array<\Tinkoff\Invest\V1\PositionsMoney>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\PositionsMoney[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setMoney($var)
@@ -144,7 +144,7 @@ class PositionData extends \Google\Protobuf\Internal\Message
      *Список ценно-бумажных позиций портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.PositionsSecurities securities = 3;</code>
-     * @param array<\Tinkoff\Invest\V1\PositionsSecurities>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\PositionsSecurities[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setSecurities($var)
@@ -170,7 +170,7 @@ class PositionData extends \Google\Protobuf\Internal\Message
      *Список фьючерсов портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.PositionsFutures futures = 4;</code>
-     * @param array<\Tinkoff\Invest\V1\PositionsFutures>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\PositionsFutures[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setFutures($var)
@@ -196,7 +196,7 @@ class PositionData extends \Google\Protobuf\Internal\Message
      *Список опционов портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.PositionsOptions options = 5;</code>
-     * @param array<\Tinkoff\Invest\V1\PositionsOptions>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\PositionsOptions[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setOptions($var)
@@ -215,7 +215,7 @@ class PositionData extends \Google\Protobuf\Internal\Message
      */
     public function getDate()
     {
-        return $this->date;
+        return isset($this->date) ? $this->date : null;
     }
 
     public function hasDate()

@@ -69,7 +69,7 @@ class AccruedInterest extends \Google\Protobuf\Internal\Message
      */
     public function getDate()
     {
-        return $this->date;
+        return isset($this->date) ? $this->date : null;
     }
 
     public function hasDate()
@@ -105,7 +105,7 @@ class AccruedInterest extends \Google\Protobuf\Internal\Message
      */
     public function getValue()
     {
-        return $this->value;
+        return isset($this->value) ? $this->value : null;
     }
 
     public function hasValue()
@@ -141,7 +141,7 @@ class AccruedInterest extends \Google\Protobuf\Internal\Message
      */
     public function getValuePercent()
     {
-        return $this->value_percent;
+        return isset($this->value_percent) ? $this->value_percent : null;
     }
 
     public function hasValuePercent()
@@ -177,7 +177,7 @@ class AccruedInterest extends \Google\Protobuf\Internal\Message
      */
     public function getNominal()
     {
-        return $this->nominal;
+        return isset($this->nominal) ? $this->nominal : null;
     }
 
     public function hasNominal()

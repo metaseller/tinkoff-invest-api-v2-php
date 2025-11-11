@@ -18,7 +18,7 @@ class GetStrategiesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор стратегии.
      *
-     * Generated from protobuf field <code>optional string strategy_id = 1;</code>
+     * Generated from protobuf field <code>string strategy_id = 1;</code>
      */
     protected $strategy_id = null;
 
@@ -40,7 +40,7 @@ class GetStrategiesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор стратегии.
      *
-     * Generated from protobuf field <code>optional string strategy_id = 1;</code>
+     * Generated from protobuf field <code>string strategy_id = 1;</code>
      * @return string
      */
     public function getStrategyId()
@@ -61,7 +61,7 @@ class GetStrategiesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор стратегии.
      *
-     * Generated from protobuf field <code>optional string strategy_id = 1;</code>
+     * Generated from protobuf field <code>string strategy_id = 1;</code>
      * @param string $var
      * @return $this
      */

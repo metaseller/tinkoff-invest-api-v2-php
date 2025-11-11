@@ -30,7 +30,7 @@ class UnaryLimit extends \Google\Protobuf\Internal\Message
     /**
      *Количество unary-запросов в секунду.
      *
-     * Generated from protobuf field <code>optional int32 limit_per_second = 3;</code>
+     * Generated from protobuf field <code>int32 limit_per_second = 3;</code>
      */
     protected $limit_per_second = null;
 
@@ -42,7 +42,7 @@ class UnaryLimit extends \Google\Protobuf\Internal\Message
      *
      *     @type int $limit_per_minute
      *          Количество unary-запросов в минуту.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $methods
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $methods
      *          Названия методов.
      *     @type int $limit_per_second
      *          Количество unary-запросов в секунду.
@@ -94,7 +94,7 @@ class UnaryLimit extends \Google\Protobuf\Internal\Message
      *Названия методов.
      *
      * Generated from protobuf field <code>repeated string methods = 2;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setMethods($var)
@@ -108,7 +108,7 @@ class UnaryLimit extends \Google\Protobuf\Internal\Message
     /**
      *Количество unary-запросов в секунду.
      *
-     * Generated from protobuf field <code>optional int32 limit_per_second = 3;</code>
+     * Generated from protobuf field <code>int32 limit_per_second = 3;</code>
      * @return int
      */
     public function getLimitPerSecond()
@@ -129,7 +129,7 @@ class UnaryLimit extends \Google\Protobuf\Internal\Message
     /**
      *Количество unary-запросов в секунду.
      *
-     * Generated from protobuf field <code>optional int32 limit_per_second = 3;</code>
+     * Generated from protobuf field <code>int32 limit_per_second = 3;</code>
      * @param int $var
      * @return $this
      */

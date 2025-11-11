@@ -18,7 +18,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *
-     * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
+     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @deprecated
      */
     protected $figi = null;
@@ -31,13 +31,13 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Цена за 1 инструмент биржевой заявки, которая будет выставлена при срабатывании по достижению `stop_price`. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
      */
     protected $price = null;
     /**
      *Стоп-цена заявки за 1 инструмент. При достижении стоп-цены происходит активация стоп-заявки, в результате чего выставляется биржевая заявка. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation stop_price = 4;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation stop_price = 4;</code>
      */
     protected $stop_price = null;
     /**
@@ -67,7 +67,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Дата и время окончания действия стоп-заявки по UTC. Для `ExpirationType = GoodTillDate` заполнение обязательно, для `GoodTillCancel` игнорируется.
      *
-     * Generated from protobuf field <code>optional .google.protobuf.Timestamp expire_date = 9;</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp expire_date = 9;</code>
      */
     protected $expire_date = null;
     /**
@@ -161,7 +161,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *
-     * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
+     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @return string
      * @deprecated
      */
@@ -186,7 +186,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *
-     * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
+     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @param string $var
      * @return $this
      * @deprecated
@@ -229,12 +229,12 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Цена за 1 инструмент биржевой заявки, которая будет выставлена при срабатывании по достижению `stop_price`. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getPrice()
     {
-        return $this->price;
+        return isset($this->price) ? $this->price : null;
     }
 
     public function hasPrice()
@@ -250,7 +250,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Цена за 1 инструмент биржевой заявки, которая будет выставлена при срабатывании по достижению `stop_price`. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
@@ -265,12 +265,12 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Стоп-цена заявки за 1 инструмент. При достижении стоп-цены происходит активация стоп-заявки, в результате чего выставляется биржевая заявка. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation stop_price = 4;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation stop_price = 4;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getStopPrice()
     {
-        return $this->stop_price;
+        return isset($this->stop_price) ? $this->stop_price : null;
     }
 
     public function hasStopPrice()
@@ -286,7 +286,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Стоп-цена заявки за 1 инструмент. При достижении стоп-цены происходит активация стоп-заявки, в результате чего выставляется биржевая заявка. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation stop_price = 4;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation stop_price = 4;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
@@ -405,12 +405,12 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Дата и время окончания действия стоп-заявки по UTC. Для `ExpirationType = GoodTillDate` заполнение обязательно, для `GoodTillCancel` игнорируется.
      *
-     * Generated from protobuf field <code>optional .google.protobuf.Timestamp expire_date = 9;</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp expire_date = 9;</code>
      * @return \Google\Protobuf\Timestamp|null
      */
     public function getExpireDate()
     {
-        return $this->expire_date;
+        return isset($this->expire_date) ? $this->expire_date : null;
     }
 
     public function hasExpireDate()
@@ -426,7 +426,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
     /**
      *Дата и время окончания действия стоп-заявки по UTC. Для `ExpirationType = GoodTillDate` заполнение обязательно, для `GoodTillCancel` игнорируется.
      *
-     * Generated from protobuf field <code>optional .google.protobuf.Timestamp expire_date = 9;</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp expire_date = 9;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
@@ -524,7 +524,7 @@ class PostStopOrderRequest extends \Google\Protobuf\Internal\Message
      */
     public function getTrailingData()
     {
-        return $this->trailing_data;
+        return isset($this->trailing_data) ? $this->trailing_data : null;
     }
 
     public function hasTrailingData()

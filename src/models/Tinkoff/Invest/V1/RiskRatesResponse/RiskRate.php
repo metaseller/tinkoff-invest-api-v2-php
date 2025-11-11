@@ -77,7 +77,7 @@ class RiskRate extends \Google\Protobuf\Internal\Message
      */
     public function getValue()
     {
-        return $this->value;
+        return isset($this->value) ? $this->value : null;
     }
 
     public function hasValue()

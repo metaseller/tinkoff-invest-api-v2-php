@@ -183,7 +183,7 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      */
     public function getIssueSize()
     {
-        return $this->issue_size;
+        return isset($this->issue_size) ? $this->issue_size : null;
     }
 
     public function hasIssueSize()
@@ -219,7 +219,7 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      */
     public function getNominal()
     {
-        return $this->nominal;
+        return isset($this->nominal) ? $this->nominal : null;
     }
 
     public function hasNominal()
@@ -307,7 +307,7 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      */
     public function getDividendRate()
     {
-        return $this->dividend_rate;
+        return isset($this->dividend_rate) ? $this->dividend_rate : null;
     }
 
     public function hasDividendRate()
@@ -369,7 +369,7 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      */
     public function getIpoDate()
     {
-        return $this->ipo_date;
+        return isset($this->ipo_date) ? $this->ipo_date : null;
     }
 
     public function hasIpoDate()
@@ -405,7 +405,7 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      */
     public function getRegistryDate()
     {
-        return $this->registry_date;
+        return isset($this->registry_date) ? $this->registry_date : null;
     }
 
     public function hasRegistryDate()
@@ -493,7 +493,7 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      */
     public function getPlacementDate()
     {
-        return $this->placement_date;
+        return isset($this->placement_date) ? $this->placement_date : null;
     }
 
     public function hasPlacementDate()
@@ -555,7 +555,7 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      */
     public function getIssueSizePlan()
     {
-        return $this->issue_size_plan;
+        return isset($this->issue_size_plan) ? $this->issue_size_plan : null;
     }
 
     public function hasIssueSizePlan()
@@ -591,7 +591,7 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      */
     public function getTotalFloat()
     {
-        return $this->total_float;
+        return isset($this->total_float) ? $this->total_float : null;
     }
 
     public function hasTotalFloat()

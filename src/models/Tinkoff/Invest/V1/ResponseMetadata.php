@@ -77,7 +77,7 @@ class ResponseMetadata extends \Google\Protobuf\Internal\Message
      */
     public function getServerTime()
     {
-        return $this->server_time;
+        return isset($this->server_time) ? $this->server_time : null;
     }
 
     public function hasServerTime()

@@ -24,7 +24,7 @@ class GetInsiderDealsResponse extends \Google\Protobuf\Internal\Message
     /**
      * Курсор для получения следующей страницы.
      *
-     * Generated from protobuf field <code>optional string next_cursor = 2;</code>
+     * Generated from protobuf field <code>string next_cursor = 2;</code>
      */
     protected $next_cursor = null;
 
@@ -34,7 +34,7 @@ class GetInsiderDealsResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Tinkoff\Invest\V1\GetInsiderDealsResponse\InsiderDeal>|\Google\Protobuf\Internal\RepeatedField $insider_deals
+     *     @type \Tinkoff\Invest\V1\GetInsiderDealsResponse\InsiderDeal[]|\Google\Protobuf\Internal\RepeatedField $insider_deals
      *           Массив сделок.
      *     @type string $next_cursor
      *           Курсор для получения следующей страницы.
@@ -60,7 +60,7 @@ class GetInsiderDealsResponse extends \Google\Protobuf\Internal\Message
      * Массив сделок.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.GetInsiderDealsResponse.InsiderDeal insider_deals = 1;</code>
-     * @param array<\Tinkoff\Invest\V1\GetInsiderDealsResponse\InsiderDeal>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\GetInsiderDealsResponse\InsiderDeal[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setInsiderDeals($var)
@@ -74,7 +74,7 @@ class GetInsiderDealsResponse extends \Google\Protobuf\Internal\Message
     /**
      * Курсор для получения следующей страницы.
      *
-     * Generated from protobuf field <code>optional string next_cursor = 2;</code>
+     * Generated from protobuf field <code>string next_cursor = 2;</code>
      * @return string
      */
     public function getNextCursor()
@@ -95,7 +95,7 @@ class GetInsiderDealsResponse extends \Google\Protobuf\Internal\Message
     /**
      * Курсор для получения следующей страницы.
      *
-     * Generated from protobuf field <code>optional string next_cursor = 2;</code>
+     * Generated from protobuf field <code>string next_cursor = 2;</code>
      * @param string $var
      * @return $this
      */

@@ -83,7 +83,7 @@ class MarketDataServerSideStreamRequest extends \Google\Protobuf\Internal\Messag
      */
     public function getSubscribeCandlesRequest()
     {
-        return $this->subscribe_candles_request;
+        return isset($this->subscribe_candles_request) ? $this->subscribe_candles_request : null;
     }
 
     public function hasSubscribeCandlesRequest()
@@ -119,7 +119,7 @@ class MarketDataServerSideStreamRequest extends \Google\Protobuf\Internal\Messag
      */
     public function getSubscribeOrderBookRequest()
     {
-        return $this->subscribe_order_book_request;
+        return isset($this->subscribe_order_book_request) ? $this->subscribe_order_book_request : null;
     }
 
     public function hasSubscribeOrderBookRequest()
@@ -155,7 +155,7 @@ class MarketDataServerSideStreamRequest extends \Google\Protobuf\Internal\Messag
      */
     public function getSubscribeTradesRequest()
     {
-        return $this->subscribe_trades_request;
+        return isset($this->subscribe_trades_request) ? $this->subscribe_trades_request : null;
     }
 
     public function hasSubscribeTradesRequest()
@@ -191,7 +191,7 @@ class MarketDataServerSideStreamRequest extends \Google\Protobuf\Internal\Messag
      */
     public function getSubscribeInfoRequest()
     {
-        return $this->subscribe_info_request;
+        return isset($this->subscribe_info_request) ? $this->subscribe_info_request : null;
     }
 
     public function hasSubscribeInfoRequest()
@@ -227,7 +227,7 @@ class MarketDataServerSideStreamRequest extends \Google\Protobuf\Internal\Messag
      */
     public function getSubscribeLastPriceRequest()
     {
-        return $this->subscribe_last_price_request;
+        return isset($this->subscribe_last_price_request) ? $this->subscribe_last_price_request : null;
     }
 
     public function hasSubscribeLastPriceRequest()
@@ -263,7 +263,7 @@ class MarketDataServerSideStreamRequest extends \Google\Protobuf\Internal\Messag
      */
     public function getPingSettings()
     {
-        return $this->ping_settings;
+        return isset($this->ping_settings) ? $this->ping_settings : null;
     }
 
     public function hasPingSettings()

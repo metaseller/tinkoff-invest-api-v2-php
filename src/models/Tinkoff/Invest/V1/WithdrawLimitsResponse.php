@@ -40,11 +40,11 @@ class WithdrawLimitsResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Tinkoff\Invest\V1\MoneyValue>|\Google\Protobuf\Internal\RepeatedField $money
+     *     @type \Tinkoff\Invest\V1\MoneyValue[]|\Google\Protobuf\Internal\RepeatedField $money
      *          Массив валютных позиций портфеля.
-     *     @type array<\Tinkoff\Invest\V1\MoneyValue>|\Google\Protobuf\Internal\RepeatedField $blocked
+     *     @type \Tinkoff\Invest\V1\MoneyValue[]|\Google\Protobuf\Internal\RepeatedField $blocked
      *          Массив заблокированных валютных позиций портфеля.
-     *     @type array<\Tinkoff\Invest\V1\MoneyValue>|\Google\Protobuf\Internal\RepeatedField $blocked_guarantee
+     *     @type \Tinkoff\Invest\V1\MoneyValue[]|\Google\Protobuf\Internal\RepeatedField $blocked_guarantee
      *          Заблокировано под гарантийное обеспечение фьючерсов.
      * }
      */
@@ -68,7 +68,7 @@ class WithdrawLimitsResponse extends \Google\Protobuf\Internal\Message
      *Массив валютных позиций портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.MoneyValue money = 1;</code>
-     * @param array<\Tinkoff\Invest\V1\MoneyValue>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\MoneyValue[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setMoney($var)
@@ -94,7 +94,7 @@ class WithdrawLimitsResponse extends \Google\Protobuf\Internal\Message
      *Массив заблокированных валютных позиций портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.MoneyValue blocked = 2;</code>
-     * @param array<\Tinkoff\Invest\V1\MoneyValue>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\MoneyValue[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setBlocked($var)
@@ -120,7 +120,7 @@ class WithdrawLimitsResponse extends \Google\Protobuf\Internal\Message
      *Заблокировано под гарантийное обеспечение фьючерсов.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.MoneyValue blocked_guarantee = 3;</code>
-     * @param array<\Tinkoff\Invest\V1\MoneyValue>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\MoneyValue[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setBlockedGuarantee($var)

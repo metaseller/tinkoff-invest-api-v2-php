@@ -87,7 +87,7 @@ class GenerateDividendsForeignIssuerReportRequest extends \Google\Protobuf\Inter
      */
     public function getFrom()
     {
-        return $this->from;
+        return isset($this->from) ? $this->from : null;
     }
 
     public function hasFrom()
@@ -123,7 +123,7 @@ class GenerateDividendsForeignIssuerReportRequest extends \Google\Protobuf\Inter
      */
     public function getTo()
     {
-        return $this->to;
+        return isset($this->to) ? $this->to : null;
     }
 
     public function hasTo()

@@ -197,7 +197,7 @@ class Account extends \Google\Protobuf\Internal\Message
      */
     public function getOpenedDate()
     {
-        return $this->opened_date;
+        return isset($this->opened_date) ? $this->opened_date : null;
     }
 
     public function hasOpenedDate()
@@ -233,7 +233,7 @@ class Account extends \Google\Protobuf\Internal\Message
      */
     public function getClosedDate()
     {
-        return $this->closed_date;
+        return isset($this->closed_date) ? $this->closed_date : null;
     }
 
     public function hasClosedDate()

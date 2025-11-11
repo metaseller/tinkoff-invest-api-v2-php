@@ -24,7 +24,7 @@ class GetClosePricesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 9;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 9;</code>
      */
     protected $instrument_status = null;
 
@@ -34,7 +34,7 @@ class GetClosePricesRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Tinkoff\Invest\V1\InstrumentClosePriceRequest>|\Google\Protobuf\Internal\RepeatedField $instruments
+     *     @type \Tinkoff\Invest\V1\InstrumentClosePriceRequest[]|\Google\Protobuf\Internal\RepeatedField $instruments
      *          Массив по инструментам.
      *     @type int $instrument_status
      *          Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
@@ -60,7 +60,7 @@ class GetClosePricesRequest extends \Google\Protobuf\Internal\Message
      *Массив по инструментам.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.InstrumentClosePriceRequest instruments = 1 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @param array<\Tinkoff\Invest\V1\InstrumentClosePriceRequest>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\InstrumentClosePriceRequest[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setInstruments($var)
@@ -74,7 +74,7 @@ class GetClosePricesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 9;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 9;</code>
      * @return int
      */
     public function getInstrumentStatus()
@@ -95,7 +95,7 @@ class GetClosePricesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
      *
-     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 9;</code>
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 9;</code>
      * @param int $var
      * @return $this
      */

@@ -205,7 +205,7 @@ class InstrumentClosePriceResponse extends \Google\Protobuf\Internal\Message
      */
     public function getPrice()
     {
-        return $this->price;
+        return isset($this->price) ? $this->price : null;
     }
 
     public function hasPrice()
@@ -241,7 +241,7 @@ class InstrumentClosePriceResponse extends \Google\Protobuf\Internal\Message
      */
     public function getEveningSessionPrice()
     {
-        return $this->evening_session_price;
+        return isset($this->evening_session_price) ? $this->evening_session_price : null;
     }
 
     public function hasEveningSessionPrice()
@@ -277,7 +277,7 @@ class InstrumentClosePriceResponse extends \Google\Protobuf\Internal\Message
      */
     public function getTime()
     {
-        return $this->time;
+        return isset($this->time) ? $this->time : null;
     }
 
     public function hasTime()
@@ -313,7 +313,7 @@ class InstrumentClosePriceResponse extends \Google\Protobuf\Internal\Message
      */
     public function getEveningSessionPriceTime()
     {
-        return $this->evening_session_price_time;
+        return isset($this->evening_session_price_time) ? $this->evening_session_price_time : null;
     }
 
     public function hasEveningSessionPriceTime()

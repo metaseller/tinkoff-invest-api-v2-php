@@ -34,7 +34,7 @@ class GetForecastResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Tinkoff\Invest\V1\GetForecastResponse\TargetItem>|\Google\Protobuf\Internal\RepeatedField $targets
+     *     @type \Tinkoff\Invest\V1\GetForecastResponse\TargetItem[]|\Google\Protobuf\Internal\RepeatedField $targets
      *          Массив прогнозов.
      *     @type \Tinkoff\Invest\V1\GetForecastResponse\ConsensusItem $consensus
      *           Согласованный прогноз.
@@ -60,7 +60,7 @@ class GetForecastResponse extends \Google\Protobuf\Internal\Message
      *Массив прогнозов.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.GetForecastResponse.TargetItem targets = 1;</code>
-     * @param array<\Tinkoff\Invest\V1\GetForecastResponse\TargetItem>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\GetForecastResponse\TargetItem[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setTargets($var)
@@ -79,7 +79,7 @@ class GetForecastResponse extends \Google\Protobuf\Internal\Message
      */
     public function getConsensus()
     {
-        return $this->consensus;
+        return isset($this->consensus) ? $this->consensus : null;
     }
 
     public function hasConsensus()

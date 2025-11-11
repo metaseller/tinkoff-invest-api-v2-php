@@ -217,7 +217,7 @@ class InsiderDeal extends \Google\Protobuf\Internal\Message
      */
     public function getDate()
     {
-        return $this->date;
+        return isset($this->date) ? $this->date : null;
     }
 
     public function hasDate()
@@ -279,7 +279,7 @@ class InsiderDeal extends \Google\Protobuf\Internal\Message
      */
     public function getPrice()
     {
-        return $this->price;
+        return isset($this->price) ? $this->price : null;
     }
 
     public function hasPrice()
@@ -471,7 +471,7 @@ class InsiderDeal extends \Google\Protobuf\Internal\Message
      */
     public function getDisclosureDate()
     {
-        return $this->disclosure_date;
+        return isset($this->disclosure_date) ? $this->disclosure_date : null;
     }
 
     public function hasDisclosureDate()

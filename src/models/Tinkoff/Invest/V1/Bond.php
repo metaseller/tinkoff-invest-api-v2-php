@@ -450,7 +450,7 @@ class Bond extends \Google\Protobuf\Internal\Message
      *          Уникальный идентификатор позиции инструмента.
      *     @type string $asset_uid
      *          Уникальный идентификатор актива.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $required_tests
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $required_tests
      *          Тесты, которые необходимо пройти клиенту, чтобы совершать сделки по инструменту.
      *     @type bool $for_iis_flag
      *          Признак доступности для ИИС.
@@ -653,7 +653,7 @@ class Bond extends \Google\Protobuf\Internal\Message
     public function getKlong()
     {
         @trigger_error('klong is deprecated.', E_USER_DEPRECATED);
-        return $this->klong;
+        return isset($this->klong) ? $this->klong : null;
     }
 
     public function hasKlong()
@@ -695,7 +695,7 @@ class Bond extends \Google\Protobuf\Internal\Message
     public function getKshort()
     {
         @trigger_error('kshort is deprecated.', E_USER_DEPRECATED);
-        return $this->kshort;
+        return isset($this->kshort) ? $this->kshort : null;
     }
 
     public function hasKshort()
@@ -735,7 +735,7 @@ class Bond extends \Google\Protobuf\Internal\Message
      */
     public function getDlong()
     {
-        return $this->dlong;
+        return isset($this->dlong) ? $this->dlong : null;
     }
 
     public function hasDlong()
@@ -771,7 +771,7 @@ class Bond extends \Google\Protobuf\Internal\Message
      */
     public function getDshort()
     {
-        return $this->dshort;
+        return isset($this->dshort) ? $this->dshort : null;
     }
 
     public function hasDshort()
@@ -807,7 +807,7 @@ class Bond extends \Google\Protobuf\Internal\Message
      */
     public function getDlongMin()
     {
-        return $this->dlong_min;
+        return isset($this->dlong_min) ? $this->dlong_min : null;
     }
 
     public function hasDlongMin()
@@ -843,7 +843,7 @@ class Bond extends \Google\Protobuf\Internal\Message
      */
     public function getDshortMin()
     {
-        return $this->dshort_min;
+        return isset($this->dshort_min) ? $this->dshort_min : null;
     }
 
     public function hasDshortMin()
@@ -983,7 +983,7 @@ class Bond extends \Google\Protobuf\Internal\Message
      */
     public function getMaturityDate()
     {
-        return $this->maturity_date;
+        return isset($this->maturity_date) ? $this->maturity_date : null;
     }
 
     public function hasMaturityDate()
@@ -1019,7 +1019,7 @@ class Bond extends \Google\Protobuf\Internal\Message
      */
     public function getNominal()
     {
-        return $this->nominal;
+        return isset($this->nominal) ? $this->nominal : null;
     }
 
     public function hasNominal()
@@ -1055,7 +1055,7 @@ class Bond extends \Google\Protobuf\Internal\Message
      */
     public function getInitialNominal()
     {
-        return $this->initial_nominal;
+        return isset($this->initial_nominal) ? $this->initial_nominal : null;
     }
 
     public function hasInitialNominal()
@@ -1091,7 +1091,7 @@ class Bond extends \Google\Protobuf\Internal\Message
      */
     public function getStateRegDate()
     {
-        return $this->state_reg_date;
+        return isset($this->state_reg_date) ? $this->state_reg_date : null;
     }
 
     public function hasStateRegDate()
@@ -1127,7 +1127,7 @@ class Bond extends \Google\Protobuf\Internal\Message
      */
     public function getPlacementDate()
     {
-        return $this->placement_date;
+        return isset($this->placement_date) ? $this->placement_date : null;
     }
 
     public function hasPlacementDate()
@@ -1163,7 +1163,7 @@ class Bond extends \Google\Protobuf\Internal\Message
      */
     public function getPlacementPrice()
     {
-        return $this->placement_price;
+        return isset($this->placement_price) ? $this->placement_price : null;
     }
 
     public function hasPlacementPrice()
@@ -1199,7 +1199,7 @@ class Bond extends \Google\Protobuf\Internal\Message
      */
     public function getAciValue()
     {
-        return $this->aci_value;
+        return isset($this->aci_value) ? $this->aci_value : null;
     }
 
     public function hasAciValue()
@@ -1573,7 +1573,7 @@ class Bond extends \Google\Protobuf\Internal\Message
      */
     public function getMinPriceIncrement()
     {
-        return $this->min_price_increment;
+        return isset($this->min_price_increment) ? $this->min_price_increment : null;
     }
 
     public function hasMinPriceIncrement()
@@ -1746,7 +1746,7 @@ class Bond extends \Google\Protobuf\Internal\Message
      *Тесты, которые необходимо пройти клиенту, чтобы совершать сделки по инструменту.
      *
      * Generated from protobuf field <code>repeated string required_tests = 44;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setRequiredTests($var)
@@ -1921,7 +1921,7 @@ class Bond extends \Google\Protobuf\Internal\Message
      */
     public function getFirst1MinCandleDate()
     {
-        return $this->first_1min_candle_date;
+        return isset($this->first_1min_candle_date) ? $this->first_1min_candle_date : null;
     }
 
     public function hasFirst1MinCandleDate()
@@ -1957,7 +1957,7 @@ class Bond extends \Google\Protobuf\Internal\Message
      */
     public function getFirst1DayCandleDate()
     {
-        return $this->first_1day_candle_date;
+        return isset($this->first_1day_candle_date) ? $this->first_1day_candle_date : null;
     }
 
     public function hasFirst1DayCandleDate()
@@ -2019,7 +2019,7 @@ class Bond extends \Google\Protobuf\Internal\Message
      */
     public function getBrand()
     {
-        return $this->brand;
+        return isset($this->brand) ? $this->brand : null;
     }
 
     public function hasBrand()
@@ -2081,7 +2081,7 @@ class Bond extends \Google\Protobuf\Internal\Message
      */
     public function getCallDate()
     {
-        return $this->call_date;
+        return isset($this->call_date) ? $this->call_date : null;
     }
 
     public function hasCallDate()
@@ -2117,7 +2117,7 @@ class Bond extends \Google\Protobuf\Internal\Message
      */
     public function getDlongClient()
     {
-        return $this->dlong_client;
+        return isset($this->dlong_client) ? $this->dlong_client : null;
     }
 
     public function hasDlongClient()
@@ -2153,7 +2153,7 @@ class Bond extends \Google\Protobuf\Internal\Message
      */
     public function getDshortClient()
     {
-        return $this->dshort_client;
+        return isset($this->dshort_client) ? $this->dshort_client : null;
     }
 
     public function hasDshortClient()

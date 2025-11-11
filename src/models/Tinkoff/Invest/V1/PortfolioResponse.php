@@ -118,7 +118,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      *          Общая стоимость фьючерсов в портфеле.
      *     @type \Tinkoff\Invest\V1\Quotation $expected_yield
      *          Текущая относительная доходность портфеля в %.
-     *     @type array<\Tinkoff\Invest\V1\PortfolioPosition>|\Google\Protobuf\Internal\RepeatedField $positions
+     *     @type \Tinkoff\Invest\V1\PortfolioPosition[]|\Google\Protobuf\Internal\RepeatedField $positions
      *          Список позиций портфеля.
      *     @type string $account_id
      *          Идентификатор счета пользователя.
@@ -128,7 +128,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      *          Общая стоимость структурных нот в портфеле.
      *     @type \Tinkoff\Invest\V1\MoneyValue $total_amount_portfolio
      *          Общая стоимость портфеля.
-     *     @type array<\Tinkoff\Invest\V1\VirtualPortfolioPosition>|\Google\Protobuf\Internal\RepeatedField $virtual_positions
+     *     @type \Tinkoff\Invest\V1\VirtualPortfolioPosition[]|\Google\Protobuf\Internal\RepeatedField $virtual_positions
      *          Массив виртуальных позиций портфеля.
      *     @type \Tinkoff\Invest\V1\MoneyValue $daily_yield
      *           Рассчитанная доходность портфеля за день в рублях.
@@ -149,7 +149,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      */
     public function getTotalAmountShares()
     {
-        return $this->total_amount_shares;
+        return isset($this->total_amount_shares) ? $this->total_amount_shares : null;
     }
 
     public function hasTotalAmountShares()
@@ -185,7 +185,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      */
     public function getTotalAmountBonds()
     {
-        return $this->total_amount_bonds;
+        return isset($this->total_amount_bonds) ? $this->total_amount_bonds : null;
     }
 
     public function hasTotalAmountBonds()
@@ -221,7 +221,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      */
     public function getTotalAmountEtf()
     {
-        return $this->total_amount_etf;
+        return isset($this->total_amount_etf) ? $this->total_amount_etf : null;
     }
 
     public function hasTotalAmountEtf()
@@ -257,7 +257,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      */
     public function getTotalAmountCurrencies()
     {
-        return $this->total_amount_currencies;
+        return isset($this->total_amount_currencies) ? $this->total_amount_currencies : null;
     }
 
     public function hasTotalAmountCurrencies()
@@ -293,7 +293,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      */
     public function getTotalAmountFutures()
     {
-        return $this->total_amount_futures;
+        return isset($this->total_amount_futures) ? $this->total_amount_futures : null;
     }
 
     public function hasTotalAmountFutures()
@@ -329,7 +329,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      */
     public function getExpectedYield()
     {
-        return $this->expected_yield;
+        return isset($this->expected_yield) ? $this->expected_yield : null;
     }
 
     public function hasExpectedYield()
@@ -372,7 +372,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      *Список позиций портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.PortfolioPosition positions = 7;</code>
-     * @param array<\Tinkoff\Invest\V1\PortfolioPosition>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\PortfolioPosition[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setPositions($var)
@@ -417,7 +417,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      */
     public function getTotalAmountOptions()
     {
-        return $this->total_amount_options;
+        return isset($this->total_amount_options) ? $this->total_amount_options : null;
     }
 
     public function hasTotalAmountOptions()
@@ -453,7 +453,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      */
     public function getTotalAmountSp()
     {
-        return $this->total_amount_sp;
+        return isset($this->total_amount_sp) ? $this->total_amount_sp : null;
     }
 
     public function hasTotalAmountSp()
@@ -489,7 +489,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      */
     public function getTotalAmountPortfolio()
     {
-        return $this->total_amount_portfolio;
+        return isset($this->total_amount_portfolio) ? $this->total_amount_portfolio : null;
     }
 
     public function hasTotalAmountPortfolio()
@@ -532,7 +532,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      *Массив виртуальных позиций портфеля.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.VirtualPortfolioPosition virtual_positions = 12;</code>
-     * @param array<\Tinkoff\Invest\V1\VirtualPortfolioPosition>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\VirtualPortfolioPosition[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setVirtualPositions($var)
@@ -551,7 +551,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      */
     public function getDailyYield()
     {
-        return $this->daily_yield;
+        return isset($this->daily_yield) ? $this->daily_yield : null;
     }
 
     public function hasDailyYield()
@@ -587,7 +587,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      */
     public function getDailyYieldRelative()
     {
-        return $this->daily_yield_relative;
+        return isset($this->daily_yield_relative) ? $this->daily_yield_relative : null;
     }
 
     public function hasDailyYieldRelative()

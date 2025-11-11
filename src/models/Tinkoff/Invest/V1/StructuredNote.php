@@ -420,7 +420,7 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      *          Стратегия портфеля.
      *     @type int $asset_type
      *          Тип базового актива.
-     *     @type array<\Tinkoff\Invest\V1\StructuredNote\BasicAsset>|\Google\Protobuf\Internal\RepeatedField $basic_assets
+     *     @type \Tinkoff\Invest\V1\StructuredNote\BasicAsset[]|\Google\Protobuf\Internal\RepeatedField $basic_assets
      *          Базовые активы, входящие в ноту.
      *     @type \Tinkoff\Invest\V1\Quotation $safety_barrier
      *          Барьер сохранности (в процентах).
@@ -432,7 +432,7 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      *          Частота наблюдений.
      *     @type \Google\Protobuf\Timestamp $initial_price_fixing_date
      *          Дата фиксации цен базовых активов.
-     *     @type array<\Tinkoff\Invest\V1\StructuredNote\PBYield>|\Google\Protobuf\Internal\RepeatedField $yield
+     *     @type \Tinkoff\Invest\V1\StructuredNote\Yield[]|\Google\Protobuf\Internal\RepeatedField $yield
      *          Доходность по ноте в годовом выражении.
      *     @type bool $coupon_saving_flag
      *          Признак сохранения купонов.
@@ -444,7 +444,7 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      *          Наименование страны рисков.
      *     @type string $logo_name
      *          Имя файла логотипа эмитента.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $required_tests
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $required_tests
      *          Тесты, которые необходимо пройти клиенту, чтобы совершать покупки по бумаге.
      * }
      */
@@ -669,7 +669,7 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      */
     public function getMinPriceIncrement()
     {
-        return $this->min_price_increment;
+        return isset($this->min_price_increment) ? $this->min_price_increment : null;
     }
 
     public function hasMinPriceIncrement()
@@ -731,7 +731,7 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      */
     public function getNominal()
     {
-        return $this->nominal;
+        return isset($this->nominal) ? $this->nominal : null;
     }
 
     public function hasNominal()
@@ -793,7 +793,7 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      */
     public function getMaturityDate()
     {
-        return $this->maturity_date;
+        return isset($this->maturity_date) ? $this->maturity_date : null;
     }
 
     public function hasMaturityDate()
@@ -829,7 +829,7 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      */
     public function getPlacementDate()
     {
-        return $this->placement_date;
+        return isset($this->placement_date) ? $this->placement_date : null;
     }
 
     public function hasPlacementDate()
@@ -943,7 +943,7 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      */
     public function getDlongClient()
     {
-        return $this->dlong_client;
+        return isset($this->dlong_client) ? $this->dlong_client : null;
     }
 
     public function hasDlongClient()
@@ -979,7 +979,7 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      */
     public function getDshortClient()
     {
-        return $this->dshort_client;
+        return isset($this->dshort_client) ? $this->dshort_client : null;
     }
 
     public function hasDshortClient()
@@ -1405,7 +1405,7 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      */
     public function getFirst1MinCandleDate()
     {
-        return $this->first_1min_candle_date;
+        return isset($this->first_1min_candle_date) ? $this->first_1min_candle_date : null;
     }
 
     public function hasFirst1MinCandleDate()
@@ -1441,7 +1441,7 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      */
     public function getFirst1DayCandleDate()
     {
-        return $this->first_1day_candle_date;
+        return isset($this->first_1day_candle_date) ? $this->first_1day_candle_date : null;
     }
 
     public function hasFirst1DayCandleDate()
@@ -1588,7 +1588,7 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      *Базовые активы, входящие в ноту.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.StructuredNote.BasicAsset basic_assets = 41;</code>
-     * @param array<\Tinkoff\Invest\V1\StructuredNote\BasicAsset>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\StructuredNote\BasicAsset[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setBasicAssets($var)
@@ -1607,7 +1607,7 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      */
     public function getSafetyBarrier()
     {
-        return $this->safety_barrier;
+        return isset($this->safety_barrier) ? $this->safety_barrier : null;
     }
 
     public function hasSafetyBarrier()
@@ -1721,7 +1721,7 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      */
     public function getInitialPriceFixingDate()
     {
-        return $this->initial_price_fixing_date;
+        return isset($this->initial_price_fixing_date) ? $this->initial_price_fixing_date : null;
     }
 
     public function hasInitialPriceFixingDate()
@@ -1764,12 +1764,12 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      *Доходность по ноте в годовом выражении.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.StructuredNote.Yield yield = 47;</code>
-     * @param array<\Tinkoff\Invest\V1\StructuredNote\PBYield>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\StructuredNote\Yield[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setYield($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\StructuredNote\PBYield::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\StructuredNote\Yield::class);
         $this->yield = $arr;
 
         return $this;
@@ -1920,7 +1920,7 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      *Тесты, которые необходимо пройти клиенту, чтобы совершать покупки по бумаге.
      *
      * Generated from protobuf field <code>repeated string required_tests = 53;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setRequiredTests($var)

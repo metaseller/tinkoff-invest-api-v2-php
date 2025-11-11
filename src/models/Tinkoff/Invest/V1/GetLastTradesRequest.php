@@ -18,7 +18,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *
-     * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
+     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @deprecated
      */
     protected $figi = null;
@@ -37,7 +37,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`
      *
-     * Generated from protobuf field <code>optional string instrument_id = 4;</code>
+     * Generated from protobuf field <code>string instrument_id = 4;</code>
      */
     protected $instrument_id = null;
     /**
@@ -73,7 +73,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *
-     * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
+     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @return string
      * @deprecated
      */
@@ -98,7 +98,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *
-     * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
+     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
      * @param string $var
      * @return $this
      * @deprecated
@@ -120,7 +120,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
      */
     public function getFrom()
     {
-        return $this->from;
+        return isset($this->from) ? $this->from : null;
     }
 
     public function hasFrom()
@@ -156,7 +156,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
      */
     public function getTo()
     {
-        return $this->to;
+        return isset($this->to) ? $this->to : null;
     }
 
     public function hasTo()
@@ -187,7 +187,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`
      *
-     * Generated from protobuf field <code>optional string instrument_id = 4;</code>
+     * Generated from protobuf field <code>string instrument_id = 4;</code>
      * @return string
      */
     public function getInstrumentId()
@@ -208,7 +208,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`
      *
-     * Generated from protobuf field <code>optional string instrument_id = 4;</code>
+     * Generated from protobuf field <code>string instrument_id = 4;</code>
      * @param string $var
      * @return $this
      */

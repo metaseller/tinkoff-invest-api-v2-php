@@ -98,7 +98,7 @@ class GetOrderPriceResponse extends \Google\Protobuf\Internal\Message
      */
     public function getTotalOrderAmount()
     {
-        return $this->total_order_amount;
+        return isset($this->total_order_amount) ? $this->total_order_amount : null;
     }
 
     public function hasTotalOrderAmount()
@@ -134,7 +134,7 @@ class GetOrderPriceResponse extends \Google\Protobuf\Internal\Message
      */
     public function getInitialOrderAmount()
     {
-        return $this->initial_order_amount;
+        return isset($this->initial_order_amount) ? $this->initial_order_amount : null;
     }
 
     public function hasInitialOrderAmount()
@@ -196,7 +196,7 @@ class GetOrderPriceResponse extends \Google\Protobuf\Internal\Message
      */
     public function getExecutedCommission()
     {
-        return $this->executed_commission;
+        return isset($this->executed_commission) ? $this->executed_commission : null;
     }
 
     public function hasExecutedCommission()
@@ -232,7 +232,7 @@ class GetOrderPriceResponse extends \Google\Protobuf\Internal\Message
      */
     public function getExecutedCommissionRub()
     {
-        return $this->executed_commission_rub;
+        return isset($this->executed_commission_rub) ? $this->executed_commission_rub : null;
     }
 
     public function hasExecutedCommissionRub()
@@ -268,7 +268,7 @@ class GetOrderPriceResponse extends \Google\Protobuf\Internal\Message
      */
     public function getServiceCommission()
     {
-        return $this->service_commission;
+        return isset($this->service_commission) ? $this->service_commission : null;
     }
 
     public function hasServiceCommission()
@@ -304,7 +304,7 @@ class GetOrderPriceResponse extends \Google\Protobuf\Internal\Message
      */
     public function getDealCommission()
     {
-        return $this->deal_commission;
+        return isset($this->deal_commission) ? $this->deal_commission : null;
     }
 
     public function hasDealCommission()

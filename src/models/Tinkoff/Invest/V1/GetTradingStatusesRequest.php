@@ -28,7 +28,7 @@ class GetTradingStatusesRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $instrument_id
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $instrument_id
      *          Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`
      * }
      */
@@ -52,7 +52,7 @@ class GetTradingStatusesRequest extends \Google\Protobuf\Internal\Message
      *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`
      *
      * Generated from protobuf field <code>repeated string instrument_id = 1;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setInstrumentId($var)

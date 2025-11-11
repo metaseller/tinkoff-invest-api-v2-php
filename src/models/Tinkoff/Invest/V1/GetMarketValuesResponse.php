@@ -26,7 +26,7 @@ class GetMarketValuesResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Tinkoff\Invest\V1\MarketValueInstrument>|\Google\Protobuf\Internal\RepeatedField $instruments
+     *     @type \Tinkoff\Invest\V1\MarketValueInstrument[]|\Google\Protobuf\Internal\RepeatedField $instruments
      *          Массив значений параметров.
      * }
      */
@@ -50,7 +50,7 @@ class GetMarketValuesResponse extends \Google\Protobuf\Internal\Message
      *Массив значений параметров.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.MarketValueInstrument instruments = 1;</code>
-     * @param array<\Tinkoff\Invest\V1\MarketValueInstrument>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Tinkoff\Invest\V1\MarketValueInstrument[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setInstruments($var)
