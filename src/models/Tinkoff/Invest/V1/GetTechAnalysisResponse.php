@@ -26,7 +26,7 @@ class GetTechAnalysisResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Tinkoff\Invest\V1\GetTechAnalysisResponse\TechAnalysisItem[]|\Google\Protobuf\Internal\RepeatedField $technical_indicators
+     *     @type array<\Tinkoff\Invest\V1\GetTechAnalysisResponse\TechAnalysisItem>|\Google\Protobuf\Internal\RepeatedField $technical_indicators
      *          Массив значений результатов технического анализа.
      * }
      */
@@ -50,7 +50,7 @@ class GetTechAnalysisResponse extends \Google\Protobuf\Internal\Message
      *Массив значений результатов технического анализа.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.GetTechAnalysisResponse.TechAnalysisItem technical_indicators = 1;</code>
-     * @param \Tinkoff\Invest\V1\GetTechAnalysisResponse\TechAnalysisItem[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\GetTechAnalysisResponse\TechAnalysisItem>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setTechnicalIndicators($var)

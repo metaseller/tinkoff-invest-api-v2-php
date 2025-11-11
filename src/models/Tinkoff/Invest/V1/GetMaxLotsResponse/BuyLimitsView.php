@@ -59,7 +59,7 @@ class BuyLimitsView extends \Google\Protobuf\Internal\Message
      */
     public function getBuyMoneyAmount()
     {
-        return isset($this->buy_money_amount) ? $this->buy_money_amount : null;
+        return $this->buy_money_amount;
     }
 
     public function hasBuyMoneyAmount()

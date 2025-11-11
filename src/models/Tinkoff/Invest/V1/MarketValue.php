@@ -16,19 +16,19 @@ class MarketValue extends \Google\Protobuf\Internal\Message
     /**
      *Тип параметра.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MarketValueType type = 1;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.MarketValueType type = 1;</code>
      */
     protected $type = null;
     /**
      *Значение.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation value = 2;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation value = 2;</code>
      */
     protected $value = null;
     /**
      *Дата и время.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp time = 3;</code>
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp time = 3;</code>
      */
     protected $time = null;
 
@@ -54,7 +54,7 @@ class MarketValue extends \Google\Protobuf\Internal\Message
     /**
      *Тип параметра.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MarketValueType type = 1;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.MarketValueType type = 1;</code>
      * @return int
      */
     public function getType()
@@ -75,7 +75,7 @@ class MarketValue extends \Google\Protobuf\Internal\Message
     /**
      *Тип параметра.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MarketValueType type = 1;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.MarketValueType type = 1;</code>
      * @param int $var
      * @return $this
      */
@@ -90,12 +90,12 @@ class MarketValue extends \Google\Protobuf\Internal\Message
     /**
      *Значение.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation value = 2;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation value = 2;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getValue()
     {
-        return isset($this->value) ? $this->value : null;
+        return $this->value;
     }
 
     public function hasValue()
@@ -111,7 +111,7 @@ class MarketValue extends \Google\Protobuf\Internal\Message
     /**
      *Значение.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation value = 2;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation value = 2;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
@@ -126,12 +126,12 @@ class MarketValue extends \Google\Protobuf\Internal\Message
     /**
      *Дата и время.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp time = 3;</code>
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp time = 3;</code>
      * @return \Google\Protobuf\Timestamp|null
      */
     public function getTime()
     {
-        return isset($this->time) ? $this->time : null;
+        return $this->time;
     }
 
     public function hasTime()
@@ -147,7 +147,7 @@ class MarketValue extends \Google\Protobuf\Internal\Message
     /**
      *Дата и время.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp time = 3;</code>
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp time = 3;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */

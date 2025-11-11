@@ -42,7 +42,7 @@ class GetDividendsForeignIssuerReportResponse extends \Google\Protobuf\Internal\
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Tinkoff\Invest\V1\DividendsForeignIssuerReport[]|\Google\Protobuf\Internal\RepeatedField $dividends_foreign_issuer_report
+     *     @type array<\Tinkoff\Invest\V1\DividendsForeignIssuerReport>|\Google\Protobuf\Internal\RepeatedField $dividends_foreign_issuer_report
      *     @type int $itemsCount
      *          Количество записей в отчете.
      *     @type int $pagesCount
@@ -67,7 +67,7 @@ class GetDividendsForeignIssuerReportResponse extends \Google\Protobuf\Internal\
 
     /**
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.DividendsForeignIssuerReport dividends_foreign_issuer_report = 1;</code>
-     * @param \Tinkoff\Invest\V1\DividendsForeignIssuerReport[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\DividendsForeignIssuerReport>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setDividendsForeignIssuerReport($var)

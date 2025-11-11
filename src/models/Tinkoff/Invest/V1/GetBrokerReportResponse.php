@@ -42,7 +42,7 @@ class GetBrokerReportResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Tinkoff\Invest\V1\BrokerReport[]|\Google\Protobuf\Internal\RepeatedField $broker_report
+     *     @type array<\Tinkoff\Invest\V1\BrokerReport>|\Google\Protobuf\Internal\RepeatedField $broker_report
      *     @type int $itemsCount
      *          Количество записей в отчете.
      *     @type int $pagesCount
@@ -67,7 +67,7 @@ class GetBrokerReportResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.BrokerReport broker_report = 1;</code>
-     * @param \Tinkoff\Invest\V1\BrokerReport[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\BrokerReport>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setBrokerReport($var)

@@ -30,7 +30,7 @@ class PostOrderAsyncRequest extends \Google\Protobuf\Internal\Message
     /**
      *Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Игнорируется для рыночных поручений.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
      */
     protected $price = null;
     /**
@@ -60,13 +60,13 @@ class PostOrderAsyncRequest extends \Google\Protobuf\Internal\Message
     /**
      *Алгоритм исполнения поручения, применяется только к лимитной заявке.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TimeInForceType time_in_force = 8;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.TimeInForceType time_in_force = 8;</code>
      */
     protected $time_in_force = null;
     /**
      *Тип цены.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PriceType price_type = 9;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.PriceType price_type = 9;</code>
      */
     protected $price_type = null;
     /**
@@ -164,12 +164,12 @@ class PostOrderAsyncRequest extends \Google\Protobuf\Internal\Message
     /**
      *Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Игнорируется для рыночных поручений.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
      * @return \Tinkoff\Invest\V1\Quotation|null
      */
     public function getPrice()
     {
-        return isset($this->price) ? $this->price : null;
+        return $this->price;
     }
 
     public function hasPrice()
@@ -185,7 +185,7 @@ class PostOrderAsyncRequest extends \Google\Protobuf\Internal\Message
     /**
      *Цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента. Игнорируется для рыночных поручений.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.Quotation price = 3;</code>
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
@@ -304,7 +304,7 @@ class PostOrderAsyncRequest extends \Google\Protobuf\Internal\Message
     /**
      *Алгоритм исполнения поручения, применяется только к лимитной заявке.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TimeInForceType time_in_force = 8;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.TimeInForceType time_in_force = 8;</code>
      * @return int
      */
     public function getTimeInForce()
@@ -325,7 +325,7 @@ class PostOrderAsyncRequest extends \Google\Protobuf\Internal\Message
     /**
      *Алгоритм исполнения поручения, применяется только к лимитной заявке.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TimeInForceType time_in_force = 8;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.TimeInForceType time_in_force = 8;</code>
      * @param int $var
      * @return $this
      */
@@ -340,7 +340,7 @@ class PostOrderAsyncRequest extends \Google\Protobuf\Internal\Message
     /**
      *Тип цены.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PriceType price_type = 9;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.PriceType price_type = 9;</code>
      * @return int
      */
     public function getPriceType()
@@ -361,7 +361,7 @@ class PostOrderAsyncRequest extends \Google\Protobuf\Internal\Message
     /**
      *Тип цены.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PriceType price_type = 9;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.PriceType price_type = 9;</code>
      * @param int $var
      * @return $this
      */

@@ -24,7 +24,7 @@ class GetOrdersRequest extends \Google\Protobuf\Internal\Message
     /**
      *Дополнительные фильтры.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetOrdersRequest.GetOrdersRequestFilters advanced_filters = 2;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.GetOrdersRequest.GetOrdersRequestFilters advanced_filters = 2;</code>
      */
     protected $advanced_filters = null;
 
@@ -74,12 +74,12 @@ class GetOrdersRequest extends \Google\Protobuf\Internal\Message
     /**
      *Дополнительные фильтры.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetOrdersRequest.GetOrdersRequestFilters advanced_filters = 2;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.GetOrdersRequest.GetOrdersRequestFilters advanced_filters = 2;</code>
      * @return \Tinkoff\Invest\V1\GetOrdersRequest\GetOrdersRequestFilters|null
      */
     public function getAdvancedFilters()
     {
-        return isset($this->advanced_filters) ? $this->advanced_filters : null;
+        return $this->advanced_filters;
     }
 
     public function hasAdvancedFilters()
@@ -95,7 +95,7 @@ class GetOrdersRequest extends \Google\Protobuf\Internal\Message
     /**
      *Дополнительные фильтры.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetOrdersRequest.GetOrdersRequestFilters advanced_filters = 2;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.GetOrdersRequest.GetOrdersRequestFilters advanced_filters = 2;</code>
      * @param \Tinkoff\Invest\V1\GetOrdersRequest\GetOrdersRequestFilters $var
      * @return $this
      */

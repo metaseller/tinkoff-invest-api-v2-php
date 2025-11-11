@@ -28,7 +28,7 @@ class GetAccruedInterestsResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Tinkoff\Invest\V1\AccruedInterest[]|\Google\Protobuf\Internal\RepeatedField $accrued_interests
+     *     @type array<\Tinkoff\Invest\V1\AccruedInterest>|\Google\Protobuf\Internal\RepeatedField $accrued_interests
      *          Массив операций начисления купонов.
      * }
      */
@@ -52,7 +52,7 @@ class GetAccruedInterestsResponse extends \Google\Protobuf\Internal\Message
      *Массив операций начисления купонов.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.AccruedInterest accrued_interests = 1;</code>
-     * @param \Tinkoff\Invest\V1\AccruedInterest[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\AccruedInterest>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setAccruedInterests($var)

@@ -135,7 +135,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
      */
     public function getCouponDate()
     {
-        return isset($this->coupon_date) ? $this->coupon_date : null;
+        return $this->coupon_date;
     }
 
     public function hasCouponDate()
@@ -197,7 +197,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
      */
     public function getFixDate()
     {
-        return isset($this->fix_date) ? $this->fix_date : null;
+        return $this->fix_date;
     }
 
     public function hasFixDate()
@@ -233,7 +233,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
      */
     public function getPayOneBond()
     {
-        return isset($this->pay_one_bond) ? $this->pay_one_bond : null;
+        return $this->pay_one_bond;
     }
 
     public function hasPayOneBond()
@@ -295,7 +295,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
      */
     public function getCouponStartDate()
     {
-        return isset($this->coupon_start_date) ? $this->coupon_start_date : null;
+        return $this->coupon_start_date;
     }
 
     public function hasCouponStartDate()
@@ -331,7 +331,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
      */
     public function getCouponEndDate()
     {
-        return isset($this->coupon_end_date) ? $this->coupon_end_date : null;
+        return $this->coupon_end_date;
     }
 
     public function hasCouponEndDate()

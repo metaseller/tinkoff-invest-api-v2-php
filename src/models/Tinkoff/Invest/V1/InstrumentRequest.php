@@ -24,7 +24,7 @@ class InstrumentRequest extends \Google\Protobuf\Internal\Message
     /**
      * Идентификатор `class_code`. Обязательный, если `id_type = ticker`.
      *
-     * Generated from protobuf field <code>string class_code = 2;</code>
+     * Generated from protobuf field <code>optional string class_code = 2;</code>
      */
     protected $class_code = null;
     /**
@@ -82,7 +82,7 @@ class InstrumentRequest extends \Google\Protobuf\Internal\Message
     /**
      * Идентификатор `class_code`. Обязательный, если `id_type = ticker`.
      *
-     * Generated from protobuf field <code>string class_code = 2;</code>
+     * Generated from protobuf field <code>optional string class_code = 2;</code>
      * @return string
      */
     public function getClassCode()
@@ -103,7 +103,7 @@ class InstrumentRequest extends \Google\Protobuf\Internal\Message
     /**
      * Идентификатор `class_code`. Обязательный, если `id_type = ticker`.
      *
-     * Generated from protobuf field <code>string class_code = 2;</code>
+     * Generated from protobuf field <code>optional string class_code = 2;</code>
      * @param string $var
      * @return $this
      */

@@ -44,7 +44,7 @@ class GetOperationsByCursorResponse extends \Google\Protobuf\Internal\Message
      *          Признак, есть ли следующий элемент.
      *     @type string $next_cursor
      *          Следующий курсор.
-     *     @type \Tinkoff\Invest\V1\OperationItem[]|\Google\Protobuf\Internal\RepeatedField $items
+     *     @type array<\Tinkoff\Invest\V1\OperationItem>|\Google\Protobuf\Internal\RepeatedField $items
      *          Список операций.
      * }
      */
@@ -120,7 +120,7 @@ class GetOperationsByCursorResponse extends \Google\Protobuf\Internal\Message
      *Список операций.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OperationItem items = 6;</code>
-     * @param \Tinkoff\Invest\V1\OperationItem[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\OperationItem>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setItems($var)

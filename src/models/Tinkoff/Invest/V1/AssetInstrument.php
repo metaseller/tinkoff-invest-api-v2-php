@@ -80,7 +80,7 @@ class AssetInstrument extends \Google\Protobuf\Internal\Message
      *          Тикер инструмента.
      *     @type string $class_code
      *          Класс-код (секция торгов).
-     *     @type \Tinkoff\Invest\V1\InstrumentLink[]|\Google\Protobuf\Internal\RepeatedField $links
+     *     @type array<\Tinkoff\Invest\V1\InstrumentLink>|\Google\Protobuf\Internal\RepeatedField $links
      *          Массив связанных инструментов.
      *     @type int $instrument_kind
      *          Тип инструмента.
@@ -238,7 +238,7 @@ class AssetInstrument extends \Google\Protobuf\Internal\Message
      *Массив связанных инструментов.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.InstrumentLink links = 6;</code>
-     * @param \Tinkoff\Invest\V1\InstrumentLink[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\InstrumentLink>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setLinks($var)

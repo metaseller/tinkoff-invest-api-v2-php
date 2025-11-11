@@ -125,6 +125,12 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string ticker = 32;</code>
      */
     protected $ticker = '';
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 33;</code>
+     */
+    protected $class_code = '';
 
     /**
      * Constructor.
@@ -168,6 +174,8 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      *           Рассчитанная доходность портфеля за день.
      *     @type string $ticker
      *          Тикер инструмента.
+     *     @type string $class_code
+     *          Класс-код (секция торгов).
      * }
      */
     public function __construct($data = NULL) {
@@ -235,7 +243,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getQuantity()
     {
-        return isset($this->quantity) ? $this->quantity : null;
+        return $this->quantity;
     }
 
     public function hasQuantity()
@@ -271,7 +279,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getAveragePositionPrice()
     {
-        return isset($this->average_position_price) ? $this->average_position_price : null;
+        return $this->average_position_price;
     }
 
     public function hasAveragePositionPrice()
@@ -307,7 +315,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getExpectedYield()
     {
-        return isset($this->expected_yield) ? $this->expected_yield : null;
+        return $this->expected_yield;
     }
 
     public function hasExpectedYield()
@@ -343,7 +351,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getCurrentNkd()
     {
-        return isset($this->current_nkd) ? $this->current_nkd : null;
+        return $this->current_nkd;
     }
 
     public function hasCurrentNkd()
@@ -381,7 +389,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     public function getAveragePositionPricePt()
     {
         @trigger_error('average_position_price_pt is deprecated.', E_USER_DEPRECATED);
-        return isset($this->average_position_price_pt) ? $this->average_position_price_pt : null;
+        return $this->average_position_price_pt;
     }
 
     public function hasAveragePositionPricePt()
@@ -421,7 +429,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getCurrentPrice()
     {
-        return isset($this->current_price) ? $this->current_price : null;
+        return $this->current_price;
     }
 
     public function hasCurrentPrice()
@@ -457,7 +465,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getAveragePositionPriceFifo()
     {
-        return isset($this->average_position_price_fifo) ? $this->average_position_price_fifo : null;
+        return $this->average_position_price_fifo;
     }
 
     public function hasAveragePositionPriceFifo()
@@ -495,7 +503,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     public function getQuantityLots()
     {
         @trigger_error('quantity_lots is deprecated.', E_USER_DEPRECATED);
-        return isset($this->quantity_lots) ? $this->quantity_lots : null;
+        return $this->quantity_lots;
     }
 
     public function hasQuantityLots()
@@ -561,7 +569,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getBlockedLots()
     {
-        return isset($this->blocked_lots) ? $this->blocked_lots : null;
+        return $this->blocked_lots;
     }
 
     public function hasBlockedLots()
@@ -649,7 +657,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getVarMargin()
     {
-        return isset($this->var_margin) ? $this->var_margin : null;
+        return $this->var_margin;
     }
 
     public function hasVarMargin()
@@ -685,7 +693,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getExpectedYieldFifo()
     {
-        return isset($this->expected_yield_fifo) ? $this->expected_yield_fifo : null;
+        return $this->expected_yield_fifo;
     }
 
     public function hasExpectedYieldFifo()
@@ -721,7 +729,7 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getDailyYield()
     {
-        return isset($this->daily_yield) ? $this->daily_yield : null;
+        return $this->daily_yield;
     }
 
     public function hasDailyYield()
@@ -771,6 +779,32 @@ class PortfolioPosition extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->ticker = $var;
+
+        return $this;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 33;</code>
+     * @return string
+     */
+    public function getClassCode()
+    {
+        return $this->class_code;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 33;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setClassCode($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->class_code = $var;
 
         return $this;
     }

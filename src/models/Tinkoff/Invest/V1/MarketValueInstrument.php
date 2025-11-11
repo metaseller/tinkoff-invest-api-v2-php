@@ -25,6 +25,18 @@ class MarketValueInstrument extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.MarketValue values = 2;</code>
      */
     private $values;
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 3;</code>
+     */
+    protected $ticker = '';
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 4;</code>
+     */
+    protected $class_code = '';
 
     /**
      * Constructor.
@@ -34,8 +46,12 @@ class MarketValueInstrument extends \Google\Protobuf\Internal\Message
      *
      *     @type string $instrument_uid
      *          Идентификатор инструмента.
-     *     @type \Tinkoff\Invest\V1\MarketValue[]|\Google\Protobuf\Internal\RepeatedField $values
+     *     @type array<\Tinkoff\Invest\V1\MarketValue>|\Google\Protobuf\Internal\RepeatedField $values
      *          Массив параметров инструмента.
+     *     @type string $ticker
+     *          Тикер инструмента.
+     *     @type string $class_code
+     *          Класс-код (секция торгов).
      * }
      */
     public function __construct($data = NULL) {
@@ -84,13 +100,65 @@ class MarketValueInstrument extends \Google\Protobuf\Internal\Message
      *Массив параметров инструмента.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.MarketValue values = 2;</code>
-     * @param \Tinkoff\Invest\V1\MarketValue[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\MarketValue>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setValues($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\MarketValue::class);
         $this->values = $arr;
+
+        return $this;
+    }
+
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 3;</code>
+     * @return string
+     */
+    public function getTicker()
+    {
+        return $this->ticker;
+    }
+
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 3;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTicker($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->ticker = $var;
+
+        return $this;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 4;</code>
+     * @return string
+     */
+    public function getClassCode()
+    {
+        return $this->class_code;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 4;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setClassCode($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->class_code = $var;
 
         return $this;
     }

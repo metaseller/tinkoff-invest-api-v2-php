@@ -100,6 +100,18 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      */
     protected $position_uid = '';
     /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 36;</code>
+     */
+    protected $ticker = '';
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 37;</code>
+     */
+    protected $class_code = '';
+    /**
      *Сумма операции.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue payment = 41;</code>
@@ -218,6 +230,10 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      *          Тип инструмента.
      *     @type string $position_uid
      *          Уникальный идентификатор позиции.
+     *     @type string $ticker
+     *          Тикер инструмента.
+     *     @type string $class_code
+     *          Класс-код (секция торгов).
      *     @type \Tinkoff\Invest\V1\MoneyValue $payment
      *          Сумма операции.
      *     @type \Tinkoff\Invest\V1\MoneyValue $price
@@ -244,7 +260,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      *          Массив сделок.
      *     @type string $asset_uid
      *          Идентификатор актива.
-     *     @type \Tinkoff\Invest\V1\ChildOperationItem[]|\Google\Protobuf\Internal\RepeatedField $child_operations
+     *     @type array<\Tinkoff\Invest\V1\ChildOperationItem>|\Google\Protobuf\Internal\RepeatedField $child_operations
      *          Массив дочерних операций.
      * }
      */
@@ -391,7 +407,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      */
     public function getDate()
     {
-        return isset($this->date) ? $this->date : null;
+        return $this->date;
     }
 
     public function hasDate()
@@ -628,6 +644,58 @@ class OperationItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 36;</code>
+     * @return string
+     */
+    public function getTicker()
+    {
+        return $this->ticker;
+    }
+
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 36;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTicker($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->ticker = $var;
+
+        return $this;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 37;</code>
+     * @return string
+     */
+    public function getClassCode()
+    {
+        return $this->class_code;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 37;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setClassCode($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->class_code = $var;
+
+        return $this;
+    }
+
+    /**
      *Сумма операции.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue payment = 41;</code>
@@ -635,7 +703,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      */
     public function getPayment()
     {
-        return isset($this->payment) ? $this->payment : null;
+        return $this->payment;
     }
 
     public function hasPayment()
@@ -671,7 +739,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      */
     public function getPrice()
     {
-        return isset($this->price) ? $this->price : null;
+        return $this->price;
     }
 
     public function hasPrice()
@@ -707,7 +775,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      */
     public function getCommission()
     {
-        return isset($this->commission) ? $this->commission : null;
+        return $this->commission;
     }
 
     public function hasCommission()
@@ -743,7 +811,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      */
     public function getYield()
     {
-        return isset($this->yield) ? $this->yield : null;
+        return $this->yield;
     }
 
     public function hasYield()
@@ -779,7 +847,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      */
     public function getYieldRelative()
     {
-        return isset($this->yield_relative) ? $this->yield_relative : null;
+        return $this->yield_relative;
     }
 
     public function hasYieldRelative()
@@ -815,7 +883,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      */
     public function getAccruedInt()
     {
-        return isset($this->accrued_int) ? $this->accrued_int : null;
+        return $this->accrued_int;
     }
 
     public function hasAccruedInt()
@@ -929,7 +997,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      */
     public function getCancelDateTime()
     {
-        return isset($this->cancel_date_time) ? $this->cancel_date_time : null;
+        return $this->cancel_date_time;
     }
 
     public function hasCancelDateTime()
@@ -991,7 +1059,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      */
     public function getTradesInfo()
     {
-        return isset($this->trades_info) ? $this->trades_info : null;
+        return $this->trades_info;
     }
 
     public function hasTradesInfo()
@@ -1060,7 +1128,7 @@ class OperationItem extends \Google\Protobuf\Internal\Message
      *Массив дочерних операций.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.ChildOperationItem child_operations = 65;</code>
-     * @param \Tinkoff\Invest\V1\ChildOperationItem[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\ChildOperationItem>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setChildOperations($var)

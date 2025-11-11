@@ -36,7 +36,7 @@ class TradingSchedule extends \Google\Protobuf\Internal\Message
      *
      *     @type string $exchange
      *           Наименование торговой площадки.
-     *     @type \Tinkoff\Invest\V1\TradingDay[]|\Google\Protobuf\Internal\RepeatedField $days
+     *     @type array<\Tinkoff\Invest\V1\TradingDay>|\Google\Protobuf\Internal\RepeatedField $days
      *           Массив с торговыми и неторговыми днями.
      * }
      */
@@ -86,7 +86,7 @@ class TradingSchedule extends \Google\Protobuf\Internal\Message
      * Массив с торговыми и неторговыми днями.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.TradingDay days = 2;</code>
-     * @param \Tinkoff\Invest\V1\TradingDay[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\TradingDay>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setDays($var)

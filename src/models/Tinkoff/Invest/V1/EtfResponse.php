@@ -45,7 +45,7 @@ class EtfResponse extends \Google\Protobuf\Internal\Message
      */
     public function getInstrument()
     {
-        return isset($this->instrument) ? $this->instrument : null;
+        return $this->instrument;
     }
 
     public function hasInstrument()

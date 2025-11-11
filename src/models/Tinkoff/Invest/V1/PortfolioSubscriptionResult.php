@@ -40,7 +40,7 @@ class PortfolioSubscriptionResult extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Tinkoff\Invest\V1\AccountSubscriptionStatus[]|\Google\Protobuf\Internal\RepeatedField $accounts
+     *     @type array<\Tinkoff\Invest\V1\AccountSubscriptionStatus>|\Google\Protobuf\Internal\RepeatedField $accounts
      *          Массив счетов клиента.
      *     @type string $tracking_id
      *          Уникальный идентификатор запроса, подробнее: [tracking_id](/invest/intro/developer/protocols/grpc#tracking-id).
@@ -68,7 +68,7 @@ class PortfolioSubscriptionResult extends \Google\Protobuf\Internal\Message
      *Массив счетов клиента.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.AccountSubscriptionStatus accounts = 1;</code>
-     * @param \Tinkoff\Invest\V1\AccountSubscriptionStatus[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\AccountSubscriptionStatus>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setAccounts($var)

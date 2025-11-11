@@ -135,6 +135,18 @@ class OrderState extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string order_request_id = 20;</code>
      */
     protected $order_request_id = '';
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 21;</code>
+     */
+    protected $ticker = '';
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 22;</code>
+     */
+    protected $class_code = '';
 
     /**
      * Constructor.
@@ -168,7 +180,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
      *          Направление заявки.
      *     @type \Tinkoff\Invest\V1\MoneyValue $initial_security_price
      *          Начальная цена за 1 инструмент. Для получения стоимости лота требуется умножить на лотность инструмента.
-     *     @type \Tinkoff\Invest\V1\OrderStage[]|\Google\Protobuf\Internal\RepeatedField $stages
+     *     @type array<\Tinkoff\Invest\V1\OrderStage>|\Google\Protobuf\Internal\RepeatedField $stages
      *          Стадии выполнения заявки.
      *     @type \Tinkoff\Invest\V1\MoneyValue $service_commission
      *          Сервисная комиссия.
@@ -182,6 +194,10 @@ class OrderState extends \Google\Protobuf\Internal\Message
      *          UID идентификатор инструмента.
      *     @type string $order_request_id
      *          Идентификатор ключа идемпотентности, переданный клиентом, в формате UID. Максимальная длина 36 символов.
+     *     @type string $ticker
+     *          Тикер инструмента.
+     *     @type string $class_code
+     *          Класс-код (секция торгов).
      * }
      */
     public function __construct($data = NULL) {
@@ -301,7 +317,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
      */
     public function getInitialOrderPrice()
     {
-        return isset($this->initial_order_price) ? $this->initial_order_price : null;
+        return $this->initial_order_price;
     }
 
     public function hasInitialOrderPrice()
@@ -337,7 +353,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
      */
     public function getExecutedOrderPrice()
     {
-        return isset($this->executed_order_price) ? $this->executed_order_price : null;
+        return $this->executed_order_price;
     }
 
     public function hasExecutedOrderPrice()
@@ -373,7 +389,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
      */
     public function getTotalOrderAmount()
     {
-        return isset($this->total_order_amount) ? $this->total_order_amount : null;
+        return $this->total_order_amount;
     }
 
     public function hasTotalOrderAmount()
@@ -409,7 +425,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
      */
     public function getAveragePositionPrice()
     {
-        return isset($this->average_position_price) ? $this->average_position_price : null;
+        return $this->average_position_price;
     }
 
     public function hasAveragePositionPrice()
@@ -445,7 +461,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
      */
     public function getInitialCommission()
     {
-        return isset($this->initial_commission) ? $this->initial_commission : null;
+        return $this->initial_commission;
     }
 
     public function hasInitialCommission()
@@ -481,7 +497,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
      */
     public function getExecutedCommission()
     {
-        return isset($this->executed_commission) ? $this->executed_commission : null;
+        return $this->executed_commission;
     }
 
     public function hasExecutedCommission()
@@ -569,7 +585,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
      */
     public function getInitialSecurityPrice()
     {
-        return isset($this->initial_security_price) ? $this->initial_security_price : null;
+        return $this->initial_security_price;
     }
 
     public function hasInitialSecurityPrice()
@@ -612,7 +628,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
      *Стадии выполнения заявки.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OrderStage stages = 14;</code>
-     * @param \Tinkoff\Invest\V1\OrderStage[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\OrderStage>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setStages($var)
@@ -631,7 +647,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
      */
     public function getServiceCommission()
     {
-        return isset($this->service_commission) ? $this->service_commission : null;
+        return $this->service_commission;
     }
 
     public function hasServiceCommission()
@@ -719,7 +735,7 @@ class OrderState extends \Google\Protobuf\Internal\Message
      */
     public function getOrderDate()
     {
-        return isset($this->order_date) ? $this->order_date : null;
+        return $this->order_date;
     }
 
     public function hasOrderDate()
@@ -795,6 +811,58 @@ class OrderState extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->order_request_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 21;</code>
+     * @return string
+     */
+    public function getTicker()
+    {
+        return $this->ticker;
+    }
+
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 21;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTicker($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->ticker = $var;
+
+        return $this;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 22;</code>
+     * @return string
+     */
+    public function getClassCode()
+    {
+        return $this->class_code;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 22;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setClassCode($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->class_code = $var;
 
         return $this;
     }

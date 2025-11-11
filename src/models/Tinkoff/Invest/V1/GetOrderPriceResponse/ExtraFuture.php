@@ -43,7 +43,7 @@ class ExtraFuture extends \Google\Protobuf\Internal\Message
      */
     public function getInitialMargin()
     {
-        return isset($this->initial_margin) ? $this->initial_margin : null;
+        return $this->initial_margin;
     }
 
     public function hasInitialMargin()

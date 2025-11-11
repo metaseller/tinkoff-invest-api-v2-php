@@ -16,7 +16,7 @@ class PingRequest extends \Google\Protobuf\Internal\Message
     /**
      *Время формирования запроса.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp time = 1;</code>
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp time = 1;</code>
      */
     protected $time = null;
 
@@ -38,12 +38,12 @@ class PingRequest extends \Google\Protobuf\Internal\Message
     /**
      *Время формирования запроса.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp time = 1;</code>
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp time = 1;</code>
      * @return \Google\Protobuf\Timestamp|null
      */
     public function getTime()
     {
-        return isset($this->time) ? $this->time : null;
+        return $this->time;
     }
 
     public function hasTime()
@@ -59,7 +59,7 @@ class PingRequest extends \Google\Protobuf\Internal\Message
     /**
      *Время формирования запроса.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp time = 1;</code>
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp time = 1;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */

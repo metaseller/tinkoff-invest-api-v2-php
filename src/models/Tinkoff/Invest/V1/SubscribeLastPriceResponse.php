@@ -36,7 +36,7 @@ class SubscribeLastPriceResponse extends \Google\Protobuf\Internal\Message
      *
      *     @type string $tracking_id
      *          Уникальный идентификатор запроса. [Подробнее](./grpc#tracking-id).
-     *     @type \Tinkoff\Invest\V1\LastPriceSubscription[]|\Google\Protobuf\Internal\RepeatedField $last_price_subscriptions
+     *     @type array<\Tinkoff\Invest\V1\LastPriceSubscription>|\Google\Protobuf\Internal\RepeatedField $last_price_subscriptions
      *          Массив статусов подписки на цену последней сделки.
      * }
      */
@@ -86,7 +86,7 @@ class SubscribeLastPriceResponse extends \Google\Protobuf\Internal\Message
      *Массив статусов подписки на цену последней сделки.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.LastPriceSubscription last_price_subscriptions = 2;</code>
-     * @param \Tinkoff\Invest\V1\LastPriceSubscription[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\LastPriceSubscription>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setLastPriceSubscriptions($var)

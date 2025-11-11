@@ -51,7 +51,7 @@ class TimeInterval extends \Google\Protobuf\Internal\Message
      */
     public function getStartTs()
     {
-        return isset($this->start_ts) ? $this->start_ts : null;
+        return $this->start_ts;
     }
 
     public function hasStartTs()
@@ -87,7 +87,7 @@ class TimeInterval extends \Google\Protobuf\Internal\Message
      */
     public function getEndTs()
     {
-        return isset($this->end_ts) ? $this->end_ts : null;
+        return $this->end_ts;
     }
 
     public function hasEndTs()

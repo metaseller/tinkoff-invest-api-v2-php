@@ -28,7 +28,7 @@ class FindInstrumentResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Tinkoff\Invest\V1\InstrumentShort[]|\Google\Protobuf\Internal\RepeatedField $instruments
+     *     @type array<\Tinkoff\Invest\V1\InstrumentShort>|\Google\Protobuf\Internal\RepeatedField $instruments
      *          Массив инструментов, удовлетворяющих условиям поиска.
      * }
      */
@@ -52,7 +52,7 @@ class FindInstrumentResponse extends \Google\Protobuf\Internal\Message
      *Массив инструментов, удовлетворяющих условиям поиска.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.InstrumentShort instruments = 1;</code>
-     * @param \Tinkoff\Invest\V1\InstrumentShort[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\InstrumentShort>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setInstruments($var)

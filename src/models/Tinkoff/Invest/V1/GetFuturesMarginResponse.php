@@ -69,7 +69,7 @@ class GetFuturesMarginResponse extends \Google\Protobuf\Internal\Message
      */
     public function getInitialMarginOnBuy()
     {
-        return isset($this->initial_margin_on_buy) ? $this->initial_margin_on_buy : null;
+        return $this->initial_margin_on_buy;
     }
 
     public function hasInitialMarginOnBuy()
@@ -105,7 +105,7 @@ class GetFuturesMarginResponse extends \Google\Protobuf\Internal\Message
      */
     public function getInitialMarginOnSell()
     {
-        return isset($this->initial_margin_on_sell) ? $this->initial_margin_on_sell : null;
+        return $this->initial_margin_on_sell;
     }
 
     public function hasInitialMarginOnSell()
@@ -141,7 +141,7 @@ class GetFuturesMarginResponse extends \Google\Protobuf\Internal\Message
      */
     public function getMinPriceIncrement()
     {
-        return isset($this->min_price_increment) ? $this->min_price_increment : null;
+        return $this->min_price_increment;
     }
 
     public function hasMinPriceIncrement()
@@ -177,7 +177,7 @@ class GetFuturesMarginResponse extends \Google\Protobuf\Internal\Message
      */
     public function getMinPriceIncrementAmount()
     {
-        return isset($this->min_price_increment_amount) ? $this->min_price_increment_amount : null;
+        return $this->min_price_increment_amount;
     }
 
     public function hasMinPriceIncrementAmount()

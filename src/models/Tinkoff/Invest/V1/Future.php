@@ -374,7 +374,7 @@ class Future extends \Google\Protobuf\Internal\Message
      *          Уникальный идентификатор позиции инструмента.
      *     @type string $basic_asset_position_uid
      *          Уникальный идентификатор позиции основного инструмента.
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $required_tests
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $required_tests
      *          Тесты, которые необходимо пройти клиенту, чтобы совершать сделки по инструменту.
      *     @type bool $for_iis_flag
      *          Признак доступности для ИИС.
@@ -547,7 +547,7 @@ class Future extends \Google\Protobuf\Internal\Message
     public function getKlong()
     {
         @trigger_error('klong is deprecated.', E_USER_DEPRECATED);
-        return isset($this->klong) ? $this->klong : null;
+        return $this->klong;
     }
 
     public function hasKlong()
@@ -589,7 +589,7 @@ class Future extends \Google\Protobuf\Internal\Message
     public function getKshort()
     {
         @trigger_error('kshort is deprecated.', E_USER_DEPRECATED);
-        return isset($this->kshort) ? $this->kshort : null;
+        return $this->kshort;
     }
 
     public function hasKshort()
@@ -629,7 +629,7 @@ class Future extends \Google\Protobuf\Internal\Message
      */
     public function getDlong()
     {
-        return isset($this->dlong) ? $this->dlong : null;
+        return $this->dlong;
     }
 
     public function hasDlong()
@@ -665,7 +665,7 @@ class Future extends \Google\Protobuf\Internal\Message
      */
     public function getDshort()
     {
-        return isset($this->dshort) ? $this->dshort : null;
+        return $this->dshort;
     }
 
     public function hasDshort()
@@ -701,7 +701,7 @@ class Future extends \Google\Protobuf\Internal\Message
      */
     public function getDlongMin()
     {
-        return isset($this->dlong_min) ? $this->dlong_min : null;
+        return $this->dlong_min;
     }
 
     public function hasDlongMin()
@@ -737,7 +737,7 @@ class Future extends \Google\Protobuf\Internal\Message
      */
     public function getDshortMin()
     {
-        return isset($this->dshort_min) ? $this->dshort_min : null;
+        return $this->dshort_min;
     }
 
     public function hasDshortMin()
@@ -851,7 +851,7 @@ class Future extends \Google\Protobuf\Internal\Message
      */
     public function getFirstTradeDate()
     {
-        return isset($this->first_trade_date) ? $this->first_trade_date : null;
+        return $this->first_trade_date;
     }
 
     public function hasFirstTradeDate()
@@ -887,7 +887,7 @@ class Future extends \Google\Protobuf\Internal\Message
      */
     public function getLastTradeDate()
     {
-        return isset($this->last_trade_date) ? $this->last_trade_date : null;
+        return $this->last_trade_date;
     }
 
     public function hasLastTradeDate()
@@ -1001,7 +1001,7 @@ class Future extends \Google\Protobuf\Internal\Message
      */
     public function getBasicAssetSize()
     {
-        return isset($this->basic_asset_size) ? $this->basic_asset_size : null;
+        return $this->basic_asset_size;
     }
 
     public function hasBasicAssetSize()
@@ -1115,7 +1115,7 @@ class Future extends \Google\Protobuf\Internal\Message
      */
     public function getExpirationDate()
     {
-        return isset($this->expiration_date) ? $this->expiration_date : null;
+        return $this->expiration_date;
     }
 
     public function hasExpirationDate()
@@ -1255,7 +1255,7 @@ class Future extends \Google\Protobuf\Internal\Message
      */
     public function getMinPriceIncrement()
     {
-        return isset($this->min_price_increment) ? $this->min_price_increment : null;
+        return $this->min_price_increment;
     }
 
     public function hasMinPriceIncrement()
@@ -1428,7 +1428,7 @@ class Future extends \Google\Protobuf\Internal\Message
      *Тесты, которые необходимо пройти клиенту, чтобы совершать сделки по инструменту.
      *
      * Generated from protobuf field <code>repeated string required_tests = 35;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setRequiredTests($var)
@@ -1551,7 +1551,7 @@ class Future extends \Google\Protobuf\Internal\Message
      */
     public function getFirst1MinCandleDate()
     {
-        return isset($this->first_1min_candle_date) ? $this->first_1min_candle_date : null;
+        return $this->first_1min_candle_date;
     }
 
     public function hasFirst1MinCandleDate()
@@ -1587,7 +1587,7 @@ class Future extends \Google\Protobuf\Internal\Message
      */
     public function getFirst1DayCandleDate()
     {
-        return isset($this->first_1day_candle_date) ? $this->first_1day_candle_date : null;
+        return $this->first_1day_candle_date;
     }
 
     public function hasFirst1DayCandleDate()
@@ -1623,7 +1623,7 @@ class Future extends \Google\Protobuf\Internal\Message
      */
     public function getInitialMarginOnBuy()
     {
-        return isset($this->initial_margin_on_buy) ? $this->initial_margin_on_buy : null;
+        return $this->initial_margin_on_buy;
     }
 
     public function hasInitialMarginOnBuy()
@@ -1659,7 +1659,7 @@ class Future extends \Google\Protobuf\Internal\Message
      */
     public function getInitialMarginOnSell()
     {
-        return isset($this->initial_margin_on_sell) ? $this->initial_margin_on_sell : null;
+        return $this->initial_margin_on_sell;
     }
 
     public function hasInitialMarginOnSell()
@@ -1695,7 +1695,7 @@ class Future extends \Google\Protobuf\Internal\Message
      */
     public function getMinPriceIncrementAmount()
     {
-        return isset($this->min_price_increment_amount) ? $this->min_price_increment_amount : null;
+        return $this->min_price_increment_amount;
     }
 
     public function hasMinPriceIncrementAmount()
@@ -1731,7 +1731,7 @@ class Future extends \Google\Protobuf\Internal\Message
      */
     public function getBrand()
     {
-        return isset($this->brand) ? $this->brand : null;
+        return $this->brand;
     }
 
     public function hasBrand()
@@ -1767,7 +1767,7 @@ class Future extends \Google\Protobuf\Internal\Message
      */
     public function getDlongClient()
     {
-        return isset($this->dlong_client) ? $this->dlong_client : null;
+        return $this->dlong_client;
     }
 
     public function hasDlongClient()
@@ -1803,7 +1803,7 @@ class Future extends \Google\Protobuf\Internal\Message
      */
     public function getDshortClient()
     {
-        return isset($this->dshort_client) ? $this->dshort_client : null;
+        return $this->dshort_client;
     }
 
     public function hasDshortClient()

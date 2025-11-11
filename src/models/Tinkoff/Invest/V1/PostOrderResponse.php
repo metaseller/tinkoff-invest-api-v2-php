@@ -118,6 +118,18 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      */
     protected $instrument_uid = '';
     /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 18;</code>
+     */
+    protected $ticker = '';
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 19;</code>
+     */
+    protected $class_code = '';
+    /**
      *Идентификатор ключа идемпотентности, переданный клиентом, в формате UID. Максимальная длина 36 символов.
      *
      * Generated from protobuf field <code>string order_request_id = 20;</code>
@@ -170,6 +182,10 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      *          Начальная цена заявки в пунктах (для фьючерсов).
      *     @type string $instrument_uid
      *          UID идентификатор инструмента.
+     *     @type string $ticker
+     *          Тикер инструмента.
+     *     @type string $class_code
+     *          Класс-код (секция торгов).
      *     @type string $order_request_id
      *          Идентификатор ключа идемпотентности, переданный клиентом, в формате UID. Максимальная длина 36 символов.
      *     @type \Tinkoff\Invest\V1\ResponseMetadata $response_metadata
@@ -293,7 +309,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      */
     public function getInitialOrderPrice()
     {
-        return isset($this->initial_order_price) ? $this->initial_order_price : null;
+        return $this->initial_order_price;
     }
 
     public function hasInitialOrderPrice()
@@ -329,7 +345,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      */
     public function getExecutedOrderPrice()
     {
-        return isset($this->executed_order_price) ? $this->executed_order_price : null;
+        return $this->executed_order_price;
     }
 
     public function hasExecutedOrderPrice()
@@ -365,7 +381,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      */
     public function getTotalOrderAmount()
     {
-        return isset($this->total_order_amount) ? $this->total_order_amount : null;
+        return $this->total_order_amount;
     }
 
     public function hasTotalOrderAmount()
@@ -401,7 +417,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      */
     public function getInitialCommission()
     {
-        return isset($this->initial_commission) ? $this->initial_commission : null;
+        return $this->initial_commission;
     }
 
     public function hasInitialCommission()
@@ -437,7 +453,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      */
     public function getExecutedCommission()
     {
-        return isset($this->executed_commission) ? $this->executed_commission : null;
+        return $this->executed_commission;
     }
 
     public function hasExecutedCommission()
@@ -473,7 +489,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      */
     public function getAciValue()
     {
-        return isset($this->aci_value) ? $this->aci_value : null;
+        return $this->aci_value;
     }
 
     public function hasAciValue()
@@ -561,7 +577,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      */
     public function getInitialSecurityPrice()
     {
-        return isset($this->initial_security_price) ? $this->initial_security_price : null;
+        return $this->initial_security_price;
     }
 
     public function hasInitialSecurityPrice()
@@ -649,7 +665,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      */
     public function getInitialOrderPricePt()
     {
-        return isset($this->initial_order_price_pt) ? $this->initial_order_price_pt : null;
+        return $this->initial_order_price_pt;
     }
 
     public function hasInitialOrderPricePt()
@@ -704,6 +720,58 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 18;</code>
+     * @return string
+     */
+    public function getTicker()
+    {
+        return $this->ticker;
+    }
+
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 18;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTicker($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->ticker = $var;
+
+        return $this;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 19;</code>
+     * @return string
+     */
+    public function getClassCode()
+    {
+        return $this->class_code;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 19;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setClassCode($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->class_code = $var;
+
+        return $this;
+    }
+
+    /**
      *Идентификатор ключа идемпотентности, переданный клиентом, в формате UID. Максимальная длина 36 символов.
      *
      * Generated from protobuf field <code>string order_request_id = 20;</code>
@@ -737,7 +805,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      */
     public function getResponseMetadata()
     {
-        return isset($this->response_metadata) ? $this->response_metadata : null;
+        return $this->response_metadata;
     }
 
     public function hasResponseMetadata()

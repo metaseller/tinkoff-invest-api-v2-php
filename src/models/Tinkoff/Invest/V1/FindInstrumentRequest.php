@@ -24,13 +24,13 @@ class FindInstrumentRequest extends \Google\Protobuf\Internal\Message
     /**
      *Фильтр по типу инструмента.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 2;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 2;</code>
      */
     protected $instrument_kind = null;
     /**
      *Фильтр для отображения только торговых инструментов.
      *
-     * Generated from protobuf field <code>bool api_trade_available_flag = 3;</code>
+     * Generated from protobuf field <code>optional bool api_trade_available_flag = 3;</code>
      */
     protected $api_trade_available_flag = null;
 
@@ -82,7 +82,7 @@ class FindInstrumentRequest extends \Google\Protobuf\Internal\Message
     /**
      *Фильтр по типу инструмента.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 2;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 2;</code>
      * @return int
      */
     public function getInstrumentKind()
@@ -103,7 +103,7 @@ class FindInstrumentRequest extends \Google\Protobuf\Internal\Message
     /**
      *Фильтр по типу инструмента.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 2;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 2;</code>
      * @param int $var
      * @return $this
      */
@@ -118,7 +118,7 @@ class FindInstrumentRequest extends \Google\Protobuf\Internal\Message
     /**
      *Фильтр для отображения только торговых инструментов.
      *
-     * Generated from protobuf field <code>bool api_trade_available_flag = 3;</code>
+     * Generated from protobuf field <code>optional bool api_trade_available_flag = 3;</code>
      * @return bool
      */
     public function getApiTradeAvailableFlag()
@@ -139,7 +139,7 @@ class FindInstrumentRequest extends \Google\Protobuf\Internal\Message
     /**
      *Фильтр для отображения только торговых инструментов.
      *
-     * Generated from protobuf field <code>bool api_trade_available_flag = 3;</code>
+     * Generated from protobuf field <code>optional bool api_trade_available_flag = 3;</code>
      * @param bool $var
      * @return $this
      */

@@ -45,7 +45,7 @@ class GetBrandsRequest extends \Google\Protobuf\Internal\Message
      */
     public function getPaging()
     {
-        return isset($this->paging) ? $this->paging : null;
+        return $this->paging;
     }
 
     public function hasPaging()

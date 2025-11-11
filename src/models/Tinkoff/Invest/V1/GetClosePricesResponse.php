@@ -28,7 +28,7 @@ class GetClosePricesResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Tinkoff\Invest\V1\InstrumentClosePriceResponse[]|\Google\Protobuf\Internal\RepeatedField $close_prices
+     *     @type array<\Tinkoff\Invest\V1\InstrumentClosePriceResponse>|\Google\Protobuf\Internal\RepeatedField $close_prices
      *          Массив по инструментам.
      * }
      */
@@ -52,7 +52,7 @@ class GetClosePricesResponse extends \Google\Protobuf\Internal\Message
      *Массив по инструментам.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.InstrumentClosePriceResponse close_prices = 1;</code>
-     * @param \Tinkoff\Invest\V1\InstrumentClosePriceResponse[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\InstrumentClosePriceResponse>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setClosePrices($var)

@@ -18,7 +18,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *
-     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
+     * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
      * @deprecated
      */
     protected $figi = null;
@@ -41,21 +41,21 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
      */
     protected $interval = 0;
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
-     * Generated from protobuf field <code>string instrument_id = 5;</code>
+     * Generated from protobuf field <code>optional string instrument_id = 5;</code>
      */
     protected $instrument_id = null;
     /**
      *Тип источника свечи.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetCandlesRequest.CandleSource candle_source_type = 7;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.GetCandlesRequest.CandleSource candle_source_type = 7;</code>
      */
     protected $candle_source_type = null;
     /**
      *Максимальное количество свечей в ответе.
      *
-     * Generated from protobuf field <code>int32 limit = 10;</code>
+     * Generated from protobuf field <code>optional int32 limit = 10;</code>
      */
     protected $limit = null;
 
@@ -74,7 +74,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
      *     @type int $interval
      *          Интервал запрошенных свечей.
      *     @type string $instrument_id
-     *          Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *          Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *     @type int $candle_source_type
      *          Тип источника свечи.
      *     @type int $limit
@@ -89,7 +89,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *
-     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
+     * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
      * @return string
      * @deprecated
      */
@@ -114,7 +114,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
      *
-     * Generated from protobuf field <code>string figi = 1 [deprecated = true];</code>
+     * Generated from protobuf field <code>optional string figi = 1 [deprecated = true];</code>
      * @param string $var
      * @return $this
      * @deprecated
@@ -136,7 +136,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
      */
     public function getFrom()
     {
-        return isset($this->from) ? $this->from : null;
+        return $this->from;
     }
 
     public function hasFrom()
@@ -172,7 +172,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
      */
     public function getTo()
     {
-        return isset($this->to) ? $this->to : null;
+        return $this->to;
     }
 
     public function hasTo()
@@ -227,9 +227,9 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
-     * Generated from protobuf field <code>string instrument_id = 5;</code>
+     * Generated from protobuf field <code>optional string instrument_id = 5;</code>
      * @return string
      */
     public function getInstrumentId()
@@ -248,9 +248,9 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      *
-     * Generated from protobuf field <code>string instrument_id = 5;</code>
+     * Generated from protobuf field <code>optional string instrument_id = 5;</code>
      * @param string $var
      * @return $this
      */
@@ -265,7 +265,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Тип источника свечи.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetCandlesRequest.CandleSource candle_source_type = 7;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.GetCandlesRequest.CandleSource candle_source_type = 7;</code>
      * @return int
      */
     public function getCandleSourceType()
@@ -286,7 +286,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Тип источника свечи.
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetCandlesRequest.CandleSource candle_source_type = 7;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.GetCandlesRequest.CandleSource candle_source_type = 7;</code>
      * @param int $var
      * @return $this
      */
@@ -301,7 +301,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Максимальное количество свечей в ответе.
      *
-     * Generated from protobuf field <code>int32 limit = 10;</code>
+     * Generated from protobuf field <code>optional int32 limit = 10;</code>
      * @return int
      */
     public function getLimit()
@@ -322,7 +322,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
     /**
      *Максимальное количество свечей в ответе.
      *
-     * Generated from protobuf field <code>int32 limit = 10;</code>
+     * Generated from protobuf field <code>optional int32 limit = 10;</code>
      * @param int $var
      * @return $this
      */

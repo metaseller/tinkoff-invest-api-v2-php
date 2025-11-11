@@ -119,7 +119,7 @@ class CurrencyTransferRequest extends \Google\Protobuf\Internal\Message
      */
     public function getAmount()
     {
-        return isset($this->amount) ? $this->amount : null;
+        return $this->amount;
     }
 
     public function hasAmount()

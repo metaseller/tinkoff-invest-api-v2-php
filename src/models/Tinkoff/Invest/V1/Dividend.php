@@ -117,7 +117,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
      */
     public function getDividendNet()
     {
-        return isset($this->dividend_net) ? $this->dividend_net : null;
+        return $this->dividend_net;
     }
 
     public function hasDividendNet()
@@ -153,7 +153,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
      */
     public function getPaymentDate()
     {
-        return isset($this->payment_date) ? $this->payment_date : null;
+        return $this->payment_date;
     }
 
     public function hasPaymentDate()
@@ -189,7 +189,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
      */
     public function getDeclaredDate()
     {
-        return isset($this->declared_date) ? $this->declared_date : null;
+        return $this->declared_date;
     }
 
     public function hasDeclaredDate()
@@ -225,7 +225,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
      */
     public function getLastBuyDate()
     {
-        return isset($this->last_buy_date) ? $this->last_buy_date : null;
+        return $this->last_buy_date;
     }
 
     public function hasLastBuyDate()
@@ -287,7 +287,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
      */
     public function getRecordDate()
     {
-        return isset($this->record_date) ? $this->record_date : null;
+        return $this->record_date;
     }
 
     public function hasRecordDate()
@@ -349,7 +349,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
      */
     public function getClosePrice()
     {
-        return isset($this->close_price) ? $this->close_price : null;
+        return $this->close_price;
     }
 
     public function hasClosePrice()
@@ -385,7 +385,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
      */
     public function getYieldValue()
     {
-        return isset($this->yield_value) ? $this->yield_value : null;
+        return $this->yield_value;
     }
 
     public function hasYieldValue()
@@ -421,7 +421,7 @@ class Dividend extends \Google\Protobuf\Internal\Message
      */
     public function getCreatedAt()
     {
-        return isset($this->created_at) ? $this->created_at : null;
+        return $this->created_at;
     }
 
     public function hasCreatedAt()

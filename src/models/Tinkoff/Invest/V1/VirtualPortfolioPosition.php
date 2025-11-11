@@ -91,6 +91,12 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string ticker = 32;</code>
      */
     protected $ticker = '';
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 33;</code>
+     */
+    protected $class_code = '';
 
     /**
      * Constructor.
@@ -124,6 +130,8 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      *           Рассчитанная доходность портфеля за день.
      *     @type string $ticker
      *          Тикер инструмента.
+     *     @type string $class_code
+     *          Класс-код (секция торгов).
      * }
      */
     public function __construct($data = NULL) {
@@ -243,7 +251,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getQuantity()
     {
-        return isset($this->quantity) ? $this->quantity : null;
+        return $this->quantity;
     }
 
     public function hasQuantity()
@@ -279,7 +287,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getAveragePositionPrice()
     {
-        return isset($this->average_position_price) ? $this->average_position_price : null;
+        return $this->average_position_price;
     }
 
     public function hasAveragePositionPrice()
@@ -315,7 +323,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getExpectedYield()
     {
-        return isset($this->expected_yield) ? $this->expected_yield : null;
+        return $this->expected_yield;
     }
 
     public function hasExpectedYield()
@@ -351,7 +359,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getExpectedYieldFifo()
     {
-        return isset($this->expected_yield_fifo) ? $this->expected_yield_fifo : null;
+        return $this->expected_yield_fifo;
     }
 
     public function hasExpectedYieldFifo()
@@ -387,7 +395,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getExpireDate()
     {
-        return isset($this->expire_date) ? $this->expire_date : null;
+        return $this->expire_date;
     }
 
     public function hasExpireDate()
@@ -423,7 +431,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getCurrentPrice()
     {
-        return isset($this->current_price) ? $this->current_price : null;
+        return $this->current_price;
     }
 
     public function hasCurrentPrice()
@@ -459,7 +467,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getAveragePositionPriceFifo()
     {
-        return isset($this->average_position_price_fifo) ? $this->average_position_price_fifo : null;
+        return $this->average_position_price_fifo;
     }
 
     public function hasAveragePositionPriceFifo()
@@ -495,7 +503,7 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
      */
     public function getDailyYield()
     {
-        return isset($this->daily_yield) ? $this->daily_yield : null;
+        return $this->daily_yield;
     }
 
     public function hasDailyYield()
@@ -545,6 +553,32 @@ class VirtualPortfolioPosition extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->ticker = $var;
+
+        return $this;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 33;</code>
+     * @return string
+     */
+    public function getClassCode()
+    {
+        return $this->class_code;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 33;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setClassCode($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->class_code = $var;
 
         return $this;
     }

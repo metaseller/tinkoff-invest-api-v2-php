@@ -20,13 +20,13 @@ class RiskRateResult extends \Google\Protobuf\Internal\Message
     /**
      * Ставка риска пользователя  в шорт
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.RiskRatesResponse.RiskRate short_risk_rate = 2;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.RiskRatesResponse.RiskRate short_risk_rate = 2;</code>
      */
     protected $short_risk_rate = null;
     /**
      * Ставка риска пользователя в лонг
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.RiskRatesResponse.RiskRate long_risk_rate = 3;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.RiskRatesResponse.RiskRate long_risk_rate = 3;</code>
      */
     protected $long_risk_rate = null;
     /**
@@ -44,7 +44,7 @@ class RiskRateResult extends \Google\Protobuf\Internal\Message
     /**
      * Ошибка.
      *
-     * Generated from protobuf field <code>string error = 9;</code>
+     * Generated from protobuf field <code>optional string error = 9;</code>
      */
     protected $error = null;
 
@@ -59,9 +59,9 @@ class RiskRateResult extends \Google\Protobuf\Internal\Message
      *           Ставка риска пользователя  в шорт
      *     @type \Tinkoff\Invest\V1\RiskRatesResponse\RiskRate $long_risk_rate
      *           Ставка риска пользователя в лонг
-     *     @type \Tinkoff\Invest\V1\RiskRatesResponse\RiskRate[]|\Google\Protobuf\Internal\RepeatedField $short_risk_rates
+     *     @type array<\Tinkoff\Invest\V1\RiskRatesResponse\RiskRate>|\Google\Protobuf\Internal\RepeatedField $short_risk_rates
      *          Доступные ставки риска в шорт
-     *     @type \Tinkoff\Invest\V1\RiskRatesResponse\RiskRate[]|\Google\Protobuf\Internal\RepeatedField $long_risk_rates
+     *     @type array<\Tinkoff\Invest\V1\RiskRatesResponse\RiskRate>|\Google\Protobuf\Internal\RepeatedField $long_risk_rates
      *          Доступные ставки риска в лонг
      *     @type string $error
      *           Ошибка.
@@ -97,12 +97,12 @@ class RiskRateResult extends \Google\Protobuf\Internal\Message
     /**
      * Ставка риска пользователя  в шорт
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.RiskRatesResponse.RiskRate short_risk_rate = 2;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.RiskRatesResponse.RiskRate short_risk_rate = 2;</code>
      * @return \Tinkoff\Invest\V1\RiskRatesResponse\RiskRate|null
      */
     public function getShortRiskRate()
     {
-        return isset($this->short_risk_rate) ? $this->short_risk_rate : null;
+        return $this->short_risk_rate;
     }
 
     public function hasShortRiskRate()
@@ -118,7 +118,7 @@ class RiskRateResult extends \Google\Protobuf\Internal\Message
     /**
      * Ставка риска пользователя  в шорт
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.RiskRatesResponse.RiskRate short_risk_rate = 2;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.RiskRatesResponse.RiskRate short_risk_rate = 2;</code>
      * @param \Tinkoff\Invest\V1\RiskRatesResponse\RiskRate $var
      * @return $this
      */
@@ -133,12 +133,12 @@ class RiskRateResult extends \Google\Protobuf\Internal\Message
     /**
      * Ставка риска пользователя в лонг
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.RiskRatesResponse.RiskRate long_risk_rate = 3;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.RiskRatesResponse.RiskRate long_risk_rate = 3;</code>
      * @return \Tinkoff\Invest\V1\RiskRatesResponse\RiskRate|null
      */
     public function getLongRiskRate()
     {
-        return isset($this->long_risk_rate) ? $this->long_risk_rate : null;
+        return $this->long_risk_rate;
     }
 
     public function hasLongRiskRate()
@@ -154,7 +154,7 @@ class RiskRateResult extends \Google\Protobuf\Internal\Message
     /**
      * Ставка риска пользователя в лонг
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.RiskRatesResponse.RiskRate long_risk_rate = 3;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.RiskRatesResponse.RiskRate long_risk_rate = 3;</code>
      * @param \Tinkoff\Invest\V1\RiskRatesResponse\RiskRate $var
      * @return $this
      */
@@ -181,7 +181,7 @@ class RiskRateResult extends \Google\Protobuf\Internal\Message
      *Доступные ставки риска в шорт
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.RiskRatesResponse.RiskRate short_risk_rates = 5;</code>
-     * @param \Tinkoff\Invest\V1\RiskRatesResponse\RiskRate[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\RiskRatesResponse\RiskRate>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setShortRiskRates($var)
@@ -207,7 +207,7 @@ class RiskRateResult extends \Google\Protobuf\Internal\Message
      *Доступные ставки риска в лонг
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.RiskRatesResponse.RiskRate long_risk_rates = 6;</code>
-     * @param \Tinkoff\Invest\V1\RiskRatesResponse\RiskRate[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\RiskRatesResponse\RiskRate>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setLongRiskRates($var)
@@ -221,7 +221,7 @@ class RiskRateResult extends \Google\Protobuf\Internal\Message
     /**
      * Ошибка.
      *
-     * Generated from protobuf field <code>string error = 9;</code>
+     * Generated from protobuf field <code>optional string error = 9;</code>
      * @return string
      */
     public function getError()
@@ -242,7 +242,7 @@ class RiskRateResult extends \Google\Protobuf\Internal\Message
     /**
      * Ошибка.
      *
-     * Generated from protobuf field <code>string error = 9;</code>
+     * Generated from protobuf field <code>optional string error = 9;</code>
      * @param string $var
      * @return $this
      */

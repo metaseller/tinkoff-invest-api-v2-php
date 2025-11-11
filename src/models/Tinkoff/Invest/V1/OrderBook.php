@@ -75,6 +75,18 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderBookType order_book_type = 10;</code>
      */
     protected $order_book_type = 0;
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 11;</code>
+     */
+    protected $ticker = '';
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 12;</code>
+     */
+    protected $class_code = '';
 
     /**
      * Constructor.
@@ -88,9 +100,9 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      *          Глубина стакана.
      *     @type bool $is_consistent
      *          Флаг консистентности стакана. **false** — не все заявки попали в стакан из-за сетевых задержек или нарушения порядка доставки.
-     *     @type \Tinkoff\Invest\V1\Order[]|\Google\Protobuf\Internal\RepeatedField $bids
+     *     @type array<\Tinkoff\Invest\V1\Order>|\Google\Protobuf\Internal\RepeatedField $bids
      *          Массив предложений.
-     *     @type \Tinkoff\Invest\V1\Order[]|\Google\Protobuf\Internal\RepeatedField $asks
+     *     @type array<\Tinkoff\Invest\V1\Order>|\Google\Protobuf\Internal\RepeatedField $asks
      *          Массив спроса.
      *     @type \Google\Protobuf\Timestamp $time
      *          Время формирования стакана в часовом поясе UTC по времени биржи.
@@ -102,6 +114,10 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      *          UID инструмента.
      *     @type int $order_book_type
      *          Тип стакана.
+     *     @type string $ticker
+     *          Тикер инструмента.
+     *     @type string $class_code
+     *          Класс-код (секция торгов).
      * }
      */
     public function __construct($data = NULL) {
@@ -202,7 +218,7 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      *Массив предложений.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.Order bids = 4;</code>
-     * @param \Tinkoff\Invest\V1\Order[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\Order>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setBids($var)
@@ -228,7 +244,7 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      *Массив спроса.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.Order asks = 5;</code>
-     * @param \Tinkoff\Invest\V1\Order[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\Order>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setAsks($var)
@@ -247,7 +263,7 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      */
     public function getTime()
     {
-        return isset($this->time) ? $this->time : null;
+        return $this->time;
     }
 
     public function hasTime()
@@ -283,7 +299,7 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      */
     public function getLimitUp()
     {
-        return isset($this->limit_up) ? $this->limit_up : null;
+        return $this->limit_up;
     }
 
     public function hasLimitUp()
@@ -319,7 +335,7 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      */
     public function getLimitDown()
     {
-        return isset($this->limit_down) ? $this->limit_down : null;
+        return $this->limit_down;
     }
 
     public function hasLimitDown()
@@ -395,6 +411,58 @@ class OrderBook extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\OrderBookType::class);
         $this->order_book_type = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 11;</code>
+     * @return string
+     */
+    public function getTicker()
+    {
+        return $this->ticker;
+    }
+
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 11;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTicker($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->ticker = $var;
+
+        return $this;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 12;</code>
+     * @return string
+     */
+    public function getClassCode()
+    {
+        return $this->class_code;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 12;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setClassCode($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->class_code = $var;
 
         return $this;
     }

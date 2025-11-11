@@ -362,7 +362,7 @@ class Etf extends \Google\Protobuf\Internal\Message
      *          Уникальный идентификатор актива.
      *     @type int $instrument_exchange
      *          Тип площадки торговли.
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $required_tests
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $required_tests
      *          Тесты, которые необходимо пройти клиенту, чтобы совершать сделки по инструменту.
      *     @type bool $for_iis_flag
      *          Признак доступности для ИИС.
@@ -557,7 +557,7 @@ class Etf extends \Google\Protobuf\Internal\Message
     public function getKlong()
     {
         @trigger_error('klong is deprecated.', E_USER_DEPRECATED);
-        return isset($this->klong) ? $this->klong : null;
+        return $this->klong;
     }
 
     public function hasKlong()
@@ -599,7 +599,7 @@ class Etf extends \Google\Protobuf\Internal\Message
     public function getKshort()
     {
         @trigger_error('kshort is deprecated.', E_USER_DEPRECATED);
-        return isset($this->kshort) ? $this->kshort : null;
+        return $this->kshort;
     }
 
     public function hasKshort()
@@ -639,7 +639,7 @@ class Etf extends \Google\Protobuf\Internal\Message
      */
     public function getDlong()
     {
-        return isset($this->dlong) ? $this->dlong : null;
+        return $this->dlong;
     }
 
     public function hasDlong()
@@ -675,7 +675,7 @@ class Etf extends \Google\Protobuf\Internal\Message
      */
     public function getDshort()
     {
-        return isset($this->dshort) ? $this->dshort : null;
+        return $this->dshort;
     }
 
     public function hasDshort()
@@ -711,7 +711,7 @@ class Etf extends \Google\Protobuf\Internal\Message
      */
     public function getDlongMin()
     {
-        return isset($this->dlong_min) ? $this->dlong_min : null;
+        return $this->dlong_min;
     }
 
     public function hasDlongMin()
@@ -747,7 +747,7 @@ class Etf extends \Google\Protobuf\Internal\Message
      */
     public function getDshortMin()
     {
-        return isset($this->dshort_min) ? $this->dshort_min : null;
+        return $this->dshort_min;
     }
 
     public function hasDshortMin()
@@ -861,7 +861,7 @@ class Etf extends \Google\Protobuf\Internal\Message
      */
     public function getFixedCommission()
     {
-        return isset($this->fixed_commission) ? $this->fixed_commission : null;
+        return $this->fixed_commission;
     }
 
     public function hasFixedCommission()
@@ -923,7 +923,7 @@ class Etf extends \Google\Protobuf\Internal\Message
      */
     public function getReleasedDate()
     {
-        return isset($this->released_date) ? $this->released_date : null;
+        return $this->released_date;
     }
 
     public function hasReleasedDate()
@@ -959,7 +959,7 @@ class Etf extends \Google\Protobuf\Internal\Message
      */
     public function getNumShares()
     {
-        return isset($this->num_shares) ? $this->num_shares : null;
+        return $this->num_shares;
     }
 
     public function hasNumShares()
@@ -1203,7 +1203,7 @@ class Etf extends \Google\Protobuf\Internal\Message
      */
     public function getMinPriceIncrement()
     {
-        return isset($this->min_price_increment) ? $this->min_price_increment : null;
+        return $this->min_price_increment;
     }
 
     public function hasMinPriceIncrement()
@@ -1402,7 +1402,7 @@ class Etf extends \Google\Protobuf\Internal\Message
      *Тесты, которые необходимо пройти клиенту, чтобы совершать сделки по инструменту.
      *
      * Generated from protobuf field <code>repeated string required_tests = 36;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setRequiredTests($var)
@@ -1551,7 +1551,7 @@ class Etf extends \Google\Protobuf\Internal\Message
      */
     public function getFirst1MinCandleDate()
     {
-        return isset($this->first_1min_candle_date) ? $this->first_1min_candle_date : null;
+        return $this->first_1min_candle_date;
     }
 
     public function hasFirst1MinCandleDate()
@@ -1587,7 +1587,7 @@ class Etf extends \Google\Protobuf\Internal\Message
      */
     public function getFirst1DayCandleDate()
     {
-        return isset($this->first_1day_candle_date) ? $this->first_1day_candle_date : null;
+        return $this->first_1day_candle_date;
     }
 
     public function hasFirst1DayCandleDate()
@@ -1623,7 +1623,7 @@ class Etf extends \Google\Protobuf\Internal\Message
      */
     public function getBrand()
     {
-        return isset($this->brand) ? $this->brand : null;
+        return $this->brand;
     }
 
     public function hasBrand()
@@ -1659,7 +1659,7 @@ class Etf extends \Google\Protobuf\Internal\Message
      */
     public function getDlongClient()
     {
-        return isset($this->dlong_client) ? $this->dlong_client : null;
+        return $this->dlong_client;
     }
 
     public function hasDlongClient()
@@ -1695,7 +1695,7 @@ class Etf extends \Google\Protobuf\Internal\Message
      */
     public function getDshortClient()
     {
-        return isset($this->dshort_client) ? $this->dshort_client : null;
+        return $this->dshort_client;
     }
 
     public function hasDshortClient()

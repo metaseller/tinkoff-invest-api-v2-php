@@ -26,7 +26,7 @@ class GetDividendsResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Tinkoff\Invest\V1\Dividend[]|\Google\Protobuf\Internal\RepeatedField $dividends
+     *     @type array<\Tinkoff\Invest\V1\Dividend>|\Google\Protobuf\Internal\RepeatedField $dividends
      * }
      */
     public function __construct($data = NULL) {
@@ -45,7 +45,7 @@ class GetDividendsResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.Dividend dividends = 1;</code>
-     * @param \Tinkoff\Invest\V1\Dividend[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\Dividend>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setDividends($var)

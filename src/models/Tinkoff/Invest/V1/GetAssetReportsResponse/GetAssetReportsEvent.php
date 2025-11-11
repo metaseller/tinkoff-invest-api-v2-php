@@ -111,7 +111,7 @@ class GetAssetReportsEvent extends \Google\Protobuf\Internal\Message
      */
     public function getReportDate()
     {
-        return isset($this->report_date) ? $this->report_date : null;
+        return $this->report_date;
     }
 
     public function hasReportDate()
@@ -225,7 +225,7 @@ class GetAssetReportsEvent extends \Google\Protobuf\Internal\Message
      */
     public function getCreatedAt()
     {
-        return isset($this->created_at) ? $this->created_at : null;
+        return $this->created_at;
     }
 
     public function hasCreatedAt()

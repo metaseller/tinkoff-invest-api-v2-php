@@ -18,13 +18,13 @@ class InstrumentsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 1;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 1;</code>
      */
     protected $instrument_status = null;
     /**
      * Тип площадки торговли. [Возможные значения](#instrumentexchangetype).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentExchangeType instrument_exchange = 2;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentExchangeType instrument_exchange = 2;</code>
      */
     protected $instrument_exchange = null;
 
@@ -48,7 +48,7 @@ class InstrumentsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 1;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 1;</code>
      * @return int
      */
     public function getInstrumentStatus()
@@ -69,7 +69,7 @@ class InstrumentsRequest extends \Google\Protobuf\Internal\Message
     /**
      *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 1;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 1;</code>
      * @param int $var
      * @return $this
      */
@@ -84,7 +84,7 @@ class InstrumentsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Тип площадки торговли. [Возможные значения](#instrumentexchangetype).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentExchangeType instrument_exchange = 2;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentExchangeType instrument_exchange = 2;</code>
      * @return int
      */
     public function getInstrumentExchange()
@@ -105,7 +105,7 @@ class InstrumentsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Тип площадки торговли. [Возможные значения](#instrumentexchangetype).
      *
-     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentExchangeType instrument_exchange = 2;</code>
+     * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentExchangeType instrument_exchange = 2;</code>
      * @param int $var
      * @return $this
      */

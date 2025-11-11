@@ -28,7 +28,7 @@ class GetLastTradesResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Tinkoff\Invest\V1\Trade[]|\Google\Protobuf\Internal\RepeatedField $trades
+     *     @type array<\Tinkoff\Invest\V1\Trade>|\Google\Protobuf\Internal\RepeatedField $trades
      *          Массив сделок.
      * }
      */
@@ -52,7 +52,7 @@ class GetLastTradesResponse extends \Google\Protobuf\Internal\Message
      *Массив сделок.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.Trade trades = 1;</code>
-     * @param \Tinkoff\Invest\V1\Trade[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\Trade>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setTrades($var)

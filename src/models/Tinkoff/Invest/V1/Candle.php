@@ -76,6 +76,30 @@ class Candle extends \Google\Protobuf\Internal\Message
      */
     protected $instrument_uid = '';
     /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 11;</code>
+     */
+    protected $ticker = '';
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 12;</code>
+     */
+    protected $class_code = '';
+    /**
+     *Объем торгов на покупку.
+     *
+     * Generated from protobuf field <code>int64 volume_buy = 13;</code>
+     */
+    protected $volume_buy = 0;
+    /**
+     *Объём торгов на продажу.
+     *
+     * Generated from protobuf field <code>int64 volume_sell = 14;</code>
+     */
+    protected $volume_sell = 0;
+    /**
      *Источник свечей.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.CandleSource candle_source_type = 19;</code>
@@ -108,6 +132,14 @@ class Candle extends \Google\Protobuf\Internal\Message
      *          Время последней сделки, вошедшей в свечу по UTC.
      *     @type string $instrument_uid
      *          UID инструмента.
+     *     @type string $ticker
+     *          Тикер инструмента.
+     *     @type string $class_code
+     *          Класс-код (секция торгов).
+     *     @type int|string $volume_buy
+     *          Объем торгов на покупку.
+     *     @type int|string $volume_sell
+     *          Объём торгов на продажу.
      *     @type int $candle_source_type
      *          Источник свечей.
      * }
@@ -177,7 +209,7 @@ class Candle extends \Google\Protobuf\Internal\Message
      */
     public function getOpen()
     {
-        return isset($this->open) ? $this->open : null;
+        return $this->open;
     }
 
     public function hasOpen()
@@ -213,7 +245,7 @@ class Candle extends \Google\Protobuf\Internal\Message
      */
     public function getHigh()
     {
-        return isset($this->high) ? $this->high : null;
+        return $this->high;
     }
 
     public function hasHigh()
@@ -249,7 +281,7 @@ class Candle extends \Google\Protobuf\Internal\Message
      */
     public function getLow()
     {
-        return isset($this->low) ? $this->low : null;
+        return $this->low;
     }
 
     public function hasLow()
@@ -285,7 +317,7 @@ class Candle extends \Google\Protobuf\Internal\Message
      */
     public function getClose()
     {
-        return isset($this->close) ? $this->close : null;
+        return $this->close;
     }
 
     public function hasClose()
@@ -347,7 +379,7 @@ class Candle extends \Google\Protobuf\Internal\Message
      */
     public function getTime()
     {
-        return isset($this->time) ? $this->time : null;
+        return $this->time;
     }
 
     public function hasTime()
@@ -383,7 +415,7 @@ class Candle extends \Google\Protobuf\Internal\Message
      */
     public function getLastTradeTs()
     {
-        return isset($this->last_trade_ts) ? $this->last_trade_ts : null;
+        return $this->last_trade_ts;
     }
 
     public function hasLastTradeTs()
@@ -433,6 +465,110 @@ class Candle extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->instrument_uid = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 11;</code>
+     * @return string
+     */
+    public function getTicker()
+    {
+        return $this->ticker;
+    }
+
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 11;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTicker($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->ticker = $var;
+
+        return $this;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 12;</code>
+     * @return string
+     */
+    public function getClassCode()
+    {
+        return $this->class_code;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 12;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setClassCode($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->class_code = $var;
+
+        return $this;
+    }
+
+    /**
+     *Объем торгов на покупку.
+     *
+     * Generated from protobuf field <code>int64 volume_buy = 13;</code>
+     * @return int|string
+     */
+    public function getVolumeBuy()
+    {
+        return $this->volume_buy;
+    }
+
+    /**
+     *Объем торгов на покупку.
+     *
+     * Generated from protobuf field <code>int64 volume_buy = 13;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setVolumeBuy($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->volume_buy = $var;
+
+        return $this;
+    }
+
+    /**
+     *Объём торгов на продажу.
+     *
+     * Generated from protobuf field <code>int64 volume_sell = 14;</code>
+     * @return int|string
+     */
+    public function getVolumeSell()
+    {
+        return $this->volume_sell;
+    }
+
+    /**
+     *Объём торгов на продажу.
+     *
+     * Generated from protobuf field <code>int64 volume_sell = 14;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setVolumeSell($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->volume_sell = $var;
 
         return $this;
     }

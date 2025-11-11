@@ -34,7 +34,7 @@ class GetBrandsResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Tinkoff\Invest\V1\Brand[]|\Google\Protobuf\Internal\RepeatedField $brands
+     *     @type array<\Tinkoff\Invest\V1\Brand>|\Google\Protobuf\Internal\RepeatedField $brands
      *          Массив брендов.
      *     @type \Tinkoff\Invest\V1\PageResponse $paging
      *          Данные по пагинации.
@@ -60,7 +60,7 @@ class GetBrandsResponse extends \Google\Protobuf\Internal\Message
      *Массив брендов.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.Brand brands = 1;</code>
-     * @param \Tinkoff\Invest\V1\Brand[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\Brand>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setBrands($var)
@@ -79,7 +79,7 @@ class GetBrandsResponse extends \Google\Protobuf\Internal\Message
      */
     public function getPaging()
     {
-        return isset($this->paging) ? $this->paging : null;
+        return $this->paging;
     }
 
     public function hasPaging()

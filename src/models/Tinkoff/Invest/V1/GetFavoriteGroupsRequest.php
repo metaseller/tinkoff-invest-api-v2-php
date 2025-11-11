@@ -34,9 +34,9 @@ class GetFavoriteGroupsRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $instrument_id
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $instrument_id
      *          Массив идентификаторов инструментов. Принимает значение `figi` или `instrument_uid`. Если в группе будет хотя бы один из инструментов массива, то в ответе у группы вернется признак `containsInstrument = true`.
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $excluded_group_id
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $excluded_group_id
      *          Массив идентификаторов групп, которые необходимо исключить из ответа.
      * }
      */
@@ -60,7 +60,7 @@ class GetFavoriteGroupsRequest extends \Google\Protobuf\Internal\Message
      *Массив идентификаторов инструментов. Принимает значение `figi` или `instrument_uid`. Если в группе будет хотя бы один из инструментов массива, то в ответе у группы вернется признак `containsInstrument = true`.
      *
      * Generated from protobuf field <code>repeated string instrument_id = 1;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setInstrumentId($var)
@@ -86,7 +86,7 @@ class GetFavoriteGroupsRequest extends \Google\Protobuf\Internal\Message
      *Массив идентификаторов групп, которые необходимо исключить из ответа.
      *
      * Generated from protobuf field <code>repeated string excluded_group_id = 2;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setExcludedGroupId($var)

@@ -24,7 +24,7 @@ class GetInsiderDealsRequest extends \Google\Protobuf\Internal\Message
      */
     protected $limit = 0;
     /**
-     * Generated from protobuf field <code>string next_cursor = 3;</code>
+     * Generated from protobuf field <code>optional string next_cursor = 3;</code>
      */
     protected $next_cursor = null;
 
@@ -89,7 +89,7 @@ class GetInsiderDealsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string next_cursor = 3;</code>
+     * Generated from protobuf field <code>optional string next_cursor = 3;</code>
      * @return string
      */
     public function getNextCursor()
@@ -108,7 +108,7 @@ class GetInsiderDealsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string next_cursor = 3;</code>
+     * Generated from protobuf field <code>optional string next_cursor = 3;</code>
      * @param string $var
      * @return $this
      */

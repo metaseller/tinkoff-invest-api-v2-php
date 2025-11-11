@@ -114,9 +114,21 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор биржевой заявки.
      *
-     * Generated from protobuf field <code>string exchange_order_id = 17;</code>
+     * Generated from protobuf field <code>optional string exchange_order_id = 17;</code>
      */
     protected $exchange_order_id = null;
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 18;</code>
+     */
+    protected $ticker = '';
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 19;</code>
+     */
+    protected $class_code = '';
 
     /**
      * Constructor.
@@ -158,6 +170,10 @@ class StopOrder extends \Google\Protobuf\Internal\Message
      *          Тип дочерней биржевой заявки для тейкпрофита.
      *     @type string $exchange_order_id
      *          Идентификатор биржевой заявки.
+     *     @type string $ticker
+     *          Тикер инструмента.
+     *     @type string $class_code
+     *          Класс-код (секция торгов).
      * }
      */
     public function __construct($data = NULL) {
@@ -329,7 +345,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
      */
     public function getCreateDate()
     {
-        return isset($this->create_date) ? $this->create_date : null;
+        return $this->create_date;
     }
 
     public function hasCreateDate()
@@ -365,7 +381,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
      */
     public function getActivationDateTime()
     {
-        return isset($this->activation_date_time) ? $this->activation_date_time : null;
+        return $this->activation_date_time;
     }
 
     public function hasActivationDateTime()
@@ -401,7 +417,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
      */
     public function getExpirationTime()
     {
-        return isset($this->expiration_time) ? $this->expiration_time : null;
+        return $this->expiration_time;
     }
 
     public function hasExpirationTime()
@@ -437,7 +453,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
      */
     public function getPrice()
     {
-        return isset($this->price) ? $this->price : null;
+        return $this->price;
     }
 
     public function hasPrice()
@@ -473,7 +489,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
      */
     public function getStopPrice()
     {
-        return isset($this->stop_price) ? $this->stop_price : null;
+        return $this->stop_price;
     }
 
     public function hasStopPrice()
@@ -561,7 +577,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
      */
     public function getTrailingData()
     {
-        return isset($this->trailing_data) ? $this->trailing_data : null;
+        return $this->trailing_data;
     }
 
     public function hasTrailingData()
@@ -644,7 +660,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор биржевой заявки.
      *
-     * Generated from protobuf field <code>string exchange_order_id = 17;</code>
+     * Generated from protobuf field <code>optional string exchange_order_id = 17;</code>
      * @return string
      */
     public function getExchangeOrderId()
@@ -665,7 +681,7 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     /**
      *Идентификатор биржевой заявки.
      *
-     * Generated from protobuf field <code>string exchange_order_id = 17;</code>
+     * Generated from protobuf field <code>optional string exchange_order_id = 17;</code>
      * @param string $var
      * @return $this
      */
@@ -673,6 +689,58 @@ class StopOrder extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->exchange_order_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 18;</code>
+     * @return string
+     */
+    public function getTicker()
+    {
+        return $this->ticker;
+    }
+
+    /**
+     *Тикер инструмента.
+     *
+     * Generated from protobuf field <code>string ticker = 18;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTicker($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->ticker = $var;
+
+        return $this;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 19;</code>
+     * @return string
+     */
+    public function getClassCode()
+    {
+        return $this->class_code;
+    }
+
+    /**
+     *Класс-код (секция торгов).
+     *
+     * Generated from protobuf field <code>string class_code = 19;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setClassCode($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->class_code = $var;
 
         return $this;
     }

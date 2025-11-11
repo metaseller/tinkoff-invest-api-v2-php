@@ -67,7 +67,7 @@ class TrailingData extends \Google\Protobuf\Internal\Message
      */
     public function getIndent()
     {
-        return isset($this->indent) ? $this->indent : null;
+        return $this->indent;
     }
 
     public function hasIndent()
@@ -129,7 +129,7 @@ class TrailingData extends \Google\Protobuf\Internal\Message
      */
     public function getSpread()
     {
-        return isset($this->spread) ? $this->spread : null;
+        return $this->spread;
     }
 
     public function hasSpread()

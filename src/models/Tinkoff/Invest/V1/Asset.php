@@ -52,7 +52,7 @@ class Asset extends \Google\Protobuf\Internal\Message
      *          Тип актива.
      *     @type string $name
      *          Наименование актива.
-     *     @type \Tinkoff\Invest\V1\AssetInstrument[]|\Google\Protobuf\Internal\RepeatedField $instruments
+     *     @type array<\Tinkoff\Invest\V1\AssetInstrument>|\Google\Protobuf\Internal\RepeatedField $instruments
      *          Массив идентификаторов инструментов.
      * }
      */
@@ -154,7 +154,7 @@ class Asset extends \Google\Protobuf\Internal\Message
      *Массив идентификаторов инструментов.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.AssetInstrument instruments = 4;</code>
-     * @param \Tinkoff\Invest\V1\AssetInstrument[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\AssetInstrument>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setInstruments($var)

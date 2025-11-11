@@ -28,7 +28,7 @@ class GetFavoriteGroupsResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Tinkoff\Invest\V1\GetFavoriteGroupsResponse\FavoriteGroup[]|\Google\Protobuf\Internal\RepeatedField $groups
+     *     @type array<\Tinkoff\Invest\V1\GetFavoriteGroupsResponse\FavoriteGroup>|\Google\Protobuf\Internal\RepeatedField $groups
      *          Массив групп избранных списков инструментов.
      * }
      */
@@ -52,7 +52,7 @@ class GetFavoriteGroupsResponse extends \Google\Protobuf\Internal\Message
      *Массив групп избранных списков инструментов.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.GetFavoriteGroupsResponse.FavoriteGroup groups = 1;</code>
-     * @param \Tinkoff\Invest\V1\GetFavoriteGroupsResponse\FavoriteGroup[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Tinkoff\Invest\V1\GetFavoriteGroupsResponse\FavoriteGroup>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setGroups($var)
