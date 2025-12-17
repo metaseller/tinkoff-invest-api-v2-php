@@ -32,7 +32,8 @@
             "Metaseller\\TinkoffInvestApi2\\": "src",
             "Metaseller\\TinkoffInvestApi2\\providers\\": "src/providers",
             "Metaseller\\TinkoffInvestApi2\\exceptions\\": "src/exceptions",
-            "Metaseller\\TinkoffInvestApi2\\helpers\\": "src/helpers"
+            "Metaseller\\TinkoffInvestApi2\\helpers\\": "src/helpers",
+            "Metaseller\\TinkoffInvestApi2\\dto\\": "src/dto"
         }
     },
     "require-dev": {

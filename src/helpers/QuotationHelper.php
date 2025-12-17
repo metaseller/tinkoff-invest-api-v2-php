@@ -2,6 +2,7 @@
 
 namespace Metaseller\TinkoffInvestApi2\helpers;
 
+use Metaseller\TinkoffInvestApi2\dto\Price;
 use Metaseller\TinkoffInvestApi2\exceptions\ValidateException;
 use Tinkoff\Invest\V1\Bond;
 use Tinkoff\Invest\V1\Currency;
@@ -43,9 +44,19 @@ class QuotationHelper
             throw new ValidateException('Instrument min price increment value is not available');
         }
 
-        $precision = pow(10,9);
+        if ($price instanceof Quotation || $price instanceof MoneyValue) {
+            $instrument_price = intval(Price::BROKER_PRECISION_MULTIPLIER * ($price->getUnits() ?: 0) + ($price->getNano() ?: 0));
+            $instrument_min_price_increment = intval(Price::BROKER_PRECISION_MULTIPLIER * ($min_price_increment->getUnits() ?: 0) + ($min_price_increment->getNano() ?: 0));
 
-        return ($precision * static::toDecimal($price)) % ($precision * static::toDecimal($min_price_increment)) == 0;
+            return ($instrument_price % $instrument_min_price_increment) == 0;
+        } elseif (is_numeric($price)) {
+            $instrument_price = intval(Price::BROKER_PRECISION_MULTIPLIER * round((float) $price, Price::BROKER_PRECISION));
+            $instrument_min_price_increment = intval(Price::BROKER_PRECISION_MULTIPLIER * ($min_price_increment->getUnits() ?: 0) + ($min_price_increment->getNano() ?: 0));
+
+            return ($instrument_price % $instrument_min_price_increment) == 0;
+        }
+
+        return false;
     }
 
     /**
@@ -62,11 +73,11 @@ class QuotationHelper
     public static function toDecimal($price): float
     {
         if (($price instanceof Quotation) || ($price instanceof MoneyValue)) {
-            return ($price->getUnits() ?: 0) + ($price->getNano() ?: 0) / pow(10, 9);
+            return round(($price->getUnits() ?: 0) + ($price->getNano() ?: 0) / pow(10, 9), Price::BROKER_PRECISION);
         }
 
         if (is_numeric($price)) {
-            return (float) $price;
+            return round((float) $price, Price::BROKER_PRECISION);
         }
 
         throw new ValidateException('Price is not valid');
@@ -105,7 +116,7 @@ class QuotationHelper
                 throw new ValidateException('Bond nominal is not valid');
             }
 
-            return ($decimal_price / 100) * static::toDecimal($nominal);
+            return round(($decimal_price / 100) * static::toDecimal($nominal), Price::BROKER_PRECISION);
         }
 
         if ($instrument instanceof Future || (($instrument instanceof Instrument) && $instrument->getInstrumentType() === 'futures')) {
@@ -122,7 +133,7 @@ class QuotationHelper
             }
 
 
-            return ($decimal_price / static::toDecimal($min_price_increment)) * static::toDecimal($min_price_increment_amount);
+            return round(($decimal_price / static::toDecimal($min_price_increment)) * static::toDecimal($min_price_increment_amount), Price::BROKER_PRECISION);
         }
 
         return $decimal_price;
@@ -138,9 +149,9 @@ class QuotationHelper
     public static function toQuotation(float $price): Quotation
     {
         $quotation = new Quotation();
-        
+
         $units = intval($price);
-        $nano = intval(round(($price - $units) * pow(10, 9)));
+        $nano = intval(round(($price - $units) * Price::BROKER_PRECISION_MULTIPLIER));
 
         $quotation->setUnits($units);
         $quotation->setNano($nano);
