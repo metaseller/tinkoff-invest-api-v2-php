@@ -5,7 +5,7 @@ namespace Metaseller\TinkoffInvestApi2\helpers;
 /**
  * Класс дополнительных функций для работы с числами
  *
- * @package app\helpers
+ * @package Metaseller\TinkoffInvestApi2
  */
 class NumbersHelper
 {
