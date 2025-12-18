@@ -5,6 +5,7 @@ namespace Metaseller\TinkoffInvestApi2\providers;
 use Exception;
 use Google\Protobuf\Internal\RepeatedField;
 use Metaseller\TinkoffInvestApi2\exceptions\InstrumentNotFoundException;
+use Metaseller\TinkoffInvestApi2\exceptions\RequestException;
 use Metaseller\TinkoffInvestApi2\exceptions\ValidateException;
 use Metaseller\TinkoffInvestApi2\helpers\ArrayHelper;
 use Metaseller\TinkoffInvestApi2\TinkoffClientsFactory;
@@ -34,7 +35,7 @@ use Tinkoff\Invest\V1\ShareResponse;
 use Tinkoff\Invest\V1\SharesResponse;
 
 /**
- * Базовая модель провайдера данных сервиса Tinkoff Invest API 2
+ * Провайдер данных справочника инструментов сервиса Tinkoff Invest API 2
  *
  * @package Metaseller\TinkoffInvestApi2
  */
@@ -252,11 +253,16 @@ class InstrumentsProvider extends BaseDataProvider
                 $instruments_request->setIdType(InstrumentIdType::INSTRUMENT_ID_TYPE_TICKER);
                 $instruments_request->setClassCode($class_name);
 
+                $clients_factory = $this->getClientsFactory();
+
                 /** @var BondResponse $response */
-                list($response, $status) = $this->_clients_factory_model
+                list($response, $status) = $clients_factory
                     ->instrumentsServiceClient
                     ->BondBy($instruments_request)
-                    ->wait();
+                    ->wait()
+                ;
+
+                $clients_factory->processRequestStatus($status);
 
                 if (!$response || !($instrument = $response->getInstrument())) {
                     throw new InstrumentNotFoundException('Instrument is not found');
@@ -401,11 +407,16 @@ class InstrumentsProvider extends BaseDataProvider
                 $instruments_request->setIdType(InstrumentIdType::INSTRUMENT_ID_TYPE_TICKER);
                 $instruments_request->setClassCode($class_name);
 
+                $clients_factory = $this->getClientsFactory();
+
                 /** @var CurrencyResponse $response */
-                list($response, $status) = $this->_clients_factory_model
+                list($response, $status) = $clients_factory
                     ->instrumentsServiceClient
                     ->CurrencyBy($instruments_request)
-                    ->wait();
+                    ->wait()
+                ;
+
+                $clients_factory->processRequestStatus($status);
 
                 if (!$response || !($instrument = $response->getInstrument())) {
                     throw new InstrumentNotFoundException('Instrument is not found');
@@ -554,11 +565,16 @@ class InstrumentsProvider extends BaseDataProvider
                 $instruments_request->setIdType(InstrumentIdType::INSTRUMENT_ID_TYPE_TICKER);
                 $instruments_request->setClassCode($class_name);
 
+                $clients_factory = $this->getClientsFactory();
+
                 /** @var EtfResponse $response */
-                list($response, $status) = $this->_clients_factory_model
+                list($response, $status) = $clients_factory
                     ->instrumentsServiceClient
                     ->EtfBy($instruments_request)
-                    ->wait();
+                    ->wait()
+                ;
+
+                $clients_factory->processRequestStatus($status);
 
                 if (!$response || !($instrument = $response->getInstrument())) {
                     throw new InstrumentNotFoundException('Instrument is not found');
@@ -703,11 +719,16 @@ class InstrumentsProvider extends BaseDataProvider
                 $instruments_request->setIdType(InstrumentIdType::INSTRUMENT_ID_TYPE_TICKER);
                 $instruments_request->setClassCode($class_name);
 
+                $clients_factory = $this->getClientsFactory();
+
                 /** @var FutureResponse $response */
-                list($response, $status) = $this->_clients_factory_model
+                list($response, $status) = $clients_factory
                     ->instrumentsServiceClient
                     ->FutureBy($instruments_request)
-                    ->wait();
+                    ->wait()
+                ;
+
+                $clients_factory->processRequestStatus($status);
 
                 if (!$response || !($instrument = $response->getInstrument())) {
                     throw new InstrumentNotFoundException('Instrument is not found');
@@ -856,11 +877,16 @@ class InstrumentsProvider extends BaseDataProvider
                 $instruments_request->setIdType(InstrumentIdType::INSTRUMENT_ID_TYPE_TICKER);
                 $instruments_request->setClassCode($class_name);
 
+                $clients_factory = $this->getClientsFactory();
+
                 /** @var ShareResponse $response */
-                list($response, $status) = $this->_clients_factory_model
+                list($response, $status) = $clients_factory
                     ->instrumentsServiceClient
                     ->ShareBy($instruments_request)
-                    ->wait();
+                    ->wait()
+                ;
+
+                $clients_factory->processRequestStatus($status);
 
                 if (!$response || !($instrument = $response->getInstrument())) {
                     throw new InstrumentNotFoundException('Instrument is not found');
@@ -1194,11 +1220,16 @@ class InstrumentsProvider extends BaseDataProvider
                 $instruments_request->setIdType($instrument_id_type);
                 $instruments_request->setClassCode($class_name);
 
+                $clients_factory = $this->getClientsFactory();
+
                 /** @var InstrumentResponse $response */
-                list($response, $status) = $this->_clients_factory_model
+                list($response, $status) = $clients_factory
                     ->instrumentsServiceClient
                     ->GetInstrumentBy($instruments_request)
-                    ->wait();
+                    ->wait()
+                ;
+
+                $clients_factory->processRequestStatus($status);
 
                 if (!$response || !($instrument = $response->getInstrument())) {
                     throw new InstrumentNotFoundException('Instrument is not found');
@@ -1247,11 +1278,16 @@ class InstrumentsProvider extends BaseDataProvider
             $instruments_request->setId($figi);
             $instruments_request->setIdType($instrument_id_type);
 
+            $clients_factory = $this->getClientsFactory();
+
             /** @var InstrumentResponse $response */
-            list($response, $status) = $this->_clients_factory_model
+            list($response, $status) = $clients_factory
                 ->instrumentsServiceClient
                 ->GetInstrumentBy($instruments_request)
-                ->wait();
+                ->wait()
+            ;
+
+            $clients_factory->processRequestStatus($status);
 
             if (!$response || !($instrument = $response->getInstrument())) {
                 throw new InstrumentNotFoundException('Instrument is not found');
@@ -1297,11 +1333,16 @@ class InstrumentsProvider extends BaseDataProvider
             $instruments_request->setId($uid);
             $instruments_request->setIdType($instrument_id_type);
 
+            $clients_factory = $this->getClientsFactory();
+
             /** @var InstrumentResponse $response */
-            list($response, $status) = $this->_clients_factory_model
+            list($response, $status) = $clients_factory
                 ->instrumentsServiceClient
                 ->GetInstrumentBy($instruments_request)
-                ->wait();
+                ->wait()
+            ;
+
+            $clients_factory->processRequestStatus($status);
 
             if (!$response || !($instrument = $response->getInstrument())) {
                 throw new InstrumentNotFoundException('Instrument is not found');
@@ -1328,6 +1369,7 @@ class InstrumentsProvider extends BaseDataProvider
      *
      * @throws InstrumentNotFoundException
      * @throws ValidateException
+     * @throws RequestException
      *
      * @see https://tinkoff.github.io/investAPI/instruments/#getfuturesmargin
      */
@@ -1337,17 +1379,22 @@ class InstrumentsProvider extends BaseDataProvider
             $futures_data_request = new GetFuturesMarginRequest();
             $futures_data_request->setFigi($instrument->getFigi());
 
+            $clients_factory = $this->getClientsFactory();
+
             /** @var GetFuturesMarginResponse $response */
-            list($response, $status) = $this->_clients_factory_model->instrumentsServiceClient
+            list($response, $status) = $clients_factory
+                ->instrumentsServiceClient
                 ->GetFuturesMargin($futures_data_request)
                 ->wait()
             ;
 
-                if (!$response) {
-                    throw new InstrumentNotFoundException('Futures data is not found');
-                }
+            $clients_factory->processRequestStatus($status);
 
-                return $response;
+            if (!$response) {
+                throw new InstrumentNotFoundException('Futures data is not found');
+            }
+
+            return $response;
         }
 
         throw new ValidateException('Instrument should be Future type');
@@ -1390,12 +1437,16 @@ class InstrumentsProvider extends BaseDataProvider
         $instruments_request = new InstrumentsRequest();
         $instruments_request->setInstrumentStatus(InstrumentStatus::INSTRUMENT_STATUS_ALL);
 
+        $clients_factory = $this->getClientsFactory();
+
         /** @var BondsResponse $response */
-        list($response, $status) = $this->_clients_factory_model
+        list($response, $status) = $clients_factory
             ->instrumentsServiceClient
             ->Bonds($instruments_request)
             ->wait()
         ;
+
+        $clients_factory->processRequestStatus($status);
 
         /** @var Bond[] $instruments */
         $instruments = ArrayHelper::repeatedFieldToArray($response->getInstruments());
@@ -1422,13 +1473,16 @@ class InstrumentsProvider extends BaseDataProvider
         $instruments_request = new InstrumentsRequest();
         $instruments_request->setInstrumentStatus(InstrumentStatus::INSTRUMENT_STATUS_ALL);
 
+        $clients_factory = $this->getClientsFactory();
+
         /** @var BondsResponse $response */
-        list($response, $status) = $this->_clients_factory_model
+        list($response, $status) = $clients_factory
             ->instrumentsServiceClient
             ->Currencies($instruments_request)
             ->wait()
         ;
 
+        $clients_factory->processRequestStatus($status);
 
         /** @var Currency[] $instruments */
         $instruments = ArrayHelper::repeatedFieldToArray($response->getInstruments());
@@ -1455,12 +1509,16 @@ class InstrumentsProvider extends BaseDataProvider
         $instruments_request = new InstrumentsRequest();
         $instruments_request->setInstrumentStatus(InstrumentStatus::INSTRUMENT_STATUS_ALL);
 
+        $clients_factory = $this->getClientsFactory();
+
         /** @var EtfsResponse $response */
-        list($response, $status) = $this->_clients_factory_model
+        list($response, $status) = $clients_factory
             ->instrumentsServiceClient
             ->Etfs($instruments_request)
             ->wait()
         ;
+
+        $clients_factory->processRequestStatus($status);
 
         /** @var Etf[] $instruments */
         $instruments = ArrayHelper::repeatedFieldToArray($response->getInstruments());
@@ -1487,12 +1545,16 @@ class InstrumentsProvider extends BaseDataProvider
         $instruments_request = new InstrumentsRequest();
         $instruments_request->setInstrumentStatus(InstrumentStatus::INSTRUMENT_STATUS_ALL);
 
+        $clients_factory = $this->getClientsFactory();
+
         /** @var SharesResponse $response */
-        list($response, $status) = $this->_clients_factory_model
+        list($response, $status) = $clients_factory
             ->instrumentsServiceClient
             ->Shares($instruments_request)
             ->wait()
         ;
+
+        $clients_factory->processRequestStatus($status);
 
         /** @var Share[] $instruments */
         $instruments = ArrayHelper::repeatedFieldToArray($response->getInstruments());
@@ -1519,12 +1581,16 @@ class InstrumentsProvider extends BaseDataProvider
         $instruments_request = new InstrumentsRequest();
         $instruments_request->setInstrumentStatus(InstrumentStatus::INSTRUMENT_STATUS_ALL);
 
+        $clients_factory = $this->getClientsFactory();
+
         /** @var FuturesResponse $response */
-        list($response, $status) = $this->_clients_factory_model
+        list($response, $status) = $clients_factory
             ->instrumentsServiceClient
             ->Futures($instruments_request)
             ->wait()
         ;
+
+        $clients_factory->processRequestStatus($status);
 
         /** @var Future[] $instruments */
         $instruments = ArrayHelper::repeatedFieldToArray($response->getInstruments());

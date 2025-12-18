@@ -3,6 +3,7 @@
 namespace Metaseller\TinkoffInvestApi2;
 
 use Exception;
+use Metaseller\TinkoffInvestApi2\exceptions\RequestException;
 use Tinkoff\Invest\V1\InstrumentsServiceClient;
 use Tinkoff\Invest\V1\MarketDataServiceClient;
 use Tinkoff\Invest\V1\MarketDataStreamServiceClient;
@@ -123,6 +124,21 @@ class TinkoffClientsFactory
     protected $_users_service_client;
 
     /**
+     * @var array Информация о последней ошибке исполнения запроса
+     *
+     * Пустой массив, если ошибки нет, либо массив вида
+     *  <pre>
+     *      [
+     *          'x-tracking-id' => $status['metadata']['x-tracking-id'] ?? null,
+     *          'code' => $status['code'] ?? null,
+     *          'details' => $status['details'] ?? null,
+     *          'message' => $status['metadata']['message'] ?? null,
+     *      ]
+     *  </pre>
+     */
+    protected $_last_error = [];
+
+    /**
      * Конструктор класса
      *
      * @param string|null $api_token Токен доступа к Tinkoff Invest API 2
@@ -164,6 +180,69 @@ class TinkoffClientsFactory
         $this->resetClients();
 
         return $this;
+    }
+
+    /**
+     * Метод обработки статуса выполнения запроса.
+     *
+     * Если все хорошо - метод молчаливо заканчивает свою работу, и очищает значение {@link TinkoffClientsFactory::$_last_error},
+     * в случае ошибки в эту переменную будут залогированы детали и будет брошено исключение
+     *
+     * @param mixed|array|null $status Статус выполнения запроса
+     * @param bool $echo_to_stdout Флаг необходимости вывести подробности ошибки в stdOut.  По умолчанию равно <code>false</code>
+     *
+     * @return void
+     *
+     * @throws RequestException
+     */
+    public function processRequestStatus($status, bool $echo_to_stdout = false): void
+    {
+        if (!$status) {
+            throw new RequestException('Response status is empty');
+        }
+
+        /** @var array $status Приводим stdClass к array */
+        $status = json_decode(json_encode($status), true);
+        $status_code = $status['code'] ?? null;
+
+        if (!$status_code) {
+            $this->_last_error = [];
+
+            return;
+        }
+
+        $this->_last_error = [
+            'x-tracking-id' => $status['metadata']['x-tracking-id'] ?? null,
+            'code' => $status['code'] ?? null,
+            'details' => $status['details'] ?? null,
+            'message' => $status['metadata']['message'] ?? null,
+        ];
+
+        $log_error_message = 'Api Request Error: ' . json_encode($this->_last_error);
+
+        if ($echo_to_stdout) {
+            echo $log_error_message . PHP_EOL;
+        }
+
+        throw new RequestException($log_error_message);
+    }
+
+    /**
+     * Метод геттер получения информации о последней ошибке
+     *
+     * @return array Пустой массив, если ошибки нет, либо массив вида
+     *  <pre>
+     *      [
+     *          'x-tracking-id' => $status['metadata']['x-tracking-id'] ?? null,
+     *          'code' => $status['code'] ?? null,
+     *          'details' => $status['details'] ?? null,
+     *          'message' => $status['metadata']['message'] ?? null,
+     *      ]
+     *  </pre>
+     */
+    public function getLastError(): array
+    {
+        return $this->_last_error;
     }
 
     /**

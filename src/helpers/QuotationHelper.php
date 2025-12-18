@@ -34,7 +34,7 @@ class QuotationHelper
      */
     public static function isPriceValid($price, $instrument): bool
     {
-        if (!static::isInstrumentModelValid($instrument)) {
+        if (!InstrumentsHelper::isInstrumentModelValid($instrument)) {
             throw new ValidateException('Instrument model is not valid');
         }
 
@@ -99,7 +99,7 @@ class QuotationHelper
      */
     public static function toCurrency($price, $instrument, ?GetFuturesMarginResponse $futures_data = null): float
     {
-        if (!static::isInstrumentModelValid($instrument)) {
+        if (!InstrumentsHelper::isInstrumentModelValid($instrument)) {
             throw new ValidateException('Instrument model is not valid');
         }
 
@@ -157,41 +157,5 @@ class QuotationHelper
         $quotation->setNano($nano);
 
         return $quotation;
-    }
-
-    /**
-     * Проверяет модель данных инструмента
-     *
-     * @param mixed $instrument Модель
-     *
-     * @return bool Является ли инструмент валидным торговым инструментом
-     */
-    protected static function isInstrumentModelValid($instrument): bool
-    {
-        if ($instrument instanceof Share) {
-            return true;
-        }
-
-        if ($instrument instanceof Etf) {
-            return true;
-        }
-
-        if ($instrument instanceof Bond) {
-            return true;
-        }
-
-        if ($instrument instanceof Currency) {
-            return true;
-        }
-
-        if ($instrument instanceof Future) {
-            return true;
-        }
-
-        if ($instrument instanceof Instrument) {
-            return true;
-        }
-
-        return false;
     }
 }

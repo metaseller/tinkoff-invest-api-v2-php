@@ -22,7 +22,8 @@
         "ext-grpc": "^1.43",
         "grpc/grpc": "^1.42",
         "google/protobuf": "^3.19",
-        "ext-bcmath": "*"
+        "ext-bcmath": "*",
+        "ext-json": "*"
     },
     "autoload": {
         "psr-4": {

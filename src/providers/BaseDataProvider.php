@@ -2,6 +2,7 @@
 
 namespace Metaseller\TinkoffInvestApi2\providers;
 
+use Metaseller\TinkoffInvestApi2\exceptions\ValidateException;
 use Metaseller\TinkoffInvestApi2\TinkoffClientsFactory;
 
 /**
@@ -40,6 +41,22 @@ abstract class BaseDataProvider
         $this->resetCachedProviderData();
 
         return $this;
+    }
+
+    /**
+     * Получение экземпляр фабрики клиентов доступа к сервису Tinkoff Invest API 2
+     *
+     * @return TinkoffClientsFactory Экземпляр фабрики клиентов доступа к сервису Tinkoff Invest API 2
+     *
+     * @throws ValidateException
+     */
+     protected function getClientsFactory(): TinkoffClientsFactory
+    {
+        if (!$this->_clients_factory_model) {
+            throw new ValidateException('Api Clients Factory is not initialized yet');
+        }
+
+        return $this->_clients_factory_model;
     }
 
     /**
