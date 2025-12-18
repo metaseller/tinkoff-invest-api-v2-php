@@ -7,6 +7,7 @@ use Tinkoff\Invest\V1\Currency;
 use Tinkoff\Invest\V1\Etf;
 use Tinkoff\Invest\V1\Future;
 use Tinkoff\Invest\V1\Instrument;
+use Tinkoff\Invest\V1\SecurityTradingStatus;
 use Tinkoff\Invest\V1\Share;
 
 /**
@@ -50,5 +51,47 @@ class InstrumentsHelper
         }
 
         return false;
+    }
+
+    /**
+     * Метод проверяет критерии, возможна ли торговля инструментом через API
+     *
+     * @param Share|Etf|Bond|Currency|Future|Instrument $instrument Модель инструмента
+     * @param bool $check_trading_status Проверять ли getTradingStatus
+     * @param bool $check_api_trade Проверять ли getApiTradeAvailableFlag
+     * @param bool $check_buy_flag Проверять ли getBuyAvailableFlag
+     * @param bool $check_sell_flag Проверять ли getSellAvailableFlag
+     *
+     * @return bool Флаг выполнения всех выбранных критериев
+     */
+    public static function isReadyToTrade(
+        $instrument,
+        bool $check_trading_status = true,
+        bool $check_api_trade = true,
+        bool $check_buy_flag = true,
+        bool $check_sell_flag = true
+    ): bool
+    {
+        if (!static::isInstrumentModelValid($instrument)) {
+            return false;
+        }
+
+        if ($check_trading_status && !$instrument->getTradingStatus() !== SecurityTradingStatus::SECURITY_TRADING_STATUS_NORMAL_TRADING) {
+            return false;
+        }
+
+        if ($check_api_trade && !$instrument->getApiTradeAvailableFlag()) {
+            return false;
+        }
+
+        if ($check_buy_flag && !$instrument->getBuyAvailableFlag()) {
+            return false;
+        }
+
+        if ($check_sell_flag && !$instrument->getSellAvailableFlag()) {
+            return false;
+        }
+
+        return true;
     }
 }
