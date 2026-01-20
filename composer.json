@@ -23,7 +23,7 @@
         "php": ">=7.4.0",
         "ext-grpc": "^1.74",
         "grpc/grpc": "^1.74",
-        "google/protobuf": "^33.4",
+        "google/protobuf": "^3.25.1",
         "ext-bcmath": "*",
         "ext-json": "*"
     },
