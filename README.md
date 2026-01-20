@@ -288,8 +288,8 @@ $stream->cancel();
 
 - *Вер. 0.5.1 от 2026-01-20*.
 
-~ Поднята версия библиотеки grpc/grpc (https://github.com/grpc/grpc) до версии ^1.76. Необходимо обновить.
-~ Поднята версия библиотеки google/protobuf (https://github.com/protocolbuffers/protobuf) до версии ^33.4. Необходимо обновить.
+~ Поднята версия библиотеки grpc/grpc (https://github.com/grpc/grpc) до версии ^1.74. Необходимо обновить.
+~ Поднята версия библиотеки google/protobuf (https://github.com/protocolbuffers/protobuf) до версии ^3.25.1. Необходимо обновить.
 
 
 Справочная информация: 
@@ -300,7 +300,7 @@ $stream->cancel();
 sudo pecl upgrade grpc
 ```
 
-**Обновление protoc:**
+**Обновление protoc (Если вы самостоятельно обновляете библиотеку из контрактов):**
 
 Можно воспользоваться скриптом https://gist.github.com/Eitol/c12b3102ba872a365461d101650d319b#file-install_protobuf-sh)
 
