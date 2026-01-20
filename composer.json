@@ -21,8 +21,8 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=7.4.0",
-        "ext-grpc": "^1.76",
-        "grpc/grpc": "^1.76",
+        "ext-grpc": "^1.74",
+        "grpc/grpc": "^1.74",
         "google/protobuf": "^33.4",
         "ext-bcmath": "*",
         "ext-json": "*"
