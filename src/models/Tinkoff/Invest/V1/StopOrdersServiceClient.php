@@ -21,7 +21,7 @@ class StopOrdersServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\PostStopOrderRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\PostStopOrderResponse>
      */
     public function PostStopOrder(\Tinkoff\Invest\V1\PostStopOrderRequest $argument,
       $metadata = [], $options = []) {
@@ -36,7 +36,7 @@ class StopOrdersServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetStopOrdersRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetStopOrdersResponse>
      */
     public function GetStopOrders(\Tinkoff\Invest\V1\GetStopOrdersRequest $argument,
       $metadata = [], $options = []) {
@@ -51,7 +51,7 @@ class StopOrdersServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\CancelStopOrderRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\CancelStopOrderResponse>
      */
     public function CancelStopOrder(\Tinkoff\Invest\V1\CancelStopOrderRequest $argument,
       $metadata = [], $options = []) {

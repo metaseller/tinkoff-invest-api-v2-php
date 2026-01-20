@@ -21,7 +21,7 @@ class SignalServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetStrategiesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetStrategiesResponse>
      */
     public function GetStrategies(\Tinkoff\Invest\V1\GetStrategiesRequest $argument,
       $metadata = [], $options = []) {
@@ -36,7 +36,7 @@ class SignalServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetSignalsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetSignalsResponse>
      */
     public function GetSignals(\Tinkoff\Invest\V1\GetSignalsRequest $argument,
       $metadata = [], $options = []) {

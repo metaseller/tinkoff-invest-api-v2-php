@@ -21,7 +21,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\OpenSandboxAccountRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\OpenSandboxAccountResponse>
      */
     public function OpenSandboxAccount(\Tinkoff\Invest\V1\OpenSandboxAccountRequest $argument,
       $metadata = [], $options = []) {
@@ -36,7 +36,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetAccountsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetAccountsResponse>
      */
     public function GetSandboxAccounts(\Tinkoff\Invest\V1\GetAccountsRequest $argument,
       $metadata = [], $options = []) {
@@ -51,7 +51,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\CloseSandboxAccountRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\CloseSandboxAccountResponse>
      */
     public function CloseSandboxAccount(\Tinkoff\Invest\V1\CloseSandboxAccountRequest $argument,
       $metadata = [], $options = []) {
@@ -66,7 +66,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\PostOrderRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\PostOrderResponse>
      */
     public function PostSandboxOrder(\Tinkoff\Invest\V1\PostOrderRequest $argument,
       $metadata = [], $options = []) {
@@ -82,7 +82,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\PostOrderAsyncRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\PostOrderAsyncResponse>
      */
     public function PostSandboxOrderAsync(\Tinkoff\Invest\V1\PostOrderAsyncRequest $argument,
       $metadata = [], $options = []) {
@@ -97,7 +97,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\ReplaceOrderRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\PostOrderResponse>
      */
     public function ReplaceSandboxOrder(\Tinkoff\Invest\V1\ReplaceOrderRequest $argument,
       $metadata = [], $options = []) {
@@ -112,7 +112,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetOrdersRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetOrdersResponse>
      */
     public function GetSandboxOrders(\Tinkoff\Invest\V1\GetOrdersRequest $argument,
       $metadata = [], $options = []) {
@@ -127,7 +127,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\CancelOrderRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\CancelOrderResponse>
      */
     public function CancelSandboxOrder(\Tinkoff\Invest\V1\CancelOrderRequest $argument,
       $metadata = [], $options = []) {
@@ -142,7 +142,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetOrderStateRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\OrderState>
      */
     public function GetSandboxOrderState(\Tinkoff\Invest\V1\GetOrderStateRequest $argument,
       $metadata = [], $options = []) {
@@ -157,7 +157,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetOrderPriceRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetOrderPriceResponse>
      */
     public function GetSandboxOrderPrice(\Tinkoff\Invest\V1\GetOrderPriceRequest $argument,
       $metadata = [], $options = []) {
@@ -172,7 +172,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\PositionsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\PositionsResponse>
      */
     public function GetSandboxPositions(\Tinkoff\Invest\V1\PositionsRequest $argument,
       $metadata = [], $options = []) {
@@ -188,7 +188,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\OperationsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\OperationsResponse>
      */
     public function GetSandboxOperations(\Tinkoff\Invest\V1\OperationsRequest $argument,
       $metadata = [], $options = []) {
@@ -204,7 +204,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetOperationsByCursorRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetOperationsByCursorResponse>
      */
     public function GetSandboxOperationsByCursor(\Tinkoff\Invest\V1\GetOperationsByCursorRequest $argument,
       $metadata = [], $options = []) {
@@ -219,7 +219,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\PortfolioRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\PortfolioResponse>
      */
     public function GetSandboxPortfolio(\Tinkoff\Invest\V1\PortfolioRequest $argument,
       $metadata = [], $options = []) {
@@ -234,7 +234,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\SandboxPayInRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\SandboxPayInResponse>
      */
     public function SandboxPayIn(\Tinkoff\Invest\V1\SandboxPayInRequest $argument,
       $metadata = [], $options = []) {
@@ -249,7 +249,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\WithdrawLimitsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\WithdrawLimitsResponse>
      */
     public function GetSandboxWithdrawLimits(\Tinkoff\Invest\V1\WithdrawLimitsRequest $argument,
       $metadata = [], $options = []) {
@@ -264,7 +264,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetMaxLotsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetMaxLotsResponse>
      */
     public function GetSandboxMaxLots(\Tinkoff\Invest\V1\GetMaxLotsRequest $argument,
       $metadata = [], $options = []) {
@@ -279,7 +279,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\PostStopOrderRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\PostStopOrderResponse>
      */
     public function PostSandboxStopOrder(\Tinkoff\Invest\V1\PostStopOrderRequest $argument,
       $metadata = [], $options = []) {
@@ -294,7 +294,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetStopOrdersRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetStopOrdersResponse>
      */
     public function GetSandboxStopOrders(\Tinkoff\Invest\V1\GetStopOrdersRequest $argument,
       $metadata = [], $options = []) {
@@ -309,7 +309,7 @@ class SandboxServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\CancelStopOrderRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\CancelStopOrderResponse>
      */
     public function CancelSandboxStopOrder(\Tinkoff\Invest\V1\CancelStopOrderRequest $argument,
       $metadata = [], $options = []) {

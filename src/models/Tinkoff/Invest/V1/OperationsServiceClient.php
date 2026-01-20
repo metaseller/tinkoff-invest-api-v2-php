@@ -22,7 +22,7 @@ class OperationsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\OperationsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\OperationsResponse>
      */
     public function GetOperations(\Tinkoff\Invest\V1\OperationsRequest $argument,
       $metadata = [], $options = []) {
@@ -37,7 +37,7 @@ class OperationsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\PortfolioRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\PortfolioResponse>
      */
     public function GetPortfolio(\Tinkoff\Invest\V1\PortfolioRequest $argument,
       $metadata = [], $options = []) {
@@ -52,7 +52,7 @@ class OperationsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\PositionsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\PositionsResponse>
      */
     public function GetPositions(\Tinkoff\Invest\V1\PositionsRequest $argument,
       $metadata = [], $options = []) {
@@ -67,7 +67,7 @@ class OperationsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\WithdrawLimitsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\WithdrawLimitsResponse>
      */
     public function GetWithdrawLimits(\Tinkoff\Invest\V1\WithdrawLimitsRequest $argument,
       $metadata = [], $options = []) {
@@ -82,7 +82,7 @@ class OperationsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\BrokerReportRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\BrokerReportResponse>
      */
     public function GetBrokerReport(\Tinkoff\Invest\V1\BrokerReportRequest $argument,
       $metadata = [], $options = []) {
@@ -97,7 +97,7 @@ class OperationsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetDividendsForeignIssuerRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetDividendsForeignIssuerResponse>
      */
     public function GetDividendsForeignIssuer(\Tinkoff\Invest\V1\GetDividendsForeignIssuerRequest $argument,
       $metadata = [], $options = []) {
@@ -113,7 +113,7 @@ class OperationsServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetOperationsByCursorRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetOperationsByCursorResponse>
      */
     public function GetOperationsByCursor(\Tinkoff\Invest\V1\GetOperationsByCursorRequest $argument,
       $metadata = [], $options = []) {

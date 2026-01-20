@@ -1,13 +1,15 @@
 {
     "name": "metaseller/tinkoff-invest-api-v2-php",
-    "version": "0.4.24",
+    "version": "0.5.1",
     "description": "Unofficial PHP SDK for Tinkoff Invest API v2",
     "type": "library",
     "license": "Apache-2.0",
     "keywords": [
         "php",
         "tinkoff",
-        "invest api"
+        "t-invest",
+        "t-investments",
+        "invest api sdk"
     ],
     "homepage": "https://github.com/metaseller/tinkoff-invest-api-v2-php",
     "authors": [
@@ -19,9 +21,9 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=7.4.0",
-        "ext-grpc": "^1.43",
-        "grpc/grpc": "^1.42",
-        "google/protobuf": "^3.19",
+        "ext-grpc": "^1.76",
+        "grpc/grpc": "^1.76",
+        "google/protobuf": "^33.4",
         "ext-bcmath": "*",
         "ext-json": "*"
     },

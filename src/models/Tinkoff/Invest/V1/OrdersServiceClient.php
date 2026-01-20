@@ -21,7 +21,7 @@ class OrdersServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\PostOrderRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\PostOrderResponse>
      */
     public function PostOrder(\Tinkoff\Invest\V1\PostOrderRequest $argument,
       $metadata = [], $options = []) {
@@ -37,7 +37,7 @@ class OrdersServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\PostOrderAsyncRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\PostOrderAsyncResponse>
      */
     public function PostOrderAsync(\Tinkoff\Invest\V1\PostOrderAsyncRequest $argument,
       $metadata = [], $options = []) {
@@ -52,7 +52,7 @@ class OrdersServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\CancelOrderRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\CancelOrderResponse>
      */
     public function CancelOrder(\Tinkoff\Invest\V1\CancelOrderRequest $argument,
       $metadata = [], $options = []) {
@@ -67,7 +67,7 @@ class OrdersServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetOrderStateRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\OrderState>
      */
     public function GetOrderState(\Tinkoff\Invest\V1\GetOrderStateRequest $argument,
       $metadata = [], $options = []) {
@@ -82,7 +82,7 @@ class OrdersServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetOrdersRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetOrdersResponse>
      */
     public function GetOrders(\Tinkoff\Invest\V1\GetOrdersRequest $argument,
       $metadata = [], $options = []) {
@@ -97,7 +97,7 @@ class OrdersServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\ReplaceOrderRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\PostOrderResponse>
      */
     public function ReplaceOrder(\Tinkoff\Invest\V1\ReplaceOrderRequest $argument,
       $metadata = [], $options = []) {
@@ -112,7 +112,7 @@ class OrdersServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetMaxLotsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetMaxLotsResponse>
      */
     public function GetMaxLots(\Tinkoff\Invest\V1\GetMaxLotsRequest $argument,
       $metadata = [], $options = []) {
@@ -127,7 +127,7 @@ class OrdersServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetOrderPriceRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetOrderPriceResponse>
      */
     public function GetOrderPrice(\Tinkoff\Invest\V1\GetOrderPriceRequest $argument,
       $metadata = [], $options = []) {

@@ -22,7 +22,7 @@ class UsersServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetAccountsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetAccountsResponse>
      */
     public function GetAccounts(\Tinkoff\Invest\V1\GetAccountsRequest $argument,
       $metadata = [], $options = []) {
@@ -38,7 +38,7 @@ class UsersServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetMarginAttributesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetMarginAttributesResponse>
      */
     public function GetMarginAttributes(\Tinkoff\Invest\V1\GetMarginAttributesRequest $argument,
       $metadata = [], $options = []) {
@@ -54,7 +54,7 @@ class UsersServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetUserTariffRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetUserTariffResponse>
      */
     public function GetUserTariff(\Tinkoff\Invest\V1\GetUserTariffRequest $argument,
       $metadata = [], $options = []) {
@@ -70,7 +70,7 @@ class UsersServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetInfoRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetInfoResponse>
      */
     public function GetInfo(\Tinkoff\Invest\V1\GetInfoRequest $argument,
       $metadata = [], $options = []) {
@@ -86,7 +86,7 @@ class UsersServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetBankAccountsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetBankAccountsResponse>
      */
     public function GetBankAccounts(\Tinkoff\Invest\V1\GetBankAccountsRequest $argument,
       $metadata = [], $options = []) {
@@ -102,7 +102,7 @@ class UsersServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\CurrencyTransferRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\CurrencyTransferResponse>
      */
     public function CurrencyTransfer(\Tinkoff\Invest\V1\CurrencyTransferRequest $argument,
       $metadata = [], $options = []) {

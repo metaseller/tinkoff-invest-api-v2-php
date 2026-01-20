@@ -286,6 +286,42 @@ $stream->cancel();
 
 # Обновления
 
+- *Вер. 0.5.1 от 2026-01-20*.
+
+~ Поднята версия библиотеки grpc/grpc (https://github.com/grpc/grpc) до версии ^1.76. Необходимо обновить.
+~ Поднята версия библиотеки google/protobuf (https://github.com/protocolbuffers/protobuf) до версии ^33.4. Необходимо обновить.
+
+
+Справочная информация: 
+
+**Обновление grpc.so:**
+
+```
+sudo pecl upgrade grpc
+```
+
+**Обновление protoc:**
+
+Можно воспользоваться скриптом https://gist.github.com/Eitol/c12b3102ba872a365461d101650d319b#file-install_protobuf-sh)
+
+**Пересборка grpc_php_plugin (Если вы самостоятельно обновляете библиотеку из контрактов):**
+(https://grpc.io/docs/languages/php/basics/#setup)
+```
+cd ~
+git clone --recurse-submodules --depth 1 --shallow-submodules https://github.com/grpc/grpc
+```
+
+```
+cd grpc
+mkdir -p cmake/build
+pushd cmake/build
+cmake ../..
+make protoc grpc_php_plugin
+popd
+```
+
+
+
 - *Вер. 0.4.24 от 2025-12-18*.
 
 ~ Добавлен унифицированный класс DTO Цены/Количества (https://github.com/metaseller/tinkoff-invest-api-v2-php/blob/main/src/dto/Price.php)

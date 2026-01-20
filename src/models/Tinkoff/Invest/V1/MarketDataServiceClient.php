@@ -21,7 +21,7 @@ class MarketDataServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetCandlesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetCandlesResponse>
      */
     public function GetCandles(\Tinkoff\Invest\V1\GetCandlesRequest $argument,
       $metadata = [], $options = []) {
@@ -36,7 +36,7 @@ class MarketDataServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetLastPricesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetLastPricesResponse>
      */
     public function GetLastPrices(\Tinkoff\Invest\V1\GetLastPricesRequest $argument,
       $metadata = [], $options = []) {
@@ -51,7 +51,7 @@ class MarketDataServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetOrderBookRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetOrderBookResponse>
      */
     public function GetOrderBook(\Tinkoff\Invest\V1\GetOrderBookRequest $argument,
       $metadata = [], $options = []) {
@@ -66,7 +66,7 @@ class MarketDataServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetTradingStatusRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetTradingStatusResponse>
      */
     public function GetTradingStatus(\Tinkoff\Invest\V1\GetTradingStatusRequest $argument,
       $metadata = [], $options = []) {
@@ -81,7 +81,7 @@ class MarketDataServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetTradingStatusesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetTradingStatusesResponse>
      */
     public function GetTradingStatuses(\Tinkoff\Invest\V1\GetTradingStatusesRequest $argument,
       $metadata = [], $options = []) {
@@ -97,7 +97,7 @@ class MarketDataServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetLastTradesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetLastTradesResponse>
      */
     public function GetLastTrades(\Tinkoff\Invest\V1\GetLastTradesRequest $argument,
       $metadata = [], $options = []) {
@@ -112,7 +112,7 @@ class MarketDataServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetClosePricesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetClosePricesResponse>
      */
     public function GetClosePrices(\Tinkoff\Invest\V1\GetClosePricesRequest $argument,
       $metadata = [], $options = []) {
@@ -127,7 +127,7 @@ class MarketDataServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetTechAnalysisRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetTechAnalysisResponse>
      */
     public function GetTechAnalysis(\Tinkoff\Invest\V1\GetTechAnalysisRequest $argument,
       $metadata = [], $options = []) {
@@ -142,7 +142,7 @@ class MarketDataServiceClient extends \Grpc\BaseStub {
      * @param \Tinkoff\Invest\V1\GetMarketValuesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\GetMarketValuesResponse>
      */
     public function GetMarketValues(\Tinkoff\Invest\V1\GetMarketValuesRequest $argument,
       $metadata = [], $options = []) {
