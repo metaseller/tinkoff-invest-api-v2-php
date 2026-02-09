@@ -3,7 +3,6 @@
 namespace Metaseller\TinkoffInvestApi2\dto;
 
 use Metaseller\TinkoffInvestApi2\helpers\NumbersHelper;
-use Metaseller\TinkoffInvestApi2\helpers\QuotationHelper;
 use Tinkoff\Invest\V1\MoneyValue;
 use Tinkoff\Invest\V1\Quotation;
 
@@ -12,33 +11,8 @@ use Tinkoff\Invest\V1\Quotation;
  *
  * @package Metaseller\TinkoffInvestApi2
  */
-class Price
+class Price extends Quantity
 {
-    /**
-     * @var int Точность расчетов на стороне брокера. Количество знаков после запятой.
-     */
-    public const BROKER_PRECISION = 9;
-
-    /**
-     * @var int Точность расчетов на стороне брокера. Множитель.
-     */
-    public const BROKER_PRECISION_MULTIPLIER = 1000000000;
-
-    /**
-     * @var float Цена в формате числа с плавающей точкой
-     */
-    protected $_price_as_decimal;
-
-    /**
-     * @var int Целочисленная цена с учетом точности
-     */
-    protected $_price_as_integer;
-
-    /**
-     * @var Quotation Цена в формате {@link Quotation}
-     */
-    protected $_price_as_quotation;
-
     /**
      * @var string|null Строковый ISO-код валюты
      *
@@ -49,14 +23,12 @@ class Price
     /**
      * Метод установки цены из числа с плавающей запятой
      *
-     * @param float $price Цена в формате числа с плавающей запятой
+     * @param float $value Цена в формате числа с плавающей запятой
      * @param string|null $currency Строковый ISO-код валюты
      */
-    public function setDecimalPrice(float $price, string $currency = null): void
+    public function setDecimalValue(float $value, string $currency = null): void
     {
-        $this->_price_as_decimal = round($price, static::BROKER_PRECISION);
-        $this->_price_as_integer = intval(static::BROKER_PRECISION_MULTIPLIER * round($price, static::BROKER_PRECISION));
-        $this->_price_as_quotation = QuotationHelper::toQuotation($price);
+        parent::setDecimalValue($value);
 
         $this->_currency = $currency;
     }
@@ -64,15 +36,12 @@ class Price
     /**
      * Метод установки цены из числа в формате {@link Quotation}
      *
-     * @param Quotation $price Цена в формате {@link Quotation}
+     * @param Quotation $value Цена в формате {@link Quotation}
      * @param string|null $currency Строковый ISO-код валюты
      */
-    public function setQuotationPrice(Quotation $price, string $currency = null): void
+    public function setQuotationValue(Quotation $value, string $currency = null): void
     {
-        $this->_price_as_quotation = $price;
-
-        $this->_price_as_integer = intval(static::BROKER_PRECISION_MULTIPLIER * ($price->getUnits() ?: 0) + ($price->getNano() ?: 0));
-        $this->_price_as_decimal = round((float) $this->_price_as_integer / static::BROKER_PRECISION_MULTIPLIER, static::BROKER_PRECISION);
+        parent::setQuotationValue($value);
 
         $this->_currency = $currency;
     }
@@ -80,66 +49,34 @@ class Price
     /**
      * Метод установки цены из числа в формате {@link MoneyValue}
      *
-     * @param MoneyValue $price Цена в формате {@link MoneyValue}
+     * @param MoneyValue $value Цена в формате {@link MoneyValue}
      */
-    public function setMoneyValuePrice(MoneyValue $price): void
+    public function setMoneyValuePrice(MoneyValue $value): void
     {
-        $this->_price_as_quotation = new Quotation();
-        $this->_price_as_quotation->setUnits($price->getUnits() ?: 0);
-        $this->_price_as_quotation->setNano($price->getNano() ?: 0);
+        $this->_value_as_quotation = new Quotation();
 
-        $this->_price_as_integer = intval(static::BROKER_PRECISION_MULTIPLIER * ($price->getUnits() ?: 0) + ($price->getNano() ?: 0));
-        $this->_price_as_decimal = round((float) $this->_price_as_integer / static::BROKER_PRECISION_MULTIPLIER, static::BROKER_PRECISION);
+        $this->_value_as_quotation->setUnits($value->getUnits() ?: 0);
+        $this->_value_as_quotation->setNano($value->getNano() ?: 0);
 
-        $this->_currency = $price->getCurrency();
+        $this->_value_as_integer = intval(static::BROKER_PRECISION_MULTIPLIER * ($value->getUnits() ?: 0) + ($value->getNano() ?: 0));
+        $this->_value_as_decimal = round((float) $this->_value_as_integer / static::BROKER_PRECISION_MULTIPLIER, static::BROKER_PRECISION);
+
+        $this->_currency = $value->getCurrency();
     }
 
     /**
      * Метод установки целочисленной цены с учетом точности
      *
-     * Целочисленная цена с учетом точности - это цена в десятичном формате умноженная на {@link Price::BROKER_PRECISION_MULTIPLIER} и
+     * Целочисленная цена с учетом точности - это цена в десятичном формате умноженная на {@link Quantity::BROKER_PRECISION_MULTIPLIER} и
      * приведенная к целому числу
      *
-     * @param int $price Целочисленная цена с учетом точности
+     * @param int $value Целочисленная цена с учетом точности
      */
-    public function setIntegerPrice(int $price, string $currency = null): void
+    public function setIntegerPrice(int $value, string $currency = null): void
     {
-        $this->_price_as_integer = $price;
-        $this->_price_as_decimal = round((float) $this->_price_as_integer / static::BROKER_PRECISION_MULTIPLIER, static::BROKER_PRECISION);
-
-        $this->_price_as_quotation = QuotationHelper::toQuotation($this->_price_as_decimal);
+        parent::setIntegerValue($value);
 
         $this->_currency = $currency;
-    }
-
-    /**
-     * Представление цены в виде целочисленной цены с учетом точности
-     *
-     * @return int Целочисленная цена с учетом точности
-     */
-    public function asInteger(): int
-    {
-        return $this->_price_as_integer;
-    }
-
-    /**
-     * Представление цены в виде числа с плавающей точкой
-     *
-     * @return float Цена в виде числа с плавающей точкой
-     */
-    public function asDecimal(): float
-    {
-        return $this->_price_as_decimal;
-    }
-
-    /**
-     * Представление цены в формате {@link Quotation}
-     *
-     * @return Quotation Цена в формате {@link Quotation}
-     */
-    public function asQuotation(): Quotation
-    {
-        return $this->_price_as_quotation;
     }
 
     /**
@@ -149,13 +86,13 @@ class Price
      */
     public function asMoneyValue(): MoneyValue
     {
-        $price_as_money_value = new MoneyValue();
+        $value_as_money_value = new MoneyValue();
 
-        $price_as_money_value->setCurrency($this->_currency);
-        $price_as_money_value->setUnits($this->_price_as_quotation->getUnits() ?: 0);
-        $price_as_money_value->setNano($this->_price_as_quotation->getNano() ?: 0);
+        $value_as_money_value->setCurrency($this->_currency);
+        $value_as_money_value->setUnits($this->_value_as_quotation->getUnits() ?: 0);
+        $value_as_money_value->setNano($this->_value_as_quotation->getNano() ?: 0);
 
-        return $price_as_money_value;
+        return $value_as_money_value;
     }
 
     /**
@@ -167,21 +104,21 @@ class Price
      */
     public function asString(int $display_precision = 4): string
     {
-        return NumbersHelper::printFloat($this->_price_as_decimal, $display_precision) . (!empty($this->_currency) ? ' ' . $this->_currency : '');
+        return NumbersHelper::printFloat($this->_value_as_decimal, $display_precision) . (!empty($this->_currency) ? ' ' . $this->_currency : '');
     }
 
     /**
      * Метод создания объекта класса на базе цены в виде десятичного числа
      *
-     * @param float $source_price Цена в виде десятичного числа
+     * @param float $value Цена в виде десятичного числа
      * @param string|null $currency Строковый ISO-код валюты
      *
-     * @return static Объект текущего класса
+     * @return Price Объект текущего класса
      */
-    public static function createFromDecimal(float $source_price, string $currency = null): self
+    public static function createFromDecimal(float $value, string $currency = null)
     {
         $price = new static();
-        $price->setDecimalPrice($source_price, $currency);
+        $price->setDecimalValue($value, $currency);
 
         return $price;
     }
@@ -189,15 +126,15 @@ class Price
     /**
      * Метод создания объекта класса на базе целочисленной цены с учетом точности
      *
-     * @param int $source_price Целочисленная цена с учетом точности
+     * @param int $value Целочисленная цена с учетом точности
      * @param string|null $currency Строковый ISO-код валюты
      *
-     * @return static Объект текущего класса
+     * @return Price Объект текущего класса
      */
-    public static function createFromInteger(int $source_price, string $currency = null): self
+    public static function createFromInteger(int $value, string $currency = null)
     {
         $price = new static();
-        $price->setIntegerPrice($source_price, $currency);
+        $price->setIntegerPrice($value, $currency);
 
         return $price;
     }
@@ -205,15 +142,15 @@ class Price
     /**
      * Метод создания объекта класса на базе цены в формате {@link Quotation}
      *
-     * @param Quotation $source_price Цена в формате {@link Quotation}
+     * @param Quotation $value Цена в формате {@link Quotation}
      * @param string|null $currency Строковый ISO-код валюты
      *
-     * @return static Объект текущего класса
+     * @return Price Объект текущего класса
      */
-    public static function createFromQuotation(Quotation $source_price, string $currency = null): self
+    public static function createFromQuotation(Quotation $value, string $currency = null)
     {
         $price = new static();
-        $price->setQuotationPrice($source_price, $currency);
+        $price->setQuotationValue($value, $currency);
 
         return $price;
     }
@@ -221,14 +158,14 @@ class Price
     /**
      * Метод создания объекта класса на базе цены в формате {@link MoneyValue}
      *
-     * @param MoneyValue $source_price Цена в формате {@link MoneyValue}
+     * @param MoneyValue $value Цена в формате {@link MoneyValue}
      *
-     * @return static Объект текущего класса
+     * @return Price Объект текущего класса
      */
-    public static function createFromMoneyValue(MoneyValue $source_price): self
+    public static function createFromMoneyValue(MoneyValue $value)
     {
         $price = new static();
-        $price->setMoneyValuePrice($source_price);
+        $price->setMoneyValuePrice($value);
 
         return $price;
     }
