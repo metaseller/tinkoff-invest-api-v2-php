@@ -392,6 +392,30 @@ class OperationType
      * Generated from protobuf enum <code>OPERATION_TYPE_FUTURE_EXPIRATION = 65;</code>
      */
     const OPERATION_TYPE_FUTURE_EXPIRATION = 65;
+    /**
+     *  Прочие комиссии;
+     *
+     * Generated from protobuf enum <code>OPERATION_TYPE_OTHER_FEE = 66;</code>
+     */
+    const OPERATION_TYPE_OTHER_FEE = 66;
+    /**
+     *  Операция по счету;
+     *
+     * Generated from protobuf enum <code>OPERATION_TYPE_OTHER = 67;</code>
+     */
+    const OPERATION_TYPE_OTHER = 67;
+    /**
+     * погашение ЦФА-токена;
+     *
+     * Generated from protobuf enum <code>OPERATION_TYPE_DFA_REDEMPTION = 68;</code>
+     */
+    const OPERATION_TYPE_DFA_REDEMPTION = 68;
+    /**
+     *  отмена заявки на первичное размещение по ЦФА;
+     *
+     * Generated from protobuf enum <code>OPERATION_TYPE_PRIMARY_ORDER = 69;</code>
+     */
+    const OPERATION_TYPE_PRIMARY_ORDER = 69;
 
     private static $valueToName = [
         self::OPERATION_TYPE_UNSPECIFIED => 'OPERATION_TYPE_UNSPECIFIED',
@@ -457,6 +481,10 @@ class OperationType
         self::OPERATION_TYPE_OVER_INCOME => 'OPERATION_TYPE_OVER_INCOME',
         self::OPERATION_TYPE_OPTION_EXPIRATION => 'OPERATION_TYPE_OPTION_EXPIRATION',
         self::OPERATION_TYPE_FUTURE_EXPIRATION => 'OPERATION_TYPE_FUTURE_EXPIRATION',
+        self::OPERATION_TYPE_OTHER_FEE => 'OPERATION_TYPE_OTHER_FEE',
+        self::OPERATION_TYPE_OTHER => 'OPERATION_TYPE_OTHER',
+        self::OPERATION_TYPE_DFA_REDEMPTION => 'OPERATION_TYPE_DFA_REDEMPTION',
+        self::OPERATION_TYPE_PRIMARY_ORDER => 'OPERATION_TYPE_PRIMARY_ORDER',
     ];
 
     public static function name($value)

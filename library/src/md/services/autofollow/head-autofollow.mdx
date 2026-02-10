@@ -1,0 +1,42 @@
+---
+sidebar_position: 1
+---
+
+# Описание
+
+
+## Автоследование для авторов стратегий
+
+Сервис автоследования предназначен для авторов стратегий и помогает автоматизировать управление 
+сигналами по стратегии.
+
+[Как работает автоследование в Т-Инвестициях и как стать автором стратегии](https://www.tbank.ru/invest/help/brokerage/account/strategy/)
+
+## Методы
+
+С помощью методов сервиса можно:
+- получить [лист инструментов](/invest/api/autofollow/get-autofollow-instruments), доступных для автоследования;
+- получить [список стратегий](/invest/api/autofollow/get-autofollow-strategies) автора;
+- [создать новый сигнал](/invest/api/autofollow/create-autofollow-signal);
+- [создать отложенный сигнал](/invest/api/autofollow/create-autofollow-stop-signal);
+- [получить позицию портфеля](/invest/api/autofollow/get-autofollow-portfolio-position) для заданной стратегии;
+- получить [активные](/invest/api/autofollow/get-autofollow-signals) и [отложенные](/invest/api/autofollow/get-autofollow-stop-signals) сигналы;
+- снять [активные](/invest/api/autofollow/delete-autofollow-signal) и [отложенные](/invest/api/autofollow/delete-autofollow-stop-signal) сигналы.
+
+## Техническая информация
+
+- Взаимодействие с сервисом основывается на архитектурном стиле REST.
+- [Спецификация методов Autofollow API](/invest/api/autofollow). Не все представленные методы можно 
+использовать из интерфейса портала.
+- Адрес сервиса — **`https://invest-public-api.tbank.ru`**.
+- Дополнительно есть [Swagger Autofollow T-Invest API](https://russianinvestments.github.io/investAPI/autofollowswagger-ui/), где 
+можно проверить взаимодействие с сервисом. [Подробнее про использование Swagger](/invest/intro/developer/protocols/restapi).
+
+## Ошибки
+
+[Возможные ошибки при работе с сервисом](/invest/services/autofollow/errors)
+
+## Вопросы и поддержка
+
+Если вы автор стратегии и не нашли ответа на портале или столкнулись с проблемой, задайте вопрос в 
+техподдержку Т-Инвестиций.

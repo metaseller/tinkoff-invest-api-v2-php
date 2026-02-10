@@ -1,0 +1,10 @@
+---
+sidebar_position: 1
+---
+import { InstrumentsView } from './instruments-view'
+import BrowserOnly from "@docusaurus/BrowserOnly";
+
+# Облигации
+<BrowserOnly>
+    {() => <InstrumentsView instrumentType={'bond'}/>}
+</BrowserOnly>

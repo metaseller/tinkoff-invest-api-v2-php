@@ -286,9 +286,19 @@ $stream->cancel();
 
 # Обновления
 
+- *Вер. 0.5.2 от 2026-02-10*.
+
+~ Переключение на новый репозиторий T-Invest (https://opensource.tbank.ru/invest/invest-contracts/-/tree/master) и обновление контрактов до версии 1.44 из этого репозитория
+
+~ Добавлена DTO Quantity (https://github.com/metaseller/tinkoff-invest-api-v2-php/blob/main/src/dto/Quantity.php)
+
+~ Доработаны классы-провайдеры данных
+
+
 - *Вер. 0.5.1 от 2026-01-20*.
 
 ~ Поднята версия библиотеки grpc/grpc (https://github.com/grpc/grpc) до версии ^1.74. Необходимо обновить.
+
 ~ Поднята версия библиотеки google/protobuf (https://github.com/protocolbuffers/protobuf) до версии ^3.25.1. Необходимо обновить.
 
 
@@ -325,9 +335,13 @@ popd
 - *Вер. 0.4.24 от 2025-12-18*.
 
 ~ Добавлен унифицированный класс DTO Цены/Количества (https://github.com/metaseller/tinkoff-invest-api-v2-php/blob/main/src/dto/Price.php)
+
 ~ Добавлены новые классы-хелперы ArrayHelper, NumbersHelper, InstrumentsHelper.
+
 ~ Переделана логика работы провайдера InstrumentsProvider, исправлены некоторые ошибки в работе
+
 ~ Добавлены новые провайдеры данных MarketDataProvider и PortfolioProvider
+
 ~ Добавлен метод обработки, вывода ошибки исполнения запроса к API в модели TinkoffClientsFactory
 
 - *Вер. 0.4.23 от 2025-11-11*.

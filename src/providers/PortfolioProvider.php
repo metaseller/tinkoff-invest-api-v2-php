@@ -35,18 +35,18 @@ class PortfolioProvider extends BaseDataProvider
     }
 
     /**
-     * Получение списка позиций портфеля
+     * Получение информации о портфеле
      *
      * @param string $account_id Идентификатор аккаунта
      * @param bool $raise Признак необходимость бросить исключение, если возникла ошибка исполнения. По умолчанию равно <code>true</code>
      *
-     * @return PortfolioPosition[]|null Список позиций портфеля
+     * @return PortfolioResponse[]|null Информация о портфеле
      *
      * @throws RequestException
      * @throws Throwable
      * @throws ValidateException
      */
-    public function getPortfolioPositions(string $account_id, bool $raise = true): ?array
+    public function getPortfolio(string $account_id, bool $raise = true): ?PortfolioResponse
     {
         try {
             $request = new PortfolioRequest();
@@ -64,6 +64,37 @@ class PortfolioProvider extends BaseDataProvider
             ;
 
             $clients_factory->processRequestStatus($status);
+
+            if (!$response) {
+                throw new RequestException('Response is empty');
+            }
+
+            return $response;
+        } catch (Throwable $e) {
+            if ($raise) {
+                throw  $e;
+            }
+
+            return null;
+        }
+    }
+
+    /**
+     * Получение списка позиций портфеля
+     *
+     * @param string $account_id Идентификатор аккаунта
+     * @param bool $raise Признак необходимость бросить исключение, если возникла ошибка исполнения. По умолчанию равно <code>true</code>
+     *
+     * @return PortfolioPosition[]|null Список позиций портфеля
+     *
+     * @throws RequestException
+     * @throws Throwable
+     * @throws ValidateException
+     */
+    public function getPortfolioPositions(string $account_id, bool $raise = true): ?array
+    {
+        try {
+            $response = $this->getPortfolio($account_id, $raise);
 
             if (!$response) {
                 throw new RequestException('Response is empty');

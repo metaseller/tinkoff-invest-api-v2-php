@@ -1,0 +1,154 @@
+---
+sidebar_position: 1
+---
+
+import { DocImage } from '@/components/DocImage';
+
+# gRPC
+
+## Протокол взаимодействия
+
+Вся работа с T-Invest API ведется по протоколу gRPC.
+
+[Документация gRPC](https://grpc.io/docs/)
+
+Одна из ключевых особенностей протокола — [bidirectional streaming](https://grpc.io/docs/what-is-grpc/core-concepts/). Это особый режим работы, при котором
+открывается одно стрим-соединение, куда оба участника взаимодействия могут отправлять сообщения. Это позволяет более
+гибко и оперативно реализовать работу.
+
+Например, bidirectional streaming [сервиса котировок](/invest/services/quotes/head-marketdata/)
+в одном и том же соединении принимает сообщения об изменении статуса подписки и предоставляет различные
+виды биржевой информации — стаканы, свечи, поток обезличенных сделок и другие.
+
+## Авторизация
+
+- Для успешной работы с T-Invest API нужно передавать токен доступа в **metadata**
+каждого запроса.
+
+- Формат заголовка — `Authorization: Bearer [токен доступа]`.
+
+- Пример запроса:
+
+   ```
+   Authorization: Bearer t.QtEo8ahkNFX4RTpbqp0u4z4GDZq27HzUp6AotJASBx7_DVqmqZMHfM2Cy7JmUjS80boI9eVg
+   ```
+
+## Адреса сервиса
+
+- Продовый контур — `invest-public-api.tbank.ru:443`.
+- Песочница — `sandbox-invest-public-api.tbank.ru:443`.
+
+[Подробнее про различия контуров](/invest/intro/developer/sandbox/url_difference)
+
+## trackingId запросов
+
+Заголовок `x-tracking-id` добавляется во все ответы unary-методов T-Invest API.
+
+Это уникальный UUID запроса, который нужен технической поддержке для разбора
+инцидентов. При обращении в службу технической поддержки обязательно указывайте `x-tracking-id` запроса —
+это ускорит решение вашего вопроса.
+
+:::info
+В рамках stream-соединений для сообщений управления статусом подписки <nobr>`x-tracking-id`</nobr> передается в
+виде выходного параметра.
+:::
+
+## Полный текст ошибки
+
+Если при вызове метода T-Invest API происходит ошибка, в ответе возвращается параметр **message**.
+В нем можно посмотреть полный текст описания ошибки.
+
+В [Kreya](/invest/intro/developer/protocols/grpc/#kreya) текст ошибки можно посмотреть на вкладке 
+**Header** → поле **message**.
+
+## AppName запросов
+
+В запросы к T-Invest API можно добавлять служебный заголовок **x-app-name** — он
+нужен для сбора статистики по используемым инструментам.
+
+Если вы разработчик SDK, рекомендуем использовать AppName формата <nobr>`<Ник в GitHub>.<Название репозитория>`</nobr> — например,
+`user.tinkoffSDK`.
+
+## Рекомендации по тестированию методов
+
+Для тестирования работы T-Invest API можно использовать любой доступный gRPC-клиент.
+
+Ниже добавили краткие инструкции по настройке двух наиболее популярных клиентов — Kreya и BloomRPC, а также ссылку на
+гайд по настройке встроенного gRPC-клиента IntelliJ от энтузиаста.
+
+### Kreya
+
+Kreya — бесплатный gRPC-клиент с широким набором функционала и возможностей.
+
+[Скачать клиент](https://kreya.app/)
+
+1. После установки и запуска приложения в меню выберите **Project** → **Importers**.
+
+   <DocImage width={700} src="/img/invest/Kreya-1.png" />
+
+2. Нажмите **New importer**. Укажите название источника данных и его тип — **gRPC proto files**.
+
+   <DocImage width={700} src="/img/invest/Kreya-2.png" />
+
+3. Нажмите **Add proto directory** и укажите папку со скачанными proto-контрактами сервиса T-Invest API. Также можно нажать **Add proto files** и выбрать все proto-файлы из папки вручную.
+
+   <DocImage width={700} src="/img/invest/Kreya-3.png" />
+
+   [Скачать](https://opensource.tbank.ru/invest/invest-contracts/-/tree/master/src/docs/contracts) актуальную версию контрактов T-Invest API
+
+   :::caution
+   T-Invest API использует `google.api.field_behavior`\-нотацию к полям контрактов. 
+   Скачайте [field\_behavior.proto](https://github.com/googleapis/googleapis/blob/master/google/api/field_behavior.proto)
+   и сохраните его в папке `<contracts_dir>\google\api`, где `<contracts_dir>` — папка с контрактами T-Invest API. 
+   :::
+
+4. Сохраните изменения и нажмите **Back**.
+
+5. Выберите папку **Tinkoff** слева. Укажите endpoint сервиса — `https://invest-public-api.tbank.ru:443`.
+
+   Остальные настройки заполните как на скриншоте. В блоке **Metadata** нужно указать заголовок
+   `Authorization`, в значении которого передается строка `Bearer <токен доступа>`.
+
+   [Как получить токен](/invest/intro/intro/token#получить-токен)
+
+   <DocImage width={700} src="/img/invest/Kreya-4.png" />
+
+
+После этого можно выполнять запросы к сервису. 
+
+<DocImage width={700} src="/img/invest/Kreya-5.png" />
+
+В Kreya можно посмотреть служебные заголовки ответа сервера:
+
+*  **x-ratelimit-limit** — текущий лимит пользователя по данному методу;
+
+*  **x-ratelimit-remaining** — количество оставшихся запросов данного типа в минуту;
+
+*  **x-ratelimit-reset** — время в секундах до обнуления счетчика запросов.
+
+<DocImage width={700} src="/img/invest/Kreya-6.png" />
+
+#### Обновление proto-контрактов
+
+Чтобы получить доступ к новому функционалу, который появился после обновления версии, актуализируйте proto-контракты.
+
+Для этого заново скачайте [контракты](https://opensource.tbank.ru/invest/invest-contracts/-/tree/master/src/docs/contracts),
+замените скачанные файлы в папке проекта и нажмите **Run all importers** в левом верхнем углу приложения.
+Убедитесь, что все proto-контракты имеют актуальную версию.
+
+:::info
+Не храните бэкапы и копии контрактов в одной папке с актуальными.
+:::
+
+<img src="/img/invest/Kreya-update_contracts.png" width="650"/>
+
+
+:::caution
+Если вы получили ошибку `The referenced gRPC method is not imported`, убедитесь, что вы очистили проект в Kreya от прошлых загруженных контрактов.
+Всегда проверяйте путь до папки с загружаемыми контрактами, полное наличие всех proto-файлов и их соответствие [актуальной версии](https://opensource.tbank.ru/invest/invest-contracts/-/tree/master/src/docs/contracts) Т-Invest API.
+Изменение proto-файлов повлечет за собой ошибку их прочтения у gRPC-клиентов.
+:::
+
+### Встроенный gRPC-клиент IntelliJ
+
+[Инструкция — использование встроенного gRPC-клиента IntelliJ](https://github.com/Tinkoff/investAPI/issues/4)

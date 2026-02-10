@@ -1,0 +1,59 @@
+---
+sidebar_position: 3
+---
+
+# Коды ошибок
+
+Для REST-запросов в сервисе применяются типовые коды.
+
+[HTTP-коды ошибок](/invest/intro/developer/error-codes/http_errors)
+
+## Логические ошибки
+
+В сервисе автоследования ошибки, связанные с бизнес логикой, вынесены в код `422`. Ниже привели 
+наиболее распространенные случаи и причины их возникновения.
+
+| Код ошибки |  Текст ошибки                                        | Причины возникновения                                                                                                  |
+|------------|------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
+| 422        |  FRACTIONAL_SIGNAL_IN_PROGRESS                       | На данной стратегии имеется сигнал в процессе исполнения.                                                              |
+| 422        |  MARGIN_CALL_ON_ACTIVATE_SIGNAL                      | Недостаточно ГО. Требуемое ГО — 1%.                                                                                    |
+| 422        |  STRATEGY_NOT_FOUND_BY_ID                            | Не найдена стратегия.                                                                                                  |
+| 422        |  INCORRECT_STRATEGY_STATUS_FOR_TRADING               | По стратегии в данном статусе торги невозможны.                                                                        |
+| 422        |  CONTRACT_NOT_FOUND                                  | Не найден контракт.                                                                                                    |
+| 422        |  INCORRECT_CLIENT_ID                                 | Изменяемый портфель не принадлежит клиенту.                                                                            |
+| 422        |  PORTFOLIO_NOT_FOUND_BY_CONTRACT_AND_STRATEGY        | Отсутствуют данные о портфеле стратегии.                                                                               |
+| 422        |  INCORRECT_MASTER_PORTFOLIO_VERSION                  | Виртуальный портфель устарел.                                                                                          |
+| 422        |  INSTRUMENT_NOT_FOUND_IN_INSTRUMENT_CACHE            | Не найдены данные позиции.                                                                                             |
+| 422        |  EXCEEDED_THE_NUMBER_OF_DIGITS_IN_FRACTIONAL_PART    | Превышено максимально возможное количество знаков после запятой для дробного сигнала.                                  |
+| 422        |  NOT_INTEGER_NUMBER_OF_LOTS                          | Необходимо указать целое число лотов.                                                                                  |
+| 422        |  NOT_ENOUGH_MONEY_IN_PORTFOLIO_TO_INCREASE           | Недостаточно денег в портфеле для увеличения позиции.                                                                  |
+| 422        |  NOT_ENOUGH_ASSET_IN_THE_PORTFOLIO                   | Недостаточно актива в портфеле для уменьшения позиции.                                                                 |
+| 422        |  NOT_ENOUGH_MONEY_IN_PORTFOLIO_FOR_STAMP_DUTY        | Недостаточно денег в портфеле для совершения операции из-за оплаты гербового сбора.                                    |
+| 422        |  NOT_ENOUGH_MONEY_IN_PORTFOLIO_FOR_DEAL              | Недостаточно денег в портфеле для совершения сделки.                                                                   |
+| 422        |  INCORRECT_POSITION_FOR_STRATEGY                     | Не найдены необходимые данные по инструменту.                                                                          |
+| 422        |  NOT_AVAILABLE_FOR_IIS                               | Купить эту бумагу нельзя, так как ваша стратегия доступна на ИИС, а бумага не доступна на ИИС.                         |
+| 422        |  INCORRECT_CURRENCY                                  | Валюта инструмента не совпадает с валютой стратегии.                                                                   |
+| 422        |  POSITION_NOT_AVAILABLE_FOR_TRACKING                 | Данный инструмент не доступен для выставления сигнала.                                                                 |
+| 422        |  FUTURE_POSITION_DOESNT_CONTAINS_FUTURE_INSTRUMENT   | На стратегии недоступны фьючерсы.                                                                                      |
+| 422        |  INCORRECT_POSITION_CONCENTRATION                    | Превышен лимит концентрации по позиции.                                                                                |
+| 422        |  INCORRECT_DAILY_LIMIT                               | Превышен проторгованный объем за день.                                                                                 |
+| 422        |  EMPTY_ORDER_LIMITS                                  | Не найдены лимиты по позиции.                                                                                          |
+| 422        |  INCORRECT_ORDER_LIMIT                               | Превышен объем заявки.                                                                                                 |
+| 422        |  INCORRECT_ORDER_LIMIT_WITH_ADVICE_QUANTITY          | Превышен объем заявки. Попробуйте выставить меньше лотов.                                                              |
+| 422        |  INSUFFICIENT_INSTRUMENT_AMOUNT_IN_ORDER_BOOK        | Недостаточное количество инструмента в стакане.                                                                        |
+| 422        |  NOT_ALL_TESTS_PASS                                  | Для выставления сигнала по данной позиции требуется прохождение тестирования, которое не было указано под стратегией.  |
+| 422        |  STRATEGY_ACTION_IS_BLOCKED                          | Данный сигнал заблокирован.                                                                                            |
+| 422        |  INCORRECT_SIGNAL_PRICE                              | Цена больше не актуальна, обновите, пожалуйста, страницу.                                                              |
+| 422        |  EXCHANGE_POSITION_PRICE_FOR_CHECK_NOT_FOUND_IN_CACHE| Не удалось получить цену инструмента. Попробуйте позже.                                                                |
+| 422        |  INCORRECT_POSITION_FOR_STRATEGY                     | Не найдены необходимые данные по инструменту.                                                                          |
+| 422        |  INCORRECT_RISK_PROFILE                              | Риск-профиль инструмента превышает риск-профиль стратегии.                                                             |
+| 422        |  FUTURE_POSITION_INCORRECT_EXPIRATION_TS             | У фьючерса уже прошла экспирация.                                                                                      |
+| 422        |  TRADING_PLATFORM_NOT_AVAILABLE                      | Торговая площадка не работает.                                                                                         |
+| 422        |  TRADING_SCHEDULE_NOT_FOUND                          | Торговая площадка не работает.                                                                                         |
+| 422        |  TRADING_PLATFORM_DOES_NOT_WORK                      | Торговая площадка не работает.                                                                                         |
+| 422        |  EXCHANGE_POSITION_STATUS_IS_NOT_TRADING             | Торги по инструменту сейчас не проводятся.                                                                             |
+| 422        |  PAUSE_AFTER_BREAK_IS_NOT_OVER                       | Торги по инструменту возобновились недавно, необходимо выждать паузу.                                                  |
+| 422        |  NOT_ENOUGH_MONEY                                    | Недостаточно денег в портфеле для увеличения позиции.                                                                  |
+| 422        |  ACTION_BUY_FOR_MARGIN_CALL_SIGNAL                   | На стратегии наращивается позиция по маржин-коллу.                                                                     |
+| 422        |  MASTER_PORTFOLIO_WITH_THIS_VERSION_ALREADY_EXISTS   | Неактуальная версия виртуального портфеля для выставления сигнала.                                                     |
+| 422        |  SMALL_PORTFOLIO_TO_CALCULATE_CONCENTRATION_LIMIT    | Слишком маленький портфель для расчета лимита концентрации.                                                            |

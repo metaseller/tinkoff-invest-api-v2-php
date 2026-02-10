@@ -1,0 +1,10 @@
+---
+sidebar_position: 4
+---
+import { InstrumentsView } from './instruments-view'
+import BrowserOnly from "@docusaurus/BrowserOnly";
+
+# Фонды
+<BrowserOnly>
+    {() => <InstrumentsView instrumentType={'etf'}/>}
+</BrowserOnly>

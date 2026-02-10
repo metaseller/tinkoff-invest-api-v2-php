@@ -4,7 +4,7 @@ info:
   termsOfService: "https://www.tbank.ru/invest/disclaimers/basic-information/"
   contact:
     email: "invest-public-api@tbank.ru"
-  version: "1.43"
+  version: "1.44"
   license:
     name: "Apache 2.0"
     url: "https://www.apache.org/licenses/LICENSE-2.0"
@@ -43,7 +43,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1BondResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -107,7 +107,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "BondBy — получить облигацию по ее идентификатору"
       tags:
         - "InstrumentsService"
@@ -128,7 +128,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1BondsResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -192,7 +192,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "Bonds — список облигаций"
       tags:
         - "InstrumentsService"
@@ -213,7 +213,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1CreateFavoriteGroupResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -277,7 +277,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "CreateFavoriteGroup — создать новую группу избранных инструментов"
       tags:
         - "InstrumentsService"
@@ -298,7 +298,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1CurrenciesResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -362,7 +362,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "Currencies — список валют"
       tags:
         - "InstrumentsService"
@@ -383,7 +383,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1CurrencyResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -447,7 +447,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "CurrencyBy — получить валюту по ее идентификатору"
       tags:
         - "InstrumentsService"
@@ -467,7 +467,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1DeleteFavoriteGroupResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -531,7 +531,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "DeleteFavoriteGroup — удалить группу избранных инструментов"
       tags:
         - "InstrumentsService"
@@ -552,7 +552,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1EditFavoritesResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -616,7 +616,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "EditFavorites — отредактировать список избранных инструментов"
       tags:
         - "InstrumentsService"
@@ -637,7 +637,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1EtfResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -701,7 +701,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "EtfBy — получить инвестиционный фонд по его идентификатору"
       tags:
         - "InstrumentsService"
@@ -722,7 +722,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1EtfsResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -786,7 +786,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "Etfs — список инвестиционных фондов"
       tags:
         - "InstrumentsService"
@@ -807,7 +807,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1FindInstrumentResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -871,7 +871,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "FindInstrument — найти инструмент"
       tags:
         - "InstrumentsService"
@@ -892,7 +892,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1FutureResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -956,7 +956,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "FutureBy — получить фьючерс по его идентификатору"
       tags:
         - "InstrumentsService"
@@ -977,7 +977,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1FuturesResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -1041,7 +1041,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "Futures — список фьючерсов"
       tags:
         - "InstrumentsService"
@@ -1062,7 +1062,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetAccruedInterestsResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -1126,7 +1126,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetAccruedInterests — накопленный купонный доход по облигации"
       tags:
         - "InstrumentsService"
@@ -1147,7 +1147,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1AssetResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -1211,7 +1211,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetAssetBy — получить актив по его идентификатору"
       tags:
         - "InstrumentsService"
@@ -1231,7 +1231,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetAssetFundamentalsResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -1295,7 +1295,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetAssetFundamentals — фундаментальные показатели по активу"
       tags:
         - "InstrumentsService"
@@ -1315,7 +1315,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetAssetReportsResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -1379,7 +1379,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetAssetReports — расписания выхода отчетностей эмитентов"
       tags:
         - "InstrumentsService"
@@ -1400,7 +1400,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1AssetsResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -1464,7 +1464,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetAssets — список активов"
       tags:
         - "InstrumentsService"
@@ -1486,7 +1486,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetBondCouponsResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -1550,7 +1550,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetBondCoupons — график выплат купонов по облигации"
       tags:
         - "InstrumentsService"
@@ -1571,7 +1571,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetBondEventsResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -1635,7 +1635,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetBondEvents — события по облигации"
       tags:
         - "InstrumentsService"
@@ -1656,7 +1656,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1Brand"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -1720,7 +1720,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetBrandBy — получить бренд по его идентификатору"
       tags:
         - "InstrumentsService"
@@ -1741,7 +1741,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetBrandsResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -1805,7 +1805,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetBrands — список брендов"
       tags:
         - "InstrumentsService"
@@ -1825,7 +1825,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetConsensusForecastsResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -1889,7 +1889,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetConsensusForecasts — мнения аналитиков по инструменту"
       tags:
         - "InstrumentsService"
@@ -1910,7 +1910,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetCountriesResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -1974,7 +1974,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetCountries — список стран"
       tags:
         - "InstrumentsService"
@@ -1995,7 +1995,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetDividendsResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -2059,7 +2059,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetDividends — события выплаты дивидендов по инструменту"
       tags:
         - "InstrumentsService"
@@ -2079,7 +2079,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetFavoriteGroupsResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -2143,7 +2143,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetFavoriteGroups — список групп избранных инструментов"
       tags:
         - "InstrumentsService"
@@ -2164,7 +2164,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetFavoritesResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -2228,7 +2228,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetFavorites — получить список избранных инструментов"
       tags:
         - "InstrumentsService"
@@ -2249,7 +2249,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetForecastResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -2313,7 +2313,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetForecastBy — прогнозы инвестдомов по инструменту"
       tags:
         - "InstrumentsService"
@@ -2333,7 +2333,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetFuturesMarginResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -2397,7 +2397,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetFuturesMargin — размера гарантийного обеспечения по фьючерсам"
       tags:
         - "InstrumentsService"
@@ -2417,7 +2417,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetInsiderDealsResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -2481,7 +2481,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetInsiderDeals —  сделки инсайдеров по инструментам"
       tags:
         - "InstrumentsService"
@@ -2502,7 +2502,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1InstrumentResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -2566,7 +2566,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetInstrumentBy — основная информация об инструменте"
       tags:
         - "InstrumentsService"
@@ -2586,7 +2586,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1RiskRatesResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -2650,7 +2650,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetRiskRates — ставки риска по инструменту"
       tags:
         - "InstrumentsService"
@@ -2670,7 +2670,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1IndicativesResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -2734,7 +2734,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "Indicatives — индикативные инструменты — индексы, товары и другие"
       tags:
         - "InstrumentsService"
@@ -2755,7 +2755,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1OptionResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -2819,7 +2819,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "OptionBy — получить опцион по его идентификатору"
       tags:
         - "InstrumentsService"
@@ -2840,7 +2840,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1OptionsResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -2904,7 +2904,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "Deprecated Options — список опционов"
       tags:
         - "InstrumentsService"
@@ -2925,7 +2925,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1OptionsResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -2989,7 +2989,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "OptionsBy — список опционов"
       tags:
         - "InstrumentsService"
@@ -3010,7 +3010,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1ShareResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -3074,7 +3074,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "ShareBy — получить акцию по ее идентификатору"
       tags:
         - "InstrumentsService"
@@ -3095,7 +3095,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1SharesResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -3159,7 +3159,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "Shares — список акций"
       tags:
         - "InstrumentsService"
@@ -3180,7 +3180,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1StructuredNoteResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -3244,7 +3244,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "StructuredNoteBy — получить структурную ноту по ее идентификатору"
       tags:
         - "InstrumentsService"
@@ -3265,7 +3265,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1StructuredNotesResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -3329,7 +3329,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "StructuredNotes — список структурных нот"
       tags:
         - "InstrumentsService"
@@ -3350,7 +3350,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1TradingSchedulesResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -3414,7 +3414,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "TradingSchedules — расписания торговых площадок"
       tags:
         - "InstrumentsService"
@@ -3435,7 +3435,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetCandlesResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -3499,7 +3499,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetCandles — исторические свечи по инструменту"
       tags:
         - "MarketDataService"
@@ -3520,7 +3520,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetClosePricesResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -3584,7 +3584,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetClosePrices — цены закрытия торговой сессии по инструментам"
       tags:
         - "MarketDataService"
@@ -3605,7 +3605,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetLastPricesResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -3669,7 +3669,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetLastPrices — цены последних сделок по инструментам"
       tags:
         - "MarketDataService"
@@ -3690,7 +3690,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetLastTradesResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -3754,7 +3754,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetLastTrades — обезличенные сделки"
       tags:
         - "MarketDataService"
@@ -3775,7 +3775,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetMarketValuesResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -3839,7 +3839,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetMarketValues — рыночные данные по инструментам"
       tags:
         - "MarketDataService"
@@ -3860,7 +3860,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetOrderBookResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -3924,7 +3924,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetOrderBook — стакан по инструменту"
       tags:
         - "MarketDataService"
@@ -3944,7 +3944,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetTechAnalysisResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -4008,7 +4008,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetTechAnalysis — технические индикаторы по инструменту"
       tags:
         - "MarketDataService"
@@ -4029,7 +4029,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetTradingStatusResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -4093,7 +4093,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetTradingStatus — статус торгов по инструменту"
       tags:
         - "MarketDataService"
@@ -4114,7 +4114,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetTradingStatusesResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -4178,7 +4178,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetTradingStatuses — статус торгов по инструментам"
       tags:
         - "MarketDataService"
@@ -4198,7 +4198,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Stream_result_of_v1MarketDataResponse"
-          description: "A successful response.(streaming responses)"
+          description: "A successful response(streaming responses)"
         "400":
           description: "Bad Request"
           content:
@@ -4262,7 +4262,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "MarketDataServerSideStream — server-side стрим предоставления биржевой информации"
       tags:
         - "MarketDataStreamService"
@@ -4283,7 +4283,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Stream_result_of_v1MarketDataResponse"
-          description: "A successful response.(streaming responses)"
+          description: "A successful response(streaming responses)"
         "400":
           description: "Bad Request"
           content:
@@ -4347,7 +4347,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "MarketDataStream — bidirectional стрим предоставления биржевой информации"
       tags:
         - "MarketDataStreamService"
@@ -4367,7 +4367,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1BrokerReportResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -4431,7 +4431,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetBrokerReport — брокерский отчет."
       tags:
         - "OperationsService"
@@ -4451,7 +4451,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetDividendsForeignIssuerResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -4515,7 +4515,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetDividendsForeignIssuer — отчет «Справка о доходах за пределами РФ»"
       tags:
         - "OperationsService"
@@ -4536,7 +4536,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1OperationsResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -4600,7 +4600,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetOperations — список операций по счету"
       tags:
         - "OperationsService"
@@ -4622,7 +4622,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetOperationsByCursorResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -4686,7 +4686,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetOperationsByCursor — список операций по счету с пагинацией"
       tags:
         - "OperationsService"
@@ -4708,7 +4708,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1PortfolioResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -4772,7 +4772,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetPortfolio — портфель по счету"
       tags:
         - "OperationsService"
@@ -4793,7 +4793,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1PositionsResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -4857,7 +4857,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetPositions — список позиций по счету"
       tags:
         - "OperationsService"
@@ -4878,7 +4878,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1WithdrawLimitsResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -4942,10 +4942,95 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetWithdrawLimits — доступный остаток для вывода средств"
       tags:
         - "OperationsService"
+      x-codegen-request-body-name: "body"
+  /tinkoff.public.invest.api.contract.v1.OperationsStreamService/OperationsStream:
+    post:
+      operationId: "OperationsStreamService_OperationsStream"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/v1OperationsStreamRequest"
+        description: "Запрос установки stream-соединения операций."
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Stream_result_of_v1OperationsStreamResponse"
+          description: "A successful response(streaming responses)"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: "#/components/schemas/ErrorResponse"
+              example:
+                code: 3
+                message: "interval is invalid"
+                description: 30011
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: "#/components/schemas/ErrorResponse"
+              example:
+                code: 16
+                message: "authentication token is missing or invalid"
+                description: 40003
+        "403":
+          description: "Forbidden"
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: "#/components/schemas/ErrorResponse"
+              example:
+                code: 7
+                message: "insufficient privileges"
+                description: 40002
+        "404":
+          description: "Not Found"
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: "#/components/schemas/ErrorResponse"
+              example:
+                code: 5
+                message: "account not found"
+                description: 50004
+        "408":
+          description: "Request Timeout"
+        "415":
+          description: "Unsupported Media Type"
+        "429":
+          description: "Too Many Requests"
+        "500":
+          description: "Internal Server Error"
+        "501":
+          description: "Not Implemented"
+        "503":
+          description: "Service Unavailable"
+        "504":
+          description: "Gateway Timeout"
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/rpcStatus"
+          description: "An unexpected error response"
+      summary: "OperationsStream — стрим обновлений операций"
+      tags:
+        - "OperationsStreamService"
       x-codegen-request-body-name: "body"
   /tinkoff.public.invest.api.contract.v1.OperationsStreamService/PortfolioStream:
     post:
@@ -4963,7 +5048,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Stream_result_of_v1PortfolioStreamResponse"
-          description: "A successful response.(streaming responses)"
+          description: "A successful response(streaming responses)"
         "400":
           description: "Bad Request"
           content:
@@ -5027,7 +5112,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "PortfolioStream — стрим обновлений портфеля"
       tags:
         - "OperationsStreamService"
@@ -5048,7 +5133,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Stream_result_of_v1PositionsStreamResponse"
-          description: "A successful response.(streaming responses)"
+          description: "A successful response(streaming responses)"
         "400":
           description: "Bad Request"
           content:
@@ -5112,7 +5197,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "PositionsStream — стрим обновлений информации по изменению позиций портфеля"
       tags:
         - "OperationsStreamService"
@@ -5133,7 +5218,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1CancelOrderResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -5197,7 +5282,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "CancelOrder — отменить заявку"
       tags:
         - "OrdersService"
@@ -5218,7 +5303,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetMaxLotsResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -5282,7 +5367,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetMaxLots — расчет количества доступных для покупки/продажи лотов"
       tags:
         - "OrdersService"
@@ -5302,7 +5387,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetOrderPriceResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -5366,7 +5451,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetOrderPrice — получить предварительную стоимость для лимитной заявки"
       tags:
         - "OrdersService"
@@ -5387,7 +5472,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/contractv1OrderState"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -5451,7 +5536,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetOrderState — получить статус торгового поручения"
       tags:
         - "OrdersService"
@@ -5472,7 +5557,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetOrdersResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -5536,7 +5621,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetOrders — получить список активных заявок по счету"
       tags:
         - "OrdersService"
@@ -5557,7 +5642,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1PostOrderResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -5621,7 +5706,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "PostOrder — выставить заявку"
       tags:
         - "OrdersService"
@@ -5642,7 +5727,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1PostOrderAsyncResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -5706,7 +5791,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "PostOrderAsync — выставить заявку асинхронным методом"
       tags:
         - "OrdersService"
@@ -5728,7 +5813,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1PostOrderResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -5792,7 +5877,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "ReplaceOrder — изменить выставленную заявку"
       tags:
         - "OrdersService"
@@ -5812,7 +5897,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Stream_result_of_v1OrderStateStreamResponse"
-          description: "A successful response.(streaming responses)"
+          description: "A successful response(streaming responses)"
         "400":
           description: "Bad Request"
           content:
@@ -5876,7 +5961,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "OrderStateStream — стрим поручений пользователя"
       tags:
         - "OrdersStreamService"
@@ -5898,7 +5983,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Stream_result_of_v1TradesStreamResponse"
-          description: "A successful response.(streaming responses)"
+          description: "A successful response(streaming responses)"
         "400":
           description: "Bad Request"
           content:
@@ -5962,7 +6047,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "TradesStream — стрим сделок пользователя"
       tags:
         - "OrdersStreamService"
@@ -5983,7 +6068,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1CancelOrderResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -6047,7 +6132,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "CancelSandboxOrder — отменить заявку"
       tags:
         - "SandboxService"
@@ -6068,7 +6153,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1CancelStopOrderResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -6132,7 +6217,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "CancelSandboxStopOrder — отменить стоп-заявку"
       tags:
         - "SandboxService"
@@ -6153,7 +6238,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1CloseSandboxAccountResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -6217,7 +6302,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "CloseSandboxAccount — закрыть счет"
       tags:
         - "SandboxService"
@@ -6238,7 +6323,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetAccountsResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -6302,7 +6387,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetSandboxAccounts — счета пользователя"
       tags:
         - "SandboxService"
@@ -6323,7 +6408,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetMaxLotsResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -6387,7 +6472,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetSandboxMaxLots — расчет количества доступных для покупки/продажи лотов"
       tags:
         - "SandboxService"
@@ -6408,7 +6493,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1OperationsResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -6472,7 +6557,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetSandboxOperations — список операций по счету"
       tags:
         - "SandboxService"
@@ -6494,7 +6579,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetOperationsByCursorResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -6558,7 +6643,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetSandboxOperationsByCursor — список операций по счету с пагинацией"
       tags:
         - "SandboxService"
@@ -6579,7 +6664,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetOrderPriceResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -6643,7 +6728,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetSandboxOrderPrice — получить предварительную стоимость для лимитной заявки"
       tags:
         - "SandboxService"
@@ -6664,7 +6749,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/contractv1OrderState"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -6728,7 +6813,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetSandboxOrderState — получить статус торгового поручения"
       tags:
         - "SandboxService"
@@ -6749,7 +6834,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetOrdersResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -6813,7 +6898,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetSandboxOrders — получить список активных заявок по счету"
       tags:
         - "SandboxService"
@@ -6834,7 +6919,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1PortfolioResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -6898,7 +6983,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetSandboxPortfolio — портфель по счету"
       tags:
         - "SandboxService"
@@ -6919,7 +7004,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1PositionsResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -6983,7 +7068,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetSandboxPositions — список позиций по счету"
       tags:
         - "SandboxService"
@@ -7004,7 +7089,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetStopOrdersResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -7068,7 +7153,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetSandboxStopOrders — получить список активных стоп-заявок по счету"
       tags:
         - "SandboxService"
@@ -7089,7 +7174,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1WithdrawLimitsResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -7153,7 +7238,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetSandboxWithdrawLimits — доступный остаток для вывода средств"
       tags:
         - "SandboxService"
@@ -7174,7 +7259,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1OpenSandboxAccountResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -7238,7 +7323,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "OpenSandboxAccount — зарегистрировать счет"
       tags:
         - "SandboxService"
@@ -7259,7 +7344,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1PostOrderResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -7323,7 +7408,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "PostSandboxOrder — выставить заявку"
       tags:
         - "SandboxService"
@@ -7344,7 +7429,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1PostOrderAsyncResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -7408,7 +7493,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "PostSandboxOrderAsync — выставить заявку асинхронным методом"
       tags:
         - "SandboxService"
@@ -7430,7 +7515,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1PostStopOrderResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -7494,7 +7579,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "PostSandboxStopOrder — выставить стоп-заявку"
       tags:
         - "SandboxService"
@@ -7515,7 +7600,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1PostOrderResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -7579,7 +7664,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "ReplaceSandboxOrder — изменить выставленную заявку"
       tags:
         - "SandboxService"
@@ -7600,7 +7685,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1SandboxPayInResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -7664,7 +7749,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "SandboxPayIn — пополнить счет."
       tags:
         - "SandboxService"
@@ -7685,7 +7770,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetSignalsResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -7749,7 +7834,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetSignals — сигналы"
       tags:
         - "SignalService"
@@ -7770,7 +7855,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetStrategiesResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -7834,7 +7919,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetStrategies — стратегии"
       tags:
         - "SignalService"
@@ -7855,7 +7940,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1CancelStopOrderResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -7919,7 +8004,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "CancelStopOrder — отменить стоп-заявку"
       tags:
         - "StopOrdersService"
@@ -7940,7 +8025,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetStopOrdersResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -8004,7 +8089,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetStopOrders — получить список активных стоп-заявок по счету"
       tags:
         - "StopOrdersService"
@@ -8025,7 +8110,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1PostStopOrderResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -8089,7 +8174,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "PostStopOrder — выставить стоп-заявку"
       tags:
         - "StopOrdersService"
@@ -8109,7 +8194,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1CurrencyTransferResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -8173,7 +8258,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "CurrencyTransfer — перевод денежных средств между счетами"
       tags:
         - "UsersService"
@@ -8195,7 +8280,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetAccountsResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -8259,7 +8344,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetAccounts — счета пользователя"
       tags:
         - "UsersService"
@@ -8281,7 +8366,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetBankAccountsResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -8345,7 +8430,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetBankAccounts — банковские счета пользователя"
       tags:
         - "UsersService"
@@ -8367,7 +8452,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetInfoResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -8431,7 +8516,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetInfo — информация о пользователе"
       tags:
         - "UsersService"
@@ -8453,7 +8538,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetMarginAttributesResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -8517,7 +8602,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetMarginAttributes — маржинальные показатели по счeту"
       tags:
         - "UsersService"
@@ -8539,7 +8624,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/v1GetUserTariffResponse"
-          description: "A successful response."
+          description: "A successful response"
         "400":
           description: "Bad Request"
           content:
@@ -8603,12 +8688,97 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/rpcStatus"
-          description: "An unexpected error response."
+          description: "An unexpected error response"
       summary: "GetUserTariff — тариф пользователя"
       tags:
         - "UsersService"
       x-codegen-request-body-name: "body"
       description: "Получить информацию о текущих лимитах на подклчение, согласно текущему тарифу пользователя."
+  /tinkoff.public.invest.api.contract.v1.UsersService/PayIn:
+    post:
+      operationId: "UsersService_PayIn"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/v1PayInRequest"
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/v1PayInResponse"
+          description: "A successful response"
+        "400":
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: "#/components/schemas/ErrorResponse"
+              example:
+                code: 3
+                message: "interval is invalid"
+                description: 30011
+        "401":
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: "#/components/schemas/ErrorResponse"
+              example:
+                code: 16
+                message: "authentication token is missing or invalid"
+                description: 40003
+        "403":
+          description: "Forbidden"
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: "#/components/schemas/ErrorResponse"
+              example:
+                code: 7
+                message: "insufficient privileges"
+                description: 40002
+        "404":
+          description: "Not Found"
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: "#/components/schemas/ErrorResponse"
+              example:
+                code: 5
+                message: "account not found"
+                description: 50004
+        "408":
+          description: "Request Timeout"
+        "415":
+          description: "Unsupported Media Type"
+        "429":
+          description: "Too Many Requests"
+        "500":
+          description: "Internal Server Error"
+        "501":
+          description: "Not Implemented"
+        "503":
+          description: "Service Unavailable"
+        "504":
+          description: "Gateway Timeout"
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/rpcStatus"
+          description: "An unexpected error response"
+      summary: "PayIn — пополнение брокерского счета"
+      tags:
+        - "UsersService"
+      x-codegen-request-body-name: "body"
+      description: "Пополнить брокерский счёт с банковского"
 components:
   schemas:
     GetAssetFundamentalsResponseStatisticResponse:
@@ -12293,7 +12463,8 @@ components:
       description: "Данные по валютам."
       example:
         instruments:
-          - isoCurrencyName: "isoCurrencyName"
+          - assetUid: "assetUid"
+            isoCurrencyName: "isoCurrencyName"
             figi: "figi"
             dshortMin:
               nano: 6
@@ -12355,7 +12526,8 @@ components:
             exchange: "exchange"
             countryOfRiskName: "countryOfRiskName"
             isin: "isin"
-          - isoCurrencyName: "isoCurrencyName"
+          - assetUid: "assetUid"
+            isoCurrencyName: "isoCurrencyName"
             figi: "figi"
             dshortMin:
               nano: 6
@@ -12427,6 +12599,7 @@ components:
     v1Currency:
       description: "Объект передачи информации о валюте."
       example:
+        assetUid: "assetUid"
         isoCurrencyName: "isoCurrencyName"
         figi: "figi"
         dshortMin:
@@ -12570,6 +12743,9 @@ components:
           items:
             type: "string"
           type: "array"
+        assetUid:
+          description: "Уникальный идентификатор актива."
+          type: "string"
         forIisFlag:
           description: "Признак доступности для ИИС."
           type: "boolean"
@@ -12601,6 +12777,7 @@ components:
       description: "Данные по валюте."
       example:
         instrument:
+          assetUid: "assetUid"
           isoCurrencyName: "isoCurrencyName"
           figi: "figi"
           dshortMin:
@@ -13378,6 +13555,9 @@ components:
           type: "string"
         basicAssetPositionUid:
           description: "Идентификатор позиции базового актива опциона."
+          type: "string"
+        basicInstrumentId:
+          description: "Идентификатор базового инструмента, принимает значение принимает значения figi, instrument_uid или ticker+\"_\"+classCode."
           type: "string"
       type: "object"
     v1FindInstrumentRequest:
@@ -17674,6 +17854,68 @@ components:
             $ref: "#/components/schemas/v1ChildOperationItem"
           type: "array"
       type: "object"
+    v1OperationData:
+      description: "Данные об операции."
+      example:
+        date: 2000-01-23T04:56:07.000Z
+        classCode: "classCode"
+        brokerAccountId: "brokerAccountId"
+        instrumentType: "instrumentType"
+        ticker: "ticker"
+        parentOperationId: "parentOperationId"
+        positionUid: "positionUid"
+        figi: "figi"
+        instrumentUid: "instrumentUid"
+        name: "name"
+        payment:
+          nano: 5
+          currency: "currency"
+          units: "units"
+        id: "id"
+      properties:
+        brokerAccountId:
+          description: "Идентификатор счета."
+          type: "string"
+        id:
+          description: "Номер поручения."
+          type: "string"
+        parentOperationId:
+          description: "Номер родительского поручения."
+          type: "string"
+        name:
+          description: "Название инструмента."
+          type: "string"
+        date:
+          description: "Дата."
+          format: "date-time"
+          type: "string"
+        type:
+          $ref: "#/components/schemas/v1OperationType"
+        state:
+          $ref: "#/components/schemas/v1OperationState"
+        instrumentUid:
+          description: "Уникальный идентификатор инструмента."
+          type: "string"
+        figi:
+          description: "FIGI-идентификатор инструмента."
+          type: "string"
+        instrumentType:
+          description: "Тип инструмента."
+          type: "string"
+        instrumentKind:
+          $ref: "#/components/schemas/v1InstrumentType"
+        positionUid:
+          description: "Идентификатор позиции."
+          type: "string"
+        ticker:
+          description: "Тикер инструмента."
+          type: "string"
+        classCode:
+          description: "Класс-код (секция торгов)."
+          type: "string"
+        payment:
+          $ref: "#/components/schemas/v1MoneyValue"
+      type: "object"
     v1OperationItem:
       description: "Данные об операции."
       example:
@@ -17959,7 +18201,7 @@ components:
       type: "object"
     v1OperationType:
       default: "OPERATION_TYPE_UNSPECIFIED"
-      description: "Тип операции.\n\n - OPERATION_TYPE_UNSPECIFIED: Тип операции не определен.\n - OPERATION_TYPE_INPUT: Пополнение брокерского счета.\n - OPERATION_TYPE_BOND_TAX: Удержание НДФЛ по купонам.\n - OPERATION_TYPE_OUTPUT_SECURITIES: Вывод ЦБ.\n - OPERATION_TYPE_OVERNIGHT: Доход по сделке РЕПО овернайт.\n - OPERATION_TYPE_TAX: Удержание налога.\n - OPERATION_TYPE_BOND_REPAYMENT_FULL: Полное погашение облигаций.\n - OPERATION_TYPE_SELL_CARD: Продажа ЦБ с карты.\n - OPERATION_TYPE_DIVIDEND_TAX: Удержание налога по дивидендам.\n - OPERATION_TYPE_OUTPUT: Вывод денежных средств.\n - OPERATION_TYPE_BOND_REPAYMENT: Частичное погашение облигаций.\n - OPERATION_TYPE_TAX_CORRECTION: Корректировка налога.\n - OPERATION_TYPE_SERVICE_FEE: Удержание комиссии за обслуживание брокерского счета.\n - OPERATION_TYPE_BENEFIT_TAX: Удержание налога за материальную выгоду.\n - OPERATION_TYPE_MARGIN_FEE: Удержание комиссии за непокрытую позицию.\n - OPERATION_TYPE_BUY: Покупка ЦБ.\n - OPERATION_TYPE_BUY_CARD: Покупка ЦБ с карты.\n - OPERATION_TYPE_INPUT_SECURITIES: Перевод ценных бумаг из другого депозитария.\n - OPERATION_TYPE_SELL_MARGIN: Продажа в результате Margin-call.\n - OPERATION_TYPE_BROKER_FEE: Удержание комиссии за операцию.\n - OPERATION_TYPE_BUY_MARGIN: Покупка в результате Margin-call.\n - OPERATION_TYPE_DIVIDEND: Выплата дивидендов.\n - OPERATION_TYPE_SELL: Продажа ЦБ.\n - OPERATION_TYPE_COUPON: Выплата купонов.\n - OPERATION_TYPE_SUCCESS_FEE: Удержание комиссии SuccessFee.\n - OPERATION_TYPE_DIVIDEND_TRANSFER: Передача дивидендного дохода.\n - OPERATION_TYPE_ACCRUING_VARMARGIN: Зачисление вариационной маржи.\n - OPERATION_TYPE_WRITING_OFF_VARMARGIN: Списание вариационной маржи.\n - OPERATION_TYPE_DELIVERY_BUY: Покупка в рамках экспирации фьючерсного контракта.\n - OPERATION_TYPE_DELIVERY_SELL: Продажа в рамках экспирации фьючерсного контракта.\n - OPERATION_TYPE_TRACK_MFEE: Комиссия за управление по счету автоследования.\n - OPERATION_TYPE_TRACK_PFEE: Комиссия за результат по счету автоследования.\n - OPERATION_TYPE_TAX_PROGRESSIVE: Удержание налога по ставке 15%.\n - OPERATION_TYPE_BOND_TAX_PROGRESSIVE: Удержание налога по купонам по ставке 15%.\n - OPERATION_TYPE_DIVIDEND_TAX_PROGRESSIVE: Удержание налога по дивидендам по ставке 15%.\n - OPERATION_TYPE_BENEFIT_TAX_PROGRESSIVE: Удержание налога за материальную выгоду по ставке 15%.\n - OPERATION_TYPE_TAX_CORRECTION_PROGRESSIVE: Корректировка налога по ставке 15%.\n - OPERATION_TYPE_TAX_REPO_PROGRESSIVE: Удержание налога за возмещение по сделкам РЕПО по ставке 15%.\n - OPERATION_TYPE_TAX_REPO: Удержание налога за возмещение по сделкам РЕПО.\n - OPERATION_TYPE_TAX_REPO_HOLD: Удержание налога по сделкам РЕПО.\n - OPERATION_TYPE_TAX_REPO_REFUND: Возврат налога по сделкам РЕПО.\n - OPERATION_TYPE_TAX_REPO_HOLD_PROGRESSIVE: Удержание налога по сделкам РЕПО по ставке 15%.\n - OPERATION_TYPE_TAX_REPO_REFUND_PROGRESSIVE: Возврат налога по сделкам РЕПО по ставке 15%.\n - OPERATION_TYPE_DIV_EXT: Выплата дивидендов на карту.\n - OPERATION_TYPE_TAX_CORRECTION_COUPON: Корректировка налога по купонам.\n - OPERATION_TYPE_CASH_FEE: Комиссия за валютный остаток.\n - OPERATION_TYPE_OUT_FEE: Комиссия за вывод валюты с брокерского счета.\n - OPERATION_TYPE_OUT_STAMP_DUTY: Гербовый сбор.\n - OPERATION_TYPE_OUTPUT_SWIFT: SWIFT-перевод.\n - OPERATION_TYPE_INPUT_SWIFT: SWIFT-перевод.\n - OPERATION_TYPE_OUTPUT_ACQUIRING: Перевод на карту.\n - OPERATION_TYPE_INPUT_ACQUIRING: Перевод с карты.\n - OPERATION_TYPE_OUTPUT_PENALTY: Комиссия за вывод средств.\n - OPERATION_TYPE_ADVICE_FEE: Списание оплаты за сервис Советов.\n - OPERATION_TYPE_TRANS_IIS_BS: Перевод ценных бумаг с ИИС на брокерский счет.\n - OPERATION_TYPE_TRANS_BS_BS: Перевод ценных бумаг с одного брокерского счета на другой.\n - OPERATION_TYPE_OUT_MULTI: Вывод денежных средств со счета.\n - OPERATION_TYPE_INP_MULTI: Пополнение денежных средств со счета.\n - OPERATION_TYPE_OVER_PLACEMENT: Размещение биржевого овернайта.\n - OPERATION_TYPE_OVER_COM: Списание комиссии.\n - OPERATION_TYPE_OVER_INCOME: Доход от оверанайта.\n - OPERATION_TYPE_OPTION_EXPIRATION: Экспирация опциона.\n - OPERATION_TYPE_FUTURE_EXPIRATION: Экспирация фьючерса."
+      description: "Тип операции.\n\n - OPERATION_TYPE_UNSPECIFIED: Тип операции не определен.\n - OPERATION_TYPE_INPUT: Пополнение брокерского счета.\n - OPERATION_TYPE_BOND_TAX: Удержание НДФЛ по купонам.\n - OPERATION_TYPE_OUTPUT_SECURITIES: Вывод ЦБ.\n - OPERATION_TYPE_OVERNIGHT: Доход по сделке РЕПО овернайт.\n - OPERATION_TYPE_TAX: Удержание налога.\n - OPERATION_TYPE_BOND_REPAYMENT_FULL: Полное погашение облигаций.\n - OPERATION_TYPE_SELL_CARD: Продажа ЦБ с карты.\n - OPERATION_TYPE_DIVIDEND_TAX: Удержание налога по дивидендам.\n - OPERATION_TYPE_OUTPUT: Вывод денежных средств.\n - OPERATION_TYPE_BOND_REPAYMENT: Частичное погашение облигаций.\n - OPERATION_TYPE_TAX_CORRECTION: Корректировка налога.\n - OPERATION_TYPE_SERVICE_FEE: Удержание комиссии за обслуживание брокерского счета.\n - OPERATION_TYPE_BENEFIT_TAX: Удержание налога за материальную выгоду.\n - OPERATION_TYPE_MARGIN_FEE: Удержание комиссии за непокрытую позицию.\n - OPERATION_TYPE_BUY: Покупка ЦБ.\n - OPERATION_TYPE_BUY_CARD: Покупка ЦБ с карты.\n - OPERATION_TYPE_INPUT_SECURITIES: Перевод ценных бумаг из другого депозитария.\n - OPERATION_TYPE_SELL_MARGIN: Продажа в результате Margin-call.\n - OPERATION_TYPE_BROKER_FEE: Удержание комиссии за операцию.\n - OPERATION_TYPE_BUY_MARGIN: Покупка в результате Margin-call.\n - OPERATION_TYPE_DIVIDEND: Выплата дивидендов.\n - OPERATION_TYPE_SELL: Продажа ЦБ.\n - OPERATION_TYPE_COUPON: Выплата купонов.\n - OPERATION_TYPE_SUCCESS_FEE: Удержание комиссии SuccessFee.\n - OPERATION_TYPE_DIVIDEND_TRANSFER: Передача дивидендного дохода.\n - OPERATION_TYPE_ACCRUING_VARMARGIN: Зачисление вариационной маржи.\n - OPERATION_TYPE_WRITING_OFF_VARMARGIN: Списание вариационной маржи.\n - OPERATION_TYPE_DELIVERY_BUY: Покупка в рамках экспирации фьючерсного контракта.\n - OPERATION_TYPE_DELIVERY_SELL: Продажа в рамках экспирации фьючерсного контракта.\n - OPERATION_TYPE_TRACK_MFEE: Комиссия за управление по счету автоследования.\n - OPERATION_TYPE_TRACK_PFEE: Комиссия за результат по счету автоследования.\n - OPERATION_TYPE_TAX_PROGRESSIVE: Удержание налога по ставке 15%.\n - OPERATION_TYPE_BOND_TAX_PROGRESSIVE: Удержание налога по купонам по ставке 15%.\n - OPERATION_TYPE_DIVIDEND_TAX_PROGRESSIVE: Удержание налога по дивидендам по ставке 15%.\n - OPERATION_TYPE_BENEFIT_TAX_PROGRESSIVE: Удержание налога за материальную выгоду по ставке 15%.\n - OPERATION_TYPE_TAX_CORRECTION_PROGRESSIVE: Корректировка налога по ставке 15%.\n - OPERATION_TYPE_TAX_REPO_PROGRESSIVE: Удержание налога за возмещение по сделкам РЕПО по ставке 15%.\n - OPERATION_TYPE_TAX_REPO: Удержание налога за возмещение по сделкам РЕПО.\n - OPERATION_TYPE_TAX_REPO_HOLD: Удержание налога по сделкам РЕПО.\n - OPERATION_TYPE_TAX_REPO_REFUND: Возврат налога по сделкам РЕПО.\n - OPERATION_TYPE_TAX_REPO_HOLD_PROGRESSIVE: Удержание налога по сделкам РЕПО по ставке 15%.\n - OPERATION_TYPE_TAX_REPO_REFUND_PROGRESSIVE: Возврат налога по сделкам РЕПО по ставке 15%.\n - OPERATION_TYPE_DIV_EXT: Выплата дивидендов на карту.\n - OPERATION_TYPE_TAX_CORRECTION_COUPON: Корректировка налога по купонам.\n - OPERATION_TYPE_CASH_FEE: Комиссия за валютный остаток.\n - OPERATION_TYPE_OUT_FEE: Комиссия за вывод валюты с брокерского счета.\n - OPERATION_TYPE_OUT_STAMP_DUTY: Гербовый сбор.\n - OPERATION_TYPE_OUTPUT_SWIFT: SWIFT-перевод.\n - OPERATION_TYPE_INPUT_SWIFT: SWIFT-перевод.\n - OPERATION_TYPE_OUTPUT_ACQUIRING: Перевод на карту.\n - OPERATION_TYPE_INPUT_ACQUIRING: Перевод с карты.\n - OPERATION_TYPE_OUTPUT_PENALTY: Комиссия за вывод средств.\n - OPERATION_TYPE_ADVICE_FEE: Списание оплаты за сервис Советов.\n - OPERATION_TYPE_TRANS_IIS_BS: Перевод ценных бумаг с ИИС на брокерский счет.\n - OPERATION_TYPE_TRANS_BS_BS: Перевод ценных бумаг с одного брокерского счета на другой.\n - OPERATION_TYPE_OUT_MULTI: Вывод денежных средств со счета.\n - OPERATION_TYPE_INP_MULTI: Пополнение денежных средств со счета.\n - OPERATION_TYPE_OVER_PLACEMENT: Размещение биржевого овернайта.\n - OPERATION_TYPE_OVER_COM: Списание комиссии.\n - OPERATION_TYPE_OVER_INCOME: Доход от оверанайта.\n - OPERATION_TYPE_OPTION_EXPIRATION: Экспирация опциона.\n - OPERATION_TYPE_FUTURE_EXPIRATION: Экспирация фьючерса.\n - OPERATION_TYPE_OTHER_FEE: Прочие комиссии;\n - OPERATION_TYPE_OTHER: Операция по счету;\n - OPERATION_TYPE_DFA_REDEMPTION: погашение ЦФА-токена;\n - OPERATION_TYPE_PRIMARY_ORDER: отмена заявки на первичное размещение по ЦФА;"
       enum:
         - "OPERATION_TYPE_UNSPECIFIED"
         - "OPERATION_TYPE_INPUT"
@@ -18024,6 +18266,19 @@ components:
         - "OPERATION_TYPE_OVER_INCOME"
         - "OPERATION_TYPE_OPTION_EXPIRATION"
         - "OPERATION_TYPE_FUTURE_EXPIRATION"
+        - "OPERATION_TYPE_OTHER_FEE"
+        - "OPERATION_TYPE_OTHER"
+        - "OPERATION_TYPE_DFA_REDEMPTION"
+        - "OPERATION_TYPE_PRIMARY_ORDER"
+      type: "string"
+    v1OperationsAccountSubscriptionStatus:
+      default: "OPERATIONS_SUBSCRIPTION_STATUS_UNSPECIFIED"
+      description: "Результат подписки.\n\n - OPERATIONS_SUBSCRIPTION_STATUS_UNSPECIFIED: Тип не определен.\n - OPERATIONS_SUBSCRIPTION_STATUS_SUCCESS: Успешно.\n - OPERATIONS_SUBSCRIPTION_STATUS_ACCOUNT_NOT_FOUND: Счет не найден или недостаточно прав.\n - OPERATIONS_SUBSCRIPTION_STATUS_INTERNAL_ERROR: Произошла ошибка."
+      enum:
+        - "OPERATIONS_SUBSCRIPTION_STATUS_UNSPECIFIED"
+        - "OPERATIONS_SUBSCRIPTION_STATUS_SUCCESS"
+        - "OPERATIONS_SUBSCRIPTION_STATUS_ACCOUNT_NOT_FOUND"
+        - "OPERATIONS_SUBSCRIPTION_STATUS_INTERNAL_ERROR"
       type: "string"
     v1OperationsRequest:
       description: "Запрос получения списка операций по счету."
@@ -18149,6 +18404,77 @@ components:
           items:
             $ref: "#/components/schemas/v1Operation"
           type: "array"
+      type: "object"
+    v1OperationsStreamRequest:
+      description: "Запрос установки stream-соединения операций."
+      properties:
+        accounts:
+          description: "Массив идентификаторов счетов пользователя."
+          items:
+            type: "string"
+          type: "array"
+        pingSettings:
+          $ref: "#/components/schemas/v1PingDelaySettings"
+      type: "object"
+    v1OperationsStreamResponse:
+      description: "Информация по операциям."
+      example:
+        subscriptions:
+          streamId: "streamId"
+          accounts:
+            - "accounts"
+            - "accounts"
+          trackingId: "trackingId"
+        ping:
+          streamId: "streamId"
+          pingRequestTime: 2000-01-23T04:56:07.000Z
+          time: 2000-01-23T04:56:07.000Z
+        operation:
+          date: 2000-01-23T04:56:07.000Z
+          classCode: "classCode"
+          brokerAccountId: "brokerAccountId"
+          instrumentType: "instrumentType"
+          ticker: "ticker"
+          parentOperationId: "parentOperationId"
+          positionUid: "positionUid"
+          figi: "figi"
+          instrumentUid: "instrumentUid"
+          name: "name"
+          payment:
+            nano: 5
+            currency: "currency"
+            units: "units"
+          id: "id"
+      properties:
+        subscriptions:
+          $ref: "#/components/schemas/v1OperationsSubscriptionResult"
+        operation:
+          $ref: "#/components/schemas/v1OperationData"
+        ping:
+          $ref: "#/components/schemas/v1Ping"
+      type: "object"
+    v1OperationsSubscriptionResult:
+      description: "Объект результата подписки."
+      example:
+        streamId: "streamId"
+        accounts:
+          - "accounts"
+          - "accounts"
+        trackingId: "trackingId"
+      properties:
+        accounts:
+          description: "Массив счетов клиента."
+          items:
+            type: "string"
+          type: "array"
+        subscriptionStatus:
+          $ref: "#/components/schemas/v1OperationsAccountSubscriptionStatus"
+        trackingId:
+          description: "Уникальный идентификатор запроса, подробнее: [tracking_id](/invest/intro/developer/protocols/grpc#tracking-id)."
+          type: "string"
+        streamId:
+          title: "Идентификатор открытого соединения"
+          type: "string"
       type: "object"
     v1Option:
       description: "Опцион."
@@ -18860,6 +19186,7 @@ components:
           trackingId: "trackingId"
         orderState:
           orderId: "orderId"
+          tradeOrderId: "tradeOrderId"
           initialOrderPrice:
             nano: 5
             currency: "currency"
@@ -18916,6 +19243,7 @@ components:
     v1OrderStateStreamResponseOrderState:
       example:
         orderId: "orderId"
+        tradeOrderId: "tradeOrderId"
         initialOrderPrice:
           nano: 5
           currency: "currency"
@@ -18997,6 +19325,9 @@ components:
         accountId:
           description: "Номер счета."
           type: "string"
+        tradeOrderId:
+          description: "Идентификатор торгового поручения."
+          type: "string"
         initialOrderPrice:
           $ref: "#/components/schemas/v1MoneyValue"
         orderPrice:
@@ -19041,6 +19372,8 @@ components:
         instrumentUid:
           description: "UID идентификатор инструмента."
           type: "string"
+      required:
+        - "tradeOrderId"
       title: "Заявка"
       type: "object"
     v1OrderTrade:
@@ -19151,6 +19484,23 @@ components:
           description: "Общее количество записей."
           format: "int32"
           type: "integer"
+      type: "object"
+    v1PayInRequest:
+      properties:
+        fromAccountId:
+          description: "Номер счета списания."
+          type: "string"
+        toAccountId:
+          description: "Номер брокерского счета зачисления."
+          type: "string"
+        amount:
+          $ref: "#/components/schemas/v1MoneyValue"
+      required:
+        - "amount"
+        - "fromAccountId"
+        - "toAccountId"
+      type: "object"
+    v1PayInResponse:
       type: "object"
     v1Ping:
       description: "Проверка активности стрима."
@@ -23271,6 +23621,48 @@ components:
           $ref: "#/components/schemas/rpcStatus"
       title: "Stream result of v1MarketDataResponse"
       type: "object"
+    Stream_result_of_v1OperationsStreamResponse:
+      example:
+        result:
+          subscriptions:
+            streamId: "streamId"
+            accounts:
+              - "accounts"
+              - "accounts"
+            trackingId: "trackingId"
+          ping:
+            streamId: "streamId"
+            pingRequestTime: 2000-01-23T04:56:07.000Z
+            time: 2000-01-23T04:56:07.000Z
+          operation:
+            date: 2000-01-23T04:56:07.000Z
+            classCode: "classCode"
+            brokerAccountId: "brokerAccountId"
+            instrumentType: "instrumentType"
+            ticker: "ticker"
+            parentOperationId: "parentOperationId"
+            positionUid: "positionUid"
+            figi: "figi"
+            instrumentUid: "instrumentUid"
+            name: "name"
+            payment:
+              nano: 5
+              currency: "currency"
+              units: "units"
+            id: "id"
+        error:
+          code: 1
+          details:
+            - "@type": "@type"
+            - "@type": "@type"
+          message: "message"
+      properties:
+        result:
+          $ref: "#/components/schemas/v1OperationsStreamResponse"
+        error:
+          $ref: "#/components/schemas/rpcStatus"
+      title: "Stream result of v1OperationsStreamResponse"
+      type: "object"
     Stream_result_of_v1PortfolioStreamResponse:
       example:
         result:
@@ -23680,6 +24072,7 @@ components:
             trackingId: "trackingId"
           orderState:
             orderId: "orderId"
+            tradeOrderId: "tradeOrderId"
             initialOrderPrice:
               nano: 5
               currency: "currency"

@@ -1,0 +1,55 @@
+.wrapper {
+  width: 100%;
+  margin-bottom: var(--ifm-spacing-vertical);
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    overflow-wrap: break-word;
+    display: table;
+    width: 100%;
+    margin: 0;
+
+    thead tr th:first-child,
+    tbody tr td:first-child {
+      width: 8em;
+      font-weight: normal;
+    }
+    
+
+    th,
+    td {
+      padding: 15px;
+    }
+
+    th {
+      font-size: 11px;
+    }
+
+    td {
+      font-size: 13px;
+    }
+
+    thead,
+    tr {
+      background-color: transparent;
+    }
+
+    thead {
+      tr {
+        border: none;
+      }
+    }
+  }
+}
+
+
+.codeWrapper {
+  margin-top: 16px;
+  div {
+    pre {
+      width: 100%;
+      height: 300px;
+    }
+  }
+}

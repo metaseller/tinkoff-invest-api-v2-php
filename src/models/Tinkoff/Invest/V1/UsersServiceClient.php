@@ -112,4 +112,20 @@ class UsersServiceClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * PayIn — пополнение брокерского счета
+     * Пополнить брокерский счёт с банковского
+     * @param \Tinkoff\Invest\V1\PayInRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Tinkoff\Invest\V1\PayInResponse>
+     */
+    public function PayIn(\Tinkoff\Invest\V1\PayInRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/tinkoff.public.invest.api.contract.v1.UsersService/PayIn',
+        $argument,
+        ['\Tinkoff\Invest\V1\PayInResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }

@@ -1,0 +1,10 @@
+---
+sidebar_position: 3
+---
+import { InstrumentsView } from './instruments-view'
+import BrowserOnly from "@docusaurus/BrowserOnly";
+
+# Валюта
+<BrowserOnly>
+    {() => <InstrumentsView instrumentType={'currency'}/>}
+</BrowserOnly>

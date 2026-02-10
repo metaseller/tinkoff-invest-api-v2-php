@@ -28,6 +28,12 @@ class FilterOptionsRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>optional string basic_asset_position_uid = 2;</code>
      */
     protected $basic_asset_position_uid = null;
+    /**
+     *Идентификатор базового инструмента, принимает значение принимает значения figi, instrument_uid или ticker+"_"+classCode.
+     *
+     * Generated from protobuf field <code>optional string basic_instrument_id = 3;</code>
+     */
+    protected $basic_instrument_id = null;
 
     /**
      * Constructor.
@@ -39,6 +45,8 @@ class FilterOptionsRequest extends \Google\Protobuf\Internal\Message
      *          Идентификатор базового актива опциона.  Обязательный параметр.
      *     @type string $basic_asset_position_uid
      *          Идентификатор позиции базового актива опциона.
+     *     @type string $basic_instrument_id
+     *          Идентификатор базового инструмента, принимает значение принимает значения figi, instrument_uid или ticker+"_"+classCode.
      * }
      */
     public function __construct($data = NULL) {
@@ -114,6 +122,42 @@ class FilterOptionsRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->basic_asset_position_uid = $var;
+
+        return $this;
+    }
+
+    /**
+     *Идентификатор базового инструмента, принимает значение принимает значения figi, instrument_uid или ticker+"_"+classCode.
+     *
+     * Generated from protobuf field <code>optional string basic_instrument_id = 3;</code>
+     * @return string
+     */
+    public function getBasicInstrumentId()
+    {
+        return isset($this->basic_instrument_id) ? $this->basic_instrument_id : '';
+    }
+
+    public function hasBasicInstrumentId()
+    {
+        return isset($this->basic_instrument_id);
+    }
+
+    public function clearBasicInstrumentId()
+    {
+        unset($this->basic_instrument_id);
+    }
+
+    /**
+     *Идентификатор базового инструмента, принимает значение принимает значения figi, instrument_uid или ticker+"_"+classCode.
+     *
+     * Generated from protobuf field <code>optional string basic_instrument_id = 3;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setBasicInstrumentId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->basic_instrument_id = $var;
 
         return $this;
     }

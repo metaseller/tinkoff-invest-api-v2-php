@@ -1,0 +1,12 @@
+# Доступные протоколы взаимодействия
+
+T-Invest API поддерживает возможность использования различных протоколов.
+
+[Как начать работать с gRPC](/invest/intro/developer/protocols/grpc/)
+
+| Протокол  | Детали                                                                                                                                                                                                 | Endpoint                                                                                                                                                                      |
+|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| gRPC      | API реализован на быстром, удобном и функциональном протоколе [gRPC](https://grpc.io/docs/).                                                                                                           | <ul><li><code>invest-public-api.tbank.ru:443</code> — продовый сервис;</li><li><code>sandbox-invest-public-api.tbank.ru:443</code> — песочница.</li></ul>                     |
+| gRPC-web  | Для поддержки web-клиентов, например, браузерных JS скриптов, внедрена поддержка [gRPC-web](https://grpc.io/docs/platforms/web/basics/).                                                               | <ul><li><code>invest-public-api.tbank.ru:443</code> — продовый сервис;</li><li><code>sandbox-invest-public-api.tbank.ru:443</code> — песочница.</li></ul>                     |
+| REST API  | Для клиентов, привыкших работать с REST API, реализован прокси [Swagger](/). <br/><br/>[Инструкция по работе со Swagger](/invest/intro/developer/protocols/restapi/) | <ul><li><code>https://invest-public-api.tbank.ru/rest/</code> — продовый сервис;</li><li><code>https://sandbox-invest-public-api.tbank.ru/rest/</code> — песочница.</li></ul> |
+| WebSocket | Внедрена поддержка WebSocket-протокола.                                                                                                                                                                | `wss://invest-public-api.tbank.ru/ws/`                                                                                                                                      |

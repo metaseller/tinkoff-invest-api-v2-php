@@ -1,0 +1,386 @@
+---
+sidebar_position: 0
+---
+
+import { Tabs } from "@/components/Tabs";
+import Accordion from '@platform-ui/accordion';
+
+# Описание
+
+Сервис исторических данных по инструментам позволяет получить обезличенные сделки и минутные свечи в 
+виде архивных файлов.
+Его функционал расширяет возможности [сервиса получения исторических данных](/invest/services/quotes/get_history).
+
+Сервис позволяет выгрузить архивы:
+- [всех сделок за день по всем инструментам](/invest/services/history-md/all/2018);
+- [всех сделок за день по заданному инструменту](/invest/services/history-md/instruments/shares);
+- [минутных свечей за год по заданному инструменту](/invest/services/history-md/candles/shares).
+
+
+:::info
+Исторические данные доступны не по всем инструментам и не с начала истории биржевых торгов. 
+Сервис предоставляет те архивы, которые удалось собрать.
+Если по какому-то инструменту нет архивов — значит, данные по нему недоступны в Т.
+:::
+
+:::caution
+В сервисе настроены лимиты на скачивание. С одного IP адреса можно загрузить не больше 30 файлов 
+в минуту — учитывайте это ограничение при разработке скриптов.
+:::
+
+## Архивы всех сделок по дням
+
+Содержит упорядоченную по датам структуру с разбивкой по годам. Внутри года — список архивов сделок
+за каждый день. 
+
+Есть несколько способов скачивания архива:
+- Прямая ссылка для скачивания.
+- Автоматически сгенерированный код — выберите интересующие дни и воспользуйтесь кодом из блока **Пример кода загрузки**.
+
+Внутри каждого архива находится `.csv`-файл c данными. Формат файла:
+
+```csv
+TRADE_TS,TICKER_CC,DIRECTION,PRICE,QUANTITY,TRADE_SOURCE,INSTRUMENT_UID
+2018-01-23T07:02:29.315229Z,TIF_SPBXM,BUY,110.11,10,EXCHANGE,be6fac28-7e2e-448c-b29b-8fae74b4f6fb
+ ...
+```
+
+Содержание файла:
+
+- `TRADE_TS` — дата и время сделки по UTC.
+- `TICKER_CC` — идентификатор инструмента в формате `ticker`+`_`+`clacc_code`.
+- `DIRECTION` — направление.
+- `PRICE` — цена.
+- `QUANTITY` — количество лотов.
+- `TRADE_SOURCE` — источник сделки, может принимать значения `EXCHANGE` или `DEALER`. [Подробнее о дилерской торговле](/invest/intro/useful-info/weekend-trading/).
+- `INSTRUMENT_UID` — идентификатор инструмента в формате `uuid`.
+
+
+:::info
+Загружать все файлы, пролистывая каждую страницу, может быть неудобно. Для этого можно воспользоваться 
+примером скрипта и написать свой — чтобы он скачал все файлы за указанный период.
+
+Применимо ко всем разделам сервиса.
+:::
+
+
+## Архив сделок по инструментам
+
+Структура разбита по типам инструментов. Внутри каждого типа приведен список идентификаторов инструментов 
+в формате `ticker`+`_`+`clacc_code` — они
+соответствуют данным, которые возвращаются в методах [сервиса инструментов](/invest/services/instruments/head-instruments).
+
+Для удобства используйте строку поиска. 
+
+- Напротив каждого инструмента указано количество доступных архивов.
+- Каждый архив соответствует одному торговому дню и содержит обезличенные сделки. По клику на инструмент можно провалиться в список архивов по бумаге.
+- Архив также можно скачать по прямой ссылке или использовать сгенерированный код.
+
+Формат файла совпадает с архивом всех сделок.
+
+:::info
+Возможны ситуации, когда архива по заданному инструменту нет. Такое может быть, если в этот день инструмент не торговался
+или информации о торгах за этот день нет.
+:::
+
+
+## Архив минутных свечей
+
+По структуре раздел похож на [Архив сделок по инструментам](#архив-cделоr-по-инструментам) — 
+внутри каждого типа инструментов приведен список идентификаторов инструментов в формате `ticker`+`_`+`clacc_code`. Поддерживается поиск. 
+
+- Отличие от сделок — архивы собраны за год и содержат минутные свечи.
+- Архив также можно скачать по прямой ссылке или использовать сгенерированный код.
+
+В каждом архиве содержатся `.csv`-файлы, которые соответствуют дням, когда торговался инструмент. Обратите внимание — у файла нет заголовков.
+Формат файла:
+
+```csv
+e6123145-9665-43e0-8413-cd61b8aa9b13;2025-01-02T04:00:00Z;281.67;281.66;281.67;280.1;22;
+e6123145-9665-43e0-8413-cd61b8aa9b13;2025-01-02T04:01:00Z;280.41;281.58;281.65;280.41;25;
+ ...
+```
+
+Содержание файла:
+
+- `INSTRUMENT_UID` — идентификатор инструмента в формате `uuid`;
+- `UTC` — дата и время начала свечи по UTC;
+- `open` — цена открытия;
+- `close` — цена закрытия;
+- `high` — максимальная цена за интервал;
+- `low` — минимальная цена за интервал;
+- `volume` — объем в лотах.
+
+## Готовые скрипты для загрузки данных
+
+<Tabs
+  items={[
+    {
+      title: "Linux и macOS",
+      content:
+ <div>
+<ol>
+<li>Сохраните скрипт в файл — например, <code>download_data.sh</code>.</li>
+<li>Сделайте файл исполняемым: <code>chmod +x download_data.sh</code>.</li>
+<li>Запустите скрипт: <code>./download_data.sh</code>.</li>
+</ol>
+</div>,
+    },
+    {
+      title: "Windows",
+      content:
+<div>
+<ol>
+<li>Сохраните скрипт в файл — например, <code>download_data.ps1</code>.</li>
+<li>Откройте PowerShell и перейдите в директорию со скриптом.</li>
+<li>Запустите скрипт: <code>.\download_data.ps1</code>.</li>
+</ol>
+</div>,
+    },
+  ]}
+/>
+
+### Примеры cкриптов
+
+<br/>
+
+<details>
+<summary>Linux</summary>
+
+```
+#!/bin/bash
+
+# Список тикеров
+TICKERS=("SBER_TQBR", "GAZP_TQBR", "CRZ5_SPBFUT")
+
+# Функция для генерации списка дат с 2020 года по вчерашний день
+generate_dates() {
+    local start_date="2020-01-01"
+    local yesterday=$(date -d "yesterday" +%Y-%m-%d)
+
+    local current_date=$(date -d "$start_date" +%s)
+    local end_date=$(date -d "$yesterday" +%s)
+
+    while [ $current_date -le $end_date ]; do
+        date -d "@$current_date" +%Y-%m-%d
+        current_date=$((current_date + 86400))
+    done
+}
+
+# Генерируем все даты
+DATES=($(generate_dates))
+
+# Перебираем все тикеры и даты
+for ticker in "${TICKERS[@]}"; do
+    echo "Обработка тикера: $ticker"
+
+    for date in "${DATES[@]}"; do
+        echo "  Загрузка данных за $date"
+
+        # Формируем URL и имя файла
+        URL="https://invest-public-api.tbank.ru/history-trades/$date?instrumentId=$ticker"
+        OUTPUT_FILE="data/${ticker}_${date}.csv"
+
+        # Создаем директорию, если не существует
+        mkdir -p "data"
+
+        # Выполняем запрос
+        HTTP_CODE=$(curl -s -o "$OUTPUT_FILE" -w "%{http_code}" "$URL")
+
+        case $HTTP_CODE in
+            200)
+                echo "    ✓ Успешно загружено"
+                ;;
+            404)
+                echo "    ⚠ Файл не найден, пропускаем"
+                rm -f "$OUTPUT_FILE"
+                ;;
+            429)
+                echo "    ⏱ Превышен лимит запросов (429), ждем 60 секунд"
+                rm -f "$OUTPUT_FILE"
+                sleep 60
+                # Повторяем текущую итерацию
+                ((i--))
+                continue
+                ;;
+            *)
+                echo "    ✗ Ошибка $HTTP_CODE"
+                rm -f "$OUTPUT_FILE"
+                ;;
+        esac
+
+        # Небольшая пауза между запросами
+        sleep 0.5
+    done
+done
+
+echo "Загрузка завершена!"
+```
+
+</details>
+
+<details>
+<summary>macOS</summary>
+
+```
+#!/bin/bash
+
+# Список тикеров
+TICKERS=("SBER_TQBR", "GAZP_TQBR", "CRZ5_SPBFUT")
+
+# Функция для генерации списка дат с 2020 года по вчерашний день для macOS
+generate_dates() {
+    local start_date="2020-01-01"
+    local yesterday=$(date -v-1d +%Y-%m-%d)
+
+    # Преобразуем даты в секунды с начала эпохи
+    local start_ts=$(date -j -f "%Y-%m-%d" "$start_date" +%s)
+    local end_ts=$(date -j -f "%Y-%m-%d" "$yesterday" +%s)
+
+    # Перебираем все дни
+    local current_ts=$start_ts
+    while [ $current_ts -le $end_ts ]; do
+        date -j -r $current_ts +%Y-%m-%d
+        current_ts=$((current_ts + 86400))
+    done
+}
+
+# Генерируем все даты
+DATES=($(generate_dates))
+
+# Перебираем все тикеры и даты
+for ticker in "${TICKERS[@]}"; do
+    echo "Обработка тикера: $ticker"
+
+    for date in "${DATES[@]}"; do
+        echo "  Загрузка данных за $date"
+
+        # Формируем URL и имя файла
+        URL="https://invest-public-api.tbank.ru/history-trades/${date}?instrumentId=$ticker"
+        OUTPUT_FILE="data/${ticker}_${date}.csv"
+
+        # Создаем директорию, если не существует
+        mkdir -p "data"
+
+        # Выполняем запрос
+        HTTP_CODE=$(curl -s -o "$OUTPUT_FILE" -w "%{http_code}" "$URL")
+
+        case $HTTP_CODE in
+            200)
+                echo "    ✓ Успешно загружено"
+                ;;
+            404)
+                echo "    ⚠ Файл не найден, пропускаем"
+                rm -f "$OUTPUT_FILE"
+                ;;
+            429)
+                echo "    ⏱ Превышен лимит запросов (429), ждем 60 секунд"
+                rm -f "$OUTPUT_FILE"
+                sleep 60
+                # Повторяем текущую итерацию
+                ((i--))
+                continue
+                ;;
+            *)
+                echo "    ✗ Ошибка $HTTP_CODE"
+                rm -f "$OUTPUT_FILE"
+                ;;
+        esac
+
+        # Небольшая пауза между запросами
+        sleep 0.5
+    done
+done
+
+echo "Загрузка завершена!"
+```
+
+</details>
+<details>
+<summary>Windows</summary>
+
+```
+# Список тикеров
+$TICKERS = @("SBER_TQBR", "GAZP_TQBR", "CRZ5_SPBFUT")
+
+# Функция для генерации списка дат с 2020 года по вчерашний день
+function Generate-Dates {
+    $startDate = [DateTime]::ParseExact("2020-01-01", "yyyy-MM-dd", $null)
+    $yesterday = (Get-Date).AddDays(-1).Date
+
+    $currentDate = $startDate
+    $dates = @()
+
+    while ($currentDate -le $yesterday) {
+        $dates += $currentDate.ToString("yyyy-MM-dd")
+        $currentDate = $currentDate.AddDays(1)
+    }
+
+    return $dates
+}
+
+# Генерируем все даты
+$DATES = Generate-Dates
+
+# Создаем директорию для данных, если не существует
+if (-not (Test-Path -Path "data")) {
+    New-Item -ItemType Directory -Path "data" | Out-Null
+}
+
+# Перебираем все тикеры и даты
+foreach ($ticker in $TICKERS) {
+    Write-Host "Обработка тикера: $ticker"
+
+    foreach ($date in $DATES) {
+        Write-Host "  Загрузка данных за $date"
+
+        # Формируем URL и имя файла
+        $URL = "https://invest-public-api.tbank.ru/history-trades/${date}?instrumentId=$ticker"
+        $OUTPUT_FILE = "data\${ticker}_${date}.csv"
+
+        # Выполняем запрос с помощью Invoke-WebRequest
+        try {
+            $retry = $true
+            while ($retry) {
+                try {
+                    $response = Invoke-WebRequest -Uri $URL -OutFile $OUTPUT_FILE -PassThru -ErrorAction Stop
+                    $statusCode = $response.StatusCode
+                    $retry = $false
+                }
+                catch {
+                    if ($_.Exception.Response.StatusCode.value__ -eq 429) {
+                        Write-Host "    ⏱ Превышен лимит запросов (429), ждем 60 секунд"
+                        if (Test-Path $OUTPUT_FILE) { Remove-Item $OUTPUT_FILE }
+                        Start-Sleep -Seconds 60
+                    }
+                    elseif ($_.Exception.Response.StatusCode.value__ -eq 404) {
+                        Write-Host "    ⚠ Файл не найден, пропускаем"
+                        if (Test-Path $OUTPUT_FILE) { Remove-Item $OUTPUT_FILE }
+                        $retry = $false
+                    }
+                    else {
+                        Write-Host "    ✗ Ошибка $($_.Exception.Response.StatusCode.value__)"
+                        if (Test-Path $OUTPUT_FILE) { Remove-Item $OUTPUT_FILE }
+                        $retry = $false
+                    }
+                }
+            }
+
+            if ($statusCode -eq 200) {
+                Write-Host "    ✓ Успешно загружено"
+            }
+        }
+        catch {
+            Write-Host "    ✗ Ошибка при выполнении запроса: $_"
+            if (Test-Path $OUTPUT_FILE) { Remove-Item $OUTPUT_FILE }
+        }
+
+        # Небольшая пауза между запросами
+        Start-Sleep -Milliseconds 500
+    }
+}
+
+Write-Host "Загрузка завершена!"
+```
+
+</details>

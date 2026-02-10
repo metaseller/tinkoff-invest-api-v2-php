@@ -1,7 +1,7 @@
 asyncapi: 2.6.0
 info:
   title: T-Invest API
-  version: '1.42'
+  version: '1.44'
   description: Websocket API for streaming data
   license:
     name: Apache 2.0
@@ -73,6 +73,31 @@ channels:
           bindingVersion: 0.1.0
       message:
         $ref: '#/components/messages/Stream_result_of_v1MarketDataResponse'
+    servers:
+      - production-wstream
+  /tinkoff.public.invest.api.contract.v1.OperationsStreamService/OperationsStream:
+    publish:
+      operationId: OperationsStreamService_OperationsStream
+      summary: OperationsStream — стрим обновлений операций
+      tags:
+        - name: OperationsStreamService
+      bindings:
+        ws:
+          method: GET
+          bindingVersion: 0.1.0
+      message:
+        $ref: '#/components/messages/v1OperationsStreamRequest'
+    subscribe:
+      operationId: onOperationsStreamService_OperationsStream
+      summary: OperationsStream — стрим обновлений операций
+      tags:
+        - name: OperationsStreamService
+      bindings:
+        ws:
+          method: GET
+          bindingVersion: 0.1.0
+      message:
+        $ref: '#/components/messages/Stream_result_of_v1OperationsStreamResponse'
     servers:
       - production-wstream
   /tinkoff.public.invest.api.contract.v1.OperationsStreamService/PortfolioStream:
@@ -1467,6 +1492,359 @@ components:
           format: date-time
           type: string
       type: object
+    v1OperationsStreamResponse:
+      description: Информация по операциям.
+      example:
+        subscriptions:
+          streamId: streamId
+          accounts:
+            - accounts
+            - accounts
+          trackingId: trackingId
+        ping:
+          streamId: streamId
+          pingRequestTime: '2000-01-23T04:56:07.000+00:00'
+          time: '2000-01-23T04:56:07.000+00:00'
+        operation:
+          date: '2000-01-23T04:56:07.000+00:00'
+          classCode: classCode
+          brokerAccountId: brokerAccountId
+          instrumentType: instrumentType
+          ticker: ticker
+          parentOperationId: parentOperationId
+          positionUid: positionUid
+          figi: figi
+          instrumentUid: instrumentUid
+          name: name
+          payment:
+            nano: 5
+            currency: currency
+            units: units
+          id: id
+      properties:
+        subscriptions:
+          $ref: '#/components/schemas/v1OperationsSubscriptionResult'
+        operation:
+          $ref: '#/components/schemas/v1OperationData'
+        ping:
+          $ref: '#/components/schemas/v1Ping'
+      type: object
+    v1OperationsSubscriptionResult:
+      description: Объект результата подписки.
+      example:
+        streamId: streamId
+        accounts:
+          - accounts
+          - accounts
+        trackingId: trackingId
+      properties:
+        accounts:
+          description: Массив счетов клиента.
+          items:
+            type: string
+          type: array
+        subscriptionStatus:
+          $ref: '#/components/schemas/v1OperationsAccountSubscriptionStatus'
+        trackingId:
+          description: >-
+            Уникальный идентификатор запроса, подробнее:
+            [tracking_id](/invest/intro/developer/protocols/grpc#tracking-id).
+          type: string
+        streamId:
+          title: Идентификатор открытого соединения
+          type: string
+      type: object
+    v1OperationsAccountSubscriptionStatus:
+      default: OPERATIONS_SUBSCRIPTION_STATUS_UNSPECIFIED
+      description: |-
+        Результат подписки.
+
+         - OPERATIONS_SUBSCRIPTION_STATUS_UNSPECIFIED: Тип не определен.
+         - OPERATIONS_SUBSCRIPTION_STATUS_SUCCESS: Успешно.
+         - OPERATIONS_SUBSCRIPTION_STATUS_ACCOUNT_NOT_FOUND: Счет не найден или недостаточно прав.
+         - OPERATIONS_SUBSCRIPTION_STATUS_INTERNAL_ERROR: Произошла ошибка.
+      enum:
+        - OPERATIONS_SUBSCRIPTION_STATUS_UNSPECIFIED
+        - OPERATIONS_SUBSCRIPTION_STATUS_SUCCESS
+        - OPERATIONS_SUBSCRIPTION_STATUS_ACCOUNT_NOT_FOUND
+        - OPERATIONS_SUBSCRIPTION_STATUS_INTERNAL_ERROR
+      type: string
+    v1OperationData:
+      description: Данные об операции.
+      example:
+        date: '2000-01-23T04:56:07.000+00:00'
+        classCode: classCode
+        brokerAccountId: brokerAccountId
+        instrumentType: instrumentType
+        ticker: ticker
+        parentOperationId: parentOperationId
+        positionUid: positionUid
+        figi: figi
+        instrumentUid: instrumentUid
+        name: name
+        payment:
+          nano: 5
+          currency: currency
+          units: units
+        id: id
+      properties:
+        brokerAccountId:
+          description: Идентификатор счета.
+          type: string
+        id:
+          description: Номер поручения.
+          type: string
+        parentOperationId:
+          description: Номер родительского поручения.
+          type: string
+        name:
+          description: Название инструмента.
+          type: string
+        date:
+          description: Дата.
+          format: date-time
+          type: string
+        type:
+          $ref: '#/components/schemas/v1OperationType'
+        state:
+          $ref: '#/components/schemas/v1OperationState'
+        instrumentUid:
+          description: Уникальный идентификатор инструмента.
+          type: string
+        figi:
+          description: FIGI-идентификатор инструмента.
+          type: string
+        instrumentType:
+          description: Тип инструмента.
+          type: string
+        instrumentKind:
+          $ref: '#/components/schemas/v1InstrumentType'
+        positionUid:
+          description: Идентификатор позиции.
+          type: string
+        ticker:
+          description: Тикер инструмента.
+          type: string
+        classCode:
+          description: Класс-код (секция торгов).
+          type: string
+        payment:
+          $ref: '#/components/schemas/v1MoneyValue'
+      type: object
+    v1OperationType:
+      default: OPERATION_TYPE_UNSPECIFIED
+      description: |-
+        Тип операции.
+
+         - OPERATION_TYPE_UNSPECIFIED: Тип операции не определен.
+         - OPERATION_TYPE_INPUT: Пополнение брокерского счета.
+         - OPERATION_TYPE_BOND_TAX: Удержание НДФЛ по купонам.
+         - OPERATION_TYPE_OUTPUT_SECURITIES: Вывод ЦБ.
+         - OPERATION_TYPE_OVERNIGHT: Доход по сделке РЕПО овернайт.
+         - OPERATION_TYPE_TAX: Удержание налога.
+         - OPERATION_TYPE_BOND_REPAYMENT_FULL: Полное погашение облигаций.
+         - OPERATION_TYPE_SELL_CARD: Продажа ЦБ с карты.
+         - OPERATION_TYPE_DIVIDEND_TAX: Удержание налога по дивидендам.
+         - OPERATION_TYPE_OUTPUT: Вывод денежных средств.
+         - OPERATION_TYPE_BOND_REPAYMENT: Частичное погашение облигаций.
+         - OPERATION_TYPE_TAX_CORRECTION: Корректировка налога.
+         - OPERATION_TYPE_SERVICE_FEE: Удержание комиссии за обслуживание брокерского счета.
+         - OPERATION_TYPE_BENEFIT_TAX: Удержание налога за материальную выгоду.
+         - OPERATION_TYPE_MARGIN_FEE: Удержание комиссии за непокрытую позицию.
+         - OPERATION_TYPE_BUY: Покупка ЦБ.
+         - OPERATION_TYPE_BUY_CARD: Покупка ЦБ с карты.
+         - OPERATION_TYPE_INPUT_SECURITIES: Перевод ценных бумаг из другого депозитария.
+         - OPERATION_TYPE_SELL_MARGIN: Продажа в результате Margin-call.
+         - OPERATION_TYPE_BROKER_FEE: Удержание комиссии за операцию.
+         - OPERATION_TYPE_BUY_MARGIN: Покупка в результате Margin-call.
+         - OPERATION_TYPE_DIVIDEND: Выплата дивидендов.
+         - OPERATION_TYPE_SELL: Продажа ЦБ.
+         - OPERATION_TYPE_COUPON: Выплата купонов.
+         - OPERATION_TYPE_SUCCESS_FEE: Удержание комиссии SuccessFee.
+         - OPERATION_TYPE_DIVIDEND_TRANSFER: Передача дивидендного дохода.
+         - OPERATION_TYPE_ACCRUING_VARMARGIN: Зачисление вариационной маржи.
+         - OPERATION_TYPE_WRITING_OFF_VARMARGIN: Списание вариационной маржи.
+         - OPERATION_TYPE_DELIVERY_BUY: Покупка в рамках экспирации фьючерсного контракта.
+         - OPERATION_TYPE_DELIVERY_SELL: Продажа в рамках экспирации фьючерсного контракта.
+         - OPERATION_TYPE_TRACK_MFEE: Комиссия за управление по счету автоследования.
+         - OPERATION_TYPE_TRACK_PFEE: Комиссия за результат по счету автоследования.
+         - OPERATION_TYPE_TAX_PROGRESSIVE: Удержание налога по ставке 15%.
+         - OPERATION_TYPE_BOND_TAX_PROGRESSIVE: Удержание налога по купонам по ставке 15%.
+         - OPERATION_TYPE_DIVIDEND_TAX_PROGRESSIVE: Удержание налога по дивидендам по ставке 15%.
+         - OPERATION_TYPE_BENEFIT_TAX_PROGRESSIVE: Удержание налога за материальную выгоду по ставке 15%.
+         - OPERATION_TYPE_TAX_CORRECTION_PROGRESSIVE: Корректировка налога по ставке 15%.
+         - OPERATION_TYPE_TAX_REPO_PROGRESSIVE: Удержание налога за возмещение по сделкам РЕПО по ставке 15%.
+         - OPERATION_TYPE_TAX_REPO: Удержание налога за возмещение по сделкам РЕПО.
+         - OPERATION_TYPE_TAX_REPO_HOLD: Удержание налога по сделкам РЕПО.
+         - OPERATION_TYPE_TAX_REPO_REFUND: Возврат налога по сделкам РЕПО.
+         - OPERATION_TYPE_TAX_REPO_HOLD_PROGRESSIVE: Удержание налога по сделкам РЕПО по ставке 15%.
+         - OPERATION_TYPE_TAX_REPO_REFUND_PROGRESSIVE: Возврат налога по сделкам РЕПО по ставке 15%.
+         - OPERATION_TYPE_DIV_EXT: Выплата дивидендов на карту.
+         - OPERATION_TYPE_TAX_CORRECTION_COUPON: Корректировка налога по купонам.
+         - OPERATION_TYPE_CASH_FEE: Комиссия за валютный остаток.
+         - OPERATION_TYPE_OUT_FEE: Комиссия за вывод валюты с брокерского счета.
+         - OPERATION_TYPE_OUT_STAMP_DUTY: Гербовый сбор.
+         - OPERATION_TYPE_OUTPUT_SWIFT: SWIFT-перевод.
+         - OPERATION_TYPE_INPUT_SWIFT: SWIFT-перевод.
+         - OPERATION_TYPE_OUTPUT_ACQUIRING: Перевод на карту.
+         - OPERATION_TYPE_INPUT_ACQUIRING: Перевод с карты.
+         - OPERATION_TYPE_OUTPUT_PENALTY: Комиссия за вывод средств.
+         - OPERATION_TYPE_ADVICE_FEE: Списание оплаты за сервис Советов.
+         - OPERATION_TYPE_TRANS_IIS_BS: Перевод ценных бумаг с ИИС на брокерский счет.
+         - OPERATION_TYPE_TRANS_BS_BS: Перевод ценных бумаг с одного брокерского счета на другой.
+         - OPERATION_TYPE_OUT_MULTI: Вывод денежных средств со счета.
+         - OPERATION_TYPE_INP_MULTI: Пополнение денежных средств со счета.
+         - OPERATION_TYPE_OVER_PLACEMENT: Размещение биржевого овернайта.
+         - OPERATION_TYPE_OVER_COM: Списание комиссии.
+         - OPERATION_TYPE_OVER_INCOME: Доход от оверанайта.
+         - OPERATION_TYPE_OPTION_EXPIRATION: Экспирация опциона.
+         - OPERATION_TYPE_FUTURE_EXPIRATION: Экспирация фьючерса.
+         - OPERATION_TYPE_OTHER_FEE: Прочие комиссии;
+         - OPERATION_TYPE_OTHER: Операция по счету;
+         - OPERATION_TYPE_DFA_REDEMPTION: погашение ЦФА-токена;
+         - OPERATION_TYPE_PRIMARY_ORDER: отмена заявки на первичное размещение по ЦФА;
+      enum:
+        - OPERATION_TYPE_UNSPECIFIED
+        - OPERATION_TYPE_INPUT
+        - OPERATION_TYPE_BOND_TAX
+        - OPERATION_TYPE_OUTPUT_SECURITIES
+        - OPERATION_TYPE_OVERNIGHT
+        - OPERATION_TYPE_TAX
+        - OPERATION_TYPE_BOND_REPAYMENT_FULL
+        - OPERATION_TYPE_SELL_CARD
+        - OPERATION_TYPE_DIVIDEND_TAX
+        - OPERATION_TYPE_OUTPUT
+        - OPERATION_TYPE_BOND_REPAYMENT
+        - OPERATION_TYPE_TAX_CORRECTION
+        - OPERATION_TYPE_SERVICE_FEE
+        - OPERATION_TYPE_BENEFIT_TAX
+        - OPERATION_TYPE_MARGIN_FEE
+        - OPERATION_TYPE_BUY
+        - OPERATION_TYPE_BUY_CARD
+        - OPERATION_TYPE_INPUT_SECURITIES
+        - OPERATION_TYPE_SELL_MARGIN
+        - OPERATION_TYPE_BROKER_FEE
+        - OPERATION_TYPE_BUY_MARGIN
+        - OPERATION_TYPE_DIVIDEND
+        - OPERATION_TYPE_SELL
+        - OPERATION_TYPE_COUPON
+        - OPERATION_TYPE_SUCCESS_FEE
+        - OPERATION_TYPE_DIVIDEND_TRANSFER
+        - OPERATION_TYPE_ACCRUING_VARMARGIN
+        - OPERATION_TYPE_WRITING_OFF_VARMARGIN
+        - OPERATION_TYPE_DELIVERY_BUY
+        - OPERATION_TYPE_DELIVERY_SELL
+        - OPERATION_TYPE_TRACK_MFEE
+        - OPERATION_TYPE_TRACK_PFEE
+        - OPERATION_TYPE_TAX_PROGRESSIVE
+        - OPERATION_TYPE_BOND_TAX_PROGRESSIVE
+        - OPERATION_TYPE_DIVIDEND_TAX_PROGRESSIVE
+        - OPERATION_TYPE_BENEFIT_TAX_PROGRESSIVE
+        - OPERATION_TYPE_TAX_CORRECTION_PROGRESSIVE
+        - OPERATION_TYPE_TAX_REPO_PROGRESSIVE
+        - OPERATION_TYPE_TAX_REPO
+        - OPERATION_TYPE_TAX_REPO_HOLD
+        - OPERATION_TYPE_TAX_REPO_REFUND
+        - OPERATION_TYPE_TAX_REPO_HOLD_PROGRESSIVE
+        - OPERATION_TYPE_TAX_REPO_REFUND_PROGRESSIVE
+        - OPERATION_TYPE_DIV_EXT
+        - OPERATION_TYPE_TAX_CORRECTION_COUPON
+        - OPERATION_TYPE_CASH_FEE
+        - OPERATION_TYPE_OUT_FEE
+        - OPERATION_TYPE_OUT_STAMP_DUTY
+        - OPERATION_TYPE_OUTPUT_SWIFT
+        - OPERATION_TYPE_INPUT_SWIFT
+        - OPERATION_TYPE_OUTPUT_ACQUIRING
+        - OPERATION_TYPE_INPUT_ACQUIRING
+        - OPERATION_TYPE_OUTPUT_PENALTY
+        - OPERATION_TYPE_ADVICE_FEE
+        - OPERATION_TYPE_TRANS_IIS_BS
+        - OPERATION_TYPE_TRANS_BS_BS
+        - OPERATION_TYPE_OUT_MULTI
+        - OPERATION_TYPE_INP_MULTI
+        - OPERATION_TYPE_OVER_PLACEMENT
+        - OPERATION_TYPE_OVER_COM
+        - OPERATION_TYPE_OVER_INCOME
+        - OPERATION_TYPE_OPTION_EXPIRATION
+        - OPERATION_TYPE_FUTURE_EXPIRATION
+        - OPERATION_TYPE_OTHER_FEE
+        - OPERATION_TYPE_OTHER
+        - OPERATION_TYPE_DFA_REDEMPTION
+        - OPERATION_TYPE_PRIMARY_ORDER
+      type: string
+    v1OperationState:
+      default: OPERATION_STATE_UNSPECIFIED
+      description: |-
+        Статус запрашиваемых операций.
+
+         - OPERATION_STATE_UNSPECIFIED: Статус операции не определен.
+         - OPERATION_STATE_EXECUTED: Исполнена частично или полностью.
+         - OPERATION_STATE_CANCELED: Отменена.
+         - OPERATION_STATE_PROGRESS: Исполняется.
+      enum:
+        - OPERATION_STATE_UNSPECIFIED
+        - OPERATION_STATE_EXECUTED
+        - OPERATION_STATE_CANCELED
+        - OPERATION_STATE_PROGRESS
+      type: string
+    v1InstrumentType:
+      default: INSTRUMENT_TYPE_UNSPECIFIED
+      description: |-
+        Тип инструмента.
+
+         - INSTRUMENT_TYPE_BOND: Облигация.
+         - INSTRUMENT_TYPE_SHARE: Акция.
+         - INSTRUMENT_TYPE_CURRENCY: Валюта.
+         - INSTRUMENT_TYPE_ETF: Exchange-traded fund. Фонд.
+         - INSTRUMENT_TYPE_FUTURES: Фьючерс.
+         - INSTRUMENT_TYPE_SP: Структурная нота.
+         - INSTRUMENT_TYPE_OPTION: Опцион.
+         - INSTRUMENT_TYPE_CLEARING_CERTIFICATE: Clearing certificate.
+         - INSTRUMENT_TYPE_INDEX: Индекс.
+         - INSTRUMENT_TYPE_COMMODITY: Товар.
+      enum:
+        - INSTRUMENT_TYPE_UNSPECIFIED
+        - INSTRUMENT_TYPE_BOND
+        - INSTRUMENT_TYPE_SHARE
+        - INSTRUMENT_TYPE_CURRENCY
+        - INSTRUMENT_TYPE_ETF
+        - INSTRUMENT_TYPE_FUTURES
+        - INSTRUMENT_TYPE_SP
+        - INSTRUMENT_TYPE_OPTION
+        - INSTRUMENT_TYPE_CLEARING_CERTIFICATE
+        - INSTRUMENT_TYPE_INDEX
+        - INSTRUMENT_TYPE_COMMODITY
+      type: string
+    v1MoneyValue:
+      description: Денежная сумма в определенной валюте.
+      example:
+        nano: 5
+        currency: currency
+        units: units
+      properties:
+        currency:
+          description: Строковый ISO-код валюты.
+          type: string
+        units:
+          description: Целая часть суммы, может быть отрицательным числом.
+          format: int64
+          type: string
+        nano:
+          description: Дробная часть суммы, может быть отрицательным числом.
+          format: int32
+          type: integer
+      type: object
+    v1OperationsStreamRequest:
+      description: Запрос установки stream-соединения операций.
+      properties:
+        accounts:
+          description: Массив идентификаторов счетов пользователя.
+          items:
+            type: string
+          type: array
+        pingSettings:
+          $ref: '#/components/schemas/v1PingDelaySettings'
+      type: object
     v1PortfolioStreamResponse:
       description: Информация по позициям и доходностям портфелей.
       example:
@@ -1991,25 +2369,6 @@ components:
           $ref: '#/components/schemas/v1MoneyValue'
         dailyYieldRelative:
           $ref: '#/components/schemas/v1Quotation'
-      type: object
-    v1MoneyValue:
-      description: Денежная сумма в определенной валюте.
-      example:
-        nano: 5
-        currency: currency
-        units: units
-      properties:
-        currency:
-          description: Строковый ISO-код валюты.
-          type: string
-        units:
-          description: Целая часть суммы, может быть отрицательным числом.
-          format: int64
-          type: string
-        nano:
-          description: Дробная часть суммы, может быть отрицательным числом.
-          format: int32
-          type: integer
       type: object
     v1PortfolioPosition:
       description: Позиции портфеля.
@@ -2752,6 +3111,7 @@ components:
           trackingId: trackingId
         orderState:
           orderId: orderId
+          tradeOrderId: tradeOrderId
           initialOrderPrice:
             nano: 5
             currency: currency
@@ -2808,6 +3168,7 @@ components:
     v1OrderStateStreamResponseOrderState:
       example:
         orderId: orderId
+        tradeOrderId: tradeOrderId
         initialOrderPrice:
           nano: 5
           currency: currency
@@ -2891,6 +3252,9 @@ components:
         accountId:
           description: Номер счета.
           type: string
+        tradeOrderId:
+          description: Идентификатор торгового поручения.
+          type: string
         initialOrderPrice:
           $ref: '#/components/schemas/v1MoneyValue'
         orderPrice:
@@ -2935,6 +3299,8 @@ components:
         instrumentUid:
           description: UID идентификатор инструмента.
           type: string
+      required:
+        - tradeOrderId
       title: Заявка
       type: object
     v1OrderExecutionReportStatus:
@@ -3253,6 +3619,15 @@ components:
       description: Запрос подписки или отписки на определенные биржевые данные.
       payload:
         $ref: '#/components/schemas/v1MarketDataRequest'
+    v1OperationsStreamRequest:
+      description: Запрос установки stream-соединения операций.
+      payload:
+        $ref: '#/components/schemas/v1OperationsStreamRequest'
+    Stream_result_of_v1OperationsStreamResponse:
+      payload:
+        oneOf:
+          - $ref: '#/components/schemas/v1OperationsStreamResponse'
+          - $ref: '#/components/schemas/rpcStatus'
     v1PortfolioStreamRequest:
       description: Запрос установки stream-соединения.
       payload:

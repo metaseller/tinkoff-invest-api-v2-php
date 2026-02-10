@@ -193,6 +193,12 @@ class Currency extends \Google\Protobuf\Internal\Message
      */
     private $required_tests;
     /**
+     *Уникальный идентификатор актива.
+     *
+     * Generated from protobuf field <code>string asset_uid = 31;</code>
+     */
+    protected $asset_uid = '';
+    /**
      *Признак доступности для ИИС.
      *
      * Generated from protobuf field <code>bool for_iis_flag = 41;</code>
@@ -311,6 +317,8 @@ class Currency extends \Google\Protobuf\Internal\Message
      *          Уникальный идентификатор позиции инструмента.
      *     @type string[] $required_tests
      *          Тесты, которые необходимо пройти клиенту, чтобы совершать сделки по инструменту.
+     *     @type string $asset_uid
+     *          Уникальный идентификатор актива.
      *     @type bool $for_iis_flag
      *          Признак доступности для ИИС.
      *     @type bool $for_qual_investor_flag
@@ -1186,6 +1194,32 @@ class Currency extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->required_tests = $arr;
+
+        return $this;
+    }
+
+    /**
+     *Уникальный идентификатор актива.
+     *
+     * Generated from protobuf field <code>string asset_uid = 31;</code>
+     * @return string
+     */
+    public function getAssetUid()
+    {
+        return $this->asset_uid;
+    }
+
+    /**
+     *Уникальный идентификатор актива.
+     *
+     * Generated from protobuf field <code>string asset_uid = 31;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setAssetUid($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->asset_uid = $var;
 
         return $this;
     }

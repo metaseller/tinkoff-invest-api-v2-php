@@ -714,6 +714,11 @@
     "type": "INVALID_ARGUMENT",
     "description": "Списание денежных средств возможно только с действующих брокерских счетов. Недоступно для ИИС."
   },
+  "30253": {
+    "message": "Invalid parameter: 'currency'",
+    "type": "INVALID_ARGUMENT",
+    "description": "Входной параметр 'currency' имеет не корректное значение. Укажите допустимое значение."
+  },
   "30254": {
     "message": "Invalid parameter: `time_in_force`",
     "type": "INVALID_ARGUMENT",
@@ -859,6 +864,11 @@
     "message": "Stream lifetime too long",
     "type": "RESOURCE_EXHAUSTED",
     "description": "Стрим был завершен из-за превышения времени жизни. Подключитесь повторно."
+  },
+  "80006": {
+    "message": "Error limit exceeded",
+    "type": "RESOURCE_EXHAUSTED",
+    "description": "Превышен лимит ошибок в минуту. Проверьте параметры запроса, а также его реализуемость."
   },
   "90001": {
     "message": "Need confirmation: %s",

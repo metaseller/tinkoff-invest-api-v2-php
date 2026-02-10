@@ -1,0 +1,150 @@
+import { DocImage } from '@/components/DocImage';
+import Accordion from '@platform-ui/accordion';
+
+# Примеры использования T-Invest API
+
+Чтобы понимать алгоритм выполнения основных задач, ознакомьтесь с доступными SDK в разделе
+[**Языки программирования**](/invest/sdk/python_sdk/faq_python/).
+
+Также рекомендуем прочитать [статью о создании торгового робота](https://habr.com/ru/companies/tinkoff/articles/709166/) — в
+ней описаны популярные сценарии для пользователей T-Invest API.
+
+## Создать заявку на покупку или продажу инструмента
+
+Когда стратегия дает команду продавать или покупать, нужно создать заявку:
+
+1. Проверьте, существует ли позиция по бумаге, через метод [FindInstrument](/invest/services/instruments/head-instruments/#findinstrument).
+2. Проверьте статус торгового инструмента через метод [GetTradingStatus](/invest/services/quotes/marketdata/#gettradingstatus).
+3. Получите последние цены на инструмент через метод [GetLastPrice](/invest/services/quotes/marketdata#getlastprices).
+4. Получите параметр **min_price_increment** для расчета цены, которую можно выставить, через метод [GetInstrumentBy](/invest/services/instruments/head-instruments/#getinstrumentby).
+5. Проверьте свой счет в аккаунте.
+6. Выставите заявку через метод [PostOrder](/invest/services/orders/methods#postorder) и сохраните полученный параметр **order_id**.
+7. Получите список активных заявок через метод [GetOrders](/invest/services/orders/methods#getorders) и по параметру **order_id** проверьте, есть ли заявка в списке активных.
+
+Информацию об исполненной заявке можно получить через метод [GetOrderState](/invest/services/orders/methods#getorderstate) по параметру **order_id**.
+
+## Получить информации об аккаунте
+
+1. Вызовите метод [GetAccounts](/invest/services/accounts/users#getaccounts) для получения списка счетов, их статусов и типов.
+2. Вызовите метод [GetInfo](/invest/services/accounts/users#getinfo). С помощью него можно:
+
+    * определить наличие у пользователя статуса квалифицированного инвестора и премиального клиента;
+    * получить список типов инструментов, к которым пользователь имеет доступ по итогам тестирования. 
+   
+    Это помогает определить ограничения в торговле.
+
+3. Получите доступные лимиты через метод [GetInfo](/invest/services/accounts/users#getaccounts).
+4. Для торговли на срочном рынке периодически обновляйте информацию о маржинальных показателях счета через метод [GetMarginAttributes](/invest/services/accounts/users#getmarginattributes) по параметру **accountId**.
+
+## Найти базовый актив фьючерса
+
+Чтобы найти базовый актив фьючерса:
+
+1. Вызовите один из методов: [GetFutureBy](/invest/services/instruments/head-instruments/#futureby) или [GetFutures](/invest/services/instruments/head-instruments/#futures).
+2. Сохраните значение параметра `basic_asset_position_uid` — это уникальный идентификатор позиции основного инструмента.
+
+:::info
+Для поиска базового актива фьючерса можно также использовать метод [FindInstrument](/invest/services/instruments/head-instruments/#findinstrument) — в `query` передайте значение параметра **basic_asset_position_uid**, который возвращается в методах [GetFutureBy](/invest/services/instruments/head-instruments/#futureby) и [GetFutures](/invest/services/instruments/head-instruments/#futures).
+:::
+
+## Ошибки с сертификатом
+
+При работе с API могут возникнуть ошибки, связанные с сертификатом:
+
+* `the SSL connection could not be established`;
+* `failed to connect to all addresses`;
+* `handshake failed`;
+* `certificate verify failed`;
+    
+Взаимодействие с API предполагает наличие сертификатов НУЦ Минцифры РФ. Установить 
+сертификаты можно на [сайте Госуслуг](https://www.gosuslugi.ru/crt).
+
+### Импорт сертификатов в приложение
+
+<Accordion
+data={[
+    {
+content: (
+<div>
+Java требует, чтобы сертификаты были установлены непосредственно в JDK. Для этого:
+<ol>
+<li>Скачайте сертификаты Минцифры РФ с <a href="https://www.gosuslugi.ru/crt">сайта Госуслуг</a>.</li>
+<li>Откройте терминал от имени администратора и перейдите в bin директорию JDK, с которой хотите
+подключится к API. Например:
+<pre><code>{`cd "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.6.7-hotspot\\bin"`}
+</code></pre>
+</li>
+<li>С помощью <code>keytool</code> установите корневой сертификат:
+<pre><code>
+{`.\\keytool.exe -import -trustcacerts -cacerts -storepass changeit -alias russian-root -file "C:\\Users\\Aleksey\\Downloads\\windows_russian_trusted_root_ca\\russian_trusted_root_ca.cer"`}
+</code></pre>
+</li>
+<li>Ответьте <code>yes</code> на вопрос «Доверяете ли вы этому сертификату».</li>
+<li>Установите выпускающий сертификат:
+<pre><code> 
+{`.\\keytool.exe -import -trustcacerts -cacerts -storepass changeit -alias russian-sub -file "C:\\Users\\Aleksey\\Downloads\\russian_trusted_sub_ca\\russian_trusted_sub_ca.cer"`}
+</code></pre>
+</li>
+<li>Убедитесь, что сертификаты установились в JDK:
+<pre><code>
+{`.\\keytool.exe -list -cacerts`}
+</code></pre>
+</li>
+<li>Проверьте наличие записей в конце вывода:
+<pre><code>
+{`Certificate fingerprint (SHA-256):
+D2:6D:2D:02:31:B7:C3:9F:92:CC:73:85:12:BA:54:10:35:19:E4:40:5D:68:B5:BD:70:3E:97:88:CA:8E:CF:31
+russian-sub, 22 авг. 2025?г., trustedCertEntry,
+Certificate fingerprint (SHA-256):
+BB:BD:E2:10:3E:79:0B:99:9E:C6:2B:D0:3C:F6:25:A5:A2:E7:C3:16:E1:0A:FE:6A:49:0E:ED:EA:D8:B3:FD:9B`}
+</code></pre>
+</li>
+</ol>
+</div>
+),
+title: 'Java/Kotlin',
+},
+{
+content: (
+<div>
+<ol>
+<li>Скачайте <a href="/files/invest/russian_trusted_root_ca_pem.zip" target="_blank" download>корневые</a> и <a href="/files/invest/russian_trusted_sub_ca_pem.zip" target="_blank" download>выпускающие</a> сертификаты.</li>
+<li>Распакуйте архивы.</li>
+</ol>
+<p><strong>Windows</strong></p>
+<ol>
+<li>Откройте средство управления сертификатами.</li>
+<li>Нажмите Win + R, введите <code>certmgr.msc</code> и нажмите Enter.</li>
+<li>В левой панели выберите <strong>Доверенные корневые центры сертификации → Сертификаты</strong>.</li>
+<li>Нажмите правую кнопку мыши → <strong>Все задачи</strong> → <strong>Импорт</strong>.</li>
+<li>Следуйте мастеру импорта и укажите путь к <code>.cer</code> или <code>.crt</code> файлу.</li>
+<li><p>Завершите импорт — сертификат будет доверенным.</p>
+<p>Альтернатива: дважды нажмите на <code>.crt</code>-файл → <strong>Установить сертификат → Локальный компьютер → Поместить в следующее хранилище → Доверенные корневые центры сертификации</strong>.</p>
+</li>
+</ol>
+<p><strong>macOS</strong></p>
+<ol>
+<li>Откройте Keychain Access («Ассистент ключей») — можно найти через <code>Spotlight</code> (cmd + пробел и ввести <code>Keychain Access</code>).</li>
+<li>Перетащите <code>.crt</code> или <code>.pem</code>-файл в раздел <strong>System</strong> или <strong>Login</strong>.</li>
+<li>Дважды кликните на сертификат в хранилище.</li>
+<li>Разверните Trust и для <strong>SSL</strong> установите <strong>Always Trust</strong>.</li>
+<li>Закройте и введите пароль для сохранения изменений.</li>
+<li>Для системного доверия добавьте сертификат в System — для этого понадобятся права администратора.</li>
+</ol>
+<p><strong>Ubuntu и другие Linux-дистрибутивы на базе Debian/Ubuntu</strong></p>
+<ol>
+<li>Скопируйте сертификат в формате <code>.crt</code> в директорию: <code>sudo cp ваш_сертификат.crt /usr/local/share/ca-certificates/</code>.</li>
+<li><p>Обновите хранилище сертификатов: <code>sudo update-ca-certificates</code>.
+Сертификат будет добавлен в доверенные.</p>
+<p>Формат файла должен быть <code>.crt</code>. Если у вас <code>.pem</code>, переименуйте в <code>.crt</code>.</p>
+</li>
+</ol>
+</div>
+),
+title: 'JS',
+},
+]}
+onTitleClick={function noRefCheck(){}}
+size="m"
+scrollToActive={false}
+/>

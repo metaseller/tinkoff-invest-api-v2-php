@@ -1,0 +1,141 @@
+---
+sidebar_position: 1
+---
+
+import { Tabs } from "@/components/Tabs";
+import Accordion from '@platform-ui/accordion';
+
+# Начало работы
+
+## Что такое T-Invest API
+
+T-Invest API — это [gRPC-интерфейс](/invest/intro/developer/protocols/grpc) для взаимодействия с торговой платформой
+[Т-Инвестиции](https://www.tbank.ru/invest/). Все данные, предоставляемые T-Invest API, бесплатные.
+
+С помощью T-Invest API вы можете:
+
+- Выставлять все виды торговых поручений на биржи — лимитные, рыночные, стоп-заявки.
+- Получать рыночные данные, в том числе исторические, в виде стриминга и через Unary-запросы.
+- Получать информацию по своему портфелю и его доходности.
+- Проверять алгоритмы торговли на исторических данных. Механизм проверки теорий разрабатывается клиентом самостоятельно.
+
+## С чего начать
+
+Чтобы начать использовать T-Invest API, нужно:
+
+- Быть клиентом [Т-Инвестиций](https://www.tbank.ru/invest/).
+- Ознакомиться с [идентификаторами торговых инструментов](/invest/intro/intro/faq_identification/).
+- Выбрать подходящий [протокол взаимодействия](/invest/intro/developer/protocols/) и язык программирования. Для некоторых разработаны SDK для упрощения разработки: [Python](/invest/sdk/python_sdk/faq_python/), [Java](/invest/sdk/java_sdk), [С#](/invest/sdk/faq_csharp/), [Golang](/invest/sdk/faq_golang), [Kotlin](/invest/sdk/faq_kotlin).
+- Изучить раздел с [полезной информацией](/invest/intro/useful-info/algorithmic_trading).
+- Изучить [термины и параметры](/invest/intro/intro/glossary), которые используются в методах T-Invest API.
+- Посмотреть описание сервисов T-Invest API и ответы на часто задаваемые вопросы в разделе FAQ каждого сервиса.
+- Получить [токен доступа](/invest/intro/intro/token).
+
+[Подробнее о протоколе взаимодействия](/invest/intro/developer/protocols/grpc/)
+
+<Accordion
+data={[
+    {
+content: (
+<div>
+<ol>
+<li>Изучите раздел <a href="/invest/intro/intro"><strong>Начало работы</strong></a> — в нем собраны страницы с информацией, которая нужна для старта. Если встретите незнакомый термин, смотрите <a href="/invest/intro/intro/glossary">глоссарий</a> или воспользуйтесь поиском по документации.</li>
+<li>В разделе <a href="/invest/intro/intro"><strong>Начало работы</strong></a> обратите особое внимание на статьи:
+<ul>
+<li><a href="/invest/intro/useful-info/tech_indicators/">Идентификаторы торговых инструментов</a></li>
+<li><a href="/invest/intro/developer/protocols/">Доступные протоколы взаимодействия</a></li>
+<li><a href="/invest/intro/developer/protocols/grpc/">Настройка gRPC-клиента</a> — для тестирования методов</li>
+<li> <a href="/invest/intro/intro/robot_contest">Таблица конкурсных работ</a> — для вдохновения</li>
+</ul>
+</li>
+<li>Прочитайте ответы на популярные вопросы в <a href="/invest/intro/faq/">общем FAQ</a> и ознакомьтесь с разделом <a href="/invest/intro/useful-info"><strong>Полезная информация</strong></a>.</li>
+<li>Потренируйтесь в <a href="/invest/intro/developer/sandbox/">песочнице</a>.   </li>
+<li>Ознакомьтесь с доступными SDK для упрощения разработки:
+<ul>
+<li><a href="/invest/sdk/python_sdk/faq_python/">Python</a>, </li>
+<li><a href="/invest/sdk/java_sdk">Java</a>, </li>
+<li><a href="/invest/sdk/faq_csharp/">С#</a>, </li>
+<li><a href="/invest/sdk/faq_golang">Golang</a>, </li>
+<li><a href="/invest/sdk/faq_kotlin">Kotlin</a>.</li>
+</ul>
+</li>
+</ol>
+</div>
+),
+title: 'Если вы не работали с T-Invest API',
+},
+{
+content: (
+<div>
+<ol>
+<li>Изучите раздел <a href="/invest/intro/intro"><strong>Начало работы</strong></a> — в нем собраны страницы с информацией, которая нужна для старта. Если встретите незнакомый термин, смотрите <a href="/invest/intro/intro/glossary">глоссарий</a> или воспользуйтесь поиском по документации.</li>
+<li>
+В разделе <a href="/invest/intro/intro"><strong>Начало работы</strong></a> обратите особое внимание на статьи: 
+<ul>
+<li><a href="/invest/intro/useful-info/tech_indicators/">Идентификаторы торговых инструментов</a>- <a href="/invest/intro/developer/protocols/">Доступные протоколы взаимодействия</a> </li>
+<li><a href="/invest/intro/developer/protocols/grpc/">Настройка gRPC-клиента</a> — для тестирования методов</li>
+<li><a href="/invest/intro/intro/robot_contest">Таблица конкурсных работ</a> — для вдохновения</li>
+<li><a href="/invest/intro/intro/faq_custom_types">Нестандартные типы данных</a></li>
+<li><a href="/invest/intro/intro/faq_trading_status">Торговые статусы инструментов и расписания торгов</a></li>
+</ul>
+</li>
+<li>
+Прочитайте ответы на популярные вопросы в <a href="/invest/intro/faq/">общем FAQ</a> и ознакомьтесь с разделом <a href="/invest/intro/useful-info"><strong>Полезная информация</strong></a>.
+</li>
+<li>Потренируйтесь в <a href="/invest/intro/developer/sandbox/">песочнице</a>.   </li>
+<li>Ознакомьтесь с доступными SDK для упрощения разработки:
+<ul>
+<li><a href="/invest/sdk/python_sdk/faq_python/">Python</a>, </li>
+<li><a href="/invest/sdk/java_sdk">Java</a>, </li>
+<li><a href="/invest/sdk/faq_csharp/">С#</a>, </li>
+<li><a href="/invest/sdk/faq_golang">Golang</a>, </li>
+<li><a href="/invest/sdk/faq_kotlin">Kotlin</a>.</li>
+</ul>
+</li>
+</ol>
+</div>
+),
+title: 'Если вы не работали с T-Invest API, но чувствуете себя уверенно в предметной области',
+},
+{
+content: (
+<div>
+<ol>
+<li>Попробуйте воспользоваться поиском по документации. Если это не поможет найти ответ, определите категорию своего вопроса.</li>
+<li>Ответ на вопрос по конкретному сервису можно найти в разделах <strong>Описание</strong> и <strong>FAQ</strong> каждого сервиса. Также вы можете ознакомиться с <a href="/invest/intro/faq">общим FAQ</a>.      </li>
+<li>Если ваш вопрос связан с возникнувшей ошибкой, ознакомиться с ее описанием и методом устранения можно на <a href="/invest/intro/developer/error-codes/errors/">странице с кодами ошибок</a>. </li>
+<li>Если вы не нашли ответ на свой вопрос, его можно задать в issue на <a href="https://github.com/RussianInvestments/investAPI/tree/main/src/docs/contracts">официальном GitHub</a> или <a href="https://t.me/joinchat/VaW05CDzcSdsPULM">в Telegram-канале</a>.</li>
+<li>Если вы встретили неточность или хотите что-то дополнить, создайте pull request в нашем <a href="https://github.com/RussianInvestments/investAPI/tree/main/src/docs/contracts">официальном GitHub</a>.</li>
+</ol>
+</div>
+),
+title: ' Если вы уже пользователь и у вас появился вопрос',
+},
+]}
+onTitleClick={function noRefCheck(){}}
+size="m"
+scrollToActive={false}
+/>
+
+## Адреса сервиса
+
+- Prod-контур для вызова методов — `invest-public-api.tbank.ru:443`.
+
+- Песочница — `sandbox-invest-public-api.tbank.ru:443`.
+
+[Подробнее про различия работы контуров](/invest/intro/developer/sandbox/url_difference)
+
+## Protobuf-файлы
+
+[Скачать полный список прото-контрактов T-Invest API](https://github.com/RussianInvestments/investAPI/tree/main/src/docs/contracts)
+
+## SDK для разработки с использованием Public API
+
+Для упрощения разработки торгового робота разработан ряд официальных и неофициальных SDK на нескольких 
+языках программирования:
+
+- [Python](/invest/sdk/python_sdk/faq_python/)
+- [Java](/invest/sdk/java_sdk)
+- [C#](/invest/sdk/faq_csharp/)
+- [Golang](/invest/sdk/faq_golang)
+- [Kotlin](/invest/sdk/faq_kotlin)

@@ -1,0 +1,326 @@
+---
+sidebar_position: 2
+---
+
+import Button from '@platform-ui/button';
+
+# gRPC-методы
+
+С помощью методов сервиса можно получить:
+- список счетов пользователя;
+- маржинальные показатели по счету.
+
+Протестировать и отправить запросы можно через REST-методы.
+
+<Button
+   size="s"
+   href="/invest/api/users-service"
+>
+   REST-методы
+</Button>
+
+## Методы сервиса
+
+### GetAccounts
+Счета пользователя.
+
+- Тело запроса — [GetAccountsRequest](#getaccountsrequest)
+
+- Тело ответа — [GetAccountsResponse](#getaccountsresponse)
+
+### GetMarginAttributes
+Маржинальные показатели по счету.
+Метод позволяет получить маржинальные показатели и ликвидность по заданному счeту.
+
+- Тело запроса — [GetMarginAttributesRequest](#getmarginattributesrequest)
+
+- Тело ответа — [GetMarginAttributesResponse](#getmarginattributesresponse)
+
+
+### GetUserTariff
+Тариф пользователя.
+
+- Тело запроса — [GetUserTariffRequest](#getusertariffrequest)
+
+- Тело ответа — [GetUserTariffResponse](#getusertariffresponse)
+
+
+### GetInfo
+Информация о пользователе.
+
+- Тело запроса — [GetInfoRequest](#getinforequest)
+
+- Тело ответа — [GetInfoResponse](#getinforesponse)
+
+
+### GetBankAccounts
+GetBankAccounts — банковские счета пользователя.
+Получить список счетов пользователя, в том числе и банковских.
+
+- Тело запроса — [GetBankAccountsRequest](#getbankaccountsrequest)
+
+- Тело ответа — [GetBankAccountsResponse](#getbankaccountsresponse)
+
+
+### CurrencyTransfer
+CurrencyTransfer — перевод денежных средств между счетами.
+Перевести денежные средства между брокерскими счетами.
+
+- Тело запроса — [CurrencyTransferRequest](#currencytransferrequest)
+
+- Тело ответа — [CurrencyTransferResponse](#currencytransferresponse)
+
+
+### PayIn
+PayIn — пополнение брокерского счета
+Пополнить брокерский счёт с банковского
+
+- Тело запроса — [PayInRequest](#payinrequest)
+
+- Тело ответа — [PayInResponse](#payinresponse)
+
+
+## Сообщения методов
+
+
+
+### GetAccountsRequest
+Запрос получения счетов пользователя.
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| status |  [AccountStatus](#accountstatus) | Статус счета. |
+
+### GetAccountsResponse
+Список счетов пользователя.
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| accounts | Массив объектов [Account](#account) | Массив счетов клиента. |
+
+### Account
+Информация о счете.
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| id |  [string](#string) | Идентификатор счета. |
+| type |  [AccountType](#accounttype) | Тип счета. |
+| name |  [string](#string) | Название счета. |
+| status |  [AccountStatus](#accountstatus) | Статус счета. |
+| opened_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата открытия счета в часовом поясе UTC. |
+| closed_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата закрытия счета в часовом поясе UTC. |
+| access_level |  [AccessLevel](#accesslevel) | Уровень доступа к текущему счету (определяется токеном). |
+
+
+### GetMarginAttributesRequest
+Запрос маржинальных показателей по счету.
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| account_id |  [string](#string) | Идентификатор счета пользователя. |
+
+
+
+
+### GetMarginAttributesResponse
+Маржинальные показатели по счету.
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| liquid_portfolio |  [MoneyValue](#moneyvalue) | Ликвидная стоимость портфеля. [Подробнее про ликвидный портфель](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q4). |
+| starting_margin |  [MoneyValue](#moneyvalue) | Начальная маржа — начальное обеспечение для совершения новой сделки. [Подробнее про начальную и минимальную маржу](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q6). |
+| minimal_margin |  [MoneyValue](#moneyvalue) | Минимальная маржа — это минимальное обеспечение для поддержания позиции, которую вы уже открыли. [Подробнее про начальную и минимальную маржу](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q6). |
+| funds_sufficiency_level |  [Quotation](#quotation) | Уровень достаточности средств. Соотношение стоимости ликвидного портфеля к начальной марже. |
+| amount_of_missing_funds |  [MoneyValue](#moneyvalue) | Объем недостающих средств. Разница между стартовой маржой и ликвидной стоимости портфеля. |
+| corrected_margin |  [MoneyValue](#moneyvalue) | Скорректированная маржа. Начальная маржа, в которой плановые позиции рассчитываются с учетом активных заявок на покупку позиций лонг или продажу позиций шорт. |
+
+
+
+
+### GetUserTariffRequest
+Запрос текущих лимитов пользователя.
+
+
+
+
+### GetUserTariffResponse
+Текущие лимиты пользователя.
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| unary_limits | Массив объектов [UnaryLimit](#unarylimit) | Массив лимитов пользователя по unary-запросам. |
+| stream_limits | Массив объектов [StreamLimit](#streamlimit) | Массив лимитов пользователей для stream-соединений. |
+
+
+
+
+### UnaryLimit
+Лимит unary-методов.
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| limit_per_minute |  [int32](#int32) | Количество unary-запросов в минуту. |
+| methods | Массив объектов [string](#string) | Названия методов. |
+| limit_per_second |  [int32](#int32) | Количество unary-запросов в секунду. |
+
+
+
+
+### StreamLimit
+Лимит stream-соединений.
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| limit |  [int32](#int32) | Максимальное количество stream-соединений. |
+| streams | Массив объектов [string](#string) | Названия stream-методов. |
+| open |  [int32](#int32) | Текущее количество открытых stream-соединений. |
+
+
+
+
+### GetInfoRequest
+Запрос информации о пользователе.
+
+
+
+
+### GetInfoResponse
+Информация о пользователе.
+
+
+| Field | Type | Description                                                                                                                                         |
+| ----- | ---- |-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| prem_status |  [bool](#bool) | Признак премиум клиента.                                                                                                                            |
+| qual_status |  [bool](#bool) | Признак квалифицированного инвестора.                                                                                                               |
+| qualified_for_work_with | Массив объектов [string](#string) | Набор требующих тестирования инструментов и возможностей, с которыми может работать пользователь. [Подробнее](/invest/services/accounts/faq_users). |
+| tariff |  [string](#string) | Наименование тарифа пользователя.                                                                                                                   |
+| user_id |  [string](#string) | Идентификатор пользователя. |
+
+
+### GetBankAccountsRequest
+Запрос списка банковских счетов пользователя.
+
+
+
+### GetBankAccountsResponse
+Список банковских счетов пользователя.
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| bank_accounts | Массив объектов [BankAccount](#bankaccount) | Массив банковских счетов. |
+
+
+
+### BankAccount
+Банковский счeт.
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| id |  [string](#string) | Идентификатор счeта. |
+| name |  [string](#string) | Название счeта. |
+| money | Массив объектов [MoneyValue](#moneyvalue) | Список валютных позиций на счeте. |
+| opened_date |  [google.protobuf.Timestamp](#googleprotobuftimestamp) | Дата открытия счeта в часовом поясе UTC. |
+| type |  [AccountType](#accounttype) | Тип счeта. |
+
+
+
+### CurrencyTransferRequest
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| from_account_id |  [string](#string) | Номер счета списания. |
+| to_account_id |  [string](#string) | Номер счета зачисления. |
+| amount |  [MoneyValue](#moneyvalue) | Сумма перевода с указанием валюты. |
+| transaction_id |  [string](#string) | Идентификатор запроса выставления поручения для целей идемпотентности в формате UUID. |
+
+
+
+### CurrencyTransferResponse
+
+
+
+### PayInRequest
+
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| from_account_id |  [string](#string) | Номер счета списания. |
+| to_account_id |  [string](#string) | Номер брокерского счета зачисления. |
+| amount |  [MoneyValue](#moneyvalue) | Сумма перевода с указанием валюты. |
+
+
+### PayInResponse
+
+
+### Enums
+
+
+### AccountType
+Тип счета.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| ACCOUNT_TYPE_UNSPECIFIED | 0 | Тип аккаунта не определен. |
+| ACCOUNT_TYPE_TINKOFF | 1 | Брокерский счет Т-Инвестиций. |
+| ACCOUNT_TYPE_TINKOFF_IIS | 2 | ИИС. |
+| ACCOUNT_TYPE_INVEST_BOX | 3 | Инвесткопилка. |
+| ACCOUNT_TYPE_INVEST_FUND | 4 | Фонд денежного рынка. |
+
+
+
+
+### AccountStatus
+Статус счета.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| ACCOUNT_STATUS_UNSPECIFIED | 0 | Статус счета не определен. |
+| ACCOUNT_STATUS_NEW | 1 | Новый, в процессе открытия. |
+| ACCOUNT_STATUS_OPEN | 2 | Открытый и активный счет. |
+| ACCOUNT_STATUS_CLOSED | 3 | Закрытый счет. |
+| ACCOUNT_STATUS_ALL | 4 | Все счета. |
+
+
+
+
+### AccessLevel
+Уровень доступа к счету.
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| ACCOUNT_ACCESS_LEVEL_UNSPECIFIED | 0 | Уровень доступа не определен. |
+| ACCOUNT_ACCESS_LEVEL_FULL_ACCESS | 1 | Полный доступ к счету. |
+| ACCOUNT_ACCESS_LEVEL_READ_ONLY | 2 | Доступ с уровнем прав «только чтение». |
+| ACCOUNT_ACCESS_LEVEL_NO_ACCESS | 3 | Доступа нет. |
+
+### Нестандартные типы данных
+
+### MoneyValue
+Денежная сумма в определенной валюте
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| currency |  [string](#string) | Строковый ISO-код валюты |
+| units |  [int64](#int64) | Целая часть суммы, может быть отрицательным числом |
+| nano |  [int32](#int32) | Дробная часть суммы, может быть отрицательным числом |
+
+
+### Quotation
+Котировка — денежная сумма без указания валюты.
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| units |  [int64](#int64) | Целая часть суммы, может быть отрицательным числом |
+| nano |  [int32](#int32) | Дробная часть суммы, может быть отрицательным числом |
+

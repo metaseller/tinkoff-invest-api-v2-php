@@ -1,0 +1,10 @@
+---
+sidebar_position: 2
+---
+import { InstrumentsView } from './instruments-view'
+import BrowserOnly from "@docusaurus/BrowserOnly";
+
+# Акции
+<BrowserOnly>
+    {() => <InstrumentsView instrumentType={'share'}/>}
+</BrowserOnly>

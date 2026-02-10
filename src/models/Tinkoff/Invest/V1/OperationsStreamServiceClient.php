@@ -46,4 +46,19 @@ class OperationsStreamServiceClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * OperationsStream — стрим обновлений операций
+     * @param \Tinkoff\Invest\V1\OperationsStreamRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
+     */
+    public function OperationsStream(\Tinkoff\Invest\V1\OperationsStreamRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_serverStreamRequest('/tinkoff.public.invest.api.contract.v1.OperationsStreamService/OperationsStream',
+        $argument,
+        ['\Tinkoff\Invest\V1\OperationsStreamResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }

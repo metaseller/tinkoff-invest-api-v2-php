@@ -95,6 +95,12 @@ class OrderState extends \Google\Protobuf\Internal\Message
      */
     protected $account_id = '';
     /**
+     *Идентификатор торгового поручения.
+     *
+     * Generated from protobuf field <code>string trade_order_id = 14 [(.google.api.field_behavior) = REQUIRED];</code>
+     */
+    protected $trade_order_id = '';
+    /**
      *Начальная цена заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue initial_order_price = 22;</code>
@@ -211,6 +217,8 @@ class OrderState extends \Google\Protobuf\Internal\Message
      *          Тип заявки.
      *     @type string $account_id
      *          Номер счета.
+     *     @type string $trade_order_id
+     *          Идентификатор торгового поручения.
      *     @type \Tinkoff\Invest\V1\MoneyValue $initial_order_price
      *          Начальная цена заявки.
      *     @type \Tinkoff\Invest\V1\MoneyValue $order_price
@@ -610,6 +618,32 @@ class OrderState extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->account_id = $var;
+
+        return $this;
+    }
+
+    /**
+     *Идентификатор торгового поручения.
+     *
+     * Generated from protobuf field <code>string trade_order_id = 14 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return string
+     */
+    public function getTradeOrderId()
+    {
+        return $this->trade_order_id;
+    }
+
+    /**
+     *Идентификатор торгового поручения.
+     *
+     * Generated from protobuf field <code>string trade_order_id = 14 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTradeOrderId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->trade_order_id = $var;
 
         return $this;
     }
