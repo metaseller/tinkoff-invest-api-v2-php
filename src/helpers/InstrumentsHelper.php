@@ -76,7 +76,7 @@ class InstrumentsHelper
             return false;
         }
 
-        if ($check_trading_status && !$instrument->getTradingStatus() !== SecurityTradingStatus::SECURITY_TRADING_STATUS_NORMAL_TRADING) {
+        if ($check_trading_status && $instrument->getTradingStatus() !== SecurityTradingStatus::SECURITY_TRADING_STATUS_NORMAL_TRADING) {
             return false;
         }
 
