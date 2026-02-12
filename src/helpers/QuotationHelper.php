@@ -45,13 +45,13 @@ class QuotationHelper
         }
 
         if ($price instanceof Quotation || $price instanceof MoneyValue) {
-            $instrument_price = intval(Price::BROKER_PRECISION_MULTIPLIER * ($price->getUnits() ?: 0) + ($price->getNano() ?: 0));
-            $instrument_min_price_increment = intval(Price::BROKER_PRECISION_MULTIPLIER * ($min_price_increment->getUnits() ?: 0) + ($min_price_increment->getNano() ?: 0));
+            $instrument_price = static::floatToInteger(Price::BROKER_PRECISION_MULTIPLIER * ($price->getUnits() ?: 0) + ($price->getNano() ?: 0));
+            $instrument_min_price_increment = static::floatToInteger(Price::BROKER_PRECISION_MULTIPLIER * ($min_price_increment->getUnits() ?: 0) + ($min_price_increment->getNano() ?: 0));
 
             return ($instrument_price % $instrument_min_price_increment) == 0;
         } elseif (is_numeric($price)) {
-            $instrument_price = intval(Price::BROKER_PRECISION_MULTIPLIER * round((float) $price, Price::BROKER_PRECISION));
-            $instrument_min_price_increment = intval(Price::BROKER_PRECISION_MULTIPLIER * ($min_price_increment->getUnits() ?: 0) + ($min_price_increment->getNano() ?: 0));
+            $instrument_price = static::floatToInteger(Price::BROKER_PRECISION_MULTIPLIER * round((float) $price, Price::BROKER_PRECISION));
+            $instrument_min_price_increment = static::floatToInteger(Price::BROKER_PRECISION_MULTIPLIER * ($min_price_increment->getUnits() ?: 0) + ($min_price_increment->getNano() ?: 0));
 
             return ($instrument_price % $instrument_min_price_increment) == 0;
         }
@@ -150,12 +150,24 @@ class QuotationHelper
     {
         $quotation = new Quotation();
 
-        $units = intval($price);
-        $nano = intval(round(($price - $units) * Price::BROKER_PRECISION_MULTIPLIER));
+        $units = static::floatToInteger($price);
+        $nano = static::floatToInteger(round(($price - $units) * Price::BROKER_PRECISION_MULTIPLIER));
 
         $quotation->setUnits($units);
         $quotation->setNano($nano);
 
         return $quotation;
+    }
+
+    /**
+     * Перевод float в int
+     *
+     * @param float $price Число в формате float
+     *
+     * @return int Число в формате int
+     */
+    public static function floatToInteger(float $price): int
+    {
+        return intval(strval(round($price, Price::BROKER_PRECISION_MULTIPLIER)));
     }
 }

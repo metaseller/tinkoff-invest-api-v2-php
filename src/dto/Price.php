@@ -3,6 +3,7 @@
 namespace Metaseller\TinkoffInvestApi2\dto;
 
 use Metaseller\TinkoffInvestApi2\helpers\NumbersHelper;
+use Metaseller\TinkoffInvestApi2\helpers\QuotationHelper;
 use Tinkoff\Invest\V1\MoneyValue;
 use Tinkoff\Invest\V1\Quotation;
 
@@ -58,7 +59,7 @@ class Price extends Quantity
         $this->_value_as_quotation->setUnits($value->getUnits() ?: 0);
         $this->_value_as_quotation->setNano($value->getNano() ?: 0);
 
-        $this->_value_as_integer = intval(static::BROKER_PRECISION_MULTIPLIER * ($value->getUnits() ?: 0) + ($value->getNano() ?: 0));
+        $this->_value_as_integer = QuotationHelper::floatToInteger(static::BROKER_PRECISION_MULTIPLIER * ($value->getUnits() ?: 0) + ($value->getNano() ?: 0));
         $this->_value_as_decimal = round((float) $this->_value_as_integer / static::BROKER_PRECISION_MULTIPLIER, static::BROKER_PRECISION);
 
         $this->_currency = $value->getCurrency();
