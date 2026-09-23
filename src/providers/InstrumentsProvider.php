@@ -1428,12 +1428,6 @@ class InstrumentsProvider extends BaseDataProvider
     /**
      * Метод запрашивает через запрос к API справочник всех облигаций и кеширует загруженный список в текущий экземпляр провайдера
      *
-     * При попытке загрузки инструментов T-Invest API уперлись в установленный ранее лимит
-     * <pre>
-     *     {"x-tracking-id":null,"code":8,"details":"CLIENT: Received message larger than max (8399159 vs. 8388608)","message":null}
-     * </pre>
-     * Теперь запрашиваются только инструменты со статусом {@link InstrumentStatus::INSTRUMENT_STATUS_BASE}
-     *
      * @return Bond[] Массив загруженных инструментов
      *
      * @throws Exception
@@ -1443,7 +1437,7 @@ class InstrumentsProvider extends BaseDataProvider
     protected function loadAllBonds(): array
     {
         $instruments_request = new InstrumentsRequest();
-        $instruments_request->setInstrumentStatus(InstrumentStatus::INSTRUMENT_STATUS_BASE);
+        $instruments_request->setInstrumentStatus(InstrumentStatus::INSTRUMENT_STATUS_ALL);
 
         $clients_factory = $this->getClientsFactory();
 
