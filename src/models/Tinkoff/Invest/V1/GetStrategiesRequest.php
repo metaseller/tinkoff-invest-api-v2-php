@@ -33,7 +33,8 @@ class GetStrategiesRequest extends \Google\Protobuf\Internal\Message
      *          Идентификатор стратегии.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Signals::initOnce();
         parent::__construct($data);
     }
@@ -66,9 +67,9 @@ class GetStrategiesRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setStrategyId($var)
+    public function setStrategyId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->strategy_id = $var;
 
         return $this;

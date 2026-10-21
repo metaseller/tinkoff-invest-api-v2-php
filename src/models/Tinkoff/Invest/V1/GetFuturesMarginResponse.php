@@ -57,7 +57,8 @@ class GetFuturesMarginResponse extends \Google\Protobuf\Internal\Message
      *          Стоимость шага цены.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -90,9 +91,8 @@ class GetFuturesMarginResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setInitialMarginOnBuy($var)
+    public function setInitialMarginOnBuy(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->initial_margin_on_buy = $var;
 
         return $this;
@@ -126,9 +126,8 @@ class GetFuturesMarginResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setInitialMarginOnSell($var)
+    public function setInitialMarginOnSell(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->initial_margin_on_sell = $var;
 
         return $this;
@@ -162,9 +161,8 @@ class GetFuturesMarginResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setMinPriceIncrement($var)
+    public function setMinPriceIncrement(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->min_price_increment = $var;
 
         return $this;
@@ -198,9 +196,8 @@ class GetFuturesMarginResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setMinPriceIncrementAmount($var)
+    public function setMinPriceIncrementAmount(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->min_price_increment_amount = $var;
 
         return $this;

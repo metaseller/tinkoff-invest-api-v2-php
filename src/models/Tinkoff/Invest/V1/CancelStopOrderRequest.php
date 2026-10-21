@@ -41,7 +41,8 @@ class CancelStopOrderRequest extends \Google\Protobuf\Internal\Message
      *          Уникальный идентификатор стоп-заявки.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Stoporders::initOnce();
         parent::__construct($data);
     }
@@ -64,9 +65,9 @@ class CancelStopOrderRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setAccountId($var)
+    public function setAccountId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->account_id = $var;
 
         return $this;
@@ -90,9 +91,9 @@ class CancelStopOrderRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setStopOrderId($var)
+    public function setStopOrderId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->stop_order_id = $var;
 
         return $this;

@@ -57,7 +57,8 @@ class OrderStage extends \Google\Protobuf\Internal\Message
      *          Время исполнения сделки
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Orders::initOnce();
         parent::__construct($data);
     }
@@ -90,9 +91,8 @@ class OrderStage extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setPrice($var)
+    public function setPrice(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->price = $var;
 
         return $this;
@@ -116,7 +116,7 @@ class OrderStage extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setQuantity($var)
+    public function setQuantity(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->quantity = $var;
@@ -142,9 +142,9 @@ class OrderStage extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTradeId($var)
+    public function setTradeId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->trade_id = $var;
 
         return $this;
@@ -178,9 +178,8 @@ class OrderStage extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setExecutionTime($var)
+    public function setExecutionTime(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->execution_time = $var;
 
         return $this;

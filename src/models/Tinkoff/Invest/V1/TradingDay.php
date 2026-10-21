@@ -153,7 +153,8 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      *           Торговые интервалы.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -186,9 +187,8 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setDate($var)
+    public function setDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->date = $var;
 
         return $this;
@@ -212,9 +212,8 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setIsTradingDay($var)
+    public function setIsTradingDay(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->is_trading_day = $var;
 
         return $this;
@@ -248,9 +247,8 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setStartTime($var)
+    public function setStartTime(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->start_time = $var;
 
         return $this;
@@ -284,9 +282,8 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setEndTime($var)
+    public function setEndTime(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->end_time = $var;
 
         return $this;
@@ -320,9 +317,8 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setOpeningAuctionStartTime($var)
+    public function setOpeningAuctionStartTime(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->opening_auction_start_time = $var;
 
         return $this;
@@ -356,9 +352,8 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setClosingAuctionEndTime($var)
+    public function setClosingAuctionEndTime(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->closing_auction_end_time = $var;
 
         return $this;
@@ -392,9 +387,8 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setEveningOpeningAuctionStartTime($var)
+    public function setEveningOpeningAuctionStartTime(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->evening_opening_auction_start_time = $var;
 
         return $this;
@@ -428,9 +422,8 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setEveningStartTime($var)
+    public function setEveningStartTime(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->evening_start_time = $var;
 
         return $this;
@@ -464,9 +457,8 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setEveningEndTime($var)
+    public function setEveningEndTime(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->evening_end_time = $var;
 
         return $this;
@@ -500,9 +492,8 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setClearingStartTime($var)
+    public function setClearingStartTime(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->clearing_start_time = $var;
 
         return $this;
@@ -536,9 +527,8 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setClearingEndTime($var)
+    public function setClearingEndTime(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->clearing_end_time = $var;
 
         return $this;
@@ -572,9 +562,8 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setPremarketStartTime($var)
+    public function setPremarketStartTime(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->premarket_start_time = $var;
 
         return $this;
@@ -608,9 +597,8 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setPremarketEndTime($var)
+    public function setPremarketEndTime(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->premarket_end_time = $var;
 
         return $this;
@@ -644,9 +632,8 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setClosingAuctionStartTime($var)
+    public function setClosingAuctionStartTime(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->closing_auction_start_time = $var;
 
         return $this;
@@ -680,9 +667,8 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setOpeningAuctionEndTime($var)
+    public function setOpeningAuctionEndTime(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->opening_auction_end_time = $var;
 
         return $this;
@@ -706,7 +692,7 @@ class TradingDay extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\TradingInterval[] $var
      * @return $this
      */
-    public function setIntervals($var)
+    public function setIntervals(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\TradingInterval::class);
         $this->intervals = $arr;

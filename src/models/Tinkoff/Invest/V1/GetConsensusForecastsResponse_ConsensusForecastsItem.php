@@ -11,6 +11,6 @@ if (false) {
      */
     class GetConsensusForecastsResponse_ConsensusForecastsItem {}
 }
-class_exists(GetConsensusForecastsResponse\ConsensusForecastsItem::class);
+class_alias(GetConsensusForecastsResponse\ConsensusForecastsItem::class, GetConsensusForecastsResponse_ConsensusForecastsItem::class);
 @trigger_error('Tinkoff\Invest\V1\GetConsensusForecastsResponse_ConsensusForecastsItem is deprecated and will be removed in the next major release. Use Tinkoff\Invest\V1\GetConsensusForecastsResponse\ConsensusForecastsItem instead', E_USER_DEPRECATED);
 

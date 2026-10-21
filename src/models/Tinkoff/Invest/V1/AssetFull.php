@@ -156,7 +156,8 @@ class AssetFull extends \Google\Protobuf\Internal\Message
      *          Массив идентификаторов инструментов.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -179,9 +180,9 @@ class AssetFull extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setUid($var)
+    public function setUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->uid = $var;
 
         return $this;
@@ -191,7 +192,7 @@ class AssetFull extends \Google\Protobuf\Internal\Message
      *Тип актива.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AssetType type = 2;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\AssetType}
      */
     public function getType()
     {
@@ -202,10 +203,10 @@ class AssetFull extends \Google\Protobuf\Internal\Message
      *Тип актива.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AssetType type = 2;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\AssetType}
      * @return $this
      */
-    public function setType($var)
+    public function setType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\AssetType::class);
         $this->type = $var;
@@ -231,9 +232,9 @@ class AssetFull extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setName($var)
+    public function setName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->name = $var;
 
         return $this;
@@ -257,9 +258,9 @@ class AssetFull extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setNameBrief($var)
+    public function setNameBrief(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->name_brief = $var;
 
         return $this;
@@ -283,9 +284,9 @@ class AssetFull extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setDescription($var)
+    public function setDescription(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->description = $var;
 
         return $this;
@@ -319,9 +320,8 @@ class AssetFull extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setDeletedAt($var)
+    public function setDeletedAt(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->deleted_at = $var;
 
         return $this;
@@ -345,7 +345,7 @@ class AssetFull extends \Google\Protobuf\Internal\Message
      * @param string[] $var
      * @return $this
      */
-    public function setRequiredTests($var)
+    public function setRequiredTests(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->required_tests = $arr;
@@ -376,9 +376,8 @@ class AssetFull extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\AssetCurrency $var
      * @return $this
      */
-    public function setCurrency($var)
+    public function setCurrency(\Tinkoff\Invest\V1\AssetCurrency|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\AssetCurrency::class);
         $this->writeOneof(8, $var);
 
         return $this;
@@ -407,9 +406,8 @@ class AssetFull extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\AssetSecurity $var
      * @return $this
      */
-    public function setSecurity($var)
+    public function setSecurity(\Tinkoff\Invest\V1\AssetSecurity|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\AssetSecurity::class);
         $this->writeOneof(9, $var);
 
         return $this;
@@ -433,9 +431,9 @@ class AssetFull extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setGosRegCode($var)
+    public function setGosRegCode(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->gos_reg_code = $var;
 
         return $this;
@@ -459,9 +457,9 @@ class AssetFull extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCfi($var)
+    public function setCfi(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->cfi = $var;
 
         return $this;
@@ -485,9 +483,9 @@ class AssetFull extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCodeNsd($var)
+    public function setCodeNsd(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->code_nsd = $var;
 
         return $this;
@@ -511,9 +509,9 @@ class AssetFull extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setStatus($var)
+    public function setStatus(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->status = $var;
 
         return $this;
@@ -547,9 +545,8 @@ class AssetFull extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Brand $var
      * @return $this
      */
-    public function setBrand($var)
+    public function setBrand(\Tinkoff\Invest\V1\Brand|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Brand::class);
         $this->brand = $var;
 
         return $this;
@@ -583,9 +580,8 @@ class AssetFull extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setUpdatedAt($var)
+    public function setUpdatedAt(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->updated_at = $var;
 
         return $this;
@@ -609,9 +605,9 @@ class AssetFull extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setBrCode($var)
+    public function setBrCode(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->br_code = $var;
 
         return $this;
@@ -635,9 +631,9 @@ class AssetFull extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setBrCodeName($var)
+    public function setBrCodeName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->br_code_name = $var;
 
         return $this;
@@ -661,7 +657,7 @@ class AssetFull extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\AssetInstrument[] $var
      * @return $this
      */
-    public function setInstruments($var)
+    public function setInstruments(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\AssetInstrument::class);
         $this->instruments = $arr;

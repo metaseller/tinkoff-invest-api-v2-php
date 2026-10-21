@@ -49,7 +49,8 @@ class UnaryLimit extends \Google\Protobuf\Internal\Message
      *          Количество unary-запросов в секунду.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Users::initOnce();
         parent::__construct($data);
     }
@@ -72,7 +73,7 @@ class UnaryLimit extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setLimitPerMinute($var)
+    public function setLimitPerMinute(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->limit_per_minute = $var;
@@ -98,7 +99,7 @@ class UnaryLimit extends \Google\Protobuf\Internal\Message
      * @param string[] $var
      * @return $this
      */
-    public function setMethods($var)
+    public function setMethods(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->methods = $arr;
@@ -134,7 +135,7 @@ class UnaryLimit extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setLimitPerSecond($var)
+    public function setLimitPerSecond(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->limit_per_second = $var;

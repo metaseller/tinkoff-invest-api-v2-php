@@ -49,7 +49,8 @@ class PostStopOrderResponse extends \Google\Protobuf\Internal\Message
      *          Метадата.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Stoporders::initOnce();
         parent::__construct($data);
     }
@@ -72,9 +73,9 @@ class PostStopOrderResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setStopOrderId($var)
+    public function setStopOrderId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->stop_order_id = $var;
 
         return $this;
@@ -98,9 +99,9 @@ class PostStopOrderResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setOrderRequestId($var)
+    public function setOrderRequestId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->order_request_id = $var;
 
         return $this;
@@ -134,9 +135,8 @@ class PostStopOrderResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\ResponseMetadata $var
      * @return $this
      */
-    public function setResponseMetadata($var)
+    public function setResponseMetadata(\Tinkoff\Invest\V1\ResponseMetadata|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\ResponseMetadata::class);
         $this->response_metadata = $var;
 
         return $this;

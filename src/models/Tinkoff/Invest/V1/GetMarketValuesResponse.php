@@ -31,7 +31,8 @@ class GetMarketValuesResponse extends \Google\Protobuf\Internal\Message
      *          Массив значений параметров.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Marketdata::initOnce();
         parent::__construct($data);
     }
@@ -54,7 +55,7 @@ class GetMarketValuesResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MarketValueInstrument[] $var
      * @return $this
      */
-    public function setInstruments($var)
+    public function setInstruments(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\MarketValueInstrument::class);
         $this->instruments = $arr;

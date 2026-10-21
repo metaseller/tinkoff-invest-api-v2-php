@@ -11,6 +11,6 @@ if (false) {
      */
     class StructuredNote_ObservationPrinciple {}
 }
-class_exists(StructuredNote\ObservationPrinciple::class);
+class_alias(StructuredNote\ObservationPrinciple::class, StructuredNote_ObservationPrinciple::class);
 @trigger_error('Tinkoff\Invest\V1\StructuredNote_ObservationPrinciple is deprecated and will be removed in the next major release. Use Tinkoff\Invest\V1\StructuredNote\ObservationPrinciple instead', E_USER_DEPRECATED);
 

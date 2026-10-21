@@ -39,7 +39,8 @@ class GetMarketValuesRequest extends \Google\Protobuf\Internal\Message
      *          Массив запрашиваемых параметров.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Marketdata::initOnce();
         parent::__construct($data);
     }
@@ -62,7 +63,7 @@ class GetMarketValuesRequest extends \Google\Protobuf\Internal\Message
      * @param string[] $var
      * @return $this
      */
-    public function setInstrumentId($var)
+    public function setInstrumentId(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->instrument_id = $arr;
@@ -74,7 +75,7 @@ class GetMarketValuesRequest extends \Google\Protobuf\Internal\Message
      *Массив запрашиваемых параметров.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.MarketValueType values = 2;</code>
-     * @return RepeatedField<int>
+     * @return RepeatedField<int> one of the values in {@see \Tinkoff\Invest\V1\MarketValueType}
      */
     public function getValues()
     {
@@ -85,10 +86,10 @@ class GetMarketValuesRequest extends \Google\Protobuf\Internal\Message
      *Массив запрашиваемых параметров.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.MarketValueType values = 2;</code>
-     * @param int[] $var
+     * @param int[] $var one of the values in {@see \Tinkoff\Invest\V1\MarketValueType}
      * @return $this
      */
-    public function setValues($var)
+    public function setValues(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::ENUM, \Tinkoff\Invest\V1\MarketValueType::class);
         $this->values = $arr;

@@ -121,7 +121,8 @@ class Strategy extends \Google\Protobuf\Internal\Message
      *          Доходность стратегии за последний год.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Signals::initOnce();
         parent::__construct($data);
     }
@@ -144,9 +145,9 @@ class Strategy extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setStrategyId($var)
+    public function setStrategyId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->strategy_id = $var;
 
         return $this;
@@ -170,9 +171,9 @@ class Strategy extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setStrategyName($var)
+    public function setStrategyName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->strategy_name = $var;
 
         return $this;
@@ -206,9 +207,9 @@ class Strategy extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setStrategyDescription($var)
+    public function setStrategyDescription(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->strategy_description = $var;
 
         return $this;
@@ -242,9 +243,9 @@ class Strategy extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setStrategyUrl($var)
+    public function setStrategyUrl(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->strategy_url = $var;
 
         return $this;
@@ -254,7 +255,7 @@ class Strategy extends \Google\Protobuf\Internal\Message
      *Тип стратегии.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StrategyType strategy_type = 5 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\StrategyType}
      */
     public function getStrategyType()
     {
@@ -265,10 +266,10 @@ class Strategy extends \Google\Protobuf\Internal\Message
      *Тип стратегии.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StrategyType strategy_type = 5 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\StrategyType}
      * @return $this
      */
-    public function setStrategyType($var)
+    public function setStrategyType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\StrategyType::class);
         $this->strategy_type = $var;
@@ -294,7 +295,7 @@ class Strategy extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setActiveSignals($var)
+    public function setActiveSignals(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->active_signals = $var;
@@ -320,7 +321,7 @@ class Strategy extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setTotalSignals($var)
+    public function setTotalSignals(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->total_signals = $var;
@@ -346,7 +347,7 @@ class Strategy extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setTimeInPosition($var)
+    public function setTimeInPosition(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->time_in_position = $var;
@@ -382,9 +383,8 @@ class Strategy extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setAverageSignalYield($var)
+    public function setAverageSignalYield(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->average_signal_yield = $var;
 
         return $this;
@@ -418,9 +418,8 @@ class Strategy extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setAverageSignalYieldYear($var)
+    public function setAverageSignalYieldYear(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->average_signal_yield_year = $var;
 
         return $this;
@@ -454,9 +453,8 @@ class Strategy extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setYield($var)
+    public function setYield(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->yield = $var;
 
         return $this;
@@ -490,9 +488,8 @@ class Strategy extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setYieldYear($var)
+    public function setYieldYear(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->yield_year = $var;
 
         return $this;

@@ -33,7 +33,8 @@ class GetOrdersResponse extends \Google\Protobuf\Internal\Message
      *          Массив активных заявок.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Orders::initOnce();
         parent::__construct($data);
     }
@@ -56,7 +57,7 @@ class GetOrdersResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\OrderState[] $var
      * @return $this
      */
-    public function setOrders($var)
+    public function setOrders(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\OrderState::class);
         $this->orders = $arr;

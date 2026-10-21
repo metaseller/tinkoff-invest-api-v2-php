@@ -73,7 +73,8 @@ class GetAssetReportsEvent extends \Google\Protobuf\Internal\Message
      *           Дата создания записи.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -96,9 +97,9 @@ class GetAssetReportsEvent extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setInstrumentId($var)
+    public function setInstrumentId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->instrument_id = $var;
 
         return $this;
@@ -132,9 +133,8 @@ class GetAssetReportsEvent extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setReportDate($var)
+    public function setReportDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->report_date = $var;
 
         return $this;
@@ -158,7 +158,7 @@ class GetAssetReportsEvent extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setPeriodYear($var)
+    public function setPeriodYear(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->period_year = $var;
@@ -184,7 +184,7 @@ class GetAssetReportsEvent extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setPeriodNum($var)
+    public function setPeriodNum(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->period_num = $var;
@@ -196,7 +196,7 @@ class GetAssetReportsEvent extends \Google\Protobuf\Internal\Message
      * Тип отчета.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetAssetReportsResponse.AssetReportPeriodType period_type = 5;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\GetAssetReportsResponse\AssetReportPeriodType}
      */
     public function getPeriodType()
     {
@@ -207,10 +207,10 @@ class GetAssetReportsEvent extends \Google\Protobuf\Internal\Message
      * Тип отчета.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetAssetReportsResponse.AssetReportPeriodType period_type = 5;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\GetAssetReportsResponse\AssetReportPeriodType}
      * @return $this
      */
-    public function setPeriodType($var)
+    public function setPeriodType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\GetAssetReportsResponse\AssetReportPeriodType::class);
         $this->period_type = $var;
@@ -246,9 +246,8 @@ class GetAssetReportsEvent extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setCreatedAt($var)
+    public function setCreatedAt(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->created_at = $var;
 
         return $this;

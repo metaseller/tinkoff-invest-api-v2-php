@@ -41,7 +41,8 @@ class OrderStateStreamRequest extends \Google\Protobuf\Internal\Message
      *          Задержка (пинг) сообщений:  1000-120 000 миллисекунд. Значение по умолчанию — 120 000.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Orders::initOnce();
         parent::__construct($data);
     }
@@ -64,7 +65,7 @@ class OrderStateStreamRequest extends \Google\Protobuf\Internal\Message
      * @param string[] $var
      * @return $this
      */
-    public function setAccounts($var)
+    public function setAccounts(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->accounts = $arr;
@@ -100,7 +101,7 @@ class OrderStateStreamRequest extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setPingDelayMillis($var)
+    public function setPingDelayMillis(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->ping_delay_millis = $var;

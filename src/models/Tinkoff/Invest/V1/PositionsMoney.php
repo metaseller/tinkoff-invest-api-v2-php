@@ -41,7 +41,8 @@ class PositionsMoney extends \Google\Protobuf\Internal\Message
      *          Заблокированное количество валютных позиций.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Operations::initOnce();
         parent::__construct($data);
     }
@@ -74,9 +75,8 @@ class PositionsMoney extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setAvailableValue($var)
+    public function setAvailableValue(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->available_value = $var;
 
         return $this;
@@ -110,9 +110,8 @@ class PositionsMoney extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setBlockedValue($var)
+    public function setBlockedValue(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->blocked_value = $var;
 
         return $this;

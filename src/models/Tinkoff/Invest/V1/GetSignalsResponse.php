@@ -41,7 +41,8 @@ class GetSignalsResponse extends \Google\Protobuf\Internal\Message
      *          Данные по пагинации.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Signals::initOnce();
         parent::__construct($data);
     }
@@ -64,7 +65,7 @@ class GetSignalsResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Signal[] $var
      * @return $this
      */
-    public function setSignals($var)
+    public function setSignals(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\Signal::class);
         $this->signals = $arr;
@@ -100,9 +101,8 @@ class GetSignalsResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\PageResponse $var
      * @return $this
      */
-    public function setPaging($var)
+    public function setPaging(\Tinkoff\Invest\V1\PageResponse|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\PageResponse::class);
         $this->paging = $var;
 
         return $this;

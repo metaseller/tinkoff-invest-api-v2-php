@@ -41,7 +41,8 @@ class SubscribeLastPriceRequest extends \Google\Protobuf\Internal\Message
      *          Массив инструментов для подписки на цену последней сделки.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Marketdata::initOnce();
         parent::__construct($data);
     }
@@ -50,7 +51,7 @@ class SubscribeLastPriceRequest extends \Google\Protobuf\Internal\Message
      *Изменение статуса подписки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionAction subscription_action = 1;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\SubscriptionAction}
      */
     public function getSubscriptionAction()
     {
@@ -61,10 +62,10 @@ class SubscribeLastPriceRequest extends \Google\Protobuf\Internal\Message
      *Изменение статуса подписки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionAction subscription_action = 1;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\SubscriptionAction}
      * @return $this
      */
-    public function setSubscriptionAction($var)
+    public function setSubscriptionAction(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\SubscriptionAction::class);
         $this->subscription_action = $var;
@@ -90,7 +91,7 @@ class SubscribeLastPriceRequest extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\LastPriceInstrument[] $var
      * @return $this
      */
-    public function setInstruments($var)
+    public function setInstruments(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\LastPriceInstrument::class);
         $this->instruments = $arr;

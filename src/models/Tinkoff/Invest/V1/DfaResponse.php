@@ -233,7 +233,8 @@ class DfaResponse extends \Google\Protobuf\Internal\Message
      *           Значение НКД (накопленного купонного дохода) на дату.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -256,9 +257,9 @@ class DfaResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setUid($var)
+    public function setUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->uid = $var;
 
         return $this;
@@ -282,9 +283,9 @@ class DfaResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTicker($var)
+    public function setTicker(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->ticker = $var;
 
         return $this;
@@ -308,9 +309,9 @@ class DfaResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setName($var)
+    public function setName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->name = $var;
 
         return $this;
@@ -334,9 +335,9 @@ class DfaResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setPositionUid($var)
+    public function setPositionUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->position_uid = $var;
 
         return $this;
@@ -370,9 +371,8 @@ class DfaResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setMinPriceIncrement($var)
+    public function setMinPriceIncrement(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->min_price_increment = $var;
 
         return $this;
@@ -396,7 +396,7 @@ class DfaResponse extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setLot($var)
+    public function setLot(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->lot = $var;
@@ -432,9 +432,8 @@ class DfaResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setNominal($var)
+    public function setNominal(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->nominal = $var;
 
         return $this;
@@ -458,9 +457,9 @@ class DfaResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCurrency($var)
+    public function setCurrency(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->currency = $var;
 
         return $this;
@@ -494,9 +493,8 @@ class DfaResponse extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setMaturityDate($var)
+    public function setMaturityDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->maturity_date = $var;
 
         return $this;
@@ -520,9 +518,8 @@ class DfaResponse extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setShortEnabledFlag($var)
+    public function setShortEnabledFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->short_enabled_flag = $var;
 
         return $this;
@@ -546,9 +543,8 @@ class DfaResponse extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setApiTradeAvailableFlag($var)
+    public function setApiTradeAvailableFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->api_trade_available_flag = $var;
 
         return $this;
@@ -572,9 +568,8 @@ class DfaResponse extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setBuyAvailableFlag($var)
+    public function setBuyAvailableFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->buy_available_flag = $var;
 
         return $this;
@@ -598,9 +593,8 @@ class DfaResponse extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setSellAvailableFlag($var)
+    public function setSellAvailableFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->sell_available_flag = $var;
 
         return $this;
@@ -624,9 +618,8 @@ class DfaResponse extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setLimitOrderAvailableFlag($var)
+    public function setLimitOrderAvailableFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->limit_order_available_flag = $var;
 
         return $this;
@@ -650,9 +643,8 @@ class DfaResponse extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setMarketOrderAvailableFlag($var)
+    public function setMarketOrderAvailableFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->market_order_available_flag = $var;
 
         return $this;
@@ -676,9 +668,8 @@ class DfaResponse extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setBestpriceOrderAvailableFlag($var)
+    public function setBestpriceOrderAvailableFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->bestprice_order_available_flag = $var;
 
         return $this;
@@ -702,9 +693,8 @@ class DfaResponse extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setForIisFlag($var)
+    public function setForIisFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->for_iis_flag = $var;
 
         return $this;
@@ -728,9 +718,8 @@ class DfaResponse extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setForQualInvestorFlag($var)
+    public function setForQualInvestorFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->for_qual_investor_flag = $var;
 
         return $this;
@@ -754,9 +743,9 @@ class DfaResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setType($var)
+    public function setType(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->type = $var;
 
         return $this;
@@ -780,7 +769,7 @@ class DfaResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\DfaResponse\BasicAsset[] $var
      * @return $this
      */
-    public function setBasicAssets($var)
+    public function setBasicAssets(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\DfaResponse\BasicAsset::class);
         $this->basic_assets = $arr;
@@ -816,9 +805,8 @@ class DfaResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\DfaResponse\ForecastYield $var
      * @return $this
      */
-    public function setForecastYield($var)
+    public function setForecastYield(\Tinkoff\Invest\V1\DfaResponse\ForecastYield|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\DfaResponse\ForecastYield::class);
         $this->forecast_yield = $var;
 
         return $this;
@@ -852,9 +840,8 @@ class DfaResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setYieldToMaturity($var)
+    public function setYieldToMaturity(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->yield_to_maturity = $var;
 
         return $this;
@@ -888,9 +875,8 @@ class DfaResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setCouponValue($var)
+    public function setCouponValue(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->coupon_value = $var;
 
         return $this;
@@ -914,7 +900,7 @@ class DfaResponse extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setCouponPaymentFrequency($var)
+    public function setCouponPaymentFrequency(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->coupon_payment_frequency = $var;
@@ -950,9 +936,8 @@ class DfaResponse extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setCouponPaymentDate($var)
+    public function setCouponPaymentDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->coupon_payment_date = $var;
 
         return $this;
@@ -986,9 +971,8 @@ class DfaResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setAciValue($var)
+    public function setAciValue(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->aci_value = $var;
 
         return $this;

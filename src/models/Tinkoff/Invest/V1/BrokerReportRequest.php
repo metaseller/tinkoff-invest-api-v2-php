@@ -26,7 +26,8 @@ class BrokerReportRequest extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\GetBrokerReportRequest $get_broker_report_request
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Operations::initOnce();
         parent::__construct($data);
     }
@@ -50,9 +51,8 @@ class BrokerReportRequest extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\GenerateBrokerReportRequest $var
      * @return $this
      */
-    public function setGenerateBrokerReportRequest($var)
+    public function setGenerateBrokerReportRequest(\Tinkoff\Invest\V1\GenerateBrokerReportRequest|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\GenerateBrokerReportRequest::class);
         $this->writeOneof(1, $var);
 
         return $this;
@@ -77,9 +77,8 @@ class BrokerReportRequest extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\GetBrokerReportRequest $var
      * @return $this
      */
-    public function setGetBrokerReportRequest($var)
+    public function setGetBrokerReportRequest(\Tinkoff\Invest\V1\GetBrokerReportRequest|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\GetBrokerReportRequest::class);
         $this->writeOneof(2, $var);
 
         return $this;

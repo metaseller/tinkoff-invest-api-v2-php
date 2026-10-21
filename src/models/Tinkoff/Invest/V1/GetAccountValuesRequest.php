@@ -39,7 +39,8 @@ class GetAccountValuesRequest extends \Google\Protobuf\Internal\Message
      *           Массив запрашиваемых параметров.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Users::initOnce();
         parent::__construct($data);
     }
@@ -62,7 +63,7 @@ class GetAccountValuesRequest extends \Google\Protobuf\Internal\Message
      * @param string[] $var
      * @return $this
      */
-    public function setAccounts($var)
+    public function setAccounts(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->accounts = $arr;
@@ -74,7 +75,7 @@ class GetAccountValuesRequest extends \Google\Protobuf\Internal\Message
      * Массив запрашиваемых параметров.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.AccountValue values = 2;</code>
-     * @return RepeatedField<int>
+     * @return RepeatedField<int> one of the values in {@see \Tinkoff\Invest\V1\AccountValue}
      */
     public function getValues()
     {
@@ -85,10 +86,10 @@ class GetAccountValuesRequest extends \Google\Protobuf\Internal\Message
      * Массив запрашиваемых параметров.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.AccountValue values = 2;</code>
-     * @param int[] $var
+     * @param int[] $var one of the values in {@see \Tinkoff\Invest\V1\AccountValue}
      * @return $this
      */
-    public function setValues($var)
+    public function setValues(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::ENUM, \Tinkoff\Invest\V1\AccountValue::class);
         $this->values = $arr;

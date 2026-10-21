@@ -113,7 +113,8 @@ class CandleSubscription extends \Google\Protobuf\Internal\Message
      *          Класс-код (секция торгов).
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Marketdata::initOnce();
         parent::__construct($data);
     }
@@ -136,9 +137,9 @@ class CandleSubscription extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setFigi($var)
+    public function setFigi(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->figi = $var;
 
         return $this;
@@ -148,7 +149,7 @@ class CandleSubscription extends \Google\Protobuf\Internal\Message
      *Интервал свечей.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionInterval interval = 2;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\SubscriptionInterval}
      */
     public function getInterval()
     {
@@ -159,10 +160,10 @@ class CandleSubscription extends \Google\Protobuf\Internal\Message
      *Интервал свечей.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionInterval interval = 2;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\SubscriptionInterval}
      * @return $this
      */
-    public function setInterval($var)
+    public function setInterval(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\SubscriptionInterval::class);
         $this->interval = $var;
@@ -174,7 +175,7 @@ class CandleSubscription extends \Google\Protobuf\Internal\Message
      *Статус подписки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionStatus subscription_status = 3;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\SubscriptionStatus}
      */
     public function getSubscriptionStatus()
     {
@@ -185,10 +186,10 @@ class CandleSubscription extends \Google\Protobuf\Internal\Message
      *Статус подписки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionStatus subscription_status = 3;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\SubscriptionStatus}
      * @return $this
      */
-    public function setSubscriptionStatus($var)
+    public function setSubscriptionStatus(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\SubscriptionStatus::class);
         $this->subscription_status = $var;
@@ -214,9 +215,9 @@ class CandleSubscription extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setInstrumentUid($var)
+    public function setInstrumentUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->instrument_uid = $var;
 
         return $this;
@@ -240,9 +241,8 @@ class CandleSubscription extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setWaitingClose($var)
+    public function setWaitingClose(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->waiting_close = $var;
 
         return $this;
@@ -266,9 +266,9 @@ class CandleSubscription extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setStreamId($var)
+    public function setStreamId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->stream_id = $var;
 
         return $this;
@@ -292,9 +292,9 @@ class CandleSubscription extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setSubscriptionId($var)
+    public function setSubscriptionId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->subscription_id = $var;
 
         return $this;
@@ -304,7 +304,7 @@ class CandleSubscription extends \Google\Protobuf\Internal\Message
      *Действие подписки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionAction subscription_action = 8;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\SubscriptionAction}
      */
     public function getSubscriptionAction()
     {
@@ -315,10 +315,10 @@ class CandleSubscription extends \Google\Protobuf\Internal\Message
      *Действие подписки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionAction subscription_action = 8;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\SubscriptionAction}
      * @return $this
      */
-    public function setSubscriptionAction($var)
+    public function setSubscriptionAction(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\SubscriptionAction::class);
         $this->subscription_action = $var;
@@ -330,7 +330,7 @@ class CandleSubscription extends \Google\Protobuf\Internal\Message
      *Источник свечей.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.GetCandlesRequest.CandleSource candle_source_type = 9;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\GetCandlesRequest\CandleSource}
      */
     public function getCandleSourceType()
     {
@@ -351,10 +351,10 @@ class CandleSubscription extends \Google\Protobuf\Internal\Message
      *Источник свечей.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.GetCandlesRequest.CandleSource candle_source_type = 9;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\GetCandlesRequest\CandleSource}
      * @return $this
      */
-    public function setCandleSourceType($var)
+    public function setCandleSourceType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\GetCandlesRequest\CandleSource::class);
         $this->candle_source_type = $var;
@@ -380,9 +380,9 @@ class CandleSubscription extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTicker($var)
+    public function setTicker(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->ticker = $var;
 
         return $this;
@@ -406,9 +406,9 @@ class CandleSubscription extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setClassCode($var)
+    public function setClassCode(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->class_code = $var;
 
         return $this;

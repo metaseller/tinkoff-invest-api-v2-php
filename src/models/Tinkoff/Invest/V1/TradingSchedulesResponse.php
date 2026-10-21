@@ -33,7 +33,8 @@ class TradingSchedulesResponse extends \Google\Protobuf\Internal\Message
      *           Список торговых площадок и режимов торгов.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -56,7 +57,7 @@ class TradingSchedulesResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\TradingSchedule[] $var
      * @return $this
      */
-    public function setExchanges($var)
+    public function setExchanges(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\TradingSchedule::class);
         $this->exchanges = $arr;

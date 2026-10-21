@@ -31,7 +31,8 @@ class PingDelaySettings extends \Google\Protobuf\Internal\Message
      *          Задержка (пинг) сообщений:  5000–180 000 миллисекунд. Значение по умолчанию — 120 000.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Common::initOnce();
         parent::__construct($data);
     }
@@ -64,7 +65,7 @@ class PingDelaySettings extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setPingDelayMs($var)
+    public function setPingDelayMs(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->ping_delay_ms = $var;

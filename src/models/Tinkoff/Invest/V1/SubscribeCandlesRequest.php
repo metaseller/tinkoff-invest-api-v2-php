@@ -57,7 +57,8 @@ class SubscribeCandlesRequest extends \Google\Protobuf\Internal\Message
      *          Источник свечей.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Marketdata::initOnce();
         parent::__construct($data);
     }
@@ -66,7 +67,7 @@ class SubscribeCandlesRequest extends \Google\Protobuf\Internal\Message
      *Изменение статуса подписки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionAction subscription_action = 1;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\SubscriptionAction}
      */
     public function getSubscriptionAction()
     {
@@ -77,10 +78,10 @@ class SubscribeCandlesRequest extends \Google\Protobuf\Internal\Message
      *Изменение статуса подписки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionAction subscription_action = 1;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\SubscriptionAction}
      * @return $this
      */
-    public function setSubscriptionAction($var)
+    public function setSubscriptionAction(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\SubscriptionAction::class);
         $this->subscription_action = $var;
@@ -106,7 +107,7 @@ class SubscribeCandlesRequest extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\CandleInstrument[] $var
      * @return $this
      */
-    public function setInstruments($var)
+    public function setInstruments(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\CandleInstrument::class);
         $this->instruments = $arr;
@@ -132,9 +133,8 @@ class SubscribeCandlesRequest extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setWaitingClose($var)
+    public function setWaitingClose(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->waiting_close = $var;
 
         return $this;
@@ -144,7 +144,7 @@ class SubscribeCandlesRequest extends \Google\Protobuf\Internal\Message
      *Источник свечей.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.GetCandlesRequest.CandleSource candle_source_type = 9;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\GetCandlesRequest\CandleSource}
      */
     public function getCandleSourceType()
     {
@@ -165,10 +165,10 @@ class SubscribeCandlesRequest extends \Google\Protobuf\Internal\Message
      *Источник свечей.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.GetCandlesRequest.CandleSource candle_source_type = 9;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\GetCandlesRequest\CandleSource}
      * @return $this
      */
-    public function setCandleSourceType($var)
+    public function setCandleSourceType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\GetCandlesRequest\CandleSource::class);
         $this->candle_source_type = $var;

@@ -31,7 +31,8 @@ class PingRequest extends \Google\Protobuf\Internal\Message
      *          Время формирования запроса.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Common::initOnce();
         parent::__construct($data);
     }
@@ -64,9 +65,8 @@ class PingRequest extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setTime($var)
+    public function setTime(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->time = $var;
 
         return $this;

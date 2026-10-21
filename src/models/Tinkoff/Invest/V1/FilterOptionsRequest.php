@@ -49,7 +49,8 @@ class FilterOptionsRequest extends \Google\Protobuf\Internal\Message
      *          Идентификатор базового инструмента, принимает значение принимает значения figi, instrument_uid или ticker+"_"+classCode.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -82,9 +83,9 @@ class FilterOptionsRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setBasicAssetUid($var)
+    public function setBasicAssetUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->basic_asset_uid = $var;
 
         return $this;
@@ -118,9 +119,9 @@ class FilterOptionsRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setBasicAssetPositionUid($var)
+    public function setBasicAssetPositionUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->basic_asset_position_uid = $var;
 
         return $this;
@@ -154,9 +155,9 @@ class FilterOptionsRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setBasicInstrumentId($var)
+    public function setBasicInstrumentId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->basic_instrument_id = $var;
 
         return $this;

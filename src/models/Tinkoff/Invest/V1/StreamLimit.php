@@ -49,7 +49,8 @@ class StreamLimit extends \Google\Protobuf\Internal\Message
      *          Текущее количество открытых stream-соединений.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Users::initOnce();
         parent::__construct($data);
     }
@@ -72,7 +73,7 @@ class StreamLimit extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setLimit($var)
+    public function setLimit(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->limit = $var;
@@ -98,7 +99,7 @@ class StreamLimit extends \Google\Protobuf\Internal\Message
      * @param string[] $var
      * @return $this
      */
-    public function setStreams($var)
+    public function setStreams(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->streams = $arr;
@@ -124,7 +125,7 @@ class StreamLimit extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setOpen($var)
+    public function setOpen(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->open = $var;

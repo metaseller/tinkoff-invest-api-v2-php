@@ -31,7 +31,8 @@ class ExtraFuture extends \Google\Protobuf\Internal\Message
      *          Гарантийное обеспечение для фьючерса
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Orders::initOnce();
         parent::__construct($data);
     }
@@ -64,9 +65,8 @@ class ExtraFuture extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setInitialMargin($var)
+    public function setInitialMargin(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->initial_margin = $var;
 
         return $this;

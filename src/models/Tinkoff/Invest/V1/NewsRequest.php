@@ -41,7 +41,8 @@ class NewsRequest extends \Google\Protobuf\Internal\Message
      *          Лимит количества новостей в ответе. По умолчанию 1000.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -54,7 +55,7 @@ class NewsRequest extends \Google\Protobuf\Internal\Message
      */
     public function getCursor()
     {
-        return isset($this->cursor) ? $this->cursor : 0;
+        return isset($this->cursor) ? $this->cursor : GPBUtil::compatibleInt64(0, '0');
     }
 
     public function hasCursor()
@@ -74,7 +75,7 @@ class NewsRequest extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setCursor($var)
+    public function setCursor(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->cursor = $var;
@@ -110,7 +111,7 @@ class NewsRequest extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setLimit($var)
+    public function setLimit(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->limit = $var;

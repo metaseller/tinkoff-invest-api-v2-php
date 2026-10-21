@@ -11,6 +11,6 @@ if (false) {
      */
     class GetForecastResponse_TargetItem {}
 }
-class_exists(GetForecastResponse\TargetItem::class);
+class_alias(GetForecastResponse\TargetItem::class, GetForecastResponse_TargetItem::class);
 @trigger_error('Tinkoff\Invest\V1\GetForecastResponse_TargetItem is deprecated and will be removed in the next major release. Use Tinkoff\Invest\V1\GetForecastResponse\TargetItem instead', E_USER_DEPRECATED);
 

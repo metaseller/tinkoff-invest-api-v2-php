@@ -33,7 +33,8 @@ class GetFavoriteGroupsResponse extends \Google\Protobuf\Internal\Message
      *          Массив групп избранных списков инструментов.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -56,7 +57,7 @@ class GetFavoriteGroupsResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\GetFavoriteGroupsResponse\FavoriteGroup[] $var
      * @return $this
      */
-    public function setGroups($var)
+    public function setGroups(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\GetFavoriteGroupsResponse\FavoriteGroup::class);
         $this->groups = $arr;

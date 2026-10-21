@@ -11,6 +11,6 @@ if (false) {
      */
     class OrderStateStreamResponse_StatusCauseInfo {}
 }
-class_exists(OrderStateStreamResponse\StatusCauseInfo::class);
+class_alias(OrderStateStreamResponse\StatusCauseInfo::class, OrderStateStreamResponse_StatusCauseInfo::class);
 @trigger_error('Tinkoff\Invest\V1\OrderStateStreamResponse_StatusCauseInfo is deprecated and will be removed in the next major release. Use Tinkoff\Invest\V1\OrderStateStreamResponse\StatusCauseInfo instead', E_USER_DEPRECATED);
 

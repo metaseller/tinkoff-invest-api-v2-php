@@ -30,7 +30,8 @@ class GetDividendsResponse extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\Dividend[] $dividends
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -49,7 +50,7 @@ class GetDividendsResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Dividend[] $var
      * @return $this
      */
-    public function setDividends($var)
+    public function setDividends(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\Dividend::class);
         $this->dividends = $arr;

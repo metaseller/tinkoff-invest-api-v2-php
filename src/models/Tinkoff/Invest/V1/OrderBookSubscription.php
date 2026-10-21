@@ -105,7 +105,8 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
      *          Класс-код (секция торгов).
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Marketdata::initOnce();
         parent::__construct($data);
     }
@@ -128,9 +129,9 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setFigi($var)
+    public function setFigi(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->figi = $var;
 
         return $this;
@@ -154,7 +155,7 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setDepth($var)
+    public function setDepth(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->depth = $var;
@@ -166,7 +167,7 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
      *Статус подписки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionStatus subscription_status = 3;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\SubscriptionStatus}
      */
     public function getSubscriptionStatus()
     {
@@ -177,10 +178,10 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
      *Статус подписки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionStatus subscription_status = 3;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\SubscriptionStatus}
      * @return $this
      */
-    public function setSubscriptionStatus($var)
+    public function setSubscriptionStatus(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\SubscriptionStatus::class);
         $this->subscription_status = $var;
@@ -206,9 +207,9 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setInstrumentUid($var)
+    public function setInstrumentUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->instrument_uid = $var;
 
         return $this;
@@ -232,9 +233,9 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setStreamId($var)
+    public function setStreamId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->stream_id = $var;
 
         return $this;
@@ -258,9 +259,9 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setSubscriptionId($var)
+    public function setSubscriptionId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->subscription_id = $var;
 
         return $this;
@@ -270,7 +271,7 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
      *Тип стакана.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderBookType order_book_type = 7;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\OrderBookType}
      */
     public function getOrderBookType()
     {
@@ -281,10 +282,10 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
      *Тип стакана.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderBookType order_book_type = 7;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\OrderBookType}
      * @return $this
      */
-    public function setOrderBookType($var)
+    public function setOrderBookType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\OrderBookType::class);
         $this->order_book_type = $var;
@@ -296,7 +297,7 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
      *Действие подписки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionAction subscription_action = 8;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\SubscriptionAction}
      */
     public function getSubscriptionAction()
     {
@@ -307,10 +308,10 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
      *Действие подписки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionAction subscription_action = 8;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\SubscriptionAction}
      * @return $this
      */
-    public function setSubscriptionAction($var)
+    public function setSubscriptionAction(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\SubscriptionAction::class);
         $this->subscription_action = $var;
@@ -336,9 +337,9 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTicker($var)
+    public function setTicker(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->ticker = $var;
 
         return $this;
@@ -362,9 +363,9 @@ class OrderBookSubscription extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setClassCode($var)
+    public function setClassCode(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->class_code = $var;
 
         return $this;

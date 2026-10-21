@@ -31,7 +31,8 @@ class SellLimitsView extends \Google\Protobuf\Internal\Message
      *          Максимальное доступное количество лотов для продажи
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Orders::initOnce();
         parent::__construct($data);
     }
@@ -54,7 +55,7 @@ class SellLimitsView extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setSellMaxLots($var)
+    public function setSellMaxLots(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->sell_max_lots = $var;

@@ -33,7 +33,8 @@ class GetLastTradesResponse extends \Google\Protobuf\Internal\Message
      *          Массив сделок.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Marketdata::initOnce();
         parent::__construct($data);
     }
@@ -56,7 +57,7 @@ class GetLastTradesResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Trade[] $var
      * @return $this
      */
-    public function setTrades($var)
+    public function setTrades(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\Trade::class);
         $this->trades = $arr;

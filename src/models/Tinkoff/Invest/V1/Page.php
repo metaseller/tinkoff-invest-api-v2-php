@@ -39,7 +39,8 @@ class Page extends \Google\Protobuf\Internal\Message
      *          Порядковый номер страницы, начиная с 0.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Common::initOnce();
         parent::__construct($data);
     }
@@ -62,7 +63,7 @@ class Page extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setLimit($var)
+    public function setLimit(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->limit = $var;
@@ -88,7 +89,7 @@ class Page extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setPageNumber($var)
+    public function setPageNumber(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->page_number = $var;

@@ -33,7 +33,8 @@ class GetAssetReportsResponse extends \Google\Protobuf\Internal\Message
      *           Массив событий по облигации.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -56,7 +57,7 @@ class GetAssetReportsResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\GetAssetReportsResponse\GetAssetReportsEvent[] $var
      * @return $this
      */
-    public function setEvents($var)
+    public function setEvents(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\GetAssetReportsResponse\GetAssetReportsEvent::class);
         $this->events = $arr;

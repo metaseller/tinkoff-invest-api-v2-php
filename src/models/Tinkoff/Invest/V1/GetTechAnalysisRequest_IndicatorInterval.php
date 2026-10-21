@@ -11,6 +11,6 @@ if (false) {
      */
     class GetTechAnalysisRequest_IndicatorInterval {}
 }
-class_exists(GetTechAnalysisRequest\IndicatorInterval::class);
+class_alias(GetTechAnalysisRequest\IndicatorInterval::class, GetTechAnalysisRequest_IndicatorInterval::class);
 @trigger_error('Tinkoff\Invest\V1\GetTechAnalysisRequest_IndicatorInterval is deprecated and will be removed in the next major release. Use Tinkoff\Invest\V1\GetTechAnalysisRequest\IndicatorInterval instead', E_USER_DEPRECATED);
 

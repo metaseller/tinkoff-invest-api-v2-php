@@ -33,7 +33,8 @@ class AssetResponse extends \Google\Protobuf\Internal\Message
      *          Актив.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -66,9 +67,8 @@ class AssetResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\AssetFull $var
      * @return $this
      */
-    public function setAsset($var)
+    public function setAsset(\Tinkoff\Invest\V1\AssetFull|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\AssetFull::class);
         $this->asset = $var;
 
         return $this;

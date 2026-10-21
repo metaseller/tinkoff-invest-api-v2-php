@@ -145,7 +145,8 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      *          Общая стоимость смарт-активов в портфеле в рублях.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Operations::initOnce();
         parent::__construct($data);
     }
@@ -178,9 +179,8 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setTotalAmountShares($var)
+    public function setTotalAmountShares(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->total_amount_shares = $var;
 
         return $this;
@@ -214,9 +214,8 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setTotalAmountBonds($var)
+    public function setTotalAmountBonds(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->total_amount_bonds = $var;
 
         return $this;
@@ -250,9 +249,8 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setTotalAmountEtf($var)
+    public function setTotalAmountEtf(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->total_amount_etf = $var;
 
         return $this;
@@ -286,9 +284,8 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setTotalAmountCurrencies($var)
+    public function setTotalAmountCurrencies(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->total_amount_currencies = $var;
 
         return $this;
@@ -322,9 +319,8 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setTotalAmountFutures($var)
+    public function setTotalAmountFutures(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->total_amount_futures = $var;
 
         return $this;
@@ -358,9 +354,8 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setExpectedYield($var)
+    public function setExpectedYield(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->expected_yield = $var;
 
         return $this;
@@ -384,7 +379,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\PortfolioPosition[] $var
      * @return $this
      */
-    public function setPositions($var)
+    public function setPositions(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\PortfolioPosition::class);
         $this->positions = $arr;
@@ -410,9 +405,9 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setAccountId($var)
+    public function setAccountId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->account_id = $var;
 
         return $this;
@@ -446,9 +441,8 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setTotalAmountOptions($var)
+    public function setTotalAmountOptions(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->total_amount_options = $var;
 
         return $this;
@@ -482,9 +476,8 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setTotalAmountSp($var)
+    public function setTotalAmountSp(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->total_amount_sp = $var;
 
         return $this;
@@ -518,9 +511,8 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setTotalAmountPortfolio($var)
+    public function setTotalAmountPortfolio(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->total_amount_portfolio = $var;
 
         return $this;
@@ -544,7 +536,7 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\VirtualPortfolioPosition[] $var
      * @return $this
      */
-    public function setVirtualPositions($var)
+    public function setVirtualPositions(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\VirtualPortfolioPosition::class);
         $this->virtual_positions = $arr;
@@ -580,9 +572,8 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setDailyYield($var)
+    public function setDailyYield(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->daily_yield = $var;
 
         return $this;
@@ -616,9 +607,8 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setDailyYieldRelative($var)
+    public function setDailyYieldRelative(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->daily_yield_relative = $var;
 
         return $this;
@@ -652,9 +642,8 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setTotalAmountDfa($var)
+    public function setTotalAmountDfa(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->total_amount_dfa = $var;
 
         return $this;

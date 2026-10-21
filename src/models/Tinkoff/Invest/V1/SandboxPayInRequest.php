@@ -41,7 +41,8 @@ class SandboxPayInRequest extends \Google\Protobuf\Internal\Message
      *          Сумма пополнения счета в рублях
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Sandbox::initOnce();
         parent::__construct($data);
     }
@@ -64,9 +65,9 @@ class SandboxPayInRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setAccountId($var)
+    public function setAccountId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->account_id = $var;
 
         return $this;
@@ -100,9 +101,8 @@ class SandboxPayInRequest extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setAmount($var)
+    public function setAmount(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->amount = $var;
 
         return $this;

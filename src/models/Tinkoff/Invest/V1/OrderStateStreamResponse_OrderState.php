@@ -11,6 +11,6 @@ if (false) {
      */
     class OrderStateStreamResponse_OrderState {}
 }
-class_exists(OrderStateStreamResponse\OrderState::class);
+class_alias(OrderStateStreamResponse\OrderState::class, OrderStateStreamResponse_OrderState::class);
 @trigger_error('Tinkoff\Invest\V1\OrderStateStreamResponse_OrderState is deprecated and will be removed in the next major release. Use Tinkoff\Invest\V1\OrderStateStreamResponse\OrderState instead', E_USER_DEPRECATED);
 

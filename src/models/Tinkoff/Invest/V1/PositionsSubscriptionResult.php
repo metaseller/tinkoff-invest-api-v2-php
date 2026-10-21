@@ -49,7 +49,8 @@ class PositionsSubscriptionResult extends \Google\Protobuf\Internal\Message
      *          Идентификатор открытого соединения
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Operations::initOnce();
         parent::__construct($data);
     }
@@ -72,7 +73,7 @@ class PositionsSubscriptionResult extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\PositionsSubscriptionStatus[] $var
      * @return $this
      */
-    public function setAccounts($var)
+    public function setAccounts(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\PositionsSubscriptionStatus::class);
         $this->accounts = $arr;
@@ -98,9 +99,9 @@ class PositionsSubscriptionResult extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTrackingId($var)
+    public function setTrackingId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->tracking_id = $var;
 
         return $this;
@@ -124,9 +125,9 @@ class PositionsSubscriptionResult extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setStreamId($var)
+    public function setStreamId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->stream_id = $var;
 
         return $this;

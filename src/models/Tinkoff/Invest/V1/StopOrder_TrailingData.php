@@ -11,6 +11,6 @@ if (false) {
      */
     class StopOrder_TrailingData {}
 }
-class_exists(StopOrder\TrailingData::class);
+class_alias(StopOrder\TrailingData::class, StopOrder_TrailingData::class);
 @trigger_error('Tinkoff\Invest\V1\StopOrder_TrailingData is deprecated and will be removed in the next major release. Use Tinkoff\Invest\V1\StopOrder\TrailingData instead', E_USER_DEPRECATED);
 

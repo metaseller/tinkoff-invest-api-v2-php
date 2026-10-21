@@ -39,7 +39,8 @@ class RiskRate extends \Google\Protobuf\Internal\Message
      *           Значение ставки риска.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -62,9 +63,9 @@ class RiskRate extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setRiskLevelCode($var)
+    public function setRiskLevelCode(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->risk_level_code = $var;
 
         return $this;
@@ -98,9 +99,8 @@ class RiskRate extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setValue($var)
+    public function setValue(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->value = $var;
 
         return $this;

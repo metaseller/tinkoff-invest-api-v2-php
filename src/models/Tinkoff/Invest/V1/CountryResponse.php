@@ -57,7 +57,8 @@ class CountryResponse extends \Google\Protobuf\Internal\Message
      *          Краткое наименование страны.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -80,9 +81,9 @@ class CountryResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setAlfaTwo($var)
+    public function setAlfaTwo(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->alfa_two = $var;
 
         return $this;
@@ -106,9 +107,9 @@ class CountryResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setAlfaThree($var)
+    public function setAlfaThree(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->alfa_three = $var;
 
         return $this;
@@ -132,9 +133,9 @@ class CountryResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setName($var)
+    public function setName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->name = $var;
 
         return $this;
@@ -158,9 +159,9 @@ class CountryResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setNameBrief($var)
+    public function setNameBrief(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->name_brief = $var;
 
         return $this;

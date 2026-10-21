@@ -39,7 +39,8 @@ class GetBrokerReportRequest extends \Google\Protobuf\Internal\Message
      *          Номер страницы отчета, начинается с 1. Значение по умолчанию — 0.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Operations::initOnce();
         parent::__construct($data);
     }
@@ -62,9 +63,9 @@ class GetBrokerReportRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTaskId($var)
+    public function setTaskId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->task_id = $var;
 
         return $this;
@@ -98,7 +99,7 @@ class GetBrokerReportRequest extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setPage($var)
+    public function setPage(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->page = $var;

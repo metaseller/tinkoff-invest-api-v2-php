@@ -33,7 +33,8 @@ class GetAccountsRequest extends \Google\Protobuf\Internal\Message
      *          Статус счета.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Users::initOnce();
         parent::__construct($data);
     }
@@ -42,7 +43,7 @@ class GetAccountsRequest extends \Google\Protobuf\Internal\Message
      *Статус счета.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.AccountStatus status = 1;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\AccountStatus}
      */
     public function getStatus()
     {
@@ -63,10 +64,10 @@ class GetAccountsRequest extends \Google\Protobuf\Internal\Message
      *Статус счета.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.AccountStatus status = 1;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\AccountStatus}
      * @return $this
      */
-    public function setStatus($var)
+    public function setStatus(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\AccountStatus::class);
         $this->status = $var;

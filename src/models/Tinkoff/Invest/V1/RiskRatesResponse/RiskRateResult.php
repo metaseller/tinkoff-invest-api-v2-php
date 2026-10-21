@@ -68,7 +68,8 @@ class RiskRateResult extends \Google\Protobuf\Internal\Message
      *           Ошибка.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -87,9 +88,9 @@ class RiskRateResult extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setInstrumentUid($var)
+    public function setInstrumentUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->instrument_uid = $var;
 
         return $this;
@@ -123,9 +124,8 @@ class RiskRateResult extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\RiskRatesResponse\RiskRate $var
      * @return $this
      */
-    public function setShortRiskRate($var)
+    public function setShortRiskRate(\Tinkoff\Invest\V1\RiskRatesResponse\RiskRate|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\RiskRatesResponse\RiskRate::class);
         $this->short_risk_rate = $var;
 
         return $this;
@@ -159,9 +159,8 @@ class RiskRateResult extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\RiskRatesResponse\RiskRate $var
      * @return $this
      */
-    public function setLongRiskRate($var)
+    public function setLongRiskRate(\Tinkoff\Invest\V1\RiskRatesResponse\RiskRate|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\RiskRatesResponse\RiskRate::class);
         $this->long_risk_rate = $var;
 
         return $this;
@@ -185,7 +184,7 @@ class RiskRateResult extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\RiskRatesResponse\RiskRate[] $var
      * @return $this
      */
-    public function setShortRiskRates($var)
+    public function setShortRiskRates(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\RiskRatesResponse\RiskRate::class);
         $this->short_risk_rates = $arr;
@@ -211,7 +210,7 @@ class RiskRateResult extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\RiskRatesResponse\RiskRate[] $var
      * @return $this
      */
-    public function setLongRiskRates($var)
+    public function setLongRiskRates(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\RiskRatesResponse\RiskRate::class);
         $this->long_risk_rates = $arr;
@@ -247,9 +246,9 @@ class RiskRateResult extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setError($var)
+    public function setError(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->error = $var;
 
         return $this;

@@ -82,7 +82,8 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
      *          Максимальное количество свечей в ответе.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Marketdata::initOnce();
         parent::__construct($data);
     }
@@ -124,10 +125,10 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
      * @return $this
      * @deprecated
      */
-    public function setFigi($var)
+    public function setFigi(string $var)
     {
         @trigger_error('figi is deprecated.', E_USER_DEPRECATED);
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->figi = $var;
 
         return $this;
@@ -161,9 +162,8 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setFrom($var)
+    public function setFrom(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->from = $var;
 
         return $this;
@@ -197,9 +197,8 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setTo($var)
+    public function setTo(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->to = $var;
 
         return $this;
@@ -209,7 +208,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
      *Интервал запрошенных свечей.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.CandleInterval interval = 4 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\CandleInterval}
      */
     public function getInterval()
     {
@@ -220,10 +219,10 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
      *Интервал запрошенных свечей.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.CandleInterval interval = 4 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\CandleInterval}
      * @return $this
      */
-    public function setInterval($var)
+    public function setInterval(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\CandleInterval::class);
         $this->interval = $var;
@@ -259,9 +258,9 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setInstrumentId($var)
+    public function setInstrumentId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->instrument_id = $var;
 
         return $this;
@@ -271,7 +270,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
      *Тип источника свечи.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.GetCandlesRequest.CandleSource candle_source_type = 7;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\GetCandlesRequest\CandleSource}
      */
     public function getCandleSourceType()
     {
@@ -292,10 +291,10 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
      *Тип источника свечи.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.GetCandlesRequest.CandleSource candle_source_type = 7;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\GetCandlesRequest\CandleSource}
      * @return $this
      */
-    public function setCandleSourceType($var)
+    public function setCandleSourceType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\GetCandlesRequest\CandleSource::class);
         $this->candle_source_type = $var;
@@ -331,7 +330,7 @@ class GetCandlesRequest extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setLimit($var)
+    public function setLimit(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->limit = $var;

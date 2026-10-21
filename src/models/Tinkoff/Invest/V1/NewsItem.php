@@ -97,7 +97,8 @@ class NewsItem extends \Google\Protobuf\Internal\Message
      *          Время новости.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -120,7 +121,7 @@ class NewsItem extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setId($var)
+    public function setId(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->id = $var;
@@ -146,9 +147,9 @@ class NewsItem extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setSource($var)
+    public function setSource(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->source = $var;
 
         return $this;
@@ -172,9 +173,9 @@ class NewsItem extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTitle($var)
+    public function setTitle(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->title = $var;
 
         return $this;
@@ -198,9 +199,9 @@ class NewsItem extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setContent($var)
+    public function setContent(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->content = $var;
 
         return $this;
@@ -234,9 +235,9 @@ class NewsItem extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setSummary($var)
+    public function setSummary(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->summary = $var;
 
         return $this;
@@ -260,7 +261,7 @@ class NewsItem extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Table[] $var
      * @return $this
      */
-    public function setTables($var)
+    public function setTables(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\Table::class);
         $this->tables = $arr;
@@ -286,7 +287,7 @@ class NewsItem extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\NewsInstrument[] $var
      * @return $this
      */
-    public function setInstrumentId($var)
+    public function setInstrumentId(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\NewsInstrument::class);
         $this->instrument_id = $arr;
@@ -312,9 +313,8 @@ class NewsItem extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setPriority($var)
+    public function setPriority(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->priority = $var;
 
         return $this;
@@ -348,9 +348,8 @@ class NewsItem extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setTs($var)
+    public function setTs(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->ts = $var;
 
         return $this;

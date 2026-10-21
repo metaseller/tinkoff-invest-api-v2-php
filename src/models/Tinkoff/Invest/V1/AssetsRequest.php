@@ -38,14 +38,15 @@ class AssetsRequest extends \Google\Protobuf\Internal\Message
      *          Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
 
     /**
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentType instrument_type = 1;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\InstrumentType}
      */
     public function getInstrumentType()
     {
@@ -64,10 +65,10 @@ class AssetsRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentType instrument_type = 1;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\InstrumentType}
      * @return $this
      */
-    public function setInstrumentType($var)
+    public function setInstrumentType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\InstrumentType::class);
         $this->instrument_type = $var;
@@ -79,7 +80,7 @@ class AssetsRequest extends \Google\Protobuf\Internal\Message
      *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 2;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\InstrumentStatus}
      */
     public function getInstrumentStatus()
     {
@@ -100,10 +101,10 @@ class AssetsRequest extends \Google\Protobuf\Internal\Message
      *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 2;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\InstrumentStatus}
      * @return $this
      */
-    public function setInstrumentStatus($var)
+    public function setInstrumentStatus(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\InstrumentStatus::class);
         $this->instrument_status = $var;

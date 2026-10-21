@@ -73,7 +73,8 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
      *           Категория риска.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Users::initOnce();
         parent::__construct($data);
     }
@@ -96,9 +97,8 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setPremStatus($var)
+    public function setPremStatus(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->prem_status = $var;
 
         return $this;
@@ -122,9 +122,8 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setQualStatus($var)
+    public function setQualStatus(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->qual_status = $var;
 
         return $this;
@@ -148,7 +147,7 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
      * @param string[] $var
      * @return $this
      */
-    public function setQualifiedForWorkWith($var)
+    public function setQualifiedForWorkWith(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->qualified_for_work_with = $arr;
@@ -174,9 +173,9 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTariff($var)
+    public function setTariff(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->tariff = $var;
 
         return $this;
@@ -200,9 +199,9 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setUserId($var)
+    public function setUserId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->user_id = $var;
 
         return $this;
@@ -226,9 +225,9 @@ class GetInfoResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setRiskLevelCode($var)
+    public function setRiskLevelCode(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->risk_level_code = $var;
 
         return $this;

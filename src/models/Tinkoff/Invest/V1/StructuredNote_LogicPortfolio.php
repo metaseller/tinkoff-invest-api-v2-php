@@ -11,6 +11,6 @@ if (false) {
      */
     class StructuredNote_LogicPortfolio {}
 }
-class_exists(StructuredNote\LogicPortfolio::class);
+class_alias(StructuredNote\LogicPortfolio::class, StructuredNote_LogicPortfolio::class);
 @trigger_error('Tinkoff\Invest\V1\StructuredNote_LogicPortfolio is deprecated and will be removed in the next major release. Use Tinkoff\Invest\V1\StructuredNote\LogicPortfolio instead', E_USER_DEPRECATED);
 

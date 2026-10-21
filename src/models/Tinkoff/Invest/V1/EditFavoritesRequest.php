@@ -49,7 +49,8 @@ class EditFavoritesRequest extends \Google\Protobuf\Internal\Message
      *          Уникальный идентификатор группы.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -72,7 +73,7 @@ class EditFavoritesRequest extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\EditFavoritesRequestInstrument[] $var
      * @return $this
      */
-    public function setInstruments($var)
+    public function setInstruments(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\EditFavoritesRequestInstrument::class);
         $this->instruments = $arr;
@@ -84,7 +85,7 @@ class EditFavoritesRequest extends \Google\Protobuf\Internal\Message
      *Тип действия со списком.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.EditFavoritesActionType action_type = 6 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\EditFavoritesActionType}
      */
     public function getActionType()
     {
@@ -95,10 +96,10 @@ class EditFavoritesRequest extends \Google\Protobuf\Internal\Message
      *Тип действия со списком.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.EditFavoritesActionType action_type = 6 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\EditFavoritesActionType}
      * @return $this
      */
-    public function setActionType($var)
+    public function setActionType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\EditFavoritesActionType::class);
         $this->action_type = $var;
@@ -134,9 +135,9 @@ class EditFavoritesRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setGroupId($var)
+    public function setGroupId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->group_id = $var;
 
         return $this;

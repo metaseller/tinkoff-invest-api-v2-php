@@ -11,6 +11,6 @@ if (false) {
      */
     class GetTechAnalysisRequest_Deviation {}
 }
-class_exists(GetTechAnalysisRequest\Deviation::class);
+class_alias(GetTechAnalysisRequest\Deviation::class, GetTechAnalysisRequest_Deviation::class);
 @trigger_error('Tinkoff\Invest\V1\GetTechAnalysisRequest_Deviation is deprecated and will be removed in the next major release. Use Tinkoff\Invest\V1\GetTechAnalysisRequest\Deviation instead', E_USER_DEPRECATED);
 

@@ -49,7 +49,8 @@ class PostOrderAsyncResponse extends \Google\Protobuf\Internal\Message
      *          Идентификатор торгового поручения.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Orders::initOnce();
         parent::__construct($data);
     }
@@ -72,9 +73,9 @@ class PostOrderAsyncResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setOrderRequestId($var)
+    public function setOrderRequestId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->order_request_id = $var;
 
         return $this;
@@ -84,7 +85,7 @@ class PostOrderAsyncResponse extends \Google\Protobuf\Internal\Message
      *Текущий статус заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderExecutionReportStatus execution_report_status = 2 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\OrderExecutionReportStatus}
      */
     public function getExecutionReportStatus()
     {
@@ -95,10 +96,10 @@ class PostOrderAsyncResponse extends \Google\Protobuf\Internal\Message
      *Текущий статус заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderExecutionReportStatus execution_report_status = 2 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\OrderExecutionReportStatus}
      * @return $this
      */
-    public function setExecutionReportStatus($var)
+    public function setExecutionReportStatus(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\OrderExecutionReportStatus::class);
         $this->execution_report_status = $var;
@@ -134,9 +135,9 @@ class PostOrderAsyncResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTradeIntentId($var)
+    public function setTradeIntentId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->trade_intent_id = $var;
 
         return $this;

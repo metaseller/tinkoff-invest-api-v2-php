@@ -41,7 +41,8 @@ class InstrumentsRequest extends \Google\Protobuf\Internal\Message
      *           Тип площадки торговли. [Возможные значения](#instrumentexchangetype).
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -50,7 +51,7 @@ class InstrumentsRequest extends \Google\Protobuf\Internal\Message
      *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 1;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\InstrumentStatus}
      */
     public function getInstrumentStatus()
     {
@@ -71,10 +72,10 @@ class InstrumentsRequest extends \Google\Protobuf\Internal\Message
      *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 1;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\InstrumentStatus}
      * @return $this
      */
-    public function setInstrumentStatus($var)
+    public function setInstrumentStatus(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\InstrumentStatus::class);
         $this->instrument_status = $var;
@@ -86,7 +87,7 @@ class InstrumentsRequest extends \Google\Protobuf\Internal\Message
      * Тип площадки торговли. [Возможные значения](#instrumentexchangetype).
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentExchangeType instrument_exchange = 2;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\InstrumentExchangeType}
      */
     public function getInstrumentExchange()
     {
@@ -107,10 +108,10 @@ class InstrumentsRequest extends \Google\Protobuf\Internal\Message
      * Тип площадки торговли. [Возможные значения](#instrumentexchangetype).
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentExchangeType instrument_exchange = 2;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\InstrumentExchangeType}
      * @return $this
      */
-    public function setInstrumentExchange($var)
+    public function setInstrumentExchange(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\InstrumentExchangeType::class);
         $this->instrument_exchange = $var;

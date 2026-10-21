@@ -79,7 +79,8 @@ class TrailingData extends \Google\Protobuf\Internal\Message
      *          Локальный экстремум.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Stoporders::initOnce();
         parent::__construct($data);
     }
@@ -112,9 +113,8 @@ class TrailingData extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setIndent($var)
+    public function setIndent(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->indent = $var;
 
         return $this;
@@ -124,7 +124,7 @@ class TrailingData extends \Google\Protobuf\Internal\Message
      *Тип величины отступа.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TrailingValueType indent_type = 2;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\TrailingValueType}
      */
     public function getIndentType()
     {
@@ -135,10 +135,10 @@ class TrailingData extends \Google\Protobuf\Internal\Message
      *Тип величины отступа.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TrailingValueType indent_type = 2;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\TrailingValueType}
      * @return $this
      */
-    public function setIndentType($var)
+    public function setIndentType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\TrailingValueType::class);
         $this->indent_type = $var;
@@ -174,9 +174,8 @@ class TrailingData extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setSpread($var)
+    public function setSpread(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->spread = $var;
 
         return $this;
@@ -186,7 +185,7 @@ class TrailingData extends \Google\Protobuf\Internal\Message
      *Тип величины защитного спреда.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TrailingValueType spread_type = 4;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\TrailingValueType}
      */
     public function getSpreadType()
     {
@@ -197,10 +196,10 @@ class TrailingData extends \Google\Protobuf\Internal\Message
      *Тип величины защитного спреда.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TrailingValueType spread_type = 4;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\TrailingValueType}
      * @return $this
      */
-    public function setSpreadType($var)
+    public function setSpreadType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\TrailingValueType::class);
         $this->spread_type = $var;
@@ -212,7 +211,7 @@ class TrailingData extends \Google\Protobuf\Internal\Message
      *Статус трейлинг-стопа.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TrailingStopStatus status = 5;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\TrailingStopStatus}
      */
     public function getStatus()
     {
@@ -223,10 +222,10 @@ class TrailingData extends \Google\Protobuf\Internal\Message
      *Статус трейлинг-стопа.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TrailingStopStatus status = 5;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\TrailingStopStatus}
      * @return $this
      */
-    public function setStatus($var)
+    public function setStatus(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\TrailingStopStatus::class);
         $this->status = $var;
@@ -262,9 +261,8 @@ class TrailingData extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setPrice($var)
+    public function setPrice(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->price = $var;
 
         return $this;
@@ -298,9 +296,8 @@ class TrailingData extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setExtr($var)
+    public function setExtr(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->extr = $var;
 
         return $this;

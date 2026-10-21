@@ -11,6 +11,6 @@ if (false) {
      */
     class GetOrderPriceResponse_ExtraFuture {}
 }
-class_exists(GetOrderPriceResponse\ExtraFuture::class);
+class_alias(GetOrderPriceResponse\ExtraFuture::class, GetOrderPriceResponse_ExtraFuture::class);
 @trigger_error('Tinkoff\Invest\V1\GetOrderPriceResponse_ExtraFuture is deprecated and will be removed in the next major release. Use Tinkoff\Invest\V1\GetOrderPriceResponse\ExtraFuture instead', E_USER_DEPRECATED);
 

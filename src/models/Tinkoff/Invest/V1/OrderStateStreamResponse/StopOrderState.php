@@ -113,7 +113,8 @@ class StopOrderState extends \Google\Protobuf\Internal\Message
      *          Состояние заявки.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Orders::initOnce();
         parent::__construct($data);
     }
@@ -136,9 +137,9 @@ class StopOrderState extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setStopOrderId($var)
+    public function setStopOrderId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->stop_order_id = $var;
 
         return $this;
@@ -162,9 +163,9 @@ class StopOrderState extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setAccountId($var)
+    public function setAccountId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->account_id = $var;
 
         return $this;
@@ -198,9 +199,8 @@ class StopOrderState extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setCreatedAt($var)
+    public function setCreatedAt(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->created_at = $var;
 
         return $this;
@@ -210,7 +210,7 @@ class StopOrderState extends \Google\Protobuf\Internal\Message
      *Направление заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderDirection direction = 4;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\OrderDirection}
      */
     public function getDirection()
     {
@@ -221,10 +221,10 @@ class StopOrderState extends \Google\Protobuf\Internal\Message
      *Направление заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderDirection direction = 4;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\OrderDirection}
      * @return $this
      */
-    public function setDirection($var)
+    public function setDirection(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\OrderDirection::class);
         $this->direction = $var;
@@ -260,9 +260,8 @@ class StopOrderState extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setPrice($var)
+    public function setPrice(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->price = $var;
 
         return $this;
@@ -296,9 +295,8 @@ class StopOrderState extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setStopPrice($var)
+    public function setStopPrice(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->stop_price = $var;
 
         return $this;
@@ -308,7 +306,7 @@ class StopOrderState extends \Google\Protobuf\Internal\Message
      *Тип дочерней биржевой заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderType order_type = 7;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\OrderType}
      */
     public function getOrderType()
     {
@@ -319,10 +317,10 @@ class StopOrderState extends \Google\Protobuf\Internal\Message
      *Тип дочерней биржевой заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderType order_type = 7;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\OrderType}
      * @return $this
      */
-    public function setOrderType($var)
+    public function setOrderType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\OrderType::class);
         $this->order_type = $var;
@@ -348,9 +346,9 @@ class StopOrderState extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setInstrumentUid($var)
+    public function setInstrumentUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->instrument_uid = $var;
 
         return $this;
@@ -374,9 +372,9 @@ class StopOrderState extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTicker($var)
+    public function setTicker(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->ticker = $var;
 
         return $this;
@@ -400,9 +398,9 @@ class StopOrderState extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setClassCode($var)
+    public function setClassCode(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->class_code = $var;
 
         return $this;
@@ -412,7 +410,7 @@ class StopOrderState extends \Google\Protobuf\Internal\Message
      *Состояние заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderStatusOption status = 11;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\StopOrderStatusOption}
      */
     public function getStatus()
     {
@@ -423,10 +421,10 @@ class StopOrderState extends \Google\Protobuf\Internal\Message
      *Состояние заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StopOrderStatusOption status = 11;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\StopOrderStatusOption}
      * @return $this
      */
-    public function setStatus($var)
+    public function setStatus(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\StopOrderStatusOption::class);
         $this->status = $var;

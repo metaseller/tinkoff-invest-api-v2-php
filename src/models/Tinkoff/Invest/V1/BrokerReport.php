@@ -239,7 +239,8 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      *          Тип расчета по сделке.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Operations::initOnce();
         parent::__construct($data);
     }
@@ -262,9 +263,9 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTradeId($var)
+    public function setTradeId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->trade_id = $var;
 
         return $this;
@@ -288,9 +289,9 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setOrderId($var)
+    public function setOrderId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->order_id = $var;
 
         return $this;
@@ -314,9 +315,9 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setFigi($var)
+    public function setFigi(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->figi = $var;
 
         return $this;
@@ -340,9 +341,9 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setExecuteSign($var)
+    public function setExecuteSign(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->execute_sign = $var;
 
         return $this;
@@ -376,9 +377,8 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setTradeDatetime($var)
+    public function setTradeDatetime(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->trade_datetime = $var;
 
         return $this;
@@ -402,9 +402,9 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setExchange($var)
+    public function setExchange(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->exchange = $var;
 
         return $this;
@@ -428,9 +428,9 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setClassCode($var)
+    public function setClassCode(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->class_code = $var;
 
         return $this;
@@ -454,9 +454,9 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setDirection($var)
+    public function setDirection(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->direction = $var;
 
         return $this;
@@ -480,9 +480,9 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setName($var)
+    public function setName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->name = $var;
 
         return $this;
@@ -506,9 +506,9 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTicker($var)
+    public function setTicker(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->ticker = $var;
 
         return $this;
@@ -542,9 +542,8 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setPrice($var)
+    public function setPrice(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->price = $var;
 
         return $this;
@@ -568,7 +567,7 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setQuantity($var)
+    public function setQuantity(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->quantity = $var;
@@ -604,9 +603,8 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setOrderAmount($var)
+    public function setOrderAmount(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->order_amount = $var;
 
         return $this;
@@ -640,9 +638,8 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setAciValue($var)
+    public function setAciValue(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->aci_value = $var;
 
         return $this;
@@ -676,9 +673,8 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setTotalOrderAmount($var)
+    public function setTotalOrderAmount(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->total_order_amount = $var;
 
         return $this;
@@ -712,9 +708,8 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setBrokerCommission($var)
+    public function setBrokerCommission(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->broker_commission = $var;
 
         return $this;
@@ -748,9 +743,8 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setExchangeCommission($var)
+    public function setExchangeCommission(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->exchange_commission = $var;
 
         return $this;
@@ -784,9 +778,8 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setExchangeClearingCommission($var)
+    public function setExchangeClearingCommission(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->exchange_clearing_commission = $var;
 
         return $this;
@@ -820,9 +813,8 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setRepoRate($var)
+    public function setRepoRate(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->repo_rate = $var;
 
         return $this;
@@ -846,9 +838,9 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setParty($var)
+    public function setParty(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->party = $var;
 
         return $this;
@@ -882,9 +874,8 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setClearValueDate($var)
+    public function setClearValueDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->clear_value_date = $var;
 
         return $this;
@@ -918,9 +909,8 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setSecValueDate($var)
+    public function setSecValueDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->sec_value_date = $var;
 
         return $this;
@@ -944,9 +934,9 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setBrokerStatus($var)
+    public function setBrokerStatus(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->broker_status = $var;
 
         return $this;
@@ -970,9 +960,9 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setSeparateAgreementType($var)
+    public function setSeparateAgreementType(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->separate_agreement_type = $var;
 
         return $this;
@@ -996,9 +986,9 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setSeparateAgreementNumber($var)
+    public function setSeparateAgreementNumber(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->separate_agreement_number = $var;
 
         return $this;
@@ -1022,9 +1012,9 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setSeparateAgreementDate($var)
+    public function setSeparateAgreementDate(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->separate_agreement_date = $var;
 
         return $this;
@@ -1048,9 +1038,9 @@ class BrokerReport extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setDeliveryType($var)
+    public function setDeliveryType(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->delivery_type = $var;
 
         return $this;

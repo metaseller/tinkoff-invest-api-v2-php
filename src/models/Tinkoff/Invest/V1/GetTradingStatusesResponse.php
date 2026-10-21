@@ -33,7 +33,8 @@ class GetTradingStatusesResponse extends \Google\Protobuf\Internal\Message
      *          Массив информации о торговых статусах.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Marketdata::initOnce();
         parent::__construct($data);
     }
@@ -56,7 +57,7 @@ class GetTradingStatusesResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\GetTradingStatusResponse[] $var
      * @return $this
      */
-    public function setTradingStatuses($var)
+    public function setTradingStatuses(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\GetTradingStatusResponse::class);
         $this->trading_statuses = $arr;

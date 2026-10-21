@@ -145,7 +145,8 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      *          Количество акций в свободном обращении.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -154,7 +155,7 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      *Тип акции.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ShareType type = 1;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\ShareType}
      */
     public function getType()
     {
@@ -165,10 +166,10 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      *Тип акции.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ShareType type = 1;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\ShareType}
      * @return $this
      */
-    public function setType($var)
+    public function setType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\ShareType::class);
         $this->type = $var;
@@ -204,9 +205,8 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setIssueSize($var)
+    public function setIssueSize(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->issue_size = $var;
 
         return $this;
@@ -240,9 +240,8 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setNominal($var)
+    public function setNominal(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->nominal = $var;
 
         return $this;
@@ -266,9 +265,9 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setNominalCurrency($var)
+    public function setNominalCurrency(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->nominal_currency = $var;
 
         return $this;
@@ -292,9 +291,9 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setPrimaryIndex($var)
+    public function setPrimaryIndex(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->primary_index = $var;
 
         return $this;
@@ -328,9 +327,8 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setDividendRate($var)
+    public function setDividendRate(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->dividend_rate = $var;
 
         return $this;
@@ -354,9 +352,9 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setPreferredShareType($var)
+    public function setPreferredShareType(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->preferred_share_type = $var;
 
         return $this;
@@ -390,9 +388,8 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setIpoDate($var)
+    public function setIpoDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->ipo_date = $var;
 
         return $this;
@@ -426,9 +423,8 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setRegistryDate($var)
+    public function setRegistryDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->registry_date = $var;
 
         return $this;
@@ -452,9 +448,8 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setDivYieldFlag($var)
+    public function setDivYieldFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->div_yield_flag = $var;
 
         return $this;
@@ -478,9 +473,9 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setIssueKind($var)
+    public function setIssueKind(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->issue_kind = $var;
 
         return $this;
@@ -514,9 +509,8 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setPlacementDate($var)
+    public function setPlacementDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->placement_date = $var;
 
         return $this;
@@ -540,9 +534,9 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setRepresIsin($var)
+    public function setRepresIsin(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->repres_isin = $var;
 
         return $this;
@@ -576,9 +570,8 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setIssueSizePlan($var)
+    public function setIssueSizePlan(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->issue_size_plan = $var;
 
         return $this;
@@ -612,9 +605,8 @@ class AssetShare extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setTotalFloat($var)
+    public function setTotalFloat(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->total_float = $var;
 
         return $this;

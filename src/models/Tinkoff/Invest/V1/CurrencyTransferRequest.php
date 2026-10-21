@@ -55,7 +55,8 @@ class CurrencyTransferRequest extends \Google\Protobuf\Internal\Message
      *           Идентификатор запроса выставления поручения для целей идемпотентности в формате UUID.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Users::initOnce();
         parent::__construct($data);
     }
@@ -78,9 +79,9 @@ class CurrencyTransferRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setFromAccountId($var)
+    public function setFromAccountId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->from_account_id = $var;
 
         return $this;
@@ -104,9 +105,9 @@ class CurrencyTransferRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setToAccountId($var)
+    public function setToAccountId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->to_account_id = $var;
 
         return $this;
@@ -140,9 +141,8 @@ class CurrencyTransferRequest extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setAmount($var)
+    public function setAmount(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->amount = $var;
 
         return $this;
@@ -166,9 +166,9 @@ class CurrencyTransferRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTransactionId($var)
+    public function setTransactionId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->transaction_id = $var;
 
         return $this;

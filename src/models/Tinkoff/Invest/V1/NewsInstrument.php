@@ -33,7 +33,8 @@ class NewsInstrument extends \Google\Protobuf\Internal\Message
      *          Информация по инструменту.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -66,9 +67,8 @@ class NewsInstrument extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\NewsInstrumentInfo $var
      * @return $this
      */
-    public function setInstrument($var)
+    public function setInstrument(\Tinkoff\Invest\V1\NewsInstrumentInfo|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\NewsInstrumentInfo::class);
         $this->instrument = $var;
 
         return $this;

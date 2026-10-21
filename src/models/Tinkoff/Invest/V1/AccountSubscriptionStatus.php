@@ -41,7 +41,8 @@ class AccountSubscriptionStatus extends \Google\Protobuf\Internal\Message
      *          Результат подписки.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Operations::initOnce();
         parent::__construct($data);
     }
@@ -64,9 +65,9 @@ class AccountSubscriptionStatus extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setAccountId($var)
+    public function setAccountId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->account_id = $var;
 
         return $this;
@@ -76,7 +77,7 @@ class AccountSubscriptionStatus extends \Google\Protobuf\Internal\Message
      *Результат подписки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PortfolioSubscriptionStatus subscription_status = 6;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\PortfolioSubscriptionStatus}
      */
     public function getSubscriptionStatus()
     {
@@ -87,10 +88,10 @@ class AccountSubscriptionStatus extends \Google\Protobuf\Internal\Message
      *Результат подписки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.PortfolioSubscriptionStatus subscription_status = 6;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\PortfolioSubscriptionStatus}
      * @return $this
      */
-    public function setSubscriptionStatus($var)
+    public function setSubscriptionStatus(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\PortfolioSubscriptionStatus::class);
         $this->subscription_status = $var;

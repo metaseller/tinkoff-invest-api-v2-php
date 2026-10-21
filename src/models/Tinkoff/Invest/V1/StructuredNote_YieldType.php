@@ -11,6 +11,6 @@ if (false) {
      */
     class StructuredNote_YieldType {}
 }
-class_exists(StructuredNote\YieldType::class);
+class_alias(StructuredNote\YieldType::class, StructuredNote_YieldType::class);
 @trigger_error('Tinkoff\Invest\V1\StructuredNote_YieldType is deprecated and will be removed in the next major release. Use Tinkoff\Invest\V1\StructuredNote\YieldType instead', E_USER_DEPRECATED);
 

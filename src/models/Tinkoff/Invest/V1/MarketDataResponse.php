@@ -50,7 +50,8 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
      *          Открытый интерес.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Marketdata::initOnce();
         parent::__construct($data);
     }
@@ -78,9 +79,8 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\SubscribeCandlesResponse $var
      * @return $this
      */
-    public function setSubscribeCandlesResponse($var)
+    public function setSubscribeCandlesResponse(\Tinkoff\Invest\V1\SubscribeCandlesResponse|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\SubscribeCandlesResponse::class);
         $this->writeOneof(1, $var);
 
         return $this;
@@ -109,9 +109,8 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\SubscribeOrderBookResponse $var
      * @return $this
      */
-    public function setSubscribeOrderBookResponse($var)
+    public function setSubscribeOrderBookResponse(\Tinkoff\Invest\V1\SubscribeOrderBookResponse|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\SubscribeOrderBookResponse::class);
         $this->writeOneof(2, $var);
 
         return $this;
@@ -140,9 +139,8 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\SubscribeTradesResponse $var
      * @return $this
      */
-    public function setSubscribeTradesResponse($var)
+    public function setSubscribeTradesResponse(\Tinkoff\Invest\V1\SubscribeTradesResponse|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\SubscribeTradesResponse::class);
         $this->writeOneof(3, $var);
 
         return $this;
@@ -171,9 +169,8 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\SubscribeInfoResponse $var
      * @return $this
      */
-    public function setSubscribeInfoResponse($var)
+    public function setSubscribeInfoResponse(\Tinkoff\Invest\V1\SubscribeInfoResponse|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\SubscribeInfoResponse::class);
         $this->writeOneof(4, $var);
 
         return $this;
@@ -202,9 +199,8 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Candle $var
      * @return $this
      */
-    public function setCandle($var)
+    public function setCandle(\Tinkoff\Invest\V1\Candle|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Candle::class);
         $this->writeOneof(5, $var);
 
         return $this;
@@ -233,9 +229,8 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Trade $var
      * @return $this
      */
-    public function setTrade($var)
+    public function setTrade(\Tinkoff\Invest\V1\Trade|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Trade::class);
         $this->writeOneof(6, $var);
 
         return $this;
@@ -264,9 +259,8 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\OrderBook $var
      * @return $this
      */
-    public function setOrderbook($var)
+    public function setOrderbook(\Tinkoff\Invest\V1\OrderBook|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\OrderBook::class);
         $this->writeOneof(7, $var);
 
         return $this;
@@ -295,9 +289,8 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\TradingStatus $var
      * @return $this
      */
-    public function setTradingStatus($var)
+    public function setTradingStatus(\Tinkoff\Invest\V1\TradingStatus|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\TradingStatus::class);
         $this->writeOneof(8, $var);
 
         return $this;
@@ -326,9 +319,8 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Ping $var
      * @return $this
      */
-    public function setPing($var)
+    public function setPing(\Tinkoff\Invest\V1\Ping|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Ping::class);
         $this->writeOneof(9, $var);
 
         return $this;
@@ -357,9 +349,8 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\SubscribeLastPriceResponse $var
      * @return $this
      */
-    public function setSubscribeLastPriceResponse($var)
+    public function setSubscribeLastPriceResponse(\Tinkoff\Invest\V1\SubscribeLastPriceResponse|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\SubscribeLastPriceResponse::class);
         $this->writeOneof(10, $var);
 
         return $this;
@@ -388,9 +379,8 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\LastPrice $var
      * @return $this
      */
-    public function setLastPrice($var)
+    public function setLastPrice(\Tinkoff\Invest\V1\LastPrice|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\LastPrice::class);
         $this->writeOneof(11, $var);
 
         return $this;
@@ -419,9 +409,8 @@ class MarketDataResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\OpenInterest $var
      * @return $this
      */
-    public function setOpenInterest($var)
+    public function setOpenInterest(\Tinkoff\Invest\V1\OpenInterest|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\OpenInterest::class);
         $this->writeOneof(12, $var);
 
         return $this;

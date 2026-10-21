@@ -127,7 +127,8 @@ class InsiderDeal extends \Google\Protobuf\Internal\Message
      *           Дата раскрытия сделки.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -150,7 +151,7 @@ class InsiderDeal extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setTradeId($var)
+    public function setTradeId(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->trade_id = $var;
@@ -162,7 +163,7 @@ class InsiderDeal extends \Google\Protobuf\Internal\Message
      * Направление сделки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetInsiderDealsResponse.TradeDirection direction = 2;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\GetInsiderDealsResponse\TradeDirection}
      */
     public function getDirection()
     {
@@ -173,10 +174,10 @@ class InsiderDeal extends \Google\Protobuf\Internal\Message
      * Направление сделки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetInsiderDealsResponse.TradeDirection direction = 2;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\GetInsiderDealsResponse\TradeDirection}
      * @return $this
      */
-    public function setDirection($var)
+    public function setDirection(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\GetInsiderDealsResponse\TradeDirection::class);
         $this->direction = $var;
@@ -202,9 +203,9 @@ class InsiderDeal extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCurrency($var)
+    public function setCurrency(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->currency = $var;
 
         return $this;
@@ -238,9 +239,8 @@ class InsiderDeal extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setDate($var)
+    public function setDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->date = $var;
 
         return $this;
@@ -264,7 +264,7 @@ class InsiderDeal extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setQuantity($var)
+    public function setQuantity(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->quantity = $var;
@@ -300,9 +300,8 @@ class InsiderDeal extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setPrice($var)
+    public function setPrice(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->price = $var;
 
         return $this;
@@ -326,9 +325,9 @@ class InsiderDeal extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setInstrumentUid($var)
+    public function setInstrumentUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->instrument_uid = $var;
 
         return $this;
@@ -352,9 +351,9 @@ class InsiderDeal extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTicker($var)
+    public function setTicker(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->ticker = $var;
 
         return $this;
@@ -378,9 +377,9 @@ class InsiderDeal extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setInvestorName($var)
+    public function setInvestorName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->investor_name = $var;
 
         return $this;
@@ -404,9 +403,9 @@ class InsiderDeal extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setInvestorPosition($var)
+    public function setInvestorPosition(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->investor_position = $var;
 
         return $this;
@@ -430,9 +429,8 @@ class InsiderDeal extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setPercentage($var)
+    public function setPercentage(float $var)
     {
-        GPBUtil::checkFloat($var);
         $this->percentage = $var;
 
         return $this;
@@ -456,9 +454,8 @@ class InsiderDeal extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setIsOptionExecution($var)
+    public function setIsOptionExecution(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->is_option_execution = $var;
 
         return $this;
@@ -492,9 +489,8 @@ class InsiderDeal extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setDisclosureDate($var)
+    public function setDisclosureDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->disclosure_date = $var;
 
         return $this;

@@ -105,7 +105,8 @@ class Dividend extends \Google\Protobuf\Internal\Message
      *          Дата и время создания записи по UTC.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -138,9 +139,8 @@ class Dividend extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setDividendNet($var)
+    public function setDividendNet(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->dividend_net = $var;
 
         return $this;
@@ -174,9 +174,8 @@ class Dividend extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setPaymentDate($var)
+    public function setPaymentDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->payment_date = $var;
 
         return $this;
@@ -210,9 +209,8 @@ class Dividend extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setDeclaredDate($var)
+    public function setDeclaredDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->declared_date = $var;
 
         return $this;
@@ -246,9 +244,8 @@ class Dividend extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setLastBuyDate($var)
+    public function setLastBuyDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->last_buy_date = $var;
 
         return $this;
@@ -272,9 +269,9 @@ class Dividend extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setDividendType($var)
+    public function setDividendType(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->dividend_type = $var;
 
         return $this;
@@ -308,9 +305,8 @@ class Dividend extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setRecordDate($var)
+    public function setRecordDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->record_date = $var;
 
         return $this;
@@ -334,9 +330,9 @@ class Dividend extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setRegularity($var)
+    public function setRegularity(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->regularity = $var;
 
         return $this;
@@ -370,9 +366,8 @@ class Dividend extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setClosePrice($var)
+    public function setClosePrice(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->close_price = $var;
 
         return $this;
@@ -406,9 +401,8 @@ class Dividend extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setYieldValue($var)
+    public function setYieldValue(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->yield_value = $var;
 
         return $this;
@@ -442,9 +436,8 @@ class Dividend extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setCreatedAt($var)
+    public function setCreatedAt(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->created_at = $var;
 
         return $this;

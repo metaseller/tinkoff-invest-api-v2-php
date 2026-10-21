@@ -34,7 +34,8 @@ class OrderStateStreamResponse extends \Google\Protobuf\Internal\Message
      *          Стоп-ордер.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Orders::initOnce();
         parent::__construct($data);
     }
@@ -62,9 +63,8 @@ class OrderStateStreamResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\OrderStateStreamResponse\OrderState $var
      * @return $this
      */
-    public function setOrderState($var)
+    public function setOrderState(\Tinkoff\Invest\V1\OrderStateStreamResponse\OrderState|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\OrderStateStreamResponse\OrderState::class);
         $this->writeOneof(1, $var);
 
         return $this;
@@ -93,9 +93,8 @@ class OrderStateStreamResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Ping $var
      * @return $this
      */
-    public function setPing($var)
+    public function setPing(\Tinkoff\Invest\V1\Ping|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Ping::class);
         $this->writeOneof(2, $var);
 
         return $this;
@@ -124,9 +123,8 @@ class OrderStateStreamResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\SubscriptionResponse $var
      * @return $this
      */
-    public function setSubscription($var)
+    public function setSubscription(\Tinkoff\Invest\V1\SubscriptionResponse|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\SubscriptionResponse::class);
         $this->writeOneof(3, $var);
 
         return $this;
@@ -155,9 +153,8 @@ class OrderStateStreamResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\OrderStateStreamResponse\StopOrderState $var
      * @return $this
      */
-    public function setStopOrderState($var)
+    public function setStopOrderState(\Tinkoff\Invest\V1\OrderStateStreamResponse\StopOrderState|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\OrderStateStreamResponse\StopOrderState::class);
         $this->writeOneof(4, $var);
 
         return $this;

@@ -113,7 +113,8 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      *          Флаг показа overnight операций.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Operations::initOnce();
         parent::__construct($data);
     }
@@ -136,9 +137,9 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setAccountId($var)
+    public function setAccountId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->account_id = $var;
 
         return $this;
@@ -172,9 +173,9 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setInstrumentId($var)
+    public function setInstrumentId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->instrument_id = $var;
 
         return $this;
@@ -208,9 +209,8 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setFrom($var)
+    public function setFrom(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->from = $var;
 
         return $this;
@@ -244,9 +244,8 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setTo($var)
+    public function setTo(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->to = $var;
 
         return $this;
@@ -280,9 +279,9 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCursor($var)
+    public function setCursor(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->cursor = $var;
 
         return $this;
@@ -316,7 +315,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setLimit($var)
+    public function setLimit(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->limit = $var;
@@ -328,7 +327,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      *Тип операции. Принимает значение из списка `OperationType`.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OperationType operation_types = 13;</code>
-     * @return RepeatedField<int>
+     * @return RepeatedField<int> one of the values in {@see \Tinkoff\Invest\V1\OperationType}
      */
     public function getOperationTypes()
     {
@@ -339,10 +338,10 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      *Тип операции. Принимает значение из списка `OperationType`.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OperationType operation_types = 13;</code>
-     * @param int[] $var
+     * @param int[] $var one of the values in {@see \Tinkoff\Invest\V1\OperationType}
      * @return $this
      */
-    public function setOperationTypes($var)
+    public function setOperationTypes(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::ENUM, \Tinkoff\Invest\V1\OperationType::class);
         $this->operation_types = $arr;
@@ -354,7 +353,7 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      *Статус запрашиваемых операций. Возможные значения указаны в `OperationState`.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.OperationState state = 14;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\OperationState}
      */
     public function getState()
     {
@@ -375,10 +374,10 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      *Статус запрашиваемых операций. Возможные значения указаны в `OperationState`.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.OperationState state = 14;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\OperationState}
      * @return $this
      */
-    public function setState($var)
+    public function setState(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\OperationState::class);
         $this->state = $var;
@@ -414,9 +413,8 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setWithoutCommissions($var)
+    public function setWithoutCommissions(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->without_commissions = $var;
 
         return $this;
@@ -450,9 +448,8 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setWithoutTrades($var)
+    public function setWithoutTrades(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->without_trades = $var;
 
         return $this;
@@ -486,9 +483,8 @@ class GetOperationsByCursorRequest extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setWithoutOvernights($var)
+    public function setWithoutOvernights(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->without_overnights = $var;
 
         return $this;

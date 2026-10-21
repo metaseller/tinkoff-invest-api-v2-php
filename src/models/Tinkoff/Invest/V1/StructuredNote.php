@@ -449,7 +449,8 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      *          Тесты, которые необходимо пройти клиенту, чтобы совершать покупки по бумаге.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -472,9 +473,9 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setUid($var)
+    public function setUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->uid = $var;
 
         return $this;
@@ -498,9 +499,9 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setFigi($var)
+    public function setFigi(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->figi = $var;
 
         return $this;
@@ -524,9 +525,9 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTicker($var)
+    public function setTicker(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->ticker = $var;
 
         return $this;
@@ -550,9 +551,9 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setClassCode($var)
+    public function setClassCode(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->class_code = $var;
 
         return $this;
@@ -576,9 +577,9 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setIsin($var)
+    public function setIsin(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->isin = $var;
 
         return $this;
@@ -602,9 +603,9 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setName($var)
+    public function setName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->name = $var;
 
         return $this;
@@ -628,9 +629,9 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setAssetUid($var)
+    public function setAssetUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->asset_uid = $var;
 
         return $this;
@@ -654,9 +655,9 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setPositionUid($var)
+    public function setPositionUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->position_uid = $var;
 
         return $this;
@@ -690,9 +691,8 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setMinPriceIncrement($var)
+    public function setMinPriceIncrement(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->min_price_increment = $var;
 
         return $this;
@@ -716,7 +716,7 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setLot($var)
+    public function setLot(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->lot = $var;
@@ -752,9 +752,8 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setNominal($var)
+    public function setNominal(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->nominal = $var;
 
         return $this;
@@ -778,9 +777,9 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCurrency($var)
+    public function setCurrency(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->currency = $var;
 
         return $this;
@@ -814,9 +813,8 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setMaturityDate($var)
+    public function setMaturityDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->maturity_date = $var;
 
         return $this;
@@ -850,9 +848,8 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setPlacementDate($var)
+    public function setPlacementDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->placement_date = $var;
 
         return $this;
@@ -876,9 +873,9 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setIssueKind($var)
+    public function setIssueKind(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->issue_kind = $var;
 
         return $this;
@@ -902,7 +899,7 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setIssueSize($var)
+    public function setIssueSize(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->issue_size = $var;
@@ -928,7 +925,7 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setIssueSizePlan($var)
+    public function setIssueSizePlan(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->issue_size_plan = $var;
@@ -964,9 +961,8 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setDlongClient($var)
+    public function setDlongClient(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->dlong_client = $var;
 
         return $this;
@@ -1000,9 +996,8 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setDshortClient($var)
+    public function setDshortClient(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->dshort_client = $var;
 
         return $this;
@@ -1026,9 +1021,8 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setShortEnabledFlag($var)
+    public function setShortEnabledFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->short_enabled_flag = $var;
 
         return $this;
@@ -1052,9 +1046,9 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setExchange($var)
+    public function setExchange(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->exchange = $var;
 
         return $this;
@@ -1064,7 +1058,7 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      *Текущий режим торгов инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SecurityTradingStatus trading_status = 22;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\SecurityTradingStatus}
      */
     public function getTradingStatus()
     {
@@ -1075,10 +1069,10 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      *Текущий режим торгов инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SecurityTradingStatus trading_status = 22;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\SecurityTradingStatus}
      * @return $this
      */
-    public function setTradingStatus($var)
+    public function setTradingStatus(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\SecurityTradingStatus::class);
         $this->trading_status = $var;
@@ -1104,9 +1098,8 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setApiTradeAvailableFlag($var)
+    public function setApiTradeAvailableFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->api_trade_available_flag = $var;
 
         return $this;
@@ -1130,9 +1123,8 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setBuyAvailableFlag($var)
+    public function setBuyAvailableFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->buy_available_flag = $var;
 
         return $this;
@@ -1156,9 +1148,8 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setSellAvailableFlag($var)
+    public function setSellAvailableFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->sell_available_flag = $var;
 
         return $this;
@@ -1182,9 +1173,8 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setLimitOrderAvailableFlag($var)
+    public function setLimitOrderAvailableFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->limit_order_available_flag = $var;
 
         return $this;
@@ -1208,9 +1198,8 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setMarketOrderAvailableFlag($var)
+    public function setMarketOrderAvailableFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->market_order_available_flag = $var;
 
         return $this;
@@ -1234,9 +1223,8 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setBestpriceOrderAvailableFlag($var)
+    public function setBestpriceOrderAvailableFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->bestprice_order_available_flag = $var;
 
         return $this;
@@ -1260,9 +1248,8 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setWeekendFlag($var)
+    public function setWeekendFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->weekend_flag = $var;
 
         return $this;
@@ -1286,9 +1273,8 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setLiquidityFlag($var)
+    public function setLiquidityFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->liquidity_flag = $var;
 
         return $this;
@@ -1312,9 +1298,8 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setForIisFlag($var)
+    public function setForIisFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->for_iis_flag = $var;
 
         return $this;
@@ -1338,9 +1323,8 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setForQualInvestorFlag($var)
+    public function setForQualInvestorFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->for_qual_investor_flag = $var;
 
         return $this;
@@ -1364,9 +1348,8 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setPawnshopListFlag($var)
+    public function setPawnshopListFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->pawnshop_list_flag = $var;
 
         return $this;
@@ -1376,7 +1359,7 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      *Реальная площадка исполнения расчётов.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.RealExchange real_exchange = 34;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\RealExchange}
      */
     public function getRealExchange()
     {
@@ -1387,10 +1370,10 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      *Реальная площадка исполнения расчётов.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.RealExchange real_exchange = 34;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\RealExchange}
      * @return $this
      */
-    public function setRealExchange($var)
+    public function setRealExchange(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\RealExchange::class);
         $this->real_exchange = $var;
@@ -1426,9 +1409,8 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setFirst1MinCandleDate($var)
+    public function setFirst1MinCandleDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->first_1min_candle_date = $var;
 
         return $this;
@@ -1462,9 +1444,8 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setFirst1DayCandleDate($var)
+    public function setFirst1DayCandleDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->first_1day_candle_date = $var;
 
         return $this;
@@ -1488,9 +1469,9 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setBorrowName($var)
+    public function setBorrowName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->borrow_name = $var;
 
         return $this;
@@ -1514,9 +1495,9 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setType($var)
+    public function setType(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->type = $var;
 
         return $this;
@@ -1526,7 +1507,7 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      *Стратегия портфеля.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StructuredNote.LogicPortfolio logic_portfolio = 39;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\StructuredNote\LogicPortfolio}
      */
     public function getLogicPortfolio()
     {
@@ -1537,10 +1518,10 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      *Стратегия портфеля.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StructuredNote.LogicPortfolio logic_portfolio = 39;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\StructuredNote\LogicPortfolio}
      * @return $this
      */
-    public function setLogicPortfolio($var)
+    public function setLogicPortfolio(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\StructuredNote\LogicPortfolio::class);
         $this->logic_portfolio = $var;
@@ -1552,7 +1533,7 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      *Тип базового актива.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AssetType asset_type = 40;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\AssetType}
      */
     public function getAssetType()
     {
@@ -1563,10 +1544,10 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      *Тип базового актива.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AssetType asset_type = 40;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\AssetType}
      * @return $this
      */
-    public function setAssetType($var)
+    public function setAssetType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\AssetType::class);
         $this->asset_type = $var;
@@ -1592,7 +1573,7 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\StructuredNote\BasicAsset[] $var
      * @return $this
      */
-    public function setBasicAssets($var)
+    public function setBasicAssets(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\StructuredNote\BasicAsset::class);
         $this->basic_assets = $arr;
@@ -1628,9 +1609,8 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setSafetyBarrier($var)
+    public function setSafetyBarrier(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->safety_barrier = $var;
 
         return $this;
@@ -1654,9 +1634,9 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCouponPeriodBase($var)
+    public function setCouponPeriodBase(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->coupon_period_base = $var;
 
         return $this;
@@ -1666,7 +1646,7 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      *Принцип наблюдений.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StructuredNote.ObservationPrinciple observation_principle = 44;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\StructuredNote\ObservationPrinciple}
      */
     public function getObservationPrinciple()
     {
@@ -1677,10 +1657,10 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      *Принцип наблюдений.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StructuredNote.ObservationPrinciple observation_principle = 44;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\StructuredNote\ObservationPrinciple}
      * @return $this
      */
-    public function setObservationPrinciple($var)
+    public function setObservationPrinciple(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\StructuredNote\ObservationPrinciple::class);
         $this->observation_principle = $var;
@@ -1706,9 +1686,9 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setObservationFrequency($var)
+    public function setObservationFrequency(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->observation_frequency = $var;
 
         return $this;
@@ -1742,9 +1722,8 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setInitialPriceFixingDate($var)
+    public function setInitialPriceFixingDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->initial_price_fixing_date = $var;
 
         return $this;
@@ -1768,7 +1747,7 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\StructuredNote\PBYield[] $var
      * @return $this
      */
-    public function setYield($var)
+    public function setYield(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\StructuredNote\PBYield::class);
         $this->yield = $arr;
@@ -1794,9 +1773,8 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setCouponSavingFlag($var)
+    public function setCouponSavingFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->coupon_saving_flag = $var;
 
         return $this;
@@ -1820,9 +1798,9 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setSector($var)
+    public function setSector(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->sector = $var;
 
         return $this;
@@ -1846,9 +1824,9 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCountryOfRisk($var)
+    public function setCountryOfRisk(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->country_of_risk = $var;
 
         return $this;
@@ -1872,9 +1850,9 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCountryOfRiskName($var)
+    public function setCountryOfRiskName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->country_of_risk_name = $var;
 
         return $this;
@@ -1898,9 +1876,9 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setLogoName($var)
+    public function setLogoName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->logo_name = $var;
 
         return $this;
@@ -1924,7 +1902,7 @@ class StructuredNote extends \Google\Protobuf\Internal\Message
      * @param string[] $var
      * @return $this
      */
-    public function setRequiredTests($var)
+    public function setRequiredTests(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->required_tests = $arr;

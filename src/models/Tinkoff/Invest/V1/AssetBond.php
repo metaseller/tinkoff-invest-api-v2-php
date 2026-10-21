@@ -193,7 +193,8 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      *          Объявленное количество, шт.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -226,9 +227,8 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setCurrentNominal($var)
+    public function setCurrentNominal(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->current_nominal = $var;
 
         return $this;
@@ -252,9 +252,9 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setBorrowName($var)
+    public function setBorrowName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->borrow_name = $var;
 
         return $this;
@@ -288,9 +288,8 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setIssueSize($var)
+    public function setIssueSize(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->issue_size = $var;
 
         return $this;
@@ -324,9 +323,8 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setNominal($var)
+    public function setNominal(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->nominal = $var;
 
         return $this;
@@ -350,9 +348,9 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setNominalCurrency($var)
+    public function setNominalCurrency(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->nominal_currency = $var;
 
         return $this;
@@ -376,9 +374,9 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setIssueKind($var)
+    public function setIssueKind(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->issue_kind = $var;
 
         return $this;
@@ -402,9 +400,9 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setInterestKind($var)
+    public function setInterestKind(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->interest_kind = $var;
 
         return $this;
@@ -428,7 +426,7 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setCouponQuantityPerYear($var)
+    public function setCouponQuantityPerYear(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->coupon_quantity_per_year = $var;
@@ -454,9 +452,8 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setIndexedNominalFlag($var)
+    public function setIndexedNominalFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->indexed_nominal_flag = $var;
 
         return $this;
@@ -480,9 +477,8 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setSubordinatedFlag($var)
+    public function setSubordinatedFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->subordinated_flag = $var;
 
         return $this;
@@ -506,9 +502,8 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setCollateralFlag($var)
+    public function setCollateralFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->collateral_flag = $var;
 
         return $this;
@@ -532,9 +527,8 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setTaxFreeFlag($var)
+    public function setTaxFreeFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->tax_free_flag = $var;
 
         return $this;
@@ -558,9 +552,8 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setAmortizationFlag($var)
+    public function setAmortizationFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->amortization_flag = $var;
 
         return $this;
@@ -584,9 +577,8 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setFloatingCouponFlag($var)
+    public function setFloatingCouponFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->floating_coupon_flag = $var;
 
         return $this;
@@ -610,9 +602,8 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setPerpetualFlag($var)
+    public function setPerpetualFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->perpetual_flag = $var;
 
         return $this;
@@ -646,9 +637,8 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setMaturityDate($var)
+    public function setMaturityDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->maturity_date = $var;
 
         return $this;
@@ -672,9 +662,9 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setReturnCondition($var)
+    public function setReturnCondition(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->return_condition = $var;
 
         return $this;
@@ -708,9 +698,8 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setStateRegDate($var)
+    public function setStateRegDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->state_reg_date = $var;
 
         return $this;
@@ -744,9 +733,8 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setPlacementDate($var)
+    public function setPlacementDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->placement_date = $var;
 
         return $this;
@@ -780,9 +768,8 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setPlacementPrice($var)
+    public function setPlacementPrice(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->placement_price = $var;
 
         return $this;
@@ -816,9 +803,8 @@ class AssetBond extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setIssueSizePlan($var)
+    public function setIssueSizePlan(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->issue_size_plan = $var;
 
         return $this;

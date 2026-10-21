@@ -193,7 +193,8 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      *          Метадата
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Orders::initOnce();
         parent::__construct($data);
     }
@@ -216,9 +217,9 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setOrderId($var)
+    public function setOrderId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->order_id = $var;
 
         return $this;
@@ -228,7 +229,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      *Текущий статус заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderExecutionReportStatus execution_report_status = 2;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\OrderExecutionReportStatus}
      */
     public function getExecutionReportStatus()
     {
@@ -239,10 +240,10 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      *Текущий статус заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderExecutionReportStatus execution_report_status = 2;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\OrderExecutionReportStatus}
      * @return $this
      */
-    public function setExecutionReportStatus($var)
+    public function setExecutionReportStatus(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\OrderExecutionReportStatus::class);
         $this->execution_report_status = $var;
@@ -268,7 +269,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setLotsRequested($var)
+    public function setLotsRequested(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->lots_requested = $var;
@@ -294,7 +295,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setLotsExecuted($var)
+    public function setLotsExecuted(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->lots_executed = $var;
@@ -330,9 +331,8 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setInitialOrderPrice($var)
+    public function setInitialOrderPrice(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->initial_order_price = $var;
 
         return $this;
@@ -366,9 +366,8 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setExecutedOrderPrice($var)
+    public function setExecutedOrderPrice(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->executed_order_price = $var;
 
         return $this;
@@ -402,9 +401,8 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setTotalOrderAmount($var)
+    public function setTotalOrderAmount(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->total_order_amount = $var;
 
         return $this;
@@ -438,9 +436,8 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setInitialCommission($var)
+    public function setInitialCommission(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->initial_commission = $var;
 
         return $this;
@@ -474,9 +471,8 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setExecutedCommission($var)
+    public function setExecutedCommission(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->executed_commission = $var;
 
         return $this;
@@ -510,9 +506,8 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setAciValue($var)
+    public function setAciValue(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->aci_value = $var;
 
         return $this;
@@ -536,9 +531,9 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setFigi($var)
+    public function setFigi(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->figi = $var;
 
         return $this;
@@ -548,7 +543,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      *Направление сделки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderDirection direction = 12;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\OrderDirection}
      */
     public function getDirection()
     {
@@ -559,10 +554,10 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      *Направление сделки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderDirection direction = 12;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\OrderDirection}
      * @return $this
      */
-    public function setDirection($var)
+    public function setDirection(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\OrderDirection::class);
         $this->direction = $var;
@@ -598,9 +593,8 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setInitialSecurityPrice($var)
+    public function setInitialSecurityPrice(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->initial_security_price = $var;
 
         return $this;
@@ -610,7 +604,7 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      *Тип заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderType order_type = 14;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\OrderType}
      */
     public function getOrderType()
     {
@@ -621,10 +615,10 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      *Тип заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderType order_type = 14;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\OrderType}
      * @return $this
      */
-    public function setOrderType($var)
+    public function setOrderType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\OrderType::class);
         $this->order_type = $var;
@@ -650,9 +644,9 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setMessage($var)
+    public function setMessage(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->message = $var;
 
         return $this;
@@ -686,9 +680,8 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setInitialOrderPricePt($var)
+    public function setInitialOrderPricePt(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->initial_order_price_pt = $var;
 
         return $this;
@@ -712,9 +705,9 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setInstrumentUid($var)
+    public function setInstrumentUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->instrument_uid = $var;
 
         return $this;
@@ -738,9 +731,9 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTicker($var)
+    public function setTicker(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->ticker = $var;
 
         return $this;
@@ -764,9 +757,9 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setClassCode($var)
+    public function setClassCode(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->class_code = $var;
 
         return $this;
@@ -790,9 +783,9 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setOrderRequestId($var)
+    public function setOrderRequestId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->order_request_id = $var;
 
         return $this;
@@ -826,9 +819,8 @@ class PostOrderResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\ResponseMetadata $var
      * @return $this
      */
-    public function setResponseMetadata($var)
+    public function setResponseMetadata(\Tinkoff\Invest\V1\ResponseMetadata|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\ResponseMetadata::class);
         $this->response_metadata = $var;
 
         return $this;

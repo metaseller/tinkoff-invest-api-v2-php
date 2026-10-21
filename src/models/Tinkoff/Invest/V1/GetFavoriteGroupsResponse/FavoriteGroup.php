@@ -65,7 +65,8 @@ class FavoriteGroup extends \Google\Protobuf\Internal\Message
      *          Признак наличия в группе хотя бы одного инструмента из запроса.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -88,9 +89,9 @@ class FavoriteGroup extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setGroupId($var)
+    public function setGroupId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->group_id = $var;
 
         return $this;
@@ -114,9 +115,9 @@ class FavoriteGroup extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setGroupName($var)
+    public function setGroupName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->group_name = $var;
 
         return $this;
@@ -140,9 +141,9 @@ class FavoriteGroup extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setColor($var)
+    public function setColor(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->color = $var;
 
         return $this;
@@ -166,7 +167,7 @@ class FavoriteGroup extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setSize($var)
+    public function setSize(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->size = $var;
@@ -202,9 +203,8 @@ class FavoriteGroup extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setContainsInstrument($var)
+    public function setContainsInstrument(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->contains_instrument = $var;
 
         return $this;

@@ -41,7 +41,8 @@ class GetFavoritesResponse extends \Google\Protobuf\Internal\Message
      *          Уникальный идентификатор группы.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -64,7 +65,7 @@ class GetFavoritesResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\FavoriteInstrument[] $var
      * @return $this
      */
-    public function setFavoriteInstruments($var)
+    public function setFavoriteInstruments(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\FavoriteInstrument::class);
         $this->favorite_instruments = $arr;
@@ -100,9 +101,9 @@ class GetFavoritesResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setGroupId($var)
+    public function setGroupId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->group_id = $var;
 
         return $this;

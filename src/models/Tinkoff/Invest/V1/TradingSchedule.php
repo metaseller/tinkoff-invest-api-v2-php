@@ -41,7 +41,8 @@ class TradingSchedule extends \Google\Protobuf\Internal\Message
      *           Массив с торговыми и неторговыми днями.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -64,9 +65,9 @@ class TradingSchedule extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setExchange($var)
+    public function setExchange(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->exchange = $var;
 
         return $this;
@@ -90,7 +91,7 @@ class TradingSchedule extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\TradingDay[] $var
      * @return $this
      */
-    public function setDays($var)
+    public function setDays(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\TradingDay::class);
         $this->days = $arr;

@@ -33,7 +33,8 @@ class CurrencyResponse extends \Google\Protobuf\Internal\Message
      *           Информация о валюте.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -66,9 +67,8 @@ class CurrencyResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Currency $var
      * @return $this
      */
-    public function setInstrument($var)
+    public function setInstrument(\Tinkoff\Invest\V1\Currency|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Currency::class);
         $this->instrument = $var;
 
         return $this;

@@ -73,7 +73,8 @@ class PositionData extends \Google\Protobuf\Internal\Message
      *          Дата и время операции в формате UTC.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Operations::initOnce();
         parent::__construct($data);
     }
@@ -96,9 +97,9 @@ class PositionData extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setAccountId($var)
+    public function setAccountId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->account_id = $var;
 
         return $this;
@@ -122,7 +123,7 @@ class PositionData extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\PositionsMoney[] $var
      * @return $this
      */
-    public function setMoney($var)
+    public function setMoney(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\PositionsMoney::class);
         $this->money = $arr;
@@ -148,7 +149,7 @@ class PositionData extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\PositionsSecurities[] $var
      * @return $this
      */
-    public function setSecurities($var)
+    public function setSecurities(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\PositionsSecurities::class);
         $this->securities = $arr;
@@ -174,7 +175,7 @@ class PositionData extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\PositionsFutures[] $var
      * @return $this
      */
-    public function setFutures($var)
+    public function setFutures(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\PositionsFutures::class);
         $this->futures = $arr;
@@ -200,7 +201,7 @@ class PositionData extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\PositionsOptions[] $var
      * @return $this
      */
-    public function setOptions($var)
+    public function setOptions(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\PositionsOptions::class);
         $this->options = $arr;
@@ -236,9 +237,8 @@ class PositionData extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setDate($var)
+    public function setDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->date = $var;
 
         return $this;

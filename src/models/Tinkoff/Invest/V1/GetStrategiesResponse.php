@@ -30,7 +30,8 @@ class GetStrategiesResponse extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\Strategy[] $strategies
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Signals::initOnce();
         parent::__construct($data);
     }
@@ -49,7 +50,7 @@ class GetStrategiesResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Strategy[] $var
      * @return $this
      */
-    public function setStrategies($var)
+    public function setStrategies(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\Strategy::class);
         $this->strategies = $arr;

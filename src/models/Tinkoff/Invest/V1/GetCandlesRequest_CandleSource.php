@@ -11,6 +11,6 @@ if (false) {
      */
     class GetCandlesRequest_CandleSource {}
 }
-class_exists(GetCandlesRequest\CandleSource::class);
+class_alias(GetCandlesRequest\CandleSource::class, GetCandlesRequest_CandleSource::class);
 @trigger_error('Tinkoff\Invest\V1\GetCandlesRequest_CandleSource is deprecated and will be removed in the next major release. Use Tinkoff\Invest\V1\GetCandlesRequest\CandleSource instead', E_USER_DEPRECATED);
 

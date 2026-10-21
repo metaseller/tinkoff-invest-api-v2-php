@@ -121,7 +121,8 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
      *           Дата прогноза.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -144,9 +145,9 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setUid($var)
+    public function setUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->uid = $var;
 
         return $this;
@@ -170,9 +171,9 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setAssetUid($var)
+    public function setAssetUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->asset_uid = $var;
 
         return $this;
@@ -206,9 +207,8 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setCreatedAt($var)
+    public function setCreatedAt(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->created_at = $var;
 
         return $this;
@@ -242,9 +242,8 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setBestTargetPrice($var)
+    public function setBestTargetPrice(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->best_target_price = $var;
 
         return $this;
@@ -278,9 +277,8 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setBestTargetLow($var)
+    public function setBestTargetLow(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->best_target_low = $var;
 
         return $this;
@@ -314,9 +312,8 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setBestTargetHigh($var)
+    public function setBestTargetHigh(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->best_target_high = $var;
 
         return $this;
@@ -340,7 +337,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setTotalBuyRecommend($var)
+    public function setTotalBuyRecommend(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->total_buy_recommend = $var;
@@ -366,7 +363,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setTotalHoldRecommend($var)
+    public function setTotalHoldRecommend(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->total_hold_recommend = $var;
@@ -392,7 +389,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setTotalSellRecommend($var)
+    public function setTotalSellRecommend(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->total_sell_recommend = $var;
@@ -418,9 +415,9 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCurrency($var)
+    public function setCurrency(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->currency = $var;
 
         return $this;
@@ -430,7 +427,7 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
      * Консенсус-прогноз.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Recommendation consensus = 11;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\Recommendation}
      */
     public function getConsensus()
     {
@@ -441,10 +438,10 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
      * Консенсус-прогноз.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Recommendation consensus = 11;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\Recommendation}
      * @return $this
      */
-    public function setConsensus($var)
+    public function setConsensus(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\Recommendation::class);
         $this->consensus = $var;
@@ -480,9 +477,8 @@ class ConsensusForecastsItem extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setPrognosisDate($var)
+    public function setPrognosisDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->prognosis_date = $var;
 
         return $this;

@@ -30,7 +30,8 @@ class RiskRatesResponse extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\RiskRatesResponse\RiskRateResult[] $instrument_risk_rates
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -49,7 +50,7 @@ class RiskRatesResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\RiskRatesResponse\RiskRateResult[] $var
      * @return $this
      */
-    public function setInstrumentRiskRates($var)
+    public function setInstrumentRiskRates(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\RiskRatesResponse\RiskRateResult::class);
         $this->instrument_risk_rates = $arr;

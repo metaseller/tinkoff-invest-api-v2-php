@@ -11,6 +11,6 @@ if (false) {
      */
     class GetTechAnalysisResponse_TechAnalysisItem {}
 }
-class_exists(GetTechAnalysisResponse\TechAnalysisItem::class);
+class_alias(GetTechAnalysisResponse\TechAnalysisItem::class, GetTechAnalysisResponse_TechAnalysisItem::class);
 @trigger_error('Tinkoff\Invest\V1\GetTechAnalysisResponse_TechAnalysisItem is deprecated and will be removed in the next major release. Use Tinkoff\Invest\V1\GetTechAnalysisResponse\TechAnalysisItem instead', E_USER_DEPRECATED);
 

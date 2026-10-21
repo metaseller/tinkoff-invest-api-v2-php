@@ -49,7 +49,8 @@ class SubscribeTradesResponse extends \Google\Protobuf\Internal\Message
      *          Тип источника сделок.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Marketdata::initOnce();
         parent::__construct($data);
     }
@@ -72,9 +73,9 @@ class SubscribeTradesResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTrackingId($var)
+    public function setTrackingId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->tracking_id = $var;
 
         return $this;
@@ -98,7 +99,7 @@ class SubscribeTradesResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\TradeSubscription[] $var
      * @return $this
      */
-    public function setTradeSubscriptions($var)
+    public function setTradeSubscriptions(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\TradeSubscription::class);
         $this->trade_subscriptions = $arr;
@@ -110,7 +111,7 @@ class SubscribeTradesResponse extends \Google\Protobuf\Internal\Message
      *Тип источника сделок.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType trade_source = 3;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\TradeSourceType}
      */
     public function getTradeSource()
     {
@@ -121,10 +122,10 @@ class SubscribeTradesResponse extends \Google\Protobuf\Internal\Message
      *Тип источника сделок.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType trade_source = 3;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\TradeSourceType}
      * @return $this
      */
-    public function setTradeSource($var)
+    public function setTradeSource(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\TradeSourceType::class);
         $this->trade_source = $var;

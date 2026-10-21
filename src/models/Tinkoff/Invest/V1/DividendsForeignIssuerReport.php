@@ -121,7 +121,8 @@ class DividendsForeignIssuerReport extends \Google\Protobuf\Internal\Message
      *          Валюта.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Operations::initOnce();
         parent::__construct($data);
     }
@@ -154,9 +155,8 @@ class DividendsForeignIssuerReport extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setRecordDate($var)
+    public function setRecordDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->record_date = $var;
 
         return $this;
@@ -190,9 +190,8 @@ class DividendsForeignIssuerReport extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setPaymentDate($var)
+    public function setPaymentDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->payment_date = $var;
 
         return $this;
@@ -216,9 +215,9 @@ class DividendsForeignIssuerReport extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setSecurityName($var)
+    public function setSecurityName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->security_name = $var;
 
         return $this;
@@ -242,9 +241,9 @@ class DividendsForeignIssuerReport extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setIsin($var)
+    public function setIsin(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->isin = $var;
 
         return $this;
@@ -268,9 +267,9 @@ class DividendsForeignIssuerReport extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setIssuerCountry($var)
+    public function setIssuerCountry(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->issuer_country = $var;
 
         return $this;
@@ -294,7 +293,7 @@ class DividendsForeignIssuerReport extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setQuantity($var)
+    public function setQuantity(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->quantity = $var;
@@ -330,9 +329,8 @@ class DividendsForeignIssuerReport extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setDividend($var)
+    public function setDividend(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->dividend = $var;
 
         return $this;
@@ -366,9 +364,8 @@ class DividendsForeignIssuerReport extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setExternalCommission($var)
+    public function setExternalCommission(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->external_commission = $var;
 
         return $this;
@@ -402,9 +399,8 @@ class DividendsForeignIssuerReport extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setDividendGross($var)
+    public function setDividendGross(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->dividend_gross = $var;
 
         return $this;
@@ -438,9 +434,8 @@ class DividendsForeignIssuerReport extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setTax($var)
+    public function setTax(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->tax = $var;
 
         return $this;
@@ -474,9 +469,8 @@ class DividendsForeignIssuerReport extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setDividendAmount($var)
+    public function setDividendAmount(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->dividend_amount = $var;
 
         return $this;
@@ -500,9 +494,9 @@ class DividendsForeignIssuerReport extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCurrency($var)
+    public function setCurrency(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->currency = $var;
 
         return $this;

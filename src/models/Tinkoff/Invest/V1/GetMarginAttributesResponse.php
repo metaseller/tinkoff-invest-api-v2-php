@@ -81,7 +81,8 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
      *           Размер гарантийного обеспечения, заблокированного под фьючерсы.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Users::initOnce();
         parent::__construct($data);
     }
@@ -114,9 +115,8 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setLiquidPortfolio($var)
+    public function setLiquidPortfolio(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->liquid_portfolio = $var;
 
         return $this;
@@ -150,9 +150,8 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setStartingMargin($var)
+    public function setStartingMargin(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->starting_margin = $var;
 
         return $this;
@@ -186,9 +185,8 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setMinimalMargin($var)
+    public function setMinimalMargin(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->minimal_margin = $var;
 
         return $this;
@@ -222,9 +220,8 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setFundsSufficiencyLevel($var)
+    public function setFundsSufficiencyLevel(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->funds_sufficiency_level = $var;
 
         return $this;
@@ -258,9 +255,8 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setAmountOfMissingFunds($var)
+    public function setAmountOfMissingFunds(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->amount_of_missing_funds = $var;
 
         return $this;
@@ -294,9 +290,8 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setCorrectedMargin($var)
+    public function setCorrectedMargin(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->corrected_margin = $var;
 
         return $this;
@@ -330,9 +325,8 @@ class GetMarginAttributesResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setGuaranteeForFutures($var)
+    public function setGuaranteeForFutures(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->guarantee_for_futures = $var;
 
         return $this;

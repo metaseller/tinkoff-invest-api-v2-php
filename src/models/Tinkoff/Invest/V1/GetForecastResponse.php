@@ -41,7 +41,8 @@ class GetForecastResponse extends \Google\Protobuf\Internal\Message
      *           Согласованный прогноз.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -64,7 +65,7 @@ class GetForecastResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\GetForecastResponse\TargetItem[] $var
      * @return $this
      */
-    public function setTargets($var)
+    public function setTargets(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\GetForecastResponse\TargetItem::class);
         $this->targets = $arr;
@@ -100,9 +101,8 @@ class GetForecastResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\GetForecastResponse\ConsensusItem $var
      * @return $this
      */
-    public function setConsensus($var)
+    public function setConsensus(\Tinkoff\Invest\V1\GetForecastResponse\ConsensusItem|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\GetForecastResponse\ConsensusItem::class);
         $this->consensus = $var;
 
         return $this;

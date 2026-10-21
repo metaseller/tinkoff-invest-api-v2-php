@@ -39,7 +39,8 @@ class ResponseMetadata extends \Google\Protobuf\Internal\Message
      *          Серверное время.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Common::initOnce();
         parent::__construct($data);
     }
@@ -62,9 +63,9 @@ class ResponseMetadata extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTrackingId($var)
+    public function setTrackingId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->tracking_id = $var;
 
         return $this;
@@ -98,9 +99,8 @@ class ResponseMetadata extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setServerTime($var)
+    public function setServerTime(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->server_time = $var;
 
         return $this;

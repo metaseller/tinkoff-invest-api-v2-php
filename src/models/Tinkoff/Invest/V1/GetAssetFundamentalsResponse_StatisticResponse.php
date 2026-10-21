@@ -11,6 +11,6 @@ if (false) {
      */
     class GetAssetFundamentalsResponse_StatisticResponse {}
 }
-class_exists(GetAssetFundamentalsResponse\StatisticResponse::class);
+class_alias(GetAssetFundamentalsResponse\StatisticResponse::class, GetAssetFundamentalsResponse_StatisticResponse::class);
 @trigger_error('Tinkoff\Invest\V1\GetAssetFundamentalsResponse_StatisticResponse is deprecated and will be removed in the next major release. Use Tinkoff\Invest\V1\GetAssetFundamentalsResponse\StatisticResponse instead', E_USER_DEPRECATED);
 

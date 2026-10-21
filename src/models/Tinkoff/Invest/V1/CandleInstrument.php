@@ -50,7 +50,8 @@ class CandleInstrument extends \Google\Protobuf\Internal\Message
      *          Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Marketdata::initOnce();
         parent::__construct($data);
     }
@@ -78,10 +79,10 @@ class CandleInstrument extends \Google\Protobuf\Internal\Message
      * @return $this
      * @deprecated
      */
-    public function setFigi($var)
+    public function setFigi(string $var)
     {
         @trigger_error('figi is deprecated.', E_USER_DEPRECATED);
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->figi = $var;
 
         return $this;
@@ -91,7 +92,7 @@ class CandleInstrument extends \Google\Protobuf\Internal\Message
      *Интервал свечей. Двухчасовые и четырехчасовые свечи в стриме отсчитываются с 0:00 по UTC.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionInterval interval = 2;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\SubscriptionInterval}
      */
     public function getInterval()
     {
@@ -102,10 +103,10 @@ class CandleInstrument extends \Google\Protobuf\Internal\Message
      *Интервал свечей. Двухчасовые и четырехчасовые свечи в стриме отсчитываются с 0:00 по UTC.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionInterval interval = 2;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\SubscriptionInterval}
      * @return $this
      */
-    public function setInterval($var)
+    public function setInterval(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\SubscriptionInterval::class);
         $this->interval = $var;
@@ -131,9 +132,9 @@ class CandleInstrument extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setInstrumentId($var)
+    public function setInstrumentId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->instrument_id = $var;
 
         return $this;

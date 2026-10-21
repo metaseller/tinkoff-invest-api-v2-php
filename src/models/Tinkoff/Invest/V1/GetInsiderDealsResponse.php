@@ -41,7 +41,8 @@ class GetInsiderDealsResponse extends \Google\Protobuf\Internal\Message
      *           Курсор для получения следующей страницы.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -64,7 +65,7 @@ class GetInsiderDealsResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\GetInsiderDealsResponse\InsiderDeal[] $var
      * @return $this
      */
-    public function setInsiderDeals($var)
+    public function setInsiderDeals(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\GetInsiderDealsResponse\InsiderDeal::class);
         $this->insider_deals = $arr;
@@ -100,9 +101,9 @@ class GetInsiderDealsResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setNextCursor($var)
+    public function setNextCursor(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->next_cursor = $var;
 
         return $this;

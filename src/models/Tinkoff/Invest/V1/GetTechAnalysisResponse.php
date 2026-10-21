@@ -31,7 +31,8 @@ class GetTechAnalysisResponse extends \Google\Protobuf\Internal\Message
      *          Массив значений результатов технического анализа.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Marketdata::initOnce();
         parent::__construct($data);
     }
@@ -54,7 +55,7 @@ class GetTechAnalysisResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\GetTechAnalysisResponse\TechAnalysisItem[] $var
      * @return $this
      */
-    public function setTechnicalIndicators($var)
+    public function setTechnicalIndicators(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\GetTechAnalysisResponse\TechAnalysisItem::class);
         $this->technical_indicators = $arr;

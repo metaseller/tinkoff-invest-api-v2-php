@@ -11,6 +11,6 @@ if (false) {
      */
     class GetTechAnalysisRequest_IndicatorType {}
 }
-class_exists(GetTechAnalysisRequest\IndicatorType::class);
+class_alias(GetTechAnalysisRequest\IndicatorType::class, GetTechAnalysisRequest_IndicatorType::class);
 @trigger_error('Tinkoff\Invest\V1\GetTechAnalysisRequest_IndicatorType is deprecated and will be removed in the next major release. Use Tinkoff\Invest\V1\GetTechAnalysisRequest\IndicatorType instead', E_USER_DEPRECATED);
 

@@ -71,7 +71,8 @@ class MarketDataServerSideStreamRequest extends \Google\Protobuf\Internal\Messag
      *          Запрос настройки пинга.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Marketdata::initOnce();
         parent::__construct($data);
     }
@@ -104,9 +105,8 @@ class MarketDataServerSideStreamRequest extends \Google\Protobuf\Internal\Messag
      * @param \Tinkoff\Invest\V1\SubscribeCandlesRequest $var
      * @return $this
      */
-    public function setSubscribeCandlesRequest($var)
+    public function setSubscribeCandlesRequest(\Tinkoff\Invest\V1\SubscribeCandlesRequest|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\SubscribeCandlesRequest::class);
         $this->subscribe_candles_request = $var;
 
         return $this;
@@ -140,9 +140,8 @@ class MarketDataServerSideStreamRequest extends \Google\Protobuf\Internal\Messag
      * @param \Tinkoff\Invest\V1\SubscribeOrderBookRequest $var
      * @return $this
      */
-    public function setSubscribeOrderBookRequest($var)
+    public function setSubscribeOrderBookRequest(\Tinkoff\Invest\V1\SubscribeOrderBookRequest|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\SubscribeOrderBookRequest::class);
         $this->subscribe_order_book_request = $var;
 
         return $this;
@@ -176,9 +175,8 @@ class MarketDataServerSideStreamRequest extends \Google\Protobuf\Internal\Messag
      * @param \Tinkoff\Invest\V1\SubscribeTradesRequest $var
      * @return $this
      */
-    public function setSubscribeTradesRequest($var)
+    public function setSubscribeTradesRequest(\Tinkoff\Invest\V1\SubscribeTradesRequest|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\SubscribeTradesRequest::class);
         $this->subscribe_trades_request = $var;
 
         return $this;
@@ -212,9 +210,8 @@ class MarketDataServerSideStreamRequest extends \Google\Protobuf\Internal\Messag
      * @param \Tinkoff\Invest\V1\SubscribeInfoRequest $var
      * @return $this
      */
-    public function setSubscribeInfoRequest($var)
+    public function setSubscribeInfoRequest(\Tinkoff\Invest\V1\SubscribeInfoRequest|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\SubscribeInfoRequest::class);
         $this->subscribe_info_request = $var;
 
         return $this;
@@ -248,9 +245,8 @@ class MarketDataServerSideStreamRequest extends \Google\Protobuf\Internal\Messag
      * @param \Tinkoff\Invest\V1\SubscribeLastPriceRequest $var
      * @return $this
      */
-    public function setSubscribeLastPriceRequest($var)
+    public function setSubscribeLastPriceRequest(\Tinkoff\Invest\V1\SubscribeLastPriceRequest|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\SubscribeLastPriceRequest::class);
         $this->subscribe_last_price_request = $var;
 
         return $this;
@@ -284,9 +280,8 @@ class MarketDataServerSideStreamRequest extends \Google\Protobuf\Internal\Messag
      * @param \Tinkoff\Invest\V1\PingDelaySettings $var
      * @return $this
      */
-    public function setPingSettings($var)
+    public function setPingSettings(\Tinkoff\Invest\V1\PingDelaySettings|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\PingDelaySettings::class);
         $this->ping_settings = $var;
 
         return $this;

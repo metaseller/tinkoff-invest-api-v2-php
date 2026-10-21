@@ -11,6 +11,6 @@ if (false) {
      */
     class StructuredNote_BasicAsset {}
 }
-class_exists(StructuredNote\BasicAsset::class);
+class_alias(StructuredNote\BasicAsset::class, StructuredNote_BasicAsset::class);
 @trigger_error('Tinkoff\Invest\V1\StructuredNote_BasicAsset is deprecated and will be removed in the next major release. Use Tinkoff\Invest\V1\StructuredNote\BasicAsset instead', E_USER_DEPRECATED);
 

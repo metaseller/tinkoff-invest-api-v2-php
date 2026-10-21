@@ -11,6 +11,6 @@ if (false) {
      */
     class GetInsiderDealsResponse_InsiderDeal {}
 }
-class_exists(GetInsiderDealsResponse\InsiderDeal::class);
+class_alias(GetInsiderDealsResponse\InsiderDeal::class, GetInsiderDealsResponse_InsiderDeal::class);
 @trigger_error('Tinkoff\Invest\V1\GetInsiderDealsResponse_InsiderDeal is deprecated and will be removed in the next major release. Use Tinkoff\Invest\V1\GetInsiderDealsResponse\InsiderDeal instead', E_USER_DEPRECATED);
 

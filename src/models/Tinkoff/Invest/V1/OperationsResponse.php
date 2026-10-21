@@ -33,7 +33,8 @@ class OperationsResponse extends \Google\Protobuf\Internal\Message
      *          Массив операций.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Operations::initOnce();
         parent::__construct($data);
     }
@@ -56,7 +57,7 @@ class OperationsResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Operation[] $var
      * @return $this
      */
-    public function setOperations($var)
+    public function setOperations(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\Operation::class);
         $this->operations = $arr;

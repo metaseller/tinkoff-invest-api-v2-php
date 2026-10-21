@@ -33,7 +33,8 @@ class GetAccountsResponse extends \Google\Protobuf\Internal\Message
      *           Массив счетов клиента.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Users::initOnce();
         parent::__construct($data);
     }
@@ -56,7 +57,7 @@ class GetAccountsResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Account[] $var
      * @return $this
      */
-    public function setAccounts($var)
+    public function setAccounts(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\Account::class);
         $this->accounts = $arr;

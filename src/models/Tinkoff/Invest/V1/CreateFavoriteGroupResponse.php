@@ -39,7 +39,8 @@ class CreateFavoriteGroupResponse extends \Google\Protobuf\Internal\Message
      *          Название группы.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -62,9 +63,9 @@ class CreateFavoriteGroupResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setGroupId($var)
+    public function setGroupId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->group_id = $var;
 
         return $this;
@@ -88,9 +89,9 @@ class CreateFavoriteGroupResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setGroupName($var)
+    public function setGroupName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->group_name = $var;
 
         return $this;

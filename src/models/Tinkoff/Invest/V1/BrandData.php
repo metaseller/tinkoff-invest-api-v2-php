@@ -47,7 +47,8 @@ class BrandData extends \Google\Protobuf\Internal\Message
      *           Цвет текста для цвета логотипа бренда.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Common::initOnce();
         parent::__construct($data);
     }
@@ -70,9 +71,9 @@ class BrandData extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setLogoName($var)
+    public function setLogoName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->logo_name = $var;
 
         return $this;
@@ -96,9 +97,9 @@ class BrandData extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setLogoBaseColor($var)
+    public function setLogoBaseColor(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->logo_base_color = $var;
 
         return $this;
@@ -122,9 +123,9 @@ class BrandData extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTextColor($var)
+    public function setTextColor(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->text_color = $var;
 
         return $this;

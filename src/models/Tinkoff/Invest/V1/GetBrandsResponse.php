@@ -41,7 +41,8 @@ class GetBrandsResponse extends \Google\Protobuf\Internal\Message
      *          Данные по пагинации.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -64,7 +65,7 @@ class GetBrandsResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Brand[] $var
      * @return $this
      */
-    public function setBrands($var)
+    public function setBrands(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\Brand::class);
         $this->brands = $arr;
@@ -100,9 +101,8 @@ class GetBrandsResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\PageResponse $var
      * @return $this
      */
-    public function setPaging($var)
+    public function setPaging(\Tinkoff\Invest\V1\PageResponse|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\PageResponse::class);
         $this->paging = $var;
 
         return $this;

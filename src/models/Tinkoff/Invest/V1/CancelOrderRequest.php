@@ -49,7 +49,8 @@ class CancelOrderRequest extends \Google\Protobuf\Internal\Message
      *          Тип идентификатора заявки.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Orders::initOnce();
         parent::__construct($data);
     }
@@ -72,9 +73,9 @@ class CancelOrderRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setAccountId($var)
+    public function setAccountId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->account_id = $var;
 
         return $this;
@@ -98,9 +99,9 @@ class CancelOrderRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setOrderId($var)
+    public function setOrderId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->order_id = $var;
 
         return $this;
@@ -110,7 +111,7 @@ class CancelOrderRequest extends \Google\Protobuf\Internal\Message
      *Тип идентификатора заявки.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.OrderIdType order_id_type = 3;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\OrderIdType}
      */
     public function getOrderIdType()
     {
@@ -131,10 +132,10 @@ class CancelOrderRequest extends \Google\Protobuf\Internal\Message
      *Тип идентификатора заявки.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.OrderIdType order_id_type = 3;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\OrderIdType}
      * @return $this
      */
-    public function setOrderIdType($var)
+    public function setOrderIdType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\OrderIdType::class);
         $this->order_id_type = $var;

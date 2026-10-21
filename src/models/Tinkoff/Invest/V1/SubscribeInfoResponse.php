@@ -41,7 +41,8 @@ class SubscribeInfoResponse extends \Google\Protobuf\Internal\Message
      *          Массив статусов подписки на торговый статус.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Marketdata::initOnce();
         parent::__construct($data);
     }
@@ -64,9 +65,9 @@ class SubscribeInfoResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTrackingId($var)
+    public function setTrackingId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->tracking_id = $var;
 
         return $this;
@@ -90,7 +91,7 @@ class SubscribeInfoResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\InfoSubscription[] $var
      * @return $this
      */
-    public function setInfoSubscriptions($var)
+    public function setInfoSubscriptions(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\InfoSubscription::class);
         $this->info_subscriptions = $arr;

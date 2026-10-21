@@ -11,6 +11,6 @@ if (false) {
      */
     class GetTechAnalysisRequest_TypeOfPrice {}
 }
-class_exists(GetTechAnalysisRequest\TypeOfPrice::class);
+class_alias(GetTechAnalysisRequest\TypeOfPrice::class, GetTechAnalysisRequest_TypeOfPrice::class);
 @trigger_error('Tinkoff\Invest\V1\GetTechAnalysisRequest_TypeOfPrice is deprecated and will be removed in the next major release. Use Tinkoff\Invest\V1\GetTechAnalysisRequest\TypeOfPrice instead', E_USER_DEPRECATED);
 

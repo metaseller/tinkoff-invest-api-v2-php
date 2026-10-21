@@ -57,7 +57,8 @@ class Asset extends \Google\Protobuf\Internal\Message
      *          Массив идентификаторов инструментов.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -80,9 +81,9 @@ class Asset extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setUid($var)
+    public function setUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->uid = $var;
 
         return $this;
@@ -92,7 +93,7 @@ class Asset extends \Google\Protobuf\Internal\Message
      *Тип актива.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AssetType type = 2;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\AssetType}
      */
     public function getType()
     {
@@ -103,10 +104,10 @@ class Asset extends \Google\Protobuf\Internal\Message
      *Тип актива.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AssetType type = 2;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\AssetType}
      * @return $this
      */
-    public function setType($var)
+    public function setType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\AssetType::class);
         $this->type = $var;
@@ -132,9 +133,9 @@ class Asset extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setName($var)
+    public function setName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->name = $var;
 
         return $this;
@@ -158,7 +159,7 @@ class Asset extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\AssetInstrument[] $var
      * @return $this
      */
-    public function setInstruments($var)
+    public function setInstruments(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\AssetInstrument::class);
         $this->instruments = $arr;

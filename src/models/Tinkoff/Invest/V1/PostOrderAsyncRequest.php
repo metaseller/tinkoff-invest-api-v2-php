@@ -105,7 +105,8 @@ class PostOrderAsyncRequest extends \Google\Protobuf\Internal\Message
      *           Согласие на выставление заявки, которая может привести к непокрытой позиции, по умолчанию false.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Orders::initOnce();
         parent::__construct($data);
     }
@@ -128,9 +129,9 @@ class PostOrderAsyncRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setInstrumentId($var)
+    public function setInstrumentId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->instrument_id = $var;
 
         return $this;
@@ -154,7 +155,7 @@ class PostOrderAsyncRequest extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setQuantity($var)
+    public function setQuantity(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->quantity = $var;
@@ -190,9 +191,8 @@ class PostOrderAsyncRequest extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setPrice($var)
+    public function setPrice(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->price = $var;
 
         return $this;
@@ -202,7 +202,7 @@ class PostOrderAsyncRequest extends \Google\Protobuf\Internal\Message
      *Направление операции.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderDirection direction = 4 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\OrderDirection}
      */
     public function getDirection()
     {
@@ -213,10 +213,10 @@ class PostOrderAsyncRequest extends \Google\Protobuf\Internal\Message
      *Направление операции.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderDirection direction = 4 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\OrderDirection}
      * @return $this
      */
-    public function setDirection($var)
+    public function setDirection(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\OrderDirection::class);
         $this->direction = $var;
@@ -242,9 +242,9 @@ class PostOrderAsyncRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setAccountId($var)
+    public function setAccountId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->account_id = $var;
 
         return $this;
@@ -254,7 +254,7 @@ class PostOrderAsyncRequest extends \Google\Protobuf\Internal\Message
      *Тип заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderType order_type = 6 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\OrderType}
      */
     public function getOrderType()
     {
@@ -265,10 +265,10 @@ class PostOrderAsyncRequest extends \Google\Protobuf\Internal\Message
      *Тип заявки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderType order_type = 6 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\OrderType}
      * @return $this
      */
-    public function setOrderType($var)
+    public function setOrderType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\OrderType::class);
         $this->order_type = $var;
@@ -294,9 +294,9 @@ class PostOrderAsyncRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setOrderId($var)
+    public function setOrderId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->order_id = $var;
 
         return $this;
@@ -306,7 +306,7 @@ class PostOrderAsyncRequest extends \Google\Protobuf\Internal\Message
      *Алгоритм исполнения поручения, применяется только к лимитной заявке.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.TimeInForceType time_in_force = 8;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\TimeInForceType}
      */
     public function getTimeInForce()
     {
@@ -327,10 +327,10 @@ class PostOrderAsyncRequest extends \Google\Protobuf\Internal\Message
      *Алгоритм исполнения поручения, применяется только к лимитной заявке.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.TimeInForceType time_in_force = 8;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\TimeInForceType}
      * @return $this
      */
-    public function setTimeInForce($var)
+    public function setTimeInForce(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\TimeInForceType::class);
         $this->time_in_force = $var;
@@ -342,7 +342,7 @@ class PostOrderAsyncRequest extends \Google\Protobuf\Internal\Message
      *Тип цены.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.PriceType price_type = 9;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\PriceType}
      */
     public function getPriceType()
     {
@@ -363,10 +363,10 @@ class PostOrderAsyncRequest extends \Google\Protobuf\Internal\Message
      *Тип цены.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.PriceType price_type = 9;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\PriceType}
      * @return $this
      */
-    public function setPriceType($var)
+    public function setPriceType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\PriceType::class);
         $this->price_type = $var;
@@ -392,9 +392,8 @@ class PostOrderAsyncRequest extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setConfirmMarginTrade($var)
+    public function setConfirmMarginTrade(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->confirm_margin_trade = $var;
 
         return $this;

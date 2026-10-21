@@ -33,7 +33,8 @@ class OptionsResponse extends \Google\Protobuf\Internal\Message
      *          Массив данных по опциону.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -56,7 +57,7 @@ class OptionsResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Option[] $var
      * @return $this
      */
-    public function setInstruments($var)
+    public function setInstruments(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\Option::class);
         $this->instruments = $arr;

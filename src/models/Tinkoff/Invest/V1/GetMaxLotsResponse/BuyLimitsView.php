@@ -47,7 +47,8 @@ class BuyLimitsView extends \Google\Protobuf\Internal\Message
      *          Максимальное доступное количество лотов для покупки для заявки по рыночной цене на текущий момент
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Orders::initOnce();
         parent::__construct($data);
     }
@@ -80,9 +81,8 @@ class BuyLimitsView extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setBuyMoneyAmount($var)
+    public function setBuyMoneyAmount(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->buy_money_amount = $var;
 
         return $this;
@@ -106,7 +106,7 @@ class BuyLimitsView extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setBuyMaxLots($var)
+    public function setBuyMaxLots(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->buy_max_lots = $var;
@@ -132,7 +132,7 @@ class BuyLimitsView extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setBuyMaxMarketLots($var)
+    public function setBuyMaxMarketLots(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->buy_max_market_lots = $var;

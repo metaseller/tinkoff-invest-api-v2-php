@@ -89,7 +89,7 @@ class Price extends Quantity
     {
         $value_as_money_value = new MoneyValue();
 
-        $value_as_money_value->setCurrency($this->_currency);
+        $value_as_money_value->setCurrency($this->_currency ?? '');
         $value_as_money_value->setUnits($this->_value_as_quotation->getUnits() ?: 0);
         $value_as_money_value->setNano($this->_value_as_quotation->getNano() ?: 0);
 

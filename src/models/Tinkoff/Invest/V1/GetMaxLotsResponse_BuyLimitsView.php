@@ -11,6 +11,6 @@ if (false) {
      */
     class GetMaxLotsResponse_BuyLimitsView {}
 }
-class_exists(GetMaxLotsResponse\BuyLimitsView::class);
+class_alias(GetMaxLotsResponse\BuyLimitsView::class, GetMaxLotsResponse_BuyLimitsView::class);
 @trigger_error('Tinkoff\Invest\V1\GetMaxLotsResponse_BuyLimitsView is deprecated and will be removed in the next major release. Use Tinkoff\Invest\V1\GetMaxLotsResponse\BuyLimitsView instead', E_USER_DEPRECATED);
 

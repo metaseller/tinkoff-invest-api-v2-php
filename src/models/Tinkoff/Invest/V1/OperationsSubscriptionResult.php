@@ -57,7 +57,8 @@ class OperationsSubscriptionResult extends \Google\Protobuf\Internal\Message
      *          Идентификатор открытого соединения
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Operations::initOnce();
         parent::__construct($data);
     }
@@ -80,7 +81,7 @@ class OperationsSubscriptionResult extends \Google\Protobuf\Internal\Message
      * @param string[] $var
      * @return $this
      */
-    public function setAccounts($var)
+    public function setAccounts(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->accounts = $arr;
@@ -92,7 +93,7 @@ class OperationsSubscriptionResult extends \Google\Protobuf\Internal\Message
      *Результат подписки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OperationsAccountSubscriptionStatus subscription_status = 2;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\OperationsAccountSubscriptionStatus}
      */
     public function getSubscriptionStatus()
     {
@@ -103,10 +104,10 @@ class OperationsSubscriptionResult extends \Google\Protobuf\Internal\Message
      *Результат подписки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OperationsAccountSubscriptionStatus subscription_status = 2;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\OperationsAccountSubscriptionStatus}
      * @return $this
      */
-    public function setSubscriptionStatus($var)
+    public function setSubscriptionStatus(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\OperationsAccountSubscriptionStatus::class);
         $this->subscription_status = $var;
@@ -132,9 +133,9 @@ class OperationsSubscriptionResult extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTrackingId($var)
+    public function setTrackingId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->tracking_id = $var;
 
         return $this;
@@ -158,9 +159,9 @@ class OperationsSubscriptionResult extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setStreamId($var)
+    public function setStreamId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->stream_id = $var;
 
         return $this;

@@ -42,7 +42,8 @@ class MarketDataRequest extends \Google\Protobuf\Internal\Message
      *          Запрос настройки пинга.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Marketdata::initOnce();
         parent::__construct($data);
     }
@@ -70,9 +71,8 @@ class MarketDataRequest extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\SubscribeCandlesRequest $var
      * @return $this
      */
-    public function setSubscribeCandlesRequest($var)
+    public function setSubscribeCandlesRequest(\Tinkoff\Invest\V1\SubscribeCandlesRequest|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\SubscribeCandlesRequest::class);
         $this->writeOneof(1, $var);
 
         return $this;
@@ -101,9 +101,8 @@ class MarketDataRequest extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\SubscribeOrderBookRequest $var
      * @return $this
      */
-    public function setSubscribeOrderBookRequest($var)
+    public function setSubscribeOrderBookRequest(\Tinkoff\Invest\V1\SubscribeOrderBookRequest|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\SubscribeOrderBookRequest::class);
         $this->writeOneof(2, $var);
 
         return $this;
@@ -132,9 +131,8 @@ class MarketDataRequest extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\SubscribeTradesRequest $var
      * @return $this
      */
-    public function setSubscribeTradesRequest($var)
+    public function setSubscribeTradesRequest(\Tinkoff\Invest\V1\SubscribeTradesRequest|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\SubscribeTradesRequest::class);
         $this->writeOneof(3, $var);
 
         return $this;
@@ -163,9 +161,8 @@ class MarketDataRequest extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\SubscribeInfoRequest $var
      * @return $this
      */
-    public function setSubscribeInfoRequest($var)
+    public function setSubscribeInfoRequest(\Tinkoff\Invest\V1\SubscribeInfoRequest|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\SubscribeInfoRequest::class);
         $this->writeOneof(4, $var);
 
         return $this;
@@ -194,9 +191,8 @@ class MarketDataRequest extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\SubscribeLastPriceRequest $var
      * @return $this
      */
-    public function setSubscribeLastPriceRequest($var)
+    public function setSubscribeLastPriceRequest(\Tinkoff\Invest\V1\SubscribeLastPriceRequest|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\SubscribeLastPriceRequest::class);
         $this->writeOneof(5, $var);
 
         return $this;
@@ -225,9 +221,8 @@ class MarketDataRequest extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\GetMySubscriptions $var
      * @return $this
      */
-    public function setGetMySubscriptions($var)
+    public function setGetMySubscriptions(\Tinkoff\Invest\V1\GetMySubscriptions|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\GetMySubscriptions::class);
         $this->writeOneof(6, $var);
 
         return $this;
@@ -256,9 +251,8 @@ class MarketDataRequest extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\PingRequest $var
      * @return $this
      */
-    public function setPing($var)
+    public function setPing(\Tinkoff\Invest\V1\PingRequest|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\PingRequest::class);
         $this->writeOneof(7, $var);
 
         return $this;
@@ -287,9 +281,8 @@ class MarketDataRequest extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\PingDelaySettings $var
      * @return $this
      */
-    public function setPingSettings($var)
+    public function setPingSettings(\Tinkoff\Invest\V1\PingDelaySettings|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\PingDelaySettings::class);
         $this->writeOneof(15, $var);
 
         return $this;

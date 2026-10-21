@@ -33,7 +33,8 @@ class GenerateDividendsForeignIssuerReportResponse extends \Google\Protobuf\Inte
      *          Идентификатор задачи формирования отчета.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Operations::initOnce();
         parent::__construct($data);
     }
@@ -56,9 +57,9 @@ class GenerateDividendsForeignIssuerReportResponse extends \Google\Protobuf\Inte
      * @param string $var
      * @return $this
      */
-    public function setTaskId($var)
+    public function setTaskId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->task_id = $var;
 
         return $this;

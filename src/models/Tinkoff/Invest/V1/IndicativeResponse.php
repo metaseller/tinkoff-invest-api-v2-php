@@ -113,7 +113,8 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
      *           Состав индекса.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -136,9 +137,9 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setFigi($var)
+    public function setFigi(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->figi = $var;
 
         return $this;
@@ -162,9 +163,9 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTicker($var)
+    public function setTicker(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->ticker = $var;
 
         return $this;
@@ -188,9 +189,9 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setClassCode($var)
+    public function setClassCode(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->class_code = $var;
 
         return $this;
@@ -214,9 +215,9 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCurrency($var)
+    public function setCurrency(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->currency = $var;
 
         return $this;
@@ -226,7 +227,7 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
      *Тип инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 10;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\InstrumentType}
      */
     public function getInstrumentKind()
     {
@@ -237,10 +238,10 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
      *Тип инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 10;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\InstrumentType}
      * @return $this
      */
-    public function setInstrumentKind($var)
+    public function setInstrumentKind(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\InstrumentType::class);
         $this->instrument_kind = $var;
@@ -266,9 +267,9 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setName($var)
+    public function setName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->name = $var;
 
         return $this;
@@ -292,9 +293,9 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setExchange($var)
+    public function setExchange(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->exchange = $var;
 
         return $this;
@@ -318,9 +319,9 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setUid($var)
+    public function setUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->uid = $var;
 
         return $this;
@@ -344,9 +345,8 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setBuyAvailableFlag($var)
+    public function setBuyAvailableFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->buy_available_flag = $var;
 
         return $this;
@@ -370,9 +370,8 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setSellAvailableFlag($var)
+    public function setSellAvailableFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->sell_available_flag = $var;
 
         return $this;
@@ -396,7 +395,7 @@ class IndicativeResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\IndexInstrument[] $var
      * @return $this
      */
-    public function setIndexComposition($var)
+    public function setIndexComposition(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\IndexInstrument::class);
         $this->index_composition = $arr;

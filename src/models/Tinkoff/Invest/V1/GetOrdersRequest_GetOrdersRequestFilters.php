@@ -11,6 +11,6 @@ if (false) {
      */
     class GetOrdersRequest_GetOrdersRequestFilters {}
 }
-class_exists(GetOrdersRequest\GetOrdersRequestFilters::class);
+class_alias(GetOrdersRequest\GetOrdersRequestFilters::class, GetOrdersRequest_GetOrdersRequestFilters::class);
 @trigger_error('Tinkoff\Invest\V1\GetOrdersRequest_GetOrdersRequestFilters is deprecated and will be removed in the next major release. Use Tinkoff\Invest\V1\GetOrdersRequest\GetOrdersRequestFilters instead', E_USER_DEPRECATED);
 
