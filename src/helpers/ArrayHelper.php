@@ -2,7 +2,7 @@
 
 namespace Metaseller\TinkoffInvestApi2\helpers;
 
-use Google\Protobuf\Internal\RepeatedField;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Класс дополнительных функций для работы с массивами данных и объектами {@link RepeatedField}

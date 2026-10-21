@@ -616,6 +616,7 @@ class TinkoffClientsFactory
         $this->_market_data_service_client = null;
         $this->_market_data_stream_service_client = null;
         $this->_operations_service_client = null;
+        $this->_operations_stream_service_client = null;
         $this->_orders_service_client = null;
         $this->_orders_stream_service_client = null;
         $this->_sandbox_service_client = null;

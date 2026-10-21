@@ -24,7 +24,7 @@ class QuotationHelper
     /**
      * Метод проверяет корректность значения цены для переданного инструмента
      *
-     * @param float|Quotation|MoneyValue $price Цена
+     * @param int|float|Quotation|MoneyValue $price Цена
      *
      * @param Instrument|Share|Bond|Currency|Etf|Future $instrument Инструмент
      *
@@ -45,13 +45,13 @@ class QuotationHelper
         }
 
         if ($price instanceof Quotation || $price instanceof MoneyValue) {
-            $instrument_price = static::floatToInteger(Price::BROKER_PRECISION_MULTIPLIER * ($price->getUnits() ?: 0) + ($price->getNano() ?: 0));
-            $instrument_min_price_increment = static::floatToInteger(Price::BROKER_PRECISION_MULTIPLIER * ($min_price_increment->getUnits() ?: 0) + ($min_price_increment->getNano() ?: 0));
+            $instrument_price = static::toInteger($price);
+            $instrument_min_price_increment = static::toInteger($min_price_increment);
 
             return ($instrument_price % $instrument_min_price_increment) == 0;
         } elseif (is_numeric($price)) {
-            $instrument_price = static::floatToInteger(Price::BROKER_PRECISION_MULTIPLIER * round((float) $price, Price::BROKER_PRECISION));
-            $instrument_min_price_increment = static::floatToInteger(Price::BROKER_PRECISION_MULTIPLIER * ($min_price_increment->getUnits() ?: 0) + ($min_price_increment->getNano() ?: 0));
+            $instrument_price = static::toInteger(is_int($price) ? $price : (float) $price);
+            $instrument_min_price_increment = static::toInteger($min_price_increment);
 
             return ($instrument_price % $instrument_min_price_increment) == 0;
         }
@@ -145,18 +145,45 @@ class QuotationHelper
      * @param float $price Число с плавающей запятой
      *
      * @return Quotation Значение типа {@link Quotation}
+     *
+     * @throws ValidateException Если значение не помещается в целое число нанодолей
      */
     public static function toQuotation(float $price): Quotation
     {
-        $quotation = new Quotation();
+        return static::integerToQuotation(static::toInteger($price));
+    }
 
-        $units = static::floatToInteger($price);
-        $nano = static::floatToInteger(round(($price - $units) * Price::BROKER_PRECISION_MULTIPLIER));
+    /**
+     * Значение в нанодолях. Quotation, MoneyValue и целые числа
+     * преобразуются без промежуточного float; float округляется до 9 знаков.
+     *
+     * @throws ValidateException Если результат не помещается в PHP int
+     */
+    public static function toInteger(Quotation|MoneyValue|int|float $price): int
+    {
+        if (is_float($price)) {
+            return static::floatToInteger(round(round($price, Price::BROKER_PRECISION) * Price::BROKER_PRECISION_MULTIPLIER));
+        }
 
-        $quotation->setUnits($units);
-        $quotation->setNano($nano);
+        $units = is_int($price) ? $price : $price->getUnits();
+        $nano = is_int($price) ? 0 : $price->getNano();
+        $value = bcadd(bcmul((string) $units, (string) Price::BROKER_PRECISION_MULTIPLIER, 0), (string) $nano, 0);
 
-        return $quotation;
+        if (bccomp($value, (string) PHP_INT_MIN, 0) < 0 || bccomp($value, (string) PHP_INT_MAX, 0) > 0) {
+            throw new ValidateException('Value in nanounits is outside the PHP integer range');
+        }
+
+        return (int) $value;
+    }
+
+    /**
+     * Преобразование целого числа нанодолей без потери точности.
+     */
+    public static function integerToQuotation(int $value): Quotation
+    {
+        return (new Quotation())
+            ->setUnits(intdiv($value, Price::BROKER_PRECISION_MULTIPLIER))
+            ->setNano($value % Price::BROKER_PRECISION_MULTIPLIER);
     }
 
     /**
@@ -165,9 +192,16 @@ class QuotationHelper
      * @param float $price Число в формате float
      *
      * @return int Число в формате int
+     *
+     * @throws ValidateException Если число бесконечное, NaN или вне диапазона PHP int
      */
     public static function floatToInteger(float $price): int
     {
-        return intval(strval(round($price, Price::BROKER_PRECISION_MULTIPLIER)));
+        // PHP_INT_MAX rounds up when converted to float on a 64-bit platform.
+        if (!is_finite($price) || $price < PHP_INT_MIN || $price >= -(float) PHP_INT_MIN) {
+            throw new ValidateException('Float value is outside the PHP integer range');
+        }
+
+        return (int) $price;
     }
 }

@@ -45,9 +45,7 @@ class Quantity
      */
     public function setDecimalValue(float $value): void
     {
-        $this->_value_as_decimal = round($value, static::BROKER_PRECISION);
-        $this->_value_as_integer = QuotationHelper::floatToInteger(static::BROKER_PRECISION_MULTIPLIER * round($value, static::BROKER_PRECISION));
-        $this->_value_as_quotation = QuotationHelper::toQuotation($value);
+        $this->setIntegerValue(QuotationHelper::toInteger($value));
     }
 
     /**
@@ -59,7 +57,7 @@ class Quantity
     {
         $this->_value_as_quotation = $value;
 
-        $this->_value_as_integer = QuotationHelper::floatToInteger(static::BROKER_PRECISION_MULTIPLIER * ($value->getUnits() ?: 0) + ($value->getNano() ?: 0));
+        $this->_value_as_integer = QuotationHelper::toInteger($value);
         $this->_value_as_decimal = round((float) $this->_value_as_integer / static::BROKER_PRECISION_MULTIPLIER, static::BROKER_PRECISION);
     }
 
@@ -76,7 +74,7 @@ class Quantity
         $this->_value_as_integer = $value;
         $this->_value_as_decimal = round((float) $this->_value_as_integer / static::BROKER_PRECISION_MULTIPLIER, static::BROKER_PRECISION);
 
-        $this->_value_as_quotation = QuotationHelper::toQuotation($this->_value_as_decimal);
+        $this->_value_as_quotation = QuotationHelper::integerToQuotation($value);
     }
 
     /**

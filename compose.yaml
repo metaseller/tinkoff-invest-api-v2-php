@@ -1,0 +1,15 @@
+services:
+  sdk:
+    build: .
+    init: true
+    working_dir: /app
+    volumes:
+      - .:/app:ro
+      - vendor:/app/vendor
+      - composer-cache:/tmp/composer-cache
+    environment:
+      COMPOSER_CACHE_DIR: /tmp/composer-cache
+
+volumes:
+  vendor:
+  composer-cache:

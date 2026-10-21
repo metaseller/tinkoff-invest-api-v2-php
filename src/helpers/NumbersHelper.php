@@ -19,7 +19,7 @@ class NumbersHelper
      *
      * @return string Отформатированное значение
      */
-    public static function printFloat($value, int $precision = null, bool $scientific = null, $add_thousand_separator = false): string
+    public static function printFloat($value, ?int $precision = null, ?bool $scientific = null, $add_thousand_separator = false): string
     {
         if (!is_numeric($value)) {
             return (string) $value;
