@@ -15,6 +15,9 @@ Thumbs.db
 # composer vendor dir
 /vendor
 
+# Local contract updater, generators, checkouts and backups
+/update/
+
 # composer itself is not needed
 composer.phar
 
