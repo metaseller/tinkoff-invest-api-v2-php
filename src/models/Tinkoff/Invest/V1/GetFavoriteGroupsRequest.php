@@ -41,7 +41,8 @@ class GetFavoriteGroupsRequest extends \Google\Protobuf\Internal\Message
      *          Массив идентификаторов групп, которые необходимо исключить из ответа.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -64,7 +65,7 @@ class GetFavoriteGroupsRequest extends \Google\Protobuf\Internal\Message
      * @param string[] $var
      * @return $this
      */
-    public function setInstrumentId($var)
+    public function setInstrumentId(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->instrument_id = $arr;
@@ -90,7 +91,7 @@ class GetFavoriteGroupsRequest extends \Google\Protobuf\Internal\Message
      * @param string[] $var
      * @return $this
      */
-    public function setExcludedGroupId($var)
+    public function setExcludedGroupId(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->excluded_group_id = $arr;

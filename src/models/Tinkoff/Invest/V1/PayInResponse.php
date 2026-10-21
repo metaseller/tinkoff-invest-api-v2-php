@@ -23,7 +23,8 @@ class PayInResponse extends \Google\Protobuf\Internal\Message
      *
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Users::initOnce();
         parent::__construct($data);
     }

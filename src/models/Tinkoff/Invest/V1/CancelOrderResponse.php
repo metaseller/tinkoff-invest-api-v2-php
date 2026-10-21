@@ -41,7 +41,8 @@ class CancelOrderResponse extends \Google\Protobuf\Internal\Message
      *          Метадата
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Orders::initOnce();
         parent::__construct($data);
     }
@@ -74,9 +75,8 @@ class CancelOrderResponse extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setTime($var)
+    public function setTime(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->time = $var;
 
         return $this;
@@ -110,9 +110,8 @@ class CancelOrderResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\ResponseMetadata $var
      * @return $this
      */
-    public function setResponseMetadata($var)
+    public function setResponseMetadata(\Tinkoff\Invest\V1\ResponseMetadata|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\ResponseMetadata::class);
         $this->response_metadata = $var;
 
         return $this;

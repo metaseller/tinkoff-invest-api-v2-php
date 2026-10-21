@@ -41,7 +41,8 @@ class GetConsensusForecastsResponse extends \Google\Protobuf\Internal\Message
      *          Данные по пагинации.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -64,7 +65,7 @@ class GetConsensusForecastsResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\GetConsensusForecastsResponse\ConsensusForecastsItem[] $var
      * @return $this
      */
-    public function setItems($var)
+    public function setItems(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\GetConsensusForecastsResponse\ConsensusForecastsItem::class);
         $this->items = $arr;
@@ -100,9 +101,8 @@ class GetConsensusForecastsResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\PageResponse $var
      * @return $this
      */
-    public function setPage($var)
+    public function setPage(\Tinkoff\Invest\V1\PageResponse|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\PageResponse::class);
         $this->page = $var;
 
         return $this;

@@ -32,7 +32,8 @@ class TradesStreamResponse extends \Google\Protobuf\Internal\Message
      *          Ответ на запрос на подписку.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Orders::initOnce();
         parent::__construct($data);
     }
@@ -60,9 +61,8 @@ class TradesStreamResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\OrderTrades $var
      * @return $this
      */
-    public function setOrderTrades($var)
+    public function setOrderTrades(\Tinkoff\Invest\V1\OrderTrades|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\OrderTrades::class);
         $this->writeOneof(1, $var);
 
         return $this;
@@ -91,9 +91,8 @@ class TradesStreamResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Ping $var
      * @return $this
      */
-    public function setPing($var)
+    public function setPing(\Tinkoff\Invest\V1\Ping|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Ping::class);
         $this->writeOneof(2, $var);
 
         return $this;
@@ -122,9 +121,8 @@ class TradesStreamResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\SubscriptionResponse $var
      * @return $this
      */
-    public function setSubscription($var)
+    public function setSubscription(\Tinkoff\Invest\V1\SubscriptionResponse|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\SubscriptionResponse::class);
         $this->writeOneof(3, $var);
 
         return $this;

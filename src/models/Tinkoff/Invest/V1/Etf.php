@@ -387,7 +387,8 @@ class Etf extends \Google\Protobuf\Internal\Message
      *          Ставка риска в шорт с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -410,9 +411,9 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setFigi($var)
+    public function setFigi(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->figi = $var;
 
         return $this;
@@ -436,9 +437,9 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTicker($var)
+    public function setTicker(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->ticker = $var;
 
         return $this;
@@ -462,9 +463,9 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setClassCode($var)
+    public function setClassCode(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->class_code = $var;
 
         return $this;
@@ -488,9 +489,9 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setIsin($var)
+    public function setIsin(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->isin = $var;
 
         return $this;
@@ -514,7 +515,7 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setLot($var)
+    public function setLot(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->lot = $var;
@@ -540,9 +541,9 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCurrency($var)
+    public function setCurrency(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->currency = $var;
 
         return $this;
@@ -585,10 +586,9 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @return $this
      * @deprecated
      */
-    public function setKlong($var)
+    public function setKlong(\Tinkoff\Invest\V1\Quotation|null $var)
     {
         @trigger_error('klong is deprecated.', E_USER_DEPRECATED);
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->klong = $var;
 
         return $this;
@@ -631,10 +631,9 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @return $this
      * @deprecated
      */
-    public function setKshort($var)
+    public function setKshort(\Tinkoff\Invest\V1\Quotation|null $var)
     {
         @trigger_error('kshort is deprecated.', E_USER_DEPRECATED);
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->kshort = $var;
 
         return $this;
@@ -668,9 +667,8 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setDlong($var)
+    public function setDlong(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->dlong = $var;
 
         return $this;
@@ -704,9 +702,8 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setDshort($var)
+    public function setDshort(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->dshort = $var;
 
         return $this;
@@ -740,9 +737,8 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setDlongMin($var)
+    public function setDlongMin(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->dlong_min = $var;
 
         return $this;
@@ -776,9 +772,8 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setDshortMin($var)
+    public function setDshortMin(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->dshort_min = $var;
 
         return $this;
@@ -802,9 +797,8 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setShortEnabledFlag($var)
+    public function setShortEnabledFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->short_enabled_flag = $var;
 
         return $this;
@@ -828,9 +822,9 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setName($var)
+    public function setName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->name = $var;
 
         return $this;
@@ -854,9 +848,9 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setExchange($var)
+    public function setExchange(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->exchange = $var;
 
         return $this;
@@ -890,9 +884,8 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setFixedCommission($var)
+    public function setFixedCommission(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->fixed_commission = $var;
 
         return $this;
@@ -916,9 +909,9 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setFocusType($var)
+    public function setFocusType(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->focus_type = $var;
 
         return $this;
@@ -952,9 +945,8 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setReleasedDate($var)
+    public function setReleasedDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->released_date = $var;
 
         return $this;
@@ -988,9 +980,8 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setNumShares($var)
+    public function setNumShares(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->num_shares = $var;
 
         return $this;
@@ -1014,9 +1005,9 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCountryOfRisk($var)
+    public function setCountryOfRisk(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->country_of_risk = $var;
 
         return $this;
@@ -1040,9 +1031,9 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCountryOfRiskName($var)
+    public function setCountryOfRiskName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->country_of_risk_name = $var;
 
         return $this;
@@ -1066,9 +1057,9 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setSector($var)
+    public function setSector(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->sector = $var;
 
         return $this;
@@ -1092,9 +1083,9 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setRebalancingFreq($var)
+    public function setRebalancingFreq(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->rebalancing_freq = $var;
 
         return $this;
@@ -1104,7 +1095,7 @@ class Etf extends \Google\Protobuf\Internal\Message
      *Текущий режим торгов инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SecurityTradingStatus trading_status = 25;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\SecurityTradingStatus}
      */
     public function getTradingStatus()
     {
@@ -1115,10 +1106,10 @@ class Etf extends \Google\Protobuf\Internal\Message
      *Текущий режим торгов инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SecurityTradingStatus trading_status = 25;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\SecurityTradingStatus}
      * @return $this
      */
-    public function setTradingStatus($var)
+    public function setTradingStatus(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\SecurityTradingStatus::class);
         $this->trading_status = $var;
@@ -1144,9 +1135,8 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setOtcFlag($var)
+    public function setOtcFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->otc_flag = $var;
 
         return $this;
@@ -1170,9 +1160,8 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setBuyAvailableFlag($var)
+    public function setBuyAvailableFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->buy_available_flag = $var;
 
         return $this;
@@ -1196,9 +1185,8 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setSellAvailableFlag($var)
+    public function setSellAvailableFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->sell_available_flag = $var;
 
         return $this;
@@ -1232,9 +1220,8 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setMinPriceIncrement($var)
+    public function setMinPriceIncrement(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->min_price_increment = $var;
 
         return $this;
@@ -1258,9 +1245,8 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setApiTradeAvailableFlag($var)
+    public function setApiTradeAvailableFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->api_trade_available_flag = $var;
 
         return $this;
@@ -1284,9 +1270,9 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setUid($var)
+    public function setUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->uid = $var;
 
         return $this;
@@ -1296,7 +1282,7 @@ class Etf extends \Google\Protobuf\Internal\Message
      *Реальная площадка исполнения расчетов (биржа).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.RealExchange real_exchange = 32;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\RealExchange}
      */
     public function getRealExchange()
     {
@@ -1307,10 +1293,10 @@ class Etf extends \Google\Protobuf\Internal\Message
      *Реальная площадка исполнения расчетов (биржа).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.RealExchange real_exchange = 32;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\RealExchange}
      * @return $this
      */
-    public function setRealExchange($var)
+    public function setRealExchange(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\RealExchange::class);
         $this->real_exchange = $var;
@@ -1336,9 +1322,9 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setPositionUid($var)
+    public function setPositionUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->position_uid = $var;
 
         return $this;
@@ -1362,9 +1348,9 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setAssetUid($var)
+    public function setAssetUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->asset_uid = $var;
 
         return $this;
@@ -1374,7 +1360,7 @@ class Etf extends \Google\Protobuf\Internal\Message
      *Тип площадки торговли.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentExchangeType instrument_exchange = 35;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\InstrumentExchangeType}
      */
     public function getInstrumentExchange()
     {
@@ -1385,10 +1371,10 @@ class Etf extends \Google\Protobuf\Internal\Message
      *Тип площадки торговли.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentExchangeType instrument_exchange = 35;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\InstrumentExchangeType}
      * @return $this
      */
-    public function setInstrumentExchange($var)
+    public function setInstrumentExchange(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\InstrumentExchangeType::class);
         $this->instrument_exchange = $var;
@@ -1414,7 +1400,7 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param string[] $var
      * @return $this
      */
-    public function setRequiredTests($var)
+    public function setRequiredTests(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->required_tests = $arr;
@@ -1440,9 +1426,8 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setForIisFlag($var)
+    public function setForIisFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->for_iis_flag = $var;
 
         return $this;
@@ -1466,9 +1451,8 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setForQualInvestorFlag($var)
+    public function setForQualInvestorFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->for_qual_investor_flag = $var;
 
         return $this;
@@ -1492,9 +1476,8 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setWeekendFlag($var)
+    public function setWeekendFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->weekend_flag = $var;
 
         return $this;
@@ -1518,9 +1501,8 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setBlockedTcaFlag($var)
+    public function setBlockedTcaFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->blocked_tca_flag = $var;
 
         return $this;
@@ -1544,9 +1526,8 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setLiquidityFlag($var)
+    public function setLiquidityFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->liquidity_flag = $var;
 
         return $this;
@@ -1580,9 +1561,8 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setFirst1MinCandleDate($var)
+    public function setFirst1MinCandleDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->first_1min_candle_date = $var;
 
         return $this;
@@ -1616,9 +1596,8 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setFirst1DayCandleDate($var)
+    public function setFirst1DayCandleDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->first_1day_candle_date = $var;
 
         return $this;
@@ -1652,9 +1631,8 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\BrandData $var
      * @return $this
      */
-    public function setBrand($var)
+    public function setBrand(\Tinkoff\Invest\V1\BrandData|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\BrandData::class);
         $this->brand = $var;
 
         return $this;
@@ -1688,9 +1666,8 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setDlongClient($var)
+    public function setDlongClient(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->dlong_client = $var;
 
         return $this;
@@ -1724,9 +1701,8 @@ class Etf extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setDshortClient($var)
+    public function setDshortClient(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->dshort_client = $var;
 
         return $this;

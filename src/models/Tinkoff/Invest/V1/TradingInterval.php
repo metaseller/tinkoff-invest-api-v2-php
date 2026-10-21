@@ -39,7 +39,8 @@ class TradingInterval extends \Google\Protobuf\Internal\Message
      *          Интервал.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -62,9 +63,9 @@ class TradingInterval extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setType($var)
+    public function setType(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->type = $var;
 
         return $this;
@@ -98,9 +99,8 @@ class TradingInterval extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\TradingInterval\TimeInterval $var
      * @return $this
      */
-    public function setInterval($var)
+    public function setInterval(\Tinkoff\Invest\V1\TradingInterval\TimeInterval|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\TradingInterval\TimeInterval::class);
         $this->interval = $var;
 
         return $this;

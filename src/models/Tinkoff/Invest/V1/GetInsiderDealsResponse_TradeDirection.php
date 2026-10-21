@@ -11,6 +11,6 @@ if (false) {
      */
     class GetInsiderDealsResponse_TradeDirection {}
 }
-class_exists(GetInsiderDealsResponse\TradeDirection::class);
+class_alias(GetInsiderDealsResponse\TradeDirection::class, GetInsiderDealsResponse_TradeDirection::class);
 @trigger_error('Tinkoff\Invest\V1\GetInsiderDealsResponse_TradeDirection is deprecated and will be removed in the next major release. Use Tinkoff\Invest\V1\GetInsiderDealsResponse\TradeDirection instead', E_USER_DEPRECATED);
 

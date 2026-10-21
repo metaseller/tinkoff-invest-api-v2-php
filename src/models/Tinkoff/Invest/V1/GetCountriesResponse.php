@@ -33,7 +33,8 @@ class GetCountriesResponse extends \Google\Protobuf\Internal\Message
      *          Массив стран.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -56,7 +57,7 @@ class GetCountriesResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\CountryResponse[] $var
      * @return $this
      */
-    public function setCountries($var)
+    public function setCountries(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\CountryResponse::class);
         $this->countries = $arr;

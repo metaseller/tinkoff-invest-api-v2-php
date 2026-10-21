@@ -33,7 +33,8 @@ class Table extends \Google\Protobuf\Internal\Message
      *          Таблица.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -56,9 +57,9 @@ class Table extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTable($var)
+    public function setTable(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->table = $var;
 
         return $this;

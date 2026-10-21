@@ -57,7 +57,8 @@ class OrderTrade extends \Google\Protobuf\Internal\Message
      *          Идентификатор сделки.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Orders::initOnce();
         parent::__construct($data);
     }
@@ -90,9 +91,8 @@ class OrderTrade extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setDateTime($var)
+    public function setDateTime(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->date_time = $var;
 
         return $this;
@@ -126,9 +126,8 @@ class OrderTrade extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setPrice($var)
+    public function setPrice(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->price = $var;
 
         return $this;
@@ -152,7 +151,7 @@ class OrderTrade extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setQuantity($var)
+    public function setQuantity(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->quantity = $var;
@@ -178,9 +177,9 @@ class OrderTrade extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTradeId($var)
+    public function setTradeId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->trade_id = $var;
 
         return $this;

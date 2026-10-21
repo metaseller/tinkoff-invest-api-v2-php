@@ -105,7 +105,8 @@ class GetTradingStatusResponse extends \Google\Protobuf\Internal\Message
      *          Класс-код (секция торгов).
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Marketdata::initOnce();
         parent::__construct($data);
     }
@@ -128,9 +129,9 @@ class GetTradingStatusResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setFigi($var)
+    public function setFigi(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->figi = $var;
 
         return $this;
@@ -140,7 +141,7 @@ class GetTradingStatusResponse extends \Google\Protobuf\Internal\Message
      *Статус торговли инструментом.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SecurityTradingStatus trading_status = 2;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\SecurityTradingStatus}
      */
     public function getTradingStatus()
     {
@@ -151,10 +152,10 @@ class GetTradingStatusResponse extends \Google\Protobuf\Internal\Message
      *Статус торговли инструментом.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SecurityTradingStatus trading_status = 2;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\SecurityTradingStatus}
      * @return $this
      */
-    public function setTradingStatus($var)
+    public function setTradingStatus(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\SecurityTradingStatus::class);
         $this->trading_status = $var;
@@ -180,9 +181,8 @@ class GetTradingStatusResponse extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setLimitOrderAvailableFlag($var)
+    public function setLimitOrderAvailableFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->limit_order_available_flag = $var;
 
         return $this;
@@ -206,9 +206,8 @@ class GetTradingStatusResponse extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setMarketOrderAvailableFlag($var)
+    public function setMarketOrderAvailableFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->market_order_available_flag = $var;
 
         return $this;
@@ -232,9 +231,8 @@ class GetTradingStatusResponse extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setApiTradeAvailableFlag($var)
+    public function setApiTradeAvailableFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->api_trade_available_flag = $var;
 
         return $this;
@@ -258,9 +256,9 @@ class GetTradingStatusResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setInstrumentUid($var)
+    public function setInstrumentUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->instrument_uid = $var;
 
         return $this;
@@ -284,9 +282,8 @@ class GetTradingStatusResponse extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setBestpriceOrderAvailableFlag($var)
+    public function setBestpriceOrderAvailableFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->bestprice_order_available_flag = $var;
 
         return $this;
@@ -310,9 +307,8 @@ class GetTradingStatusResponse extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setOnlyBestPrice($var)
+    public function setOnlyBestPrice(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->only_best_price = $var;
 
         return $this;
@@ -336,9 +332,9 @@ class GetTradingStatusResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTicker($var)
+    public function setTicker(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->ticker = $var;
 
         return $this;
@@ -362,9 +358,9 @@ class GetTradingStatusResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setClassCode($var)
+    public function setClassCode(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->class_code = $var;
 
         return $this;

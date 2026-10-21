@@ -58,7 +58,8 @@ class GetAccruedInterestsRequest extends \Google\Protobuf\Internal\Message
      *          Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -86,10 +87,10 @@ class GetAccruedInterestsRequest extends \Google\Protobuf\Internal\Message
      * @return $this
      * @deprecated
      */
-    public function setFigi($var)
+    public function setFigi(string $var)
     {
         @trigger_error('figi is deprecated.', E_USER_DEPRECATED);
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->figi = $var;
 
         return $this;
@@ -123,9 +124,8 @@ class GetAccruedInterestsRequest extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setFrom($var)
+    public function setFrom(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->from = $var;
 
         return $this;
@@ -159,9 +159,8 @@ class GetAccruedInterestsRequest extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setTo($var)
+    public function setTo(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->to = $var;
 
         return $this;
@@ -185,9 +184,9 @@ class GetAccruedInterestsRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setInstrumentId($var)
+    public function setInstrumentId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->instrument_id = $var;
 
         return $this;

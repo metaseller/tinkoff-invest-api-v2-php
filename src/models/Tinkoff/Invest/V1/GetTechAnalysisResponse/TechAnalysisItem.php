@@ -71,7 +71,8 @@ class TechAnalysisItem extends \Google\Protobuf\Internal\Message
      *          Значение линии MACD.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Marketdata::initOnce();
         parent::__construct($data);
     }
@@ -104,9 +105,8 @@ class TechAnalysisItem extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setTimestamp($var)
+    public function setTimestamp(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->timestamp = $var;
 
         return $this;
@@ -140,9 +140,8 @@ class TechAnalysisItem extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setMiddleBand($var)
+    public function setMiddleBand(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->middle_band = $var;
 
         return $this;
@@ -176,9 +175,8 @@ class TechAnalysisItem extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setUpperBand($var)
+    public function setUpperBand(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->upper_band = $var;
 
         return $this;
@@ -212,9 +210,8 @@ class TechAnalysisItem extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setLowerBand($var)
+    public function setLowerBand(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->lower_band = $var;
 
         return $this;
@@ -248,9 +245,8 @@ class TechAnalysisItem extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setSignal($var)
+    public function setSignal(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->signal = $var;
 
         return $this;
@@ -284,9 +280,8 @@ class TechAnalysisItem extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setMacd($var)
+    public function setMacd(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->macd = $var;
 
         return $this;

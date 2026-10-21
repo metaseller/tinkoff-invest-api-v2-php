@@ -41,7 +41,8 @@ class Quotation extends \Google\Protobuf\Internal\Message
      *           Дробная часть суммы, может быть отрицательным числом.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Common::initOnce();
         parent::__construct($data);
     }
@@ -64,7 +65,7 @@ class Quotation extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setUnits($var)
+    public function setUnits(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->units = $var;
@@ -90,7 +91,7 @@ class Quotation extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setNano($var)
+    public function setNano(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->nano = $var;

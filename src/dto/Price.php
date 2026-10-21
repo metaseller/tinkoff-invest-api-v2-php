@@ -27,7 +27,7 @@ class Price extends Quantity
      * @param float $value Цена в формате числа с плавающей запятой
      * @param string|null $currency Строковый ISO-код валюты
      */
-    public function setDecimalValue(float $value, string $currency = null): void
+    public function setDecimalValue(float $value, ?string $currency = null): void
     {
         parent::setDecimalValue($value);
 
@@ -40,7 +40,7 @@ class Price extends Quantity
      * @param Quotation $value Цена в формате {@link Quotation}
      * @param string|null $currency Строковый ISO-код валюты
      */
-    public function setQuotationValue(Quotation $value, string $currency = null): void
+    public function setQuotationValue(Quotation $value, ?string $currency = null): void
     {
         parent::setQuotationValue($value);
 
@@ -59,7 +59,7 @@ class Price extends Quantity
         $this->_value_as_quotation->setUnits($value->getUnits() ?: 0);
         $this->_value_as_quotation->setNano($value->getNano() ?: 0);
 
-        $this->_value_as_integer = QuotationHelper::floatToInteger(static::BROKER_PRECISION_MULTIPLIER * ($value->getUnits() ?: 0) + ($value->getNano() ?: 0));
+        $this->_value_as_integer = QuotationHelper::toInteger($value);
         $this->_value_as_decimal = round((float) $this->_value_as_integer / static::BROKER_PRECISION_MULTIPLIER, static::BROKER_PRECISION);
 
         $this->_currency = $value->getCurrency();
@@ -73,7 +73,7 @@ class Price extends Quantity
      *
      * @param int $value Целочисленная цена с учетом точности
      */
-    public function setIntegerPrice(int $value, string $currency = null): void
+    public function setIntegerPrice(int $value, ?string $currency = null): void
     {
         parent::setIntegerValue($value);
 
@@ -89,7 +89,7 @@ class Price extends Quantity
     {
         $value_as_money_value = new MoneyValue();
 
-        $value_as_money_value->setCurrency($this->_currency);
+        $value_as_money_value->setCurrency($this->_currency ?? '');
         $value_as_money_value->setUnits($this->_value_as_quotation->getUnits() ?: 0);
         $value_as_money_value->setNano($this->_value_as_quotation->getNano() ?: 0);
 
@@ -116,7 +116,7 @@ class Price extends Quantity
      *
      * @return Price Объект текущего класса
      */
-    public static function createFromDecimal(float $value, string $currency = null)
+    public static function createFromDecimal(float $value, ?string $currency = null)
     {
         $price = new static();
         $price->setDecimalValue($value, $currency);
@@ -132,7 +132,7 @@ class Price extends Quantity
      *
      * @return Price Объект текущего класса
      */
-    public static function createFromInteger(int $value, string $currency = null)
+    public static function createFromInteger(int $value, ?string $currency = null)
     {
         $price = new static();
         $price->setIntegerPrice($value, $currency);
@@ -148,7 +148,7 @@ class Price extends Quantity
      *
      * @return Price Объект текущего класса
      */
-    public static function createFromQuotation(Quotation $value, string $currency = null)
+    public static function createFromQuotation(Quotation $value, ?string $currency = null)
     {
         $price = new static();
         $price->setQuotationValue($value, $currency);

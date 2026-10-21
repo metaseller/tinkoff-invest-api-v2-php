@@ -57,7 +57,8 @@ class AccruedInterest extends \Google\Protobuf\Internal\Message
      *          Номинал облигации.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -90,9 +91,8 @@ class AccruedInterest extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setDate($var)
+    public function setDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->date = $var;
 
         return $this;
@@ -126,9 +126,8 @@ class AccruedInterest extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setValue($var)
+    public function setValue(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->value = $var;
 
         return $this;
@@ -162,9 +161,8 @@ class AccruedInterest extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setValuePercent($var)
+    public function setValuePercent(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->value_percent = $var;
 
         return $this;
@@ -198,9 +196,8 @@ class AccruedInterest extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setNominal($var)
+    public function setNominal(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->nominal = $var;
 
         return $this;

@@ -49,7 +49,8 @@ class NewsResponse extends \Google\Protobuf\Internal\Message
      *          Массив новостей.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -72,9 +73,8 @@ class NewsResponse extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setHasNext($var)
+    public function setHasNext(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->has_next = $var;
 
         return $this;
@@ -88,7 +88,7 @@ class NewsResponse extends \Google\Protobuf\Internal\Message
      */
     public function getNextCursor()
     {
-        return isset($this->next_cursor) ? $this->next_cursor : 0;
+        return isset($this->next_cursor) ? $this->next_cursor : GPBUtil::compatibleInt64(0, '0');
     }
 
     public function hasNextCursor()
@@ -108,7 +108,7 @@ class NewsResponse extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setNextCursor($var)
+    public function setNextCursor(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->next_cursor = $var;
@@ -134,7 +134,7 @@ class NewsResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\NewsItem[] $var
      * @return $this
      */
-    public function setItems($var)
+    public function setItems(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\NewsItem::class);
         $this->items = $arr;

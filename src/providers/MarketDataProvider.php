@@ -2,7 +2,7 @@
 
 namespace Metaseller\TinkoffInvestApi2\providers;
 
-use Google\Protobuf\Internal\RepeatedField;
+use Google\Protobuf\RepeatedField;
 use Metaseller\TinkoffInvestApi2\exceptions\RequestException;
 use Metaseller\TinkoffInvestApi2\exceptions\ValidateException;
 use Metaseller\TinkoffInvestApi2\helpers\ArrayHelper;

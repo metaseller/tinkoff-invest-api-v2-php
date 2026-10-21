@@ -47,7 +47,8 @@ class Smoothing extends \Google\Protobuf\Internal\Message
      *          Период сглаживания для третьей экспоненциальной скользящей средней (EMA)
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Marketdata::initOnce();
         parent::__construct($data);
     }
@@ -70,7 +71,7 @@ class Smoothing extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setFastLength($var)
+    public function setFastLength(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->fast_length = $var;
@@ -96,7 +97,7 @@ class Smoothing extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setSlowLength($var)
+    public function setSlowLength(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->slow_length = $var;
@@ -122,7 +123,7 @@ class Smoothing extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setSignalSmoothing($var)
+    public function setSignalSmoothing(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->signal_smoothing = $var;

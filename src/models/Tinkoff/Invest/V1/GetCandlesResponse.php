@@ -33,7 +33,8 @@ class GetCandlesResponse extends \Google\Protobuf\Internal\Message
      *          Массив свечей.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Marketdata::initOnce();
         parent::__construct($data);
     }
@@ -56,7 +57,7 @@ class GetCandlesResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\HistoricCandle[] $var
      * @return $this
      */
-    public function setCandles($var)
+    public function setCandles(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\HistoricCandle::class);
         $this->candles = $arr;

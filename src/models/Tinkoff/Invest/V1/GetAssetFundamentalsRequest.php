@@ -33,7 +33,8 @@ class GetAssetFundamentalsRequest extends \Google\Protobuf\Internal\Message
      *          Массив идентификаторов активов, не более 100 шт.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -56,7 +57,7 @@ class GetAssetFundamentalsRequest extends \Google\Protobuf\Internal\Message
      * @param string[] $var
      * @return $this
      */
-    public function setAssets($var)
+    public function setAssets(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->assets = $arr;

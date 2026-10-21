@@ -191,7 +191,8 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      *           Ставка купона, процентов годовых.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -214,9 +215,9 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setInstrumentId($var)
+    public function setInstrumentId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->instrument_id = $var;
 
         return $this;
@@ -240,7 +241,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setEventNumber($var)
+    public function setEventNumber(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->event_number = $var;
@@ -276,9 +277,8 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setEventDate($var)
+    public function setEventDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->event_date = $var;
 
         return $this;
@@ -288,7 +288,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      * Тип события.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetBondEventsRequest.EventType event_type = 5;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\GetBondEventsRequest\EventType}
      */
     public function getEventType()
     {
@@ -299,10 +299,10 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      * Тип события.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetBondEventsRequest.EventType event_type = 5;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\GetBondEventsRequest\EventType}
      * @return $this
      */
-    public function setEventType($var)
+    public function setEventType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\GetBondEventsRequest\EventType::class);
         $this->event_type = $var;
@@ -338,9 +338,8 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setEventTotalVol($var)
+    public function setEventTotalVol(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->event_total_vol = $var;
 
         return $this;
@@ -374,9 +373,8 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setFixDate($var)
+    public function setFixDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->fix_date = $var;
 
         return $this;
@@ -410,9 +408,8 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setRateDate($var)
+    public function setRateDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->rate_date = $var;
 
         return $this;
@@ -446,9 +443,8 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setDefaultDate($var)
+    public function setDefaultDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->default_date = $var;
 
         return $this;
@@ -482,9 +478,8 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setRealPayDate($var)
+    public function setRealPayDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->real_pay_date = $var;
 
         return $this;
@@ -518,9 +513,8 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setPayDate($var)
+    public function setPayDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->pay_date = $var;
 
         return $this;
@@ -554,9 +548,8 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setPayOneBond($var)
+    public function setPayOneBond(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->pay_one_bond = $var;
 
         return $this;
@@ -590,9 +583,8 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setMoneyFlowVal($var)
+    public function setMoneyFlowVal(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->money_flow_val = $var;
 
         return $this;
@@ -616,9 +608,9 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setExecution($var)
+    public function setExecution(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->execution = $var;
 
         return $this;
@@ -642,9 +634,9 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setOperationType($var)
+    public function setOperationType(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->operation_type = $var;
 
         return $this;
@@ -678,9 +670,8 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setValue($var)
+    public function setValue(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->value = $var;
 
         return $this;
@@ -704,9 +695,9 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setNote($var)
+    public function setNote(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->note = $var;
 
         return $this;
@@ -730,9 +721,9 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setConvertToFinToolId($var)
+    public function setConvertToFinToolId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->convert_to_fin_tool_id = $var;
 
         return $this;
@@ -766,9 +757,8 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setCouponStartDate($var)
+    public function setCouponStartDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->coupon_start_date = $var;
 
         return $this;
@@ -802,9 +792,8 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setCouponEndDate($var)
+    public function setCouponEndDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->coupon_end_date = $var;
 
         return $this;
@@ -828,7 +817,7 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setCouponPeriod($var)
+    public function setCouponPeriod(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->coupon_period = $var;
@@ -864,9 +853,8 @@ class BondEvent extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setCouponInterestRate($var)
+    public function setCouponInterestRate(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->coupon_interest_rate = $var;
 
         return $this;

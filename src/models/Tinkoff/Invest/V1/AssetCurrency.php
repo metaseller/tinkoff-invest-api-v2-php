@@ -33,7 +33,8 @@ class AssetCurrency extends \Google\Protobuf\Internal\Message
      *          ISO-код валюты.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -56,9 +57,9 @@ class AssetCurrency extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setBaseCurrency($var)
+    public function setBaseCurrency(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->base_currency = $var;
 
         return $this;

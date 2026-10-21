@@ -86,7 +86,8 @@ class GetOrderPriceResponse extends \Google\Protobuf\Internal\Message
      *          Дополнительная информация по фьючерсам
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Orders::initOnce();
         parent::__construct($data);
     }
@@ -119,9 +120,8 @@ class GetOrderPriceResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setTotalOrderAmount($var)
+    public function setTotalOrderAmount(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->total_order_amount = $var;
 
         return $this;
@@ -155,9 +155,8 @@ class GetOrderPriceResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setInitialOrderAmount($var)
+    public function setInitialOrderAmount(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->initial_order_amount = $var;
 
         return $this;
@@ -181,7 +180,7 @@ class GetOrderPriceResponse extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setLotsRequested($var)
+    public function setLotsRequested(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->lots_requested = $var;
@@ -217,9 +216,8 @@ class GetOrderPriceResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setExecutedCommission($var)
+    public function setExecutedCommission(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->executed_commission = $var;
 
         return $this;
@@ -253,9 +251,8 @@ class GetOrderPriceResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setExecutedCommissionRub($var)
+    public function setExecutedCommissionRub(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->executed_commission_rub = $var;
 
         return $this;
@@ -289,9 +286,8 @@ class GetOrderPriceResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setServiceCommission($var)
+    public function setServiceCommission(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->service_commission = $var;
 
         return $this;
@@ -325,9 +321,8 @@ class GetOrderPriceResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setDealCommission($var)
+    public function setDealCommission(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->deal_commission = $var;
 
         return $this;
@@ -356,9 +351,8 @@ class GetOrderPriceResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\GetOrderPriceResponse\ExtraBond $var
      * @return $this
      */
-    public function setExtraBond($var)
+    public function setExtraBond(\Tinkoff\Invest\V1\GetOrderPriceResponse\ExtraBond|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\GetOrderPriceResponse\ExtraBond::class);
         $this->writeOneof(12, $var);
 
         return $this;
@@ -387,9 +381,8 @@ class GetOrderPriceResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\GetOrderPriceResponse\ExtraFuture $var
      * @return $this
      */
-    public function setExtraFuture($var)
+    public function setExtraFuture(\Tinkoff\Invest\V1\GetOrderPriceResponse\ExtraFuture|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\GetOrderPriceResponse\ExtraFuture::class);
         $this->writeOneof(13, $var);
 
         return $this;

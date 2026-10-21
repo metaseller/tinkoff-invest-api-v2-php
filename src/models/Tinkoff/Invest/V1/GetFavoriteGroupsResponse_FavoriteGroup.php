@@ -11,6 +11,6 @@ if (false) {
      */
     class GetFavoriteGroupsResponse_FavoriteGroup {}
 }
-class_exists(GetFavoriteGroupsResponse\FavoriteGroup::class);
+class_alias(GetFavoriteGroupsResponse\FavoriteGroup::class, GetFavoriteGroupsResponse_FavoriteGroup::class);
 @trigger_error('Tinkoff\Invest\V1\GetFavoriteGroupsResponse_FavoriteGroup is deprecated and will be removed in the next major release. Use Tinkoff\Invest\V1\GetFavoriteGroupsResponse\FavoriteGroup instead', E_USER_DEPRECATED);
 

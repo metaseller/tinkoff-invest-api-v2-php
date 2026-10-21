@@ -47,7 +47,8 @@ class GetOrdersRequestFilters extends \Google\Protobuf\Internal\Message
      *          Статусы заявок.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Orders::initOnce();
         parent::__construct($data);
     }
@@ -80,9 +81,8 @@ class GetOrdersRequestFilters extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setFrom($var)
+    public function setFrom(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->from = $var;
 
         return $this;
@@ -116,9 +116,8 @@ class GetOrdersRequestFilters extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setTo($var)
+    public function setTo(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->to = $var;
 
         return $this;
@@ -128,7 +127,7 @@ class GetOrdersRequestFilters extends \Google\Protobuf\Internal\Message
      *Статусы заявок.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OrderExecutionReportStatus execution_status = 3;</code>
-     * @return RepeatedField<int>
+     * @return RepeatedField<int> one of the values in {@see \Tinkoff\Invest\V1\OrderExecutionReportStatus}
      */
     public function getExecutionStatus()
     {
@@ -139,10 +138,10 @@ class GetOrdersRequestFilters extends \Google\Protobuf\Internal\Message
      *Статусы заявок.
      *
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.OrderExecutionReportStatus execution_status = 3;</code>
-     * @param int[] $var
+     * @param int[] $var one of the values in {@see \Tinkoff\Invest\V1\OrderExecutionReportStatus}
      * @return $this
      */
-    public function setExecutionStatus($var)
+    public function setExecutionStatus(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::ENUM, \Tinkoff\Invest\V1\OrderExecutionReportStatus::class);
         $this->execution_status = $arr;

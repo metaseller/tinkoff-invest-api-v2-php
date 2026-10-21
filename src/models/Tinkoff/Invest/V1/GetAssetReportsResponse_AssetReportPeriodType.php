@@ -11,6 +11,6 @@ if (false) {
      */
     class GetAssetReportsResponse_AssetReportPeriodType {}
 }
-class_exists(GetAssetReportsResponse\AssetReportPeriodType::class);
+class_alias(GetAssetReportsResponse\AssetReportPeriodType::class, GetAssetReportsResponse_AssetReportPeriodType::class);
 @trigger_error('Tinkoff\Invest\V1\GetAssetReportsResponse_AssetReportPeriodType is deprecated and will be removed in the next major release. Use Tinkoff\Invest\V1\GetAssetReportsResponse\AssetReportPeriodType instead', E_USER_DEPRECATED);
 

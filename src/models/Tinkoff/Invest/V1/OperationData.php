@@ -145,7 +145,8 @@ class OperationData extends \Google\Protobuf\Internal\Message
      *          Сумма операции.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Operations::initOnce();
         parent::__construct($data);
     }
@@ -168,9 +169,9 @@ class OperationData extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setBrokerAccountId($var)
+    public function setBrokerAccountId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->broker_account_id = $var;
 
         return $this;
@@ -194,9 +195,9 @@ class OperationData extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setId($var)
+    public function setId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->id = $var;
 
         return $this;
@@ -220,9 +221,9 @@ class OperationData extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setParentOperationId($var)
+    public function setParentOperationId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->parent_operation_id = $var;
 
         return $this;
@@ -246,9 +247,9 @@ class OperationData extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setName($var)
+    public function setName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->name = $var;
 
         return $this;
@@ -282,9 +283,8 @@ class OperationData extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setDate($var)
+    public function setDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->date = $var;
 
         return $this;
@@ -294,7 +294,7 @@ class OperationData extends \Google\Protobuf\Internal\Message
      *Тип операции.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OperationType type = 6;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\OperationType}
      */
     public function getType()
     {
@@ -305,10 +305,10 @@ class OperationData extends \Google\Protobuf\Internal\Message
      *Тип операции.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OperationType type = 6;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\OperationType}
      * @return $this
      */
-    public function setType($var)
+    public function setType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\OperationType::class);
         $this->type = $var;
@@ -320,7 +320,7 @@ class OperationData extends \Google\Protobuf\Internal\Message
      *Статус поручения.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OperationState state = 7;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\OperationState}
      */
     public function getState()
     {
@@ -331,10 +331,10 @@ class OperationData extends \Google\Protobuf\Internal\Message
      *Статус поручения.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OperationState state = 7;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\OperationState}
      * @return $this
      */
-    public function setState($var)
+    public function setState(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\OperationState::class);
         $this->state = $var;
@@ -360,9 +360,9 @@ class OperationData extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setInstrumentUid($var)
+    public function setInstrumentUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->instrument_uid = $var;
 
         return $this;
@@ -386,9 +386,9 @@ class OperationData extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setFigi($var)
+    public function setFigi(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->figi = $var;
 
         return $this;
@@ -412,9 +412,9 @@ class OperationData extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setInstrumentType($var)
+    public function setInstrumentType(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->instrument_type = $var;
 
         return $this;
@@ -424,7 +424,7 @@ class OperationData extends \Google\Protobuf\Internal\Message
      *Тип инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 11;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\InstrumentType}
      */
     public function getInstrumentKind()
     {
@@ -435,10 +435,10 @@ class OperationData extends \Google\Protobuf\Internal\Message
      *Тип инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 11;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\InstrumentType}
      * @return $this
      */
-    public function setInstrumentKind($var)
+    public function setInstrumentKind(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\InstrumentType::class);
         $this->instrument_kind = $var;
@@ -464,9 +464,9 @@ class OperationData extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setPositionUid($var)
+    public function setPositionUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->position_uid = $var;
 
         return $this;
@@ -490,9 +490,9 @@ class OperationData extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTicker($var)
+    public function setTicker(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->ticker = $var;
 
         return $this;
@@ -516,9 +516,9 @@ class OperationData extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setClassCode($var)
+    public function setClassCode(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->class_code = $var;
 
         return $this;
@@ -552,9 +552,8 @@ class OperationData extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setPayment($var)
+    public function setPayment(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->payment = $var;
 
         return $this;

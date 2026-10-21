@@ -145,7 +145,8 @@ class Signal extends \Google\Protobuf\Internal\Message
      *          Дата и время закрытия сигнала по UTC.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Signals::initOnce();
         parent::__construct($data);
     }
@@ -168,9 +169,9 @@ class Signal extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setSignalId($var)
+    public function setSignalId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->signal_id = $var;
 
         return $this;
@@ -194,9 +195,9 @@ class Signal extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setStrategyId($var)
+    public function setStrategyId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->strategy_id = $var;
 
         return $this;
@@ -220,9 +221,9 @@ class Signal extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setStrategyName($var)
+    public function setStrategyName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->strategy_name = $var;
 
         return $this;
@@ -246,9 +247,9 @@ class Signal extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setInstrumentUid($var)
+    public function setInstrumentUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->instrument_uid = $var;
 
         return $this;
@@ -282,9 +283,8 @@ class Signal extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setCreateDt($var)
+    public function setCreateDt(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->create_dt = $var;
 
         return $this;
@@ -294,7 +294,7 @@ class Signal extends \Google\Protobuf\Internal\Message
      *Направление сигнала.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SignalDirection direction = 6 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\SignalDirection}
      */
     public function getDirection()
     {
@@ -305,10 +305,10 @@ class Signal extends \Google\Protobuf\Internal\Message
      *Направление сигнала.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SignalDirection direction = 6 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\SignalDirection}
      * @return $this
      */
-    public function setDirection($var)
+    public function setDirection(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\SignalDirection::class);
         $this->direction = $var;
@@ -344,9 +344,8 @@ class Signal extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setInitialPrice($var)
+    public function setInitialPrice(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->initial_price = $var;
 
         return $this;
@@ -380,9 +379,9 @@ class Signal extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setInfo($var)
+    public function setInfo(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->info = $var;
 
         return $this;
@@ -406,9 +405,9 @@ class Signal extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setName($var)
+    public function setName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->name = $var;
 
         return $this;
@@ -442,9 +441,8 @@ class Signal extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setTargetPrice($var)
+    public function setTargetPrice(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->target_price = $var;
 
         return $this;
@@ -478,9 +476,8 @@ class Signal extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setEndDt($var)
+    public function setEndDt(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->end_dt = $var;
 
         return $this;
@@ -514,7 +511,7 @@ class Signal extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setProbability($var)
+    public function setProbability(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->probability = $var;
@@ -550,9 +547,8 @@ class Signal extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setStoploss($var)
+    public function setStoploss(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->stoploss = $var;
 
         return $this;
@@ -586,9 +582,8 @@ class Signal extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setClosePrice($var)
+    public function setClosePrice(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->close_price = $var;
 
         return $this;
@@ -622,9 +617,8 @@ class Signal extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setCloseDt($var)
+    public function setCloseDt(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->close_dt = $var;
 
         return $this;

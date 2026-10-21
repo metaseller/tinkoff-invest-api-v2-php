@@ -39,7 +39,8 @@ class TimeInterval extends \Google\Protobuf\Internal\Message
      *           Время окончания интервала.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -72,9 +73,8 @@ class TimeInterval extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setStartTs($var)
+    public function setStartTs(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->start_ts = $var;
 
         return $this;
@@ -108,9 +108,8 @@ class TimeInterval extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setEndTs($var)
+    public function setEndTs(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->end_ts = $var;
 
         return $this;

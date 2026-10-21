@@ -33,7 +33,8 @@ class GetFavoritesRequest extends \Google\Protobuf\Internal\Message
      *          Уникальный идентификатор группы.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -66,9 +67,9 @@ class GetFavoritesRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setGroupId($var)
+    public function setGroupId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->group_id = $var;
 
         return $this;

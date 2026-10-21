@@ -30,7 +30,8 @@ class GetBondEventsResponse extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\GetBondEventsResponse\BondEvent[] $events
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -49,7 +50,7 @@ class GetBondEventsResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\GetBondEventsResponse\BondEvent[] $var
      * @return $this
      */
-    public function setEvents($var)
+    public function setEvents(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\GetBondEventsResponse\BondEvent::class);
         $this->events = $arr;

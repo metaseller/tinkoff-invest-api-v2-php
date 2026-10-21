@@ -11,6 +11,6 @@ if (false) {
      */
     class PostStopOrderRequest_TrailingData {}
 }
-class_exists(PostStopOrderRequest\TrailingData::class);
+class_alias(PostStopOrderRequest\TrailingData::class, PostStopOrderRequest_TrailingData::class);
 @trigger_error('Tinkoff\Invest\V1\PostStopOrderRequest_TrailingData is deprecated and will be removed in the next major release. Use Tinkoff\Invest\V1\PostStopOrderRequest\TrailingData instead', E_USER_DEPRECATED);
 

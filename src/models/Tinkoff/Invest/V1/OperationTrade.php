@@ -57,7 +57,8 @@ class OperationTrade extends \Google\Protobuf\Internal\Message
      *          Цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Operations::initOnce();
         parent::__construct($data);
     }
@@ -80,9 +81,9 @@ class OperationTrade extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTradeId($var)
+    public function setTradeId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->trade_id = $var;
 
         return $this;
@@ -116,9 +117,8 @@ class OperationTrade extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setDateTime($var)
+    public function setDateTime(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->date_time = $var;
 
         return $this;
@@ -142,7 +142,7 @@ class OperationTrade extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setQuantity($var)
+    public function setQuantity(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->quantity = $var;
@@ -178,9 +178,8 @@ class OperationTrade extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setPrice($var)
+    public function setPrice(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->price = $var;
 
         return $this;

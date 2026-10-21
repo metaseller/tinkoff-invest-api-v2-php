@@ -62,7 +62,8 @@ class SubscriptionResponse extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\ErrorDetail $error
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Orders::initOnce();
         parent::__construct($data);
     }
@@ -85,9 +86,9 @@ class SubscriptionResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTrackingId($var)
+    public function setTrackingId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->tracking_id = $var;
 
         return $this;
@@ -97,7 +98,7 @@ class SubscriptionResponse extends \Google\Protobuf\Internal\Message
      *Статус подписки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ResultSubscriptionStatus status = 2;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\ResultSubscriptionStatus}
      */
     public function getStatus()
     {
@@ -108,10 +109,10 @@ class SubscriptionResponse extends \Google\Protobuf\Internal\Message
      *Статус подписки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.ResultSubscriptionStatus status = 2;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\ResultSubscriptionStatus}
      * @return $this
      */
-    public function setStatus($var)
+    public function setStatus(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\ResultSubscriptionStatus::class);
         $this->status = $var;
@@ -137,9 +138,9 @@ class SubscriptionResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setStreamId($var)
+    public function setStreamId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->stream_id = $var;
 
         return $this;
@@ -163,7 +164,7 @@ class SubscriptionResponse extends \Google\Protobuf\Internal\Message
      * @param string[] $var
      * @return $this
      */
-    public function setAccounts($var)
+    public function setAccounts(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->accounts = $arr;
@@ -195,9 +196,8 @@ class SubscriptionResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\ErrorDetail $var
      * @return $this
      */
-    public function setError($var)
+    public function setError(\Tinkoff\Invest\V1\ErrorDetail|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\ErrorDetail::class);
         $this->error = $var;
 
         return $this;

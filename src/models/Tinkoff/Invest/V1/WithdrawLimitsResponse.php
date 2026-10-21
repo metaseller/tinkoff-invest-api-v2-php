@@ -49,7 +49,8 @@ class WithdrawLimitsResponse extends \Google\Protobuf\Internal\Message
      *          Заблокировано под гарантийное обеспечение фьючерсов.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Operations::initOnce();
         parent::__construct($data);
     }
@@ -72,7 +73,7 @@ class WithdrawLimitsResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue[] $var
      * @return $this
      */
-    public function setMoney($var)
+    public function setMoney(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->money = $arr;
@@ -98,7 +99,7 @@ class WithdrawLimitsResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue[] $var
      * @return $this
      */
-    public function setBlocked($var)
+    public function setBlocked(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->blocked = $arr;
@@ -124,7 +125,7 @@ class WithdrawLimitsResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue[] $var
      * @return $this
      */
-    public function setBlockedGuarantee($var)
+    public function setBlockedGuarantee(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->blocked_guarantee = $arr;

@@ -129,7 +129,8 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      *          Форма выпуска.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -152,9 +153,9 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setBorrowName($var)
+    public function setBorrowName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->borrow_name = $var;
 
         return $this;
@@ -188,9 +189,8 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setNominal($var)
+    public function setNominal(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->nominal = $var;
 
         return $this;
@@ -214,9 +214,9 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setNominalCurrency($var)
+    public function setNominalCurrency(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->nominal_currency = $var;
 
         return $this;
@@ -226,7 +226,7 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      *Тип структурной ноты.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StructuredProductType type = 4;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\StructuredProductType}
      */
     public function getType()
     {
@@ -237,10 +237,10 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      *Тип структурной ноты.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StructuredProductType type = 4;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\StructuredProductType}
      * @return $this
      */
-    public function setType($var)
+    public function setType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\StructuredProductType::class);
         $this->type = $var;
@@ -266,9 +266,9 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setLogicPortfolio($var)
+    public function setLogicPortfolio(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->logic_portfolio = $var;
 
         return $this;
@@ -278,7 +278,7 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      *Тип базового актива.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AssetType asset_type = 6;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\AssetType}
      */
     public function getAssetType()
     {
@@ -289,10 +289,10 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      *Тип базового актива.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AssetType asset_type = 6;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\AssetType}
      * @return $this
      */
-    public function setAssetType($var)
+    public function setAssetType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\AssetType::class);
         $this->asset_type = $var;
@@ -318,9 +318,9 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setBasicAsset($var)
+    public function setBasicAsset(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->basic_asset = $var;
 
         return $this;
@@ -354,9 +354,8 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setSafetyBarrier($var)
+    public function setSafetyBarrier(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->safety_barrier = $var;
 
         return $this;
@@ -390,9 +389,8 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setMaturityDate($var)
+    public function setMaturityDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->maturity_date = $var;
 
         return $this;
@@ -426,9 +424,8 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setIssueSizePlan($var)
+    public function setIssueSizePlan(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->issue_size_plan = $var;
 
         return $this;
@@ -462,9 +459,8 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setIssueSize($var)
+    public function setIssueSize(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->issue_size = $var;
 
         return $this;
@@ -498,9 +494,8 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setPlacementDate($var)
+    public function setPlacementDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->placement_date = $var;
 
         return $this;
@@ -524,9 +519,9 @@ class AssetStructuredProduct extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setIssueKind($var)
+    public function setIssueKind(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->issue_kind = $var;
 
         return $this;

@@ -41,7 +41,8 @@ class IndexInstrument extends \Google\Protobuf\Internal\Message
      *           Вес инструмента в составе индекса в %.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -64,9 +65,9 @@ class IndexInstrument extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setUid($var)
+    public function setUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->uid = $var;
 
         return $this;
@@ -100,9 +101,8 @@ class IndexInstrument extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setWeight($var)
+    public function setWeight(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->weight = $var;
 
         return $this;

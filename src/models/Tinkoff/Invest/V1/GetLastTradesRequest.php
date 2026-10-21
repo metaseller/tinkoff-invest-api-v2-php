@@ -66,7 +66,8 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
      *          Тип источника сделок. Значение по умолчанию — `TRADE_SOURCE_ALL`, все сделки.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Marketdata::initOnce();
         parent::__construct($data);
     }
@@ -108,10 +109,10 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
      * @return $this
      * @deprecated
      */
-    public function setFigi($var)
+    public function setFigi(string $var)
     {
         @trigger_error('figi is deprecated.', E_USER_DEPRECATED);
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->figi = $var;
 
         return $this;
@@ -145,9 +146,8 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setFrom($var)
+    public function setFrom(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->from = $var;
 
         return $this;
@@ -181,9 +181,8 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setTo($var)
+    public function setTo(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->to = $var;
 
         return $this;
@@ -217,9 +216,9 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setInstrumentId($var)
+    public function setInstrumentId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->instrument_id = $var;
 
         return $this;
@@ -229,7 +228,7 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
      *Тип источника сделок. Значение по умолчанию — `TRADE_SOURCE_ALL`, все сделки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType trade_source = 5;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\TradeSourceType}
      */
     public function getTradeSource()
     {
@@ -240,10 +239,10 @@ class GetLastTradesRequest extends \Google\Protobuf\Internal\Message
      *Тип источника сделок. Значение по умолчанию — `TRADE_SOURCE_ALL`, все сделки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType trade_source = 5;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\TradeSourceType}
      * @return $this
      */
-    public function setTradeSource($var)
+    public function setTradeSource(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\TradeSourceType::class);
         $this->trade_source = $var;

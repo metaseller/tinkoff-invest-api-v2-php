@@ -49,7 +49,8 @@ class FindInstrumentRequest extends \Google\Protobuf\Internal\Message
      *          Фильтр для отображения только торговых инструментов.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -72,9 +73,9 @@ class FindInstrumentRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setQuery($var)
+    public function setQuery(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->query = $var;
 
         return $this;
@@ -84,7 +85,7 @@ class FindInstrumentRequest extends \Google\Protobuf\Internal\Message
      *Фильтр по типу инструмента.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 2;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\InstrumentType}
      */
     public function getInstrumentKind()
     {
@@ -105,10 +106,10 @@ class FindInstrumentRequest extends \Google\Protobuf\Internal\Message
      *Фильтр по типу инструмента.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 2;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\InstrumentType}
      * @return $this
      */
-    public function setInstrumentKind($var)
+    public function setInstrumentKind(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\InstrumentType::class);
         $this->instrument_kind = $var;
@@ -144,9 +145,8 @@ class FindInstrumentRequest extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setApiTradeAvailableFlag($var)
+    public function setApiTradeAvailableFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->api_trade_available_flag = $var;
 
         return $this;

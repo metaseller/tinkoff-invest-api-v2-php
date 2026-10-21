@@ -39,7 +39,8 @@ class InstrumentParameter extends \Google\Protobuf\Internal\Message
      *           Значение запрашиваемого параметра.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Users::initOnce();
         parent::__construct($data);
     }
@@ -48,7 +49,7 @@ class InstrumentParameter extends \Google\Protobuf\Internal\Message
      * Тип запрашиваемого параметра.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AccountValue name = 1;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\AccountValue}
      */
     public function getName()
     {
@@ -59,10 +60,10 @@ class InstrumentParameter extends \Google\Protobuf\Internal\Message
      * Тип запрашиваемого параметра.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AccountValue name = 1;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\AccountValue}
      * @return $this
      */
-    public function setName($var)
+    public function setName(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\AccountValue::class);
         $this->name = $var;
@@ -98,9 +99,8 @@ class InstrumentParameter extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setValue($var)
+    public function setValue(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->value = $var;
 
         return $this;

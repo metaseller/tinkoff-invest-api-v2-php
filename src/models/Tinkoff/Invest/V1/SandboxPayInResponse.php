@@ -33,7 +33,8 @@ class SandboxPayInResponse extends \Google\Protobuf\Internal\Message
      *          Текущий баланс счета
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Sandbox::initOnce();
         parent::__construct($data);
     }
@@ -66,9 +67,8 @@ class SandboxPayInResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setBalance($var)
+    public function setBalance(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->balance = $var;
 
         return $this;

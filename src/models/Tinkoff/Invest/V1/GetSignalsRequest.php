@@ -97,7 +97,8 @@ class GetSignalsRequest extends \Google\Protobuf\Internal\Message
      *          Настройки пагинации.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Signals::initOnce();
         parent::__construct($data);
     }
@@ -130,9 +131,9 @@ class GetSignalsRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setSignalId($var)
+    public function setSignalId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->signal_id = $var;
 
         return $this;
@@ -166,9 +167,9 @@ class GetSignalsRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setStrategyId($var)
+    public function setStrategyId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->strategy_id = $var;
 
         return $this;
@@ -178,7 +179,7 @@ class GetSignalsRequest extends \Google\Protobuf\Internal\Message
      *Тип стратегии.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.StrategyType strategy_type = 3;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\StrategyType}
      */
     public function getStrategyType()
     {
@@ -199,10 +200,10 @@ class GetSignalsRequest extends \Google\Protobuf\Internal\Message
      *Тип стратегии.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.StrategyType strategy_type = 3;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\StrategyType}
      * @return $this
      */
-    public function setStrategyType($var)
+    public function setStrategyType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\StrategyType::class);
         $this->strategy_type = $var;
@@ -238,9 +239,9 @@ class GetSignalsRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setInstrumentUid($var)
+    public function setInstrumentUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->instrument_uid = $var;
 
         return $this;
@@ -274,9 +275,8 @@ class GetSignalsRequest extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setFrom($var)
+    public function setFrom(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->from = $var;
 
         return $this;
@@ -310,9 +310,8 @@ class GetSignalsRequest extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setTo($var)
+    public function setTo(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->to = $var;
 
         return $this;
@@ -322,7 +321,7 @@ class GetSignalsRequest extends \Google\Protobuf\Internal\Message
      *	Направление сигнала.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.SignalDirection direction = 7;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\SignalDirection}
      */
     public function getDirection()
     {
@@ -343,10 +342,10 @@ class GetSignalsRequest extends \Google\Protobuf\Internal\Message
      *	Направление сигнала.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.SignalDirection direction = 7;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\SignalDirection}
      * @return $this
      */
-    public function setDirection($var)
+    public function setDirection(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\SignalDirection::class);
         $this->direction = $var;
@@ -358,7 +357,7 @@ class GetSignalsRequest extends \Google\Protobuf\Internal\Message
      *Состояние сигнала.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.SignalState active = 8;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\SignalState}
      */
     public function getActive()
     {
@@ -379,10 +378,10 @@ class GetSignalsRequest extends \Google\Protobuf\Internal\Message
      *Состояние сигнала.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.SignalState active = 8;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\SignalState}
      * @return $this
      */
-    public function setActive($var)
+    public function setActive(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\SignalState::class);
         $this->active = $var;
@@ -418,9 +417,8 @@ class GetSignalsRequest extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Page $var
      * @return $this
      */
-    public function setPaging($var)
+    public function setPaging(\Tinkoff\Invest\V1\Page|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Page::class);
         $this->paging = $var;
 
         return $this;

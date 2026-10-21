@@ -113,7 +113,8 @@ class TargetItem extends \Google\Protobuf\Internal\Message
      *           Наименование инструмента.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -136,9 +137,9 @@ class TargetItem extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setUid($var)
+    public function setUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->uid = $var;
 
         return $this;
@@ -162,9 +163,9 @@ class TargetItem extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTicker($var)
+    public function setTicker(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->ticker = $var;
 
         return $this;
@@ -188,9 +189,9 @@ class TargetItem extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCompany($var)
+    public function setCompany(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->company = $var;
 
         return $this;
@@ -200,7 +201,7 @@ class TargetItem extends \Google\Protobuf\Internal\Message
      * Прогноз.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Recommendation recommendation = 4;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\Recommendation}
      */
     public function getRecommendation()
     {
@@ -211,10 +212,10 @@ class TargetItem extends \Google\Protobuf\Internal\Message
      * Прогноз.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Recommendation recommendation = 4;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\Recommendation}
      * @return $this
      */
-    public function setRecommendation($var)
+    public function setRecommendation(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\Recommendation::class);
         $this->recommendation = $var;
@@ -250,9 +251,8 @@ class TargetItem extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setRecommendationDate($var)
+    public function setRecommendationDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->recommendation_date = $var;
 
         return $this;
@@ -276,9 +276,9 @@ class TargetItem extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCurrency($var)
+    public function setCurrency(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->currency = $var;
 
         return $this;
@@ -312,9 +312,8 @@ class TargetItem extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setCurrentPrice($var)
+    public function setCurrentPrice(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->current_price = $var;
 
         return $this;
@@ -348,9 +347,8 @@ class TargetItem extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setTargetPrice($var)
+    public function setTargetPrice(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->target_price = $var;
 
         return $this;
@@ -384,9 +382,8 @@ class TargetItem extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setPriceChange($var)
+    public function setPriceChange(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->price_change = $var;
 
         return $this;
@@ -420,9 +417,8 @@ class TargetItem extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setPriceChangeRel($var)
+    public function setPriceChangeRel(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->price_change_rel = $var;
 
         return $this;
@@ -446,9 +442,9 @@ class TargetItem extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setShowName($var)
+    public function setShowName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->show_name = $var;
 
         return $this;

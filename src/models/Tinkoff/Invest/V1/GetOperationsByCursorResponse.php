@@ -49,7 +49,8 @@ class GetOperationsByCursorResponse extends \Google\Protobuf\Internal\Message
      *          Список операций.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Operations::initOnce();
         parent::__construct($data);
     }
@@ -72,9 +73,8 @@ class GetOperationsByCursorResponse extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setHasNext($var)
+    public function setHasNext(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->has_next = $var;
 
         return $this;
@@ -98,9 +98,9 @@ class GetOperationsByCursorResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setNextCursor($var)
+    public function setNextCursor(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->next_cursor = $var;
 
         return $this;
@@ -124,7 +124,7 @@ class GetOperationsByCursorResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\OperationItem[] $var
      * @return $this
      */
-    public function setItems($var)
+    public function setItems(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\OperationItem::class);
         $this->items = $arr;

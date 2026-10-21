@@ -52,7 +52,8 @@ class GetDividendsForeignIssuerReportResponse extends \Google\Protobuf\Internal\
      *          Текущая страница, начинается с 0.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Operations::initOnce();
         parent::__construct($data);
     }
@@ -71,7 +72,7 @@ class GetDividendsForeignIssuerReportResponse extends \Google\Protobuf\Internal\
      * @param \Tinkoff\Invest\V1\DividendsForeignIssuerReport[] $var
      * @return $this
      */
-    public function setDividendsForeignIssuerReport($var)
+    public function setDividendsForeignIssuerReport(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\DividendsForeignIssuerReport::class);
         $this->dividends_foreign_issuer_report = $arr;
@@ -97,7 +98,7 @@ class GetDividendsForeignIssuerReportResponse extends \Google\Protobuf\Internal\
      * @param int $var
      * @return $this
      */
-    public function setItemsCount($var)
+    public function setItemsCount(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->itemsCount = $var;
@@ -123,7 +124,7 @@ class GetDividendsForeignIssuerReportResponse extends \Google\Protobuf\Internal\
      * @param int $var
      * @return $this
      */
-    public function setPagesCount($var)
+    public function setPagesCount(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->pagesCount = $var;
@@ -149,7 +150,7 @@ class GetDividendsForeignIssuerReportResponse extends \Google\Protobuf\Internal\
      * @param int $var
      * @return $this
      */
-    public function setPage($var)
+    public function setPage(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->page = $var;

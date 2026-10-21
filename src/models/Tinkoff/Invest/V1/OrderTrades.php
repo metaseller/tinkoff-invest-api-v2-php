@@ -81,7 +81,8 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
      *          UID идентификатор инструмента.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Orders::initOnce();
         parent::__construct($data);
     }
@@ -104,9 +105,9 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setOrderId($var)
+    public function setOrderId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->order_id = $var;
 
         return $this;
@@ -140,9 +141,8 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setCreatedAt($var)
+    public function setCreatedAt(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->created_at = $var;
 
         return $this;
@@ -152,7 +152,7 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
      *Направление сделки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderDirection direction = 3;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\OrderDirection}
      */
     public function getDirection()
     {
@@ -163,10 +163,10 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
      *Направление сделки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderDirection direction = 3;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\OrderDirection}
      * @return $this
      */
-    public function setDirection($var)
+    public function setDirection(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\OrderDirection::class);
         $this->direction = $var;
@@ -192,9 +192,9 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setFigi($var)
+    public function setFigi(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->figi = $var;
 
         return $this;
@@ -218,7 +218,7 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\OrderTrade[] $var
      * @return $this
      */
-    public function setTrades($var)
+    public function setTrades(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\OrderTrade::class);
         $this->trades = $arr;
@@ -244,9 +244,9 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setAccountId($var)
+    public function setAccountId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->account_id = $var;
 
         return $this;
@@ -270,9 +270,9 @@ class OrderTrades extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setInstrumentUid($var)
+    public function setInstrumentUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->instrument_uid = $var;
 
         return $this;

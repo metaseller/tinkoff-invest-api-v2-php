@@ -33,7 +33,8 @@ class RiskRatesRequest extends \Google\Protobuf\Internal\Message
      *           Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -56,7 +57,7 @@ class RiskRatesRequest extends \Google\Protobuf\Internal\Message
      * @param string[] $var
      * @return $this
      */
-    public function setInstrumentId($var)
+    public function setInstrumentId(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->instrument_id = $arr;

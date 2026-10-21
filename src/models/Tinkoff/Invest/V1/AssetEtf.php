@@ -273,7 +273,8 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      *          Валюта номинала.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -306,9 +307,8 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setTotalExpense($var)
+    public function setTotalExpense(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->total_expense = $var;
 
         return $this;
@@ -342,9 +342,8 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setHurdleRate($var)
+    public function setHurdleRate(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->hurdle_rate = $var;
 
         return $this;
@@ -378,9 +377,8 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setPerformanceFee($var)
+    public function setPerformanceFee(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->performance_fee = $var;
 
         return $this;
@@ -414,9 +412,8 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setFixedCommission($var)
+    public function setFixedCommission(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->fixed_commission = $var;
 
         return $this;
@@ -440,9 +437,9 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setPaymentType($var)
+    public function setPaymentType(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->payment_type = $var;
 
         return $this;
@@ -466,9 +463,8 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setWatermarkFlag($var)
+    public function setWatermarkFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->watermark_flag = $var;
 
         return $this;
@@ -502,9 +498,8 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setBuyPremium($var)
+    public function setBuyPremium(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->buy_premium = $var;
 
         return $this;
@@ -538,9 +533,8 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setSellDiscount($var)
+    public function setSellDiscount(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->sell_discount = $var;
 
         return $this;
@@ -564,9 +558,8 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setRebalancingFlag($var)
+    public function setRebalancingFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->rebalancing_flag = $var;
 
         return $this;
@@ -590,9 +583,9 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setRebalancingFreq($var)
+    public function setRebalancingFreq(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->rebalancing_freq = $var;
 
         return $this;
@@ -616,9 +609,9 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setManagementType($var)
+    public function setManagementType(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->management_type = $var;
 
         return $this;
@@ -642,9 +635,9 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setPrimaryIndex($var)
+    public function setPrimaryIndex(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->primary_index = $var;
 
         return $this;
@@ -668,9 +661,9 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setFocusType($var)
+    public function setFocusType(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->focus_type = $var;
 
         return $this;
@@ -694,9 +687,8 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setLeveragedFlag($var)
+    public function setLeveragedFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->leveraged_flag = $var;
 
         return $this;
@@ -730,9 +722,8 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setNumShare($var)
+    public function setNumShare(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->num_share = $var;
 
         return $this;
@@ -756,9 +747,8 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setUcitsFlag($var)
+    public function setUcitsFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->ucits_flag = $var;
 
         return $this;
@@ -792,9 +782,8 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setReleasedDate($var)
+    public function setReleasedDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->released_date = $var;
 
         return $this;
@@ -818,9 +807,9 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setDescription($var)
+    public function setDescription(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->description = $var;
 
         return $this;
@@ -844,9 +833,9 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setPrimaryIndexDescription($var)
+    public function setPrimaryIndexDescription(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->primary_index_description = $var;
 
         return $this;
@@ -870,9 +859,9 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setPrimaryIndexCompany($var)
+    public function setPrimaryIndexCompany(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->primary_index_company = $var;
 
         return $this;
@@ -906,9 +895,8 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setIndexRecoveryPeriod($var)
+    public function setIndexRecoveryPeriod(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->index_recovery_period = $var;
 
         return $this;
@@ -932,9 +920,9 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setInavCode($var)
+    public function setInavCode(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->inav_code = $var;
 
         return $this;
@@ -958,9 +946,8 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setDivYieldFlag($var)
+    public function setDivYieldFlag(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->div_yield_flag = $var;
 
         return $this;
@@ -994,9 +981,8 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setExpenseCommission($var)
+    public function setExpenseCommission(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->expense_commission = $var;
 
         return $this;
@@ -1030,9 +1016,8 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setPrimaryIndexTrackingError($var)
+    public function setPrimaryIndexTrackingError(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->primary_index_tracking_error = $var;
 
         return $this;
@@ -1056,9 +1041,9 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setRebalancingPlan($var)
+    public function setRebalancingPlan(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->rebalancing_plan = $var;
 
         return $this;
@@ -1082,9 +1067,9 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTaxRate($var)
+    public function setTaxRate(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->tax_rate = $var;
 
         return $this;
@@ -1108,7 +1093,7 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp[] $var
      * @return $this
      */
-    public function setRebalancingDates($var)
+    public function setRebalancingDates(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Google\Protobuf\Timestamp::class);
         $this->rebalancing_dates = $arr;
@@ -1134,9 +1119,9 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setIssueKind($var)
+    public function setIssueKind(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->issue_kind = $var;
 
         return $this;
@@ -1170,9 +1155,8 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setNominal($var)
+    public function setNominal(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->nominal = $var;
 
         return $this;
@@ -1196,9 +1180,9 @@ class AssetEtf extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setNominalCurrency($var)
+    public function setNominalCurrency(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->nominal_currency = $var;
 
         return $this;

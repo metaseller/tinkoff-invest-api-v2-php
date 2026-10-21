@@ -58,7 +58,8 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
      *          Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Marketdata::initOnce();
         parent::__construct($data);
     }
@@ -86,7 +87,7 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
      * @return $this
      * @deprecated
      */
-    public function setFigi($var)
+    public function setFigi(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         if (count($arr) !== 0) {
@@ -115,7 +116,7 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
      * @param string[] $var
      * @return $this
      */
-    public function setInstrumentId($var)
+    public function setInstrumentId(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->instrument_id = $arr;
@@ -127,7 +128,7 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
      *Тип запрашиваемой последней цены.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.LastPriceType last_price_type = 3;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\LastPriceType}
      */
     public function getLastPriceType()
     {
@@ -138,10 +139,10 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
      *Тип запрашиваемой последней цены.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.LastPriceType last_price_type = 3;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\LastPriceType}
      * @return $this
      */
-    public function setLastPriceType($var)
+    public function setLastPriceType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\LastPriceType::class);
         $this->last_price_type = $var;
@@ -153,7 +154,7 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
      *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 9;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\InstrumentStatus}
      */
     public function getInstrumentStatus()
     {
@@ -174,10 +175,10 @@ class GetLastPricesRequest extends \Google\Protobuf\Internal\Message
      *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 9;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\InstrumentStatus}
      * @return $this
      */
-    public function setInstrumentStatus($var)
+    public function setInstrumentStatus(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\InstrumentStatus::class);
         $this->instrument_status = $var;

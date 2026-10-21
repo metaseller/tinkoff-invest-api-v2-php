@@ -11,6 +11,6 @@ if (false) {
      */
     class PortfolioRequest_CurrencyRequest {}
 }
-class_exists(PortfolioRequest\CurrencyRequest::class);
+class_alias(PortfolioRequest\CurrencyRequest::class, PortfolioRequest_CurrencyRequest::class);
 @trigger_error('Tinkoff\Invest\V1\PortfolioRequest_CurrencyRequest is deprecated and will be removed in the next major release. Use Tinkoff\Invest\V1\PortfolioRequest\CurrencyRequest instead', E_USER_DEPRECATED);
 

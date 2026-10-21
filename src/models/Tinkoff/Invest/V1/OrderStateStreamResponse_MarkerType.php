@@ -11,6 +11,6 @@ if (false) {
      */
     class OrderStateStreamResponse_MarkerType {}
 }
-class_exists(OrderStateStreamResponse\MarkerType::class);
+class_alias(OrderStateStreamResponse\MarkerType::class, OrderStateStreamResponse_MarkerType::class);
 @trigger_error('Tinkoff\Invest\V1\OrderStateStreamResponse_MarkerType is deprecated and will be removed in the next major release. Use Tinkoff\Invest\V1\OrderStateStreamResponse\MarkerType instead', E_USER_DEPRECATED);
 

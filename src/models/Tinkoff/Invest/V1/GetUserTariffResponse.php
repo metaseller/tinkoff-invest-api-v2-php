@@ -41,7 +41,8 @@ class GetUserTariffResponse extends \Google\Protobuf\Internal\Message
      *          Массив лимитов пользователей для stream-соединений.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Users::initOnce();
         parent::__construct($data);
     }
@@ -64,7 +65,7 @@ class GetUserTariffResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\UnaryLimit[] $var
      * @return $this
      */
-    public function setUnaryLimits($var)
+    public function setUnaryLimits(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\UnaryLimit::class);
         $this->unary_limits = $arr;
@@ -90,7 +91,7 @@ class GetUserTariffResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\StreamLimit[] $var
      * @return $this
      */
-    public function setStreamLimits($var)
+    public function setStreamLimits(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\StreamLimit::class);
         $this->stream_limits = $arr;

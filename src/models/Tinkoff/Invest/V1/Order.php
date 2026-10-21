@@ -41,7 +41,8 @@ class Order extends \Google\Protobuf\Internal\Message
      *          Количество в лотах.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Marketdata::initOnce();
         parent::__construct($data);
     }
@@ -74,9 +75,8 @@ class Order extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setPrice($var)
+    public function setPrice(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->price = $var;
 
         return $this;
@@ -100,7 +100,7 @@ class Order extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setQuantity($var)
+    public function setQuantity(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->quantity = $var;

@@ -60,7 +60,8 @@ class AssetSecurity extends \Google\Protobuf\Internal\Message
      *           Клиринговый сертификат участия. Заполняется только для клиринговых сертификатов — тип актива `asset.type = ASSET_TYPE_SECURITY` и security.type = `clearing_certificate`.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -83,9 +84,9 @@ class AssetSecurity extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setIsin($var)
+    public function setIsin(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->isin = $var;
 
         return $this;
@@ -109,9 +110,9 @@ class AssetSecurity extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setType($var)
+    public function setType(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->type = $var;
 
         return $this;
@@ -121,7 +122,7 @@ class AssetSecurity extends \Google\Protobuf\Internal\Message
      *Тип инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 10;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\InstrumentType}
      */
     public function getInstrumentKind()
     {
@@ -132,10 +133,10 @@ class AssetSecurity extends \Google\Protobuf\Internal\Message
      *Тип инструмента.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentType instrument_kind = 10;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\InstrumentType}
      * @return $this
      */
-    public function setInstrumentKind($var)
+    public function setInstrumentKind(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\InstrumentType::class);
         $this->instrument_kind = $var;
@@ -166,9 +167,8 @@ class AssetSecurity extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\AssetShare $var
      * @return $this
      */
-    public function setShare($var)
+    public function setShare(\Tinkoff\Invest\V1\AssetShare|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\AssetShare::class);
         $this->writeOneof(3, $var);
 
         return $this;
@@ -197,9 +197,8 @@ class AssetSecurity extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\AssetBond $var
      * @return $this
      */
-    public function setBond($var)
+    public function setBond(\Tinkoff\Invest\V1\AssetBond|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\AssetBond::class);
         $this->writeOneof(4, $var);
 
         return $this;
@@ -228,9 +227,8 @@ class AssetSecurity extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\AssetStructuredProduct $var
      * @return $this
      */
-    public function setSp($var)
+    public function setSp(\Tinkoff\Invest\V1\AssetStructuredProduct|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\AssetStructuredProduct::class);
         $this->writeOneof(5, $var);
 
         return $this;
@@ -259,9 +257,8 @@ class AssetSecurity extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\AssetEtf $var
      * @return $this
      */
-    public function setEtf($var)
+    public function setEtf(\Tinkoff\Invest\V1\AssetEtf|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\AssetEtf::class);
         $this->writeOneof(6, $var);
 
         return $this;
@@ -290,9 +287,8 @@ class AssetSecurity extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\AssetClearingCertificate $var
      * @return $this
      */
-    public function setClearingCertificate($var)
+    public function setClearingCertificate(\Tinkoff\Invest\V1\AssetClearingCertificate|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\AssetClearingCertificate::class);
         $this->writeOneof(7, $var);
 
         return $this;

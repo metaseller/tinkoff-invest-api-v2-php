@@ -41,7 +41,8 @@ class OperationsStreamRequest extends \Google\Protobuf\Internal\Message
      *          Запрос настройки пинга.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Operations::initOnce();
         parent::__construct($data);
     }
@@ -64,7 +65,7 @@ class OperationsStreamRequest extends \Google\Protobuf\Internal\Message
      * @param string[] $var
      * @return $this
      */
-    public function setAccounts($var)
+    public function setAccounts(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->accounts = $arr;
@@ -100,9 +101,8 @@ class OperationsStreamRequest extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\PingDelaySettings $var
      * @return $this
      */
-    public function setPingSettings($var)
+    public function setPingSettings(\Tinkoff\Invest\V1\PingDelaySettings|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\PingDelaySettings::class);
         $this->ping_settings = $var;
 
         return $this;

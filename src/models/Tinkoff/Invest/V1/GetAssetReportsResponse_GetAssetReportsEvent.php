@@ -11,6 +11,6 @@ if (false) {
      */
     class GetAssetReportsResponse_GetAssetReportsEvent {}
 }
-class_exists(GetAssetReportsResponse\GetAssetReportsEvent::class);
+class_alias(GetAssetReportsResponse\GetAssetReportsEvent::class, GetAssetReportsResponse_GetAssetReportsEvent::class);
 @trigger_error('Tinkoff\Invest\V1\GetAssetReportsResponse_GetAssetReportsEvent is deprecated and will be removed in the next major release. Use Tinkoff\Invest\V1\GetAssetReportsResponse\GetAssetReportsEvent instead', E_USER_DEPRECATED);
 

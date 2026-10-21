@@ -1,6 +1,6 @@
 {
     "name": "metaseller/tinkoff-invest-api-v2-php",
-    "version": "0.5.7",
+    "version": "0.6.0",
     "description": "Unofficial PHP SDK for T-Invest API v2",
     "type": "library",
     "license": "Apache-2.0",
@@ -19,14 +19,15 @@
             "email": "igor@frolenkov.ru"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {
-        "php": ">=7.4.0",
-        "ext-grpc": "^1.74",
-        "grpc/grpc": "^1.74",
-        "google/protobuf": "^3.25.1",
+        "php": "^8.5.12",
         "ext-bcmath": "*",
-        "ext-json": "*"
+        "ext-ctype": "*",
+        "ext-grpc": "^1.83.1",
+        "ext-json": "*",
+        "google/protobuf": "^5.36.2",
+        "grpc/grpc": "^1.82"
     },
     "autoload": {
         "psr-4": {
@@ -41,6 +42,18 @@
         }
     },
     "require-dev": {
-        "rector/rector": "dev-main"
+        "rector/rector": "^2.7"
+    },
+    "config": {
+        "platform": {
+            "php": "8.5.12"
+        },
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": [
+            "@php -d error_reporting=E_ALL tests/compatibility.php",
+            "@php -d error_reporting=E_ALL tests/regressions.php"
+        ]
     }
 }

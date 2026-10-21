@@ -97,7 +97,8 @@ class Coupon extends \Google\Protobuf\Internal\Message
      *          Купонный период в днях.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -120,9 +121,9 @@ class Coupon extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setFigi($var)
+    public function setFigi(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->figi = $var;
 
         return $this;
@@ -156,9 +157,8 @@ class Coupon extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setCouponDate($var)
+    public function setCouponDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->coupon_date = $var;
 
         return $this;
@@ -182,7 +182,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setCouponNumber($var)
+    public function setCouponNumber(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->coupon_number = $var;
@@ -218,9 +218,8 @@ class Coupon extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setFixDate($var)
+    public function setFixDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->fix_date = $var;
 
         return $this;
@@ -254,9 +253,8 @@ class Coupon extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setPayOneBond($var)
+    public function setPayOneBond(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->pay_one_bond = $var;
 
         return $this;
@@ -266,7 +264,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
      *Тип купона.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.CouponType coupon_type = 6;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\CouponType}
      */
     public function getCouponType()
     {
@@ -277,10 +275,10 @@ class Coupon extends \Google\Protobuf\Internal\Message
      *Тип купона.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.CouponType coupon_type = 6;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\CouponType}
      * @return $this
      */
-    public function setCouponType($var)
+    public function setCouponType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\CouponType::class);
         $this->coupon_type = $var;
@@ -316,9 +314,8 @@ class Coupon extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setCouponStartDate($var)
+    public function setCouponStartDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->coupon_start_date = $var;
 
         return $this;
@@ -352,9 +349,8 @@ class Coupon extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setCouponEndDate($var)
+    public function setCouponEndDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->coupon_end_date = $var;
 
         return $this;
@@ -378,7 +374,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setCouponPeriod($var)
+    public function setCouponPeriod(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->coupon_period = $var;

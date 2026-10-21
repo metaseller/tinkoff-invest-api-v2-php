@@ -32,7 +32,8 @@ class PortfolioStreamResponse extends \Google\Protobuf\Internal\Message
      *          Проверка активности стрима.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Operations::initOnce();
         parent::__construct($data);
     }
@@ -60,9 +61,8 @@ class PortfolioStreamResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\PortfolioSubscriptionResult $var
      * @return $this
      */
-    public function setSubscriptions($var)
+    public function setSubscriptions(\Tinkoff\Invest\V1\PortfolioSubscriptionResult|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\PortfolioSubscriptionResult::class);
         $this->writeOneof(1, $var);
 
         return $this;
@@ -91,9 +91,8 @@ class PortfolioStreamResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\PortfolioResponse $var
      * @return $this
      */
-    public function setPortfolio($var)
+    public function setPortfolio(\Tinkoff\Invest\V1\PortfolioResponse|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\PortfolioResponse::class);
         $this->writeOneof(2, $var);
 
         return $this;
@@ -122,9 +121,8 @@ class PortfolioStreamResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Ping $var
      * @return $this
      */
-    public function setPing($var)
+    public function setPing(\Tinkoff\Invest\V1\Ping|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Ping::class);
         $this->writeOneof(3, $var);
 
         return $this;

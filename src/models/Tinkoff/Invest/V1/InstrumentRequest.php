@@ -49,7 +49,8 @@ class InstrumentRequest extends \Google\Protobuf\Internal\Message
      *           Идентификатор запрашиваемого инструмента.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -58,7 +59,7 @@ class InstrumentRequest extends \Google\Protobuf\Internal\Message
      * Тип идентификатора инструмента. Возможные значения — `figi`, `ticker`. [Подробнее об идентификации инструментов](/invest/intro/intro/faq_identification).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentIdType id_type = 1 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\InstrumentIdType}
      */
     public function getIdType()
     {
@@ -69,10 +70,10 @@ class InstrumentRequest extends \Google\Protobuf\Internal\Message
      * Тип идентификатора инструмента. Возможные значения — `figi`, `ticker`. [Подробнее об идентификации инструментов](/invest/intro/intro/faq_identification).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.InstrumentIdType id_type = 1 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\InstrumentIdType}
      * @return $this
      */
-    public function setIdType($var)
+    public function setIdType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\InstrumentIdType::class);
         $this->id_type = $var;
@@ -108,9 +109,9 @@ class InstrumentRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setClassCode($var)
+    public function setClassCode(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->class_code = $var;
 
         return $this;
@@ -134,9 +135,9 @@ class InstrumentRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setId($var)
+    public function setId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->id = $var;
 
         return $this;

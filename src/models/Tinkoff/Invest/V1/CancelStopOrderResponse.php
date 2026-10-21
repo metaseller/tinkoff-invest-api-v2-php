@@ -33,7 +33,8 @@ class CancelStopOrderResponse extends \Google\Protobuf\Internal\Message
      *          Время отмены заявки по UTC.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Stoporders::initOnce();
         parent::__construct($data);
     }
@@ -66,9 +67,8 @@ class CancelStopOrderResponse extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setTime($var)
+    public function setTime(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->time = $var;
 
         return $this;

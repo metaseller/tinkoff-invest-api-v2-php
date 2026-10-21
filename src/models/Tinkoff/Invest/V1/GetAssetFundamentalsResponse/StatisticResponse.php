@@ -467,7 +467,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      *          Отношение EV к выручке.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -490,9 +491,9 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setAssetUid($var)
+    public function setAssetUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->asset_uid = $var;
 
         return $this;
@@ -516,9 +517,9 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCurrency($var)
+    public function setCurrency(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->currency = $var;
 
         return $this;
@@ -542,9 +543,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setMarketCapitalization($var)
+    public function setMarketCapitalization(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->market_capitalization = $var;
 
         return $this;
@@ -568,9 +568,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setHighPriceLast52Weeks($var)
+    public function setHighPriceLast52Weeks(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->high_price_last_52_weeks = $var;
 
         return $this;
@@ -594,9 +593,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setLowPriceLast52Weeks($var)
+    public function setLowPriceLast52Weeks(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->low_price_last_52_weeks = $var;
 
         return $this;
@@ -620,9 +618,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setAverageDailyVolumeLast10Days($var)
+    public function setAverageDailyVolumeLast10Days(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->average_daily_volume_last_10_days = $var;
 
         return $this;
@@ -646,9 +643,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setAverageDailyVolumeLast4Weeks($var)
+    public function setAverageDailyVolumeLast4Weeks(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->average_daily_volume_last_4_weeks = $var;
 
         return $this;
@@ -668,9 +664,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setBeta($var)
+    public function setBeta(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->beta = $var;
 
         return $this;
@@ -694,9 +689,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setFreeFloat($var)
+    public function setFreeFloat(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->free_float = $var;
 
         return $this;
@@ -720,9 +714,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setForwardAnnualDividendYield($var)
+    public function setForwardAnnualDividendYield(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->forward_annual_dividend_yield = $var;
 
         return $this;
@@ -746,9 +739,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setSharesOutstanding($var)
+    public function setSharesOutstanding(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->shares_outstanding = $var;
 
         return $this;
@@ -772,9 +764,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setRevenueTtm($var)
+    public function setRevenueTtm(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->revenue_ttm = $var;
 
         return $this;
@@ -798,9 +789,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setEbitdaTtm($var)
+    public function setEbitdaTtm(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->ebitda_ttm = $var;
 
         return $this;
@@ -824,9 +814,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setNetIncomeTtm($var)
+    public function setNetIncomeTtm(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->net_income_ttm = $var;
 
         return $this;
@@ -850,9 +839,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setEpsTtm($var)
+    public function setEpsTtm(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->eps_ttm = $var;
 
         return $this;
@@ -876,9 +864,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setDilutedEpsTtm($var)
+    public function setDilutedEpsTtm(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->diluted_eps_ttm = $var;
 
         return $this;
@@ -902,9 +889,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setFreeCashFlowTtm($var)
+    public function setFreeCashFlowTtm(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->free_cash_flow_ttm = $var;
 
         return $this;
@@ -928,9 +914,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setFiveYearAnnualRevenueGrowthRate($var)
+    public function setFiveYearAnnualRevenueGrowthRate(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->five_year_annual_revenue_growth_rate = $var;
 
         return $this;
@@ -954,9 +939,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setThreeYearAnnualRevenueGrowthRate($var)
+    public function setThreeYearAnnualRevenueGrowthRate(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->three_year_annual_revenue_growth_rate = $var;
 
         return $this;
@@ -980,9 +964,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setPeRatioTtm($var)
+    public function setPeRatioTtm(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->pe_ratio_ttm = $var;
 
         return $this;
@@ -1006,9 +989,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setPriceToSalesTtm($var)
+    public function setPriceToSalesTtm(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->price_to_sales_ttm = $var;
 
         return $this;
@@ -1032,9 +1014,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setPriceToBookTtm($var)
+    public function setPriceToBookTtm(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->price_to_book_ttm = $var;
 
         return $this;
@@ -1058,9 +1039,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setPriceToFreeCashFlowTtm($var)
+    public function setPriceToFreeCashFlowTtm(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->price_to_free_cash_flow_ttm = $var;
 
         return $this;
@@ -1084,9 +1064,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setTotalEnterpriseValueMrq($var)
+    public function setTotalEnterpriseValueMrq(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->total_enterprise_value_mrq = $var;
 
         return $this;
@@ -1110,9 +1089,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setEvToEbitdaMrq($var)
+    public function setEvToEbitdaMrq(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->ev_to_ebitda_mrq = $var;
 
         return $this;
@@ -1136,9 +1114,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setNetMarginMrq($var)
+    public function setNetMarginMrq(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->net_margin_mrq = $var;
 
         return $this;
@@ -1162,9 +1139,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setNetInterestMarginMrq($var)
+    public function setNetInterestMarginMrq(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->net_interest_margin_mrq = $var;
 
         return $this;
@@ -1188,9 +1164,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setRoe($var)
+    public function setRoe(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->roe = $var;
 
         return $this;
@@ -1214,9 +1189,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setRoa($var)
+    public function setRoa(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->roa = $var;
 
         return $this;
@@ -1240,9 +1214,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setRoic($var)
+    public function setRoic(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->roic = $var;
 
         return $this;
@@ -1266,9 +1239,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setTotalDebtMrq($var)
+    public function setTotalDebtMrq(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->total_debt_mrq = $var;
 
         return $this;
@@ -1292,9 +1264,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setTotalDebtToEquityMrq($var)
+    public function setTotalDebtToEquityMrq(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->total_debt_to_equity_mrq = $var;
 
         return $this;
@@ -1318,9 +1289,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setTotalDebtToEbitdaMrq($var)
+    public function setTotalDebtToEbitdaMrq(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->total_debt_to_ebitda_mrq = $var;
 
         return $this;
@@ -1344,9 +1314,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setFreeCashFlowToPrice($var)
+    public function setFreeCashFlowToPrice(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->free_cash_flow_to_price = $var;
 
         return $this;
@@ -1370,9 +1339,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setNetDebtToEbitda($var)
+    public function setNetDebtToEbitda(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->net_debt_to_ebitda = $var;
 
         return $this;
@@ -1396,9 +1364,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setCurrentRatioMrq($var)
+    public function setCurrentRatioMrq(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->current_ratio_mrq = $var;
 
         return $this;
@@ -1422,9 +1389,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setFixedChargeCoverageRatioFy($var)
+    public function setFixedChargeCoverageRatioFy(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->fixed_charge_coverage_ratio_fy = $var;
 
         return $this;
@@ -1448,9 +1414,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setDividendYieldDailyTtm($var)
+    public function setDividendYieldDailyTtm(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->dividend_yield_daily_ttm = $var;
 
         return $this;
@@ -1474,9 +1439,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setDividendRateTtm($var)
+    public function setDividendRateTtm(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->dividend_rate_ttm = $var;
 
         return $this;
@@ -1500,9 +1464,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setDividendsPerShare($var)
+    public function setDividendsPerShare(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->dividends_per_share = $var;
 
         return $this;
@@ -1526,9 +1489,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setFiveYearsAverageDividendYield($var)
+    public function setFiveYearsAverageDividendYield(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->five_years_average_dividend_yield = $var;
 
         return $this;
@@ -1552,9 +1514,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setFiveYearAnnualDividendGrowthRate($var)
+    public function setFiveYearAnnualDividendGrowthRate(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->five_year_annual_dividend_growth_rate = $var;
 
         return $this;
@@ -1578,9 +1539,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setDividendPayoutRatioFy($var)
+    public function setDividendPayoutRatioFy(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->dividend_payout_ratio_fy = $var;
 
         return $this;
@@ -1604,9 +1564,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setBuyBackTtm($var)
+    public function setBuyBackTtm(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->buy_back_ttm = $var;
 
         return $this;
@@ -1630,9 +1589,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setOneYearAnnualRevenueGrowthRate($var)
+    public function setOneYearAnnualRevenueGrowthRate(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->one_year_annual_revenue_growth_rate = $var;
 
         return $this;
@@ -1656,9 +1614,9 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setDomicileIndicatorCode($var)
+    public function setDomicileIndicatorCode(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->domicile_indicator_code = $var;
 
         return $this;
@@ -1682,9 +1640,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setAdrToCommonShareRatio($var)
+    public function setAdrToCommonShareRatio(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->adr_to_common_share_ratio = $var;
 
         return $this;
@@ -1708,9 +1665,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setNumberOfEmployees($var)
+    public function setNumberOfEmployees(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->number_of_employees = $var;
 
         return $this;
@@ -1740,9 +1696,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setExDividendDate($var)
+    public function setExDividendDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->ex_dividend_date = $var;
 
         return $this;
@@ -1776,9 +1731,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setFiscalPeriodStartDate($var)
+    public function setFiscalPeriodStartDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->fiscal_period_start_date = $var;
 
         return $this;
@@ -1812,9 +1766,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setFiscalPeriodEndDate($var)
+    public function setFiscalPeriodEndDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->fiscal_period_end_date = $var;
 
         return $this;
@@ -1838,9 +1791,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setRevenueChangeFiveYears($var)
+    public function setRevenueChangeFiveYears(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->revenue_change_five_years = $var;
 
         return $this;
@@ -1864,9 +1816,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setEpsChangeFiveYears($var)
+    public function setEpsChangeFiveYears(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->eps_change_five_years = $var;
 
         return $this;
@@ -1890,9 +1841,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setEbitdaChangeFiveYears($var)
+    public function setEbitdaChangeFiveYears(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->ebitda_change_five_years = $var;
 
         return $this;
@@ -1916,9 +1866,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setTotalDebtChangeFiveYears($var)
+    public function setTotalDebtChangeFiveYears(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->total_debt_change_five_years = $var;
 
         return $this;
@@ -1942,9 +1891,8 @@ class StatisticResponse extends \Google\Protobuf\Internal\Message
      * @param float $var
      * @return $this
      */
-    public function setEvToSales($var)
+    public function setEvToSales(float $var)
     {
-        GPBUtil::checkDouble($var);
         $this->ev_to_sales = $var;
 
         return $this;

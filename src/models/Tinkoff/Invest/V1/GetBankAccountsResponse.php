@@ -33,7 +33,8 @@ class GetBankAccountsResponse extends \Google\Protobuf\Internal\Message
      *          Массив банковских счетов.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Users::initOnce();
         parent::__construct($data);
     }
@@ -56,7 +57,7 @@ class GetBankAccountsResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\BankAccount[] $var
      * @return $this
      */
-    public function setBankAccounts($var)
+    public function setBankAccounts(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\BankAccount::class);
         $this->bank_accounts = $arr;

@@ -3,7 +3,7 @@
 namespace Metaseller\TinkoffInvestApi2\providers;
 
 use Exception;
-use Google\Protobuf\Internal\RepeatedField;
+use Google\Protobuf\RepeatedField;
 use Metaseller\TinkoffInvestApi2\exceptions\InstrumentNotFoundException;
 use Metaseller\TinkoffInvestApi2\exceptions\RequestException;
 use Metaseller\TinkoffInvestApi2\exceptions\ValidateException;
@@ -1665,15 +1665,25 @@ class InstrumentsProvider extends BaseDataProvider
      *
      * @param int $instrument_type Тип инструмента {@link InstrumentType}
      * @param string $ticker Тикер инструмента
-     * @param string $class_name Режим торгов
+     * @param string|null $class_name Режим торгов или null для поиска среди доступных режимов
      *
      * @return Bond|Currency|Etf|Future|Share|Instrument|null
      *
      * @see https://tinkoff.github.io/investAPI/faq_identification/
      */
-    protected function getCachedInstrumentByTicker(int $instrument_type, string $ticker, string $class_name)
+    protected function getCachedInstrumentByTicker(int $instrument_type, string $ticker, ?string $class_name)
     {
-        return $this->_cached_instruments[$instrument_type][InstrumentIdType::INSTRUMENT_ID_TYPE_TICKER][$ticker][$class_name] ?? null;
+        $instruments = $this->_cached_instruments[$instrument_type][InstrumentIdType::INSTRUMENT_ID_TYPE_TICKER][$ticker] ?? [];
+
+        if ($class_name !== null) {
+            return $instruments[$class_name] ?? null;
+        }
+
+        try {
+            return static::searchInstrumentByTicker($instruments, $ticker);
+        } catch (InstrumentNotFoundException $e) {
+            return null;
+        }
     }
 
     /**

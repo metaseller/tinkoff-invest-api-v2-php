@@ -95,7 +95,8 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
      *          Параметры сглаживания.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Marketdata::initOnce();
         parent::__construct($data);
     }
@@ -104,7 +105,7 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
      *Тип технического индикатора.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetTechAnalysisRequest.IndicatorType indicator_type = 1 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\GetTechAnalysisRequest\IndicatorType}
      */
     public function getIndicatorType()
     {
@@ -115,10 +116,10 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
      *Тип технического индикатора.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetTechAnalysisRequest.IndicatorType indicator_type = 1 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\GetTechAnalysisRequest\IndicatorType}
      * @return $this
      */
-    public function setIndicatorType($var)
+    public function setIndicatorType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\GetTechAnalysisRequest\IndicatorType::class);
         $this->indicator_type = $var;
@@ -144,9 +145,9 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setInstrumentUid($var)
+    public function setInstrumentUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->instrument_uid = $var;
 
         return $this;
@@ -180,9 +181,8 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setFrom($var)
+    public function setFrom(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->from = $var;
 
         return $this;
@@ -216,9 +216,8 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setTo($var)
+    public function setTo(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->to = $var;
 
         return $this;
@@ -228,7 +227,7 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
      *Интервал, за который рассчитывается индикатор.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetTechAnalysisRequest.IndicatorInterval interval = 5 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\GetTechAnalysisRequest\IndicatorInterval}
      */
     public function getInterval()
     {
@@ -239,10 +238,10 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
      *Интервал, за который рассчитывается индикатор.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetTechAnalysisRequest.IndicatorInterval interval = 5 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\GetTechAnalysisRequest\IndicatorInterval}
      * @return $this
      */
-    public function setInterval($var)
+    public function setInterval(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\GetTechAnalysisRequest\IndicatorInterval::class);
         $this->interval = $var;
@@ -254,7 +253,7 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
      *Тип цены, который используется при расчете индикатора.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetTechAnalysisRequest.TypeOfPrice type_of_price = 6 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\GetTechAnalysisRequest\TypeOfPrice}
      */
     public function getTypeOfPrice()
     {
@@ -265,10 +264,10 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
      *Тип цены, который используется при расчете индикатора.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetTechAnalysisRequest.TypeOfPrice type_of_price = 6 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\GetTechAnalysisRequest\TypeOfPrice}
      * @return $this
      */
-    public function setTypeOfPrice($var)
+    public function setTypeOfPrice(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\GetTechAnalysisRequest\TypeOfPrice::class);
         $this->type_of_price = $var;
@@ -294,7 +293,7 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setLength($var)
+    public function setLength(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->length = $var;
@@ -330,9 +329,8 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\GetTechAnalysisRequest\Deviation $var
      * @return $this
      */
-    public function setDeviation($var)
+    public function setDeviation(\Tinkoff\Invest\V1\GetTechAnalysisRequest\Deviation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\GetTechAnalysisRequest\Deviation::class);
         $this->deviation = $var;
 
         return $this;
@@ -366,9 +364,8 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\GetTechAnalysisRequest\Smoothing $var
      * @return $this
      */
-    public function setSmoothing($var)
+    public function setSmoothing(\Tinkoff\Invest\V1\GetTechAnalysisRequest\Smoothing|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\GetTechAnalysisRequest\Smoothing::class);
         $this->smoothing = $var;
 
         return $this;

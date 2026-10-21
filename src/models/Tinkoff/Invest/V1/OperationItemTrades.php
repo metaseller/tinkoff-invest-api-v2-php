@@ -30,7 +30,8 @@ class OperationItemTrades extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\OperationItemTrade[] $trades
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Operations::initOnce();
         parent::__construct($data);
     }
@@ -49,7 +50,7 @@ class OperationItemTrades extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\OperationItemTrade[] $var
      * @return $this
      */
-    public function setTrades($var)
+    public function setTrades(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\OperationItemTrade::class);
         $this->trades = $arr;

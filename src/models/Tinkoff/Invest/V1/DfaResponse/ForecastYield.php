@@ -41,7 +41,8 @@ class ForecastYield extends \Google\Protobuf\Internal\Message
      *           Максимальное значение прогнозной доходности в %
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -74,9 +75,8 @@ class ForecastYield extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setMinValue($var)
+    public function setMinValue(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->min_value = $var;
 
         return $this;
@@ -110,9 +110,8 @@ class ForecastYield extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setMaxValue($var)
+    public function setMaxValue(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->max_value = $var;
 
         return $this;

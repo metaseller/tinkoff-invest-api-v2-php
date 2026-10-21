@@ -11,6 +11,6 @@ if (false) {
      */
     class RiskRatesResponse_RiskRate {}
 }
-class_exists(RiskRatesResponse\RiskRate::class);
+class_alias(RiskRatesResponse\RiskRate::class, RiskRatesResponse_RiskRate::class);
 @trigger_error('Tinkoff\Invest\V1\RiskRatesResponse_RiskRate is deprecated and will be removed in the next major release. Use Tinkoff\Invest\V1\RiskRatesResponse\RiskRate instead', E_USER_DEPRECATED);
 

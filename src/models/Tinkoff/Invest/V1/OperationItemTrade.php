@@ -73,7 +73,8 @@ class OperationItemTrade extends \Google\Protobuf\Internal\Message
      *          Относительная доходность.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Operations::initOnce();
         parent::__construct($data);
     }
@@ -96,9 +97,9 @@ class OperationItemTrade extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setNum($var)
+    public function setNum(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->num = $var;
 
         return $this;
@@ -132,9 +133,8 @@ class OperationItemTrade extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setDate($var)
+    public function setDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->date = $var;
 
         return $this;
@@ -158,7 +158,7 @@ class OperationItemTrade extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setQuantity($var)
+    public function setQuantity(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->quantity = $var;
@@ -194,9 +194,8 @@ class OperationItemTrade extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setPrice($var)
+    public function setPrice(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->price = $var;
 
         return $this;
@@ -230,9 +229,8 @@ class OperationItemTrade extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setYield($var)
+    public function setYield(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->yield = $var;
 
         return $this;
@@ -266,9 +264,8 @@ class OperationItemTrade extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setYieldRelative($var)
+    public function setYieldRelative(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->yield_relative = $var;
 
         return $this;

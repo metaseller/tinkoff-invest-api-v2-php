@@ -41,7 +41,8 @@ class GetClosePricesRequest extends \Google\Protobuf\Internal\Message
      *          Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Marketdata::initOnce();
         parent::__construct($data);
     }
@@ -64,7 +65,7 @@ class GetClosePricesRequest extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\InstrumentClosePriceRequest[] $var
      * @return $this
      */
-    public function setInstruments($var)
+    public function setInstruments(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\InstrumentClosePriceRequest::class);
         $this->instruments = $arr;
@@ -76,7 +77,7 @@ class GetClosePricesRequest extends \Google\Protobuf\Internal\Message
      *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 9;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\InstrumentStatus}
      */
     public function getInstrumentStatus()
     {
@@ -97,10 +98,10 @@ class GetClosePricesRequest extends \Google\Protobuf\Internal\Message
      *Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.InstrumentStatus instrument_status = 9;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\InstrumentStatus}
      * @return $this
      */
-    public function setInstrumentStatus($var)
+    public function setInstrumentStatus(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\InstrumentStatus::class);
         $this->instrument_status = $var;

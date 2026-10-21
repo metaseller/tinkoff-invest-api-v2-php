@@ -49,7 +49,8 @@ class MoneyValue extends \Google\Protobuf\Internal\Message
      *           Дробная часть суммы, может быть отрицательным числом.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Common::initOnce();
         parent::__construct($data);
     }
@@ -72,9 +73,9 @@ class MoneyValue extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCurrency($var)
+    public function setCurrency(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->currency = $var;
 
         return $this;
@@ -98,7 +99,7 @@ class MoneyValue extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setUnits($var)
+    public function setUnits(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->units = $var;
@@ -124,7 +125,7 @@ class MoneyValue extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setNano($var)
+    public function setNano(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->nano = $var;

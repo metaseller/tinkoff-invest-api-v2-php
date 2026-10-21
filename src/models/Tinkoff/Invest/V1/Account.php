@@ -81,7 +81,8 @@ class Account extends \Google\Protobuf\Internal\Message
      *           Уровень доступа к текущему счeту (определяется токеном).
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Users::initOnce();
         parent::__construct($data);
     }
@@ -104,9 +105,9 @@ class Account extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setId($var)
+    public function setId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->id = $var;
 
         return $this;
@@ -116,7 +117,7 @@ class Account extends \Google\Protobuf\Internal\Message
      * Тип счeта.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AccountType type = 2;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\AccountType}
      */
     public function getType()
     {
@@ -127,10 +128,10 @@ class Account extends \Google\Protobuf\Internal\Message
      * Тип счeта.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AccountType type = 2;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\AccountType}
      * @return $this
      */
-    public function setType($var)
+    public function setType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\AccountType::class);
         $this->type = $var;
@@ -156,9 +157,9 @@ class Account extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setName($var)
+    public function setName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->name = $var;
 
         return $this;
@@ -168,7 +169,7 @@ class Account extends \Google\Protobuf\Internal\Message
      * Статус счeта.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AccountStatus status = 4;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\AccountStatus}
      */
     public function getStatus()
     {
@@ -179,10 +180,10 @@ class Account extends \Google\Protobuf\Internal\Message
      * Статус счeта.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AccountStatus status = 4;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\AccountStatus}
      * @return $this
      */
-    public function setStatus($var)
+    public function setStatus(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\AccountStatus::class);
         $this->status = $var;
@@ -218,9 +219,8 @@ class Account extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setOpenedDate($var)
+    public function setOpenedDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->opened_date = $var;
 
         return $this;
@@ -254,9 +254,8 @@ class Account extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setClosedDate($var)
+    public function setClosedDate(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->closed_date = $var;
 
         return $this;
@@ -266,7 +265,7 @@ class Account extends \Google\Protobuf\Internal\Message
      * Уровень доступа к текущему счeту (определяется токеном).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AccessLevel access_level = 7;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\AccessLevel}
      */
     public function getAccessLevel()
     {
@@ -277,10 +276,10 @@ class Account extends \Google\Protobuf\Internal\Message
      * Уровень доступа к текущему счeту (определяется токеном).
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AccessLevel access_level = 7;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\AccessLevel}
      * @return $this
      */
-    public function setAccessLevel($var)
+    public function setAccessLevel(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\AccessLevel::class);
         $this->access_level = $var;

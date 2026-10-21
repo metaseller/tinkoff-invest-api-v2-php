@@ -11,6 +11,6 @@ if (false) {
      */
     class GetTechAnalysisRequest_Smoothing {}
 }
-class_exists(GetTechAnalysisRequest\Smoothing::class);
+class_alias(GetTechAnalysisRequest\Smoothing::class, GetTechAnalysisRequest_Smoothing::class);
 @trigger_error('Tinkoff\Invest\V1\GetTechAnalysisRequest_Smoothing is deprecated and will be removed in the next major release. Use Tinkoff\Invest\V1\GetTechAnalysisRequest\Smoothing instead', E_USER_DEPRECATED);
 

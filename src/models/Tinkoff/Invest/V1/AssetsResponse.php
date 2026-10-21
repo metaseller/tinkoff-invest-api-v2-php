@@ -33,7 +33,8 @@ class AssetsResponse extends \Google\Protobuf\Internal\Message
      *          Активы.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -56,7 +57,7 @@ class AssetsResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Asset[] $var
      * @return $this
      */
-    public function setAssets($var)
+    public function setAssets(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\Asset::class);
         $this->assets = $arr;

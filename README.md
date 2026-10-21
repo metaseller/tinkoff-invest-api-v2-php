@@ -31,8 +31,16 @@ src/models - Директория, которая содержит сгенер�
 # Требования для установки
 
 Для начала работы нам потребуется: 
- * PHP 7.1 или новее (я делал и тестировал на php 7.4 / Ubuntu 18.04.5)
- * PECL, Composer
+ * PHP 8.5.12 или новее в пределах PHP 8.x (версия для разработки и CI — 8.5.12, указана в `.php-version`)
+ * Расширения `grpc` версии 1.83.1 или новее в пределах 1.x, `bcmath`, `ctype`, `json`
+ * PECL, Composer 2
+
+Зависимости Composer: `grpc/grpc` ^1.82 и `google/protobuf` ^5.36.2.
+Для разработки используется стабильный `rector/rector` ^2.7.
+`composer.lock` фиксирует проверенные версии зависимостей для разработки SDK;
+в проектах, подключающих SDK как библиотеку, зависимости разрешаются по их собственному lock-файлу.
+`config.platform.php` задаёт целевую версию 8.5.12 для разрешения зависимостей,
+а `composer check-platform-reqs` проверяет фактически установленный PHP и расширения.
 
 ВАЖНО: Данный репозиторий содержит уже сгенерированные из proto файлов модели. 
 Содержимое директории *library/src/docs/contracts* не используется.
@@ -46,9 +54,9 @@ sudo protoc --proto_path=~/contracts_dir/ --php_out=~/models_dic/ --grpc_out=~/m
 ```
 подставив нужные вам директории.
 
-Далее нам понадобится расширение grps.so для PHP (https://cloud.google.com/php/grpc).
+Далее нам понадобится расширение grpc.so для PHP (https://cloud.google.com/php/grpc).
 ```
-sudo pecl install grpc
+sudo pecl install grpc-1.84.0
 ```
 а после не забываем в php.ini добавить 
 ```
@@ -80,7 +88,57 @@ $ composer require metaseller/tinkoff-invest-api-v2-php
 ну или 
 ```
 $ git clone git@github.com:metaseller/tinkoff-invest-api-v2-php.git .
-composer update
+composer install
+```
+
+При клонировании SDK используйте `composer install` для установки версий из
+`composer.lock`. После обновления PHP расширение `grpc` необходимо пересобрать
+для PHP 8.5; расширение от прежней версии PHP использовать нельзя.
+Расширение `protobuf` необязательно: SDK использует пакет `google/protobuf`.
+Если оно установлено, обновите его до версии, соответствующей runtime Protobuf 5.36.2.
+
+Проверки после установки:
+
+```sh
+php --version
+composer validate --strict
+composer check-platform-reqs
+composer audit
+composer test
+```
+
+`composer test` проверяет загрузку классов, сериализацию Protobuf-моделей,
+создание gRPC-клиентов, смену токена, точность денежных преобразований и поиск
+по тикеру с указанием и без указания режима торгов. Проверки выполняются без токена
+и запросов к T-Invest API; предупреждения и устаревшие конструкции PHP считаются ошибками.
+
+Для точных денежных значений используйте `Quotation`, `MoneyValue` или целое
+число нанодолей (`Quantity::createFromInteger`, `Price::createFromInteger`).
+Эти преобразования сохраняют точность в пределах `PHP_INT_MIN` / `PHP_INT_MAX`;
+при переполнении выбрасывается `ValidateException`. Представление `float`,
+включая `asDecimal()`, остаётся приближённым.
+
+## Проверки в Docker
+
+Окружение SDK использует PHP 8.5.12, нативное расширение gRPC 1.84.0 и
+Composer 2.10.3. Готовое расширение gRPC берётся из реестра `shivammathur/extensions`
+(источник расширений для `setup-php`); образ зафиксирован по SHA-256 digest.
+
+```sh
+docker compose up -d --build
+docker compose exec -T sdk sh tests/check.sh
+```
+
+Скрипт устанавливает зависимости строго из `composer.lock`, проверяет требования
+платформы, Composer Audit, синтаксис всех PHP-файлов в `src`, `examples`, `tests`
+и запускает тесты совместимости и регрессий. Реальные API-запросы не выполняются.
+Контейнер остаётся запущенным для последующих проверок. Исходники подключены
+только для чтения; `vendor` и кэш Composer находятся в отдельных Docker-томах.
+Изменения исходников доступны в контейнере сразу, без пересборки образа.
+
+```sh
+docker compose exec -T sdk composer test
+docker compose down
 ```
 
 прописываем свой T-Invest API v2 token

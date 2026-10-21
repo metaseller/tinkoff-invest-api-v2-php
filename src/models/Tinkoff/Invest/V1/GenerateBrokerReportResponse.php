@@ -31,7 +31,8 @@ class GenerateBrokerReportResponse extends \Google\Protobuf\Internal\Message
      *          Идентификатор задачи формирования брокерского отчета.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Operations::initOnce();
         parent::__construct($data);
     }
@@ -54,9 +55,9 @@ class GenerateBrokerReportResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTaskId($var)
+    public function setTaskId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->task_id = $var;
 
         return $this;

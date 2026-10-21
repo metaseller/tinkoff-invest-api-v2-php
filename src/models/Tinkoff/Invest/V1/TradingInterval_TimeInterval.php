@@ -11,6 +11,6 @@ if (false) {
      */
     class TradingInterval_TimeInterval {}
 }
-class_exists(TradingInterval\TimeInterval::class);
+class_alias(TradingInterval\TimeInterval::class, TradingInterval_TimeInterval::class);
 @trigger_error('Tinkoff\Invest\V1\TradingInterval_TimeInterval is deprecated and will be removed in the next major release. Use Tinkoff\Invest\V1\TradingInterval\TimeInterval instead', E_USER_DEPRECATED);
 

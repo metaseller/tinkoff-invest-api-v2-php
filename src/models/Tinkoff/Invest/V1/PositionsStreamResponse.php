@@ -34,7 +34,8 @@ class PositionsStreamResponse extends \Google\Protobuf\Internal\Message
      *          Текущие позиции.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Operations::initOnce();
         parent::__construct($data);
     }
@@ -62,9 +63,8 @@ class PositionsStreamResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\PositionsSubscriptionResult $var
      * @return $this
      */
-    public function setSubscriptions($var)
+    public function setSubscriptions(\Tinkoff\Invest\V1\PositionsSubscriptionResult|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\PositionsSubscriptionResult::class);
         $this->writeOneof(1, $var);
 
         return $this;
@@ -93,9 +93,8 @@ class PositionsStreamResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\PositionData $var
      * @return $this
      */
-    public function setPosition($var)
+    public function setPosition(\Tinkoff\Invest\V1\PositionData|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\PositionData::class);
         $this->writeOneof(2, $var);
 
         return $this;
@@ -124,9 +123,8 @@ class PositionsStreamResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Ping $var
      * @return $this
      */
-    public function setPing($var)
+    public function setPing(\Tinkoff\Invest\V1\Ping|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Ping::class);
         $this->writeOneof(3, $var);
 
         return $this;
@@ -155,9 +153,8 @@ class PositionsStreamResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\PositionsResponse $var
      * @return $this
      */
-    public function setInitialPositions($var)
+    public function setInitialPositions(\Tinkoff\Invest\V1\PositionsResponse|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\PositionsResponse::class);
         $this->writeOneof(5, $var);
 
         return $this;

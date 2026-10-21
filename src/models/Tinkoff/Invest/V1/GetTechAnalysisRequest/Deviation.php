@@ -31,7 +31,8 @@ class Deviation extends \Google\Protobuf\Internal\Message
      *          Количество стандартных отклонений, на которые отступают верхняя и нижняя границы.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Marketdata::initOnce();
         parent::__construct($data);
     }
@@ -64,9 +65,8 @@ class Deviation extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setDeviationMultiplier($var)
+    public function setDeviationMultiplier(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->deviation_multiplier = $var;
 
         return $this;

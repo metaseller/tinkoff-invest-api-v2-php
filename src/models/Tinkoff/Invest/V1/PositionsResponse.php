@@ -81,7 +81,8 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
      *          Идентификатор счёта пользователя.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Operations::initOnce();
         parent::__construct($data);
     }
@@ -104,7 +105,7 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue[] $var
      * @return $this
      */
-    public function setMoney($var)
+    public function setMoney(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->money = $arr;
@@ -130,7 +131,7 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue[] $var
      * @return $this
      */
-    public function setBlocked($var)
+    public function setBlocked(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->blocked = $arr;
@@ -156,7 +157,7 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\PositionsSecurities[] $var
      * @return $this
      */
-    public function setSecurities($var)
+    public function setSecurities(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\PositionsSecurities::class);
         $this->securities = $arr;
@@ -182,9 +183,8 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setLimitsLoadingInProgress($var)
+    public function setLimitsLoadingInProgress(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->limits_loading_in_progress = $var;
 
         return $this;
@@ -208,7 +208,7 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\PositionsFutures[] $var
      * @return $this
      */
-    public function setFutures($var)
+    public function setFutures(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\PositionsFutures::class);
         $this->futures = $arr;
@@ -234,7 +234,7 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\PositionsOptions[] $var
      * @return $this
      */
-    public function setOptions($var)
+    public function setOptions(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\PositionsOptions::class);
         $this->options = $arr;
@@ -260,9 +260,9 @@ class PositionsResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setAccountId($var)
+    public function setAccountId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->account_id = $var;
 
         return $this;

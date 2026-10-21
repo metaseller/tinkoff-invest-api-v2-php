@@ -33,7 +33,8 @@ class GetMarginAttributesRequest extends \Google\Protobuf\Internal\Message
      *           Идентификатор счeта пользователя.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Users::initOnce();
         parent::__construct($data);
     }
@@ -56,9 +57,9 @@ class GetMarginAttributesRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setAccountId($var)
+    public function setAccountId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->account_id = $var;
 
         return $this;

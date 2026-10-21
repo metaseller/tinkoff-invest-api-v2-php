@@ -89,7 +89,8 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
      *           Согласие на выставление заявки, которая может привести к непокрытой позиции, по умолчанию false.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Orders::initOnce();
         parent::__construct($data);
     }
@@ -112,9 +113,9 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setAccountId($var)
+    public function setAccountId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->account_id = $var;
 
         return $this;
@@ -124,7 +125,7 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
      *Тип идентификатора заявки.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.OrderIdType order_id_type = 5;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\OrderIdType}
      */
     public function getOrderIdType()
     {
@@ -145,10 +146,10 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
      *Тип идентификатора заявки.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.OrderIdType order_id_type = 5;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\OrderIdType}
      * @return $this
      */
-    public function setOrderIdType($var)
+    public function setOrderIdType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\OrderIdType::class);
         $this->order_id_type = $var;
@@ -174,9 +175,9 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setOrderId($var)
+    public function setOrderId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->order_id = $var;
 
         return $this;
@@ -200,9 +201,9 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setIdempotencyKey($var)
+    public function setIdempotencyKey(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->idempotency_key = $var;
 
         return $this;
@@ -226,7 +227,7 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setQuantity($var)
+    public function setQuantity(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->quantity = $var;
@@ -262,9 +263,8 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setPrice($var)
+    public function setPrice(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->price = $var;
 
         return $this;
@@ -274,7 +274,7 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
      *Тип цены.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.PriceType price_type = 13;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\PriceType}
      */
     public function getPriceType()
     {
@@ -295,10 +295,10 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
      *Тип цены.
      *
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.PriceType price_type = 13;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\PriceType}
      * @return $this
      */
-    public function setPriceType($var)
+    public function setPriceType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\PriceType::class);
         $this->price_type = $var;
@@ -324,9 +324,8 @@ class ReplaceOrderRequest extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setConfirmMarginTrade($var)
+    public function setConfirmMarginTrade(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->confirm_margin_trade = $var;
 
         return $this;

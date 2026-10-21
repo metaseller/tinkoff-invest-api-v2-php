@@ -65,7 +65,8 @@ class GetMaxLotsResponse extends \Google\Protobuf\Internal\Message
      *          Лимиты для продаж с учетом маржинального кредитования
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Orders::initOnce();
         parent::__construct($data);
     }
@@ -88,9 +89,9 @@ class GetMaxLotsResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCurrency($var)
+    public function setCurrency(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->currency = $var;
 
         return $this;
@@ -124,9 +125,8 @@ class GetMaxLotsResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\GetMaxLotsResponse\BuyLimitsView $var
      * @return $this
      */
-    public function setBuyLimits($var)
+    public function setBuyLimits(\Tinkoff\Invest\V1\GetMaxLotsResponse\BuyLimitsView|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\GetMaxLotsResponse\BuyLimitsView::class);
         $this->buy_limits = $var;
 
         return $this;
@@ -160,9 +160,8 @@ class GetMaxLotsResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\GetMaxLotsResponse\BuyLimitsView $var
      * @return $this
      */
-    public function setBuyMarginLimits($var)
+    public function setBuyMarginLimits(\Tinkoff\Invest\V1\GetMaxLotsResponse\BuyLimitsView|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\GetMaxLotsResponse\BuyLimitsView::class);
         $this->buy_margin_limits = $var;
 
         return $this;
@@ -196,9 +195,8 @@ class GetMaxLotsResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\GetMaxLotsResponse\SellLimitsView $var
      * @return $this
      */
-    public function setSellLimits($var)
+    public function setSellLimits(\Tinkoff\Invest\V1\GetMaxLotsResponse\SellLimitsView|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\GetMaxLotsResponse\SellLimitsView::class);
         $this->sell_limits = $var;
 
         return $this;
@@ -232,9 +230,8 @@ class GetMaxLotsResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\GetMaxLotsResponse\SellLimitsView $var
      * @return $this
      */
-    public function setSellMarginLimits($var)
+    public function setSellMarginLimits(\Tinkoff\Invest\V1\GetMaxLotsResponse\SellLimitsView|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\GetMaxLotsResponse\SellLimitsView::class);
         $this->sell_margin_limits = $var;
 
         return $this;

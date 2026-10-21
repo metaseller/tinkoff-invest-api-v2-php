@@ -121,7 +121,8 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      *          Класс-код (секция торгов).
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Marketdata::initOnce();
         parent::__construct($data);
     }
@@ -144,9 +145,9 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setFigi($var)
+    public function setFigi(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->figi = $var;
 
         return $this;
@@ -170,7 +171,7 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setDepth($var)
+    public function setDepth(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->depth = $var;
@@ -196,9 +197,8 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setIsConsistent($var)
+    public function setIsConsistent(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->is_consistent = $var;
 
         return $this;
@@ -222,7 +222,7 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Order[] $var
      * @return $this
      */
-    public function setBids($var)
+    public function setBids(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\Order::class);
         $this->bids = $arr;
@@ -248,7 +248,7 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Order[] $var
      * @return $this
      */
-    public function setAsks($var)
+    public function setAsks(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\Order::class);
         $this->asks = $arr;
@@ -284,9 +284,8 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setTime($var)
+    public function setTime(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->time = $var;
 
         return $this;
@@ -320,9 +319,8 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setLimitUp($var)
+    public function setLimitUp(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->limit_up = $var;
 
         return $this;
@@ -356,9 +354,8 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setLimitDown($var)
+    public function setLimitDown(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->limit_down = $var;
 
         return $this;
@@ -382,9 +379,9 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setInstrumentUid($var)
+    public function setInstrumentUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->instrument_uid = $var;
 
         return $this;
@@ -394,7 +391,7 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      *Тип стакана.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderBookType order_book_type = 10;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\OrderBookType}
      */
     public function getOrderBookType()
     {
@@ -405,10 +402,10 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      *Тип стакана.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.OrderBookType order_book_type = 10;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\OrderBookType}
      * @return $this
      */
-    public function setOrderBookType($var)
+    public function setOrderBookType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\OrderBookType::class);
         $this->order_book_type = $var;
@@ -434,9 +431,9 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTicker($var)
+    public function setTicker(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->ticker = $var;
 
         return $this;
@@ -460,9 +457,9 @@ class OrderBook extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setClassCode($var)
+    public function setClassCode(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->class_code = $var;
 
         return $this;

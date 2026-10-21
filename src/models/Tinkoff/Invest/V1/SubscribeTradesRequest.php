@@ -57,7 +57,8 @@ class SubscribeTradesRequest extends \Google\Protobuf\Internal\Message
      *          Флаг открытого интереса. **true** - в стриме дополнительно передается информация об открытом интересе для фьючерсов
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Marketdata::initOnce();
         parent::__construct($data);
     }
@@ -66,7 +67,7 @@ class SubscribeTradesRequest extends \Google\Protobuf\Internal\Message
      *Изменение статуса подписки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionAction subscription_action = 1;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\SubscriptionAction}
      */
     public function getSubscriptionAction()
     {
@@ -77,10 +78,10 @@ class SubscribeTradesRequest extends \Google\Protobuf\Internal\Message
      *Изменение статуса подписки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.SubscriptionAction subscription_action = 1;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\SubscriptionAction}
      * @return $this
      */
-    public function setSubscriptionAction($var)
+    public function setSubscriptionAction(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\SubscriptionAction::class);
         $this->subscription_action = $var;
@@ -106,7 +107,7 @@ class SubscribeTradesRequest extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\TradeInstrument[] $var
      * @return $this
      */
-    public function setInstruments($var)
+    public function setInstruments(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\TradeInstrument::class);
         $this->instruments = $arr;
@@ -118,7 +119,7 @@ class SubscribeTradesRequest extends \Google\Protobuf\Internal\Message
      *Тип источника сделок. Значение по умолчанию — `TRADE_SOURCE_ALL`, все сделки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType trade_source = 3;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\TradeSourceType}
      */
     public function getTradeSource()
     {
@@ -129,10 +130,10 @@ class SubscribeTradesRequest extends \Google\Protobuf\Internal\Message
      *Тип источника сделок. Значение по умолчанию — `TRADE_SOURCE_ALL`, все сделки.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.TradeSourceType trade_source = 3;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\TradeSourceType}
      * @return $this
      */
-    public function setTradeSource($var)
+    public function setTradeSource(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\TradeSourceType::class);
         $this->trade_source = $var;
@@ -158,9 +159,8 @@ class SubscribeTradesRequest extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setWithOpenInterest($var)
+    public function setWithOpenInterest(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->with_open_interest = $var;
 
         return $this;

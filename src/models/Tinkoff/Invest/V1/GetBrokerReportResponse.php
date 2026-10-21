@@ -60,7 +60,8 @@ class GetBrokerReportResponse extends \Google\Protobuf\Internal\Message
      *          Идентификатор задачи формирования брокерского отчета.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Operations::initOnce();
         parent::__construct($data);
     }
@@ -79,7 +80,7 @@ class GetBrokerReportResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\BrokerReport[] $var
      * @return $this
      */
-    public function setBrokerReport($var)
+    public function setBrokerReport(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\BrokerReport::class);
         $this->broker_report = $arr;
@@ -105,7 +106,7 @@ class GetBrokerReportResponse extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setItemsCount($var)
+    public function setItemsCount(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->itemsCount = $var;
@@ -131,7 +132,7 @@ class GetBrokerReportResponse extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setPagesCount($var)
+    public function setPagesCount(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->pagesCount = $var;
@@ -157,7 +158,7 @@ class GetBrokerReportResponse extends \Google\Protobuf\Internal\Message
      * @param int $var
      * @return $this
      */
-    public function setPage($var)
+    public function setPage(int $var)
     {
         GPBUtil::checkInt32($var);
         $this->page = $var;
@@ -183,9 +184,9 @@ class GetBrokerReportResponse extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTaskId($var)
+    public function setTaskId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->task_id = $var;
 
         return $this;

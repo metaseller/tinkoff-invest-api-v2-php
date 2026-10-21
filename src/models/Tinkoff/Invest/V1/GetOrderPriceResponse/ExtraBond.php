@@ -39,7 +39,8 @@ class ExtraBond extends \Google\Protobuf\Internal\Message
      *          Курс конвертации для замещающих облигаций
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Orders::initOnce();
         parent::__construct($data);
     }
@@ -72,9 +73,8 @@ class ExtraBond extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\MoneyValue $var
      * @return $this
      */
-    public function setAciValue($var)
+    public function setAciValue(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\MoneyValue::class);
         $this->aci_value = $var;
 
         return $this;
@@ -108,9 +108,8 @@ class ExtraBond extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setNominalConversionRate($var)
+    public function setNominalConversionRate(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->nominal_conversion_rate = $var;
 
         return $this;

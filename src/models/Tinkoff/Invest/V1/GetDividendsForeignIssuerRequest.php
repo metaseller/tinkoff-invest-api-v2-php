@@ -28,7 +28,8 @@ class GetDividendsForeignIssuerRequest extends \Google\Protobuf\Internal\Message
      *          Объект запроса сформированного отчета.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Operations::initOnce();
         parent::__construct($data);
     }
@@ -56,9 +57,8 @@ class GetDividendsForeignIssuerRequest extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\GenerateDividendsForeignIssuerReportRequest $var
      * @return $this
      */
-    public function setGenerateDivForeignIssuerReport($var)
+    public function setGenerateDivForeignIssuerReport(\Tinkoff\Invest\V1\GenerateDividendsForeignIssuerReportRequest|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\GenerateDividendsForeignIssuerReportRequest::class);
         $this->writeOneof(1, $var);
 
         return $this;
@@ -87,9 +87,8 @@ class GetDividendsForeignIssuerRequest extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\GetDividendsForeignIssuerReportRequest $var
      * @return $this
      */
-    public function setGetDivForeignIssuerReport($var)
+    public function setGetDivForeignIssuerReport(\Tinkoff\Invest\V1\GetDividendsForeignIssuerReportRequest|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\GetDividendsForeignIssuerReportRequest::class);
         $this->writeOneof(2, $var);
 
         return $this;

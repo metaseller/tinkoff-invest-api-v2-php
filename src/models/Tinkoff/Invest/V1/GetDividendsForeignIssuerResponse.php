@@ -28,7 +28,8 @@ class GetDividendsForeignIssuerResponse extends \Google\Protobuf\Internal\Messag
      *          Отчет «Справка о доходах за пределами РФ».
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Operations::initOnce();
         parent::__construct($data);
     }
@@ -56,9 +57,8 @@ class GetDividendsForeignIssuerResponse extends \Google\Protobuf\Internal\Messag
      * @param \Tinkoff\Invest\V1\GenerateDividendsForeignIssuerReportResponse $var
      * @return $this
      */
-    public function setGenerateDivForeignIssuerReportResponse($var)
+    public function setGenerateDivForeignIssuerReportResponse(\Tinkoff\Invest\V1\GenerateDividendsForeignIssuerReportResponse|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\GenerateDividendsForeignIssuerReportResponse::class);
         $this->writeOneof(1, $var);
 
         return $this;
@@ -87,9 +87,8 @@ class GetDividendsForeignIssuerResponse extends \Google\Protobuf\Internal\Messag
      * @param \Tinkoff\Invest\V1\GetDividendsForeignIssuerReportResponse $var
      * @return $this
      */
-    public function setDivForeignIssuerReport($var)
+    public function setDivForeignIssuerReport(\Tinkoff\Invest\V1\GetDividendsForeignIssuerReportResponse|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\GetDividendsForeignIssuerReportResponse::class);
         $this->writeOneof(2, $var);
 
         return $this;

@@ -105,7 +105,8 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
      *          Объём торгов на продажу.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Marketdata::initOnce();
         parent::__construct($data);
     }
@@ -138,9 +139,8 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setOpen($var)
+    public function setOpen(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->open = $var;
 
         return $this;
@@ -174,9 +174,8 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setHigh($var)
+    public function setHigh(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->high = $var;
 
         return $this;
@@ -210,9 +209,8 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setLow($var)
+    public function setLow(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->low = $var;
 
         return $this;
@@ -246,9 +244,8 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setClose($var)
+    public function setClose(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->close = $var;
 
         return $this;
@@ -272,7 +269,7 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setVolume($var)
+    public function setVolume(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->volume = $var;
@@ -308,9 +305,8 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setTime($var)
+    public function setTime(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->time = $var;
 
         return $this;
@@ -334,9 +330,8 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
      * @param bool $var
      * @return $this
      */
-    public function setIsComplete($var)
+    public function setIsComplete(bool $var)
     {
-        GPBUtil::checkBool($var);
         $this->is_complete = $var;
 
         return $this;
@@ -346,7 +341,7 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
      *Тип источника свечи
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.CandleSource candle_source = 9;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\CandleSource}
      */
     public function getCandleSource()
     {
@@ -357,10 +352,10 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
      *Тип источника свечи
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.CandleSource candle_source = 9;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\CandleSource}
      * @return $this
      */
-    public function setCandleSource($var)
+    public function setCandleSource(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\CandleSource::class);
         $this->candle_source = $var;
@@ -386,7 +381,7 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setVolumeBuy($var)
+    public function setVolumeBuy(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->volume_buy = $var;
@@ -412,7 +407,7 @@ class HistoricCandle extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setVolumeSell($var)
+    public function setVolumeSell(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->volume_sell = $var;

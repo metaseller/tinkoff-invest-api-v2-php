@@ -89,7 +89,8 @@ class Brand extends \Google\Protobuf\Internal\Message
      *          Наименование страны риска.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -112,9 +113,9 @@ class Brand extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setUid($var)
+    public function setUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->uid = $var;
 
         return $this;
@@ -138,9 +139,9 @@ class Brand extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setName($var)
+    public function setName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->name = $var;
 
         return $this;
@@ -164,9 +165,9 @@ class Brand extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setDescription($var)
+    public function setDescription(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->description = $var;
 
         return $this;
@@ -190,9 +191,9 @@ class Brand extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setInfo($var)
+    public function setInfo(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->info = $var;
 
         return $this;
@@ -216,9 +217,9 @@ class Brand extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCompany($var)
+    public function setCompany(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->company = $var;
 
         return $this;
@@ -242,9 +243,9 @@ class Brand extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setSector($var)
+    public function setSector(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->sector = $var;
 
         return $this;
@@ -268,9 +269,9 @@ class Brand extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCountryOfRisk($var)
+    public function setCountryOfRisk(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->country_of_risk = $var;
 
         return $this;
@@ -294,9 +295,9 @@ class Brand extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setCountryOfRiskName($var)
+    public function setCountryOfRiskName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->country_of_risk_name = $var;
 
         return $this;

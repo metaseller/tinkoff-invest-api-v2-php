@@ -49,7 +49,8 @@ class Ping extends \Google\Protobuf\Internal\Message
      *          Время формирования запроса.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Common::initOnce();
         parent::__construct($data);
     }
@@ -82,9 +83,8 @@ class Ping extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setTime($var)
+    public function setTime(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->time = $var;
 
         return $this;
@@ -108,9 +108,9 @@ class Ping extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setStreamId($var)
+    public function setStreamId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->stream_id = $var;
 
         return $this;
@@ -144,9 +144,8 @@ class Ping extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setPingRequestTime($var)
+    public function setPingRequestTime(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->ping_request_time = $var;
 
         return $this;

@@ -41,7 +41,8 @@ class PBYield extends \Google\Protobuf\Internal\Message
      *          Значение доходности.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -50,7 +51,7 @@ class PBYield extends \Google\Protobuf\Internal\Message
      *Тип доходности.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StructuredNote.YieldType type = 1;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\StructuredNote\YieldType}
      */
     public function getType()
     {
@@ -61,10 +62,10 @@ class PBYield extends \Google\Protobuf\Internal\Message
      *Тип доходности.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.StructuredNote.YieldType type = 1;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\StructuredNote\YieldType}
      * @return $this
      */
-    public function setType($var)
+    public function setType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\StructuredNote\YieldType::class);
         $this->type = $var;
@@ -100,9 +101,8 @@ class PBYield extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setValue($var)
+    public function setValue(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->value = $var;
 
         return $this;

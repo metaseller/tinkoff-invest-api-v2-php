@@ -41,7 +41,8 @@ class GetOrdersRequest extends \Google\Protobuf\Internal\Message
      *          Дополнительные фильтры.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Orders::initOnce();
         parent::__construct($data);
     }
@@ -64,9 +65,9 @@ class GetOrdersRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setAccountId($var)
+    public function setAccountId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->account_id = $var;
 
         return $this;
@@ -100,9 +101,8 @@ class GetOrdersRequest extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\GetOrdersRequest\GetOrdersRequestFilters $var
      * @return $this
      */
-    public function setAdvancedFilters($var)
+    public function setAdvancedFilters(\Tinkoff\Invest\V1\GetOrdersRequest\GetOrdersRequestFilters|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\GetOrdersRequest\GetOrdersRequestFilters::class);
         $this->advanced_filters = $var;
 
         return $this;

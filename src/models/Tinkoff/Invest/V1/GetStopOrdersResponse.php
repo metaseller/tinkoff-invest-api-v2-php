@@ -33,7 +33,8 @@ class GetStopOrdersResponse extends \Google\Protobuf\Internal\Message
      *          Массив стоп-заявок по счету.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Stoporders::initOnce();
         parent::__construct($data);
     }
@@ -56,7 +57,7 @@ class GetStopOrdersResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\StopOrder[] $var
      * @return $this
      */
-    public function setStopOrders($var)
+    public function setStopOrders(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\StopOrder::class);
         $this->stop_orders = $arr;

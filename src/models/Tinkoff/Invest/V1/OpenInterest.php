@@ -63,7 +63,8 @@ class OpenInterest extends \Google\Protobuf\Internal\Message
      *          Класс-код (секция торгов).
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Marketdata::initOnce();
         parent::__construct($data);
     }
@@ -86,9 +87,9 @@ class OpenInterest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setInstrumentUid($var)
+    public function setInstrumentUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->instrument_uid = $var;
 
         return $this;
@@ -122,9 +123,8 @@ class OpenInterest extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setTime($var)
+    public function setTime(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->time = $var;
 
         return $this;
@@ -148,7 +148,7 @@ class OpenInterest extends \Google\Protobuf\Internal\Message
      * @param int|string $var
      * @return $this
      */
-    public function setOpenInterest($var)
+    public function setOpenInterest(int|string $var)
     {
         GPBUtil::checkInt64($var);
         $this->open_interest = $var;
@@ -174,9 +174,9 @@ class OpenInterest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setTicker($var)
+    public function setTicker(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->ticker = $var;
 
         return $this;
@@ -200,9 +200,9 @@ class OpenInterest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setClassCode($var)
+    public function setClassCode(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->class_code = $var;
 
         return $this;

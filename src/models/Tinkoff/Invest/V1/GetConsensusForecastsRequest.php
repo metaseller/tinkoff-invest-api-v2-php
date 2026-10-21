@@ -33,7 +33,8 @@ class GetConsensusForecastsRequest extends \Google\Protobuf\Internal\Message
      *          Настройки пагинации.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -66,9 +67,8 @@ class GetConsensusForecastsRequest extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Page $var
      * @return $this
      */
-    public function setPaging($var)
+    public function setPaging(\Tinkoff\Invest\V1\Page|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Page::class);
         $this->paging = $var;
 
         return $this;

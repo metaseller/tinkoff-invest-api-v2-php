@@ -30,7 +30,8 @@ class GetAssetFundamentalsResponse extends \Google\Protobuf\Internal\Message
      *     @type \Tinkoff\Invest\V1\GetAssetFundamentalsResponse\StatisticResponse[] $fundamentals
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -49,7 +50,7 @@ class GetAssetFundamentalsResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\GetAssetFundamentalsResponse\StatisticResponse[] $var
      * @return $this
      */
-    public function setFundamentals($var)
+    public function setFundamentals(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\GetAssetFundamentalsResponse\StatisticResponse::class);
         $this->fundamentals = $arr;

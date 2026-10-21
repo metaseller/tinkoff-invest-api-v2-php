@@ -41,7 +41,8 @@ class AssetClearingCertificate extends \Google\Protobuf\Internal\Message
      *          Валюта номинала.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -74,9 +75,8 @@ class AssetClearingCertificate extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setNominal($var)
+    public function setNominal(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->nominal = $var;
 
         return $this;
@@ -100,9 +100,9 @@ class AssetClearingCertificate extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setNominalCurrency($var)
+    public function setNominalCurrency(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->nominal_currency = $var;
 
         return $this;

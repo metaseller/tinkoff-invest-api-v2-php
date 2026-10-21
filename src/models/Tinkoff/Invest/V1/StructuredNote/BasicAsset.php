@@ -49,7 +49,8 @@ class BasicAsset extends \Google\Protobuf\Internal\Message
      *          Начальная цена базового актива.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -72,9 +73,9 @@ class BasicAsset extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setUid($var)
+    public function setUid(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->uid = $var;
 
         return $this;
@@ -84,7 +85,7 @@ class BasicAsset extends \Google\Protobuf\Internal\Message
      *Тип базового актива.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AssetType type = 2;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\AssetType}
      */
     public function getType()
     {
@@ -95,10 +96,10 @@ class BasicAsset extends \Google\Protobuf\Internal\Message
      *Тип базового актива.
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.AssetType type = 2;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\AssetType}
      * @return $this
      */
-    public function setType($var)
+    public function setType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\AssetType::class);
         $this->type = $var;
@@ -134,9 +135,8 @@ class BasicAsset extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Quotation $var
      * @return $this
      */
-    public function setInitialPrice($var)
+    public function setInitialPrice(\Tinkoff\Invest\V1\Quotation|null $var)
     {
-        GPBUtil::checkMessage($var, \Tinkoff\Invest\V1\Quotation::class);
         $this->initial_price = $var;
 
         return $this;

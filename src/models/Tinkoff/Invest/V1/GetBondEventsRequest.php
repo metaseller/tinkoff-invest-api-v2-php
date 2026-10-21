@@ -57,7 +57,8 @@ class GetBondEventsRequest extends \Google\Protobuf\Internal\Message
      *          Тип события
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -90,9 +91,8 @@ class GetBondEventsRequest extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setFrom($var)
+    public function setFrom(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->from = $var;
 
         return $this;
@@ -126,9 +126,8 @@ class GetBondEventsRequest extends \Google\Protobuf\Internal\Message
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
-    public function setTo($var)
+    public function setTo(\Google\Protobuf\Timestamp|null $var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->to = $var;
 
         return $this;
@@ -152,9 +151,9 @@ class GetBondEventsRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setInstrumentId($var)
+    public function setInstrumentId(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->instrument_id = $var;
 
         return $this;
@@ -164,7 +163,7 @@ class GetBondEventsRequest extends \Google\Protobuf\Internal\Message
      *Тип события
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetBondEventsRequest.EventType type = 5;</code>
-     * @return int
+     * @return int one of the values in {@see \Tinkoff\Invest\V1\GetBondEventsRequest\EventType}
      */
     public function getType()
     {
@@ -175,10 +174,10 @@ class GetBondEventsRequest extends \Google\Protobuf\Internal\Message
      *Тип события
      *
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetBondEventsRequest.EventType type = 5;</code>
-     * @param int $var
+     * @param int $var one of the values in {@see \Tinkoff\Invest\V1\GetBondEventsRequest\EventType}
      * @return $this
      */
-    public function setType($var)
+    public function setType(int $var)
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\GetBondEventsRequest\EventType::class);
         $this->type = $var;

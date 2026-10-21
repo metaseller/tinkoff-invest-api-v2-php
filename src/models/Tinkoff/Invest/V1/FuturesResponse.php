@@ -33,7 +33,8 @@ class FuturesResponse extends \Google\Protobuf\Internal\Message
      *          Массив фьючерсов.
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -56,7 +57,7 @@ class FuturesResponse extends \Google\Protobuf\Internal\Message
      * @param \Tinkoff\Invest\V1\Future[] $var
      * @return $this
      */
-    public function setInstruments($var)
+    public function setInstruments(array|RepeatedField $var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\Future::class);
         $this->instruments = $arr;

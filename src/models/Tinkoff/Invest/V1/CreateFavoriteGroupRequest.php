@@ -49,7 +49,8 @@ class CreateFavoriteGroupRequest extends \Google\Protobuf\Internal\Message
      *          Описание
      * }
      */
-    public function __construct($data = NULL) {
+    public function __construct($data = null)
+    {
         \GPBMetadata\Instruments::initOnce();
         parent::__construct($data);
     }
@@ -72,9 +73,9 @@ class CreateFavoriteGroupRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setGroupName($var)
+    public function setGroupName(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->group_name = $var;
 
         return $this;
@@ -98,9 +99,9 @@ class CreateFavoriteGroupRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setGroupColor($var)
+    public function setGroupColor(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->group_color = $var;
 
         return $this;
@@ -134,9 +135,9 @@ class CreateFavoriteGroupRequest extends \Google\Protobuf\Internal\Message
      * @param string $var
      * @return $this
      */
-    public function setNote($var)
+    public function setNote(string $var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkString($var, true);
         $this->note = $var;
 
         return $this;
