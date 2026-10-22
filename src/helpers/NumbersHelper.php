@@ -69,12 +69,10 @@ class NumbersHelper
 
         if ($detected_scientific) {
             $value = sprintf('%.' . $detected_precision . 'e', $value);
+        } elseif ($add_thousand_separator && $abs_value >= 1000) {
+            $value = number_format($value, $detected_precision, '.', ',');
         } else {
             $value = sprintf('%.' . $detected_precision . 'f', $value);
-        }
-
-        if ($add_thousand_separator && $abs_value >= 1000) {
-            $value = number_format($value);
         }
 
         return $value;

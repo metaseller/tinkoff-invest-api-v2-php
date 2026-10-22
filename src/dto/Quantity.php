@@ -55,10 +55,7 @@ class Quantity
      */
     public function setQuotationValue(Quotation $value): void
     {
-        $this->_value_as_quotation = $value;
-
-        $this->_value_as_integer = QuotationHelper::toInteger($value);
-        $this->_value_as_decimal = round((float) $this->_value_as_integer / static::BROKER_PRECISION_MULTIPLIER, static::BROKER_PRECISION);
+        $this->setIntegerValue(QuotationHelper::toInteger($value));
     }
 
     /**
@@ -98,13 +95,14 @@ class Quantity
     }
 
     /**
-     * Представление значения в формате {@link Quotation}
+     * Представление значения в формате {@link Quotation}.
+     * Возвращается отдельный объект: его изменение не меняет значение DTO.
      *
      * @return Quotation Значение в формате {@link Quotation}
      */
     public function asQuotation(): Quotation
     {
-        return $this->_value_as_quotation;
+        return clone $this->_value_as_quotation;
     }
 
     /**

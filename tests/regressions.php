@@ -6,12 +6,15 @@ use Metaseller\TinkoffInvestApi2\dto\Quantity;
 use Metaseller\TinkoffInvestApi2\exceptions\InstrumentNotFoundException;
 use Metaseller\TinkoffInvestApi2\exceptions\ValidateException;
 use Metaseller\TinkoffInvestApi2\helpers\QuotationHelper;
+use Metaseller\TinkoffInvestApi2\helpers\NumbersHelper;
 use Metaseller\TinkoffInvestApi2\providers\InstrumentsProvider;
 use Metaseller\TinkoffInvestApi2\TinkoffClientsFactory;
 use Tinkoff\Invest\V1\MoneyValue;
 use Tinkoff\Invest\V1\Quotation;
 use Tinkoff\Invest\V1\SecurityTradingStatus;
 use Tinkoff\Invest\V1\Share;
+use Tinkoff\Invest\V1\Future;
+use Tinkoff\Invest\V1\GetFuturesMarginResponse;
 
 require __DIR__ . '/bootstrap.php';
 
@@ -146,4 +149,76 @@ $coldLookup = new LookupFixture();
 $coldLookup->shares = [$active];
 check($coldLookup->searchByTicker('SBER') === $active, 'Cold ticker lookup did not reach the dictionary search');
 
-echo "Credential rotation, monetary precision and ticker lookup regressions passed.\n";
+// All services must accept replacement channel options and metadata callbacks.
+$customMetadata = static fn(array $metadata): array => ['review-header' => ['custom']];
+foreach ($serviceGetters as $getter) {
+    $factory = new TinkoffClientsFactory('offline-token', 'custom-app');
+    $client = $factory->$getter([
+        'grpc.max_receive_message_length' => 20 * 1024 * 1024,
+        'credentials' => Grpc\ChannelCredentials::createInsecure(),
+        'update_metadata' => $customMetadata,
+    ]);
+    check(($metadataProperty->getValue($client))([]) === ['review-header' => ['custom']], $getter . ' did not replace the metadata callback');
+    $client->close();
+
+    $client = $factory->$getter();
+    check(($metadataProperty->getValue($client))([])['x-app-name'] === ['custom-app'], $getter . ' ignored constructor AppName');
+    $factory->setAppName('changed-app');
+    $changed = $factory->$getter();
+    check($changed !== $client, $getter . ' retained a client after AppName change');
+    check(($metadataProperty->getValue($changed))([])['x-app-name'] === ['changed-app'], $getter . ' ignored changed AppName');
+    $client->close();
+    $changed->close();
+}
+foreach ([null, 'deferred-app'] as $appName) {
+    $factory = new TinkoffClientsFactory(null, $appName);
+    $factory->setApiToken('offline-token');
+    $client = $factory->getUsersServiceClient();
+    check(($metadataProperty->getValue($client))([])['x-app-name'] === [$appName ?? TinkoffClientsFactory::DEFAULT_APP_NAME], 'Deferred token initialization lost AppName');
+    $client->close();
+}
+
+// Zero/negative increments must produce validation errors rather than arithmetic errors.
+foreach ([0, -1] as $nano) {
+    $step = (new Quotation())->setNano($nano);
+    $instrument = (new Share())->setMinPriceIncrement($step);
+    foreach ([10, 10.0, '10', (new Quotation())->setUnits(10), (new MoneyValue())->setUnits(10)] as $price) {
+        expectException(ValidateException::class, static fn() => QuotationHelper::isPriceValid($price, $instrument));
+    }
+    $margin = (new GetFuturesMarginResponse())->setMinPriceIncrement($step)
+        ->setMinPriceIncrementAmount((new Quotation())->setUnits(1));
+    expectException(ValidateException::class, static fn() => QuotationHelper::toCurrency(10, new Future(), $margin));
+}
+$margin = (new GetFuturesMarginResponse())->setMinPriceIncrement((new Quotation())->setNano(500000000))
+    ->setMinPriceIncrementAmount((new Quotation())->setUnits(2));
+check(QuotationHelper::toCurrency(10, new Future(), $margin) === 40.0, 'Valid futures price conversion changed');
+
+// Neither input messages nor messages returned by getters may mutate DTO state.
+foreach ([Quantity::class, Price::class] as $dtoClass) {
+    $input = (new Quotation())->setUnits(10)->setNano(123);
+    $dto = $dtoClass::createFromQuotation($input);
+    $input->setUnits(20)->setNano(456);
+    $dto->asQuotation()->setUnits(30)->setNano(789);
+    check($dto->asInteger() === 10000000123, $dtoClass . ' integer changed after external mutation');
+    check($dto->asDecimal() === 10.000000123, $dtoClass . ' decimal changed after external mutation');
+    check(QuotationHelper::toInteger($dto->asQuotation()) === $dto->asInteger(), $dtoClass . ' quotation changed after external mutation');
+    $tooLarge = (new Quotation())->setUnits(PHP_INT_MAX);
+    expectException(ValidateException::class, static fn() => $dto->setQuotationValue($tooLarge));
+    check(QuotationHelper::toInteger($dto->asQuotation()) === $dto->asInteger(), 'Failed setter corrupted DTO state');
+}
+$money = (new MoneyValue())->setCurrency('rub')->setUnits(10)->setNano(123);
+$price = Price::createFromMoneyValue($money);
+$money->setUnits(20);
+$price->asQuotation()->setUnits(30);
+$price->asMoneyValue()->setUnits(40)->setCurrency('usd');
+check(QuotationHelper::toInteger($price->asMoneyValue()) === 10000000123, 'Price MoneyValue changed after external mutation');
+check($price->asMoneyValue()->getCurrency() === 'rub', 'Price currency changed after external mutation');
+
+foreach ([[1234.567, 2, false, true, '1,234.57'], [-1234.567, 2, false, true, '-1,234.57'],
+    [1234.5, 4, false, true, '1,234.5000'], [1234.567, 0, false, true, '1,235'],
+    [1234.567, 2, false, false, '1234.57'], [1234.567, 2, true, true, '1.23e+3'],
+    [1234, null, null, true, '1,234'], [12.345, null, null, false, '12.3']] as [$value, $digits, $scientific, $separator, $expected]) {
+    check(NumbersHelper::printFloat($value, $digits, $scientific, $separator) === $expected, 'Number formatting lost precision or scientific notation');
+}
+
+echo "Credential rotation, monetary precision, ticker lookup, connection options, AppName, price validation, DTO isolation and formatting regressions passed.\n";

@@ -1,6 +1,5 @@
 {
     "name": "metaseller/tinkoff-invest-api-v2-php",
-    "version": "0.6.0",
     "description": "Unofficial PHP SDK for T-Invest API v2",
     "type": "library",
     "license": "Apache-2.0",

@@ -1,0 +1,28 @@
+name: PHP
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  compatibility:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        grpc: ['1.83.1', '1.84.0']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.5.12'
+          extensions: bcmath, ctype, grpc-${{ matrix.grpc }}
+          tools: composer:v2
+          coverage: none
+      - run: composer validate --strict
+      - run: composer install --prefer-dist --no-interaction
+      - run: composer check-platform-reqs
+      - run: composer audit
+      - name: Lint PHP sources
+        run: find src examples tests -name '*.php' -print0 | xargs -0 -n1 php -d error_reporting=E_ALL -l
+      - run: composer test

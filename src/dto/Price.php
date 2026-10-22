@@ -54,13 +54,7 @@ class Price extends Quantity
      */
     public function setMoneyValuePrice(MoneyValue $value): void
     {
-        $this->_value_as_quotation = new Quotation();
-
-        $this->_value_as_quotation->setUnits($value->getUnits() ?: 0);
-        $this->_value_as_quotation->setNano($value->getNano() ?: 0);
-
-        $this->_value_as_integer = QuotationHelper::toInteger($value);
-        $this->_value_as_decimal = round((float) $this->_value_as_integer / static::BROKER_PRECISION_MULTIPLIER, static::BROKER_PRECISION);
+        parent::setIntegerValue(QuotationHelper::toInteger($value));
 
         $this->_currency = $value->getCurrency();
     }

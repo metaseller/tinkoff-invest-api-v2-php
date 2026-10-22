@@ -44,14 +44,17 @@ class QuotationHelper
             throw new ValidateException('Instrument min price increment value is not available');
         }
 
+        $instrument_min_price_increment = static::toInteger($min_price_increment);
+        if ($instrument_min_price_increment <= 0) {
+            throw new ValidateException('Instrument min price increment must be positive');
+        }
+
         if ($price instanceof Quotation || $price instanceof MoneyValue) {
             $instrument_price = static::toInteger($price);
-            $instrument_min_price_increment = static::toInteger($min_price_increment);
 
             return ($instrument_price % $instrument_min_price_increment) == 0;
         } elseif (is_numeric($price)) {
             $instrument_price = static::toInteger(is_int($price) ? $price : (float) $price);
-            $instrument_min_price_increment = static::toInteger($min_price_increment);
 
             return ($instrument_price % $instrument_min_price_increment) == 0;
         }
@@ -131,9 +134,12 @@ class QuotationHelper
             if (!$min_price_increment_amount = $futures_data->getMinPriceIncrementAmount()) {
                 throw new ValidateException('Futures min price increment amount is not available');
             }
+            $decimal_increment = static::toDecimal($min_price_increment);
+            if ($decimal_increment <= 0) {
+                throw new ValidateException('Futures min price increment must be positive');
+            }
 
-
-            return round(($decimal_price / static::toDecimal($min_price_increment)) * static::toDecimal($min_price_increment_amount), Price::BROKER_PRECISION);
+            return round(($decimal_price / $decimal_increment) * static::toDecimal($min_price_increment_amount), Price::BROKER_PRECISION);
         }
 
         return $decimal_price;

@@ -18,6 +18,10 @@ Thumbs.db
 # Local contract updater, generators, checkouts and backups
 /update/
 
+#docs
+/docs/
+/docs/*
+
 # composer itself is not needed
 composer.phar
 

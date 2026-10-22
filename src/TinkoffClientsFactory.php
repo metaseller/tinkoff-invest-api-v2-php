@@ -148,8 +148,10 @@ class TinkoffClientsFactory
     public function __construct(?string $api_token = null, ?string $app_name = null)
     {
         if ($api_token) {
-            $this->setApiToken($api_token)->setAppName($app_name ?: TinkoffClientsFactory::DEFAULT_APP_NAME);
+            $this->setApiToken($api_token);
         }
+
+        $this->setAppName($app_name ?: static::DEFAULT_APP_NAME);
     }
 
     /**
@@ -252,7 +254,7 @@ class TinkoffClientsFactory
      * текущей модели фабрики. Если атрибуты имеют отличные от пустых значения, то всегда будет создан новый экземпляр
      * клиента.
      *
-     * @param array $extra_options Массив параметров канала. При инициализации клиента рекурсивно объединяются со значением
+     * @param array $extra_options Массив параметров канала. При инициализации клиента заменяют значения по ключам в
      * {@link ClientConnection::getOptions()}. По умолчанию равно <code>[]</code>
      * @param GrpcChannel|null $channel Канал для повторного использования. По умолчанию равно <code>null</code>
      *
@@ -265,7 +267,7 @@ class TinkoffClientsFactory
         if (!empty($extra_options) || !empty($channel)) {
             return new InstrumentsServiceClient(
                 ClientConnection::getHostname(),
-                array_merge_recursive($this->getBaseConnectionOptions(), $extra_options),
+                array_replace($this->getBaseConnectionOptions(), $extra_options),
                 $channel
             );
         } else {
@@ -287,7 +289,7 @@ class TinkoffClientsFactory
      * текущей модели фабрики. Если атрибуты имеют отличные от пустых значения, то всегда будет создан новый экземпляр
      * клиента.
      *
-     * @param array $extra_options Массив параметров канала. При инициализации клиента рекурсивно объединяются со значением
+     * @param array $extra_options Массив параметров канала. При инициализации клиента заменяют значения по ключам в
      * {@link ClientConnection::getOptions()}. По умолчанию равно <code>[]</code>
      * @param GrpcChannel|null $channel Канал для повторного использования. По умолчанию равно <code>null</code>
      *
@@ -300,7 +302,7 @@ class TinkoffClientsFactory
         if (!empty($extra_options) || !empty($channel)) {
             return new MarketDataStreamServiceClient(
                 ClientConnection::getHostname(),
-                array_merge_recursive($this->getBaseConnectionOptions(), $extra_options),
+                array_replace($this->getBaseConnectionOptions(), $extra_options),
                 $channel
             );
         } else {
@@ -322,7 +324,7 @@ class TinkoffClientsFactory
      * текущей модели фабрики. Если атрибуты имеют отличные от пустых значения, то всегда будет создан новый экземпляр
      * клиента.
      *
-     * @param array $extra_options Массив параметров канала. При инициализации клиента рекурсивно объединяются со значением
+     * @param array $extra_options Массив параметров канала. При инициализации клиента заменяют значения по ключам в
      * {@link ClientConnection::getOptions()}. По умолчанию равно <code>[]</code>
      * @param GrpcChannel|null $channel Канал для повторного использования. По умолчанию равно <code>null</code>
      *
@@ -335,7 +337,7 @@ class TinkoffClientsFactory
         if (!empty($extra_options) || !empty($channel)) {
             return new MarketDataServiceClient(
                 ClientConnection::getHostname(),
-                array_merge_recursive($this->getBaseConnectionOptions(), $extra_options),
+                array_replace($this->getBaseConnectionOptions(), $extra_options),
                 $channel
             );
         } else {
@@ -357,7 +359,7 @@ class TinkoffClientsFactory
      * текущей модели фабрики. Если атрибуты имеют отличные от пустых значения, то всегда будет создан новый экземпляр
      * клиента.
      *
-     * @param array $extra_options Массив параметров канала. При инициализации клиента рекурсивно объединяются со значением
+     * @param array $extra_options Массив параметров канала. При инициализации клиента заменяют значения по ключам в
      * {@link ClientConnection::getOptions()}. По умолчанию равно <code>[]</code>
      * @param GrpcChannel|null $channel Канал для повторного использования. По умолчанию равно <code>null</code>
      *
@@ -370,7 +372,7 @@ class TinkoffClientsFactory
         if (!empty($extra_options) || !empty($channel)) {
             return new OperationsServiceClient(
                 ClientConnection::getHostname(),
-                array_merge_recursive($this->getBaseConnectionOptions(), $extra_options),
+                array_replace($this->getBaseConnectionOptions(), $extra_options),
                 $channel
             );
         } else {
@@ -392,7 +394,7 @@ class TinkoffClientsFactory
      * текущей модели фабрики. Если атрибуты имеют отличные от пустых значения, то всегда будет создан новый экземпляр
      * клиента.
      *
-     * @param array $extra_options Массив параметров канала. При инициализации клиента рекурсивно объединяются со значением
+     * @param array $extra_options Массив параметров канала. При инициализации клиента заменяют значения по ключам в
      * {@link ClientConnection::getOptions()}. По умолчанию равно <code>[]</code>
      * @param GrpcChannel|null $channel Канал для повторного использования. По умолчанию равно <code>null</code>
      *
@@ -405,7 +407,7 @@ class TinkoffClientsFactory
         if (!empty($extra_options) || !empty($channel)) {
             return new OperationsStreamServiceClient(
                 ClientConnection::getHostname(),
-                array_merge_recursive($this->getBaseConnectionOptions(), $extra_options),
+                array_replace($this->getBaseConnectionOptions(), $extra_options),
                 $channel
             );
         } else {
@@ -427,7 +429,7 @@ class TinkoffClientsFactory
      * текущей модели фабрики. Если атрибуты имеют отличные от пустых значения, то всегда будет создан новый экземпляр
      * клиента.
      *
-     * @param array $extra_options Массив параметров канала. При инициализации клиента рекурсивно объединяются со значением
+     * @param array $extra_options Массив параметров канала. При инициализации клиента заменяют значения по ключам в
      * {@link ClientConnection::getOptions()}. По умолчанию равно <code>[]</code>
      * @param GrpcChannel|null $channel Канал для повторного использования. По умолчанию равно <code>null</code>
      *
@@ -440,7 +442,7 @@ class TinkoffClientsFactory
         if (!empty($extra_options) || !empty($channel)) {
             return new OrdersServiceClient(
                 ClientConnection::getHostname(),
-                array_merge_recursive($this->getBaseConnectionOptions(), $extra_options),
+                array_replace($this->getBaseConnectionOptions(), $extra_options),
                 $channel
             );
         } else {
@@ -462,7 +464,7 @@ class TinkoffClientsFactory
      * текущей модели фабрики. Если атрибуты имеют отличные от пустых значения, то всегда будет создан новый экземпляр
      * клиента.
      *
-     * @param array $extra_options Массив параметров канала. При инициализации клиента рекурсивно объединяются со значением
+     * @param array $extra_options Массив параметров канала. При инициализации клиента заменяют значения по ключам в
      * {@link ClientConnection::getOptions()}. По умолчанию равно <code>[]</code>
      * @param GrpcChannel|null $channel Канал для повторного использования. По умолчанию равно <code>null</code>
      *
@@ -475,7 +477,7 @@ class TinkoffClientsFactory
         if (!empty($extra_options) || !empty($channel)) {
             return new OrdersStreamServiceClient(
                 ClientConnection::getHostname(),
-                array_merge_recursive($this->getBaseConnectionOptions(), $extra_options),
+                array_replace($this->getBaseConnectionOptions(), $extra_options),
                 $channel
             );
         } else {
@@ -497,7 +499,7 @@ class TinkoffClientsFactory
      * текущей модели фабрики. Если атрибуты имеют отличные от пустых значения, то всегда будет создан новый экземпляр
      * клиента.
      *
-     * @param array $extra_options Массив параметров канала. При инициализации клиента рекурсивно объединяются со значением
+     * @param array $extra_options Массив параметров канала. При инициализации клиента заменяют значения по ключам в
      * {@link ClientConnection::getOptions()}. По умолчанию равно <code>[]</code>
      * @param GrpcChannel|null $channel Канал для повторного использования. По умолчанию равно <code>null</code>
      *
@@ -510,7 +512,7 @@ class TinkoffClientsFactory
         if (!empty($extra_options) || !empty($channel)) {
             return new SandboxServiceClient(
                 ClientConnection::getHostname(),
-                array_merge_recursive($this->getBaseConnectionOptions(), $extra_options),
+                array_replace($this->getBaseConnectionOptions(), $extra_options),
                 $channel
             );
         } else {
@@ -532,7 +534,7 @@ class TinkoffClientsFactory
      * текущей модели фабрики. Если атрибуты имеют отличные от пустых значения, то всегда будет создан новый экземпляр
      * клиента.
      *
-     * @param array $extra_options Массив параметров канала. При инициализации клиента рекурсивно объединяются со значением
+     * @param array $extra_options Массив параметров канала. При инициализации клиента заменяют значения по ключам в
      * {@link ClientConnection::getOptions()}. По умолчанию равно <code>[]</code>
      * @param GrpcChannel|null $channel Канал для повторного использования. По умолчанию равно <code>null</code>
      *
@@ -545,7 +547,7 @@ class TinkoffClientsFactory
         if (!empty($extra_options) || !empty($channel)) {
             return new StopOrdersServiceClient(
                 ClientConnection::getHostname(),
-                array_merge_recursive($this->getBaseConnectionOptions(), $extra_options),
+                array_replace($this->getBaseConnectionOptions(), $extra_options),
                 $channel
             );
         } else {
@@ -567,7 +569,7 @@ class TinkoffClientsFactory
      * текущей модели фабрики. Если атрибуты имеют отличные от пустых значения, то всегда будет создан новый экземпляр
      * клиента.
      *
-     * @param array $extra_options Массив параметров канала. При инициализации клиента рекурсивно объединяются со значением
+     * @param array $extra_options Массив параметров канала. При инициализации клиента заменяют значения по ключам в
      * {@link ClientConnection::getOptions()}. По умолчанию равно <code>[]</code>
      * @param GrpcChannel|null $channel Канал для повторного использования. По умолчанию равно <code>null</code>
      *
@@ -580,7 +582,7 @@ class TinkoffClientsFactory
         if (!empty($extra_options) || !empty($channel)) {
             return new UsersServiceClient(
                 ClientConnection::getHostname(),
-                array_merge_recursive($this->getBaseConnectionOptions(), $extra_options),
+                array_replace($this->getBaseConnectionOptions(), $extra_options),
                 $channel
             );
         } else {
@@ -637,6 +639,6 @@ class TinkoffClientsFactory
             throw new Exception('Api token is empty');
         }
 
-        return ClientConnection::getOptions($this->_api_token);
+        return ClientConnection::getOptions($this->_api_token, $this->_app_name ?? static::DEFAULT_APP_NAME);
     }
 }
