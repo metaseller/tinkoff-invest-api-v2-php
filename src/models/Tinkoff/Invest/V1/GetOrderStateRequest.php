@@ -40,6 +40,12 @@ class GetOrderStateRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>optional .tinkoff.public.invest.api.contract.v1.OrderIdType order_id_type = 4;</code>
      */
     protected $order_id_type = null;
+    /**
+     *Дата выставления заявки в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp order_date = 5;</code>
+     */
+    protected $order_date = null;
 
     /**
      * Constructor.
@@ -55,6 +61,8 @@ class GetOrderStateRequest extends \Google\Protobuf\Internal\Message
      *          Тип цены.
      *     @type int $order_id_type
      *          Тип идентификатора заявки.
+     *     @type \Google\Protobuf\Timestamp $order_date
+     *          Дата выставления заявки в часовом поясе UTC.
      * }
      */
     public function __construct($data = null)
@@ -173,6 +181,41 @@ class GetOrderStateRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Tinkoff\Invest\V1\OrderIdType::class);
         $this->order_id_type = $var;
+
+        return $this;
+    }
+
+    /**
+     *Дата выставления заявки в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp order_date = 5;</code>
+     * @return \Google\Protobuf\Timestamp|null
+     */
+    public function getOrderDate()
+    {
+        return $this->order_date;
+    }
+
+    public function hasOrderDate()
+    {
+        return isset($this->order_date);
+    }
+
+    public function clearOrderDate()
+    {
+        unset($this->order_date);
+    }
+
+    /**
+     *Дата выставления заявки в часовом поясе UTC.
+     *
+     * Generated from protobuf field <code>optional .google.protobuf.Timestamp order_date = 5;</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setOrderDate(\Google\Protobuf\Timestamp|null $var)
+    {
+        $this->order_date = $var;
 
         return $this;
     }

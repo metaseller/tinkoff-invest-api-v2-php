@@ -54,7 +54,7 @@ service OrdersService {/* Сервис предназначен для рабо�
 //Запрос установки соединения.
 message TradesStreamRequest {
   repeated string accounts = 1; //Идентификаторы счетов.
-  optional int32 ping_delay_ms = 15; //Задержка (пинг) сообщений: 5000–180 000 миллисекунд. Значение по умолчанию — 120 000.
+  optional int32 ping_delay_ms = 15; //Задержка (пинг) сообщений: 5000–60 000 миллисекунд. Значение по умолчанию — 60 000.
 }
 
 //Информация о торговых поручениях.
@@ -169,6 +169,7 @@ message GetOrderStateRequest {
   string order_id = 2 [(google.api.field_behavior) = REQUIRED]; //Идентификатор заявки.
   PriceType price_type = 3; //Тип цены.
   optional OrderIdType order_id_type = 4; //Тип идентификатора заявки.
+  optional google.protobuf.Timestamp order_date = 5; //Дата выставления заявки в часовом поясе UTC.
 }
 
 //Запрос получения списка активных торговых поручений.
@@ -297,7 +298,7 @@ message GetOrderPriceResponse {
 //Запрос установки стрим-соединения торговых поручений
 message OrderStateStreamRequest {
   repeated string accounts = 1; //Идентификаторы счетов.
-  optional int32 ping_delay_millis = 15; //Задержка (пинг) сообщений:  1000-120 000 миллисекунд. Значение по умолчанию — 120 000.
+  optional int32 ping_delay_millis = 15; //Задержка (пинг) сообщений:  5000-60 000 миллисекунд. Значение по умолчанию — 60 000.
 }
 
 //Информация по подпискам

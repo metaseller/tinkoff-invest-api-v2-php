@@ -174,6 +174,11 @@
     "type": "INVALID_ARGUMENT",
     "description": "Недостаточно средств для совершения сделки (ошибка песочницы).<br/>Пополните баланс нужной валюты через метод [SandboxPayIn](./sandbox#sandboxpayin)."
   },
+  "30035": {
+    "message": "`stop_price` is invalid",
+    "type": "INVALID_ARGUMENT",
+    "description": "Входной параметр `stop_price` имеет некорректное значение. Укажите корректный параметр `stop_price`."
+  },
   "30036": {
     "message": "Missing parameter: `stop_price`",
     "type": "INVALID_ARGUMENT",
@@ -744,6 +749,16 @@
     "type": "INVALID_ARGUMENT",
     "description": "Переданная валюта недоступна для данной операции."
   },
+  "30260": {
+    "message": "`instant_execution` not available for specified `stop_order_type`",
+    "type": "INVALID_ARGUMENT",
+    "description": "Моментальное исполнение не поддерживается этим типом стоп-заявки."
+  },
+  "30261": {
+    "message": "stop-orders response limit exceeded",
+    "type": "INVALID_ARGUMENT",
+    "description": "Превышен лимит на количество стоп-заявок в ответе. Ограничьте запрос параметрами `from` и `to`."
+  },
   "35001": {
     "message": "Sandbox accounts limit reached",
     "type": "INVALID_ARGUMENT",
@@ -763,6 +778,11 @@
     "message": "Working with orders is not available with this account",
     "type": "PERMISSION_DENIED",
     "description": "Выставление заявок недоступно с текущего аккаунта.<br/>Брокерский счет не найден, не принадлежит пользователю или закрыт. Возможно, на пользователе ограничения от T-Invest API или от биржи — в этом случае обратитесь в техподдержку."
+  },
+  "40005": {
+    "message": "Insufficient privileges",
+    "type": "PERMISSION_DENIED",
+    "description": "Для работы с методом требуется токен с правами на перевод средств между счетами"
   },
 
   "50001": {
@@ -869,6 +889,11 @@
     "message": "Error limit exceeded",
     "type": "RESOURCE_EXHAUSTED",
     "description": "Превышен лимит ошибок в минуту. Проверьте параметры запроса, а также его реализуемость."
+  },
+  "80007": {
+    "message": "Stop-orders limit has been reached for instrument",
+    "type": "RESOURCE_EXHAUSTED",
+    "description": "Достигнуто максимальное количество стоп-ордеров по инструменту"
   },
   "90001": {
     "message": "Need confirmation: %s",

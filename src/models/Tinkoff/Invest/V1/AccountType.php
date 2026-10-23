@@ -62,6 +62,30 @@ class AccountType
      * Generated from protobuf enum <code>ACCOUNT_TYPE_DFA = 7;</code>
      */
     const ACCOUNT_TYPE_DFA = 7;
+    /**
+     *Совместный накопительный счет.
+     *
+     * Generated from protobuf enum <code>ACCOUNT_TYPE_SHARED_SAVING = 8;</code>
+     */
+    const ACCOUNT_TYPE_SHARED_SAVING = 8;
+    /**
+     *Вклад.
+     *
+     * Generated from protobuf enum <code>ACCOUNT_TYPE_DEPOSIT = 9;</code>
+     */
+    const ACCOUNT_TYPE_DEPOSIT = 9;
+    /**
+     *ОМС.
+     *
+     * Generated from protobuf enum <code>ACCOUNT_TYPE_OMS = 10;</code>
+     */
+    const ACCOUNT_TYPE_OMS = 10;
+    /**
+     *ОФП вклад.
+     *
+     * Generated from protobuf enum <code>ACCOUNT_TYPE_OFP_DEPOSIT = 11;</code>
+     */
+    const ACCOUNT_TYPE_OFP_DEPOSIT = 11;
 
     private static $valueToName = [
         self::ACCOUNT_TYPE_UNSPECIFIED => 'ACCOUNT_TYPE_UNSPECIFIED',
@@ -72,6 +96,10 @@ class AccountType
         self::ACCOUNT_TYPE_DEBIT => 'ACCOUNT_TYPE_DEBIT',
         self::ACCOUNT_TYPE_SAVING => 'ACCOUNT_TYPE_SAVING',
         self::ACCOUNT_TYPE_DFA => 'ACCOUNT_TYPE_DFA',
+        self::ACCOUNT_TYPE_SHARED_SAVING => 'ACCOUNT_TYPE_SHARED_SAVING',
+        self::ACCOUNT_TYPE_DEPOSIT => 'ACCOUNT_TYPE_DEPOSIT',
+        self::ACCOUNT_TYPE_OMS => 'ACCOUNT_TYPE_OMS',
+        self::ACCOUNT_TYPE_OFP_DEPOSIT => 'ACCOUNT_TYPE_OFP_DEPOSIT',
     ];
 
     public static function name($value)

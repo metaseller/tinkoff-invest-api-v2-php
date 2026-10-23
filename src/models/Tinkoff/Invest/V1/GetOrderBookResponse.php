@@ -100,6 +100,12 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.google.protobuf.Timestamp orderbook_ts = 23;</code>
      */
     protected $orderbook_ts = null;
+    /**
+     *Валюта цены.
+     *
+     * Generated from protobuf field <code>string price_currency = 24;</code>
+     */
+    protected $price_currency = '';
 
     /**
      * Constructor.
@@ -135,6 +141,8 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
      *          Время получения цены закрытия.
      *     @type \Google\Protobuf\Timestamp $orderbook_ts
      *          Время формирования стакана на бирже.
+     *     @type string $price_currency
+     *          Валюта цены.
      * }
      */
     public function __construct($data = null)
@@ -566,6 +574,32 @@ class GetOrderBookResponse extends \Google\Protobuf\Internal\Message
     public function setOrderbookTs(\Google\Protobuf\Timestamp|null $var)
     {
         $this->orderbook_ts = $var;
+
+        return $this;
+    }
+
+    /**
+     *Валюта цены.
+     *
+     * Generated from protobuf field <code>string price_currency = 24;</code>
+     * @return string
+     */
+    public function getPriceCurrency()
+    {
+        return $this->price_currency;
+    }
+
+    /**
+     *Валюта цены.
+     *
+     * Generated from protobuf field <code>string price_currency = 24;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPriceCurrency(string $var)
+    {
+        GPBUtil::checkString($var, true);
+        $this->price_currency = $var;
 
         return $this;
     }

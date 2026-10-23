@@ -106,6 +106,18 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue total_amount_dfa = 17;</code>
      */
     protected $total_amount_dfa = null;
+    /**
+     *Общая вариационная маржа.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue total_var_margin = 18;</code>
+     */
+    protected $total_var_margin = null;
+    /**
+     *Общая вариационная маржа от расчетной цены или от цены закрытия позиции.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue total_var_margin_settled = 19;</code>
+     */
+    protected $total_var_margin_settled = null;
 
     /**
      * Constructor.
@@ -143,6 +155,10 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
      *          Относительная доходность в день в %.
      *     @type \Tinkoff\Invest\V1\MoneyValue $total_amount_dfa
      *          Общая стоимость смарт-активов в портфеле в рублях.
+     *     @type \Tinkoff\Invest\V1\MoneyValue $total_var_margin
+     *          Общая вариационная маржа.
+     *     @type \Tinkoff\Invest\V1\MoneyValue $total_var_margin_settled
+     *          Общая вариационная маржа от расчетной цены или от цены закрытия позиции.
      * }
      */
     public function __construct($data = null)
@@ -645,6 +661,76 @@ class PortfolioResponse extends \Google\Protobuf\Internal\Message
     public function setTotalAmountDfa(\Tinkoff\Invest\V1\MoneyValue|null $var)
     {
         $this->total_amount_dfa = $var;
+
+        return $this;
+    }
+
+    /**
+     *Общая вариационная маржа.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue total_var_margin = 18;</code>
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
+     */
+    public function getTotalVarMargin()
+    {
+        return $this->total_var_margin;
+    }
+
+    public function hasTotalVarMargin()
+    {
+        return isset($this->total_var_margin);
+    }
+
+    public function clearTotalVarMargin()
+    {
+        unset($this->total_var_margin);
+    }
+
+    /**
+     *Общая вариационная маржа.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue total_var_margin = 18;</code>
+     * @param \Tinkoff\Invest\V1\MoneyValue $var
+     * @return $this
+     */
+    public function setTotalVarMargin(\Tinkoff\Invest\V1\MoneyValue|null $var)
+    {
+        $this->total_var_margin = $var;
+
+        return $this;
+    }
+
+    /**
+     *Общая вариационная маржа от расчетной цены или от цены закрытия позиции.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue total_var_margin_settled = 19;</code>
+     * @return \Tinkoff\Invest\V1\MoneyValue|null
+     */
+    public function getTotalVarMarginSettled()
+    {
+        return $this->total_var_margin_settled;
+    }
+
+    public function hasTotalVarMarginSettled()
+    {
+        return isset($this->total_var_margin_settled);
+    }
+
+    public function clearTotalVarMarginSettled()
+    {
+        unset($this->total_var_margin_settled);
+    }
+
+    /**
+     *Общая вариационная маржа от расчетной цены или от цены закрытия позиции.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MoneyValue total_var_margin_settled = 19;</code>
+     * @param \Tinkoff\Invest\V1\MoneyValue $var
+     * @return $this
+     */
+    public function setTotalVarMarginSettled(\Tinkoff\Invest\V1\MoneyValue|null $var)
+    {
+        $this->total_var_margin_settled = $var;
 
         return $this;
     }

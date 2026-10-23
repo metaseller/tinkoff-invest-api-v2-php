@@ -360,6 +360,12 @@ class Bond extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.Quotation dshort_client = 91;</code>
      */
     protected $dshort_client = null;
+    /**
+     *Массив рейтингов.
+     *
+     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.Rating ratings = 92;</code>
+     */
+    private $ratings;
 
     /**
      * Constructor.
@@ -481,6 +487,8 @@ class Bond extends \Google\Protobuf\Internal\Message
      *          Ставка риска в лонг с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
      *     @type \Tinkoff\Invest\V1\Quotation $dshort_client
      *          Ставка риска в шорт с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+     *     @type \Tinkoff\Invest\V1\Rating[] $ratings
+     *          Массив рейтингов.
      * }
      */
     public function __construct($data = null)
@@ -2153,6 +2161,32 @@ class Bond extends \Google\Protobuf\Internal\Message
     public function setDshortClient(\Tinkoff\Invest\V1\Quotation|null $var)
     {
         $this->dshort_client = $var;
+
+        return $this;
+    }
+
+    /**
+     *Массив рейтингов.
+     *
+     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.Rating ratings = 92;</code>
+     * @return RepeatedField<\Tinkoff\Invest\V1\Rating>
+     */
+    public function getRatings()
+    {
+        return $this->ratings;
+    }
+
+    /**
+     *Массив рейтингов.
+     *
+     * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.Rating ratings = 92;</code>
+     * @param \Tinkoff\Invest\V1\Rating[] $var
+     * @return $this
+     */
+    public function setRatings(array|RepeatedField $var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\Rating::class);
+        $this->ratings = $arr;
 
         return $this;
     }

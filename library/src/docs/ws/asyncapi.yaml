@@ -1,7 +1,7 @@
 asyncapi: 2.6.0
 info:
   title: T-Invest API
-  version: '1.49'
+  version: '1.51'
   description: Websocket API for streaming data
   license:
     name: Apache 2.0
@@ -1873,6 +1873,14 @@ components:
             nano: 5
             currency: currency
             units: units
+          totalVarMarginSettled:
+            nano: 5
+            currency: currency
+            units: units
+          totalVarMargin:
+            nano: 5
+            currency: currency
+            units: units
           positions:
             - varMargin:
                 nano: 5
@@ -2156,6 +2164,14 @@ components:
           nano: 5
           currency: currency
           units: units
+        totalVarMarginSettled:
+          nano: 5
+          currency: currency
+          units: units
+        totalVarMargin:
+          nano: 5
+          currency: currency
+          units: units
         positions:
           - varMargin:
               nano: 5
@@ -2400,6 +2416,10 @@ components:
         dailyYieldRelative:
           $ref: '#/components/schemas/v1Quotation'
         totalAmountDfa:
+          $ref: '#/components/schemas/v1MoneyValue'
+        totalVarMargin:
+          $ref: '#/components/schemas/v1MoneyValue'
+        totalVarMarginSettled:
           $ref: '#/components/schemas/v1MoneyValue'
       type: object
     v1PortfolioPosition:

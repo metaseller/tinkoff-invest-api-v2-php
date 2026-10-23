@@ -23,9 +23,9 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
     /**
      *UID инструмента.
      *
-     * Generated from protobuf field <code>string instrument_uid = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * Generated from protobuf field <code>optional string instrument_uid = 2;</code>
      */
-    protected $instrument_uid = '';
+    protected $instrument_uid = null;
     /**
      *Начало запрашиваемого периода по UTC.
      *
@@ -68,6 +68,12 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.GetTechAnalysisRequest.Smoothing smoothing = 9;</code>
      */
     protected $smoothing = null;
+    /**
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
+     *
+     * Generated from protobuf field <code>optional string instrument_id = 10;</code>
+     */
+    protected $instrument_id = null;
 
     /**
      * Constructor.
@@ -93,6 +99,8 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
      *          Параметры отклонения.
      *     @type \Tinkoff\Invest\V1\GetTechAnalysisRequest\Smoothing $smoothing
      *          Параметры сглаживания.
+     *     @type string $instrument_id
+     *          Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
      * }
      */
     public function __construct($data = null)
@@ -130,18 +138,28 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
     /**
      *UID инструмента.
      *
-     * Generated from protobuf field <code>string instrument_uid = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * Generated from protobuf field <code>optional string instrument_uid = 2;</code>
      * @return string
      */
     public function getInstrumentUid()
     {
-        return $this->instrument_uid;
+        return isset($this->instrument_uid) ? $this->instrument_uid : '';
+    }
+
+    public function hasInstrumentUid()
+    {
+        return isset($this->instrument_uid);
+    }
+
+    public function clearInstrumentUid()
+    {
+        unset($this->instrument_uid);
     }
 
     /**
      *UID инструмента.
      *
-     * Generated from protobuf field <code>string instrument_uid = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * Generated from protobuf field <code>optional string instrument_uid = 2;</code>
      * @param string $var
      * @return $this
      */
@@ -367,6 +385,42 @@ class GetTechAnalysisRequest extends \Google\Protobuf\Internal\Message
     public function setSmoothing(\Tinkoff\Invest\V1\GetTechAnalysisRequest\Smoothing|null $var)
     {
         $this->smoothing = $var;
+
+        return $this;
+    }
+
+    /**
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
+     *
+     * Generated from protobuf field <code>optional string instrument_id = 10;</code>
+     * @return string
+     */
+    public function getInstrumentId()
+    {
+        return isset($this->instrument_id) ? $this->instrument_id : '';
+    }
+
+    public function hasInstrumentId()
+    {
+        return isset($this->instrument_id);
+    }
+
+    public function clearInstrumentId()
+    {
+        unset($this->instrument_id);
+    }
+
+    /**
+     *Идентификатор инструмента. Принимает значение `figi`, `instrument_uid` или `ticker + '_' + class_code`.
+     *
+     * Generated from protobuf field <code>optional string instrument_id = 10;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setInstrumentId(string $var)
+    {
+        GPBUtil::checkString($var, true);
+        $this->instrument_id = $var;
 
         return $this;
     }

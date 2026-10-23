@@ -38,6 +38,18 @@ class MarketValueInstrument extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string class_code = 4;</code>
      */
     protected $class_code = '';
+    /**
+     *Дополнительная информация.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MarketValueStatistic statistic = 5;</code>
+     */
+    protected $statistic = null;
+    /**
+     *Валюта цены.
+     *
+     * Generated from protobuf field <code>string price_currency = 6;</code>
+     */
+    protected $price_currency = '';
 
     /**
      * Constructor.
@@ -53,6 +65,10 @@ class MarketValueInstrument extends \Google\Protobuf\Internal\Message
      *          Тикер инструмента.
      *     @type string $class_code
      *          Класс-код (секция торгов).
+     *     @type \Tinkoff\Invest\V1\MarketValueStatistic $statistic
+     *          Дополнительная информация.
+     *     @type string $price_currency
+     *          Валюта цены.
      * }
      */
     public function __construct($data = null)
@@ -161,6 +177,67 @@ class MarketValueInstrument extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, true);
         $this->class_code = $var;
+
+        return $this;
+    }
+
+    /**
+     *Дополнительная информация.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MarketValueStatistic statistic = 5;</code>
+     * @return \Tinkoff\Invest\V1\MarketValueStatistic|null
+     */
+    public function getStatistic()
+    {
+        return $this->statistic;
+    }
+
+    public function hasStatistic()
+    {
+        return isset($this->statistic);
+    }
+
+    public function clearStatistic()
+    {
+        unset($this->statistic);
+    }
+
+    /**
+     *Дополнительная информация.
+     *
+     * Generated from protobuf field <code>.tinkoff.public.invest.api.contract.v1.MarketValueStatistic statistic = 5;</code>
+     * @param \Tinkoff\Invest\V1\MarketValueStatistic $var
+     * @return $this
+     */
+    public function setStatistic(\Tinkoff\Invest\V1\MarketValueStatistic|null $var)
+    {
+        $this->statistic = $var;
+
+        return $this;
+    }
+
+    /**
+     *Валюта цены.
+     *
+     * Generated from protobuf field <code>string price_currency = 6;</code>
+     * @return string
+     */
+    public function getPriceCurrency()
+    {
+        return $this->price_currency;
+    }
+
+    /**
+     *Валюта цены.
+     *
+     * Generated from protobuf field <code>string price_currency = 6;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPriceCurrency(string $var)
+    {
+        GPBUtil::checkString($var, true);
+        $this->price_currency = $var;
 
         return $this;
     }

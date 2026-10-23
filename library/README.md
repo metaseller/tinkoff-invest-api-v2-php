@@ -56,34 +56,6 @@ API реализован на быстром, удобном и функцион
 
 [Документация для разработчиков](https://developer.tbank.ru/invest/intro/intro)
 
-# SDK
-Вы можете как самостоятельно создать обертку по [proto-контрактам](https://opensource.tbank.ru/invest/invest-contracts/-/tree/master/src/docs/contracts) так воспользоваться одним из SDK:
-
-## SDK Т-Инвестиций
-* [go](https://opensource.tbank.ru/invest/invest-go)
-* [python](https://opensource.tbank.ru/invest/invest-python)
-* [java](https://opensource.tbank.ru/invest/invest-java)
-* [csharp](https://opensource.tbank.ru/invest/invest-csharp)
-* [kotlin](https://opensource.tbank.ru/invest/invest-kotlin)
-* [js](https://opensource.tbank.ru/invest/invest-js)
-
-## Неофициальные SDK
-* [golang](https://github.com/ssummers02/invest-api-go-sdk)
-* nodejs
-    - [betslus1/unofficial-tinkoff-invest-api_v2-lazy-sdk-NODEJS](https://github.com/betslus1/unofficial-tinkoff-invest-api_v2-lazy-sdk-NODEJS)
-    - [vitalets/tinkoff-invest-api](https://github.com/vitalets/tinkoff-invest-api)
-* [golang](https://github.com/vodolaz095/go-investAPI)
-* [haskell](https://github.com/nickmi11er/tinkoff-invest-haskell)
-* [php](https://github.com/metaseller/tinkoff-invest-api-v2-php)
-* [php YII2](https://packagist.org/packages/metaseller/tinkoff-invest-api-v2-yii2)
-* swift
-    - [JohnReeze/TinkoffInvestSwiftSDK](https://github.com/JohnReeze/TinkoffInvestSwiftSDK)
-    - [egorbos/invest-api-swift-sdk](https://github.com/egorbos/invest-api-swift-sdk)
-* [ruby](https://github.com/blackchestnut/invest_tinkoff)
-* [rust](https://github.com/ovr/tinkoff-invest-rust)
-* [c++](https://github.com/samoilovv/TinkoffInvestSDK)
-
-SDK на других языках в процессе разработки.
 
 # Как работать с этим репозитарием
 

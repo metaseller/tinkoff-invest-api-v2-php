@@ -22,6 +22,12 @@ class GetCandlesResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .tinkoff.public.invest.api.contract.v1.HistoricCandle candles = 1;</code>
      */
     private $candles;
+    /**
+     *Валюта цены.
+     *
+     * Generated from protobuf field <code>string price_currency = 2;</code>
+     */
+    protected $price_currency = '';
 
     /**
      * Constructor.
@@ -31,6 +37,8 @@ class GetCandlesResponse extends \Google\Protobuf\Internal\Message
      *
      *     @type \Tinkoff\Invest\V1\HistoricCandle[] $candles
      *          Массив свечей.
+     *     @type string $price_currency
+     *          Валюта цены.
      * }
      */
     public function __construct($data = null)
@@ -61,6 +69,32 @@ class GetCandlesResponse extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Tinkoff\Invest\V1\HistoricCandle::class);
         $this->candles = $arr;
+
+        return $this;
+    }
+
+    /**
+     *Валюта цены.
+     *
+     * Generated from protobuf field <code>string price_currency = 2;</code>
+     * @return string
+     */
+    public function getPriceCurrency()
+    {
+        return $this->price_currency;
+    }
+
+    /**
+     *Валюта цены.
+     *
+     * Generated from protobuf field <code>string price_currency = 2;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPriceCurrency(string $var)
+    {
+        GPBUtil::checkString($var, true);
+        $this->price_currency = $var;
 
         return $this;
     }

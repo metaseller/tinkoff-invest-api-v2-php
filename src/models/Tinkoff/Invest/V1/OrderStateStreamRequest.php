@@ -23,7 +23,7 @@ class OrderStateStreamRequest extends \Google\Protobuf\Internal\Message
      */
     private $accounts;
     /**
-     *Задержка (пинг) сообщений:  1000-120 000 миллисекунд. Значение по умолчанию — 120 000.
+     *Задержка (пинг) сообщений:  5000-60 000 миллисекунд. Значение по умолчанию — 60 000.
      *
      * Generated from protobuf field <code>optional int32 ping_delay_millis = 15;</code>
      */
@@ -38,7 +38,7 @@ class OrderStateStreamRequest extends \Google\Protobuf\Internal\Message
      *     @type string[] $accounts
      *          Идентификаторы счетов.
      *     @type int $ping_delay_millis
-     *          Задержка (пинг) сообщений:  1000-120 000 миллисекунд. Значение по умолчанию — 120 000.
+     *          Задержка (пинг) сообщений:  5000-60 000 миллисекунд. Значение по умолчанию — 60 000.
      * }
      */
     public function __construct($data = null)
@@ -74,7 +74,7 @@ class OrderStateStreamRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Задержка (пинг) сообщений:  1000-120 000 миллисекунд. Значение по умолчанию — 120 000.
+     *Задержка (пинг) сообщений:  5000-60 000 миллисекунд. Значение по умолчанию — 60 000.
      *
      * Generated from protobuf field <code>optional int32 ping_delay_millis = 15;</code>
      * @return int
@@ -95,7 +95,7 @@ class OrderStateStreamRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *Задержка (пинг) сообщений:  1000-120 000 миллисекунд. Значение по умолчанию — 120 000.
+     *Задержка (пинг) сообщений:  5000-60 000 миллисекунд. Значение по умолчанию — 60 000.
      *
      * Generated from protobuf field <code>optional int32 ping_delay_millis = 15;</code>
      * @param int $var
